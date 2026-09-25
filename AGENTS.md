@@ -14,7 +14,7 @@ Toda implementação nova deve ter Issue de governança. Relacione o PR do repos
 
 ## Fechamento
 
-Ao concluir sua parte, registre o handoff completo na Issue e mova-a para Em revisão ou Em validação produtiva, conforme o caso. Só o gerente move para Concluído após evidência exigida, atualizando PROJECT_STATE.md. CI verde e merge não equivalem a conclusão produtiva.
+Ao concluir sua parte, registre o handoff completo na Issue e indique por comentário se ela está em revisão independente ou validação produtiva. No [quadro de andamento](https://github.com/users/fabiojuniort-cyber/projects/1), mantenha In Progress enquanto o gate não tiver sido concluído; Done só após a evidência exigida. Somente o gerente confirma a conclusão e atualiza PROJECT_STATE.md. O conector GitHub atual não altera as colunas do Projects, então registre o estado detalhado na Issue independentemente do quadro. CI verde e merge não equivalem a conclusão produtiva.
 
 ## Escalonamento
 
