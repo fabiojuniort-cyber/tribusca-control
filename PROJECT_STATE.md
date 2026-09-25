@@ -2,35 +2,42 @@
 
 Atualizado em 25/09/2026 (America/Sao_Paulo).
 
-Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões de cada frente. Uma declaração de conclusão produtiva exige os respectivos gates e evidências.
+Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
 ## Repositórios
 
 - [radar-fiscal-backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend): backend, Worker, Scheduler e conectores.
 - [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web): frontend definitivo; repositório criado, ainda sem código.
-- [tribusca-control](https://github.com/fabiojuniort-cyber/tribusca-control): governança, estado, decisões e tarefas.
+- [tribusca-control](https://github.com/fabiojuniort-cyber/tribusca-control): governança, decisões e tarefas.
 
-## Prioridade atual
+## Prioridade atual: DOE São Paulo
 
-Concluir DOE São Paulo, incluindo o bootstrap desde 01/01/2025, replay idempotente, run real agendado, integridade e proveniência dos artefatos, documentação e retirada segura dos serviços temporários. Só depois iniciar o próximo DOE. A meta da macrofase é cobrir os 26 estados e o Distrito Federal.
+**ABERTO — não declarar produtivo/concluído.**
 
-## DOE São Paulo
+Em 25/09/2026, o [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) continuava aberto, sem merge, com head `091868c053d9d6f035030f866afd438f2c9fe3bd`; o CI #381 estava concluído com SUCCESS. Merge, deploy, run SCHEDULED posterior e validação em PostgreSQL ainda precisam de evidência.
 
-**Aberto; não declarado concluído.**
+O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap parado em 29/07/2025, com 399 dias pendentes. Esses números são históricos, não uma leitura produtiva nova. A janela de bootstrap aprovada é 01/01/2025 até a data de validação.
 
-O [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71), relativo à reconciliação de duas representações oficiais da Portaria SRE 42, estava aberto e sem merge na consulta de 25/09/2026. Head observado: `091868c053d9d6f035030f866afd438f2c9fe3bd`. Seu código ainda não passou por validação produtiva.
+### Issues ativas
 
-O último diagnóstico produtivo comunicado antes do PR #71 indicava bootstrap bloqueado em 29/07/2025, com 399 dias pendentes. Esses números são históricos e precisam de nova consulta antes de serem tratados como estado atual.
+| Issue | Resultado esperado | Dependência |
+| --- | --- | --- |
+| [#1 — gate PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Revisão independente, merge condicionado e primeiro run produtivo | Atual |
+| [#2 — bootstrap e replay](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2) | Cobertura aprovada com pendingRanges vazio e replay idempotente | #1 |
+| [#3 — artefatos/publication_files](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3) | Evidência e política de persistência dos arquivos | #1 |
+| [#4 — fechamento DOE-SP](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4) | Gates, seção 13 do backend e temporários tratados | #1, #2 e #3 |
+| [#5 — teste da governança](https://github.com/fabiojuniort-cyber/tribusca-control/issues/5) | Fluxo Issue → PR → revisão → gate → estado observado | #1 e configuração do quadro |
+
+As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de conclusão. O PR #68 também permanecia aberto na consulta de PRs; não incorporar automaticamente POCs, repairs históricos ou mudanças fora da frente DOE-SP.
 
 ## Demais frentes
 
-- Motor, autenticação/RLS, infraestrutura e fontes federais: entregas anteriormente reportadas; nenhuma revalidação produtiva completa foi feita nesta atualização.
-- DOU/INLABS: operacional, com gate produtivo final ainda a confirmar.
-- CONFAZ: DOU como fonte primária dos atos formalmente publicados; portal direto indisponível no ambiente Railway segundo diagnósticos anteriores.
-- Outros 26 DOEs: pendentes, sem presumir conectores criados.
-- API do produto, taxonomia, perfil tributário, relevância, Norma Clara e frontend definitivo: pendentes de implementação e validação na sequência aprovada.
-- Site definitivo: prioridade suspensa durante a macrofase DOE.
+- Motor, autenticação/RLS, infraestrutura e fontes federais: entregas reportadas anteriormente; esta atualização não fez revalidação produtiva completa.
+- DOU/INLABS: operacional, com gate final ainda a confirmar.
+- CONFAZ: DOU como fonte primária dos atos formalmente publicados; portal direto indisponível no Railway segundo diagnósticos anteriores.
+- Outros 26 DOEs: pendentes; só iniciar outro estado após fechamento formal de SP.
+- API do produto, taxonomia, perfil, relevância, Norma Clara, frontend e site definitivos: prioridades posteriores conforme [ROADMAP.md](ROADMAP.md).
 
-## Governança em preparação
+## Governança
 
-Este repositório já contém `README.md`, `AGENTS.md` e este `PROJECT_STATE.md`. Na inspeção de 25/09/2026, `ROADMAP.md`, `DECISIONS.md` e os templates de Issues consultados ainda não existiam, e não havia Issues no repositório. O registro das tarefas atuais como Issues está pendente; não interpretar a ausência de Issues como ausência de trabalho.
+Documentos de decisões, arquitetura, papéis, segurança, handoff, revisão e modelos de Issue/PR criados neste repositório. Cinco Issues representam a frente atual. Etiquetas e GitHub Project ainda não foram configurados; o ciclo completo permanece em validação na Issue #5. Chats não se comunicam automaticamente por causa desses arquivos; o estado oficial é registrado no GitHub.
