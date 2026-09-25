@@ -1,0 +1,27 @@
+# TriBusca — Decisões vigentes
+
+Atualizado em 25/09/2026. Este registro consolida decisões transmitidas pelo responsável pelo produto. Antes de alterar uma decisão, abrir Issue de decisão e registrar a evidência e a aprovação. Quando houver ADR técnico no backend, vinculá-lo aqui em vez de copiá-lo.
+
+| ID | Decisão | Consequência |
+| --- | --- | --- |
+| D-001 | Nome público TriBusca; nomes técnicos legados podem continuar. | Não fazer renomeação técnica em massa nem criar sub-marcas. |
+| D-002 | Railway, PostgreSQL, Node.js 24 LTS, TypeScript, Fastify, pg, Kysely e migrations SQL. API, Worker e Scheduler no mesmo codebase e em serviços separados; monólito modular. | Não redesenhar a stack sem evidência e decisão nova; sem Redis nesta fase. |
+| D-003 | Shared DB e schema com tenant_id e RLS. Tenant é conta SaaS; company é empresa monitorada. | Autenticação e isolamento já aprovados; não criar autenticação paralela no frontend. |
+| D-004 | Uma publicação é coletada uma vez globalmente; identity_hash é identidade lógica, content_hash é conteúdo/versionamento, raw_sha256 é integridade do arquivo. | Origem em publication_origins; merge entre fontes apenas com identidade forte; não usar fuzzy merge automático. |
+| D-005 | SOURCE_UNAVAILABLE ou falha não significam ausência de resultados. | SUCCESS_NO_RESULTS só quando a fonte foi efetivamente consultada. |
+| D-006 | DOU é PRIMARY dos atos CONFAZ formalmente publicados; portal CONFAZ atua como ENRICHMENT/VALIDATION conforme disponibilidade. | POCs de relay/proxy não têm aprovação para merge. |
+| D-007 | Finalizar os 27 DOEs com conectores independentes, iniciando por São Paulo; ordem dos seguintes pelo ranking oficial de PIB estadual mais recente do IBGE no momento da escolha. | Não abrir próximo estado antes dos gates finais do DOE-SP. |
+| D-008 | DOE-SP: Executivo → Atos Normativos; bootstrap inicial desde 01/01/2025 até a data atual. | Não iniciar acervo legado anterior à API sem frente específica. |
+| D-009 | API do produto, taxonomia, perfil, relevância explicável e Norma Clara vêm após a macrofase DOE, conforme ROADMAP.md. | Marcadores são vocabulário controlado; Norma Clara explica dispositivos e não prescreve ação empresarial. |
+| D-010 | Frontend definitivo em radar-fiscal-web: React, TypeScript, Vite, React Router, TanStack Query, Tailwind, Radix UI, shadcn/ui e ferramentas de teste aprovadas. | Site definitivo permanece sem prioridade na macrofase DOE. |
+| D-011 | Trial comercial de 7 dias com CTA “Experimentar grátis”. | Não reintroduzir funcionalidades gratuitas públicas descartadas sem decisão nova. |
+| D-012 | tribusca-control é fonte de governança; repositórios de código são fonte da implementação; produção confirma resultado operacional. | Não declarar entrega produtiva só por PR mergeado ou CI verde. |
+
+## Como mudar uma decisão
+
+1. Abrir Issue de decisão com contexto, opções, custos, riscos e impacto nas frentes atuais.
+2. Registrar a decisão do responsável e links para evidências, PR ou ADR.
+3. Atualizar este arquivo e os documentos afetados.
+4. Revalidar a produção quando a decisão mudar comportamento operacional.
+
+Nota: os nomes e IDs de serviços, datas de runs, inventários e contagens não são decisões arquiteturais; verificar estado ao vivo antes de usá-los como evidência.
