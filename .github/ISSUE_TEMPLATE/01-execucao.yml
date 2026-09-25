@@ -1,0 +1,66 @@
+name: Tarefa de execução
+description: Trabalho técnico com escopo e evidências verificáveis
+title: "[TAREFA] "
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo e resultado esperado
+      description: Descreva uma entrega pequena e verificável.
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade
+      options:
+        - P0 - bloqueio da frente ativa
+        - P1 - próxima entrega
+        - P2 - planejado
+        - P3 - melhoria futura
+    validations:
+      required: true
+  - type: input
+    id: repositorio
+    attributes:
+      label: Repositório afetado
+      placeholder: fabiojuniort-cyber/radar-fiscal-backend
+    validations:
+      required: true
+  - type: input
+    id: executor
+    attributes:
+      label: Papel e executor propostos
+      description: Nome do chat/ferramenta, se já definido; não inventar GitHub assignee.
+      placeholder: Executor DOE-SP / chat especializado
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Evidências e estado inicial
+      description: PRs, runs, commits, logs ou documentação com links.
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos autorizados e limites
+      description: Indique se pode alterar código, abrir PR, fazer merge, deploy ou consultar produção.
+    validations:
+      required: true
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Critérios de aceite
+      description: Liste evidências observáveis e critérios produtivos quando couber.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencias
+    attributes:
+      label: Dependências e condição de parada
+      description: Se a primeira premissa falhar, pare e reporte.
+  - type: textarea
+    id: retorno
+    attributes:
+      label: Formato do retorno
+      value: "Use docs/HANDOFF.md; informe uma próxima ação recomendada e se a tarefa pode ser encerrada."
