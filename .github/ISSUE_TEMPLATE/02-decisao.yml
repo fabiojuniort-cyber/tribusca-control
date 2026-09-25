@@ -1,0 +1,35 @@
+name: Decisão de produto ou arquitetura
+description: Registrar uma escolha que exige aprovação ou altera uma decisão vigente
+title: "[DECISÃO] "
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto e decisão necessária
+    validations:
+      required: true
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidências e decisão vigente
+      description: Cite DECISIONS.md, ADRs, PRs ou dados verificáveis.
+    validations:
+      required: true
+  - type: textarea
+    id: opcoes
+    attributes:
+      label: Opções, custos e riscos
+    validations:
+      required: true
+  - type: textarea
+    id: recomendacao
+    attributes:
+      label: Recomendação do Gerente Geral
+    validations:
+      required: true
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto nas tarefas e quem precisa aprovar
+    validations:
+      required: true
