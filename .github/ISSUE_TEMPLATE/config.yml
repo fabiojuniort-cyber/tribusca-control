@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Estado e regras do projeto
+    url: https://github.com/fabiojuniort-cyber/tribusca-control/blob/main/PROJECT_STATE.md
+    about: Consulte o estado atual antes de abrir uma tarefa.
