@@ -1,87 +1,21 @@
-# TriBusca — Protocolo Geral dos Agentes
+# TriBusca — instruções dos agentes
 
-## Regra principal
+## Fonte oficial
 
-O GitHub é a fonte oficial de verdade do projeto TriBusca.
+Leia [PROJECT_STATE.md](PROJECT_STATE.md), [ROADMAP.md](ROADMAP.md), [DECISIONS.md](DECISIONS.md), [arquitetura](docs/ARCHITECTURE.md) e a Issue atribuída antes de executar. Verifique ao vivo os PRs, commits e ambiente que sejam premissas para a tarefa. Handoffs de chat são contexto histórico até serem conferidos.
 
-Informações existentes apenas em conversas do ChatGPT,
-Claude ou qualquer outra IA não são consideradas estado
-oficial do projeto.
+## Papéis e coordenação
 
-## Antes de executar qualquer tarefa
-
-O agente deve:
-
-1. Ler PROJECT_STATE.md.
-2. Ler a Issue atribuída.
-3. Ler os ADRs relacionados.
-4. Verificar dependências.
-5. Verificar PRs relacionados.
-6. Confirmar o escopo antes de modificar código.
+Siga [papéis](docs/AGENT_ROLES.md), [handoff](docs/HANDOFF.md), [revisão/gates](docs/REVIEW_AND_GATES.md) e [segurança](docs/SECURITY.md). O Gerente Geral mantém a Issue e o estado; o executor implementa; um revisor diferente verifica; o Gerente confirma o gate final. Não atribua a um agente uma conta GitHub fictícia.
 
 ## Execução
 
-Toda implementação deve estar vinculada a uma Issue.
+Toda implementação nova deve ter Issue de governança. Relacione o PR do repositório de código por URL completa. Branch própria, commits identificáveis, PR e testes proporcionais ao risco. Não ampliar escopo de repair/POC nem avançar para outro DOE sem gate. Se uma premissa falhar, interrompa as etapas dependentes e reporte a evidência.
 
-Toda alteração de código deve possuir:
+## Fechamento
 
-- branch própria;
-- commits identificáveis;
-- Pull Request;
-- testes aplicáveis.
+Ao concluir sua parte, registre o handoff completo na Issue e mova-a para Em revisão ou Em validação produtiva, conforme o caso. Só o gerente move para Concluído após evidência exigida, atualizando PROJECT_STATE.md. CI verde e merge não equivalem a conclusão produtiva.
 
-## Segurança
+## Escalonamento
 
-Nenhum agente pode, sem autorização:
-
-- fazer deploy em produção;
-- executar migration em produção;
-- apagar dados;
-- executar DROP;
-- alterar secrets;
-- fazer force push;
-- fazer merge quando houver gate pendente.
-
-## Finalização de tarefa
-
-Ao concluir uma implementação, registrar:
-
-- resumo do realizado;
-- arquivos principais alterados;
-- branch;
-- commit;
-- Pull Request;
-- testes executados;
-- resultado dos testes;
-- riscos conhecidos;
-- pendências.
-
-Depois alterar a tarefa para:
-
-READY_FOR_REVIEW
-
-## Revisão
-
-Um agente não deve considerar sua própria implementação
-como revisão independente.
-
-Quando aplicável:
-
-Executor → Implementa
-Revisor → Revisa
-Gerente Geral → Gate final
-
-## Escalonamento humano
-
-Fábio deve ser acionado somente quando existir:
-
-- decisão de produto;
-- decisão de negócio;
-- custo novo;
-- contratação;
-- risco de produção;
-- alteração irreversível;
-- escolha arquitetural material sem decisão anterior;
-- necessidade de credencial ou ação que o agente não consiga executar.
-
-Questões técnicas reversíveis devem ser resolvidas pelos agentes.
+Acione o responsável pelo produto somente para decisão de produto/negócio, despesa, credencial/permissão indisponível ou decisão técnica material sem aprovação anterior. Respeite autorização específica para ações produtivas e irreversíveis. Questões técnicas reversíveis dentro do escopo podem ser resolvidas autonomamente.
