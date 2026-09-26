@@ -41,10 +41,23 @@ O site público terá uma página dedicada à **Reforma Tributária**, tratada c
 2. Header: logo horizontal oficial; **Entrar** e **Criar conta** substituem “Experimentar grátis” como ações de topo. O trial de 7 dias continua válido fora do header.
 3. Entrar/Criar conta/Recuperar senha/Nova senha funcionam em modal sobre a página; somente login usa **POST `/auth/login`** comprovado.
 4. Home: carrossel visual de 5 UFs, SP sempre primeiro/Ponte Estaiada, 4 UFs sorteadas e fotos reais/licenciadas; publicações estaduais ficam como **“—”** enquanto não houver API.
-5. Home/Portfólio: seis recursos — Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário. **Acervo/Central = Disponível** no draft, sujeito a confirmação do Gerente antes de merge; demais = Em desenvolvimento.
+5. Home/Portfólio: seis recursos — Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário. **WEB-03: todos = Em desenvolvimento** até comprovação operacional e autorização específica de publicação.
 6. Sonar: vermelho/amararelo/verde para Alta/Média/Baixa como exceção semântica do draft, pendente de Branding; rótulos textuais continuam obrigatórios.
 7. Decodifica: cinco exemplos legais aprovados em carrossel; Revela: boletim diário com Alta afinidade e Menção direta.
 8. Cobertura: federais primeiro, depois 27 UFs/SP primeiro; cards full-width com status e métricas. Sem contrato de API, métricas = **“—”**.
 9. Reforma Tributária: timeline separa **Publicação, Vigência e Marco previsto em lei**; sem datas sem evidência oficial.
 
-**Próximo passo:** revisão visual/funcional do PR #1. Sem merge/deploy. Itens de status e paleta permanecem com gate explícito.
+**Próximo passo:** revisão visual/funcional do PR #1. Sem merge/deploy. O gate de status foi resolvido pela WEB-03/D-051: nenhum dos seis recursos deve ser apresentado como disponível. A paleta do Sonar continua com gate de Branding.
+
+
+## WEB-03 — claims de disponibilidade
+
+**Data/origem:** 26/09/2026, decisão do Gerente.
+
+A D-043 registrou historicamente uma tentativa de apresentar **Acervo** e **Central de Monitoramento** como “Disponível” no draft WEB-02, condicionada a confirmação antes do merge. A confirmação não ocorreu.
+
+**Definição vigente para o site público:** Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário = **Em desenvolvimento**.
+
+Não tratar existência de rota, mock, exemplo, placeholder, PR ou contrato em draft como evidência de funcionalidade acessível ao cliente.
+
+**Impacto:** comunicação pública e badges/status. **Próximo passo:** CI + revisão visual/funcional; cores do Sonar seguem em avaliação na Issue #10. Sem merge/deploy.
