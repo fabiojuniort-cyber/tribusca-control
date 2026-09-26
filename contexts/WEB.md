@@ -67,4 +67,13 @@ No head `8167fff49cf2ba254b8d64075724df1f0331e40e`, o draft PR #1 contém:
 
 CI run `36260136076` = **SUCCESS** (install, typecheck, testes e build).
 
-**Gates pendentes:** confirmação do Gerente para claims Acervo/Central = Disponível; Branding / Issue #10 para cores do Sonar; revisão visual/funcional. PR permanece draft, sem merge/deploy. Contratos dependentes: Issue #9 (cadastro/reset) e Issue #11 (Cobertura/Acervo público).
+**WEB-03/D-051 resolveu o antigo gate de disponibilidade:** Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário ficam todos como **Em desenvolvimento** no site público. **Gates ainda pendentes:** Branding / Issue #10 para cores do Sonar e revisão visual/funcional. PR permanece draft, sem merge/deploy. Contratos dependentes: Issue #9 (cadastro/reset) e Issue #11 (Cobertura/Acervo público).
+
+
+## WEB-03 — correção de claims
+
+Em 26/09/2026, por decisão do Gerente, o claim da D-043 não foi confirmado para publicação. O draft deve apresentar os seis recursos do portfólio — Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário — como **Em desenvolvimento**.
+
+A existência de rotas, placeholders, mocks, demonstrações ou contratos em PR não autoriza o rótulo “Disponível”.
+
+**Impacto:** frontend público + documentação. Cores do Sonar continuam apenas em avaliação no draft e dependem da Issue #10. Revisão visual/funcional permanece gate separado. Sem merge/deploy.
