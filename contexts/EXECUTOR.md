@@ -11,7 +11,7 @@ Atualizado em 26/09/2026. Ponto de entrada: [CONTEXT.md](../CONTEXT.md), [BACKEN
 1. Revalidar a main, PR, CI e produção exigidos antes de agir; ler Issue e autorização vigente.
 2. Trabalhar continuamente no escopo autorizado, sem pedir ao usuário passos acessíveis ao executor. O prompt pode conter até cinco passos independentes; seguir até o gate ou barreira real. Erro em uma premissa bloqueia apenas etapas dependentes: investigar a causa, preservar evidências, continuar etapas seguras independentes e devolver o erro ao Gerente.
 3. Para **todo erro**, relatar fato vs. hipótese, logs/IDs sanitizados, impacto, etapas feitas e interrompidas, correção proposta e uma próxima ação. Não inventar status de deploy ou causa. Usar [HANDOFF.md](../docs/HANDOFF.md) na Issue e em resumo autocontido ao usuário.
-4. Atualizar por delegação `CONTEXT.md`, `PROJECT_STATE.md`, `contexts/`, `DECISIONS.md` e documentação temática afetados quando o Gerente definir o marco/decisão; pode registrar fatos provisórios claramente rotulados. Retornar caminhos, link e commit. O Gerente não lê nem edita repositórios.
+4. Atualizar por delegação `CONTEXT.md`, `PROJECT_STATE.md`, `contexts/`, `DECISIONS.md` e documentação temática afetados quando o Gerente definir o marco/decisão; pode registrar fatos provisórios claramente rotulados. Retornar caminhos, link e commit. O Gerente pode ler repositórios e evidências em modo somente leitura, mas não os edita nem realiza ações que alterem estado.
 5. Não declarar DOE concluído com CI verde, merge ou cron ativo; [gates](../docs/REVIEW_AND_GATES.md) e [segurança](../docs/SECURITY.md) valem integralmente. Revisão independente exige outro chat GPT-5.6.
 
 
