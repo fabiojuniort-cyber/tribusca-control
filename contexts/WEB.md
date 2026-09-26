@@ -30,3 +30,17 @@ Stack aprovada: React, TypeScript, Vite, React Router, TanStack Query, Tailwind,
 A camada pública foi autorizada em paralelo pela **D-035**. Isso não altera a ordem técnica das integrações autenticadas/inteligência.
 
 Retomada: “Leia https://github.com/fabiojuniort-cyber/tribusca-control/blob/main/contexts/WEB.md e a Issue #8; confira o PR #1 antes de alterar o frontend.”
+
+
+## API-01 — dados reais para Cobertura/Acervo
+
+Em 26/09/2026 o usuário definiu o contrato backend D-050 / Issue #11 para substituir os placeholders “—” de WEB-02 quando a API estiver publicada.
+
+Rotas previstas:
+- `GET /public/v1/sources`;
+- `GET /public/v1/publications?uf=SP&limit=3`;
+- `GET /public/v1/stats`.
+
+O site deve consumir apenas após o backend ser mergeado/deployado em gate separado. Até existir URL base produtiva autorizada, WEB-02 não deve inventar dados.
+
+CORS será restrito às origens configuradas em `PUBLIC_API_ALLOWED_ORIGINS`; sem credentials nessas rotas. A Issue #11 executa Cobertura/Acervo; Issue #9 continua responsável pelos demais contratos públicos de cadastro/reset.
