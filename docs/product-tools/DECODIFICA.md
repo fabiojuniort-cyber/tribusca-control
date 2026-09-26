@@ -46,6 +46,7 @@ Usuários autenticados do TriBusca que estejam consultando uma publicação/base
    - **não traduzido para o usuário na versão vigente:** o botão exibe o custo no padrão **`Decodificar (N créditos)`**;
    - **traduzido para o usuário na versão vigente:** o botão exibe **“Traduzido”**;
    - **tradução do usuário obsoleta/desatualizada:** o botão volta a exibir o custo no padrão **`Decodificar (N créditos)`**, calculado para traduzir novamente o conteúdo completo da versão vigente.
+21. Próximo ao custo/acionamento do Decodifica deve existir um **controle de ajuda discreto** explicando como o cálculo de créditos funciona, sem competir visualmente com a ação principal.
 
 ## Entradas
 
@@ -94,6 +95,8 @@ Planejadas, não implementadas por esta decisão:
 - **Escalonamento aprovado:** cada faixa adicional, ainda que parcial, de até 25.000 caracteres consome mais 1 crédito.
 - Exemplos conceituais: 100 caracteres = 1 crédito; 25.000 = 1; 25.001 = 2; 100.000 = 4.
 - O custo deve ser conhecido **antes** da confirmação/acionamento e aparecer no botão no padrão **`Decodificar (N créditos)`**; exemplo: **`Decodificar (4 créditos)`**.
+- Um controle de ajuda discreto deve explicar a regra comercial de forma objetiva: **1 crédito = até 25.000 caracteres; mínimo de 1 crédito; faixas adicionais de até 25.000 caracteres consomem créditos adicionais com arredondamento para cima**.
+- O controle de ajuda não deve exigir que o usuário navegue para outra página para entender a cobrança.
 - A quantidade de créditos incluída em cada plano de assinatura **não foi definida** nesta rodada.
 - A base exata de contagem de caracteres (por exemplo, tratamento de espaços, marcação, cabeçalhos e texto normalizado) permanece aberta para desenho funcional/técnico posterior.
 
@@ -144,7 +147,7 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 | API | **Sim, futuro** — consulta/acionamento, cálculo/exposição do custo, estado Traduzido/obsoleto, consumo de créditos e retorno do Decodifica. |
 | Coleta | **Não agora** — a coleta continua responsável pelo conteúdo oficial. |
 | IA | **Sim, futuro** — integração sob demanda com OpenAI API e reaproveitamento de resultado. |
-| UX | **Sim, futuro** — botão com estados **`Decodificar (N créditos)`** / **“Traduzido”** / novo **`Decodificar (N créditos)`** quando obsoleto, blocos por artigo e indicação inequívoca da tradução desatualizada. |
+| UX | **Sim, futuro** — botão com estados **`Decodificar (N créditos)`** / **“Traduzido”** / novo **`Decodificar (N créditos)`** quando obsoleto, controle de ajuda discreto para explicar o cálculo, blocos por artigo e indicação inequívoca da tradução desatualizada. |
 | Site/comercial | **Sim, futuro** — Decodifica será limitado por créditos da assinatura; franquias por plano ainda não foram definidas. Não anunciar como disponível antes da implementação. |
 | Custos | **Sim, futuro** — créditos comerciais são separados do custo interno de API; reutilização global reduz consumo redundante da OpenAI sem alterar o débito comercial do uso. |
 | Segurança | **Sim, futuro** — definir fronteira de dados, autorização e telemetria da integração. |
