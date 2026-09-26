@@ -37,7 +37,7 @@ Depois da cobertura estadual, retomar as frentes nesta ordem de referência:
 1. API do produto.
 2. Taxonomia e marcadores tributários controlados.
 3. Perfil tributário de empresas e estabelecimentos.
-4. Motor de relevância com motivos explicáveis.
+4. Releva — motor de afinidade tributária com motivos explicáveis.
 5. Decodifica, com cobertura do conteúdo aplicável, apresentação por artigo, evidência e versionamento.
 6. Frontend definitivo em `radar-fiscal-web`.
 7. Site definitivo.
