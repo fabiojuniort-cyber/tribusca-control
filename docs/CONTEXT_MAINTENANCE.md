@@ -21,9 +21,22 @@ GitHub é o contexto durável; memória de chat é apenas apoio. O contexto curt
 
 O responsável pelo projeto autorizou a manutenção recorrente da documentação de governança. O Gerente decide e delega; o GPT-5.6 executa e comprova a atualização. Não pedir confirmação rotineira para cada edição documental. Essa autorização não libera merge, deploy, migration, alteração de secrets, operação destrutiva ou outra ação produtiva sem escopo e gate autorizado. Se o executor não conseguir escrever, deve devolver o patch/texto exato ao Gerente e manter o marco aberto.
 
+## Cabeçalho obrigatório de delegação
+
+Antes de qualquer lista de passos, o prompt enviado a um novo chat ou a um chat retomado para uma nova Issue deve declarar o vínculo operacional da tarefa. O cabeçalho mínimo é:
+
+- **Especialidade do chat:** Backend, Design/UX, Arquitetura, Governança ou outra especialidade pertinente.
+- **Papel:** Executor ou Revisor independente.
+- **Modelo:** modelo designado explicitamente, sem deixar implícito pelo ambiente.
+- **Frente:** fonte, produto ou trilha de trabalho (por exemplo, DOE-SP).
+- **Issue:** número e, preferencialmente, URL completa da Issue de governança.
+- **Resultado esperado:** entrega/gate objetivo que encerra a delegação.
+
+Repositório, branch e PR devem ser adicionados quando existirem. Especialidade, papel e modelo não podem ser inferidos apenas pela Issue ou pelo nome do chat. Se o Gerente detectar um prompt antigo sem esses campos, deve corrigi-lo na próxima delegação antes de iniciar nova execução.
+
 ## Processo em cada avanço
 
-1. O Gerente envia ao GPT-5.6 a Issue, contexto mínimo, autorização vigente, critérios e até cinco passos independentes; pode demandar uma leitura inicial para descobrir o estado.
+1. O Gerente envia ao GPT-5.6 o cabeçalho obrigatório de delegação (especialidade, papel, modelo, frente, Issue e resultado esperado), contexto mínimo, autorização vigente, critérios e até cinco passos independentes; pode demandar uma leitura inicial para descobrir o estado.
 2. O executor verifica evidências ao vivo, avança autonomamente em todas as etapas autorizadas e registra fatos, erros e limites na Issue/PR. Um erro interrompe somente os passos dependentes: o executor faz o restante seguro e devolve o problema ao Gerente, sem mascará-lo.
 3. O Gerente analisa integralmente o retorno, confronta critérios, identifica causa comprovada versus hipótese e dá novo direcionamento. Se o gate depender de comprovação independente, designa outro GPT-5.6 para revisão; não se atribui uma auditoria direta.
 4. O Gerente demanda a atualização apenas dos arquivos afetados. O GPT-5.6 edita os arquivos, verifica links e coerência, retorna commit, caminhos alterados, resumo das mudanças e status da Issue. Pode fazer a atualização factual no próprio handoff se o escopo já determinar os fatos; nenhuma conclusão produtiva sem gate do Gerente.

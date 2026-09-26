@@ -8,6 +8,19 @@ Ao iniciar ou retomar uma conversa, o Gerente Geral GPT-6 e os chats GPT-5.6 pod
 
 Siga [papéis](docs/AGENT_ROLES.md), [handoff](docs/HANDOFF.md), [revisão/gates](docs/REVIEW_AND_GATES.md) e [segurança](docs/SECURITY.md). **Gerente Geral = GPT-6: coordenação, análise de erros e acesso de leitura sempre permitido aos contextos e evidências necessários (GitHub, código, CI, Railway e PostgreSQL quando houver acesso seguro somente leitura); sem permissão de escrita ou execução de ações que alterem estado.** **Executores e revisores = chats GPT-5.6 distintos.** O Gerente formula instruções; o usuário abre os chats executores; estes acessam os sistemas, trabalham, examinam erros e registram evidências. O Gerente confronta os retornos com critérios e decisões, aponta lacunas e delega investigações ou correções; nunca descreve um relato como verificação independente própria. Não atribua a um agente uma conta GitHub fictícia. **Este arquivo central prevalece sobre instruções antigas de papéis nos `AGENTS.md` dos repositórios de código**: onde disserem que o Gerente atualiza contextos diretamente, leia que ele pode ler quando necessário, mas delega toda escrita e execução de alterações a GPT-5.6. Regras técnicas e de segurança dos repositórios de código continuam válidas. Atualizar esses arquivos em futura tarefa executora com gate apropriado, especialmente no backend, onde commit na main pode iniciar deploy automático.
 
+### Identificação obrigatória nos prompts de delegação
+
+Todo prompt futuro de delegação deve identificar expressamente, antes dos passos da tarefa: **especialidade do chat**, **papel**, **modelo**, **frente**, **Issue de governança** e **resultado esperado**. A especialidade descreve a competência principal do chat (por exemplo: Backend, Design/UX, Arquitetura ou Governança); o papel deve ser `Executor` ou `Revisor independente`; o modelo deve ser informado explicitamente (por exemplo, `GPT-5.6 Sol`). Frente e Issue não substituem a especialidade nem o papel. Quando houver código ou revisão, inclua também repositório/PR aplicável. Prompt sem qualquer um desses seis campos está incompleto e deve ser corrigido antes da delegação.
+
+Formato mínimo:
+
+- Especialidade do chat:
+- Papel:
+- Modelo:
+- Frente:
+- Issue:
+- Resultado esperado:
+
 ## Execução
 
 Toda implementação nova deve ter Issue de governança. Relacione o PR do repositório de código por URL completa. Branch própria, commits identificáveis, PR e testes proporcionais ao risco. Não ampliar escopo de repair/POC nem avançar para outro DOE sem gate. Trabalhe autonomamente e avance em todas as etapas autorizadas que não dependam da premissa que falhou; interrompa imediatamente o caminho bloqueado, preserve evidências e devolva ao Gerente um único handoff com causa, impacto, trabalho concluído e próxima ação sugerida. Cada instrução do Gerente pode reunir até cinco passos independentes; dentro da tarefa delegada, o executor continua até o gate ou bloqueio real, sem pedir ao usuário para fazer tarefas acessíveis ao executor.

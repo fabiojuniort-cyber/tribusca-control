@@ -6,10 +6,15 @@ Toda entrega de executor GPT-5.6 usa o modelo abaixo no comentário da Issue de 
 
 ### Identificação
 
+- Especialidade do chat:
+- Papel: Executor ou Revisor independente
+- Modelo:
+- Frente:
 - Issue de governança:
+- Resultado esperado da delegação:
 - Repositório e branch:
 - PR, commit head e base:
-- Executor (chat/ferramenta):
+- Executor/revisor (chat/ferramenta):
 - Escopo autorizado:
 
 ### Resultado
