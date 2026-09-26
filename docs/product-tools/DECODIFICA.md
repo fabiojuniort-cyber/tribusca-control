@@ -43,9 +43,9 @@ Usuários autenticados do TriBusca que estejam consultando uma publicação/base
 18. Nesse caso, o resultado anterior deve permanecer acessível, porém com uma marcação visual clara de que está **desatualizado em relação à versão oficial vigente**.
 19. Quando a tradução estiver desatualizada e o usuário decidir atualizar o Decodifica, o novo processamento deve considerar e cobrar **o conteúdo completo da versão oficial vigente**, e não somente os artigos ou trechos alterados.
 20. O botão do Decodifica terá estados funcionais distintos conforme a situação do usuário e da versão oficial:
-   - **não traduzido para o usuário na versão vigente:** o botão exibe o custo em créditos;
+   - **não traduzido para o usuário na versão vigente:** o botão exibe o custo no padrão **`Decodificar (N créditos)`**;
    - **traduzido para o usuário na versão vigente:** o botão exibe **“Traduzido”**;
-   - **tradução do usuário obsoleta/desatualizada:** o botão volta a exibir o custo em créditos necessário para traduzir novamente o conteúdo completo da versão vigente.
+   - **tradução do usuário obsoleta/desatualizada:** o botão volta a exibir o custo no padrão **`Decodificar (N créditos)`**, calculado para traduzir novamente o conteúdo completo da versão vigente.
 
 ## Entradas
 
@@ -68,13 +68,13 @@ Não definido nesta rodada:
 ## Experiência do usuário
 
 ### Primeiro usuário / resultado inexistente
-O usuário abre a base legal sem tradução visível → o botão mostra previamente o custo em créditos → aciona o Decodifica → o sistema obtém ou reutiliza o resultado aplicável → apresenta o conteúdo por artigo → o resultado fica disponível em acessos posteriores aplicáveis → enquanto a tradução corresponder à versão oficial vigente, o botão passa a indicar **“Traduzido”**.
+O usuário abre a base legal sem tradução visível → o botão mostra previamente o custo no padrão **`Decodificar (N créditos)`** → aciona o Decodifica → o sistema obtém ou reutiliza o resultado aplicável → apresenta o conteúdo por artigo → o resultado fica disponível em acessos posteriores aplicáveis → enquanto a tradução corresponder à versão oficial vigente, o botão passa a indicar **“Traduzido”**.
 
 ### Outro usuário / resultado já existente
-O usuário abre a mesma base legal sem o Decodifica previamente revelado para ele → o botão mostra previamente o custo em créditos → aciona o botão → o sistema verifica resultado reutilizável → apresenta o resultado existente sem nova geração desnecessária. O reaproveitamento reduz custo interno de IA, mas **não elimina o consumo comercial de créditos da assinatura**. Depois do acionamento, enquanto aquela tradução corresponder à versão oficial vigente, o botão desse usuário indica **“Traduzido”**.
+O usuário abre a mesma base legal sem o Decodifica previamente revelado para ele → o botão mostra previamente o custo no padrão **`Decodificar (N créditos)`** → aciona o botão → o sistema verifica resultado reutilizável → apresenta o resultado existente sem nova geração desnecessária. O reaproveitamento reduz custo interno de IA, mas **não elimina o consumo comercial de créditos da assinatura**. Depois do acionamento, enquanto aquela tradução corresponder à versão oficial vigente, o botão desse usuário indica **“Traduzido”**.
 
 ### Usuário com tradução desatualizada
-Se a versão oficial mudar depois de o usuário já ter acionado o Decodifica, a tradução anterior permanece acessível e marcada como desatualizada. O botão volta a apresentar o custo em créditos para uma nova tradução. Se o usuário acionar novamente, a cobrança é calculada sobre **todo o conteúdo da versão oficial vigente**, e não apenas sobre os trechos alterados.
+Se a versão oficial mudar depois de o usuário já ter acionado o Decodifica, a tradução anterior permanece acessível e marcada como desatualizada. O botão volta a apresentar o custo no padrão **`Decodificar (N créditos)`** para uma nova tradução. Se o usuário acionar novamente, a cobrança é calculada sobre **todo o conteúdo da versão oficial vigente**, e não apenas sobre os trechos alterados.
 
 ## Dependências
 
@@ -93,7 +93,7 @@ Planejadas, não implementadas por esta decisão:
 - **Mínimo aprovado:** 1 crédito por acionamento/conteúdo elegível, ainda que o texto tenha menos de 25.000 caracteres.
 - **Escalonamento aprovado:** cada faixa adicional, ainda que parcial, de até 25.000 caracteres consome mais 1 crédito.
 - Exemplos conceituais: 100 caracteres = 1 crédito; 25.000 = 1; 25.001 = 2; 100.000 = 4.
-- O custo deve ser conhecido **antes** da confirmação/acionamento.
+- O custo deve ser conhecido **antes** da confirmação/acionamento e aparecer no botão no padrão **`Decodificar (N créditos)`**; exemplo: **`Decodificar (4 créditos)`**.
 - A quantidade de créditos incluída em cada plano de assinatura **não foi definida** nesta rodada.
 - A base exata de contagem de caracteres (por exemplo, tratamento de espaços, marcação, cabeçalhos e texto normalizado) permanece aberta para desenho funcional/técnico posterior.
 
@@ -144,7 +144,7 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 | API | **Sim, futuro** — consulta/acionamento, cálculo/exposição do custo, estado Traduzido/obsoleto, consumo de créditos e retorno do Decodifica. |
 | Coleta | **Não agora** — a coleta continua responsável pelo conteúdo oficial. |
 | IA | **Sim, futuro** — integração sob demanda com OpenAI API e reaproveitamento de resultado. |
-| UX | **Sim, futuro** — botão com estados custo / “Traduzido” / novo custo quando obsoleto, blocos por artigo e indicação inequívoca da tradução desatualizada. |
+| UX | **Sim, futuro** — botão com estados **`Decodificar (N créditos)`** / **“Traduzido”** / novo **`Decodificar (N créditos)`** quando obsoleto, blocos por artigo e indicação inequívoca da tradução desatualizada. |
 | Site/comercial | **Sim, futuro** — Decodifica será limitado por créditos da assinatura; franquias por plano ainda não foram definidas. Não anunciar como disponível antes da implementação. |
 | Custos | **Sim, futuro** — créditos comerciais são separados do custo interno de API; reutilização global reduz consumo redundante da OpenAI sem alterar o débito comercial do uso. |
 | Segurança | **Sim, futuro** — definir fronteira de dados, autorização e telemetria da integração. |
