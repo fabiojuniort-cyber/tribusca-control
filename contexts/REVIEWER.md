@@ -1,6 +1,6 @@
 # TriBusca — contexto para revisor independente
 
-Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [AGENTS.md](../AGENTS.md), [gates](../docs/REVIEW_AND_GATES.md), a Issue e o PR específicos. O revisor é distinto do executor; um nome de agente ou chat não prova revisão realizada.
+Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), [AGENTS.md](../AGENTS.md), [gates](../docs/REVIEW_AND_GATES.md), a Issue e o PR específicos. O revisor é distinto do executor; um nome de agente ou chat não prova revisão realizada.
 
 ## Revisão corrente
 
