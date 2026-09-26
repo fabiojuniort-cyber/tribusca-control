@@ -82,7 +82,7 @@ Atualizado em 26/09/2026. Este registro consolida decisões transmitidas pelo re
 
 | D-046 | A apresentação pública do **Revela** deve mostrar um exemplo de **boletim diário** com itens identificados separadamente como **Alta afinidade** e **Menção direta**. | Refina a D-032 para a comunicação pública; não implica envio de e-mail funcional. |
 
-| D-047 | A página **Cobertura** apresenta primeiro serviços federais — DOU/INLABS, CONFAZ, NF-e/ENCAT, SPED, CGIBS e RFB — e depois as 27 UFs, com SP primeiro. Cards são de largura total e exibem status da coleta (Online/Em validação/Em implantação), última atualização, importadas no dia e total no Acervo. | Métricas reais dependem de contrato de API; até lá ficam **“—”**. Não inventar endpoint. Estados operacionais não comprovados não devem ser promovidos a Online sem evidência. |
+| D-047 | A página **Cobertura** apresenta primeiro serviços federais — DOU/INLABS, CONFAZ, NF-e/ENCAT, SPED, CGIBS e RFB — e depois as 27 UFs, com SP primeiro. Cards são de largura total e exibem status da coleta (Online/Em validação/Em implantação), última atualização, importadas no dia e total no Acervo. | Status operacional e métricas reais dependem de contrato de API; até a integração pública estar ativa, esses campos ficam **“—”**. Os rótulos permitidos quando houver dado são Online / Em validação / Em implantação. Não inventar endpoint nem promover fonte sem evidência. |
 
 | D-048 | Na página **Reforma Tributária**, a timeline distingue **Publicação / Vigência / Marco previsto em lei**. Datas/eventos só podem ser exibidos quando sustentados por fonte oficial presente no Acervo. | Refina D-034 e substitui qualquer cronograma ilustrativo que pareça fato. Sem data especulativa. |
 
