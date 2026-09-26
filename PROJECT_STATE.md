@@ -14,7 +14,9 @@ Este arquivo resume o estado executivo. Issues e PRs registram execução, evid�
 
 **ABERTO — não declarar produtivo/concluído.**
 
-Em 26/09/2026, o [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) permanece aberto e sem merge no head `7f594c5b563ed9cb66c63e1f93b367150573c651`, 0 commits atrás da main `f25a596edce592e6e365e87ed4cbf16ba0922de8`. A terceira revisão independente aprovou a reserva das chaves de controle, replay/idempotência, gates de identidade/versionamento e propriedade dos PDFs, mas **reprovou o gate** de sanitização: `safeAuditIdentifier()` ainda depende de blacklist finita e permite credenciais/segredos opacos em IDs allowlisted do history (exemplos sintéticos: `rk_live_...`, `AIzaSy...`, `AKIA...`). Parecer: https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71#pullrequestreview-5324781362. O CI #390 / run `36220906841` continua SUCCESS, porém merge, deploy, migration, coleta manual, repair produtivo e validação produtiva permanecem não autorizados.
+Em 26/09/2026, a direção técnica DOE-SP foi reaberta pelo usuário: **o HTML oficial deve ser o conteúdo principal e o PDF certificado não deve bloquear a captura da legislação**. O caminho anterior de reconciliação/histórico do [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) foi suspenso para reavaliação. O PR #71 permanece OPEN e unmerged e chegou ao head `3c286c982d983ecc7bce8f9722a1f967898665d3` (CI #394 SUCCESS) antes do redirecionamento; esse CI não autoriza merge.
+
+A investigação somente leitura encontrou impacto material no versionamento existente: a `main` calcula `contentHash` com os hashes de todos os `files`; os logs produtivos `DOE_SP_AUDIT` registram 517 publicações/517 versões, 610 arquivos, **516 PDFs autenticados** e 94 anexos. Para o caso 404 da Portaria SRE 42, o HTML oficial existe e é idêntico ao de outra representação já persistida, mas a versão existente inclui o hash do PDF. Logo, retirar o PDF do hash sem compatibilidade faria o replay produzir versões artificiais em grande parte do acervo. Não foi criado PR alternativo: a correção segura depende de decisão explícita sobre uma nova semântica de hash/versionamento compatível com o legado. Merge, deploy, migration, coleta manual e repair produtivo permanecem não autorizados.
 
 O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap parado em 29/07/2025, com 399 dias pendentes. Esses números são históricos, não uma leitura produtiva nova. A janela de bootstrap aprovada é 01/01/2025 até a data de validação.
 
@@ -22,7 +24,7 @@ O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap p
 
 | Issue | Resultado esperado | Dependência |
 | --- | --- | --- |
-| [#1 — gate PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Revisão independente, merge condicionado e primeiro run produtivo | Atual; terceira revisão do head `7f594c5` REPROVADA por sanitização de credenciais/segredos opacos no history; CI #390 SUCCESS não autoriza merge |
+| [#1 — gate PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Definir nova política HTML/PDF, versionamento compatível e destino do PR #71 | Atual; direção alterada para HTML principal; PR #71 suspenso em reavaliação no head `3c286c9`; decisão material de hash/versionamento pendente |
 | [#2 — bootstrap e replay](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2) | Cobertura aprovada com pendingRanges vazio e replay idempotente | #1 |
 | [#3 — artefatos/publication_files](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3) | Evidência e política de persistência dos arquivos | #1 |
 | [#4 — fechamento DOE-SP](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4) | Gates, seção 13 do backend e temporários tratados | #1, #2 e #3 |
