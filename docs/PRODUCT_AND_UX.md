@@ -13,7 +13,7 @@ Navegação autenticada planejada:
 | Grupo | Áreas |
 | --- | --- |
 | Visão geral | Início |
-| Inteligência | Publicações, Busca, Arquivo |
+| Inteligência | Publicações, Busca, Acervo |
 | Monitoramento | Central de Monitoramento, Fontes Oficiais |
 | Organização | Empresas, Estabelecimentos, Perfil Tributário |
 | Administração | Configurações |
@@ -33,3 +33,18 @@ Frontend definitivo: React, TypeScript, Vite, React Router, TanStack Query, Tail
 ## Status e fronteiras
 
 Esses itens são decisões de produto, não componentes produtivos. API do produto com `/publications`, `/sources`, `/monitoring/overview` e `/companies` foi proposta, **não** incorporada à main na última verificação comunicada; revalidar antes de implementar. A prioridade atual é fechar DOE-SP e os 27 DOEs. Antes de construir taxonomia, Releva, Decodifica ou frontend, abrir Issue própria com desenho físico/contrato e critérios. Não converter o modelo conceitual em schema gigante prematuramente.
+
+
+## Acervo
+
+**Acervo** é uma área estrutural do TriBusca, não um produto com nome comercial próprio.
+
+Seu papel é permitir consulta organizada ao conteúdo oficial já coletado e preservado pelo TriBusca, incluindo publicações, versões, origem oficial, marcadores e demais metadados disponíveis. O Acervo deve funcionar como base de consulta e navegação, inclusive servindo de ponto de acesso para funcionalidades como Releva e Decodifica.
+
+Diretrizes aprovadas:
+- manter o nome simples **Acervo**;
+- não criar submarca ou nome comercial específico;
+- preservar rastreabilidade até a fonte oficial;
+- permitir navegação e filtros compatíveis com os marcadores e metadados existentes;
+- exibir histórico/versionamento quando aplicável;
+- não confundir Acervo com Releva: o Acervo organiza e disponibiliza o conteúdo; o Releva calcula afinidade com a empresa.
