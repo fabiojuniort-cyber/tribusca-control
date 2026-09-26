@@ -32,6 +32,8 @@ Atualizado em 26/09/2026. Este registro consolida decisões transmitidas pelo re
 
 | D-022 | O botão do **Decodifica** deve exibir o custo no padrão **`Decodificar (N créditos)`** quando houver cobrança para aquela versão; exemplo aprovado: **`Decodificar (4 créditos)`**. Quando a versão vigente já estiver traduzida para o usuário, o estado textual continua **“Traduzido”**. | Padroniza a microcopy funcional do botão e deve ser refletido no frontend quando a implementação for autorizada. Não define ainda cor, ícone, tamanho ou composição visual. Não altera DOE-SP nem prioridade do roadmap. Ver [Decodifica](docs/product-tools/DECODIFICA.md) e [Issue #7](https://github.com/fabiojuniort-cyber/tribusca-control/issues/7). |
 
+| D-023 | O **Decodifica** deve apresentar, próximo ao custo/acionamento, um **controle de ajuda discreto** que explique como os créditos são calculados: 1 crédito = até 25.000 caracteres, mínimo de 1 crédito e faixas adicionais de até 25.000 caracteres com arredondamento para cima. | A ajuda deve estar disponível no próprio contexto da ação, sem exigir navegação para outra página. Esta decisão não define ainda ícone, componente, cor, posição exata ou interação final (tooltip, popover etc.); isso fica para o desenho de UX. Não altera DOE-SP nem prioridade do roadmap. Ver [Decodifica](docs/product-tools/DECODIFICA.md) e [Issue #7](https://github.com/fabiojuniort-cyber/tribusca-control/issues/7). |
+
 ## Como mudar uma decisão
 
 1. Abrir Issue de decisão com contexto, opções, custos, riscos e impacto nas frentes atuais.
