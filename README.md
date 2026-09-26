@@ -4,7 +4,9 @@ Este repositório organiza as tarefas, decisões e evidências do TriBusca. Cód
 
 ## Comece aqui
 
-1. [Estado executivo](PROJECT_STATE.md): o que está aberto, comprovado e pendente de revalidação.
+1. [Contexto de retomada do Gerente Geral](CONTEXT.md): abra este arquivo ao iniciar outro chat.
+2. [Contexto do executor](contexts/EXECUTOR.md) e [contexto do revisor](contexts/REVIEWER.md): entrada curta para cada papel.
+3. [Estado executivo](PROJECT_STATE.md): o que está aberto, comprovado e pendente de revalidação.
 2. [Roadmap](ROADMAP.md): prioridade e critérios para avançar.
 3. [Decisões](DECISIONS.md) e [arquitetura](docs/ARCHITECTURE.md): regras aprovadas.
 4. [Papéis](docs/AGENT_ROLES.md), [instruções dos agentes](AGENTS.md) e [segurança](docs/SECURITY.md).
