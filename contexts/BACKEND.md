@@ -39,4 +39,4 @@ Impacto: habilita Home/Cobertura do site a usar dados reais depois de merge+depl
 
 Limite de evidência: o conector Railway desta sessão não oferece SQL read-only ad hoc. Migrations, grants, tipos Kysely e view foram revalidados no repositório; não declarar schema produtivo como consultado ao vivo.
 
-Próximo passo: implementar em branch/PR do backend, testes e CI. Merge/deploy continuam gate do Gerente.
+Implementação: draft [PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), branch `feat/api-01-public-readonly`, head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, base `f25a596...`. CI #433 / run `36260320585` = **SUCCESS**. Testes cobrem as 3 rotas, fonte sem runs, UF sem dados, filtros, ausência de conteúdo integral, CORS allow/deny/OPTIONS e cache. Sem migration/job novo; `publication_versions` não é consultada. README + `docs/public-api.md` documentam o contrato. Domínios CORS reais ainda não foram comprovados e devem ser configurados no deploy. Próximo passo: Gerente decide merge; deploy/validação produtiva em gate separado.
