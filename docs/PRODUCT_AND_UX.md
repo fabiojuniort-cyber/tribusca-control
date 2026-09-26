@@ -67,7 +67,7 @@ Diretrizes aprovadas:
 - Autenticação pública: Entrar/Criar conta/Recuperar senha/Nova senha em modal. Apenas Entrar possui contrato backend comprovado nesta frente: **POST `/auth/login`**. Não inventar cadastro/reset.
 - Criar conta/Nova senha: confirmar senha e requisitos em tempo real; limiar de 8 caracteres no draft é provisório até contrato backend.
 - Home estadual: 5 UFs, SP fixo em primeiro e 4 sorteadas; fotos licenciadas do Wikimedia Commons; área de publicações usa **“—”** sem API.
-- Portfólio público: **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica, Perfil Tributário**. O draft mostra Acervo/Central como **Disponível** e os demais como **Em desenvolvimento**; o claim “Disponível” precisa de confirmação do Gerente antes do merge.
+- Portfólio público: **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica, Perfil Tributário**. **WEB-03 substitui o claim do draft:** todos os seis recursos ficam como **Em desenvolvimento** até comprovação operacional e autorização específica de publicação.
 - Sonar mantém Alta/Média/Baixa + proximidade, com cores semânticas WEB-02 **vermelho/amarelo/verde**; exceção pendente de Branding e rótulo textual obrigatório.
 - Decodifica: carrossel de cinco exemplos Texto oficial × Leitura auxiliar definidos no registro WEB-02, sempre com aviso de IA.
 - Revela: exemplo de boletim diário com Alta afinidade e Menção direta.
@@ -75,3 +75,12 @@ Diretrizes aprovadas:
 - Reforma Tributária: timeline em **Publicação / Vigência / Marco previsto em lei**, com datas apenas de fonte oficial do Acervo.
 
 **Impacto:** Router, header, modais, conteúdo, estados, acessibilidade e futuras integrações de API. **Próximo passo:** implementar e validar no draft PR #1; sem merge/deploy. D-043 e D-044 exigem gates adicionais.
+
+
+### WEB-03 — status público dos recursos
+
+**Data/origem:** 26/09/2026, decisão do Gerente.  
+**Definição anterior:** D-043 levou ao draft o status **Disponível** para Acervo e Central de Monitoramento, sujeito a confirmação antes do merge.  
+**Nova definição:** a confirmação não foi concedida. **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário** permanecem todos como **Em desenvolvimento** no site público. Uma página, demonstração, placeholder ou contrato em draft não é prova de funcionalidade acessível.
+
+**Impacto:** somente claim/status público; não reduz o escopo conceitual dos produtos. **Próximo passo:** manter o PR #1 em draft, com Issue #10 e revisão visual/funcional como gates separados. Ver D-051.
