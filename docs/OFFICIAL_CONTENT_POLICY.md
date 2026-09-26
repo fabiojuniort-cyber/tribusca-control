@@ -62,7 +62,7 @@ Se a adequação exigir migration ou mudança material da semântica de versões
 
 A decisão é global; a implementação é incremental.
 
-A [Issue #6](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6) mantém o inventário das fontes e deve registrar, por conector:
+A [Issue #6](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6) acompanha o inventário, cuja matriz canônica está em [OFFICIAL_CONTENT_INVENTORY.md](OFFICIAL_CONTENT_INVENTORY.md), e deve registrar, por conector:
 - representação integral;
 - papel de PDFs;
 - papel de anexos;
