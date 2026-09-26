@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | [tribusca-control](https://github.com/fabiojuniort-cyber/tribusca-control) | Decisões, Issues, estado, roadmap e protocolo de agentes | Fonte oficial de governança |
 | [radar-fiscal-backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend) | API, Worker, Scheduler, conectores, SQL migrations e testes | Fonte oficial do código backend |
-| [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) | Frontend definitivo quando implementado | Fonte oficial do código web; ainda vazio na inspeção de 25/09/2026 |
+| [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) | Frontend definitivo quando implementado | Fonte oficial do código web; em 26/09/2026 contém apenas arquivos de governança, sem aplicação implementada |
 
 GitHub Issues coordenam o trabalho. PRs registram alterações de código. Logs, PostgreSQL e Railway comprovam o comportamento em produção. O arquivo PROJECT_STATE.md resume apenas o estado executivo validado.
 
