@@ -1,5 +1,7 @@
 # TriBusca — produto, recursos e experiência
 
+> **Precedência WEB-02 (26/09/2026):** para a camada pública, definições conflitantes anteriores são substituídas pela seção **WEB-02 — interface pública aprovada em 26/09/2026**. O restante deste documento continua vigente para produto autenticado.
+
 Atualizado em 26/09/2026. Registro das decisões comunicadas pelo responsável pelo produto. Este documento descreve direção aprovada, não afirma que os recursos estejam implementados. A implementação verificada permanece em [PROJECT_STATE.md](../PROJECT_STATE.md), Issues e repositórios de código.
 
 ## Propósito e fluxo
