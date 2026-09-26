@@ -39,4 +39,6 @@ Gerente Geral: o responsável pelo projeto autorizou manutenção documental aut
 
 ## Retomada em novo chat
 
-Cole: “Assuma como Gerente Geral do TriBusca. Leia https://github.com/fabiojuniort-cyber/tribusca-control/blob/main/CONTEXT.md e os links indicados. Revalide a Issue ativa e o PR antes de agir. Continue apenas a governança, uma tarefa por vez, preservando os gates.”
+Comando combinado com o usuário: **“Carregue o Gerente Geral do Repositório”**. Ao recebê-lo, localize `fabiojuniort-cyber/tribusca-control`, leia primeiro este `CONTEXT.md`, depois `PROJECT_STATE.md` e a Issue ativa; revalide somente as premissas atuais necessárias e continue a governança. Se o conector GitHub não estiver acessível na nova conversa, informe a barreira em vez de inventar estado.
+
+Para iniciar um novo chat especialista, o gerente fornece o link do contexto da frente e o número da Issue. Na mesma conversa especialista, não repetir esse pedido em cada mensagem; o agente consulta o GitHub novamente quando abrir outra Issue ou quando uma premissa mutável puder ter mudado.
