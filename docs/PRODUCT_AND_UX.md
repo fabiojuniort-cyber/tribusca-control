@@ -13,7 +13,7 @@ Navegação autenticada planejada:
 | Grupo | Áreas |
 | --- | --- |
 | Visão geral | Início |
-| Inteligência | Publicações, Busca, Acervo |
+| Inteligência | Publicações, Acervo |
 | Monitoramento | Central de Monitoramento, Fontes Oficiais |
 | Organização | Empresas, Estabelecimentos, Perfil Tributário |
 | Administração | Configurações |
@@ -45,6 +45,7 @@ Diretrizes aprovadas:
 - manter o nome simples **Acervo**;
 - não criar submarca ou nome comercial específico;
 - preservar rastreabilidade até a fonte oficial;
-- permitir navegação e filtros compatíveis com os marcadores e metadados existentes;
+- incluir **Busca** como função interna do Acervo, e não como área ou produto separado;
+- permitir pesquisa, navegação e filtros compatíveis com os marcadores e metadados existentes;
 - exibir histórico/versionamento quando aplicável;
 - não confundir Acervo com Releva: o Acervo organiza e disponibiliza o conteúdo; o Releva calcula afinidade com a empresa.
