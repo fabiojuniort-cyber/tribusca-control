@@ -12,6 +12,10 @@ Siga [papéis](docs/AGENT_ROLES.md), [handoff](docs/HANDOFF.md), [revisão/gates
 
 Toda implementação nova deve ter Issue de governança. Relacione o PR do repositório de código por URL completa. Branch própria, commits identificáveis, PR e testes proporcionais ao risco. Não ampliar escopo de repair/POC nem avançar para outro DOE sem gate. Se uma premissa falhar, interrompa as etapas dependentes e reporte a evidência.
 
+## Manutenção contínua do contexto
+
+O Gerente Geral é responsável por manter `CONTEXT.md`, `PROJECT_STATE.md` e os índices de `contexts/` coerentes com as evidências auditadas. A cada novo handoff, decisão, bloqueio, PR/gate ou mudança de prioridade que altere o ponto de retomada, atualize na mesma sessão somente os arquivos afetados, com data, links e próximo passo. Esta manutenção documental está autorizada pelo responsável do projeto e não exige confirmação a cada edição; merges e deploys seguem suas autorizações específicas. Novos chats devem revalidar GitHub e produção, pois arquivos não se sincronizam sozinhos entre conversas. Siga [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md).
+
 ## Fechamento
 
 Ao concluir sua parte, registre o handoff completo na Issue e indique por comentário se ela está em revisão independente ou validação produtiva. No [quadro de andamento](https://github.com/users/fabiojuniort-cyber/projects/1), mantenha In Progress enquanto o gate não tiver sido concluído; Done só após a evidência exigida. Somente o gerente confirma a conclusão e atualiza PROJECT_STATE.md. O conector GitHub atual não altera as colunas do Projects, então registre o estado detalhado na Issue independentemente do quadro. CI verde e merge não equivalem a conclusão produtiva.
