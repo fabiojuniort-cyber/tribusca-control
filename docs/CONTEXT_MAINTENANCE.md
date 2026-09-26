@@ -15,6 +15,10 @@ GitHub é o contexto durável; memória de chat é apenas apoio. O contexto curt
 | Documentação técnica no repositório de código | Executor via PR | Quando contrato, comportamento, runbook ou operação mudam; revisão e gate seguem a Issue |
 | `AGENTS.md` e templates | Gerente Geral | Quando o protocolo de agentes muda; atualizar links sem copiar estado operacional |
 
+## Autorização de manutenção
+
+O responsável pelo projeto autorizou o Gerente Geral a atualizar autonomamente os arquivos de governança e contextos no `tribusca-control` quando houver mudança verificada. Não solicitar confirmação rotineira para cada edição documental. A autorização não se estende a merge/deploy/migration ou ações produtivas sem escopo autorizado. O gerente registra a evidência e deixa o próximo chat capaz de retomar o trabalho.
+
 ## Processo em cada avanço
 
 1. Agente lê `AGENTS.md` do repositório de código, o contexto da frente e a Issue atual.
