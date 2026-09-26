@@ -16,6 +16,10 @@ Atualizado em 25/09/2026. Este registro consolida decisões transmitidas pelo re
 | D-010 | Frontend definitivo em radar-fiscal-web: React, TypeScript, Vite, React Router, TanStack Query, Tailwind, Radix UI, shadcn/ui e ferramentas de teste aprovadas. | Site definitivo permanece sem prioridade na macrofase DOE. |
 | D-011 | Trial comercial de 7 dias com CTA “Experimentar grátis”. | Não reintroduzir funcionalidades gratuitas públicas descartadas sem decisão nova. |
 | D-012 | tribusca-control é fonte de governança; repositórios de código são fonte da implementação; produção confirma resultado operacional. | Não declarar entrega produtiva só por PR mergeado ou CI verde. |
+| D-013 | O [Manual de Marca TriBusca v1](docs/BRAND_MANUAL_V1.md) é referência visual oficial para site, aplicativo e materiais. | Usar os ativos aprovados do [manifesto](docs/BRAND_ASSETS.md); não criar novo logo nem sub-marcas. |
+| D-014 | A direção de navegação, estados, marcadores, relevância e Norma Clara é a descrita em [produto e UX](docs/PRODUCT_AND_UX.md). | Conceitos aprovados não equivalem a API/schema implementados; exigir Issue e evidência. |
+| D-015 | O [site definitivo](docs/SITE_AND_MARKETING.md) fica pausado até a consolidação das fontes e do produto; o protótipo é apenas referência funcional. | Reavaliar design visual antes da implementação final; não anunciar recursos não entregues. |
+| D-016 | O Gerente registra cada decisão nova ou alteração de direção no tema próprio e neste índice, após confirmação do responsável. | Uma nova janela deve recuperar decisões de arquitetura, produto, UX, marca, comercial e site via GitHub, sem depender do histórico de chat. |
 
 ## Como mudar uma decisão
 
