@@ -6,6 +6,8 @@ Toda entrega de executor GPT-5.6 usa o modelo abaixo no comentário da Issue de 
 
 ### Identificação
 
+- Atividade:
+- Título:
 - Especialidade do chat:
 - Papel: Executor ou Revisor independente
 - Modelo:
@@ -37,13 +39,19 @@ Toda entrega de executor GPT-5.6 usa o modelo abaixo no comentário da Issue de 
 - Banco: consulta READ ONLY, contagens e amostras de identidade/proveniência sem expor dados sensíveis, se aplicável:
 - Arquivos: URLs oficiais, SHA e tamanho, se aplicável:
 
-### Gate e próxima ação
+### Gate, progresso e próxima ação
 
+- Resultado deste avanço: sucesso, falha, bloqueada ou em andamento
+- Evidência breve do avanço:
+- Percentual estimado de avanço da frente:
+- Base de marcos verificáveis e pesos usada no cálculo:
+- Incerteza da estimativa e motivo:
 - Critérios de aceite comprovados:
 - Critérios sem evidência ou reprovados:
 - Riscos/limitações:
 - Erro/bloqueio: evidência, causa comprovada ou hipótese, impacto, passos dependentes interrompidos e passos independentes realizados:
 - Uma próxima ação recomendada ao Gerente:
+- Se a frente foi encerrada e outra será aberta: passos restantes até a conclusão do projeto, percentual estimado do projeto total, base de marcos e incertezas:
 - Registro documental: Issue, caminhos alterados, commit e links; se pendente, motivo e patch pronto:
 
 ## Regra

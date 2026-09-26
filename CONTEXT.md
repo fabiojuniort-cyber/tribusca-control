@@ -36,7 +36,9 @@ Submeter o head `350d688fc79db43ab770ac7b9c43b716b8b2edd2` do PR #71 a uma **nov
 
 ## Atualização obrigatória a cada marco
 
-**Objetivo permanente:** abrir nova janela do Gerente a qualquer momento com pouco contexto no chat e sem perder decisões. Depois de cada avanço, erro, decisão ou bloqueio, o Gerente GPT-6 analisa o relato e delega ao executor GPT-5.6 a edição de `CONTEXT.md`, `PROJECT_STATE.md`, Issue e índices afetados, incluindo data, evidência, dependências e próximo passo. O GPT-5.6 retorna links/commit e resumo do diff. Se o registro não for comprovado, o marco não está documentalmente fechado. Nunca tratar handoff isolado como prova de produção. A manutenção documental está autorizada; ações produtivas exigem seu próprio gate. Confira [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md).
+**Objetivo permanente:** abrir nova janela do Gerente a qualquer momento com pouco contexto no chat e sem perder decisões. Depois de cada avanço, erro, decisão ou bloqueio, o Gerente GPT-6 analisa o relato e delega ao executor GPT-5.6 a edição de `CONTEXT.md`, `PROJECT_STATE.md`, Issue e índices afetados, incluindo data, evidência, dependências e próximo passo. O GPT-5.6 retorna links/commit e resumo do diff. Se o registro não for comprovado, o marco não está documentalmente fechado. Nunca tratar handoff isolado como prova de produção. A manutenção documental está autorizada; ações produtivas exigem seu próprio gate.
+
+**Regra GOV-01 vigente desde 26/09/2026:** delegações usam ID sequencial por frente, título e passos numerados; o texto a copiar para executor/revisor fica sozinho em bloco copiável. Em cada avanço, o Gerente informa resultado, evidência, próximo passo, percentual da frente calculado sobre marcos verificáveis e incerteza. Percentuais não substituem gates. Ao trocar de frente, registra também passos restantes e estimativa fundamentada do projeto total. A definição canônica está em [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md).
 
 ## Retomada em novo chat
 

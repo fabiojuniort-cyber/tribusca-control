@@ -21,28 +21,46 @@ GitHub é o contexto durável; memória de chat é apenas apoio. O contexto curt
 
 O responsável pelo projeto autorizou a manutenção recorrente da documentação de governança. O Gerente decide e delega; o GPT-5.6 executa e comprova a atualização. Não pedir confirmação rotineira para cada edição documental. Essa autorização não libera merge, deploy, migration, alteração de secrets, operação destrutiva ou outra ação produtiva sem escopo e gate autorizado. Se o executor não conseguir escrever, deve devolver o patch/texto exato ao Gerente e manter o marco aberto.
 
-## Cabeçalho obrigatório de delegação
+## Prompt de delegação: identificação, numeração e bloco copiável
 
-Antes de qualquer lista de passos, o prompt enviado a um novo chat ou a um chat retomado para uma nova Issue deve declarar o vínculo operacional da tarefa. O cabeçalho mínimo é:
+Antes de qualquer lista de passos, o prompt enviado a um novo chat ou a um chat retomado para uma nova atividade deve declarar o vínculo operacional da tarefa. O cabeçalho mínimo é:
 
+- **Atividade:** identificador sequencial visível e estável dentro da frente ou namespace, por exemplo `GOV-01`.
+- **Título:** nome curto e objetivo da atividade.
 - **Especialidade do chat:** Backend, Design/UX, Arquitetura, Governança ou outra especialidade pertinente.
 - **Papel:** Executor ou Revisor independente.
 - **Modelo:** modelo designado explicitamente, sem deixar implícito pelo ambiente.
-- **Frente:** fonte, produto ou trilha de trabalho (por exemplo, DOE-SP).
+- **Frente:** fonte, produto ou trilha de trabalho (por exemplo, DOE-SP ou Governança TriBusca).
 - **Issue:** número e, preferencialmente, URL completa da Issue de governança.
 - **Resultado esperado:** entrega/gate objetivo que encerra a delegação.
 
-Repositório, branch e PR devem ser adicionados quando existirem. Especialidade, papel e modelo não podem ser inferidos apenas pela Issue ou pelo nome do chat. Se o Gerente detectar um prompt antigo sem esses campos, deve corrigi-lo na próxima delegação antes de iniciar nova execução.
+Repositório, branch e PR devem ser adicionados quando existirem. Especialidade, papel e modelo não podem ser inferidos apenas pela Issue ou pelo nome do chat. **Preserve todo identificador já emitido:** cada frente mantém sua própria sequência; uma atividade `GOV-01` não renumera nem reaproveita números de DOE-SP. Os passos executáveis do prompt são sempre numerados.
+
+O Gerente apresenta **todo prompt de delegação em um único bloco isolado e copiável, contendo somente o texto que o usuário deve enviar ao chat executor ou revisor**. Análise do Gerente, status da atividade, percentual, evidências, justificativas e explicações ao usuário permanecem fora do bloco. Se um prompt antigo não cumprir identificação, numeração ou isolamento, o Gerente corrige o formato na próxima delegação antes de iniciar nova execução.
 
 ## Processo em cada avanço
 
-1. O Gerente envia ao GPT-5.6 o cabeçalho obrigatório de delegação (especialidade, papel, modelo, frente, Issue e resultado esperado), contexto mínimo, autorização vigente, critérios e até cinco passos independentes; pode demandar uma leitura inicial para descobrir o estado.
+1. O Gerente envia ao GPT-5.6 o prompt no formato obrigatório, com atividade/título, especialidade, papel, modelo, frente, Issue, resultado esperado, contexto mínimo, autorização vigente, critérios e até cinco passos independentes numerados; pode demandar uma leitura inicial para descobrir o estado.
 2. O executor verifica evidências ao vivo, avança autonomamente em todas as etapas autorizadas e registra fatos, erros e limites na Issue/PR. Um erro interrompe somente os passos dependentes: o executor faz o restante seguro e devolve o problema ao Gerente, sem mascará-lo.
 3. O Gerente analisa integralmente o retorno, confronta critérios, identifica causa comprovada versus hipótese e dá novo direcionamento. Se o gate depender de comprovação independente, designa outro GPT-5.6 para revisão; não se atribui uma auditoria direta.
-4. O Gerente demanda a atualização apenas dos arquivos afetados. O GPT-5.6 edita os arquivos, verifica links e coerência, retorna commit, caminhos alterados, resumo das mudanças e status da Issue. Pode fazer a atualização factual no próprio handoff se o escopo já determinar os fatos; nenhuma conclusão produtiva sem gate do Gerente.
-5. O Gerente incorpora a confirmação documental ao seu próximo prompt. Se faltar registro comprovado, o marco permanece aberto e a primeira ação delegada é corrigi-lo.
+4. **A cada avanço comunicado ao usuário**, o Gerente informa fora do bloco de delegação: ID/título/frente; resultado do avanço (`sucesso`, `falha`, `bloqueada` ou `em andamento`); evidência breve; próximo passo; percentual estimado de avanço da frente; base de marcos usada no cálculo; e incerteza material da estimativa.
+5. O Gerente demanda a atualização apenas dos arquivos afetados. O GPT-5.6 edita os arquivos, verifica links e coerência, retorna commit, caminhos alterados, resumo das mudanças e status da Issue. Pode fazer a atualização factual no próprio handoff se o escopo já determinar os fatos; nenhuma conclusão produtiva sem gate do Gerente.
+6. O Gerente incorpora a confirmação documental ao seu próximo prompt. Se faltar registro comprovado, o marco permanece aberto e a primeira ação delegada é corrigi-lo.
 
 Não regravar tudo a cada mensagem. A Issue contém detalhes; índices guardam síntese com data e links. Issues e cartões não criam nem sincronizam chats.
+
+## Progresso por marcos verificáveis
+
+O percentual é uma **estimativa operacional**, não um gate e não uma declaração de conclusão. Cada frente deve ter uma base explícita de marcos verificáveis derivada da Issue, roadmap e gates aplicáveis. No início da frente, ou no primeiro avanço após esta regra, o Gerente lista os marcos e seus pesos; os pesos somam 100%. Se não houver justificativa para pesos diferentes, use pesos iguais. Um marco só recebe crédito na proporção comprovada por subetapas objetivas; sem evidência, permanece em 0%. O percentual da frente é a soma dos pesos comprovados.
+
+A cada atualização, identifique também a incerteza que possa alterar a estimativa (por exemplo, `baixa`, `média` ou `alta`) e o motivo. CI verde, merge, deploy ou porcentagem alta **não substituem revisão independente, gate produtivo ou outro critério formal**.
+
+Ao **encerrar uma frente e iniciar outra**, o Gerente acrescenta ao status:
+- resumo dos passos restantes até a conclusão do projeto;
+- estimativa fundamentada do percentual do projeto total;
+- base de marcos usada no cálculo do projeto total e incertezas relevantes.
+
+O percentual do projeto total segue a mesma lógica: marcos verificáveis do roadmap, com pesos explícitos e sem tratar trabalho ainda não validado como concluído.
 
 ## Novo chat / nova frente — leitura direta do Gerente
 
