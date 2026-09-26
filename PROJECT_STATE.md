@@ -64,12 +64,12 @@ Documentos de decisões, arquitetura, papéis, segurança, handoff, revisão e m
 
 ## API-01 — API pública do site
 
-**ABERTA — implementação autorizada, merge/deploy não autorizados.**
+**IMPLEMENTADA EM DRAFT — CI verde; merge/deploy não autorizados.**
 
 Issue executora: [#11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11).
 
-D-050 define três rotas read-only sob `/public/v1` para fontes, publicações e estatísticas. Escopo estritamente global/público; não expor conteúdo integral nem dados privados. CORS restrito por ambiente, cache de 300s e rate limit registrado como pendência.
+D-050 define três rotas read-only sob `/public/v1` para fontes, publicações e estatísticas. O draft [PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, implementa o contrato sem autenticação, sem `content_text`/dados privados, com CORS por allowlist, preflight GET-only e cache 300s. CI #433 / run `36260320585` = **SUCCESS**. Sem migration ou job novo; rate limit segue pendente.
 
 Produção: PostgreSQL está online, mas o conector Railway disponível não executa SQL read-only; portanto schema/view produtivos não foram consultados diretamente neste marco. O código/migrations confirmam grants SELECT da role da API para os objetos necessários e índices `ix_publications_scope_date` e `ix_collection_runs_source_history`.
 
-Próximo gate: PR backend + CI verde + handoff; Gerente decide merge/deploy.
+Próximo gate: Gerente revisa o handoff do PR #74 e decide merge. Deploy/configuração de `PUBLIC_API_ALLOWED_ORIGINS`, URL base pública e validação contra produção ficam em gate separado.
