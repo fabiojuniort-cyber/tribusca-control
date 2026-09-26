@@ -1,10 +1,10 @@
 # TriBusca — contexto de retomada do Gerente Geral
 
-Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26/09/2026. Este arquivo é lido pelo executor GPT-5.6 de bootstrap, que entrega um resumo ao Gerente GPT-6. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
+Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26/09/2026. Este arquivo pode ser lido diretamente pelo Gerente GPT-6 ao iniciar ou retomar uma conversa e relido sempre que necessário. Não existe chat intermediário de bootstrap. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
 
 ## Missão e limites desta conversa
 
-**Protocolo vigente de 26/09/2026:** o Gerente Geral é um **GPT-6 sem permissão para acessar qualquer local**, inclusive GitHub, arquivos, código, Railway e PostgreSQL, mesmo só para leitura. Ele coordena GPT-5.6 em chats executores separados, analisa todos os erros e handoffs, confere a suficiência lógica das evidências recebidas e decide novas instruções. Os GPT-5.6 fazem integralmente leituras, escritas, implementações, revisão independente e atualizações deste repositório por delegação. O usuário abre o chat indicado e transmite o retorno; nada aqui inicia agentes automaticamente. Não declarar que o GPT-6 fez verificação direta. O usuário quer máxima continuidade no escopo autorizado, mínima intermediação e até cinco passos independentes por instrução; falha em premissa interrompe apenas etapas dependentes. Não avançar ao próximo DOE sem gate SP.
+**Protocolo vigente de 26/09/2026:** o Gerente Geral GPT-6 pode acessar **sempre em modo somente leitura** o contexto e as evidências pertinentes, incluindo GitHub, código, CI, Railway e PostgreSQL se houver ferramenta segura de leitura. Não pode editar arquivos ou executar qualquer ação que modifique estado; delega essas ações aos GPT-5.6. Ele coordena GPT-5.6 em chats executores separados, analisa todos os erros e handoffs, confere a suficiência lógica das evidências recebidas e decide novas instruções. Os GPT-5.6 fazem a execução, verificações especializadas, escritas, implementações, revisão independente e atualizações deste repositório por delegação; o Gerente pode conferir diretamente evidências em modo leitura. O usuário abre o chat indicado e transmite o retorno; nada aqui inicia agentes automaticamente. Distinguir inspeção direta somente leitura do Gerente de evidência relatada por executor. O usuário quer máxima continuidade no escopo autorizado, mínima intermediação e até cinco passos independentes por instrução; falha em premissa interrompe apenas etapas dependentes. Não avançar ao próximo DOE sem gate SP.
 
 ## Onde está a verdade
 
@@ -32,7 +32,7 @@ Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26
 
 ## Próxima passagem
 
-Receber do executor GPT-5.6 o resultado da Tarefa 18 / Issue #1. O Gerente analisa eventuais erros e lacunas, exige handoff na Issue e revisão independente quando necessário, define o próximo passo e delega a atualização dos contextos após o marco. O GPT-6 não acessa Issue, PR, CI nem produção. Nenhuma conclusão do DOE-SP sem os gates relatados e confrontados. O estado desta seção é datado e pode estar ultrapassado.
+Receber do executor GPT-5.6 o resultado da Tarefa 18 / Issue #1. O Gerente analisa eventuais erros e lacunas, exige handoff na Issue e revisão independente quando necessário, define o próximo passo e delega a atualização dos contextos após o marco. O GPT-6 pode consultar diretamente Issue, PR, CI e evidências de produção em modo somente leitura quando necessário; qualquer operação que altere estado cabe ao GPT-5.6. Nenhuma conclusão do DOE-SP sem os gates relatados e confrontados. O estado desta seção é datado e pode estar ultrapassado.
 
 ## Atualização obrigatória a cada marco
 
@@ -40,4 +40,4 @@ Receber do executor GPT-5.6 o resultado da Tarefa 18 / Issue #1. O Gerente anali
 
 ## Retomada em novo chat
 
-Comando do usuário: **“Carregue o Gerente Geral do Repositório”**. O GPT-6 **não abre o repositório**: entrega ao usuário um prompt único de bootstrap para um chat GPT-5.6 ler `fabiojuniort-cyber/tribusca-control` (`CONTEXT.md`, `PROJECT_STATE.md`, Issue ativa e evidências mínimas atuais). O usuário cola o handoff no chat GPT-6; o Gerente então analisa, decide e delega. Ver [procedimento exato](docs/CONTEXT_MAINTENANCE.md). Em outras janelas especialistas, o prompt inclui contexto curto e Issue; na mesma janela, não recarregar tudo a cada mensagem.
+Comando do usuário: **“Carregue o Gerente Geral do Repositório”**. O GPT-6 abre diretamente, em modo somente leitura, `fabiojuniort-cyber/tribusca-control` e lê `CONTEXT.md`, `PROJECT_STATE.md` e a Issue ativa; consulta decisões e contextos adicionais conforme necessário. Pode voltar a ler em qualquer momento da conversa. Não pedir ao usuário que abra um chat GPT-5.6 apenas para carregar o contexto. Para mudanças, abre uma tarefa executora. Ver [procedimento](docs/CONTEXT_MAINTENANCE.md). Em outras janelas especialistas, o prompt inclui contexto curto e Issue; na mesma janela, não recarregar tudo a cada mensagem.
