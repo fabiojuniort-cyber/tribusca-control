@@ -17,6 +17,8 @@ Toda entrega de executor usa o modelo abaixo, no comentário da Issue de governa
 - O que foi feito:
 - O que permanece pendente:
 - Arquivos/migrations alterados:
+- Contexto da frente consultado (link) e documentação técnica alterada neste PR:
+- Arquivos centrais de contexto/estado que o Gerente precisa atualizar após auditar este marco:
 - Contratos e comportamento afetados:
 - Ações efetivas em GitHub/Railway/PostgreSQL:
 - Ações explicitamente não executadas:
