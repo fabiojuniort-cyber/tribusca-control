@@ -47,3 +47,8 @@ Detalhar cada frente em Issue própria antes de começar. Ajustes de paralelismo
 ## Regra de passagem
 
 O Gerente Geral audita o handoff e as evidências em produção antes de declarar uma frente concluída. O próximo DOE só começa depois do fechamento formal do DOE-SP. Trabalhos que dependam de mudança arquitetural material, custo novo ou decisão de produto são escalados ao usuário.
+
+
+## Exceção WEB-01 — site público em paralelo
+
+Por decisão do responsável pelo produto em 26/09/2026, a **camada pública estática do site** pode avançar em paralelo à macrofase DOE para consolidar marca, portfólio e páginas temáticas já decididas. Esta exceção **não antecipa** API do produto, frontend autenticado, matching do Sonar, envio do Revela, Decodifica real ou integração dinâmica do Acervo. A ordem técnica da inteligência permanece válida para esses recursos.
