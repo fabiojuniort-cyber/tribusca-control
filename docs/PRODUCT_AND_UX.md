@@ -55,3 +55,21 @@ Diretrizes aprovadas:
 ## Reforma Tributária — página temática
 
 **Reforma Tributária** é uma página temática pública de dados, não um produto ou submarca. Ela organiza um recorte do Acervo reunindo legislação, regulamentação, notas técnicas e demais publicações oficiais relacionadas, com **timeline** capaz de distinguir datas de publicação, início de vigência, marcos de implementação e faseamento. O conteúdo deve preservar fonte oficial, histórico/versionamento e não duplicar fisicamente o Acervo. Ver [Página Reforma Tributária](product-tools/REFORMA_TRIBUTARIA.md).
+
+## WEB-02 — interface pública aprovada em 26/09/2026
+
+**Origem:** responsável pelo produto (usuário). **Registro completo:** [WEB-02](WEB_02_DESIGN_ALIGNMENT.md). Esta seção substitui as partes conflitantes da experiência pública anterior; o histórico permanece em `DECISIONS.md`.
+
+- Navegação pública: **Cobertura · Portfólio · Como funciona · Reforma Tributária**, em rotas dedicadas.
+- Header: assinatura horizontal oficial + botões **Entrar** e **Criar conta**. O CTA “Experimentar grátis” deixa de ser o CTA primário do header, sem extinguir o trial de 7 dias da D-011.
+- Autenticação pública: Entrar/Criar conta/Recuperar senha/Nova senha em modal. Apenas Entrar possui contrato backend comprovado nesta frente: **POST `/auth/login`**. Não inventar cadastro/reset.
+- Criar conta/Nova senha: confirmar senha e requisitos em tempo real; limiar de 8 caracteres no draft é provisório até contrato backend.
+- Home estadual: 5 UFs, SP fixo em primeiro e 4 sorteadas; fotos licenciadas do Wikimedia Commons; área de publicações usa **“—”** sem API.
+- Portfólio público: **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica, Perfil Tributário**. O draft mostra Acervo/Central como **Disponível** e os demais como **Em desenvolvimento**; o claim “Disponível” precisa de confirmação do Gerente antes do merge.
+- Sonar mantém Alta/Média/Baixa + proximidade, com cores semânticas WEB-02 **vermelho/amarelo/verde**; exceção pendente de Branding e rótulo textual obrigatório.
+- Decodifica: carrossel de cinco exemplos Texto oficial × Leitura auxiliar definidos no registro WEB-02, sempre com aviso de IA.
+- Revela: exemplo de boletim diário com Alta afinidade e Menção direta.
+- Cobertura: serviços federais e 27 UFs em cards de largura total; métricas reais somente quando houver contrato de API, caso contrário **“—”**.
+- Reforma Tributária: timeline em **Publicação / Vigência / Marco previsto em lei**, com datas apenas de fonte oficial do Acervo.
+
+**Impacto:** Router, header, modais, conteúdo, estados, acessibilidade e futuras integrações de API. **Próximo passo:** implementar e validar no draft PR #1; sem merge/deploy. D-043 e D-044 exigem gates adicionais.
