@@ -4,7 +4,7 @@ Atualizado em 26/09/2026, 00:14 BRT. Leia este arquivo ao iniciar uma nova conve
 
 ## Missão e limites desta conversa
 
-Este chat do Gerente Geral trata da governança e coordenação dos agentes. Implementações de backend/frontend, merges, deploys e intervenções produtivas pertencem às frentes executoras autorizadas. O usuário quer uma tarefa por vez, mínima intermediação e apenas etapas dependentes após a premissa. Nunca presumir que uma Issue, um cartão ou um arquivo inicia automaticamente um chat.
+**Protocolo vigente de 26/09/2026:** o Gerente Geral é um **GPT-6 sem permissão para acessar qualquer local**, inclusive GitHub, arquivos, código, Railway e PostgreSQL, mesmo só para leitura. Ele coordena GPT-5.6 em chats executores separados, analisa todos os erros e handoffs, confere a suficiência lógica das evidências recebidas e decide novas instruções. Os GPT-5.6 fazem integralmente leituras, escritas, implementações, revisão independente e atualizações deste repositório por delegação. O usuário abre o chat indicado e transmite o retorno; nada aqui inicia agentes automaticamente. Não declarar que o GPT-6 fez verificação direta. O usuário quer máxima continuidade no escopo autorizado, mínima intermediação e até cinco passos independentes por instrução; falha em premissa interrompe apenas etapas dependentes. Não avançar ao próximo DOE sem gate SP.
 
 ## Onde está a verdade
 
@@ -32,16 +32,12 @@ Este chat do Gerente Geral trata da governança e coordenação dos agentes. Imp
 
 ## Próxima passagem
 
-Receber o resultado da Tarefa 18 / Issue #1 do executor. Exigir handoff registrado na Issue; auditar PR, revisão independente e evidências produtivas antes de fechar #1. Se houver bloqueio, registrar a causa e delegar apenas o menor passo necessário. Não abrir o segundo DOE enquanto SP estiver aberto.
+Receber do executor GPT-5.6 o resultado da Tarefa 18 / Issue #1. O Gerente analisa eventuais erros e lacunas, exige handoff na Issue e revisão independente quando necessário, define o próximo passo e delega a atualização dos contextos após o marco. O GPT-6 não acessa Issue, PR, CI nem produção. Nenhuma conclusão do DOE-SP sem os gates relatados e confrontados. O estado desta seção é datado e pode estar ultrapassado.
 
 ## Atualização obrigatória a cada marco
 
-**Objetivo permanente do usuário:** poder abrir uma nova janela do Gerente Geral a qualquer momento e continuar do ponto exato, gastando poucos tokens e sem copiar o histórico do chat. Após cada avanço auditado, este arquivo deve preservar: frente ativa, Issue e PR, fatos verificados com data, bloqueio/dependências, próxima ação e links aos contextos dos especialistas. Antes de encerrar uma sessão com mudança material, atualize os arquivos afetados no GitHub. Não afirme que outro chat executou trabalho sem handoff/evidência acessível.
-
-Gerente Geral: o responsável pelo projeto autorizou manutenção documental autônoma. Após handoff auditado, decisão, novo PR/gate ou alteração da prioridade, atualize este arquivo e PROJECT_STATE.md na mesma sessão, sem solicitar permissão rotineira. Corrija/remova números antigos e registre data, evidência e próximo passo. Executor/revisor: registre seu handoff na Issue; não altere o contexto gerencial com conclusão não auditada. Arquivos não são atualizados por outros chats automaticamente. Se a ferramenta de escrita estiver indisponível, deixe instrução explícita de atualização no retorno.
+**Objetivo permanente:** abrir nova janela do Gerente a qualquer momento com pouco contexto no chat e sem perder decisões. Depois de cada avanço, erro, decisão ou bloqueio, o Gerente GPT-6 analisa o relato e delega ao executor GPT-5.6 a edição de `CONTEXT.md`, `PROJECT_STATE.md`, Issue e índices afetados, incluindo data, evidência, dependências e próximo passo. O GPT-5.6 retorna links/commit e resumo do diff. Se o registro não for comprovado, o marco não está documentalmente fechado. Nunca tratar handoff isolado como prova de produção. A manutenção documental está autorizada; ações produtivas exigem seu próprio gate. Confira [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md).
 
 ## Retomada em novo chat
 
-Comando combinado com o usuário: **“Carregue o Gerente Geral do Repositório”**. Ao recebê-lo, localize `fabiojuniort-cyber/tribusca-control`, leia primeiro este `CONTEXT.md`, depois `PROJECT_STATE.md` e a Issue ativa; revalide somente as premissas atuais necessárias e continue a governança. Se o conector GitHub não estiver acessível na nova conversa, informe a barreira em vez de inventar estado.
-
-Para iniciar um novo chat especialista, o gerente fornece o link do contexto da frente e o número da Issue. Na mesma conversa especialista, não repetir esse pedido em cada mensagem; o agente consulta o GitHub novamente quando abrir outra Issue ou quando uma premissa mutável puder ter mudado.
+Comando do usuário: **“Carregue o Gerente Geral do Repositório”**. O GPT-6 **não abre o repositório**: entrega ao usuário um prompt único de bootstrap para um chat GPT-5.6 ler `fabiojuniort-cyber/tribusca-control` (`CONTEXT.md`, `PROJECT_STATE.md`, Issue ativa e evidências mínimas atuais). O usuário cola o handoff no chat GPT-6; o Gerente então analisa, decide e delega. Ver [procedimento exato](docs/CONTEXT_MAINTENANCE.md). Em outras janelas especialistas, o prompt inclui contexto curto e Issue; na mesma janela, não recarregar tudo a cada mensagem.
