@@ -39,6 +39,8 @@ Usuários autenticados do TriBusca que estejam consultando uma publicação/base
 14. Conteúdos acima de 25.000 caracteres consomem créditos adicionais proporcionalmente por faixas de 25.000 caracteres. Regra conceitual: `créditos = ceil(caracteres / 25.000)`, com mínimo de 1.
 15. Antes do acionamento, o usuário deve visualizar o custo em créditos; a direção aprovada é exibir esse custo no próprio botão do Decodifica.
 16. O consumo de créditos é pelo uso do recurso na assinatura, independentemente de o TriBusca precisar fazer uma nova chamada à OpenAI API ou conseguir reutilizar um resultado global já existente.
+17. Se o conteúdo oficial for posteriormente alterado, retificado ou substituído por nova versão, a tradução/explicação já existente **não deve ser apagada**.
+18. Nesse caso, o resultado anterior deve permanecer acessível, porém com uma marcação visual clara de que está **desatualizado em relação à versão oficial vigente**.
 
 ## Entradas
 
@@ -87,6 +89,15 @@ Planejadas, não implementadas por esta decisão:
 - A quantidade de créditos incluída em cada plano de assinatura **não foi definida** nesta rodada.
 - A base exata de contagem de caracteres (por exemplo, tratamento de espaços, marcação, cabeçalhos e texto normalizado) permanece aberta para desenho funcional/técnico posterior.
 
+## Versionamento e desatualização
+
+- Uma tradução existente permanece vinculada à versão do conteúdo oficial que lhe deu origem.
+- Se a norma sofrer alteração, retificação ou nova versão, a tradução anterior permanece disponível.
+- A interface deve destacar de forma inequívoca que essa tradução está **desatualizada** frente ao texto oficial vigente.
+- O texto oficial vigente continua sendo a referência primária.
+- **Ainda não foi definido** se uma tradução atualizada será gerada automaticamente, mediante novo clique, ou por outro fluxo; essa decisão permanece aberta.
+- Também permanece aberta a política para obsolescência causada apenas por mudança de engine, prompt ou modelo, sem mudança no conteúdo oficial.
+
 ## Limites
 
 - Não substituir ou ocultar o texto oficial.
@@ -107,24 +118,25 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 
 ## Questões abertas
 
-1. Política de retenção/obsolescência quando o conteúdo oficial mudar ou a engine/prompt/modelo do Decodifica for atualizado.
-2. Unidade técnica de geração e persistência: ato completo, artigo ou outra composição interna, preservando a experiência aprovada de cobertura completa e apresentação artigo a artigo.
-3. Regra física de associação entre resultado global reutilizável e o acionamento/visibilidade por usuário.
-4. Contrato da OpenAI API, modelo, prompt, limites, observabilidade, custos e controles de falha.
-5. Comportamento para conteúdo extenso que exceda limites técnicos da integração.
-6. Quantidade de créditos incluída em cada plano, periodicidade de renovação, eventual rollover e regras de compra adicional.
-7. Definição exata de quais caracteres entram na medição comercial e em qual representação do texto a contagem é feita.
+1. Fluxo para gerar uma nova tradução quando a versão oficial mudar: automático, novo acionamento ou outra regra; e eventual consumo de créditos nessa atualização.
+2. Política de obsolescência causada apenas por mudança de engine/prompt/modelo, sem alteração no conteúdo oficial.
+3. Unidade técnica de geração e persistência: ato completo, artigo ou outra composição interna, preservando a experiência aprovada de cobertura completa e apresentação artigo a artigo.
+4. Regra física de associação entre resultado global reutilizável e o acionamento/visibilidade por usuário.
+5. Contrato da OpenAI API, modelo, prompt, limites, observabilidade, custos e controles de falha.
+6. Comportamento para conteúdo extenso que exceda limites técnicos da integração.
+7. Quantidade de créditos incluída em cada plano, periodicidade de renovação, eventual rollover e regras de compra adicional.
+8. Definição exata de quais caracteres entram na medição comercial e em qual representação do texto a contagem é feita.
 
 ## Avaliação de impacto desta decisão
 
 | Área | Impacto |
 | --- | --- |
 | Arquitetura | **Sim, futuro** — resultado global reutilizável + estado de acionamento/visibilidade por usuário. |
-| Dados | **Sim, futuro** — persistência, versionamento e associação do resultado. |
+| Dados | **Sim, futuro** — persistência, vínculo com a versão oficial, versionamento e associação do resultado. |
 | API | **Sim, futuro** — consulta/acionamento, cálculo/exposição do custo, consumo de créditos e retorno do Decodifica. |
 | Coleta | **Não agora** — a coleta continua responsável pelo conteúdo oficial. |
 | IA | **Sim, futuro** — integração sob demanda com OpenAI API e reaproveitamento de resultado. |
-| UX | **Sim, futuro** — botão no início da base legal com custo em créditos visível antes do clique e blocos por artigo. |
+| UX | **Sim, futuro** — botão no início da base legal com custo em créditos visível antes do clique, blocos por artigo e indicação inequívoca quando uma tradução estiver desatualizada. |
 | Site/comercial | **Sim, futuro** — Decodifica será limitado por créditos da assinatura; franquias por plano ainda não foram definidas. Não anunciar como disponível antes da implementação. |
 | Custos | **Sim, futuro** — créditos comerciais são separados do custo interno de API; reutilização global reduz consumo redundante da OpenAI sem alterar o débito comercial do uso. |
 | Segurança | **Sim, futuro** — definir fronteira de dados, autorização e telemetria da integração. |
