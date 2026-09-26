@@ -6,7 +6,7 @@
 2. Executor GPT-5.6 avança autonomamente em todo o escopo autorizado, registra PR e handoff completo na Issue. Se aparecer erro, investiga e devolve ao Gerente; só interrompe etapas dependentes.
 3. Revisor independente GPT-5.6, em outro chat, inspeciona mudança e casos adversos; entrega aprovação fundamentada ou falhas com evidência.
 4. Gerente GPT-6 analisa todos os erros, divergências e handoffs; direciona correções. Executor faz alterações e testes pertinentes.
-5. Quando a autorização vigente cobrir o ato, executor realiza merge/deploy e inspeciona CI, produção e gates exigidos. Gerente nunca acessa nenhum sistema; analisa relatórios e pede prova adicional a outro GPT-5.6 se necessário.
+5. Quando a autorização vigente cobrir o ato, executor realiza merge/deploy e inspeciona CI, produção e gates exigidos. Gerente pode conferir evidências diretamente em modo somente leitura, analisa relatórios e pede prova adicional a outro GPT-5.6 se necessário.
 6. Após decisão do Gerente, GPT-5.6 delegado atualiza Issue, `CONTEXT.md`, `PROJECT_STATE.md`, `ROADMAP.md` e índices afetados; retorna commit e links. Gerente só declara gate concluído depois de receber provas e registro documental.
 
 Uma Issue que exige bootstrap ou validação produtiva permanece aberta após merge. Ao relacionar PR entre repositórios, usar referência textual/URL; não usar fechamento automático antes do gate.
