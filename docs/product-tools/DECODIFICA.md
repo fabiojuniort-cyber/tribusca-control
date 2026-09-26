@@ -33,6 +33,12 @@ Usuários autenticados do TriBusca que estejam consultando uma publicação/base
 8. Se esse outro usuário acionar o Decodifica e já existir resultado reutilizável para o mesmo conteúdo aplicável, o TriBusca deve servir o resultado persistido em vez de realizar nova chamada à API.
 9. O acionamento deve abranger o **dispositivo/base legal completa** disponibilizada para tradução.
 10. Na interface, o resultado deve ser apresentado em **blocos de artigo em artigo**.
+11. O Decodifica utilizará **créditos vinculados à assinatura**.
+12. **1 crédito Decodifica = até 25.000 caracteres** de conteúdo processado.
+13. O consumo tem mínimo de **1 crédito**: mesmo um dispositivo muito curto, por exemplo com 100 caracteres, consome 1 crédito.
+14. Conteúdos acima de 25.000 caracteres consomem créditos adicionais proporcionalmente por faixas de 25.000 caracteres. Regra conceitual: `créditos = ceil(caracteres / 25.000)`, com mínimo de 1.
+15. Antes do acionamento, o usuário deve visualizar o custo em créditos; a direção aprovada é exibir esse custo no próprio botão do Decodifica.
+16. O consumo de créditos é pelo uso do recurso na assinatura, independentemente de o TriBusca precisar fazer uma nova chamada à OpenAI API ou conseguir reutilizar um resultado global já existente.
 
 ## Entradas
 
@@ -58,7 +64,7 @@ Não definido nesta rodada:
 O usuário abre a base legal sem tradução visível → aciona o Decodifica → o sistema obtém o resultado pela integração de IA → apresenta o conteúdo por artigo → o resultado fica disponível em acessos posteriores aplicáveis.
 
 ### Outro usuário / resultado já existente
-O usuário abre a mesma base legal sem o Decodifica previamente revelado para ele → aciona o botão → o sistema verifica resultado reutilizável → apresenta o resultado existente sem nova geração desnecessária.
+O usuário abre a mesma base legal sem o Decodifica previamente revelado para ele → visualiza previamente o custo em créditos → aciona o botão → o sistema verifica resultado reutilizável → apresenta o resultado existente sem nova geração desnecessária. O reaproveitamento reduz custo interno de IA, mas **não elimina o consumo comercial de créditos da assinatura**.
 
 ## Dependências
 
@@ -70,6 +76,16 @@ Planejadas, não implementadas por esta decisão:
 - estado de acionamento/visibilidade para que conteúdo global reutilizável não apareça automaticamente a outro usuário;
 - integração com OpenAI API;
 - frontend definitivo para a experiência de leitura.
+
+## Créditos e mensuração comercial
+
+- **Unidade aprovada:** 1 crédito = até 25.000 caracteres.
+- **Mínimo aprovado:** 1 crédito por acionamento/conteúdo elegível, ainda que o texto tenha menos de 25.000 caracteres.
+- **Escalonamento aprovado:** cada faixa adicional, ainda que parcial, de até 25.000 caracteres consome mais 1 crédito.
+- Exemplos conceituais: 100 caracteres = 1 crédito; 25.000 = 1; 25.001 = 2; 100.000 = 4.
+- O custo deve ser conhecido **antes** da confirmação/acionamento.
+- A quantidade de créditos incluída em cada plano de assinatura **não foi definida** nesta rodada.
+- A base exata de contagem de caracteres (por exemplo, tratamento de espaços, marcação, cabeçalhos e texto normalizado) permanece aberta para desenho funcional/técnico posterior.
 
 ## Limites
 
@@ -96,6 +112,8 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 3. Regra física de associação entre resultado global reutilizável e o acionamento/visibilidade por usuário.
 4. Contrato da OpenAI API, modelo, prompt, limites, observabilidade, custos e controles de falha.
 5. Comportamento para conteúdo extenso que exceda limites técnicos da integração.
+6. Quantidade de créditos incluída em cada plano, periodicidade de renovação, eventual rollover e regras de compra adicional.
+7. Definição exata de quais caracteres entram na medição comercial e em qual representação do texto a contagem é feita.
 
 ## Avaliação de impacto desta decisão
 
@@ -103,12 +121,12 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 | --- | --- |
 | Arquitetura | **Sim, futuro** — resultado global reutilizável + estado de acionamento/visibilidade por usuário. |
 | Dados | **Sim, futuro** — persistência, versionamento e associação do resultado. |
-| API | **Sim, futuro** — consulta/acionamento e retorno do Decodifica. |
+| API | **Sim, futuro** — consulta/acionamento, cálculo/exposição do custo, consumo de créditos e retorno do Decodifica. |
 | Coleta | **Não agora** — a coleta continua responsável pelo conteúdo oficial. |
 | IA | **Sim, futuro** — integração sob demanda com OpenAI API e reaproveitamento de resultado. |
-| UX | **Sim, futuro** — botão no início da base legal e blocos por artigo. |
-| Site/comercial | **Sim, documental** — nome comercial passa a ser Decodifica; não anunciar como disponível antes da implementação. |
-| Custos | **Sim, futuro** — chamadas à API; reutilização global foi decidida para reduzir consumo redundante. |
+| UX | **Sim, futuro** — botão no início da base legal com custo em créditos visível antes do clique e blocos por artigo. |
+| Site/comercial | **Sim, futuro** — Decodifica será limitado por créditos da assinatura; franquias por plano ainda não foram definidas. Não anunciar como disponível antes da implementação. |
+| Custos | **Sim, futuro** — créditos comerciais são separados do custo interno de API; reutilização global reduz consumo redundante da OpenAI sem alterar o débito comercial do uso. |
 | Segurança | **Sim, futuro** — definir fronteira de dados, autorização e telemetria da integração. |
 | Prioridades | **Não** — não altera DOE-SP nem a macrofase dos DOEs. |
 | Roadmap | **Sem mudança de ordem** — apenas substitui o nome Norma Clara por Decodifica. |
