@@ -47,3 +47,6 @@ A D-017/D-036 está aprovada globalmente. Para DOE-SP, o Gerente escolheu **B �
 ## Retomada em novo chat
 
 Comando do usuário: **“Carregue o Gerente Geral do Repositório”**. O GPT-6 abre diretamente, em modo somente leitura, `fabiojuniort-cyber/tribusca-control` e lê `CONTEXT.md`, `PROJECT_STATE.md` e a Issue ativa; consulta decisões e contextos adicionais conforme necessário. Pode voltar a ler em qualquer momento da conversa. Não pedir ao usuário que abra um chat GPT-5.6 apenas para carregar o contexto. Para mudanças, abre uma tarefa executora. Ver [procedimento](docs/CONTEXT_MAINTENANCE.md). Em outras janelas especialistas, o prompt inclui contexto curto e Issue; na mesma janela, não recarregar tudo a cada mensagem.
+
+
+- **API-01 / Issue #11:** contrato público read-only aprovado em 26/09/2026 pela D-050. Implementar `/public/v1/sources`, `/public/v1/publications` e `/public/v1/stats` para o site público, sem dados privados, com CORS configurável e cache. Rate limit fica pendente por ausência de plugin. A leitura SQL direta do schema produtivo não está disponível pelo Railway connector desta sessão; não confundir revalidação de migrations/tipos com leitura de produção. Merge/deploy em gate separado.
