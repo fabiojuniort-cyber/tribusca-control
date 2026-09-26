@@ -4,7 +4,7 @@ Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND
 
 ## Revisão corrente
 
-[Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) são o gate ativo informado na última atualização. Revalidar head, diff, CI, comentários e deploys ao vivo; nada neste arquivo aprova merge.
+[Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #73 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) são o gate ativo. A revisão DOE-SP-23 do head `c836e22837b5ed056da5995613b832336039432e` terminou **BLOQUEANTE** apesar de CI/reexecução SUCCESS: `upsertOrigin()` pode apagar PDF/SHA/tamanho previamente capturados da mesma origem quando replay posterior sofre 404/500. O próximo review só ocorre após correção + teste `CAPTURED → 404/500 → CAPTURED`; revalidar novo head, diff e CI. PR #71 permanece apenas comparativo.
 
 ## Contrato do revisor
 
