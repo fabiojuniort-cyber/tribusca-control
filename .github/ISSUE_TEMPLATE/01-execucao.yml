@@ -28,6 +28,14 @@ body:
     validations:
       required: true
   - type: input
+    id: contexto_duravel
+    attributes:
+      label: Contexto durável da frente
+      description: Link para contexts/BACKEND.md, WEB.md ou contexto específico; o gerente cria o índice de nova frente quando necessário.
+      placeholder: https://github.com/fabiojuniort-cyber/tribusca-control/blob/main/contexts/DOE-SP.md
+    validations:
+      required: true
+  - type: input
     id: executor
     attributes:
       label: Papel e executor propostos
