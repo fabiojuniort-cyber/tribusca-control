@@ -30,3 +30,19 @@ A WEB-01 inicia a camada pública em paralelo à macrofase DOE. Frontend autenti
 ## Página Reforma Tributária
 
 O site público terá uma página dedicada à **Reforma Tributária**, tratada como página temática de dados e não como produto. Ela deverá reunir o recorte do Acervo relacionado à reforma — legislação, regulamentação, notas técnicas e outras publicações oficiais — e apresentar uma timeline que diferencie publicação, vigência, marcos e faseamento. Não criar submarca própria nem apresentar cronograma especulativo como fato.
+
+## WEB-02 — diretrizes públicas que substituem o layout anterior
+
+**Data/origem:** 26/09/2026, responsável pelo produto (usuário). Registro detalhado de definição anterior → nova definição, impacto e próximo passo em [WEB-02](WEB_02_DESIGN_ALIGNMENT.md).
+
+1. Menu: **Cobertura · Portfólio · Como funciona · Reforma Tributária**, cada um com página própria.
+2. Header: logo horizontal oficial; **Entrar** e **Criar conta** substituem “Experimentar grátis” como ações de topo. O trial de 7 dias continua válido fora do header.
+3. Entrar/Criar conta/Recuperar senha/Nova senha funcionam em modal sobre a página; somente login usa **POST `/auth/login`** comprovado.
+4. Home: carrossel visual de 5 UFs, SP sempre primeiro/Ponte Estaiada, 4 UFs sorteadas e fotos reais/licenciadas; publicações estaduais ficam como **“—”** enquanto não houver API.
+5. Home/Portfólio: seis recursos — Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário. **Acervo/Central = Disponível** no draft, sujeito a confirmação do Gerente antes de merge; demais = Em desenvolvimento.
+6. Sonar: vermelho/amararelo/verde para Alta/Média/Baixa como exceção semântica do draft, pendente de Branding; rótulos textuais continuam obrigatórios.
+7. Decodifica: cinco exemplos legais aprovados em carrossel; Revela: boletim diário com Alta afinidade e Menção direta.
+8. Cobertura: federais primeiro, depois 27 UFs/SP primeiro; cards full-width com status e métricas. Sem contrato de API, métricas = **“—”**.
+9. Reforma Tributária: timeline separa **Publicação, Vigência e Marco previsto em lei**; sem datas sem evidência oficial.
+
+**Próximo passo:** revisão visual/funcional do PR #1. Sem merge/deploy. Itens de status e paleta permanecem com gate explícito.
