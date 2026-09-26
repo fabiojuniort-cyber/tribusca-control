@@ -41,6 +41,11 @@ Usuários autenticados do TriBusca que estejam consultando uma publicação/base
 16. O consumo de créditos é pelo uso do recurso na assinatura, independentemente de o TriBusca precisar fazer uma nova chamada à OpenAI API ou conseguir reutilizar um resultado global já existente.
 17. Se o conteúdo oficial for posteriormente alterado, retificado ou substituído por nova versão, a tradução/explicação já existente **não deve ser apagada**.
 18. Nesse caso, o resultado anterior deve permanecer acessível, porém com uma marcação visual clara de que está **desatualizado em relação à versão oficial vigente**.
+19. Quando a tradução estiver desatualizada e o usuário decidir atualizar o Decodifica, o novo processamento deve considerar e cobrar **o conteúdo completo da versão oficial vigente**, e não somente os artigos ou trechos alterados.
+20. O botão do Decodifica terá estados funcionais distintos conforme a situação do usuário e da versão oficial:
+   - **não traduzido para o usuário na versão vigente:** o botão exibe o custo em créditos;
+   - **traduzido para o usuário na versão vigente:** o botão exibe **“Traduzido”**;
+   - **tradução do usuário obsoleta/desatualizada:** o botão volta a exibir o custo em créditos necessário para traduzir novamente o conteúdo completo da versão vigente.
 
 ## Entradas
 
@@ -63,10 +68,13 @@ Não definido nesta rodada:
 ## Experiência do usuário
 
 ### Primeiro usuário / resultado inexistente
-O usuário abre a base legal sem tradução visível → aciona o Decodifica → o sistema obtém o resultado pela integração de IA → apresenta o conteúdo por artigo → o resultado fica disponível em acessos posteriores aplicáveis.
+O usuário abre a base legal sem tradução visível → o botão mostra previamente o custo em créditos → aciona o Decodifica → o sistema obtém ou reutiliza o resultado aplicável → apresenta o conteúdo por artigo → o resultado fica disponível em acessos posteriores aplicáveis → enquanto a tradução corresponder à versão oficial vigente, o botão passa a indicar **“Traduzido”**.
 
 ### Outro usuário / resultado já existente
-O usuário abre a mesma base legal sem o Decodifica previamente revelado para ele → visualiza previamente o custo em créditos → aciona o botão → o sistema verifica resultado reutilizável → apresenta o resultado existente sem nova geração desnecessária. O reaproveitamento reduz custo interno de IA, mas **não elimina o consumo comercial de créditos da assinatura**.
+O usuário abre a mesma base legal sem o Decodifica previamente revelado para ele → o botão mostra previamente o custo em créditos → aciona o botão → o sistema verifica resultado reutilizável → apresenta o resultado existente sem nova geração desnecessária. O reaproveitamento reduz custo interno de IA, mas **não elimina o consumo comercial de créditos da assinatura**. Depois do acionamento, enquanto aquela tradução corresponder à versão oficial vigente, o botão desse usuário indica **“Traduzido”**.
+
+### Usuário com tradução desatualizada
+Se a versão oficial mudar depois de o usuário já ter acionado o Decodifica, a tradução anterior permanece acessível e marcada como desatualizada. O botão volta a apresentar o custo em créditos para uma nova tradução. Se o usuário acionar novamente, a cobrança é calculada sobre **todo o conteúdo da versão oficial vigente**, e não apenas sobre os trechos alterados.
 
 ## Dependências
 
@@ -95,7 +103,8 @@ Planejadas, não implementadas por esta decisão:
 - Se a norma sofrer alteração, retificação ou nova versão, a tradução anterior permanece disponível.
 - A interface deve destacar de forma inequívoca que essa tradução está **desatualizada** frente ao texto oficial vigente.
 - O texto oficial vigente continua sendo a referência primária.
-- **Ainda não foi definido** se uma tradução atualizada será gerada automaticamente, mediante novo clique, ou por outro fluxo; essa decisão permanece aberta.
+- A tradução da nova versão é **sob demanda**: quando a tradução anterior estiver obsoleta, o botão volta a exibir o custo e o usuário pode acionar nova tradução.
+- A nova tradução decorrente de mudança do texto oficial considera **o conteúdo completo da versão vigente** para cobrança e processamento comercial, mesmo que apenas parte da norma tenha sido alterada.
 - Também permanece aberta a política para obsolescência causada apenas por mudança de engine, prompt ou modelo, sem mudança no conteúdo oficial.
 
 ## Limites
@@ -118,14 +127,13 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 
 ## Questões abertas
 
-1. Fluxo para gerar uma nova tradução quando a versão oficial mudar: automático, novo acionamento ou outra regra; e eventual consumo de créditos nessa atualização.
-2. Política de obsolescência causada apenas por mudança de engine/prompt/modelo, sem alteração no conteúdo oficial.
-3. Unidade técnica de geração e persistência: ato completo, artigo ou outra composição interna, preservando a experiência aprovada de cobertura completa e apresentação artigo a artigo.
-4. Regra física de associação entre resultado global reutilizável e o acionamento/visibilidade por usuário.
-5. Contrato da OpenAI API, modelo, prompt, limites, observabilidade, custos e controles de falha.
-6. Comportamento para conteúdo extenso que exceda limites técnicos da integração.
-7. Quantidade de créditos incluída em cada plano, periodicidade de renovação, eventual rollover e regras de compra adicional.
-8. Definição exata de quais caracteres entram na medição comercial e em qual representação do texto a contagem é feita.
+1. Política de obsolescência causada apenas por mudança de engine/prompt/modelo, sem alteração no conteúdo oficial.
+2. Unidade técnica de geração e persistência: ato completo, artigo ou outra composição interna, preservando a experiência aprovada de cobertura completa e apresentação artigo a artigo.
+3. Regra física de associação entre resultado global reutilizável e o acionamento/visibilidade por usuário.
+4. Contrato da OpenAI API, modelo, prompt, limites, observabilidade, custos e controles de falha.
+5. Comportamento para conteúdo extenso que exceda limites técnicos da integração.
+6. Quantidade de créditos incluída em cada plano, periodicidade de renovação, eventual rollover e regras de compra adicional.
+7. Definição exata de quais caracteres entram na medição comercial e em qual representação do texto a contagem é feita.
 
 ## Avaliação de impacto desta decisão
 
@@ -133,10 +141,10 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 | --- | --- |
 | Arquitetura | **Sim, futuro** — resultado global reutilizável + estado de acionamento/visibilidade por usuário. |
 | Dados | **Sim, futuro** — persistência, vínculo com a versão oficial, versionamento e associação do resultado. |
-| API | **Sim, futuro** — consulta/acionamento, cálculo/exposição do custo, consumo de créditos e retorno do Decodifica. |
+| API | **Sim, futuro** — consulta/acionamento, cálculo/exposição do custo, estado Traduzido/obsoleto, consumo de créditos e retorno do Decodifica. |
 | Coleta | **Não agora** — a coleta continua responsável pelo conteúdo oficial. |
 | IA | **Sim, futuro** — integração sob demanda com OpenAI API e reaproveitamento de resultado. |
-| UX | **Sim, futuro** — botão no início da base legal com custo em créditos visível antes do clique, blocos por artigo e indicação inequívoca quando uma tradução estiver desatualizada. |
+| UX | **Sim, futuro** — botão com estados custo / “Traduzido” / novo custo quando obsoleto, blocos por artigo e indicação inequívoca da tradução desatualizada. |
 | Site/comercial | **Sim, futuro** — Decodifica será limitado por créditos da assinatura; franquias por plano ainda não foram definidas. Não anunciar como disponível antes da implementação. |
 | Custos | **Sim, futuro** — créditos comerciais são separados do custo interno de API; reutilização global reduz consumo redundante da OpenAI sem alterar o débito comercial do uso. |
 | Segurança | **Sim, futuro** — definir fronteira de dados, autorização e telemetria da integração. |
