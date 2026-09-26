@@ -9,7 +9,7 @@ Este repositório organiza as tarefas, decisões e evidências do TriBusca. Cód
 3. [Protocolo de atualização](docs/CONTEXT_MAINTENANCE.md): quem altera cada arquivo após um marco.
 4. [Estado executivo](PROJECT_STATE.md): o que está aberto, comprovado e pendente de revalidação.
 5. [Roadmap](ROADMAP.md): prioridade e critérios para avançar.
-6. [Decisões](DECISIONS.md), [arquitetura](docs/ARCHITECTURE.md), [produto e UX](docs/PRODUCT_AND_UX.md), [site](docs/SITE_AND_MARKETING.md) e [manual de marca](docs/BRAND_MANUAL_V1.md): regras aprovadas e direção futura.
+6. [Decisões](DECISIONS.md), [arquitetura](docs/ARCHITECTURE.md), [produto e UX](docs/PRODUCT_AND_UX.md), [site](docs/SITE_AND_MARKETING.md), [manual de marca](docs/BRAND_MANUAL_V1.md) e [questões abertas](docs/OPEN_QUESTIONS.md): decisões, propostas e direção futura.
 7. [Papéis](docs/AGENT_ROLES.md), [instruções dos agentes](AGENTS.md) e [segurança](docs/SECURITY.md).
 8. [Handoff](docs/HANDOFF.md) e [revisão/gates](docs/REVIEW_AND_GATES.md).
 9. [Issues](https://github.com/fabiojuniort-cyber/tribusca-control/issues): tarefas verificáveis.
