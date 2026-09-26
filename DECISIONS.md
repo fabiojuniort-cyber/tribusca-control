@@ -55,6 +55,8 @@ Atualizado em 26/09/2026. Este registro consolida decisões transmitidas pelo re
 
 | D-033 | O **Sonar — Afinidade Tributária** adota como linguagem visual a metáfora de proximidade: **Alta afinidade = sinal próximo ao centro**, **Média = distância intermediária**, **Baixa = sinal distante/anéis externos**. O centro representa o Perfil Tributário da empresa/estabelecimento. Os fatores explicativos podem ser apresentados como **“sinais encontrados”**. | Alta/Média/Baixa continuam sendo os rótulos funcionais oficiais; proximidade é metáfora visual e não substitui texto. A interface não pode depender apenas de cor, distância ou posição por acessibilidade. Ícone, anéis, animação, cores e composição final ficam para UX/UI. Não altera algoritmo, pesos, DOE-SP ou prioridade do roadmap. |
 
+| D-034 | **Reforma Tributária** será uma **página temática pública de dados**, não produto nem submarca. A página reúne o recorte do Acervo referente à reforma — legislação, regulamentação, notas técnicas e publicações relacionadas — e terá timeline distinguindo **publicação, vigência, marcos de implementação e faseamento**. | A página reutiliza o Acervo global, preserva fontes e versões e não deve inventar cronogramas ou duplicar publicações. Implementação pública autorizada na WEB-01 / Issue #8; integração dinâmica dependerá de API/dados futuros. |
+
 ## Como mudar uma decisão
 
 1. Abrir Issue de decisão com contexto, opções, custos, riscos e impacto nas frentes atuais.
