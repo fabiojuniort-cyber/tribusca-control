@@ -1,6 +1,6 @@
 # TriBusca — entrada de qualquer chat de frontend
 
-Atualizado em 26/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) agora possui uma primeira implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`, head verificado `eb930e97e925fce63d8ff6bad4682ae64ce90897`.
+Atualizado em 26/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) agora possui uma primeira implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`, head verificado `8167fff49cf2ba254b8d64075724df1f0331e40e`.
 
 Leia [CONTEXT.md](../CONTEXT.md), [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md), [produto/UX](../docs/PRODUCT_AND_UX.md), [site/comercial](../docs/SITE_AND_MARKETING.md), [Manual de Marca v1](../docs/BRAND_MANUAL_V1.md) e a Issue específica. Os [ativos oficiais](../docs/BRAND_ASSETS.md) devem ser usados sem recriação.
 
@@ -50,7 +50,7 @@ CORS será restrito às origens configuradas em `PUBLIC_API_ALLOWED_ORIGINS`; se
 
 Em 26/09/2026, a WEB-02 substituiu as definições públicas conflitantes da WEB-01 conforme D-037–D-049 e [registro detalhado](../docs/WEB_02_DESIGN_ALIGNMENT.md). **Origem: usuário/responsável pelo produto.**
 
-No head `eb930e97e925fce63d8ff6bad4682ae64ce90897`, o draft PR #1 contém:
+No head `8167fff49cf2ba254b8d64075724df1f0331e40e`, o draft PR #1 contém:
 - rotas `/cobertura`, `/portfolio`, `/como-funciona`, `/reforma-tributaria`;
 - assinatura horizontal oficial no header e ações Entrar/Criar conta;
 - modais de Entrar/Criar conta/Recuperar senha/Nova senha;
@@ -61,10 +61,10 @@ No head `eb930e97e925fce63d8ff6bad4682ae64ce90897`, o draft PR #1 contém:
 - Sonar com proximidade e cores semânticas de draft;
 - Revela com boletim Alta afinidade/Menção direta;
 - Decodifica com cinco exemplos Texto oficial × Leitura auxiliar;
-- Cobertura federal + 27 UFs e métricas `—` sem API;
+- Cobertura federal + 27 UFs, com status e métricas `—` sem API;
 - timeline da Reforma separando Publicação/Vigência/Marco previsto em lei;
 - responsividade e `prefers-reduced-motion`.
 
-CI run `36259839790` = **SUCCESS** (install, typecheck, testes e build).
+CI run `36260136076` = **SUCCESS** (install, typecheck, testes e build).
 
 **Gates pendentes:** confirmação do Gerente para claims Acervo/Central = Disponível; Branding / Issue #10 para cores do Sonar; revisão visual/funcional. PR permanece draft, sem merge/deploy. Contratos dependentes: Issue #9 (cadastro/reset) e Issue #11 (Cobertura/Acervo público).
