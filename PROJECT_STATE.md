@@ -14,7 +14,7 @@ Este arquivo resume o estado executivo. Issues e PRs registram execução, evid�
 
 **ABERTO — não declarar produtivo/concluído.**
 
-Em 26/09/2026, o [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) permanece aberto e sem merge no head `7f594c5b563ed9cb66c63e1f93b367150573c651`, 0 commits atrás da main `f25a596edce592e6e365e87ed4cbf16ba0922de8`. A Atividade DOE-SP-19 corrigiu os dois bloqueios da segunda revisão: metadata genérico não pode mais persistir `artifactEquivalence`, `artifactReconciliation` ou `artifactReconciliationHistory`; IDs auditáveis passaram a rejeitar URL/credential/hash-like e `textSha256` foi removido do histórico. O CI #390 / run `36220906841` concluiu SUCCESS, inclusive com os novos testes de falsificação e sanitização por valor e com os testes prévios de replay/versionamento/identidade/DOE-SP. **Nova revisão independente continua obrigatória antes de qualquer merge.** Deploy, migration, coleta manual, repair produtivo e validação produtiva não foram executados.
+Em 26/09/2026, o [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) permanece aberto e sem merge no head `7f594c5b563ed9cb66c63e1f93b367150573c651`, 0 commits atrás da main `f25a596edce592e6e365e87ed4cbf16ba0922de8`. A terceira revisão independente aprovou a reserva das chaves de controle, replay/idempotência, gates de identidade/versionamento e propriedade dos PDFs, mas **reprovou o gate** de sanitização: `safeAuditIdentifier()` ainda depende de blacklist finita e permite credenciais/segredos opacos em IDs allowlisted do history (exemplos sintéticos: `rk_live_...`, `AIzaSy...`, `AKIA...`). Parecer: https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71#pullrequestreview-5324781362. O CI #390 / run `36220906841` continua SUCCESS, porém merge, deploy, migration, coleta manual, repair produtivo e validação produtiva permanecem não autorizados.
 
 O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap parado em 29/07/2025, com 399 dias pendentes. Esses números são históricos, não uma leitura produtiva nova. A janela de bootstrap aprovada é 01/01/2025 até a data de validação.
 
@@ -22,7 +22,7 @@ O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap p
 
 | Issue | Resultado esperado | Dependência |
 | --- | --- | --- |
-| [#1 — gate PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Revisão independente, merge condicionado e primeiro run produtivo | Atual; DOE-SP-19 corrigida no head `7f594c5`, CI #390 SUCCESS, 0 commits atrás da main; nova revisão independente pendente e merge não autorizado |
+| [#1 — gate PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Revisão independente, merge condicionado e primeiro run produtivo | Atual; terceira revisão do head `7f594c5` REPROVADA por sanitização de credenciais/segredos opacos no history; CI #390 SUCCESS não autoriza merge |
 | [#2 — bootstrap e replay](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2) | Cobertura aprovada com pendingRanges vazio e replay idempotente | #1 |
 | [#3 — artefatos/publication_files](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3) | Evidência e política de persistência dos arquivos | #1 |
 | [#4 — fechamento DOE-SP](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4) | Gates, seção 13 do backend e temporários tratados | #1, #2 e #3 |
