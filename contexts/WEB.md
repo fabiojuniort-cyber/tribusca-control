@@ -41,9 +41,9 @@ Rotas previstas:
 - `GET /public/v1/publications?uf=SP&limit=3`;
 - `GET /public/v1/stats`.
 
-O site deve consumir apenas após o backend ser mergeado/deployado em gate separado. Até existir URL base produtiva autorizada, WEB-02 não deve inventar dados.
+Backend preparado no draft [PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, CI #433 SUCCESS. O site **ainda não deve consumir** até o backend ser mergeado/deployado em gate separado e existir `apiBase` público validado; WEB-02 continua exibindo placeholders em vez de inventar dados.
 
-CORS será restrito às origens configuradas em `PUBLIC_API_ALLOWED_ORIGINS`; sem credentials nessas rotas. A Issue #11 executa Cobertura/Acervo; Issue #9 continua responsável pelos demais contratos públicos de cadastro/reset.
+CORS está implementado por `PUBLIC_API_ALLOWED_ORIGINS`, sem credentials e com preflight GET-only. Os domínios reais do protótipo Railway e do site definitivo ainda não estão comprovados/configurados porque não houve deploy; entram no próximo gate. A Issue #11 executa Cobertura/Acervo; Issue #9 continua responsável pelos demais contratos públicos de cadastro/reset.
 
 
 ## WEB-02 — design aprovado e estado verificado
