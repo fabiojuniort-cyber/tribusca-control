@@ -35,6 +35,8 @@ Receber o resultado da Tarefa 18 / Issue #1 do executor. Exigir handoff registra
 
 ## Atualização obrigatória a cada marco
 
+**Objetivo permanente do usuário:** poder abrir uma nova janela do Gerente Geral a qualquer momento e continuar do ponto exato, gastando poucos tokens e sem copiar o histórico do chat. Após cada avanço auditado, este arquivo deve preservar: frente ativa, Issue e PR, fatos verificados com data, bloqueio/dependências, próxima ação e links aos contextos dos especialistas. Antes de encerrar uma sessão com mudança material, atualize os arquivos afetados no GitHub. Não afirme que outro chat executou trabalho sem handoff/evidência acessível.
+
 Gerente Geral: o responsável pelo projeto autorizou manutenção documental autônoma. Após handoff auditado, decisão, novo PR/gate ou alteração da prioridade, atualize este arquivo e PROJECT_STATE.md na mesma sessão, sem solicitar permissão rotineira. Corrija/remova números antigos e registre data, evidência e próximo passo. Executor/revisor: registre seu handoff na Issue; não altere o contexto gerencial com conclusão não auditada. Arquivos não são atualizados por outros chats automaticamente. Se a ferramenta de escrita estiver indisponível, deixe instrução explícita de atualização no retorno.
 
 ## Retomada em novo chat
