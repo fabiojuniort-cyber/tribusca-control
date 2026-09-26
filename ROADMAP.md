@@ -1,6 +1,6 @@
 # TriBusca — Roadmap
 
-Atualizado em 25/09/2026 (America/Sao_Paulo).
+Atualizado em 26/09/2026 (America/Sao_Paulo).
 
 Este documento define a sequência aprovada. O andamento comprovado fica em [PROJECT_STATE.md](PROJECT_STATE.md); cada trabalho executável deve ter Issue com escopo, evidências e critérios de aceite. Não marcar uma frente como concluída apenas porque o código foi mergeado ou o cron foi ativado.
 
@@ -38,7 +38,7 @@ Depois da cobertura estadual, retomar as frentes nesta ordem de referência:
 2. Taxonomia e marcadores tributários controlados.
 3. Perfil tributário de empresas e estabelecimentos.
 4. Motor de relevância com motivos explicáveis.
-5. Norma Clara por segmentos legais, com evidência e versionamento.
+5. Decodifica, com cobertura do conteúdo aplicável, apresentação por artigo, evidência e versionamento.
 6. Frontend definitivo em `radar-fiscal-web`.
 7. Site definitivo.
 
