@@ -36,18 +36,29 @@ Antes de qualquer lista de passos, o prompt enviado a um novo chat ou a um chat 
 
 Repositório, branch e PR devem ser adicionados quando existirem. Especialidade, papel e modelo não podem ser inferidos apenas pela Issue ou pelo nome do chat. **Preserve todo identificador já emitido:** cada frente mantém sua própria sequência; uma atividade `GOV-01` não renumera nem reaproveita números de DOE-SP. Os passos executáveis do prompt são sempre numerados.
 
-O Gerente apresenta **todo prompt de delegação em um único bloco isolado e copiável, contendo somente o texto que o usuário deve enviar ao chat executor ou revisor**. Análise do Gerente, status da atividade, percentual, evidências, justificativas e explicações ao usuário permanecem fora do bloco. Se um prompt antigo não cumprir identificação, numeração ou isolamento, o Gerente corrige o formato na próxima delegação antes de iniciar nova execução.
+O Gerente apresenta **todo direcionamento a executor ou revisor em um único bloco isolado e copiável, contendo somente a mensagem que o usuário deve enviar àquele chat**. Dentro do bloco, o Gerente pode escolher a linguagem mais eficiente para execução — inclusive termos técnicos, IDs, links, referências e formato compacto — desde que o comando permaneça inequívoco quanto a papel, escopo, autorização, dependências, critérios de aceite, bloqueios e retorno esperado. Análise do Gerente, status da atividade, percentual, evidências, justificativas e explicações em linguagem clara ao usuário permanecem fora do bloco. Se um prompt antigo não cumprir identificação, numeração ou isolamento, o Gerente corrige o formato na próxima delegação antes de iniciar nova execução.
 
 ## Processo em cada avanço
 
 1. O Gerente envia ao GPT-5.6 o prompt no formato obrigatório, com atividade/título, especialidade, papel, modelo, frente, Issue, resultado esperado, contexto mínimo, autorização vigente, critérios e até cinco passos independentes numerados; pode demandar uma leitura inicial para descobrir o estado.
 2. O executor verifica evidências ao vivo, avança autonomamente em todas as etapas autorizadas e registra fatos, erros e limites na Issue/PR. Um erro interrompe somente os passos dependentes: o executor faz o restante seguro e devolve o problema ao Gerente, sem mascará-lo.
-3. O Gerente analisa integralmente o retorno, confronta critérios, identifica causa comprovada versus hipótese e dá novo direcionamento. Se o gate depender de comprovação independente, designa outro GPT-5.6 para revisão; não se atribui uma auditoria direta.
-4. **A cada avanço comunicado ao usuário**, o Gerente informa fora do bloco de delegação: ID/título/frente; resultado do avanço (`sucesso`, `falha`, `bloqueada` ou `em andamento`); evidência breve; próximo passo; percentual estimado de avanço da frente; base de marcos usada no cálculo; e incerteza material da estimativa.
-5. O Gerente demanda a atualização apenas dos arquivos afetados. O GPT-5.6 edita os arquivos, verifica links e coerência, retorna commit, caminhos alterados, resumo das mudanças e status da Issue. Pode fazer a atualização factual no próprio handoff se o escopo já determinar os fatos; nenhuma conclusão produtiva sem gate do Gerente.
-6. O Gerente incorpora a confirmação documental ao seu próximo prompt. Se faltar registro comprovado, o marco permanece aberto e a primeira ação delegada é corrigi-lo.
+3. O executor ou revisor devolve ao Gerente **um único bloco copiável contendo somente o handoff destinado ao Gerente**. Esse handoff pode ser técnico e compacto para otimizar análise, desde que preserve fatos, hipóteses rotuladas, IDs, links, resultados, falhas, gates, evidências necessárias e próxima ação; segredos continuam proibidos. Comentários ao usuário permanecem fora do bloco.
+4. O Gerente analisa integralmente o retorno, confronta critérios, identifica causa comprovada versus hipótese e dá novo direcionamento. Depois da análise, **traduz o handoff em um resumo claro ao usuário** antes de indicar o próximo passo. Se o gate depender de comprovação independente, designa outro GPT-5.6 para revisão; não se atribui uma auditoria direta.
+5. **A cada avanço comunicado ao usuário**, o Gerente informa fora de qualquer bloco destinado a agente: ID/título/frente; resultado do avanço (`sucesso`, `falha`, `bloqueada` ou `em andamento`); evidência breve; próximo passo; percentual estimado de avanço da frente; base de marcos usada no cálculo; e incerteza material da estimativa.
+6. O Gerente demanda a atualização apenas dos arquivos afetados. O GPT-5.6 edita os arquivos, verifica links e coerência, retorna commit, caminhos alterados, resumo das mudanças e status da Issue. Pode fazer a atualização factual no próprio handoff se o escopo já determinar os fatos; nenhuma conclusão produtiva sem gate do Gerente.
+7. O Gerente incorpora a confirmação documental ao seu próximo prompt. Se faltar registro comprovado, o marco permanece aberto e a primeira ação delegada é corrigi-lo.
 
 Não regravar tudo a cada mensagem. A Issue contém detalhes; índices guardam síntese com data e links. Issues e cartões não criam nem sincronizam chats.
+
+## Comunicação bilateral em blocos copiáveis
+
+A separação entre comunicação operacional e explicação ao usuário vale nos dois sentidos:
+
+- **Gerente → executor/revisor:** um único bloco copiável contém somente o direcionamento destinado ao agente. A linguagem pode ser técnica e compacta, desde que preserve comando inequívoco e todos os limites operacionais.
+- **Executor/revisor → Gerente:** um único bloco copiável contém somente o handoff destinado ao Gerente. Pode priorizar densidade técnica e estrutura para análise, sem omitir evidências necessárias nem expor segredos.
+- **Gerente → usuário:** fora desses blocos, o Gerente apresenta em linguagem clara o resultado do avanço, a evidência essencial, o percentual estimado da frente, a incerteza e o próximo passo.
+
+O bloco operacional não precisa ser imediatamente compreensível ao usuário; a responsabilidade de tradução para linguagem clara é do Gerente ao analisar o retorno.
 
 ## Progresso por marcos verificáveis
 

@@ -1,6 +1,6 @@
 # TriBusca — Protocolo de handoff
 
-Toda entrega de executor GPT-5.6 usa o modelo abaixo no comentário da Issue de governança e em retorno autocontido para o usuário encaminhar ao Gerente GPT-6. O Gerente pode conferir diretamente sistemas e documentos por acesso seguro somente leitura; analisa evidências, pede revisão independente ou nova inspeção GPT-5.6 quando faltar prova, e delega todas as atualizações documentais. Erro ou bloqueio sempre retorna ao Gerente com causa comprovada ou hipótese rotulada; nunca se declara sucesso por ausência de dados.
+Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário da Issue de governança e, para encaminhamento ao Gerente GPT-6, deve ser apresentada **em um único bloco copiável contendo somente o handoff destinado ao Gerente**. Comentários e explicações ao usuário ficam fora desse bloco. O handoff pode usar linguagem técnica compacta e estrutura otimizada para análise, mesmo que não seja imediatamente compreensível ao usuário, desde que preserve fatos, hipóteses identificadas, IDs, links, resultados, falhas, gates, próxima ação e evidência necessária; segredos continuam proibidos. O Gerente pode conferir diretamente sistemas e documentos por acesso seguro somente leitura; analisa evidências, traduz o handoff em resumo claro ao usuário, pede revisão independente ou nova inspeção GPT-5.6 quando faltar prova, e delega todas as atualizações documentais. Erro ou bloqueio sempre retorna ao Gerente com causa comprovada ou hipótese rotulada; nunca se declara sucesso por ausência de dados.
 
 ## Modelo
 
@@ -56,4 +56,4 @@ Toda entrega de executor GPT-5.6 usa o modelo abaixo no comentário da Issue de 
 
 ## Regra
 
-CI verde, merge, deploy e run agendado são evidências diferentes. Informação não consultada deve ser marcada “não verificada”; nunca inferir sucesso produtivo a partir de teste local. O Gerente indica se conferiu algo em modo leitura ou se depende apenas do relato; o executor permanece na tarefa até concluir todas as etapas independentes autorizadas ou encontrar barreira real. Segredos, cookies, tokens e corpo integral de publicação não entram na Issue.
+CI verde, merge, deploy e run agendado são evidências diferentes. Informação não consultada deve ser marcada “não verificada”; nunca inferir sucesso produtivo a partir de teste local. O Gerente indica se conferiu algo em modo leitura ou se depende apenas do relato; o executor permanece na tarefa até concluir todas as etapas independentes autorizadas ou encontrar barreira real. **O bloco do handoff contém somente a mensagem operacional para o Gerente; o resumo claro ao usuário é responsabilidade do Gerente após a análise.** Segredos, cookies, tokens e corpo integral de publicação não entram na Issue.
