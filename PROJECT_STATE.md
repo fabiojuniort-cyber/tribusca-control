@@ -49,7 +49,7 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 
 A [Issue #8](https://github.com/fabiojuniort-cyber/tribusca-control/issues/8) autorizou a camada pública em paralelo; em 26/09/2026 a WEB-02 substituiu as definições visuais conflitantes conforme D-037–D-049. O draft [frontend PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), head `8167fff49cf2ba254b8d64075724df1f0331e40e`, contém Home, Cobertura, Portfólio, Como funciona e Reforma Tributária; modais de acesso; login conectado ao contrato existente `POST /auth/login`; carrossel estadual; seis recursos; Sonar/Revela/Decodifica conforme WEB-02; Cobertura federal + 27 UFs com status e métricas sem API em `—`; e timeline da Reforma sem datas especulativas. GitHub Actions run `36260136076` = **SUCCESS** para instalação, typecheck, testes e build.
 
-**Sem merge e sem deploy.** Antes do merge: Gerente deve confirmar `Acervo/Central = Disponível`; Branding deve ratificar cores semânticas do Sonar (Issue #10); ainda cabe revisão visual/funcional. Cadastro/reset dependem da Issue #9; dados públicos da Cobertura/Acervo dependem da Issue #11.
+**Sem merge e sem deploy.** WEB-03/D-051 resolveu o antigo gate de disponibilidade: **todos os seis recursos do portfólio ficam como `Em desenvolvimento`**; não tratar placeholders/rotas/drafts como funcionalidades acessíveis. Antes de qualquer merge, Branding ainda deve ratificar as cores semânticas do Sonar (Issue #10) e cabe revisão visual/funcional. Cadastro/reset dependem da Issue #9; dados públicos da Cobertura/Acervo dependem da Issue #11.
 
 ## Governança
 
