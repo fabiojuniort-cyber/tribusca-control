@@ -4,6 +4,7 @@ Atualizado em 26/09/2026. Itens abaixo **não são decisões aprovadas nem recur
 
 | Tema | Ponto a resolver | Próxima condição |
 | --- | --- | --- |
+| Reforma Tributária | Escopo inicial de atos/fontes; filtros/tabs; curadoria; visões por IBS/CBS/IS; diferenciação visual publicação×vigência×marcos | Definir conteúdo/UX na WEB-01 sem inventar dados não suportados |
 | Revela | Horário/fuso; dias sem itens; fins de semana/feriados; critérios de menção direta além de CNPJ; destinatários; configuração futura de frequência; relação com planos | Definição funcional/comercial nesta frente; desenho técnico após dependências de Sonar/Perfil/e-mail |
 | Sonar | Pesos/limiares de Alta-Média-Baixa; ausência de dados versus baixa afinidade; CNAE→atividade/segmento; taxonomia fiscal completa; famílias de produto/NCM; governança do feedback; planos/preço por profundidade, empresa e estabelecimento | Produto pode amadurecer regras nesta frente; desenho físico e algoritmo em Issue própria após a macrofase DOE |
 | Decodifica | Política para mudança só de engine/prompt/modelo; desenho físico do reaproveitamento global e ativação; definição exata da contagem de caracteres; franquias, renovação/rollover e créditos adicionais por plano | Produto pode definir regras comerciais/funcionais nesta frente; desenho técnico após a macrofase DOE |
