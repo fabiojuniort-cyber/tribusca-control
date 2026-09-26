@@ -122,3 +122,13 @@ Evitar afirmações absolutas quando a informação disponível não for suficie
 Estes arquivos formam o **Brand Kit TriBusca v1**. Qualquer frente do projeto — inclusive UX/UI e Frontend — deve consultá-los antes de criar novas peças.
 
 Mudanças de logo, cores principais, grafia, símbolo, descriptor ou linguagem visual central exigem nova decisão da frente **Branding e Identidade Visual — TriBusca**.
+
+## 12. WEB-02 — aplicação e exceção semântica pendente
+
+**Data:** 26/09/2026. **Origem:** responsável pelo produto (usuário). **Registro:** [WEB-02](WEB_02_DESIGN_ALIGNMENT.md).
+
+- **Header do site público:** usar `tribusca-logo-horizontal-light.png` em fundo claro, substituindo o símbolo isolado usado no draft anterior. Esta diretriz reforça, e não altera, as assinaturas oficiais da seção 4.
+- **Sonar:** no draft WEB-02, os níveis usam cores semânticas **Alta = vermelho, Média = amarelo, Baixa = verde**, sempre acompanhadas de texto e da metáfora de proximidade. Essas cores são uma **exceção semântica localizada**, não ampliam a paleta institucional e não autorizam seu uso geral.
+- **Status da exceção Sonar:** implementação autorizada apenas no draft para revisão; **ratificação da frente Branding é obrigatória antes do merge**. Se não ratificada, o frontend deve voltar à paleta oficial mantendo os rótulos Alta/Média/Baixa.
+
+**Definição anterior:** a paleta v1 listava apenas azuis, ciano e teal, e D-033 não fixava cores. **Impacto:** componente Sonar e acessibilidade. **Próximo passo:** revisão de Branding antes do merge do PR #1.
