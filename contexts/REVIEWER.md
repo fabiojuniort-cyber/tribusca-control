@@ -4,7 +4,7 @@ Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND
 
 ## Revisão corrente
 
-[Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #73 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) são o gate ativo. A revisão DOE-SP-23 do head `c836e22837b5ed056da5995613b832336039432e` terminou **BLOQUEANTE** apesar de CI/reexecução SUCCESS: `upsertOrigin()` pode apagar PDF/SHA/tamanho previamente capturados da mesma origem quando replay posterior sofre 404/500. O próximo review só ocorre após correção + teste `CAPTURED → 404/500 → CAPTURED`; revalidar novo head, diff e CI. PR #71 permanece apenas comparativo.
+[Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #73 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) continuam o gate ativo. O head reprovado DOE-SP-23 `c836e228...` foi superado pela DOE-SP-24; novo head preparado `22ec75c937e781eb9e063a0037f5c3df50aa0467`, CI #424 SUCCESS, com política page-first e auditor read-only de reconstrução. **Ainda não é gate de merge:** o Gerente deve decidir A reconstrução condicional × B preservação/correção. Nova revisão independente deve ocorrer sobre o head vigente após essa decisão e qualquer ajuste correspondente. PR #71 permanece apenas comparativo.
 
 ## Contrato do revisor
 
