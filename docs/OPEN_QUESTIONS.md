@@ -4,6 +4,7 @@ Atualizado em 26/09/2026. Itens abaixo **não são decisões aprovadas nem recur
 
 | Tema | Ponto a resolver | Próxima condição |
 | --- | --- | --- |
+| Releva | Pesos/limiares de Alta-Média-Baixa; ausência de dados versus baixa afinidade; CNAE→atividade/segmento; taxonomia fiscal completa; famílias de produto/NCM; governança do feedback; planos/preço por profundidade, empresa e estabelecimento | Produto pode amadurecer regras nesta frente; desenho físico e algoritmo em Issue própria após a macrofase DOE |
 | Decodifica | Política para mudança só de engine/prompt/modelo; desenho físico do reaproveitamento global e ativação; definição exata da contagem de caracteres; franquias, renovação/rollover e créditos adicionais por plano | Produto pode definir regras comerciais/funcionais nesta frente; desenho técnico após a macrofase DOE |
 | Marcadores | Vocabulário inicial, evidências e modelo físico exatos | Desenho técnico em Issue própria |
 | CFOP | Fonte oficial, temporalidade e relacionamento muitos-para-muitos com operações | Perfil tributário em frente especializada |
