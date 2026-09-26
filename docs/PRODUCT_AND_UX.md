@@ -50,3 +50,8 @@ Diretrizes aprovadas:
 - permitir pesquisa, navegação e filtros compatíveis com os marcadores e metadados existentes;
 - exibir histórico/versionamento quando aplicável;
 - não confundir Acervo com Sonar: o Acervo organiza e disponibiliza o conteúdo; o Sonar calcula afinidade com a empresa.
+
+
+## Reforma Tributária — página temática
+
+**Reforma Tributária** é uma página temática pública de dados, não um produto ou submarca. Ela organiza um recorte do Acervo reunindo legislação, regulamentação, notas técnicas e demais publicações oficiais relacionadas, com **timeline** capaz de distinguir datas de publicação, início de vigência, marcos de implementação e faseamento. O conteúdo deve preservar fonte oficial, histórico/versionamento e não duplicar fisicamente o Acervo. Ver [Página Reforma Tributária](product-tools/REFORMA_TRIBUTARIA.md).
