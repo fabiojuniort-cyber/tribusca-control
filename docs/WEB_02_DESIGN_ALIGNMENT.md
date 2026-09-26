@@ -76,8 +76,8 @@ O responsável definiu como referência visual aprovada os componentes/protótip
 
 Frontend: [radar-fiscal-web PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1)  
 Branch: `feat/web-01-site-publico`  
-Head verificado: `eb930e97e925fce63d8ff6bad4682ae64ce90897`  
-GitHub Actions: run `36259839790` — **SUCCESS**.
+Head verificado: `8167fff49cf2ba254b8d64075724df1f0331e40e`  
+GitHub Actions: run `36260136076` — **SUCCESS**.
 
 Passaram:
 - instalação;
