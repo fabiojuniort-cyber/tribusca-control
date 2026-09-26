@@ -2,7 +2,7 @@
 
 ## Fonte oficial
 
-Ao iniciar ou retomar um chat, leia [CONTEXT.md](CONTEXT.md). Execução e revisão usam também [contexts/EXECUTOR.md](contexts/EXECUTOR.md) ou [contexts/REVIEWER.md](contexts/REVIEWER.md), respectivamente. Leia [PROJECT_STATE.md](PROJECT_STATE.md), [ROADMAP.md](ROADMAP.md), [DECISIONS.md](DECISIONS.md), [arquitetura](docs/ARCHITECTURE.md) e a Issue atribuída antes de executar. Verifique ao vivo os PRs, commits e ambiente que sejam premissas para a tarefa. Handoffs de chat são contexto histórico até serem conferidos.
+Ao iniciar ou retomar um chat, leia [CONTEXT.md](CONTEXT.md). Chats de código leem [contexts/BACKEND.md](contexts/BACKEND.md) ou [contexts/WEB.md](contexts/WEB.md) e o índice da frente, se houver (atualmente [DOE-SP](contexts/DOE-SP.md)). Execução e revisão usam também [contexts/EXECUTOR.md](contexts/EXECUTOR.md) ou [contexts/REVIEWER.md](contexts/REVIEWER.md), respectivamente. O protocolo de atualização em cada marco está em [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md). Leia [PROJECT_STATE.md](PROJECT_STATE.md), [ROADMAP.md](ROADMAP.md), [DECISIONS.md](DECISIONS.md), [arquitetura](docs/ARCHITECTURE.md) e a Issue atribuída antes de executar. Verifique ao vivo os PRs, commits e ambiente que sejam premissas para a tarefa. Handoffs de chat são contexto histórico até serem conferidos.
 
 ## Papéis e coordenação
 
