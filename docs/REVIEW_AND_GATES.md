@@ -2,12 +2,12 @@
 
 ## Passagem de trabalho
 
-1. Gerente cria Issue com prioridade, dependências, critérios e limites.
-2. Executor implementa e entrega PR e HANDOFF.md preenchido na Issue.
-3. Revisor independente inspeciona mudança e casos adversos; aponta falhas com evidências.
-4. Executor corrige e repete testes relevantes.
-5. Gerente confere revisão, CI, deploy e evidências produtivas exigidas; fecha a Issue somente após o gate.
-6. Atualizar PROJECT_STATE.md e ROADMAP.md quando o estado executivo mudar.
+1. Gerente GPT-6 define Issue, prioridade, dependências, critérios e até cinco passos independentes; executor GPT-5.6 cria/edita a Issue por delegação.
+2. Executor GPT-5.6 avança autonomamente em todo o escopo autorizado, registra PR e handoff completo na Issue. Se aparecer erro, investiga e devolve ao Gerente; só interrompe etapas dependentes.
+3. Revisor independente GPT-5.6, em outro chat, inspeciona mudança e casos adversos; entrega aprovação fundamentada ou falhas com evidência.
+4. Gerente GPT-6 analisa todos os erros, divergências e handoffs; direciona correções. Executor faz alterações e testes pertinentes.
+5. Quando a autorização vigente cobrir o ato, executor realiza merge/deploy e inspeciona CI, produção e gates exigidos. Gerente nunca acessa nenhum sistema; analisa relatórios e pede prova adicional a outro GPT-5.6 se necessário.
+6. Após decisão do Gerente, GPT-5.6 delegado atualiza Issue, `CONTEXT.md`, `PROJECT_STATE.md`, `ROADMAP.md` e índices afetados; retorna commit e links. Gerente só declara gate concluído depois de receber provas e registro documental.
 
 Uma Issue que exige bootstrap ou validação produtiva permanece aberta após merge. Ao relacionar PR entre repositórios, usar referência textual/URL; não usar fechamento automático antes do gate.
 
