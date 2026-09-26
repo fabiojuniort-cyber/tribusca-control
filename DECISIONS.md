@@ -61,6 +61,33 @@ Atualizado em 26/09/2026. Este registro consolida decisões transmitidas pelo re
 
 | D-036 | **Refinamento da D-017: PDF oficial redundante não deve ser baixado por padrão.** Página oficial integral tem precedência operacional; PDF só é solicitado quando necessário para obter conteúdo ausente/incompleto. Anexos próprios permanecem obrigatórios e independentes do PDF que reproduz o corpo principal. | Substitui a interpretação anterior de “PDF redundante opcional, mas ainda baixável por padrão”. Primeira aplicação em DOE-SP / Issue #1 / PR #73; demais fontes permanecem pendentes de inventário/adequação na Issue #6. Não autoriza excluir ou reconstruir dados produtivos. |
 
+
+| D-037 | **Regra permanente WEB:** qualquer nova diretriz/contexto do responsável pelo produto que divergir de `tribusca-control` ou `radar-fiscal-web` deve ser registrado no mesmo marco, preservando histórico e informando data, definição anterior, nova definição, origem, impacto e próximo passo. | Divergência não registrada não fecha documentalmente o marco. Aplicar em WEB-02 e nas futuras definições da frente. Ver [WEB-02](docs/WEB_02_DESIGN_ALIGNMENT.md). |
+
+| D-038 | A navegação pública do site passa a ser **Cobertura · Portfólio · Como funciona · Reforma Tributária**, cada item em página dedicada: `/cobertura`, `/portfolio`, `/como-funciona`, `/reforma-tributaria`. Os Design Components TriBusca Home v2/Portfolio/Cobertura/Como Funciona/Reforma Tributaria são a referência visual comunicada pelo usuário para WEB-02. | Substitui a navegação pública do PR #1 que expunha apenas Início/Portfólio/Reforma. Implementar no draft; sem merge/deploy. |
+
+| D-039 | O header público deve usar a assinatura horizontal oficial **`tribusca-logo-horizontal-light.png`** e, à direita, **Entrar** (secundário) + **Criar conta** (primário). | Substitui o ícone isolado no header e o CTA principal “Experimentar grátis” nesse ponto da interface. A D-011 continua vigente para trial de 7 dias e pode aparecer fora do header. |
+
+| D-040 | **Entrar, Criar conta, Recuperar senha e Nova senha** são fluxos em modal sobre a página. O login consome exclusivamente o contrato existente **POST `/auth/login`** do `radar-fiscal-backend`; não criar autenticação paralela nem endpoint novo. | Frontend deve aceitar API base configurável e usar o contrato real. Cadastro/reset podem ter UX estruturada, mas não podem simular persistência até existir contrato backend. |
+
+| D-041 | Criar conta e Nova senha exibem **Confirmar senha** e validação em tempo real de comprimento mínimo, letra maiúscula, minúscula, número e caractere especial. | A implementação WEB-02 usa 8 caracteres como limiar visual provisório coerente com o protótipo anterior; o contrato definitivo de cadastro/reset deve ratificar a regra antes da ativação produtiva. |
+
+| D-042 | A Home terá carrossel estadual com **5 UFs**: São Paulo sempre primeiro, representado pela Ponte Estaiada; outras 4 UFs sorteadas a cada carregamento. As fotos devem ser reais/licenciadas do Wikimedia Commons, cobrir o card e exibir autoria/licença; o card reserva espaço para últimas/principais publicações estaduais. | Sem contrato de API, publicações e métricas dinâmicas aparecem como **“—”**. Não inventar dados estaduais. |
+
+| D-043 | A Home/Portfólio passa a apresentar **6 recursos**: Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário. No draft WEB-02, **Acervo** e **Central de Monitoramento** aparecem como **Disponível**; os demais como **Em desenvolvimento**. | Substitui o portfólio de 4 itens e o estado “Em desenvolvimento” para todos no PR #1. **A classificação Disponível exige confirmação do Gerente antes do merge**; não é autorização produtiva por si só. |
+
+| D-044 | O **Sonar** usa cores semânticas por afinidade: **Alta = vermelho, Média = amarelo, Baixa = verde**, mantendo sempre o rótulo textual e a metáfora de proximidade definida na D-033. | É uma exceção semântica à paleta central do Brand Kit v1, autorizada apenas no draft WEB-02 e **pendente de ratificação da frente Branding antes do merge**. Não expandir a paleta institucional geral por consequência. |
+
+| D-045 | A apresentação pública do **Decodifica** inclui carrossel com 5 exemplos **Texto oficial × Leitura auxiliar**: Split payment (LC 214/2025 art. 31), Fato gerador (CTN art. 116), Crédito tributário (CTN art. 142), Cofins insumos (Lei 10.833/2003 art. 3º II) e Compensação (Lei 9.430/1996 art. 74), usando os textos aprovados no registro WEB-02. Todos exibem **“Gerada por IA. Não substitui o texto oficial.”** | Complementa D-018–D-023 e substitui, no site público, a demonstração limitada a estados/créditos. Texto oficial e leitura auxiliar devem permanecer visualmente separados. |
+
+| D-046 | A apresentação pública do **Revela** deve mostrar um exemplo de **boletim diário** com itens identificados separadamente como **Alta afinidade** e **Menção direta**. | Refina a D-032 para a comunicação pública; não implica envio de e-mail funcional. |
+
+| D-047 | A página **Cobertura** apresenta primeiro serviços federais — DOU/INLABS, CONFAZ, NF-e/ENCAT, SPED, CGIBS e RFB — e depois as 27 UFs, com SP primeiro. Cards são de largura total e exibem status da coleta (Online/Em validação/Em implantação), última atualização, importadas no dia e total no Acervo. | Métricas reais dependem de contrato de API; até lá ficam **“—”**. Não inventar endpoint. Estados operacionais não comprovados não devem ser promovidos a Online sem evidência. |
+
+| D-048 | Na página **Reforma Tributária**, a timeline distingue **Publicação / Vigência / Marco previsto em lei**. Datas/eventos só podem ser exibidos quando sustentados por fonte oficial presente no Acervo. | Refina D-034 e substitui qualquer cronograma ilustrativo que pareça fato. Sem data especulativa. |
+
+| D-049 | A WEB-02 deve alinhar o frontend ao design aprovado preservando responsividade, `prefers-reduced-motion`, ativos oficiais e separação entre fato oficial, inteligência TriBusca e conteúdo de IA. | PR permanece draft; CI e revisão visual/funcional são gates prévios a qualquer merge/deploy. Itens D-043 (status) e D-044 (cores Sonar) têm aprovações adicionais pendentes. |
+
 ## Como mudar uma decisão
 
 1. Abrir Issue de decisão com contexto, opções, custos, riscos e impacto nas frentes atuais.
