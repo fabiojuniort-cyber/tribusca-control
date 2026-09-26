@@ -14,7 +14,9 @@ Este arquivo resume o estado executivo. Issues e PRs registram execução, evid�
 
 **ABERTO — não declarar produtivo/concluído.**
 
-Em 26/09/2026, a direção técnica DOE-SP foi reaberta pelo usuário: **o HTML oficial deve ser o conteúdo principal e o PDF certificado não deve bloquear a captura da legislação**. O caminho anterior de reconciliação/histórico do [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) foi suspenso para reavaliação. O PR #71 permanece OPEN e unmerged e chegou ao head `3c286c982d983ecc7bce8f9722a1f967898665d3` (CI #394 SUCCESS) antes do redirecionamento; esse CI não autoriza merge.
+Em 26/09/2026 foi aprovada a decisão global **D-017**: conteúdo completo e fiel publicado em página oficial pode ser coletado diretamente; PDF redundante não é requisito de captura e sua falha isolada não pode bloquear a publicação. URL oficial e referência de autenticidade disponível devem ser preservadas; PDF/anexo com conteúdo material ausente da página continua necessário. A implementação por fonte permanece incremental e será inventariada na [Issue #6](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6).
+
+Na DOE-SP, a direção técnica foi reaberta: **o HTML oficial deve ser o conteúdo principal e o PDF certificado não deve bloquear a captura da legislação**. O caminho anterior de reconciliação/histórico do [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) foi suspenso para reavaliação. O PR #71 permanece OPEN e unmerged e chegou ao head `3c286c982d983ecc7bce8f9722a1f967898665d3` (CI #394 SUCCESS) antes do redirecionamento; esse CI não autoriza merge.
 
 A investigação somente leitura encontrou impacto material no versionamento existente: a `main` calcula `contentHash` com os hashes de todos os `files`; os logs produtivos `DOE_SP_AUDIT` registram 517 publicações/517 versões, 610 arquivos, **516 PDFs autenticados** e 94 anexos. Para o caso 404 da Portaria SRE 42, o HTML oficial existe e é idêntico ao de outra representação já persistida, mas a versão existente inclui o hash do PDF. Logo, retirar o PDF do hash sem compatibilidade faria o replay produzir versões artificiais em grande parte do acervo. Não foi criado PR alternativo: a correção segura depende de decisão explícita sobre uma nova semântica de hash/versionamento compatível com o legado. Merge, deploy, migration, coleta manual e repair produtivo permanecem não autorizados.
 
@@ -29,6 +31,7 @@ O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap p
 | [#3 — artefatos/publication_files](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3) | Evidência e política de persistência dos arquivos | #1 |
 | [#4 — fechamento DOE-SP](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4) | Gates, seção 13 do backend e temporários tratados | #1, #2 e #3 |
 | [#5 — teste da governança](https://github.com/fabiojuniort-cyber/tribusca-control/issues/5) | Fluxo Issue → PR → revisão → gate → estado observado | #1 e quadro |
+| [#6 — inventário global de conteúdo oficial](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6) | Inventariar HTML/JSON/PDF/anexos/autenticidade/versionamento por fonte conforme D-017 | P1; não altera conectores nesta Issue |
 
 As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de conclusão. O PR #68 também permanecia aberto na consulta de PRs; não incorporar automaticamente POCs, repairs históricos ou mudanças fora da frente DOE-SP.
 

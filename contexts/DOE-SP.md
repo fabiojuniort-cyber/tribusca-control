@@ -2,6 +2,10 @@
 
 Atualizado em 26/09/2026. Este índice serve a qualquer chat futuro desta fonte; a Issue vinculada e o PR são a evidência detalhada.
 
+## Regra global aplicável
+
+A decisão D-017 vale também para DOE-SP: página oficial integral pode ser a captura canônica; PDF autenticado redundante não é requisito nem pode bloquear a publicação; anexos com conteúdo próprio permanecem necessários. A decisão global está em [OFFICIAL_CONTENT_POLICY.md](../docs/OFFICIAL_CONTENT_POLICY.md) e o inventário das demais fontes está na [Issue #6](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6). **Isso não significa que o conector DOE-SP já esteja adequado.**
+
 ## Ordem e bloqueios
 
 1. [#1 — redefinir gate do PR #71 após mudança para HTML principal](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1): tarefa prioritária. O usuário determinou que PDF autenticado não pode ser requisito para capturar ato com HTML oficial. O [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) permanece aberto/unmerged e foi suspenso em reavaliação no head `3c286c982d983ecc7bce8f9722a1f967898665d3` (CI #394 SUCCESS). A `main` já usa HTML como `content`, mas inclui SHA de `files` no `contentHash`. Evidência Railway: 517 publicações/517 versões, 516 PDFs autenticados + 94 anexos. Remover PDFs do hash sem compatibilidade criaria versões artificiais; o caso real da Portaria SRE 42 confirma HTML idêntico entre duas representações, com a representação válida já persistida e a 404 ainda bloqueada. **Nenhum PR alternativo foi aberto**, pois a solução segura exige decisão do Gerente sobre hash/versionamento compatível com legado.

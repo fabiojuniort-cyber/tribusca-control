@@ -26,6 +26,20 @@ Shared DB/shared schema com tenant_id e RLS para dados por tenant. Tenant é a c
 
 identity_hash identifica o ato; content_hash representa o conteúdo/versionamento; raw_sha256 comprova integridade de arquivo bruto. publication_origins registra URL, fonte e representação. Merge automático entre fontes exige identidade forte. SOURCE_UNAVAILABLE difere de SUCCESS_NO_RESULTS.
 
+### Conteúdo oficial e artefatos
+
+Regra global aprovada em D-017: quando uma página oficial expõe o conteúdo completo e fiel do ato, esse conteúdo pode ser coletado diretamente da página. Um PDF redundante é artefato de proveniência e sua falha isolada não pode bloquear a captura nem ser interpretada como ausência de publicação.
+
+Sempre preservar a URL oficial e a referência de autenticidade disponível. PDF/anexo que contenha texto, tabela ou outra informação material ausente da página continua sendo fonte de conteúdo necessária. Página parcial/incompleta não pode ser marcada como captura integral.
+
+A classificação é feita por fonte/conector e deve distinguir, no mínimo:
+- conteúdo canônico integral;
+- artefato redundante de proveniência/autenticidade;
+- anexo ou artefato com conteúdo material adicional;
+- referência oficial sem download.
+
+A decisão global **não muda automaticamente o content_hash existente nem os conectores**. Cada implementação deve provar replay, versionamento e compatibilidade com dados já persistidos. Inventário global: [Issue #6](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6). Política canônica: [OFFICIAL_CONTENT_POLICY.md](OFFICIAL_CONTENT_POLICY.md).
+
 Papéis de autoridade: PRIMARY, ENRICHMENT, VALIDATION, LEGACY e BACKFILL. A indisponibilidade de fonte secundária não invalida automaticamente a cobertura da fonte PRIMARY.
 
 ## Limites deste documento
