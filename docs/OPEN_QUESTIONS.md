@@ -4,7 +4,7 @@ Atualizado em 26/09/2026. Itens abaixo **não são decisões aprovadas nem recur
 
 | Tema | Ponto a resolver | Próxima condição |
 | --- | --- | --- |
-| Decodifica | Política de retenção/obsolescência após mudança no conteúdo oficial ou engine/prompt/modelo; desenho físico do reaproveitamento global e da ativação por usuário | Frente especializada após a macrofase DOE |
+| Decodifica | Política de retenção/obsolescência; desenho físico do reaproveitamento global e ativação; definição exata da contagem de caracteres; franquias, renovação/rollover e créditos adicionais por plano | Produto pode definir regras comerciais nesta frente; desenho técnico após a macrofase DOE |
 | Marcadores | Vocabulário inicial, evidências e modelo físico exatos | Desenho técnico em Issue própria |
 | CFOP | Fonte oficial, temporalidade e relacionamento muitos-para-muitos com operações | Perfil tributário em frente especializada |
 | API do produto | Contratos reais e disponibilidade produtiva dos endpoints propostos | Inspecionar backend antes de criar frontend |
