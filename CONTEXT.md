@@ -35,7 +35,7 @@ Receber o resultado da Tarefa 18 / Issue #1 do executor. Exigir handoff registra
 
 ## Atualização obrigatória a cada marco
 
-Gerente Geral: após handoff auditado, decisão, novo PR/gate ou alteração da prioridade, atualize este arquivo e PROJECT_STATE.md na mesma sessão. Corrija/remova números antigos e registre data, evidência e próximo passo. Executor/revisor: registre seu handoff na Issue; não altere o contexto gerencial com conclusão não auditada. Arquivos não são atualizados por outros chats automaticamente. Se a ferramenta de escrita estiver indisponível, deixe instrução explícita de atualização no retorno.
+Gerente Geral: o responsável pelo projeto autorizou manutenção documental autônoma. Após handoff auditado, decisão, novo PR/gate ou alteração da prioridade, atualize este arquivo e PROJECT_STATE.md na mesma sessão, sem solicitar permissão rotineira. Corrija/remova números antigos e registre data, evidência e próximo passo. Executor/revisor: registre seu handoff na Issue; não altere o contexto gerencial com conclusão não auditada. Arquivos não são atualizados por outros chats automaticamente. Se a ferramenta de escrita estiver indisponível, deixe instrução explícita de atualização no retorno.
 
 ## Retomada em novo chat
 
