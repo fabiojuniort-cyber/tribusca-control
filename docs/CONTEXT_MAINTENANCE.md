@@ -6,7 +6,7 @@ GitHub é o contexto durável; memória de chat é apenas apoio. O contexto curt
 
 ## Matriz de propriedade
 
-**Gerente Geral GPT-6:** decide o conteúdo, aponta evidências e solicita edições; não lê nem escreve nenhum local. **Executor GPT-5.6 designado:** faz toda leitura/escrita e entrega link, commit e resumo do diff. O revisor GPT-5.6 verifica alterações relevantes separadamente quando o risco exigir.
+**Gerente Geral GPT-6:** pode ler diretamente e sempre que necessário os contextos e evidências em GitHub, código, CI e ambientes por meios somente leitura; decide conteúdo e solicita edições. Nunca escreve nem realiza ação que altere estado. **Executor GPT-5.6 designado:** faz toda leitura/escrita e entrega link, commit e resumo do diff. O revisor GPT-5.6 verifica alterações relevantes separadamente quando o risco exigir.
 
 | Fonte | Responsável pela decisão | Responsável pela edição | Gatilho |
 | --- | --- | --- | --- |
@@ -31,9 +31,9 @@ O responsável pelo projeto autorizou a manutenção recorrente da documentaçã
 
 Não regravar tudo a cada mensagem. A Issue contém detalhes; índices guardam síntese com data e links. Issues e cartões não criam nem sincronizam chats.
 
-## Novo chat / nova frente — bootstrap sem acesso do Gerente
+## Novo chat / nova frente — leitura direta do Gerente
 
-- Ao receber “Carregue o Gerente Geral do Repositório”, o **GPT-6 não acessa GitHub, arquivos ou qualquer local**. Ele dá ao usuário um único prompt curto para abrir um chat GPT-5.6 de bootstrap. Esse executor lê `CONTEXT.md` → `PROJECT_STATE.md` → Issue ativa, revalida apenas premissas atuais necessárias e devolve um resumo autocontido: frente, decisões vigentes, evidências e datas, erros/bloqueios, permissões, próxima ação, links e arquivos que exigem atualização. O usuário transmite o retorno ao Gerente. Sem esse retorno, o Gerente não afirma conhecer o estado vivo.
+- Ao receber “Carregue o Gerente Geral do Repositório”, o **GPT-6 acessa diretamente o `tribusca-control` somente para leitura**: `CONTEXT.md` → `PROJECT_STATE.md` → Issue ativa, com decisões e contextos relevantes. Ele pode reler ou consultar evidências em qualquer momento; faz verificações somente leitura se forem úteis à análise. Não exige chat GPT-5.6 de bootstrap. Se faltar ferramenta de leitura, informa a limitação e solicita apenas o dado necessário, sem alegar verificação inexistente.
 - Um chat GPT-5.6 especialista novo lê `contexts/EXECUTOR.md` ou `contexts/REVIEWER.md`, o índice `contexts/BACKEND.md`/`WEB.md`, o da frente e a Issue; contexto mínimo uma vez ao início. Na mesma janela, lê apenas o que mudou. Em nova Issue/janela ou mudança de direção, recarrega o índice curto e a Issue.
-- Após cada handoff que altere o estado, o Gerente determina a atualização documental; o executor faz a edição, devolve o link/commit e o usuário entrega o retorno ao Gerente. O Gerente jamais acessa diretamente para confirmar. Se duas evidências discordarem, pede uma inspeção independente em chat GPT-5.6.
+- Após cada handoff que altere o estado, o Gerente determina a atualização documental; o executor faz a edição, devolve o link/commit e o usuário entrega o retorno ao Gerente. O Gerente pode conferir diretamente em modo somente leitura; todo registro, correção ou atualização é feito por GPT-5.6 delegado. Se duas evidências discordarem, pede uma inspeção independente em chat GPT-5.6.
 - Todos os prompts de execução incluem: avanço autônomo no escopo, retorno imediato de bloqueio com evidência, não prosseguir em caminho dependente e atualização dos contextos pertinentes. Automação entre chats não está implícita.
