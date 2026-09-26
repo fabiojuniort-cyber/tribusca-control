@@ -1,6 +1,6 @@
 # TriBusca — contexto de retomada do Gerente Geral
 
-Atualizado em 26/09/2026, 00:14 BRT. Leia este arquivo ao iniciar uma nova conversa. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Revalide o estado vivo antes de tomar decisões operacionais.
+Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26/09/2026. Este arquivo é lido pelo executor GPT-5.6 de bootstrap, que entrega um resumo ao Gerente GPT-6. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
 
 ## Missão e limites desta conversa
 
