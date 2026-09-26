@@ -6,12 +6,13 @@ Atualizado em 26/09/2026. Ponto de entrada: [CONTEXT.md](../CONTEXT.md), [BACKEN
 
 [Issue #1 — gate DOE-SP / PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) é a tarefa executável prioritária. PR: https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71. No último registro o PR continuava aberto; verificar novamente. #2 e #3 dependem de #1; #4 depende das três. Não executar tarefas dependentes até o gate correspondente.
 
-## Contrato do executor
+## Contrato do executor GPT-5.6
 
-1. Revalidar a main, o PR, CI e produção exigida antes de agir.
-2. Trabalhar apenas no repositório de código e no escopo/permissões da Issue. Se a premissa falhar, parar etapas dependentes e reportar.
-3. Deixar evidências verificáveis, links, IDs, riscos e uma única próxima ação em comentário na Issue, usando [HANDOFF.md](../docs/HANDOFF.md). Se não houver permissão de comentário, entregar o texto pronto ao gerente para registrar.
-4. Não declarar DOE concluído com CI verde, merge ou cron ativo; [gates](../docs/REVIEW_AND_GATES.md) e [segurança](../docs/SECURITY.md) valem integralmente.
-5. O Gerente Geral audita o handoff e mantém [CONTEXT.md](../CONTEXT.md) e [PROJECT_STATE.md](../PROJECT_STATE.md). Outro chat não recebe automaticamente sua conversa.
+1. Revalidar a main, PR, CI e produção exigidos antes de agir; ler Issue e autorização vigente.
+2. Trabalhar continuamente no escopo autorizado, sem pedir ao usuário passos acessíveis ao executor. O prompt pode conter até cinco passos independentes; seguir até o gate ou barreira real. Erro em uma premissa bloqueia apenas etapas dependentes: investigar a causa, preservar evidências, continuar etapas seguras independentes e devolver o erro ao Gerente.
+3. Para **todo erro**, relatar fato vs. hipótese, logs/IDs sanitizados, impacto, etapas feitas e interrompidas, correção proposta e uma próxima ação. Não inventar status de deploy ou causa. Usar [HANDOFF.md](../docs/HANDOFF.md) na Issue e em resumo autocontido ao usuário.
+4. Atualizar por delegação `CONTEXT.md`, `PROJECT_STATE.md`, `contexts/`, `DECISIONS.md` e documentação temática afetados quando o Gerente definir o marco/decisão; pode registrar fatos provisórios claramente rotulados. Retornar caminhos, link e commit. O Gerente não lê nem edita repositórios.
+5. Não declarar DOE concluído com CI verde, merge ou cron ativo; [gates](../docs/REVIEW_AND_GATES.md) e [segurança](../docs/SECURITY.md) valem integralmente. Revisão independente exige outro chat GPT-5.6.
+
 
 Para iniciar novo chat executor: “Leia https://github.com/fabiojuniort-cyber/tribusca-control/blob/main/contexts/EXECUTOR.md e execute somente a Issue #N indicada, seguindo seus limites e registrando o handoff nela.”
