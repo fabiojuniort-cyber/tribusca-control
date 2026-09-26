@@ -25,3 +25,8 @@ Todas as páginas, login, aplicativo e peças devem partir dos arquivos oficiais
 ## Pendências
 
 Ao retomar o site, revisar layout e conteúdo com dados do produto real, confirmar UX acessível/responsiva e abrir Issue para o design definitivo. A decisão de não focar no site durante a macrofase DOE continua válida; mudanças de prioridade vão para [DECISIONS.md](../DECISIONS.md).
+
+
+## Página Reforma Tributária
+
+O site público terá uma página dedicada à **Reforma Tributária**, tratada como página temática de dados e não como produto. Ela deverá reunir o recorte do Acervo relacionado à reforma — legislação, regulamentação, notas técnicas e outras publicações oficiais — e apresentar uma timeline que diferencie publicação, vigência, marcos e faseamento. Não criar submarca própria nem apresentar cronograma especulativo como fato.
