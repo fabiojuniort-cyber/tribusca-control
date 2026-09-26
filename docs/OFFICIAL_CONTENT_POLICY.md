@@ -1,27 +1,33 @@
 # TriBusca — Política global de conteúdo oficial
 
-Aprovada em 26/09/2026. Decisão canônica: D-017 em `DECISIONS.md`.
+Aprovada em 26/09/2026. Decisão canônica: D-017, refinada pela D-036 em `DECISIONS.md`.
 
-## Regra
+## Regra — prioridade da página oficial
 
-Quando uma página oficial publicar o **conteúdo completo e fiel** de um ato, o TriBusca pode coletar esse conteúdo diretamente da página oficial.
+Quando uma página/representação oficial publicar o **conteúdo completo e fiel** de um ato, o TriBusca deve coletar esse conteúdo diretamente da página.
 
-Um PDF que apenas reproduza o mesmo conteúdo é **redundante para captura**:
-- não é requisito para reconhecer a publicação;
-- sua indisponibilidade isolada não pode bloquear a publicação;
-- sua falha não pode ser interpretada como “nenhuma publicação encontrada”;
-- quando disponível, pode ser preservado como evidência/proveniência/autenticidade.
+Se um PDF apenas reproduzir o mesmo conteúdo, ele é **redundante** e **não deve ser baixado por padrão**.
 
-Sempre preservar, quando disponíveis:
-- URL oficial;
-- identificador oficial;
-- referência/código de autenticidade;
-- órgão, data, tipo, número e demais metadados oficiais;
-- informação sobre a representação efetivamente capturada.
+Nesse caso:
+- não chamar o download do PDF redundante;
+- não condicionar a captura à existência/disponibilidade do PDF;
+- preservar URL oficial, identificador oficial e referência/código de autenticidade disponíveis na página/API;
+- registrar qual representação efetivamente forneceu o conteúdo;
+- não interpretar ausência do PDF redundante como falha ou ausência de publicação.
 
-## Exceção: conteúdo material fora da página
+## Quando o PDF é necessário
 
-PDF, planilha, tabela, imagem ou outro anexo continua sendo **fonte de conteúdo necessária** quando contém informação material ausente da página oficial.
+Se a página oficial não fornecer o conteúdo necessário — por exemplo, trouxer somente ementa, resumo, metadados ou corpo incompleto — o PDF oficial deixa de ser redundante e passa a ser **fonte material necessária**.
+
+Nesse caso:
+- o conector deve obter o PDF oficial quando ele for a representação que contém o conteúdo;
+- falha do PDF pode manter a captura parcial/incompleta;
+- o arquivo deve participar da proveniência e do versionamento conforme sua materialidade;
+- não declarar captura integral enquanto o conteúdo necessário estiver ausente.
+
+## Anexos com conteúdo próprio
+
+PDF, planilha, tabela, imagem ou outro anexo continua sendo **fonte de conteúdo necessária** quando contém informação material ausente do corpo principal da página.
 
 Exemplos:
 - anexos normativos;
@@ -30,52 +36,73 @@ Exemplos:
 - anexos de benefícios fiscais;
 - quadros, fórmulas ou dados não reproduzidos integralmente no HTML/JSON.
 
-Nesses casos, falha do artefato pode significar captura parcial. O conector deve registrar esse estado e não declarar captura integral.
+A existência de HTML completo para o corpo principal **não dispensa** esses anexos.
 
-## Página incompleta
+## Classificação mínima
 
-Uma página que contenha apenas ementa, resumo, metadados ou trecho não é “conteúdo integral” apenas por ser oficial.
-
-O conector deve distinguir:
-- `FULL_OFFICIAL_CONTENT`: página oficial suficiente para o conteúdo integral;
-- `PARTIAL_OFFICIAL_CONTENT`: página oficial incompleta;
-- artefato redundante;
-- artefato/anexo material obrigatório.
+O conector deve distinguir semanticamente:
+- `FULL_OFFICIAL_CONTENT`: página oficial suficiente para o corpo integral e sem material adicional obrigatório;
+- `PARTIAL_OFFICIAL_CONTENT`: página oficial sozinha não representa toda a captura necessária;
+- PDF redundante: não solicitado quando a página integral já fornece o mesmo corpo;
+- PDF material: solicitado quando necessário para obter conteúdo ausente/incompleto;
+- anexo material: solicitado independentemente do PDF redundante do corpo principal.
 
 Os nomes técnicos exatos podem variar por conector até existir contrato comum; a semântica é obrigatória.
 
+## Proveniência e autenticidade
+
+Sempre preservar, quando disponíveis sem download redundante:
+- URL oficial;
+- identificador oficial;
+- referência/código de autenticidade;
+- órgão, data, tipo, número e demais metadados oficiais;
+- representação efetivamente usada como conteúdo;
+- vínculos com anexos materiais.
+
+Proveniência não significa baixar toda representação possível. O TriBusca deve evitar transferir, armazenar ou versionar uma cópia redundante apenas para provar que ela existia quando a página oficial já fornece o conteúdo integral e sua referência de autenticidade.
+
 ## Identidade, replay e versionamento
 
-A decisão D-017 não autoriza alterar hashes históricos de forma silenciosa.
+A D-017/D-036 não autoriza alterar hashes históricos de forma silenciosa.
 
-Antes de retirar um PDF/artefato de `files` ou do material de `content_hash`, cada conector deve provar:
+Antes de retirar um PDF/artefato redundante do material de `content_hash` em fonte com legado, cada conector deve provar:
 1. identidade lógica preservada;
 2. replay idempotente;
-3. ausência de versões artificiais em dados já persistidos;
-4. proveniência por origem preservada;
+3. ausência de versões artificiais;
+4. proveniência por origem preservada conforme a representação efetivamente usada;
 5. nenhum artefato de uma origem atribuído a outra;
-6. anexos materiais continuam influenciando conteúdo/versionamento quando necessário.
+6. anexos/PDFs materiais continuam influenciando conteúdo/versionamento quando necessário.
 
-Se a adequação exigir migration ou mudança material da semântica de versões, a implementação deve parar no gate de decisão antes dessa alteração.
+Se a adequação exigir reconstrução, migration, repair ou mudança material da semântica de versões, executar somente após gate separado com backup, dependências, validação e reversão.
 
 ## Aplicação por fonte
 
 A decisão é global; a implementação é incremental.
 
-A [Issue #6](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6) acompanha o inventário, cuja matriz canônica está em [OFFICIAL_CONTENT_INVENTORY.md](OFFICIAL_CONTENT_INVENTORY.md), e deve registrar, por conector:
+A [Issue #6](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6) acompanha o inventário em [OFFICIAL_CONTENT_INVENTORY.md](OFFICIAL_CONTENT_INVENTORY.md).
+
+Para cada conector, registrar:
 - representação integral;
-- papel de PDFs;
-- papel de anexos;
-- autenticidade;
+- se a página é integral ou parcial;
+- quando PDF é redundante e portanto não deve ser solicitado;
+- quando PDF é material;
+- papel dos anexos;
+- autenticidade disponível sem download;
 - comportamento de falhas;
 - impacto no versionamento;
 - compatibilidade com dados existentes;
-- Issue/PR específico para adequação.
+- Issue/PR específico da adequação.
 
-Nenhum conector é considerado adequado apenas porque esta política foi aprovada.
+Nenhum conector é considerado adequado apenas porque a regra global foi aprovada.
 
 ## Primeira aplicação: DOE-SP
 
-No DOE-SP, a API oficial entrega o texto integral no detalhe da publicação em HTML/JSON. O PDF autenticado normalmente reproduz esse ato, enquanto `attachments[]` podem transportar conteúdo próprio.
+No DOE-SP, a API oficial de detalhe fornece o texto HTML/JSON do ato e `attachments[]` pode transportar conteúdo próprio.
 
-A adequação do DOE-SP é tratada na Issue #1. A investigação mostrou que o modelo legado inclui hashes dos PDFs autenticados no `content_hash`, portanto a separação entre PDF redundante e anexo material precisa de compatibilidade com as versões já persistidas antes de qualquer merge/deploy.
+A implementação preparada no PR #73 segue:
+- corpo HTML oficial presente → conteúdo canônico e **zero tentativa de download do PDF autenticado redundante**;
+- corpo HTML ausente → PDF autenticado oficial torna-se fallback material necessário;
+- attachments próprios → material obrigatório separado;
+- URL, `externalId` e `authCode` permanecem preservados.
+
+O acervo produtivo atual ainda contém hashes/metadata legados calculados com PDFs autenticados. A decisão sobre preservar ou reconstruir esse acervo é um gate separado na Issue #1; esta política não autoriza operação destrutiva.
