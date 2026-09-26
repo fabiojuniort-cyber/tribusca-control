@@ -31,6 +31,11 @@ Não regravar todos os arquivos em toda conversa: alterar apenas os afetados. O 
 
 ## Novo chat / nova frente
 
+- Comando do usuário para uma **nova janela do Gerente Geral**: “Carregue o Gerente Geral do Repositório”. Localizar `fabiojuniort-cyber/tribusca-control` e ler `CONTEXT.md` → `PROJECT_STATE.md` → Issue ativa; verificar estado vivo só do que for premissa para a decisão.
+- Chat **especialista novo**: o prompt do Gerente traz o link de `contexts/BACKEND.md` ou `contexts/WEB.md`, o índice da frente e a Issue. Carregar uma vez no início do chat.
+- **Mesmo especialista, próxima instrução na mesma janela**: não repetir prompt de carregamento nem reler todos os documentos; usar o contexto já carregado e consultar apenas Issue/PR/runs afetados se houver mudança ou decisão dependente. Atualizar a Issue no handoff e a documentação técnica no PR quando o comportamento mudar.
+- **Especialista em nova janela, nova Issue, handoff ou mudança de direção**: recarregar o índice curto e Issue correspondente. O Gerente atualiza os contextos centrais após auditar cada marco.
+
 - Gerente: `CONTEXT.md` → `PROJECT_STATE.md` → Issue ativa.
 - Executor backend: `contexts/BACKEND.md` → contexto da frente → Issue → código.
 - Executor frontend: `contexts/WEB.md` → Issue → código.
