@@ -1,6 +1,6 @@
 # TriBusca — entrada de qualquer chat de frontend
 
-Atualizado em 26/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) não tem código do frontend definitivo; apenas `AGENTS.md` foi criado como entrada dos agentes em 26/09/2026. Não inferir que o protótipo Railway ou código local esteja publicado nele.
+Atualizado em 26/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) não tem código do frontend definitivo; somente arquivos de governança (`AGENTS.md`, `README.md` e template de PR) foram criados em 26/09/2026. Não inferir que o protótipo Railway ou código local esteja publicado nele.
 
 Leia [CONTEXT.md](../CONTEXT.md), [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md), [roadmap](../ROADMAP.md), [arquitetura](../docs/ARCHITECTURE.md) e a Issue específica antes de iniciar. Stack já aprovada: React, TypeScript, Vite, React Router, TanStack Query, Tailwind, Radix UI, shadcn/ui, Lucide, ESLint, Prettier, Vitest, Testing Library e MSW. A API do produto e o frontend definitivo ainda são pendências; o site definitivo está fora da prioridade atual. Nunca inventar endpoints ou criar autenticação paralela ao backend.
 
