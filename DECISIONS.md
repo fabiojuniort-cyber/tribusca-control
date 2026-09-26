@@ -47,6 +47,8 @@ Atualizado em 26/09/2026. Este registro consolida decisões transmitidas pelo re
 
 | D-029 | **Acervo** é uma área estrutural do TriBusca para consulta organizada das publicações oficiais coletadas, suas versões, origem, marcadores e metadados. Não terá nome comercial próprio nem submarca. A navegação autenticada passa a usar **Acervo** no lugar de “Arquivo”. | O Acervo deve preservar rastreabilidade, histórico/versionamento e navegação por filtros/marcadores; Releva e Decodifica podem ser acessados a partir do conteúdo, mas continuam funcionalidades distintas. Não altera DOE-SP nem prioridade do roadmap. |
 
+| D-030 | **Busca** não é produto nem área separada: é uma **função do Acervo**. A navegação autenticada não precisa expor “Busca” como item independente; pesquisa, filtros e exploração do conteúdo ficam dentro da experiência do Acervo. | Simplifica a arquitetura de navegação e mantém o portfólio concentrado em funcionalidades realmente diferenciadas. Não altera backend, DOE-SP ou prioridade do roadmap. |
+
 ## Como mudar uma decisão
 
 1. Abrir Issue de decisão com contexto, opções, custos, riscos e impacto nas frentes atuais.
