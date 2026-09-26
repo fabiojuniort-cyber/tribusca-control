@@ -70,3 +70,31 @@ O responsável definiu como referência visual aprovada os componentes/protótip
 - Item 9 exige ratificação de Branding antes do merge ou remoção da exceção.
 - Cadastro, recuperação e nova senha não devem inventar endpoint; somente o login usa o contrato comprovado `POST /auth/login`.
 - Dados dinâmicos de Cobertura dependem de contrato explícito de API.
+
+
+## Evidência de implementação — 26/09/2026
+
+Frontend: [radar-fiscal-web PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1)  
+Branch: `feat/web-01-site-publico`  
+Head verificado: `eb930e97e925fce63d8ff6bad4682ae64ce90897`  
+GitHub Actions: run `36259839790` — **SUCCESS**.
+
+Passaram:
+- instalação;
+- typecheck;
+- testes Vitest/Testing Library;
+- build Vite.
+
+A implementação inclui as definições 1–13, com os seguintes limites deliberados:
+- cadastro, recuperação e nova senha não chamam endpoints inexistentes;
+- métricas de Cobertura permanecem `—` até consumo do contrato D-050 / Issue #11;
+- status `Disponível` de Acervo/Central permanece gate gerencial pré-merge;
+- vermelho/amarelo/verde do Sonar permanece gate Branding / Issue #10;
+- nenhum merge ou deploy foi executado.
+
+Dependências abertas:
+- [Issue #9](https://github.com/fabiojuniort-cyber/tribusca-control/issues/9) — cadastro/recuperação/nova senha;
+- [Issue #10](https://github.com/fabiojuniort-cyber/tribusca-control/issues/10) — ratificação cromática do Sonar;
+- [Issue #11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11) — API pública read-only para Cobertura/Acervo.
+
+**Próximo gate:** Gerente revisar os claims do item 8 e a aprovação Branding do item 9; depois revisão visual/funcional independente. O PR continua draft.
