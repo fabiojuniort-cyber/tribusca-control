@@ -19,6 +19,7 @@ Este diretório registra definições funcionais de ferramentas do TriBusca. Ele
 | --- | --- | --- | --- |
 | **Decodifica** | **DECISÃO APROVADA** | **Não comprovada**; planejada para depois da macrofase DOE | [Decodifica](DECODIFICA.md) |
 | **Sonar** | **DECISÃO APROVADA** | **Não comprovada**; detalha a relevância/afinidade prevista no roadmap | [Sonar](SONAR.md) |
+| **Revela** | **DECISÃO APROVADA** | **Não comprovada**; boletim diário personalizado | [Revela](REVELA.md) |
 | **Acervo** | **DECISÃO APROVADA** como área estrutural, sem nome comercial próprio; **Busca é função interna** | **Não comprovada** como experiência final | [Produto e UX](../PRODUCT_AND_UX.md#acervo) |
 
 Novas ferramentas entram neste índice somente quando forem discutidas nesta frente ou quando uma decisão vigente precisar ser incorporada explicitamente. Não criar nomes, escopo ou comportamento para preencher lacunas.
@@ -59,4 +60,4 @@ Cada documento individual deve registrar, apenas conforme houver evidência ou d
 - A prioridade executiva permanece a definida no `ROADMAP.md`.
 - Conceito aprovado não equivale a recurso disponível.
 - Não anunciar capacidade futura como implementada.
-- Não criar sub-marcas ou alterar nomes aprovados sem decisão formal. **Decodifica** e **Sonar** são nomes de funcionalidades do TriBusca, não submarcas independentes.
+- Não criar sub-marcas ou alterar nomes aprovados sem decisão formal. **Decodifica**, **Sonar** e **Revela** são nomes de funcionalidades do TriBusca, não submarcas independentes.
