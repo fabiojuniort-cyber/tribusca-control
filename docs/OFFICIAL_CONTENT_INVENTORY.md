@@ -6,14 +6,14 @@ Atualizado em 26/09/2026. Este documento operacionaliza a decisão global D-017 
 
 - **Integral na página/API:** há evidência no conector de que o texto canônico é obtido diretamente de HTML/JSON/XML oficial.
 - **Artefato material:** arquivo pode carregar conteúdo que não existe integralmente na página e, portanto, não pode ser descartado como redundante.
-- **Redundante/proveniência:** arquivo replica conteúdo já integral na página e pode ser evidência sem ser requisito de captura.
+- **Redundante/não solicitar:** arquivo replica conteúdo já integral na página; preservar referência/autenticidade disponível, mas não baixar a cópia por padrão.
 - **A confirmar:** exige inspeção específica antes de alterar o conector.
 
 ## Matriz inicial
 
 | Fonte/conector | Representação observada | Papel atual de arquivos | Impacto D-017 | Próximo passo |
 | --- | --- | --- | --- | --- |
-| **DOE-SP** | API oficial fornece detalhe com HTML/JSON integral; conector normaliza HTML como `content` | PDF autenticado normalmente replica o ato; `attachments[]` podem conter conteúdo próprio | **Primeira aplicação.** PDF autenticado é candidato a proveniência redundante; anexos permanecem materiais. Legado inclui PDF no `contentHash`, exigindo compatibilidade antes da mudança | Issue #1 + draft PR backend #73; decidir estratégia de hash/versionamento |
+| **DOE-SP** | API oficial fornece detalhe com HTML/JSON do ato; 517/517 versões do snapshot tinham `content_text` não vazio | PDF autenticado normalmente replica o corpo e, pela D-036, **não deve ser solicitado quando o HTML estiver disponível**; `attachments[]` podem conter conteúdo próprio; PDF vira material se faltar o corpo oficial | **Primeira aplicação.** PR #73 implementa page-first: HTML → zero download do PDF redundante; página sem corpo → PDF material; attachments continuam materiais. O legado produtivo contém 516 PDFs autenticados e 94 attachments no snapshot, exigindo decisão preservar×reconstruir antes do merge | Issue #1 + PR #73; executar auditor read-only de dependências antes de qualquer decisão destrutiva |
 | **DOU / INLABS** | XML oficial extraído de ZIP INLABS | ZIP/XML é o próprio transporte do conteúdo oficial, não PDF redundante | Regra não autoriza remover o artefato de origem; o XML continua necessário para captura | Confirmar apenas classificação/proveniência em inventário futuro |
 | **CONFAZ** | Conector extrai texto do HTML oficial e também descobre links de PDF/ZIP/XLS/XML/DOC etc. | Links de arquivo são hoje tratados genericamente como `files` | Necessário classificar arquivo a arquivo: alguns podem ser redundantes, outros podem ser anexos normativos materiais | Abrir Issue específica somente após evidência de quais famílias/arquivos são materiais |
 | **Portal NF-e / ENCAT** | Listagem oficial fornece descrição, mas o conector baixa PDF/ZIP/XML técnico | Arquivo é normalmente o próprio conteúdo técnico (NT, schema, pacote, XML), não mera cópia da descrição | **Não tratar como redundante por padrão.** Falha do arquivo pode significar conteúdo incompleto | Inventariar por família/tipo antes de qualquer mudança |
@@ -24,7 +24,7 @@ Atualizado em 26/09/2026. Este documento operacionaliza a decisão global D-017 
 
 ## Achados transversais
 
-O normalizador atual do backend inclui o SHA-256 de todos os `files` no `contentHash`. Portanto, a política D-017 **não pode ser aplicada apenas removendo arquivos redundantes dos conectores** quando já houver versões persistidas com esses hashes.
+O modelo legado do backend inclui SHA-256 de todos os `files` no `contentHash`. Portanto, D-017/D-036 **não pode ser aplicada apenas parando downloads redundantes** quando já houver versões persistidas com esses hashes; é necessário compatibilizar o legado ou reconstruí-lo com gate explícito.
 
 Para cada fonte com legado, a adequação precisa distinguir:
 
@@ -44,7 +44,7 @@ Logs produtivos somente leitura já emitidos pelo validador registraram, no snap
 - 94 anexos;
 - 0 versões históricas naquele momento.
 
-O caso Portaria SRE 42/2025 demonstrou duas representações oficiais com mesma identidade e mesmo HTML normalizado, mas somente uma com PDF autenticado disponível. Isso comprova o risco de versão artificial no modelo legado quando o PDF deixa de participar de `files`/hash.
+O caso Portaria SRE 42/2025 demonstrou duas representações oficiais com mesma identidade e mesmo HTML normalizado, mas disponibilidade diferente do PDF autenticado. Sob D-036, nenhuma representação deve solicitar esse PDF quando o HTML estiver integral. O caso continua comprovando o risco do legado: hashes antigos incluem PDF e não podem simplesmente ser comparados ao novo conteúdo page-first sem compatibilidade ou reconstrução controlada.
 
 ## Regra de governança
 
