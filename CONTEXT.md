@@ -20,8 +20,8 @@ Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26
 ## Ponto de retomada verificado
 
 - DOE-SP segue **ABERTO**; o bootstrap completo 2025-01-01 → data atual e os gates produtivos ainda não foram comprovados.
-- [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1), P0, foi colocada em In Progress no quadro conforme confirmação do usuário. Na consulta de 26/09/2026 ainda estava aberta, com **0 comentários** e sem handoff; o estado do cartão não prova que um chat executor está trabalhando.
-- [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) ainda estava OPEN, unmerged, head `091868c053d9d6f035030f866afd438f2c9fe3bd`. O CI #381 foi informado como verde anteriormente; conferir novamente antes de usar como gate.
+- [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1), P0, segue aberta/In Progress. A revisão independente do head `091868c053d9d6f035030f866afd438f2c9fe3bd` registrou dois bloqueios funcionais no [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71); o executor corrigiu ambos e devolveu um novo head para outra revisão independente.
+- [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) permanece OPEN e unmerged, agora no head `350d688fc79db43ab770ac7b9c43b716b8b2edd2`, baseado na main `f25a596edce592e6e365e87ed4cbf16ba0922de8` e sem commits pendentes da base. O CI #387 / run `36218499643` concluiu SUCCESS nesse head: typecheck, build, unit tests, collection persistence integration e authentication/RLS integration passaram. Esse CI comprova o head corrigido, mas **não autoriza merge**; a próxima etapa é nova revisão independente.
 - O último bloqueio histórico transmitido foi 29/07/2025 com 399 dias pendentes. Não interpretar como leitura produtiva atual.
 - [Issue #2](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2): bootstrap e replay, depende da #1.
 - [Issue #3](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3): artefatos e política de `publication_files`, depende da #1.
@@ -32,7 +32,7 @@ Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26
 
 ## Próxima passagem
 
-Receber do executor GPT-5.6 o resultado da Tarefa 18 / Issue #1. O Gerente analisa eventuais erros e lacunas, exige handoff na Issue e revisão independente quando necessário, define o próximo passo e delega a atualização dos contextos após o marco. O GPT-6 pode consultar diretamente Issue, PR, CI e evidências de produção em modo somente leitura quando necessário; qualquer operação que altere estado cabe ao GPT-5.6. Nenhuma conclusão do DOE-SP sem os gates relatados e confrontados. O estado desta seção é datado e pode estar ultrapassado.
+Submeter o head `350d688fc79db43ab770ac7b9c43b716b8b2edd2` do PR #71 a uma **nova revisão independente** dos dois bloqueios corrigidos e das evidências do CI #387. Até essa revisão, o PR permanece sem autorização de merge; deploy, migration, coleta manual e repair produtivo também continuam fora do escopo. O Gerente analisa o novo parecer e só então define o próximo gate da Issue #1. Nenhuma conclusão do DOE-SP sem os gates relatados e confrontados. O estado desta seção é datado e pode estar ultrapassado.
 
 ## Atualização obrigatória a cada marco
 
