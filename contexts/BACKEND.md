@@ -4,7 +4,7 @@ Atualizado em 26/09/2026. Este arquivo é o ponto de entrada funcional para qual
 
 ## Estado para escolher a tarefa
 
-A frente priorizada é DOE-SP, que permanece aberta. O [PR de governança #72](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/72) propõe `AGENTS.md` e template de PR no backend; está em draft e não entrou na main. Enquanto isso, forneça este link diretamente a cada novo chat backend. [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) são o trabalho ativo registrado. #2 e #3 dependem de #1; #4 depende de #1–#3. Leia [CONTEXT.md](../CONTEXT.md) para o snapshot datado e revalide GitHub/Railway/PostgreSQL apenas na medida exigida pela Issue. Não assumir que este arquivo autorizou merge, deploy, coleta ou migration.
+A frente priorizada é DOE-SP, que permanece aberta. O [PR de governança #72](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/72) foi mergeado com autorização em 26/09/2026; `AGENTS.md` e template de PR estão na main (commit `f25a596edce592e6e365e87ed4cbf16ba0922de8`). Backend, Worker e Scheduler concluíram deploy automático em SUCCESS; isso não valida nenhum gate DOE-SP. [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) são o trabalho ativo registrado. #2 e #3 dependem de #1; #4 depende de #1–#3. Leia [CONTEXT.md](../CONTEXT.md) para o snapshot datado e revalide GitHub/Railway/PostgreSQL apenas na medida exigida pela Issue. Não assumir que este arquivo autorizou merge, deploy, coleta ou migration.
 
 ## Regras de continuidade
 
