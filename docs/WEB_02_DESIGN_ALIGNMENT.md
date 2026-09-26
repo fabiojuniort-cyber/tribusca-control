@@ -118,3 +118,22 @@ Estado público vigente:
 Páginas com placeholders, conteúdo conceitual ou integrações ainda em PR não devem ser apresentadas como funcionalidades acessíveis.
 
 **Impacto:** badges/claims e documentação. **Próximo passo:** CI e revisão visual/funcional; Issue #10 continua como gate independente das cores do Sonar. Sem merge/deploy.
+
+
+## Evidência WEB-03
+
+Frontend: [radar-fiscal-web PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1)  
+Branch: `feat/web-01-site-publico`  
+Head verificado: `b9c39fab1530187f4ed034679dea1ef26888d3b3`  
+CI: run `36260946535` — **SUCCESS**.
+
+Verificações:
+- instalação — SUCCESS;
+- typecheck — SUCCESS;
+- Vitest/Testing Library — SUCCESS;
+- build Vite — SUCCESS;
+- Home: 6 badges **Em desenvolvimento**;
+- Portfólio: 6 badges **Em desenvolvimento**;
+- nenhuma ocorrência de “Disponível” permanece no código visível de `src/App.tsx`.
+
+**Gate:** PR continua draft. Cores do Sonar permanecem somente para avaliação, sujeitas à Issue #10 e revisão visual/funcional independente. Sem merge/deploy.
