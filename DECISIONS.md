@@ -30,6 +30,8 @@ Atualizado em 26/09/2026. Este registro consolida decisões transmitidas pelo re
 
 | D-021 | No **Decodifica**, a atualização de uma tradução obsoleta por alteração/retificação da norma é cobrada sobre **todo o conteúdo da versão oficial vigente**, mesmo quando só parte do texto mudou. O botão tem três estados funcionais: versão vigente ainda não traduzida para o usuário → mostra o custo em créditos; versão vigente já traduzida → mostra **“Traduzido”**; tradução obsoleta → volta a mostrar o custo para nova tradução integral. | A UX e API futuras precisarão expor estado por usuário+versão e recalcular o custo integral quando houver nova versão. A tradução antiga continua disponível e marcada como desatualizada. Não altera DOE-SP nem autoriza implementação. Ver [Decodifica](docs/product-tools/DECODIFICA.md) e [Issue #7](https://github.com/fabiojuniort-cyber/tribusca-control/issues/7). |
 
+| D-022 | O botão do **Decodifica** deve exibir o custo no padrão **`Decodificar (N créditos)`** quando houver cobrança para aquela versão; exemplo aprovado: **`Decodificar (4 créditos)`**. Quando a versão vigente já estiver traduzida para o usuário, o estado textual continua **“Traduzido”**. | Padroniza a microcopy funcional do botão e deve ser refletido no frontend quando a implementação for autorizada. Não define ainda cor, ícone, tamanho ou composição visual. Não altera DOE-SP nem prioridade do roadmap. Ver [Decodifica](docs/product-tools/DECODIFICA.md) e [Issue #7](https://github.com/fabiojuniort-cyber/tribusca-control/issues/7). |
+
 ## Como mudar uma decisão
 
 1. Abrir Issue de decisão com contexto, opções, custos, riscos e impacto nas frentes atuais.
