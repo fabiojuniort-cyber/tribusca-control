@@ -57,6 +57,8 @@ Atualizado em 26/09/2026. Este registro consolida decisões transmitidas pelo re
 
 | D-034 | **Reforma Tributária** será uma **página temática pública de dados**, não produto nem submarca. A página reúne o recorte do Acervo referente à reforma — legislação, regulamentação, notas técnicas e publicações relacionadas — e terá timeline distinguindo **publicação, vigência, marcos de implementação e faseamento**. | A página reutiliza o Acervo global, preserva fontes e versões e não deve inventar cronogramas ou duplicar publicações. Implementação pública autorizada na WEB-01 / Issue #8; integração dinâmica dependerá de API/dados futuros. |
 
+| D-035 | A **camada pública do site TriBusca** pode ser retomada em paralelo à macrofase DOE por meio da **WEB-01 / Issue #8**, consolidando marca, portfólio, Acervo e páginas temáticas já aprovadas. | A autorização vale para frontend/site público e conteúdo estático/estrutural. Não antecipa frontend autenticado, API real, Sonar funcional, Revela por e-mail, Decodifica real ou Acervo dinâmico. Esses recursos só podem ser anunciados como disponíveis após implementação comprovada. |
+
 ## Como mudar uma decisão
 
 1. Abrir Issue de decisão com contexto, opções, custos, riscos e impacto nas frentes atuais.
