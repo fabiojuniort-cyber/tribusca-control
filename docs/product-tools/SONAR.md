@@ -107,11 +107,29 @@ A regra aprovada é qualitativa:
 
 Esses detalhes internos não devem ser expostos publicamente em nível que permita reproduzir o motor, mas a lógica geral precisa ser explicada ao cliente.
 
+## Linguagem visual — proximidade do Sonar
+
+A classificação funcional continua sendo **Alta**, **Média** ou **Baixa afinidade**. A metáfora visual aprovada para o Sonar é a **proximidade do sinal em relação ao centro**:
+
+- **Alta afinidade** → sinal **próximo ao centro**;
+- **Média afinidade** → sinal em **distância intermediária**;
+- **Baixa afinidade** → sinal **distante**, em anel externo.
+
+A proximidade é uma linguagem visual do produto e **não substitui os rótulos Alta/Média/Baixa**. O usuário sempre deve conseguir ler explicitamente o nível de afinidade.
+
+O centro do sonar representa o **Perfil Tributário da empresa/estabelecimento** e a publicação é representada como um sinal posicionado conforme a classe de afinidade.
+
+Os fatores que explicam o resultado podem ser apresentados ao usuário como **“sinais encontrados”**. Exemplos: UF coincidente, tributo, produto, NCM, operação, segmento, obrigação ou outro marcador relevante.
+
+A interface deve preservar acessibilidade: cor, distância, posição ou animação nunca podem ser o único meio de comunicar o nível. O texto **Alta afinidade**, **Média afinidade** ou **Baixa afinidade** deve permanecer disponível.
+
+O componente visual exato — ícone, quantidade de anéis, animação, cores, tamanho e comportamento responsivo — fica para o desenho de UX/UI e não é definido por esta decisão.
+
 ## Experiência do usuário
 
 Na listagem ou área do Sonar, a publicação deve poder exibir:
 - nível de afinidade: **Alta**, **Média** ou **Baixa**;
-- principais motivos;
+- principais motivos, apresentados quando adequado como **sinais encontrados**;
 - estabelecimento(s) relacionado(s), quando aplicável;
 - acesso à publicação;
 - acesso aos marcadores envolvidos.
