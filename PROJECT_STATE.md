@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 25/09/2026 (America/Sao_Paulo).
+Atualizado em 26/09/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -39,6 +39,8 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 - API do produto, taxonomia, perfil, relevância, Norma Clara, frontend e site definitivos: prioridades posteriores conforme [ROADMAP.md](ROADMAP.md).
 
 ## Governança
+
+Decisões aprovadas de [produto/UX](docs/PRODUCT_AND_UX.md), [site/comercial](docs/SITE_AND_MARKETING.md), [marca v1](docs/BRAND_MANUAL_V1.md) e [ativos](docs/BRAND_ASSETS.md) foram incorporadas ao repositório; [questões abertas](docs/OPEN_QUESTIONS.md) mantêm propostas separadas do que foi decidido. O [índice de decisões](DECISIONS.md) liga esses temas. O site definitivo segue pausado; copiar as decisões aqui não declara recurso implementado.
 
 [CONTEXT.md](CONTEXT.md) é o ponto único de retomada do Gerente Geral. [Backend](contexts/BACKEND.md), [frontend](contexts/WEB.md) e [DOE-SP](contexts/DOE-SP.md) são índices de frente; [executor](contexts/EXECUTOR.md) e [revisor](contexts/REVIEWER.md) apontam para as Issues atuais sem duplicar seus handoffs. O [protocolo de atualização](docs/CONTEXT_MAINTENANCE.md) define responsáveis e marcos. `radar-fiscal-web` recebeu apenas `AGENTS.md`, `README.md` e template de PR; a aplicação permanece pendente. [Backend PR #72](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/72) foi mergeado com autorização em 26/09/2026 no commit `f25a596edce592e6e365e87ed4cbf16ba0922de8`, com dois arquivos de governança e CI #382 SUCCESS. Deploys automáticos desse commit: Backend `d0e39486-cdff-4ff1-9531-04a4f3b4dedd`, Worker `cfcb6909-ce88-4694-b493-daf7aa302bc7` e Scheduler `c34c8850-6c48-4d16-a0a4-14f817184d5d`, todos SUCCESS. Isso não é evidência de fechamento DOE-SP. O Gerente Geral atualiza CONTEXT.md e este arquivo a cada marco auditado; outros chats registram evidências nas Issues. A atualização não ocorre automaticamente entre conversas.
 
