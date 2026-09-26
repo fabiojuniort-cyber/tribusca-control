@@ -6,42 +6,34 @@ GitHub é o contexto durável; memória de chat é apenas apoio. O contexto curt
 
 ## Matriz de propriedade
 
-| Fonte | Quem mantém | Quando atualizar |
-| --- | --- | --- |
-| `CONTEXT.md` e `PROJECT_STATE.md` | Gerente Geral | Após auditar handoff, decisão, bloqueio, mudança da prioridade ou gate produtivo |
-| `ROADMAP.md` e `DECISIONS.md` | Gerente Geral | Quando a ordem ou uma decisão aprovada muda |
-| `docs/PRODUCT_AND_UX.md`, `SITE_AND_MARKETING.md`, `BRAND_MANUAL_V1.md` e `BRAND_ASSETS.md` | Gerente Geral após confirmação; especialistas fornecem evidência | Quando uma decisão de produto, ferramenta, layout, design, recurso, comercial ou marca é aprovada ou alterada |
-| `docs/OPEN_QUESTIONS.md` | Gerente Geral | Quando uma proposta/sugestão ainda não aprovada é levantada, resolvida ou descartada |
-| `contexts/BACKEND.md`, `WEB.md`, `DOE-SP.md` e novos índices de frente | Gerente Geral | Ao abrir, trocar bloqueio/Issue ativa, encerrar ou alterar direção |
-| Issue de governança | Executor, revisor e Gerente | A cada PR/head relevante, revisão, falha, deploy/run e handoff; o Gerente confere |
-| Documentação técnica no repositório de código | Executor via PR | Quando contrato, comportamento, runbook ou operação mudam; revisão e gate seguem a Issue |
-| `AGENTS.md` e templates | Gerente Geral | Quando o protocolo de agentes muda; atualizar links sem copiar estado operacional |
+**Gerente Geral GPT-6:** decide o conteúdo, aponta evidências e solicita edições; não lê nem escreve nenhum local. **Executor GPT-5.6 designado:** faz toda leitura/escrita e entrega link, commit e resumo do diff. O revisor GPT-5.6 verifica alterações relevantes separadamente quando o risco exigir.
+
+| Fonte | Responsável pela decisão | Responsável pela edição | Gatilho |
+| --- | --- | --- | --- |
+| `CONTEXT.md`, `PROJECT_STATE.md` | Gerente Geral | GPT-5.6 delegado | Handoff analisado, decisão, bloqueio, prioridade ou gate |
+| `ROADMAP.md`, `DECISIONS.md` | Gerente Geral | GPT-5.6 delegado | Ordem ou decisão aprovada muda |
+| Produto, UX, site, marca e `docs/OPEN_QUESTIONS.md` | Gerente Geral | GPT-5.6 delegado | Decisão/proposta de recurso, layout, design, ferramenta ou negócio |
+| `contexts/` e `AGENTS.md` | Gerente Geral | GPT-5.6 delegado | Entrada de nova frente, erro, alteração de protocolo ou fechamento |
+| Issue de governança | Gerente Geral (gate) e GPT-5.6 (evidências) | GPT-5.6 delegado | PR, revisão, erro, deploy/run e handoff |
+| Documentação no repositório de código | Gerente Geral (escopo) | Executor GPT-5.6 via PR | Contrato, comportamento ou operação muda |
 
 ## Autorização de manutenção
 
-O responsável pelo projeto autorizou o Gerente Geral a atualizar autonomamente os arquivos de governança e contextos no `tribusca-control` quando houver mudança verificada. Não solicitar confirmação rotineira para cada edição documental. A autorização não se estende a merge/deploy/migration ou ações produtivas sem escopo autorizado. O gerente registra a evidência e deixa o próximo chat capaz de retomar o trabalho.
+O responsável pelo projeto autorizou a manutenção recorrente da documentação de governança. O Gerente decide e delega; o GPT-5.6 executa e comprova a atualização. Não pedir confirmação rotineira para cada edição documental. Essa autorização não libera merge, deploy, migration, alteração de secrets, operação destrutiva ou outra ação produtiva sem escopo e gate autorizado. Se o executor não conseguir escrever, deve devolver o patch/texto exato ao Gerente e manter o marco aberto.
 
 ## Processo em cada avanço
 
-1. Agente lê `AGENTS.md` do repositório de código, o contexto da frente e a Issue atual.
-2. Durante trabalho, coloca evidências no PR/Issue; dados sensíveis são omitidos.
-3. Antes de declarar concluída sua tarefa, preenche [HANDOFF.md](HANDOFF.md) na Issue e explicita quais arquivos de contexto/documentação devem mudar. Se houver alteração técnica, entrega a documentação técnica no próprio PR.
-4. Gerente audita evidências. Na mesma sessão, atualiza os índices e o estado executivo afetados, remove snapshot obsoleto e registra a próxima Issue; verifica os links.
-5. Quando a escrita falhar ou não houver permissão, o retorno inclui um patch/texto exato pendente; o marco permanece aberto até a atualização registrada.
+1. O Gerente envia ao GPT-5.6 a Issue, contexto mínimo, autorização vigente, critérios e até cinco passos independentes; pode demandar uma leitura inicial para descobrir o estado.
+2. O executor verifica evidências ao vivo, avança autonomamente em todas as etapas autorizadas e registra fatos, erros e limites na Issue/PR. Um erro interrompe somente os passos dependentes: o executor faz o restante seguro e devolve o problema ao Gerente, sem mascará-lo.
+3. O Gerente analisa integralmente o retorno, confronta critérios, identifica causa comprovada versus hipótese e dá novo direcionamento. Se o gate depender de comprovação independente, designa outro GPT-5.6 para revisão; não se atribui uma auditoria direta.
+4. O Gerente demanda a atualização apenas dos arquivos afetados. O GPT-5.6 edita os arquivos, verifica links e coerência, retorna commit, caminhos alterados, resumo das mudanças e status da Issue. Pode fazer a atualização factual no próprio handoff se o escopo já determinar os fatos; nenhuma conclusão produtiva sem gate do Gerente.
+5. O Gerente incorpora a confirmação documental ao seu próximo prompt. Se faltar registro comprovado, o marco permanece aberto e a primeira ação delegada é corrigi-lo.
 
-Não regravar todos os arquivos em toda conversa: alterar apenas os afetados. O contexto do backend e o do frontend compartilham links para decisões e estado, sem duplicar contagens mutáveis. A Issue é a fonte dos detalhes de execução; um cartão no Projects não inicia agentes nem prova conclusão.
+Não regravar tudo a cada mensagem. A Issue contém detalhes; índices guardam síntese com data e links. Issues e cartões não criam nem sincronizam chats.
 
-## Novo chat / nova frente
+## Novo chat / nova frente — bootstrap sem acesso do Gerente
 
-- Comando do usuário para uma **nova janela do Gerente Geral**: “Carregue o Gerente Geral do Repositório”. Localizar `fabiojuniort-cyber/tribusca-control` e ler `CONTEXT.md` → `PROJECT_STATE.md` → Issue ativa; verificar estado vivo só do que for premissa para a decisão.
-- Chat **especialista novo**: o prompt do Gerente traz o link de `contexts/BACKEND.md` ou `contexts/WEB.md`, o índice da frente e a Issue. Carregar uma vez no início do chat.
-- **Mesmo especialista, próxima instrução na mesma janela**: não repetir prompt de carregamento nem reler todos os documentos; usar o contexto já carregado e consultar apenas Issue/PR/runs afetados se houver mudança ou decisão dependente. Atualizar a Issue no handoff e a documentação técnica no PR quando o comportamento mudar.
-- **Especialista em nova janela, nova Issue, handoff ou mudança de direção**: recarregar o índice curto e Issue correspondente. O Gerente atualiza os contextos centrais após auditar cada marco.
-
-- Gerente: `CONTEXT.md` → `PROJECT_STATE.md` → Issue ativa.
-- Executor backend: `contexts/BACKEND.md` → contexto da frente → Issue → código.
-- Executor frontend: `contexts/WEB.md` → Issue → código.
-- Revisor: `contexts/REVIEWER.md` → Issue → PR/diff.
-- Nova frente: criar Issue e um índice curto `contexts/<FRENTE>.md` quando precisar de mais contexto do que a Issue comporta; usar links e critérios, sem copiar logs extensos.
-
-Ao usar outro chat/ferramenta, forneça o link do contexto e da Issue. Atualizações recorrentes em background exigiriam automação própria e permissões; este protocolo opera por marcos auditados.
+- Ao receber “Carregue o Gerente Geral do Repositório”, o **GPT-6 não acessa GitHub, arquivos ou qualquer local**. Ele dá ao usuário um único prompt curto para abrir um chat GPT-5.6 de bootstrap. Esse executor lê `CONTEXT.md` → `PROJECT_STATE.md` → Issue ativa, revalida apenas premissas atuais necessárias e devolve um resumo autocontido: frente, decisões vigentes, evidências e datas, erros/bloqueios, permissões, próxima ação, links e arquivos que exigem atualização. O usuário transmite o retorno ao Gerente. Sem esse retorno, o Gerente não afirma conhecer o estado vivo.
+- Um chat GPT-5.6 especialista novo lê `contexts/EXECUTOR.md` ou `contexts/REVIEWER.md`, o índice `contexts/BACKEND.md`/`WEB.md`, o da frente e a Issue; contexto mínimo uma vez ao início. Na mesma janela, lê apenas o que mudou. Em nova Issue/janela ou mudança de direção, recarrega o índice curto e a Issue.
+- Após cada handoff que altere o estado, o Gerente determina a atualização documental; o executor faz a edição, devolve o link/commit e o usuário entrega o retorno ao Gerente. O Gerente jamais acessa diretamente para confirmar. Se duas evidências discordarem, pede uma inspeção independente em chat GPT-5.6.
+- Todos os prompts de execução incluem: avanço autônomo no escopo, retorno imediato de bloqueio com evidência, não prosseguir em caminho dependente e atualização dos contextos pertinentes. Automação entre chats não está implícita.
