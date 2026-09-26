@@ -20,6 +20,7 @@ Este diretório registra definições funcionais de ferramentas do TriBusca. Ele
 | **Decodifica** | **DECISÃO APROVADA** | **Não comprovada**; planejada para depois da macrofase DOE | [Decodifica](DECODIFICA.md) |
 | **Sonar** | **DECISÃO APROVADA** | **Não comprovada**; detalha a relevância/afinidade prevista no roadmap | [Sonar](SONAR.md) |
 | **Revela** | **DECISÃO APROVADA** | **Não comprovada**; boletim diário personalizado | [Revela](REVELA.md) |
+| **Reforma Tributária** | **DECISÃO APROVADA** como página temática de dados, não produto | **Não comprovada** como experiência final | [Página temática](REFORMA_TRIBUTARIA.md) |
 | **Acervo** | **DECISÃO APROVADA** como área estrutural, sem nome comercial próprio; **Busca é função interna** | **Não comprovada** como experiência final | [Produto e UX](../PRODUCT_AND_UX.md#acervo) |
 
 Novas ferramentas entram neste índice somente quando forem discutidas nesta frente ou quando uma decisão vigente precisar ser incorporada explicitamente. Não criar nomes, escopo ou comportamento para preencher lacunas.
