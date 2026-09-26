@@ -1,6 +1,6 @@
 # TriBusca — Protocolo de handoff
 
-Toda entrega de executor usa o modelo abaixo, no comentário da Issue de governança. O gerente confere evidências nos sistemas oficiais antes de atualizar o estado.
+Toda entrega de executor GPT-5.6 usa o modelo abaixo no comentário da Issue de governança e em retorno autocontido para o usuário encaminhar ao Gerente GPT-6. O Gerente **não acessa** sistemas; analisa evidências, pede revisão independente ou nova inspeção GPT-5.6 quando faltar prova, e delega atualizações documentais. Erro ou bloqueio sempre retorna ao Gerente com causa comprovada ou hipótese rotulada; nunca se declara sucesso por ausência de dados.
 
 ## Modelo
 
@@ -18,7 +18,7 @@ Toda entrega de executor usa o modelo abaixo, no comentário da Issue de governa
 - O que permanece pendente:
 - Arquivos/migrations alterados:
 - Contexto da frente consultado (link) e documentação técnica alterada neste PR:
-- Arquivos centrais de contexto/estado que o Gerente precisa atualizar após auditar este marco:
+- Arquivos centrais de contexto/estado que o executor atualizou por delegação, com commit/link, ou que ainda precisa atualizar após decisão do Gerente:
 - Contratos e comportamento afetados:
 - Ações efetivas em GitHub/Railway/PostgreSQL:
 - Ações explicitamente não executadas:
@@ -37,8 +37,10 @@ Toda entrega de executor usa o modelo abaixo, no comentário da Issue de governa
 - Critérios de aceite comprovados:
 - Critérios sem evidência ou reprovados:
 - Riscos/limitações:
-- Uma próxima ação recomendada:
+- Erro/bloqueio: evidência, causa comprovada ou hipótese, impacto, passos dependentes interrompidos e passos independentes realizados:
+- Uma próxima ação recomendada ao Gerente:
+- Registro documental: Issue, caminhos alterados, commit e links; se pendente, motivo e patch pronto:
 
 ## Regra
 
-CI verde, merge, deploy e run agendado são evidências diferentes. Informação não consultada deve ser marcada “não verificada”; nunca inferir sucesso produtivo a partir de teste local. Segredos, cookies, tokens e corpo integral de publicação não entram na Issue.
+CI verde, merge, deploy e run agendado são evidências diferentes. Informação não consultada deve ser marcada “não verificada”; nunca inferir sucesso produtivo a partir de teste local. O Gerente analisa o retorno sem alegar acesso próprio; o executor permanece na tarefa até concluir todas as etapas independentes autorizadas ou encontrar barreira real. Segredos, cookies, tokens e corpo integral de publicação não entram na Issue.
