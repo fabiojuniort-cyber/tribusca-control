@@ -14,7 +14,7 @@ Este arquivo resume o estado executivo. Issues e PRs registram execução, evid�
 
 **ABERTO — não declarar produtivo/concluído.**
 
-Em 26/09/2026, o [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) permanece aberto e sem merge. Após revisão independente bloqueante do head `091868c053d9d6f035030f866afd438f2c9fe3bd`, o executor corrigiu sanitização/bounds de `artifactReconciliationHistory` e a preservação idempotente do histórico sem convertê-lo em prova de reconciliação. O novo head é `350d688fc79db43ab770ac7b9c43b716b8b2edd2`, atualizado sobre a main `f25a596edce592e6e365e87ed4cbf16ba0922de8`; o CI #387 / run `36218499643` concluiu SUCCESS. **Nova revisão independente ainda é obrigatória antes de qualquer merge.** Deploy, migration, coleta manual, repair produtivo e validação produtiva não foram executados nesta etapa.
+Em 26/09/2026, o [PR #71 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) permanece aberto e sem merge no head `350d688fc79db43ab770ac7b9c43b716b8b2edd2`, atualizado sobre a main `f25a596edce592e6e365e87ed4cbf16ba0922de8`; o CI #387 / run `36218499643` concluiu SUCCESS. A segunda revisão independente confirmou as correções de bounds/idempotência, mas **reprovou o gate** porque metadata genérico ainda pode forjar as chaves de prova `artifactEquivalence`/`artifactReconciliation`, e porque a sanitização por valor não impede URL/credencial em IDs allowlisted e preserva `textSha256` apesar do gate solicitado sobre hashes. Parecer: https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71#pullrequestreview-5324653224. Merge, deploy, migration, coleta manual, repair produtivo e validação produtiva continuam não autorizados.
 
 O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap parado em 29/07/2025, com 399 dias pendentes. Esses números são históricos, não uma leitura produtiva nova. A janela de bootstrap aprovada é 01/01/2025 até a data de validação.
 
@@ -22,7 +22,7 @@ O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap p
 
 | Issue | Resultado esperado | Dependência |
 | --- | --- | --- |
-| [#1 — gate PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Revisão independente, merge condicionado e primeiro run produtivo | Atual; correção no head `350d688` com CI #387 SUCCESS; nova revisão independente pendente e merge não autorizado |
+| [#1 — gate PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Revisão independente, merge condicionado e primeiro run produtivo | Atual; revisão do head `350d688` REPROVADA apesar do CI #387 SUCCESS; correções adicionais de autenticidade da prova e sanitização por valor pendentes; merge não autorizado |
 | [#2 — bootstrap e replay](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2) | Cobertura aprovada com pendingRanges vazio e replay idempotente | #1 |
 | [#3 — artefatos/publication_files](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3) | Evidência e política de persistência dos arquivos | #1 |
 | [#4 — fechamento DOE-SP](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4) | Gates, seção 13 do backend e temporários tratados | #1, #2 e #3 |
