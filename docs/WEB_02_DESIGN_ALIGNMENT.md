@@ -87,7 +87,7 @@ Passaram:
 
 A implementação inclui as definições 1–13, com os seguintes limites deliberados:
 - cadastro, recuperação e nova senha não chamam endpoints inexistentes;
-- métricas de Cobertura permanecem `—` até consumo do contrato D-050 / Issue #11;
+- status operacional e métricas de Cobertura permanecem `—` até consumo do contrato D-050 / Issue #11;
 - status `Disponível` de Acervo/Central permanece gate gerencial pré-merge;
 - vermelho/amarelo/verde do Sonar permanece gate Branding / Issue #10;
 - nenhum merge ou deploy foi executado.
