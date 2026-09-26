@@ -1,6 +1,6 @@
 # TriBusca — contexto para revisor independente
 
-Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), [AGENTS.md](../AGENTS.md), [gates](../docs/REVIEW_AND_GATES.md), a Issue e o PR específicos. O revisor é um **GPT-5.6 em chat distinto do GPT-5.6 executor**; um nome de agente ou chat não prova revisão realizada. O Gerente GPT-6 não acessa o PR nem os sistemas.
+Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), [AGENTS.md](../AGENTS.md), [gates](../docs/REVIEW_AND_GATES.md), a Issue e o PR específicos. O revisor é um **GPT-5.6 em chat distinto do GPT-5.6 executor**; um nome de agente ou chat não prova revisão realizada. O Gerente GPT-6 pode ler o PR e as evidências em modo somente leitura, mas não executa alterações.
 
 ## Revisão corrente
 
