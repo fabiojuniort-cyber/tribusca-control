@@ -1,6 +1,6 @@
 # TriBusca — contexto para chat executor
 
-Atualizado em 26/09/2026. Ponto de entrada: [CONTEXT.md](../CONTEXT.md), [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md) e a Issue atribuída. Leia a Issue ao vivo: escopo, dependências, permissões, critérios e links podem mudar. Não substitua a Issue por este arquivo.
+Atualizado em 26/09/2026. Ponto de entrada: [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), o índice da frente quando houver, [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md) e a Issue atribuída. Leia a Issue ao vivo: escopo, dependências, permissões, critérios e links podem mudar. Não substitua a Issue por este arquivo.
 
 ## Frente ativa
 
