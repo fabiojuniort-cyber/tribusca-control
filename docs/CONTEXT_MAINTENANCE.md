@@ -11,6 +11,7 @@ GitHub é o contexto durável; memória de chat é apenas apoio. O contexto curt
 | `CONTEXT.md` e `PROJECT_STATE.md` | Gerente Geral | Após auditar handoff, decisão, bloqueio, mudança da prioridade ou gate produtivo |
 | `ROADMAP.md` e `DECISIONS.md` | Gerente Geral | Quando a ordem ou uma decisão aprovada muda |
 | `docs/PRODUCT_AND_UX.md`, `SITE_AND_MARKETING.md`, `BRAND_MANUAL_V1.md` e `BRAND_ASSETS.md` | Gerente Geral após confirmação; especialistas fornecem evidência | Quando uma decisão de produto, ferramenta, layout, design, recurso, comercial ou marca é aprovada ou alterada |
+| `docs/OPEN_QUESTIONS.md` | Gerente Geral | Quando uma proposta/sugestão ainda não aprovada é levantada, resolvida ou descartada |
 | `contexts/BACKEND.md`, `WEB.md`, `DOE-SP.md` e novos índices de frente | Gerente Geral | Ao abrir, trocar bloqueio/Issue ativa, encerrar ou alterar direção |
 | Issue de governança | Executor, revisor e Gerente | A cada PR/head relevante, revisão, falha, deploy/run e handoff; o Gerente confere |
 | Documentação técnica no repositório de código | Executor via PR | Quando contrato, comportamento, runbook ou operação mudam; revisão e gate seguem a Issue |
