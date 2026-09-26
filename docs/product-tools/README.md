@@ -18,6 +18,7 @@ Este diretório registra definições funcionais de ferramentas do TriBusca. Ele
 | Ferramenta / capacidade | Estado documental | Implementação | Documento |
 | --- | --- | --- | --- |
 | **Decodifica** | **DECISÃO APROVADA** | **Não comprovada**; planejada para depois da macrofase DOE | [Decodifica](DECODIFICA.md) |
+| **Releva** | **DECISÃO APROVADA** | **Não comprovada**; detalha a relevância/afinidade prevista no roadmap | [Releva](RELEVA.md) |
 
 Novas ferramentas entram neste índice somente quando forem discutidas nesta frente ou quando uma decisão vigente precisar ser incorporada explicitamente. Não criar nomes, escopo ou comportamento para preencher lacunas.
 
@@ -57,4 +58,4 @@ Cada documento individual deve registrar, apenas conforme houver evidência ou d
 - A prioridade executiva permanece a definida no `ROADMAP.md`.
 - Conceito aprovado não equivale a recurso disponível.
 - Não anunciar capacidade futura como implementada.
-- Não criar sub-marcas ou alterar nomes aprovados sem decisão formal. **Decodifica** é nome de funcionalidade, não submarca independente.
+- Não criar sub-marcas ou alterar nomes aprovados sem decisão formal. **Decodifica** e **Releva** são nomes de funcionalidades do TriBusca, não submarcas independentes.
