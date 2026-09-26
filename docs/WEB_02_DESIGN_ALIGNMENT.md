@@ -27,7 +27,7 @@ O responsável definiu como referência visual aprovada os componentes/protótip
 | 5 | Não havia regra pública para confirmação/requisitos de senha. | Criar conta e Nova senha: **Confirmar senha** + requisitos visíveis e validação em tempo real: tamanho mínimo, maiúscula, minúscula, número e caractere especial. | Usuário | UX, validação, testes. | Implementar client-side; contrato definitivo de cadastro/reset permanece dependente do backend. |
 | 6 | PR #1 não continha o carrossel estadual aprovado no design. | Home: carrossel com **5 UFs**, SP sempre primeiro com Ponte Estaiada; outras 4 sorteadas por carregamento; fotos reais Wikimedia Commons com autoria/licença; imagem cobre o card; cada card reserva área para últimas/principais publicações estaduais. | Usuário | Home, acessibilidade, conteúdo/licenças. | Implementar com dados editoriais e placeholders `—` quando não houver contrato de API. |
 | 7 | Portfólio do PR #1 tinha 4 itens: Sonar, Revela, Decodifica e Acervo. | Home deve apresentar **6 recursos**: Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário + link **Ver portfólio completo**. | Usuário | Produto/site, conteúdo. | Implementar home e portfólio coerentes. |
-| 8 | PR #1 marcava todos os recursos como **Em desenvolvimento**. | No draft WEB-02: **Acervo** e **Central de Monitoramento = Disponível**; **Sonar, Revela, Decodifica, Perfil Tributário = Em desenvolvimento**. | Usuário | Claim comercial/status. | **PENDENTE de confirmação do Gerente antes do merge**; implementação pode existir no draft, sem produção. |
+| 8 | PR #1 marcava todos os recursos como **Em desenvolvimento**. | WEB-02 levou ao draft **Acervo** e **Central de Monitoramento = Disponível**, condicionado a confirmação. **WEB-03/D-051 resolveu o gate: a confirmação não foi concedida e todos os seis recursos permanecem Em desenvolvimento.** | Usuário na WEB-02; decisão posterior do Gerente na WEB-03 | Claim comercial/status. | Histórico preservado; remover claim Disponível do draft/documentação. |
 | 9 | Manual v1 restringia paleta central a azul/ciano/teal; D-033 não fixava cores do Sonar. | Sonar: **Alta = vermelho, Média = amarelo, Baixa = verde**, mantendo rótulo textual. | Usuário | Marca/UX/acessibilidade. | Implementar semanticamente no draft; **exceção de marca pendente de aprovação da frente Branding** antes do merge. |
 | 10 | PR #1 mostrava estados/créditos do Decodifica, sem carrossel legal de 5 exemplos. | Decodifica: carrossel **Texto oficial × Leitura auxiliar** com 5 exemplos aprovados: Split payment (LC 214/2025 art. 31), Fato gerador (CTN art. 116), Crédito tributário (CTN art. 142), Cofins insumos (Lei 10.833/2003 art. 3º II), Compensação (Lei 9.430/1996 art. 74). Todos exibem **“Gerada por IA. Não substitui o texto oficial.”** | Usuário | Portfólio, conteúdo, IA labeling. | Implementar textos aprovados sem substituir o oficial. |
 | 11 | Revela já era descrito como Alta afinidade + menções diretas, mas sem apresentação de boletim conforme design novo. | Revela deve mostrar **exemplo de boletim diário** com itens explicitamente marcados **Alta afinidade** e **Menção direta**. | Usuário | Produto/UX/site. | Implementar no portfólio sem simular envio real. |
@@ -88,7 +88,7 @@ Passaram:
 A implementação inclui as definições 1–13, com os seguintes limites deliberados:
 - cadastro, recuperação e nova senha não chamam endpoints inexistentes;
 - status operacional e métricas de Cobertura permanecem `—` até consumo do contrato D-050 / Issue #11;
-- status `Disponível` de Acervo/Central permanece gate gerencial pré-merge;
+- WEB-03/D-051 resolveu o antigo gate: Acervo/Central e os demais quatro recursos ficam todos como `Em desenvolvimento`;
 - vermelho/amarelo/verde do Sonar permanece gate Branding / Issue #10;
 - nenhum merge ou deploy foi executado.
 
@@ -98,3 +98,23 @@ Dependências abertas:
 - [Issue #11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11) — API pública read-only para Cobertura/Acervo.
 
 **Próximo gate:** Gerente revisar os claims do item 8 e a aprovação Branding do item 9; depois revisão visual/funcional independente. O PR continua draft.
+
+
+## WEB-03 — resolução do item 8
+
+**Data:** 26/09/2026  
+**Origem:** decisão do Gerente.
+
+A proposta da D-043 foi aplicada somente ao draft e dependia de confirmação. O Gerente decidiu **não confirmar o claim “Disponível”**.
+
+Estado público vigente:
+- Acervo — **Em desenvolvimento**;
+- Central de Monitoramento — **Em desenvolvimento**;
+- Sonar — **Em desenvolvimento**;
+- Revela — **Em desenvolvimento**;
+- Decodifica — **Em desenvolvimento**;
+- Perfil Tributário — **Em desenvolvimento**.
+
+Páginas com placeholders, conteúdo conceitual ou integrações ainda em PR não devem ser apresentadas como funcionalidades acessíveis.
+
+**Impacto:** badges/claims e documentação. **Próximo passo:** CI e revisão visual/funcional; Issue #10 continua como gate independente das cores do Sonar. Sem merge/deploy.
