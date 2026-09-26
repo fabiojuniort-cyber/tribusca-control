@@ -45,6 +45,8 @@ Atualizado em 26/09/2026. Este registro consolida decisões transmitidas pelo re
 
 | D-028 | O site público terá uma **página dedicada ao portfólio** explicando cada produto do TriBusca em nível suficiente para o usuário entender valor e funcionamento, sem expor pesos, fórmula, algoritmo ou detalhes internos que permitam reproduzir a inteligência. | Afeta conteúdo/UX comercial futuro; não muda a pausa vigente do site definitivo nem autoriza implementação agora. |
 
+| D-029 | **Acervo** é uma área estrutural do TriBusca para consulta organizada das publicações oficiais coletadas, suas versões, origem, marcadores e metadados. Não terá nome comercial próprio nem submarca. A navegação autenticada passa a usar **Acervo** no lugar de “Arquivo”. | O Acervo deve preservar rastreabilidade, histórico/versionamento e navegação por filtros/marcadores; Releva e Decodifica podem ser acessados a partir do conteúdo, mas continuam funcionalidades distintas. Não altera DOE-SP nem prioridade do roadmap. |
+
 ## Como mudar uma decisão
 
 1. Abrir Issue de decisão com contexto, opções, custos, riscos e impacto nas frentes atuais.
