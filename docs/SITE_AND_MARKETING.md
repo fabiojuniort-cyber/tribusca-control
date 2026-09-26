@@ -1,6 +1,6 @@
 # TriBusca — site público, comercial e direção de layout
 
-Atualizado em 26/09/2026. Decisões de produto/layout comunicadas pelo responsável. **Site definitivo pausado** enquanto fontes e backend são consolidados. A estrutura abaixo é direção conceitual; não tratar o protótipo Railway como design aprovado.
+Atualizado em 26/09/2026. Decisões de produto/layout comunicadas pelo responsável. **Site público retomado em 26/09/2026 por autorização do responsável pelo produto na WEB-01.** A implementação pública pode avançar em paralelo como camada de comunicação/descoberta, sem afirmar que recursos autenticados ou integrações futuras estejam disponíveis. A estrutura abaixo é direção conceitual; não tratar o protótipo Railway como design aprovado.
 
 ## Objetivo e conteúdo
 
@@ -24,7 +24,7 @@ Todas as páginas, login, aplicativo e peças devem partir dos arquivos oficiais
 
 ## Pendências
 
-Ao retomar o site, revisar layout e conteúdo com dados do produto real, confirmar UX acessível/responsiva e abrir Issue para o design definitivo. A decisão de não focar no site durante a macrofase DOE continua válida; mudanças de prioridade vão para [DECISIONS.md](../DECISIONS.md).
+A WEB-01 inicia a camada pública em paralelo à macrofase DOE. Frontend autenticado, dados dinâmicos, API real e disponibilização produtiva dos recursos continuam condicionados às respectivas frentes técnicas. O protótipo anterior não vira referência visual por esta retomada.
 
 
 ## Página Reforma Tributária
