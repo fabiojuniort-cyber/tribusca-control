@@ -14,3 +14,29 @@ A frente priorizada é DOE-SP, que permanece aberta até decisão de merge/valid
 - Para nova frente backend, gerente define a Issue e o contexto curto específico; executor GPT-5.6 cria/atualiza em `contexts/`, apontando ao código e às evidências sem duplicá-los.
 
 Retomada: “Leia https://github.com/fabiojuniort-cyber/tribusca-control/blob/main/contexts/BACKEND.md e a Issue #N. Revalide o estado e trabalhe somente nos limites autorizados.”
+
+
+## API-01 — API pública read-only para Acervo e Cobertura
+
+Definido em 26/09/2026 pelo usuário e formalizado na D-050 / Issue #11.
+
+Definição anterior: o site público não possuía contrato real para métricas de Cobertura/Acervo e exibia “—”.
+
+Nova definição:
+- prefixo `/public/v1`;
+- `GET /public/v1/sources`;
+- `GET /public/v1/publications`;
+- `GET /public/v1/stats`;
+- somente metadados oficiais globais já públicos;
+- nenhum `content_text`, empresa, tenant, usuário ou dado autenticado;
+- CORS por `PUBLIC_API_ALLOWED_ORIGINS`, sem credentials;
+- cache `public, max-age=300`;
+- rate limit por IP permanece pendente porque não existe plugin instalado no backend;
+- `RUNNING/PENDING` sem sucesso nos últimos 48h é `UNAVAILABLE`; com sucesso recente é `UNSTABLE`;
+- `importedToday` considera apenas `NEW_PUBLICATION` e `NEW_VERSION` no dia civil de America/Sao_Paulo.
+
+Impacto: habilita Home/Cobertura do site a usar dados reais depois de merge+deploy separados.
+
+Limite de evidência: o conector Railway desta sessão não oferece SQL read-only ad hoc. Migrations, grants, tipos Kysely e view foram revalidados no repositório; não declarar schema produtivo como consultado ao vivo.
+
+Próximo passo: implementar em branch/PR do backend, testes e CI. Merge/deploy continuam gate do Gerente.
