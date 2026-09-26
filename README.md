@@ -5,7 +5,8 @@ Este repositório organiza as tarefas, decisões e evidências do TriBusca. Cód
 ## Comece aqui
 
 1. [Contexto de retomada do Gerente Geral](CONTEXT.md): abra este arquivo ao iniciar outro chat.
-2. [Contexto do executor](contexts/EXECUTOR.md) e [contexto do revisor](contexts/REVIEWER.md): entrada curta para cada papel.
+2. [Backend](contexts/BACKEND.md), [frontend](contexts/WEB.md) e [DOE-SP](contexts/DOE-SP.md): contexto de cada frente; [executor](contexts/EXECUTOR.md) e [revisor](contexts/REVIEWER.md): papel de cada chat.
+3. [Protocolo de atualização](docs/CONTEXT_MAINTENANCE.md): quem altera cada arquivo após um marco.
 3. [Estado executivo](PROJECT_STATE.md): o que está aberto, comprovado e pendente de revalidação.
 2. [Roadmap](ROADMAP.md): prioridade e critérios para avançar.
 3. [Decisões](DECISIONS.md) e [arquitetura](docs/ARCHITECTURE.md): regras aprovadas.
