@@ -4,7 +4,7 @@ Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND
 
 ## Revisão corrente
 
-[Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #73 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) continuam o gate ativo. Head atual a revisar após decisão do Gerente: `5803a84ebd686beb2272c61348668c39076352ce`; CI #431 / run `36251237575` = SUCCESS. DOE-SP-24 implementa page-first e preservação same-origin apenas de `AUTHENTICATED_PUBLICATION_PDF` DOE-SP; teste comprova material PDF → HTML sem perda do PDF e sem resurrectar attachment antigo. Ainda não é gate de merge: o Gerente decide A/rebuild condicional × B/preservar. Na revisão seguinte, confirmar também que A elimina somente compatibilidade v1→v2 do corpus reconstruído, não a regra de proveniência para PDF material. PR #71 permanece comparativo.
+[Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #73 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) continuam o gate ativo. DOE-SP-26 revisou o head `82f189c84a7b70e1985ed424c1549ae20184df46`, CI #432 + reexecução independente SUCCESS, e emitiu parecer **FAVORÁVEL** para a opção B/preservar. O evento formal `APPROVE` foi recusado por self-review; o parecer está em review `COMMENT`. Auditor de rebuild não executado e sem manifesto atual. Próximo review somente após novo head, merge/deploy ou outro gate explicitamente delegado. PR #71 permanece comparativo.
 
 ## Contrato do revisor
 
