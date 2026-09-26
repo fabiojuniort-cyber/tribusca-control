@@ -11,7 +11,7 @@ Atualizado em 26/09/2026. Itens abaixo **não são decisões aprovadas nem recur
 | Marcadores | Vocabulário inicial, evidências e modelo físico exatos | Desenho técnico em Issue própria |
 | CFOP | Fonte oficial, temporalidade e relacionamento muitos-para-muitos com operações | Perfil tributário em frente especializada |
 | API do produto | Login existe em `POST /auth/login`; faltam contratos de Criar conta, Recuperar senha e Nova senha. **Cobertura pública já foi separada e aprovada na D-050 / Issue #11**. | [Issue #9](https://github.com/fabiojuniort-cyber/tribusca-control/issues/9) para auth; [Issue #11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11) para API pública Cobertura/Acervo |
-| WEB-02 | Revisão visual final do design aprovado; confirmação do Gerente para `Acervo/Central = Disponível`; decisão de merge/deploy | Validar draft PR #1 e gates WEB-02; sem merge/deploy até aprovação |
+| WEB-02/WEB-03 | Revisão visual final do design aprovado e decisão futura de merge/deploy. O antigo gate `Acervo/Central = Disponível` foi resolvido pela D-051: **todos os seis recursos ficam Em desenvolvimento**. | Validar draft PR #1; Issue #10 segue como gate de Branding; sem merge/deploy até aprovação |
 | Branding / Sonar | Ratificar exceção semântica `Alta=vermelho, Média=amarelo, Baixa=verde`; não ampliar paleta institucional geral | [Issue #10](https://github.com/fabiojuniort-cyber/tribusca-control/issues/10) antes do merge WEB-02 |
 | DOE-SP arquivos | Política da tabela `publication_files` versus `source_metadata.files` | Issue #3, sem migration produtiva presumida |
 | Próximo DOE | Ordem por ranking oficial de PIB estadual vigente | Apenas após fechamento formal de SP |
