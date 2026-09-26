@@ -8,6 +8,13 @@
 - Arquivos afetados:
 - Contratos/migrations/segurança afetados:
 
+## Continuidade do contexto
+
+- Contexto da frente consultado (link):
+- Documentação técnica alterada neste PR ou justificativa:
+- Contextos/estado que o Gerente deve atualizar após o gate:
+- Handoff na Issue (link):
+
 ## Verificação
 
 - Testes relevantes:
