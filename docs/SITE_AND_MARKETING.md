@@ -18,7 +18,7 @@ Portfólio na home: destacar até cinco recursos e oferecer “e outras ferramen
 
 ## Conversão e marca
 
-Trial aprovado: **7 dias**. CTA: **“Experimentar grátis”**; microcopy possível: “7 dias para conhecer o TriBusca.” Não reintroduzir como estratégia pública “Ato do Dia” gratuito, tradução pública sem login ou “Jurídico Claro” público sem nova decisão. **Norma Clara** é recurso dentro da publicação autenticada. Não usar “Degustação Free” como item do menu.
+Trial aprovado: **7 dias**. CTA: **“Experimentar grátis”**; microcopy possível: “7 dias para conhecer o TriBusca.” Não reintroduzir como estratégia pública “Ato do Dia” gratuito, tradução pública sem login ou “Jurídico Claro” público sem nova decisão. **Decodifica** é recurso dentro da publicação autenticada; não anunciar como disponível antes de implementação comprovada. Não usar “Degustação Free” como item do menu.
 
 Todas as páginas, login, aplicativo e peças devem partir dos arquivos oficiais e regras do [Manual de Marca v1](BRAND_MANUAL_V1.md). Território: descoberta e inteligência; descriptor “Monitoramento e Inteligência Tributária”. Preservar grafia **TriBusca**. A [lista de ativos oficiais](BRAND_ASSETS.md) aponta para o kit original. Não criar sub-marcas nem novo logo para cada recurso.
 
