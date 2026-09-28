@@ -18,6 +18,16 @@ Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário d
 - PR, commit head e base:
 - Executor/revisor (chat/ferramenta):
 - Escopo autorizado:
+- Tipo de gate: CÓDIGO | PREPARAÇÃO | REVISÃO | EXECUÇÃO, quando aplicável
+- Gate 0: push / Railway / LOCK, com evidências sintéticas
+- LOCK/UNLOCK da sessão, quando aplicável:
+
+### Estado do gate
+
+- Preparado: sim/não/não aplicável — evidência:
+- Executado: sim/não/não aplicável — evidência:
+- Validado: sim/não/não aplicável — evidência:
+- Ações que exigem decisão do usuário e não foram executadas:
 
 ### Resultado
 
@@ -53,6 +63,10 @@ Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário d
 - Uma próxima ação recomendada ao Gerente:
 - Se a frente foi encerrada e outra será aberta: passos restantes até a conclusão do projeto, percentual estimado do projeto total, base de marcos e incertezas:
 - Registro documental: Issue, caminhos alterados, commit e links; se pendente, motivo e patch pronto:
+
+## Sessões Claude
+
+Quando o modelo designado for Claude, usar também [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md). **Preparado, Executado e Validado são estados distintos**: nenhum deles pode ser inferido do outro. O handoff deve registrar o próximo gate e o UNLOCK da Issue.
 
 ## Regra
 
