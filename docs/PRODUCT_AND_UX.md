@@ -2,7 +2,7 @@
 
 > **Precedência WEB-02 (26/09/2026):** para a camada pública, definições conflitantes anteriores são substituídas pela seção **WEB-02 — interface pública aprovada em 26/09/2026**. O restante deste documento continua vigente para produto autenticado.
 
-Atualizado em 26/09/2026. Registro das decisões comunicadas pelo responsável pelo produto. Este documento descreve direção aprovada, não afirma que os recursos estejam implementados. A implementação verificada permanece em [PROJECT_STATE.md](../PROJECT_STATE.md), Issues e repositórios de código.
+Atualizado em 27/09/2026. Registro das decisões comunicadas pelo responsável pelo produto. Este documento descreve direção aprovada, não afirma que os recursos estejam implementados. A implementação verificada permanece em [PROJECT_STATE.md](../PROJECT_STATE.md), Issues e repositórios de código.
 
 ## Propósito e fluxo
 
@@ -84,3 +84,41 @@ Diretrizes aprovadas:
 **Nova definição:** a confirmação não foi concedida. **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário** permanecem todos como **Em desenvolvimento** no site público. Uma página, demonstração, placeholder ou contrato em draft não é prova de funcionalidade acessível.
 
 **Impacto:** somente claim/status público; não reduz o escopo conceitual dos produtos. **Próximo passo:** manter o PR #1 em draft, com Issue #10 e revisão visual/funcional como gates separados. Ver D-051.
+
+
+## GOV-03 — refinamentos aprovados em 27/09/2026
+
+Esta seção prevalece sobre passagens anteriores que mantinham estes pontos como provisórios ou abertos.
+
+### Sonar
+
+- existe um estado separado **Dados insuficientes**; ele não equivale a Baixa afinidade;
+- **Alta/vermelho** representa sinal específico forte;
+- **Média/amarelo** representa relação relevante mais geral ou incompleta;
+- **Baixa/verde** representa coincidência ampla;
+- o resultado sempre mostra rótulo textual e **sinais encontrados**;
+- porcentagens e pesos numéricos não são apresentação aprovada ao cliente;
+- feedback serve para avaliação e mudanças governadas; não existe autoajuste silencioso.
+
+### Revela
+
+- envio padrão às **08h de Brasília**;
+- funciona em qualquer dia em que existam itens;
+- não envia boletim vazio;
+- mantém histórico;
+- administrador seleciona destinatários e cada usuário controla o próprio recebimento;
+- cada item informa empresa/estabelecimento relacionado e o motivo;
+- na v1, menção direta exige **CNPJ exato**;
+- **Média afinidade não entra** no boletim inicial.
+
+### Decodifica
+
+A base comercial de caracteres é o **texto oficial normalizado completo**, incluindo título, artigos e anexos materiais integrantes; HTML, metadados, URLs e espaços repetidos não entram. Divisão técnica de atos extensos não muda o custo integral.
+
+Créditos só são debitados quando o resultado é entregue. Falha, timeout e cancelamento não consomem; reutilização global efetivamente entregue continua consumindo. Mudança apenas de modelo/prompt não torna o resultado obsoleto; mudança do conteúdo oficial torna. Invalidação excepcional por erro, segurança ou qualidade registra a causa.
+
+Créditos da assinatura renovam mensalmente sem acumular. Créditos extras podem ser comprados; validade e ordem de consumo dos extras permanecem abertas.
+
+### Reforma Tributária
+
+Escopo inicial: legislação constitucional/complementar, CGIBS, Receita Federal, CONFAZ relacionado, notas técnicas NF-e/CT-e/NFS-e/SPED e publicações marcadas IBS/CBS/IS/Reforma. Navegação: **Últimas publicações · Legislação · Regulamentação · Notas técnicas · Timeline**. A inclusão é baseada em marcadores; destaque editorial é evolução futura, não implementação atual.
