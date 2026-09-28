@@ -6,6 +6,10 @@ Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND
 
 [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #73 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) continuam o gate ativo. DOE-SP-26 revisou o head `82f189c84a7b70e1985ed424c1549ae20184df46`, CI #432 + reexecução independente SUCCESS, e emitiu parecer **FAVORÁVEL** para a opção B/preservar. O evento formal `APPROVE` foi recusado por self-review; o parecer está em review `COMMENT`. Auditor de rebuild não executado e sem manifesto atual. Próximo review somente após novo head, merge/deploy ou outro gate explicitamente delegado. PR #71 permanece comparativo.
 
+## Revisor em sessão Claude
+
+Quando o prompt declarar **Modelo: Claude**, leia também [CLAUDE_SESSION_PROTOCOL.md](../docs/CLAUDE_SESSION_PROTOCOL.md). A sessão deve ser do tipo **REVISÃO**, distinta da sessão que preparou/executou a entrega. Gate 0 e LOCK/UNLOCK continuam obrigatórios. O revisor apenas audita e aprova/reprova; correção exige nova sessão CÓDIGO/PREPARAÇÃO conforme o caso.
+
 ## Contrato do revisor
 
 - Verificar escopo, proveniência dos PDFs, dedup/versionamento, segurança, replays e casos de falha; reportar achados com arquivo/linha ou evidência verificável.
