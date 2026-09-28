@@ -20,7 +20,12 @@ Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário d
 - Escopo autorizado:
 - Tipo de gate: CÓDIGO | PREPARAÇÃO | REVISÃO | EXECUÇÃO, quando aplicável
 - Gate 0: push / Railway / LOCK, com evidências sintéticas
-- LOCK/UNLOCK da sessão, quando aplicável:
+- Handoff + UNLOCK da sessão anterior confirmados antes deste prompt, quando aplicável:
+- LOCK/UNLOCK da sessão atual, quando aplicável:
+- Serviços, janela de coleta/recaptura ou `não aplicável`:
+- Autorizações vigentes transcritas e origem/escopo:
+- Pendências herdadas com critério próprio:
+- Valores esperados usados no gate:
 
 ### Estado do gate
 
@@ -42,6 +47,8 @@ Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário d
 
 ### Evidências
 
+- Commits/head: SHAs e mensagens relevantes:
+- PR: URL, estado draft/ready/merged e SHA revisado:
 - CI: link, run ID, conclusão e jobs:
 - Testes: nomes, resultados e risco coberto:
 - Deploys: commit, IDs, horários e status por serviço, se aplicável:
@@ -60,13 +67,16 @@ Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário d
 - Critérios sem evidência ou reprovados:
 - Riscos/limitações:
 - Erro/bloqueio: evidência, causa comprovada ou hipótese, impacto, passos dependentes interrompidos e passos independentes realizados:
+- Ponto exato de retomada da próxima sessão:
+- Próximo gate:
+- UNLOCK: comentário/link e horário BRT:
 - Uma próxima ação recomendada ao Gerente:
 - Se a frente foi encerrada e outra será aberta: passos restantes até a conclusão do projeto, percentual estimado do projeto total, base de marcos e incertezas:
 - Registro documental: Issue, caminhos alterados, commit e links; se pendente, motivo e patch pronto:
 
 ## Sessões Claude
 
-Quando o modelo designado for Claude, usar também [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md). **Preparado, Executado e Validado são estados distintos**: nenhum deles pode ser inferido do outro. O handoff deve registrar o próximo gate e o UNLOCK da Issue.
+Quando o modelo designado for Claude, usar também [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md). **Preparado, Executado e Validado são estados distintos**: nenhum deles pode ser inferido do outro. O handoff deve registrar commits/PR/CI/deploys aplicáveis, bloqueios, ponto exato de retomada, próximo gate e o UNLOCK da Issue. Dados privados não entram no handoff nem na resposta; permanecem na Railway.
 
 ## Regra
 
