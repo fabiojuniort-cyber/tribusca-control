@@ -198,3 +198,62 @@ O preview é exclusivo para revisão do draft, sem secrets/dados produtivos. Ap�
 - D-058 aprovou para exibição pública somente título, data, órgão e link oficial.
 - `GET /public/v1/publications` retorna campos adicionais (`id`, `actType`, `actNumber`, `uf`, `effectiveOn`), cuja exibição pública permanece pendente de decisão de produto.
 - Esta atualização documental não altera frontend nem backend.
+
+
+## WEB-07 — correção e evidência browser reproduzível
+
+**Data:** 27/09/2026  
+**Origem:** bloqueios WEB-06.
+
+Frontend: [radar-fiscal-web PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1)  
+Head final desta execução: `74bb3efffc4b720aa157475ce6a9c73c206fa028`  
+CI: #47 / run `36368975036` — **SUCCESS**.
+
+### Correções
+
+- BRAND-SONAR-01: estado de senha atendida usa `var(--navy)` / `#08306B` (~12,76:1) e não reutiliza verde de afinidade;
+- valores D-053 preservados exclusivamente no Sonar;
+- retorno de foco de modais controlados explicitamente corrigido, inclusive fallback móvel para o botão do menu.
+
+### Browser automatizado
+
+Playwright + Chromium executou **40/40 testes** contra o Vite preview local do build do mesmo head.
+
+Viewports:
+- 1440×900;
+- 1920×1080;
+- 390×844;
+- 360×800.
+
+Rotas:
+- `/`;
+- `/cobertura`;
+- `/portfolio`;
+- `/como-funciona`;
+- `/reforma-tributaria`.
+
+Cobertura: overflow, menu mobile, carrossel/targets, Tab/Shift+Tab, foco visível, foco inicial/contenção/Escape/retorno nos modais, cadastro visual sem persistência, contraste de senha/input, Inter, footer, Sonar/isolamento cromático, reduced-motion, claims de disponibilidade e Cobertura sem API.
+
+Artifact GitHub Actions:
+- ID `10948592313`;
+- nome `web07-browser-evidence-74bb3efffc4b720aa157475ce6a9c73c206fa028`;
+- digest `sha256:4365b95d68c69233aef493f99a22082917abe0e08d0f111220ba1a04279a33a6`;
+- retenção até 12/10/2026;
+- contém relatório Playwright, screenshots, traces quando aplicáveis e metadados HEAD/RUNTIME/VIEWPORTS.
+
+### Preview Railway
+
+URL: https://web05-preview-production.up.railway.app  
+Deployment: `2d130a93-7651-47e2-b90c-478c1e3088ea` — **SUCCESS**  
+Commit: `74bb3efffc4b720aa157475ce6a9c73c206fa028`.
+
+**Distinção de evidência:** os 40 testes automatizados executaram o build local no runner; o preview Railway foi atualizado separadamente para o mesmo commit e permanece alvo para inspeção independente humana.
+
+### Gate
+
+- Issue #10 permanece aberta;
+- nova revisão independente deve avaliar o head, artifact e preview;
+- D-054 / Issue #9 permanecem gate separado de lançamento;
+- PR permanece draft;
+- sem merge e sem publicação definitiva;
+- não remover o preview antes do parecer e preservação da evidência.
