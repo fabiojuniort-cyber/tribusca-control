@@ -2,7 +2,7 @@
 
 > **Precedência WEB-02 (26/09/2026):** em qualquer conflito entre diretrizes históricas deste documento e a seção **WEB-02 — diretrizes públicas que substituem o layout anterior**, prevalece a WEB-02. O texto anterior é mantido apenas como histórico.
 
-Atualizado em 26/09/2026. Decisões de produto/layout comunicadas pelo responsável. **Site público retomado em 26/09/2026 por autorização do responsável pelo produto na WEB-01.** A implementação pública pode avançar em paralelo como camada de comunicação/descoberta, sem afirmar que recursos autenticados ou integrações futuras estejam disponíveis. A estrutura abaixo é direção conceitual; não tratar o protótipo Railway como design aprovado.
+Atualizado em 27/09/2026. Decisões de produto/layout comunicadas pelo responsável. **Site público retomado em 26/09/2026 por autorização do responsável pelo produto na WEB-01.** A implementação pública pode avançar em paralelo como camada de comunicação/descoberta, sem afirmar que recursos autenticados ou integrações futuras estejam disponíveis. A estrutura abaixo é direção conceitual; não tratar o protótipo Railway como design aprovado.
 
 ## Objetivo e conteúdo
 
@@ -61,3 +61,53 @@ A D-043 registrou historicamente uma tentativa de apresentar **Acervo** e **Cent
 Não tratar existência de rota, mock, exemplo, placeholder, PR ou contrato em draft como evidência de funcionalidade acessível ao cliente.
 
 **Impacto:** comunicação pública e badges/status. **Próximo passo:** CI + revisão visual/funcional; cores do Sonar seguem em avaliação na Issue #10. Sem merge/deploy.
+
+
+## GOV-03 — publicação do site, autenticação e comercial
+
+**Decisões aprovadas em 27/09/2026.** Esta seção substitui passagens anteriores que tratavam senha, ativação de cadastro ou publicação do site como dependência única.
+
+### Site antes da Issue #9
+
+O **site informativo** pode ser publicado antes de a Issue #9 estar pronta, desde que tenha passado pelos gates de revisão aplicáveis. Enquanto cadastro real não estiver disponível, o CTA **“Criar conta”** deve ser substituído temporariamente por **“Em breve”**.
+
+Isso não declara o site atual publicado: o draft/PR continua sujeito aos gates e nenhuma rota demonstrativa, mock, placeholder ou PR transforma recurso em produto disponível.
+
+### Acervo público x autenticado
+
+Sem autenticação, o Acervo pode expor:
+- título;
+- data;
+- órgão;
+- link oficial.
+
+**Texto integral** e **busca avançada** exigem autenticação.
+
+### Cadastro e trial
+
+Cadastro/trial só são ativados quando o contrato da Issue #9 estiver pronto.
+
+- trial: **7 dias, sem cartão**;
+- início: depois de **verificação do e-mail** e **primeiro cadastro de empresa**;
+- formulário inicial: nome, e-mail profissional, senha e CNPJ opcional;
+- senha: mínimo **8 caracteres**, com maiúscula, minúscula, número e caractere especial;
+- primeiro usuário da conta: **administrador**;
+- ao adicionar CNPJ de matriz ou filial, tentar obter **CNAE e endereço** automaticamente de fonte disponível.
+
+CNPJ opcional no formulário não significa trial iniciado sem empresa. A regra de cadastro de empresa **sem CNPJ** permanece questão aberta.
+
+### Público e planos
+
+Cliente inicial prioritário: **departamentos fiscais/tributários de empresas**. A arquitetura deve permanecer compatível com atendimento a escritórios no futuro.
+
+A grade comercial deverá ter **três níveis**, diferenciáveis por:
+- empresas;
+- estabelecimentos;
+- profundidade do Perfil Tributário;
+- Produto/NCM;
+- créditos;
+- usuários.
+
+Credenciais da mesma pessoa não podem permitir uso simultâneo; a ação exata ao ocorrer um segundo login ainda será definida.
+
+A apresentação de preços deverá favorecer a escolha do nível intermediário ou superior, sem fixar valores nesta fase. **Nomes, preços, franquias e quantidade de créditos por plano dependem do piloto de custos e uso.**
