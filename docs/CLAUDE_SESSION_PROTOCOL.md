@@ -171,6 +171,6 @@ Além dos campos de identificação já exigidos pela governança, incluir:
 
 ## Precedência e escopo
 
-Este protocolo define disciplina de sessão e evidência. Ele não altera regras técnicas de fonte, produto, banco, deduplicação, segurança de tenant ou roadmap. Em conflito com um gate técnico mais restritivo, prevalece o requisito mais seguro e específico. A escolha do modelo (GPT ou Claude) não é gate técnico: menções a GPT-5.6 como executor/revisor em outros documentos descrevem o padrão e não excluem Claude quando o prompt o designar.
+Este protocolo define disciplina de sessão e evidência. Ele não altera regras técnicas de fonte, produto, banco, deduplicação, segurança de tenant ou roadmap. Em conflito com um gate técnico mais restritivo, prevalece o requisito mais seguro e específico. A escolha do modelo (GPT ou Claude) não é gate técnico: ambos são válidos para execução e revisão, inclusive quando o modelo efetivo divergir do indicado no prompt. A divergência deve ser registrada; em REVISÃO, a independência da sessão e do intervalo revisado continua sendo o requisito obrigatório.
 
 Para atividades que não usam Claude, os documentos gerais de governança continuam válidos; o Gerente pode reutilizar estas salvaguardas em outros modelos quando fizer sentido.
