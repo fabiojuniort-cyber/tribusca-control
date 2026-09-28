@@ -51,7 +51,7 @@ Esses itens não invalidam a validação produtiva já concluída dos três GETs
 
 A D-057 admite preservar publicação **não fiscal** quando houver menção exata a CNPJ cadastrado, mas esse registro deve ser visível **somente à respectiva conta**.
 
-A API D-050 foi desenhada para metadados globais públicos e atualmente **não possui filtro fiscal/tenant para essa nova categoria**. Antes de registros não fiscais retidos apenas por CNPJ poderem alimentar o Acervo público, deve existir **Issue técnica + gate de isolamento** que impeçam exposição pública de seus metadados. Não alterar API/schema nesta GOV-03.
+A API D-050 foi desenhada para metadados globais públicos e atualmente **não possui filtro fiscal/tenant para essa nova categoria**. **Antes de introduzir registros não fiscais retidos apenas por CNPJ**, o filtro/proteção deve estar implementado e validado. Sem isso, esses registros **não podem ser persistidos em tabelas globais consultadas por `GET /public/v1/publications` nem ficar de outra forma alcançáveis pela API pública**. Restringir somente o componente visual do site não atende ao gate. A futura Issue técnica permanece aberta. Não alterar API/schema nesta GOV-03.
 
 ### Divergência de campos D-058 × API atual
 
@@ -79,7 +79,7 @@ Mapeamento direto dos quatro campos aprovados: `title`, `publishedOn`, `agency`,
 **Nenhuma implementação backend foi autorizada por esta atualização documental.**
 
 - monitoramento corrente: 06h/10h/14h/18h BRT quando aplicável; backfill separado, 1 consulta/hora, recuando 1 dia por consulta/fonte até o acervo oficial disponível;
-- classificação/retenção: conteúdo integral para matéria fiscal/tributária e para CNPJ exato cadastrado; rejeitados mantêm metadados mínimos + motivo; raiz de 8 dígitos não é menção; publicação não fiscal retida apenas por CNPJ é privada da conta e exige gate técnico antes de qualquer exposição pela API pública;
+- classificação/retenção: conteúdo integral para matéria fiscal/tributária e para CNPJ exato cadastrado; rejeitados mantêm metadados mínimos + motivo; raiz de 8 dígitos não é menção; publicação não fiscal retida apenas por CNPJ é privada da conta e **não deve ser introduzida em tabelas globais consultadas pela API pública, nem ficar alcançável por ela, antes de filtro/proteção implementado e validado em Issue técnica própria**;
 - estratégia de reexaminar acervo antigo ao cadastrar novo CNPJ permanece aberta;
 - Issue #9 deverá refletir senha mínima de 8 caracteres + maiúscula/minúscula/número/especial, primeiro usuário administrador, trial após verificação de e-mail + primeiro cadastro de empresa e CNPJ opcional no formulário;
 - ao cadastrar CNPJ matriz/filial, o produto deverá tentar obter CNAE/endereço de fonte disponível; empresa sem CNPJ continua questão aberta;
