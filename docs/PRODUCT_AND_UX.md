@@ -68,13 +68,13 @@ Diretrizes aprovadas:
 - Criar conta/Nova senha: confirmar senha e requisitos em tempo real; limiar de 8 caracteres no draft é provisório até contrato backend.
 - Home estadual: 5 UFs, SP fixo em primeiro e 4 sorteadas; fotos licenciadas do Wikimedia Commons; área de publicações usa **“—”** sem API.
 - Portfólio público: **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica, Perfil Tributário**. **WEB-03 substitui o claim do draft:** todos os seis recursos ficam como **Em desenvolvimento** até comprovação operacional e autorização específica de publicação.
-- Sonar mantém Alta/Média/Baixa + proximidade, com cores semânticas WEB-02 **vermelho/amarelo/verde**; exceção pendente de Branding e rótulo textual obrigatório.
+- Sonar mantém Alta/Média/Baixa + proximidade. A WEB-05 / D-053 ratificou conceitualmente a exceção semântica restrita ao Sonar: Alta `#C92A2A`, Média `#9A6900`, Baixa texto `#237032` e ping `#2B8A3E`; rótulo textual e proximidade permanecem obrigatórios. A verificação independente final ainda está pendente.
 - Decodifica: carrossel de cinco exemplos Texto oficial × Leitura auxiliar definidos no registro WEB-02, sempre com aviso de IA.
 - Revela: exemplo de boletim diário com Alta afinidade e Menção direta.
 - Cobertura: serviços federais e 27 UFs em cards de largura total; métricas reais somente quando houver contrato de API, caso contrário **“—”**.
 - Reforma Tributária: timeline em **Publicação / Vigência / Marco previsto em lei**, com datas apenas de fonte oficial do Acervo.
 
-**Impacto:** Router, header, modais, conteúdo, estados, acessibilidade e futuras integrações de API. **Próximo passo:** implementar e validar no draft PR #1; sem merge/deploy. D-043 e D-044 exigem gates adicionais.
+**Impacto:** Router, header, modais, conteúdo, estados, acessibilidade e futuras integrações de API. A D-043 foi substituída pela D-051 quanto aos claims de disponibilidade; a D-044 foi ratificada conceitualmente pela D-053 com ajustes. **Próximo passo:** revisão independente final do head WEB-05; sem merge/publicação definitiva.
 
 
 ### WEB-03 — status público dos recursos
@@ -84,3 +84,14 @@ Diretrizes aprovadas:
 **Nova definição:** a confirmação não foi concedida. **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário** permanecem todos como **Em desenvolvimento** no site público. Uma página, demonstração, placeholder ou contrato em draft não é prova de funcionalidade acessível.
 
 **Impacto:** somente claim/status público; não reduz o escopo conceitual dos produtos. **Próximo passo:** manter o PR #1 em draft, com Issue #10 e revisão visual/funcional como gates separados. Ver D-051.
+
+
+### WEB-05 — gate de lançamento e revisão
+
+**Head implementado:** `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d` · CI #38 `36361749038` = SUCCESS.
+
+A11Y/Branding corrigidos no draft: carrossel com alvos ≥24px e foco visível; estados de senha e bordas de input com contraste adequado; footer com assinatura escura oficial; Inter empacotada localmente; Sonar com valores ratificados pela D-053.
+
+**Cadastro público:** a Issue #9 continua sendo gate. Pela D-054, se houver lançamento do site antes de cadastro funcional e validado, **“Criar conta” deve ser substituído temporariamente por “Em breve” antes da publicação definitiva**. Essa troca é uma regra condicional de lançamento e **não está implementada no head WEB-05**.
+
+**Próximo passo:** revisão independente no preview temporário. Não declarar a WEB concluída antes desse parecer.
