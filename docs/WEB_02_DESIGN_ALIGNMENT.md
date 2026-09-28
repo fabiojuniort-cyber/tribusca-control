@@ -137,3 +137,44 @@ Verificações:
 - nenhuma ocorrência de “Disponível” permanece no código visível de `src/App.tsx`.
 
 **Gate:** PR continua draft. Cores do Sonar permanecem somente para avaliação, sujeitas à Issue #10 e revisão visual/funcional independente. Sem merge/deploy.
+
+
+## WEB-05 — fechamento para revisão independente
+
+**Data:** 27/09/2026  
+**Origem:** correções dos bloqueios WEB-04.
+
+Frontend: [radar-fiscal-web PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1)  
+Head efetivo: `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`  
+CI: run `36361749038` / #38 — **SUCCESS**  
+Testes: **13/13**.
+
+### Correções comprovadas no head
+
+- A11Y-01: carrossel com alvo 28×28px, nomes individuais e foco visível;
+- A11Y-02: regras de senha pendentes `#607086`, atendidas `#237032`, com ícones distintos;
+- A11Y-03: borda de input `#74859A` + foco azul de 3px;
+- BRAND-01: footer usa `tribusca-logo-horizontal-dark.png` sem filtro CSS;
+- BRAND-02: Inter local via `@fontsource/inter@5.3.0`, pesos 400/700/800/900, licença OFL documentada;
+- Sonar: Alta `#C92A2A`; Média `#9A6900`; Baixa texto `#237032`; ping `#2B8A3E`; texto e proximidade permanecem obrigatórios.
+
+### Ativo oficial
+
+Arquivo versionado: `public/brand/tribusca-logo-horizontal-dark.png`  
+SHA-256 apurado pelo CI: `81c54bc63c82a6cf28bab8f9ab699050ce312182315b8af674544ce8b5b61d9a`.
+
+### Preview temporário
+
+URL: https://web05-preview-production.up.railway.app  
+Deployment: `1cf730d6-741a-4187-904c-3da2e231100b` — SUCCESS  
+Fonte: branch `feat/web-01-site-publico`, commit `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`.
+
+O preview é exclusivo para revisão do draft, sem secrets/dados produtivos. Após o parecer independente e preservação das evidências, remover o projeto/serviço temporário Railway `tribusca-web-preview-web05 / web05-preview`.
+
+### Gates restantes
+
+- revisão independente visual/funcional do preview;
+- Issue #10 permanece aberta até essa verificação;
+- Issue #9 continua gate para cadastro/recuperação;
+- pela D-054, se houver lançamento antes da Issue #9, o CTA “Criar conta” deve virar “Em breve” no gate de publicação; **não está implementado no head WEB-05**;
+- sem merge ou publicação definitiva.
