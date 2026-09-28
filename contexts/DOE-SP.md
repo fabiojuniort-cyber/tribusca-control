@@ -1,6 +1,6 @@
 # TriBusca — frente DOE São Paulo
 
-Atualizado em 26/09/2026. Este índice serve a qualquer chat futuro desta fonte; a Issue vinculada e o PR são a evidência detalhada.
+Atualizado em 28/09/2026. Este índice serve a qualquer chat futuro desta fonte; a Issue vinculada e o PR são a evidência detalhada.
 
 ## Regra global aplicável
 
@@ -8,14 +8,15 @@ A D-017/D-036 vale também para DOE-SP: **página oficial integral tem prioridad
 
 ## Ordem e bloqueios
 
-1. [#1 — redefinir gate do PR #71 após mudança para HTML principal](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1): tarefa prioritária. O usuário determinou que PDF autenticado não pode ser requisito para capturar ato com HTML oficial. O [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) permanece aberto/unmerged e suspenso no head `3c286c982d983ecc7bce8f9722a1f967898665d3` (CI #394 SUCCESS).
-2. [PR #73](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) está no head revisado `82f189c84a7b70e1985ed424c1549ae20184df46`, 0 commits atrás da main; CI #432 / run `36252974888` e reexecução independente do job `108437300694` = **SUCCESS**. DOE-SP-26 aprovou page-first, PDF material, attachments, preservação same-origin, compatibilidade v1→v2, SRE 42 e ausência de regressão observada.
-3. A autorização vigente do responsável é **A — reconstruir integralmente somente DOE-SP** (D-052), substituindo B. O preflight produtivo DOE-SP-27b registrou 518 publicações/versões, 569 `collection_items`, 569 vínculos run-publication, 3 checkpoints, 94 attachments e zero vínculos tenant/company/matches/cross-source, zero referências diretas no audit log e zero runs ativas no snapshot; manifesto agregado SHA-256 `54fcdb05eb5f362e0be87a77457861d5a4c22f9674e8f7fae59005632ab16c71`. Um snapshot de 1,4 GB do volume Postgres foi criado em 26/09/2026 15:08 BRT e aparece como restaurável na UI; restore drill não realizado. PR #73 segue draft/unmerged; nenhuma exclusão ou recaptura ocorreu. Próximos gates: revisão independente do procedimento restrito, pausa DOE-SP, novo preflight/backup, merge/deploy e recaptura validada.
-4. [#2 — concluir bootstrap e replay](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2): depende de #1.
-5. [#3 — artefatos e política `publication_files`](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3): depende de #1; não está autorizada migration produtiva apenas por essa Issue.
-6. [#4 — fechar gates e documentação](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4): depende de #1, #2 e #3.
+1. [Issue #1 — gate DOE-SP HTML-primary](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) continua **OPEN** e prioritária.
+2. DOE-SP-35 concluiu a PREPARAÇÃO no head `4917cdc2265fa87b35d555b98698f42a75d6c223`: CI #443 SUCCESS, runner Railway 31/31 PASS, preflight somente leitura, backup/restauração e ensaio fora da produção; 0 escritas produtivas.
+3. DOE-SP-36 fez REVISÃO independente e **APROVOU** o mesmo SHA e a preparação; review `pullrequestreview-5333911708`.
+4. Em DOE-SP-37, o [PR #73](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) foi squash-merged como `e2c4f9a58fe43cb56ca36a1925eb80cf612423ae`. Na última leitura da GOV-12 havia LOCK DOE-SP-37 ativo para EXECUÇÃO-A e ainda não havia handoff/UNLOCK final dessa atividade. Portanto, não declarar deploys, run SCHEDULED, pausa, SQL, exclusão, reconstrução ou recaptura como concluídos sem evidência posterior na Issue.
+5. [#2 — concluir bootstrap e replay](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2) depende de #1.
+6. [#3 — artefatos e política `publication_files`](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3) depende de #1.
+7. [#4 — fechar gates e documentação](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4) depende de #1, #2 e #3.
 
-Evidência produtiva somente leitura desta reavaliação: logs `DOE_SP_AUDIT` registraram 517 publicações, 517 versões, 516 PDFs autenticados e 94 anexos; o checkpoint ainda tinha faixa pendente a partir de 29/07/2025 no snapshot consultado. O conector Railway desta conversa não oferece execução SQL direta; nenhuma consulta modificadora foi executada. Escopo aprovado permanece Executivo → Atos Normativos, bootstrap 01/01/2025 até hoje. Critérios produtivos em [REVIEW_AND_GATES.md](../docs/REVIEW_AND_GATES.md) e documentação técnica em `radar-fiscal-backend/docs/phase-doe-sp.md`. Não declarar concluído por CI, merge, cron ou queda parcial dos dias pendentes.
+A autorização vigente registrada na frente permite prosseguir conforme os gates, mas ela não substitui o protocolo de sessão nem prova execução. Esta GOV-12 apenas sincroniza documentação e não realizou qualquer operação DOE-SP.
 
 ## Ao retomar
 

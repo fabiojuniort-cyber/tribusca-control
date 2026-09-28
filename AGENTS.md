@@ -1,55 +1,60 @@
 # TriBusca — instruções dos agentes
 
 ## Fonte oficial
+GitHub é o estado durável. Leia `CONTEXT.md`, `PROJECT_STATE.md`, a Issue/PR pertinente e os índices da frente. Verifique ao vivo apenas premissas que possam ter mudado. Handoff é contexto histórico até ser conferido.
 
-Ao iniciar ou retomar uma conversa, o Gerente Geral GPT-6 e os chats GPT-5.6 podem ler diretamente [CONTEXT.md](CONTEXT.md) e os documentos de contexto pertinentes. O Gerente pode reler o contexto e as evidências sempre que necessário, sem chat de bootstrap. Chats de código leem [contexts/BACKEND.md](contexts/BACKEND.md) ou [contexts/WEB.md](contexts/WEB.md) e o índice da frente, se houver (atualmente [DOE-SP](contexts/DOE-SP.md)). Execução e revisão usam também [contexts/EXECUTOR.md](contexts/EXECUTOR.md) ou [contexts/REVIEWER.md](contexts/REVIEWER.md), respectivamente. O protocolo de atualização em cada marco está em [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md). Em chat novo, leia a Issue atribuída e o índice mínimo acima. Consulte [PROJECT_STATE.md](PROJECT_STATE.md), [ROADMAP.md](ROADMAP.md), [DECISIONS.md](DECISIONS.md) e [arquitetura](docs/ARCHITECTURE.md) quando a tarefa depender desses temas; não recarregue todos esses arquivos em cada mensagem do mesmo chat. Para uma nova Issue ou premissa que pode ter mudado, releia apenas os trechos e evidências afetados. Verifique ao vivo os PRs, commits e ambiente que sejam premissas para a tarefa. Handoffs de chat são contexto histórico até serem conferidos.
+## Governança por risco
+A referência canônica é [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md), que após o merge da GOV-16 passa a representar a **Governança Flexível v2** para GPT e Claude.
 
-## Papéis e coordenação
+Classifique a atividade em R0, R1, R2 ou R3 antes de impor gates. A governança deve impedir dano, não impedir trabalho.
 
-Siga [papéis](docs/AGENT_ROLES.md), [handoff](docs/HANDOFF.md), [revisão/gates](docs/REVIEW_AND_GATES.md) e [segurança](docs/SECURITY.md). **Gerente Geral = GPT-6: coordenação, análise de erros e acesso de leitura sempre permitido aos contextos e evidências necessários (GitHub, código, CI, Railway e PostgreSQL quando houver acesso seguro somente leitura); sem permissão de escrita ou execução de ações que alterem estado.** **Executores e revisores = chats/sessões distintos. GPT-5.6 e Claude são modelos válidos para execução e revisão; divergência entre o modelo indicado no prompt e o modelo efetivo deve ser registrada, mas não invalida a atividade. Em REVISÃO, o requisito decisivo é a independência da sessão e do intervalo revisado, conforme [protocolo de sessões Claude](docs/CLAUDE_SESSION_PROTOCOL.md).** Onde a governança menciona "GPT-5.6" como executor ou revisor, leia "o modelo designado no prompt". O Gerente formula instruções; o usuário abre os chats executores; estes acessam os sistemas, trabalham, examinam erros e registram evidências. O Gerente confronta os retornos com critérios e decisões, aponta lacunas e delega investigações ou correções; nunca descreve um relato como verificação independente própria. Não atribua a um agente uma conta GitHub fictícia. **Este arquivo central prevalece sobre instruções antigas de papéis nos `AGENTS.md` dos repositórios de código**: onde disserem que o Gerente atualiza contextos diretamente, leia que ele pode ler quando necessário, mas delega toda escrita e execução de alterações a GPT-5.6. Regras técnicas e de segurança dos repositórios de código continuam válidas. Atualizar esses arquivos em futura tarefa executora com gate apropriado, especialmente no backend, onde commit na main pode iniciar deploy automático.
+- **R0:** documental/factual; continuidade por padrão, sem LOCK/revisão/chat novo obrigatórios.
+- **R1:** baixo risco; mesma sessão implementa, testa e corrige; revisão/LOCK apenas se o impacto pedir.
+- **R2:** material; Issue + branch + PR + testes; revisão independente para mudança material antes de merge.
+- **R3:** crítico/produtivo; autorização explícita, LOCK, preparação, revisão, salvaguardas e evidência pós-execução.
 
-### Identificação e formato obrigatórios nos prompts de delegação
+Se a atividade ganhar risco, eleve a classificação.
 
-Todo prompt futuro de delegação deve identificar expressamente, antes dos passos da tarefa: **ID sequencial da atividade**, **título**, **especialidade do chat**, **papel**, **modelo**, **frente**, **Issue de governança** e **resultado esperado**. A especialidade descreve a competência principal do chat (por exemplo: Backend, Design/UX, Arquitetura ou Governança); o papel deve ser `Executor` ou `Revisor independente`; o modelo deve ser informado explicitamente (por exemplo, `GPT-5.6 Sol`). Frente e Issue não substituem a especialidade nem o papel. Quando houver código ou revisão, inclua também repositório/PR aplicável.
+## Papéis
+**Gerente Geral:** coordenador/read-only por padrão. Classifica risco, define escopo, prioridades e gates. Pode encaminhar R0/R1 de forma simplificada e exigir nível maior quando surgirem fatos novos. Não faz escrita produtiva nem usa “baixo risco” para contornar segurança.
 
-O ID é visível e sequencial dentro da sua própria frente ou namespace. Preserve identificadores já emitidos: não renumere tarefas DOE-SP para acomodar governança. Atividades de governança usam sequência própria, como `GOV-01`, `GOV-02`. Os passos da delegação são numerados.
+**Executor:** pode permanecer na mesma sessão entre código, testes, correções, preparação e execução autorizada quando o risco permitir. Não autoaprova revisão independente.
 
-**Todo direcionamento do Gerente Geral a executor ou revisor deve ser entregue ao usuário em um único bloco isolado e copiável que contenha somente a mensagem destinada àquele chat.** Dentro do bloco, o Gerente pode usar linguagem técnica, identificadores, referências e formato compacto quando isso tornar a execução mais eficiente, desde que papel, escopo, autorização, dependências, critérios de aceite, bloqueios e retorno esperado permaneçam inequívocos. Análise do Gerente, status, progresso, justificativas e explicações em linguagem clara ao usuário ficam fora desse bloco. Prompt sem qualquer campo obrigatório, sem ID/título/frente ou sem passos numerados está incompleto e deve ser corrigido antes da delegação. A regra detalhada de comunicação bilateral, progresso e encerramento de frente está em [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md).
+**Revisor independente:** obrigatório quando a classificação/regra exigir; deve ser sessão diferente da que produziu a mudança material. Pode revisar apenas delta pequeno quando os critérios de revisão incremental forem satisfeitos.
 
-Formato mínimo dentro do bloco copiável:
+GPT e Claude são modelos válidos. Divergência do modelo indicado é metadado, não bloqueio por si só.
 
-- Atividade:
-- Título:
-- Especialidade do chat:
-- Papel:
-- Modelo:
-- Frente:
-- Issue:
-- Resultado esperado:
+## IDs e delegação
+Novo ID é necessário quando houver novo escopo material, nova decisão ou operação independente. Correção de status/contexto R0 e pequeno achado de review permanecem no mesmo ciclo por padrão.
 
-1. ...
-2. ...
+Prompts devem conter o necessário para executar com segurança, sem campos irrelevantes. O bloco copiável Gerente → executor/revisor continua recomendado para delegações formais; handoff proporcional ao risco segue [docs/HANDOFF.md](docs/HANDOFF.md).
 
-## Sessões Claude
+## Gate 0
+Gate 0 é proporcional:
+- verifique somente recursos relevantes;
+- falha não relacionada não bloqueia trabalho seguro;
+- falha relacionada ao risco bloqueia a parte dependente;
+- bloqueio total só quando continuar puder causar dano material, operação não autorizada, risco de segurança/dados/tenant ou conflito real de escrita.
 
-Quando o campo **Modelo** designar Claude, a sessão também deve seguir [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md). Antes de emitir novo prompt, o Gerente confirma handoff e UNLOCK da sessão anterior. O protocolo exige Gate 0 antes de qualquer trabalho, verificação de LOCK vigente, um único tipo de gate por sessão (CÓDIGO, PREPARAÇÃO, REVISÃO ou EXECUÇÃO), executor único, revisão independente em sessão sem participação no intervalo revisado e sobre SHA exato e handoff que diferencie Preparado / Executado / Validado.
+## LOCK
+LOCK é lease de concorrência:
+- R0: não;
+- R1: somente concorrência concreta;
+- R2: quando houver múltiplos executores/risco de escrita concorrente;
+- R3: obrigatório.
 
-Prompts devem ser compactos, com alvo de aproximadamente 40 linhas, e explicitar quando aplicável: datas inicial/final de coleta, serviços, branch, SHA/PR, autorizações vigentes, pendências herdadas com critério próprio, valores esperados e critérios mensuráveis. Autorizações explícitas ainda válidas persistem e são transcritas com escopo, origem verificável e término; não pedir novamente ao usuário.
+LOCK expirado/órfão pode ser substituído com evidência de estado seguro. Escalar ao usuário somente se houver dúvida real sobre operação material/produtiva ativa.
 
-O Gate 0 não substitui os gates técnicos da frente. Falha em push, em acesso Railway quando a atividade exigir Railway, na identificação de sessão/modelo ou na trava encerra a sessão sem trabalho parcial. LOCK/UNLOCK identificam sessão e modelo; LOCK órfão só é liberado por decisão do usuário (C-05). Para futuras operações, artefatos versionáveis ficam em `radar-fiscal-backend/ops/<frente>/`; dados privados permanecem na Railway e não entram em Issue/PR/resposta. Este registro não autoriza operação produtiva.
+## Revisão
+Novo commit não invalida automaticamente toda revisão. Delta não material pode receber recheck incremental, registrando SHA anterior, novo SHA e escopo do delta. Alteração material exige revisão compatível; artefato destrutivo R3 mantém SHA exato.
 
-## Execução
+## Execução e segurança
+Toda atividade respeita [docs/SECURITY.md](docs/SECURITY.md). Secrets, dados privados, RLS, auth, tenant e operações destrutivas não são flexibilizados. Merge/deploy/materialidade seguem autorização aplicável.
 
-Toda implementação nova deve ter Issue de governança. Relacione o PR do repositório de código por URL completa. Branch própria, commits identificáveis, PR e testes proporcionais ao risco. Não ampliar escopo de repair/POC nem avançar para outro DOE sem gate. Trabalhe autonomamente e avance em todas as etapas autorizadas que não dependam da premissa que falhou; interrompa imediatamente o caminho bloqueado, preserve evidências e devolva ao Gerente um único handoff com causa, impacto, trabalho concluído e próxima ação sugerida. **Todo retorno de executor ou revisor ao Gerente deve vir em um único bloco copiável contendo somente o handoff destinado ao Gerente; comentários ao usuário ficam fora.** O handoff pode usar linguagem técnica compacta para análise eficiente, mas deve preservar fatos, hipóteses identificadas, IDs, links, resultados, falhas, gates, próxima ação e evidência necessária, sem segredos. O Gerente traduz esse handoff em resumo claro ao usuário antes de indicar o próximo passo. Cada instrução do Gerente pode reunir até cinco passos independentes; dentro da tarefa delegada, o executor continua até o gate ou bloqueio real, sem pedir ao usuário para fazer tarefas acessíveis ao executor.
+## Manutenção documental
+Atualização factual de contexto/estado/links/datas/SHAs/handoffs é R0 por padrão e pode ser feita continuamente pelo executor sem criar nova atividade. Mudança de política, arquitetura, governança, autorização ou regra operacional material não é R0.
 
-## Manutenção contínua do contexto
-
-O Gerente Geral é **responsável editorial** por todas as decisões, prioridades, erros e diretrizes, e **pode ler os repositórios e evidências quando precisar, mas não edita nem executa alterações**. Ele determina no prompt quais documentos precisam de revisão e audita a coerência dos extratos, links e diffs que os executores GPT-5.6 lhe devolverem. Um executor GPT-5.6 é **responsável operacional** por ler e atualizar `CONTEXT.md`, `PROJECT_STATE.md`, `DECISIONS.md`, documentos temáticos e `contexts/` após o marco auditado pelo Gerente; o Gerente pode delegar primeiro uma atualização factual com estado explicitamente provisório. Toda decisão de layout, design, ferramentas, recursos, produto ou comercial deve constar no documento temático com status e link; dúvidas ficam em [docs/OPEN_QUESTIONS.md](docs/OPEN_QUESTIONS.md). Após handoff, decisão, erro, PR/gate ou mudança de prioridade, o Gerente analisa e solicita a atualização dos arquivos afetados na mesma passagem; o executor grava e traz commit, links e resumo de diff. A manutenção documental no `tribusca-control` está autorizada continuamente; merge/deploy/migration produtiva têm limites próprios. Novos chats precisam de handoff atualizado, pois nenhum chat sincroniza sozinho. Siga [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md).
+Use snapshots temporais quando necessário: `Estado observado em DD/MM/AAAA HH:MM BRT`.
 
 ## Fechamento
-
-Ao concluir sua parte, registre o handoff completo na Issue e indique por comentário se ela está em revisão independente ou validação produtiva. No [quadro de andamento](https://github.com/users/fabiojuniort-cyber/projects/1), mantenha In Progress enquanto o gate não tiver sido concluído; Done só após a evidência exigida. Somente o Gerente confirma logicamente a conclusão após analisar evidências fornecidas por executor e revisor distintos; o executor indicado atualiza PROJECT_STATE.md e comprova o commit. O conector GitHub atual não altera as colunas do Projects, então registre o estado detalhado na Issue independentemente do quadro. CI verde e merge não equivalem a conclusão produtiva.
-
-## Escalonamento
-
-Acione o responsável pelo produto somente para decisão de produto/negócio, despesa, credencial/permissão indisponível ou decisão técnica material sem aprovação anterior. Qualquer erro ou premissa crítica não atendida retorna ao Gerente com evidência para análise e novo direcionamento. Respeite autorização específica para ações produtivas e irreversíveis. Questões técnicas reversíveis dentro do escopo podem ser resolvidas autonomamente.
+Registre evidência proporcional ao risco. CI, merge, deploy e run são fatos diferentes; não inferir produção a partir de evidência ausente.
