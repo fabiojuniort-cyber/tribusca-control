@@ -10,7 +10,7 @@ O usuário abre o chat sob instrução do Gerente; arquivos ou Issues não inici
 
 ## Revisor independente — chat/sessão distinto, modelo designado
 
-GPT-5.6 por padrão ou Claude quando o prompt designar; revisão de qualquer desses modelos é válida. Examina diff, contrato, migrações, segurança, provenance, testes e casos de falha. Não considera a própria implementação como revisão independente, nem revisa intervalo de commits em que tenha atuado como executor. Registra aprovação ou achados verificáveis no PR/Issue; devolve todos os erros e gates reprovados ao Gerente para análise e delegação da correção. Não faz merge por mera aprovação de CI.
+GPT-5.6 e Claude são ambos válidos para revisão, inclusive quando o modelo efetivo divergir do indicado no prompt; a divergência deve ser registrada e a independência da sessão/intervalo revisado continua obrigatória. Examina diff, contrato, migrações, segurança, provenance, testes e casos de falha. Não considera a própria implementação como revisão independente, nem revisa intervalo de commits em que tenha atuado como executor. Registra aprovação ou achados verificáveis no PR/Issue; devolve todos os erros e gates reprovados ao Gerente para análise e delegação da correção. Não faz merge por mera aprovação de CI.
 
 ## Sessões Claude designadas
 
