@@ -63,15 +63,15 @@ Diretrizes aprovadas:
 **Origem:** responsável pelo produto (usuário). **Registro completo:** [WEB-02](WEB_02_DESIGN_ALIGNMENT.md). Esta seção substitui as partes conflitantes da experiência pública anterior; o histórico permanece em `DECISIONS.md`.
 
 - Navegação pública: **Cobertura · Portfólio · Como funciona · Reforma Tributária**, em rotas dedicadas.
-- Header: assinatura horizontal oficial + botões **Entrar** e **Criar conta**. O CTA “Experimentar grátis” deixa de ser o CTA primário do header, sem extinguir o trial de 7 dias da D-011.
-- Autenticação pública: Entrar/Criar conta/Recuperar senha/Nova senha em modal. Apenas Entrar possui contrato backend comprovado nesta frente: **POST `/auth/login`**. Não inventar cadastro/reset.
+- Header: assinatura horizontal oficial + **Entrar**. Enquanto Issue #9 estiver aberta, D-054 mantém cadastro público em estado **Em breve** não acionável. O trial futuro segue D-058, sem claim de disponibilidade ativa.
+- Autenticação pública no release candidate: apenas **Entrar** é acionável e usa `POST /auth/login`; cadastro/recuperação ficam **Em breve** enquanto #9 estiver aberta. Não inventar cadastro/reset.
 - Criar conta/Nova senha: confirmar senha e requisitos em tempo real; a D-058 ratificou mínimo de 8 caracteres, maiúscula, minúscula, número e caractere especial. A ativação continua dependente da Issue #9.
 - Home estadual: 5 UFs, SP fixo em primeiro e 4 sorteadas; fotos licenciadas do Wikimedia Commons; área de publicações usa **“—”** enquanto a API pública ainda não estiver integrada ao frontend.
 - Portfólio público: **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica, Perfil Tributário**. **WEB-03 substitui o claim do draft:** todos os seis recursos ficam como **Em desenvolvimento** até comprovação operacional e autorização específica de publicação.
 - Sonar mantém Alta/Média/Baixa + proximidade. A WEB-05 / D-053 ratificou conceitualmente a exceção semântica restrita ao Sonar: Alta `#C92A2A`, Média `#9A6900`, Baixa texto `#237032` e ping `#2B8A3E`; rótulo textual e proximidade permanecem obrigatórios. A verificação independente final ainda está pendente.
 - Decodifica: carrossel de cinco exemplos Texto oficial × Leitura auxiliar definidos no registro WEB-02, sempre com aviso de IA.
 - Revela: exemplo de boletim diário com Alta afinidade e Menção direta.
-- Cobertura: serviços federais e 27 UFs em cards de largura total; métricas reais somente quando houver contrato de API, caso contrário **“—”**.
+- Cobertura: serviços federais e 27 UFs em cards de largura total, integrados em WEB-11 a `GET /public/v1/sources`; loading/refetch/erro = **“—”**, e fonte planejada ausente de resposta válida = **Em implantação**.
 - Reforma Tributária: timeline em **Publicação / Vigência / Marco previsto em lei**, com datas apenas de fonte oficial do Acervo.
 
 **Impacto:** Router, header, modais, conteúdo, estados, acessibilidade e futuras integrações de API. A D-043 foi substituída pela D-051 quanto aos claims de disponibilidade; a D-044 foi ratificada conceitualmente pela D-053 com ajustes. **Próximo passo:** revisão independente final do head WEB-05; sem merge/publicação definitiva.
@@ -92,9 +92,9 @@ Diretrizes aprovadas:
 
 A11Y/Branding corrigidos no draft: carrossel com alvos ≥24px e foco visível; estados de senha e bordas de input com contraste adequado; footer com assinatura escura oficial; Inter empacotada localmente; Sonar com valores ratificados pela D-053.
 
-**Cadastro público:** a Issue #9 continua sendo gate. Pela D-054, se houver lançamento do site antes de cadastro funcional e validado, **“Criar conta” deve ser substituído temporariamente por “Em breve” antes da publicação definitiva**. Essa troca é uma regra condicional de lançamento e **não está implementada no head WEB-05**.
+**Cadastro público:** a Issue #9 continua sendo gate funcional. WEB-11 já aplica D-054 no release candidate: cadastro/trial/recuperação não aparecem como funcionais e são apresentados como **Em breve**.
 
-**Próximo passo:** revisão independente no preview temporário. Não declarar a WEB concluída antes desse parecer.
+**Próximo passo:** revisão independente única do release candidate WEB-11. Não declarar a WEB concluída antes desse parecer.
 
 
 ## GOV-03 — refinamentos aprovados em 27/09/2026
