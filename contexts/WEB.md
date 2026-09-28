@@ -1,6 +1,6 @@
 # TriBusca — entrada de qualquer chat de frontend
 
-Atualizado em 26/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) agora possui uma primeira implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`, head verificado `b9c39fab1530187f4ed034679dea1ef26888d3b3`.
+Atualizado em 26/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) agora possui uma primeira implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`, head verificado `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`.
 
 Leia [CONTEXT.md](../CONTEXT.md), [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md), [produto/UX](../docs/PRODUCT_AND_UX.md), [site/comercial](../docs/SITE_AND_MARKETING.md), [Manual de Marca v1](../docs/BRAND_MANUAL_V1.md) e a Issue específica. Os [ativos oficiais](../docs/BRAND_ASSETS.md) devem ser usados sem recriação.
 
@@ -19,7 +19,7 @@ O draft PR #1 implementa:
 - Vitest/Testing Library;
 - CI.
 
-GitHub Actions run **36259839790**: **SUCCESS** em 26/09/2026. Passaram instalação, typecheck, testes e build.
+GitHub Actions run **36361749038**: **SUCCESS** em 26/09/2026. Passaram instalação, typecheck, testes e build.
 
 **Não comprovado / não autorizado:** merge na main, deploy, site produtivo, API, autenticação, matching real do Sonar, envio real do Revela, consumo real do Decodifica ou Acervo dinâmico.
 
@@ -50,7 +50,7 @@ CORS está implementado por `PUBLIC_API_ALLOWED_ORIGINS`, sem credentials e com 
 
 Em 26/09/2026, a WEB-02 substituiu as definições públicas conflitantes da WEB-01 conforme D-037–D-049 e [registro detalhado](../docs/WEB_02_DESIGN_ALIGNMENT.md). **Origem: usuário/responsável pelo produto.**
 
-No head `b9c39fab1530187f4ed034679dea1ef26888d3b3`, o draft PR #1 contém:
+No head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`, o draft PR #1 contém:
 - rotas `/cobertura`, `/portfolio`, `/como-funciona`, `/reforma-tributaria`;
 - assinatura horizontal oficial no header e ações Entrar/Criar conta;
 - modais de Entrar/Criar conta/Recuperar senha/Nova senha;
@@ -65,7 +65,7 @@ No head `b9c39fab1530187f4ed034679dea1ef26888d3b3`, o draft PR #1 contém:
 - timeline da Reforma separando Publicação/Vigência/Marco previsto em lei;
 - responsividade e `prefers-reduced-motion`.
 
-CI run `36260946535` = **SUCCESS** (install, typecheck, testes e build).
+CI run `36361749038` = **SUCCESS** (install, typecheck, testes e build).
 
 **WEB-03/D-051 resolveu o antigo gate de disponibilidade:** Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário ficam todos como **Em desenvolvimento** no site público. **Gates ainda pendentes:** Branding / Issue #10 para cores do Sonar e revisão visual/funcional. PR permanece draft, sem merge/deploy. Contratos dependentes: Issue #9 (cadastro/reset) e Issue #11 (Cobertura/Acervo público).
 
@@ -76,4 +76,27 @@ Em 26/09/2026, por decisão do Gerente, o claim da D-043 não foi confirmado par
 
 A existência de rotas, placeholders, mocks, demonstrações ou contratos em PR não autoriza o rótulo “Disponível”.
 
-**Impacto:** frontend público + documentação. Head WEB-03 verificado `b9c39fab1530187f4ed034679dea1ef26888d3b3`; CI run `36260946535` = **SUCCESS** (install, typecheck, testes e build). Cores do Sonar continuam apenas em avaliação no draft e dependem da Issue #10. Revisão visual/funcional permanece gate separado. Sem merge/deploy.
+**Impacto:** frontend público + documentação. Head WEB-03 verificado `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`; CI run `36361749038` = **SUCCESS** (install, typecheck, testes e build). Cores do Sonar continuam apenas em avaliação no draft e dependem da Issue #10. Revisão visual/funcional permanece gate separado. Sem merge/deploy.
+
+
+## WEB-05 — pronto para nova revisão independente
+
+Head do draft PR #1: `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`.  
+CI #38 / run `36361749038`: **SUCCESS**, com 13/13 testes, typecheck, checksum do ativo e build.
+
+Correções WEB-04 implementadas:
+- A11Y-01/02/03;
+- BRAND-01/02;
+- Sonar ajustado e ratificado conceitualmente pela D-053;
+- footer com assinatura escura oficial;
+- Inter local via `@fontsource/inter@5.3.0`.
+
+Preview temporário de revisão:
+- URL: https://web05-preview-production.up.railway.app
+- deployment: `1cf730d6-741a-4187-904c-3da2e231100b` = SUCCESS;
+- projeto/serviço Railway: `tribusca-web-preview-web05 / web05-preview`;
+- sem dados produtivos ou secrets.
+
+**Gates ainda abertos:** revisão independente visual/funcional e Issue #9 para cadastro/reset. A Issue #10 permanece aberta apenas até a verificação independente final da ratificação cromática. Pela D-054, se houver lançamento antes de cadastro funcional, “Criar conta” deve virar “Em breve” no gate de publicação; essa mudança **não está implementada** neste head.
+
+PR continua draft. Sem merge e sem publicação definitiva. Após a revisão e preservação das evidências, remover o preview temporário Railway.
