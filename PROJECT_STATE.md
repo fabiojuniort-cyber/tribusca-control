@@ -90,6 +90,9 @@ Limites do marco:
 - 0 operações produtivas;
 - merge em `main` requer decisão posterior do usuário.
 
+
+**GOV-05:** complementa o mesmo PR #13 com continuidade entre sessões, autorizações persistentes transcritas, metadados operacionais obrigatórios, revisão por SHA exato, checklist na Issue, gate destrutivo reproduzível e handoff com ponto de retomada/UNLOCK. Continua sendo documentação somente: nenhum código, SQL, script, deploy ou escrita produtiva; merge depende de decisão do usuário.
+
 ## Governança
 
 **GOV-01 — Padronizar prompts, handoffs e progresso:** regra documental vigente em 26/09/2026. Todo direcionamento Gerente → executor/revisor e todo handoff executor/revisor → Gerente usa bloco isolado copiável contendo somente a mensagem operacional destinada ao outro chat; linguagem técnica compacta é permitida quando inequívoca e sem omitir evidência necessária. O Gerente traduz o handoff em resumo claro ao usuário fora do bloco. Delegações exigem ID sequencial por frente, título, frente explícita e passos numerados; cada avanço relata resultado, evidência, próximo passo, progresso estimado da frente por marcos verificáveis e incerteza. Ao encerrar uma frente e abrir outra, o Gerente registra passos restantes e estimativa fundamentada do projeto total. Percentual é informativo e não substitui gate. A [Issue #5](https://github.com/fabiojuniort-cyber/tribusca-control/issues/5) permanece aberta para validar o ciclo completo de governança; esta atualização não altera nem conclui DOE-SP.
