@@ -1,6 +1,6 @@
 # TriBusca — contexto de retomada do Gerente Geral
 
-Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26/09/2026. Este arquivo pode ser lido diretamente pelo Gerente GPT-6 ao iniciar ou retomar uma conversa e relido sempre que necessário. Não existe chat intermediário de bootstrap. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
+Base operacional registrada em 27/09/2026; protocolo de papéis atualizado em 26/09/2026. Este arquivo pode ser lido diretamente pelo Gerente GPT-6 ao iniciar ou retomar uma conversa e relido sempre que necessário. Não existe chat intermediário de bootstrap. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
 
 ## Missão e limites desta conversa
 
@@ -33,6 +33,18 @@ Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26
 - Seis labels já criadas (`P0`–`P3`, `doe-sp`, `governanca`); cinco Issues importadas no Projects. O conector GitHub usado nesta conversa edita Issues e arquivos, mas não move cartões no Projects.
 
 - **WEB-01→WEB-05 / Issue #8:** draft [frontend PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`, CI #38 / run `36361749038` = **SUCCESS** (13/13 testes, typecheck, checksum do ativo e build). WEB-05 corrigiu A11Y-01/02/03 e BRAND-01/02 e implementou os valores do Sonar ratificados conceitualmente na D-053. Preview temporário: `https://web05-preview-production.up.railway.app`, deployment `1cf730d6-741a-4187-904c-3da2e231100b` SUCCESS. **Gate atual:** nova revisão independente visual/funcional; Issue #10 permanece aberta até esse parecer. Todos os seis recursos continuam `Em desenvolvimento` (D-051). Issue #9 continua gate para cadastro/reset; D-054 exige trocar “Criar conta” por “Em breve” antes do lançamento caso cadastro ainda não esteja funcional. Essa troca não está implementada. Sem merge/publicação definitiva.
+
+## GOV-03 — consolidação de 27/09/2026
+
+As respostas Q1–Q22 foram formalizadas sem implementação técnica nas D-055 a D-063.
+
+- **DOE-SP continua ABERTO/P0.** D-055 só libera o paralelismo ampliado **depois do fechamento formal**; não autoriza próximo DOE agora.
+- Coleta corrente aprovada em 06h/10h/14h/18h BRT quando aplicável; backfill separado em uma consulta/hora, um dia por consulta/fonte, até o acervo oficial disponível (D-056).
+- Escopo fiscal/retenção/CNPJ exato definidos na D-057; reexame de acervo antigo ao cadastrar novo CNPJ permanece aberto.
+- A D-054 segue como gate para lançamento antes da #9; D-058 fecha Acervo público, senha, onboarding e trial. Coerência: CNPJ é opcional no formulário inicial, mas o trial só inicia após verificação de e-mail + primeiro cadastro de empresa; empresa sem CNPJ permanece aberta.
+- Sonar, Revela, Decodifica e Reforma foram refinados nas D-059 a D-062; D-053 continua a decisão cromática do Sonar e Issue #10 continua aberta para o parecer independente do preview.
+- Comercial: três níveis futuros, público inicial empresarial e dimensões de diferenciação aprovadas; nomes/preços/franquias/créditos aguardam piloto (D-063).
+- Nenhuma página demonstrativa, preview, PR, mock ou contrato em draft equivale a disponibilidade produtiva.
 
 ## Próxima passagem
 
