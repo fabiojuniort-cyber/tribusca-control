@@ -129,13 +129,32 @@ Bloqueios registrados nas Issues #8/#10 e no review do frontend PR #1:
 
 A ratificação conceitual da D-053 permanece válida, mas **Issue #10 continua ABERTA** e o gate técnico não foi concluído.
 
-**WEB-07 — em execução.** Durante esta atualização, o PR #1 avançou novamente e o **head vivo atual** foi revalidado em `c35065abfb3ff7e39914eef9bc79337aea086bce`. O head intermediário `515e6b7f9c9965a94bcafced12886a8cebe12046` teve Frontend CI #42 / run `36364670460` = **FAILURE**. Para o head vivo `c35065a...`, Frontend CI #45 / run `36365215109` estava **IN_PROGRESS** no snapshot do gate documental. Nenhum desses estados equivale a aprovação independente. É necessário concluir a execução da WEB-07 e obter novo parecer independente em navegador.
+**WEB-07 — execução concluída para novo gate independente.** Head vivo: `74bb3efffc4b720aa157475ce6a9c73c206fa028`. Frontend CI #47 / run `36368975036` = **SUCCESS**: 13/13 testes unitários, typecheck/build e **40/40 testes Playwright/Chromium**.
+
+Evidência browser:
+- artifact ID `10948592313`;
+- nome `web07-browser-evidence-74bb3efffc4b720aa157475ce6a9c73c206fa028`;
+- digest `sha256:4365b95d68c69233aef493f99a22082917abe0e08d0f111220ba1a04279a33a6`;
+- retenção até 12/10/2026;
+- runtime automatizado: Chromium sobre Vite preview local do build do mesmo head;
+- viewports: 1440×900, 1920×1080, 390×844 e 360×800;
+- cobertura: cinco rotas, overflow, menu mobile, carrossel, Tab/Shift+Tab, foco visível, modais/focus containment/Escape/retorno, cadastro sem persistência, contrastes, Inter, footer, Sonar, claims/Cobertura e reduced-motion.
+
+Correções adicionais WEB-07:
+- BRAND-SONAR-01: `.password-rules .rule-ok` passou para azul institucional escuro `#08306B` / `var(--navy)`, deixando `#237032` restrito ao Sonar;
+- retorno de foco dos modais controlados foi corrigido e validado pelo Playwright.
+
+Preview Railway atualizado para o mesmo head:
+- URL: https://web05-preview-production.up.railway.app
+- deployment `2d130a93-7651-47e2-b90c-478c1e3088ea` = **SUCCESS**;
+- commit `74bb3efffc4b720aa157475ce6a9c73c206fa028`.
 
 Estado preservado:
 - frontend PR #1 = **OPEN / DRAFT / unmerged**;
-- Issue #10 = **OPEN**;
+- Issue #10 = **OPEN** até parecer independente sobre o novo head/evidência;
+- Issue #9 e D-054 continuam gates de lançamento/cadastro;
 - sem publicação definitiva;
-- nenhuma aprovação WEB-07 registrada por esta atualização documental.
+- a validação Playwright automatizada não substitui o parecer independente final.
 
 ## GOV-03 — regras públicas e autenticação
 
