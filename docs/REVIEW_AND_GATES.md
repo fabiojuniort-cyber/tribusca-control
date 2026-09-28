@@ -16,11 +16,27 @@ Uma Issue que exige bootstrap ou validação produtiva permanece aberta após me
 Sessões Claude seguem [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md) e são exclusivas por tipo:
 
 - **CÓDIGO:** branch, testes e CI; zero produção.
-- **PREPARAÇÃO:** preflight read-only, backup/restauração testada quando exigidos e artefato operacional exato versionado; zero execução produtiva.
+- **PREPARAÇÃO:** preflight read-only e artefato operacional exato versionado; zero execução produtiva.
 - **REVISÃO:** sessão independente, somente auditoria e parecer; não corrige a entrega revisada.
 - **EXECUÇÃO:** aplica apenas o material preparado/aprovado e a autorização vigente; não cria correção de código ad hoc.
 
-Antes de qualquer um deles, Gate 0 confirma push, acesso Railway e LOCK. Uma falha de Gate 0 encerra a sessão sem trabalho parcial. Aprovação de um gate não implica aprovação dos seguintes.
+Antes de qualquer um deles, o Gerente confirma handoff + UNLOCK anterior e o Gate 0 confirma push, acesso Railway e LOCK vigente antes de registrar a nova trava. Uma falha de Gate 0 encerra a sessão sem trabalho parcial. Aprovação de um gate não implica aprovação dos seguintes.
+
+### REVISÃO Claude
+
+O revisor recebe **SHA exato** do head e, para script/SQL/runbook, SHA exato do artefato/commit, além de checklist e critérios explícitos de reprovação. O parecer é registrado no PR/Issue citando o SHA revisado. Novo commit relevante invalida o parecer anterior para o conteúdo alterado.
+
+### Operação destrutiva
+
+PREPARAÇÃO só pode liberar EXECUÇÃO quando a Issue comprovar em checklist:
+- backup **dentro da Railway**;
+- restauração testada em **Postgres temporário**;
+- script/SQL/runbook exato **commitado e revisado**;
+- dry-run com contagem/resultado **igual ao esperado previamente**;
+- fase destrutiva em **transação** quando suportada, com rollback definido;
+- queries de validação e valores esperados definidos **antes** da execução.
+
+Falha ou divergência em qualquer item bloqueia EXECUÇÃO.
 
 ## Revisão de PR
 
