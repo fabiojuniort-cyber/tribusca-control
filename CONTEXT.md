@@ -60,7 +60,7 @@ A autorização do usuário de 28/09/2026 02:10 BRT (`“QUero que siga mesmo as
 
 ## GOV-04 → GOV-16 — evolução da governança
 
-O PR #13 foi incorporado por GOV-11 em `bae943208cb99f236748bd6118ce482e4538a5ba`, instituindo C-01…C-12 como protocolo então vigente.
+A GOV-10 emitiu parecer independente **FAVORÁVEL** ao SHA `e39239301795a087f2c6fada67d7e3e04d6f1a32`; em seguida, a GOV-11 incorporou o PR #13 em `bae943208cb99f236748bd6118ce482e4538a5ba`, instituindo C-01…C-12 como protocolo então vigente.
 
 GOV-12/GOV-14 atualizaram o estado durável no PR #14 e GOV-15 emitiu parecer independente **FAVORÁVEL** ao head `f39a265f4fc633dd78d201e6c02f2db2ed620004`; no início da GOV-16 esse PR ainda permanecia OPEN / DRAFT / unmerged.
 

@@ -87,7 +87,7 @@ Pontos de estado:
 
 **Estado observado em 28/09/2026 02:10 BRT.**
 
-- GOV-11 incorporou o PR #13 em `bae943208cb99f236748bd6118ce482e4538a5ba`, tornando C-01…C-12 o protocolo vigente da `main`.
+- GOV-10 emitiu parecer independente **FAVORÁVEL** ao SHA `e39239301795a087f2c6fada67d7e3e04d6f1a32`; em seguida, GOV-11 incorporou o PR #13 em `bae943208cb99f236748bd6118ce482e4538a5ba`, tornando C-01…C-12 o protocolo vigente da `main`.
 - GOV-15 foi **FAVORÁVEL** ao PR #14/head `f39a265f4fc633dd78d201e6c02f2db2ed620004`, mas o PR #14 ainda estava OPEN / DRAFT / unmerged no início da GOV-16.
 - O usuário autorizou explicitamente prosseguir com GOV-16 apesar dessa pré-condição pendente; a exceção não autoriza merge, deploy, Railway write, SQL/migration nem operação DOE-SP.
 - GOV-16 propõe a **Governança Flexível v2** com R0–R3, LOCK proporcional, revisão incremental e continuidade de sessão executora.
