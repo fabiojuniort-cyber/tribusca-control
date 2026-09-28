@@ -1,6 +1,6 @@
 # TriBusca — Protocolo de sessões Claude
 
-**Status: proposta em revisão no [PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13) (draft).** Passa a valer somente depois do merge em `main`, que depende de decisão do usuário; a data de vigência é a data desse merge. Este protocolo governa sessões Claude designadas pelo Gerente para código, preparação, revisão ou execução produtiva. Ele complementa `AGENTS.md`, `docs/AGENT_ROLES.md`, `docs/REVIEW_AND_GATES.md`, `docs/HANDOFF.md`, `docs/SECURITY.md` e `docs/CONTEXT_MAINTENANCE.md`. Não altera regras técnicas de coleta, produto ou arquitetura.
+**Status: vigente desde 28/09/2026.** O [PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13) recebeu parecer GOV-10 **FAVORÁVEL** no SHA `e39239301795a087f2c6fada67d7e3e04d6f1a32` e foi incorporado por squash na GOV-11. O protocolo entrou em vigor na `main` pelo commit `bae943208cb99f236748bd6118ce482e4538a5ba`. Este protocolo governa sessões Claude designadas pelo Gerente para código, preparação, revisão ou execução produtiva. Ele complementa `AGENTS.md`, `docs/AGENT_ROLES.md`, `docs/REVIEW_AND_GATES.md`, `docs/HANDOFF.md`, `docs/SECURITY.md` e `docs/CONTEXT_MAINTENANCE.md`. Não altera regras técnicas de coleta, produto ou arquitetura.
 
 ## Definições e limites de prova
 

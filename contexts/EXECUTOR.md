@@ -1,10 +1,10 @@
 # TriBusca — contexto para chat executor
 
-Atualizado em 26/09/2026. Ponto de entrada: [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), o índice da frente quando houver, [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md) e a Issue atribuída. Leia a Issue ao vivo: escopo, dependências, permissões, critérios e links podem mudar. Não substitua a Issue por este arquivo.
+Atualizado em 28/09/2026. Ponto de entrada: [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), o índice da frente quando houver, [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md) e a Issue atribuída. Leia a Issue ao vivo: escopo, dependências, permissões, critérios e links podem mudar. Não substitua a Issue por este arquivo.
 
 ## Frente ativa
 
-[Issue #1 — gate DOE-SP / PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) é a tarefa executável prioritária. PR: https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71. No último registro o PR continuava aberto; verificar novamente. #2 e #3 dependem de #1; #4 depende das três. Não executar tarefas dependentes até o gate correspondente.
+[Issue #1 — gate DOE-SP HTML-primary](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) é a tarefa DOE-SP prioritária. O PR #73 foi mergeado em `e2c4f9a58fe43cb56ca36a1925eb80cf612423ae` após revisão DOE-SP-36 favorável ao head `4917cdc2265fa87b35d555b98698f42a75d6c223`. Na última leitura havia LOCK DOE-SP-37 ativo; um novo executor deve reler a Issue e **não iniciar trabalho concorrente** enquanto houver LOCK vigente. #2 e #3 dependem de #1; #4 depende das três.
 
 ## Executor em sessão Claude
 

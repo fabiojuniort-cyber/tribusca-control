@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 27/09/2026 (America/Sao_Paulo).
+Atualizado em 28/09/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -18,7 +18,7 @@ Em 26/09/2026 a **D-017**, refinada pela **D-036**, passou a estabelecer priorid
 
 Na DOE-SP, a direção técnica foi reaberta: **o HTML oficial deve ser o conteúdo principal e o PDF certificado não deve bloquear a captura da legislação**. O caminho anterior de reconciliação/histórico do [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) foi suspenso para reavaliação. O PR #71 permanece OPEN e unmerged e chegou ao head `3c286c982d983ecc7bce8f9722a1f967898665d3` (CI #394 SUCCESS) antes do redirecionamento; esse CI não autoriza merge.
 
-O preflight produtivo DOE-SP-27b em modo somente leitura registrou **518 publicações / 518 versões, 569 `collection_items`, 569 vínculos run-publication, 3 checkpoints e 94 attachments**, com zero vínculos tenant/company/matches/cross-source, zero referências diretas no audit log e zero runs ativas naquele snapshot. Manifesto agregado SHA-256 `54fcdb05eb5f362e0be87a77457861d5a4c22f9674e8f7fae59005632ab16c71`; manifesto individual privado nos logs Railway. A decisão vigente é **A — reconstruir o acervo DOE-SP** (D-052), substituindo B. O draft [PR #73](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) permanece no head `82f189c84a7b70e1985ed424c1549ae20184df46`, com CI #432 e reexecução independente SUCCESS e parecer DOE-SP-26 favorável. Um snapshot de volume Postgres de 1,4 GB foi criado em 26/09/2026 15:08 BRT; recuperação disponível na UI, sem ensaio de restore. Procedimento destrutivo e gates produtivos pendentes; nenhuma exclusão ou recaptura executada.
+A preparação DOE-SP-35 foi concluída no head `4917cdc2265fa87b35d555b98698f42a75d6c223`: CI #443 SUCCESS e runner Railway 31/31 PASS, com preflight somente leitura, backup/restauração e ensaio destrutivo realizados fora da produção; 0 escritas produtivas. A revisão independente DOE-SP-36 aprovou esse SHA e a preparação. Em 28/09/2026, durante DOE-SP-37, o [PR #73](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) foi incorporado por squash no backend como `e2c4f9a58fe43cb56ca36a1925eb80cf612423ae`. A [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) permanece **OPEN** e o LOCK DOE-SP-37 (EXECUÇÃO-A) estava ativo na última leitura desta GOV-12; não havia handoff/UNLOCK final dessa execução no momento do registro. Esta GOV-12 não executou nem validou deploy, pausa da fonte, SQL, exclusão, recaptura ou fase destrutiva DOE-SP.
 
 O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap parado em 29/07/2025, com 399 dias pendentes. Esses números são históricos, não uma leitura produtiva nova. A janela de bootstrap aprovada é 01/01/2025 até a data de validação.
 
@@ -26,7 +26,7 @@ O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap p
 
 | Issue | Resultado esperado | Dependência |
 | --- | --- | --- |
-| [#1 — gate DOE-SP HTML-primary](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Revisar procedimento restrito, pausar DOE-SP, repetir preflight/backup, finalizar PR #73, confirmar deploys e reconstruir/recapturar | Opção A autorizada (D-052); preflight 518/569/3 sem vínculos externos; PR #73 draft, CI verde; nenhuma exclusão ainda |
+| [#1 — gate DOE-SP HTML-primary](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Concluir execução/validação pós-merge e somente depois os gates destrutivos/recaptura previstos | DOE-SP-36 aprovou `4917cdc`; PR #73 mergeado em `e2c4f9a`; DOE-SP-37 EXECUÇÃO-A em andamento no último snapshot; Issue #1 segue OPEN |
 | [#2 — bootstrap e replay](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2) | Cobertura aprovada com pendingRanges vazio e replay idempotente | #1 |
 | [#3 — artefatos/publication_files](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3) | Evidência e política de persistência dos arquivos | #1 |
 | [#4 — fechamento DOE-SP](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4) | Gates, seção 13 do backend e temporários tratados | #1, #2 e #3 |
@@ -83,21 +83,20 @@ Pontos de estado:
 - questões remanescentes estão em `docs/OPEN_QUESTIONS.md`;
 - nenhuma disponibilidade de produto foi inferida de páginas, previews, mocks, PRs ou contratos em draft.
 
-### GOV-04 — protocolo de sessões Claude
+### GOV-04 → GOV-11 — protocolo de sessões Claude
 
-**EM PR DRAFT — somente documentação.**
+**VIGENTE NA `main` DESDE 28/09/2026 — somente documentação.**
 
-[PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13) registra o protocolo de sessões Claude na Issue #5, sem atuar na frente DOE-SP. O protocolo canônico contém 12 regras obrigatórias sobre Gate 0, exclusividade de tipo de sessão, executor único, LOCK/UNLOCK, revisão independente, autorizações, prompts compactos, critérios mensuráveis, artefatos em `ops/<frente>/`, proteção de dados privados, salvaguardas de preparação, exclusão de serviços Railway dependente da ferramenta de cada sessão e estados Preparado/Executado/Validado.
+O [PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13) consolidou o protocolo de sessões na Issue #5. A GOV-10 emitiu parecer **FAVORÁVEL** ao SHA `e39239301795a087f2c6fada67d7e3e04d6f1a32`; a GOV-11 executou o squash merge autorizado, resultando em `main@bae943208cb99f236748bd6118ce482e4538a5ba`. O documento canônico é [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md).
 
-Limites do marco:
+O marco mantém as 12 regras C-01…C-12 sobre Gate 0, sessão/gate único, executor único, LOCK/UNLOCK, revisão independente por SHA, autorizações explícitas, prompts mensuráveis, artefatos em `ops/<frente>/`, proteção de dados privados, salvaguardas destrutivas e separação Preparado / Executado / Validado. A incorporação não alterou regras técnicas de coleta, produto ou arquitetura.
+
+Limites confirmados na GOV-11:
+- 11 arquivos, todos Markdown;
 - 0 código de produto/backend/frontend;
-- 0 scripts, SQLs ou runbooks DOE-SP;
-- 0 operações produtivas;
-- merge em `main` requer decisão posterior do usuário.
-
-**GOV-05:** complementa o mesmo PR #13 com continuidade entre sessões, autorizações persistentes transcritas, metadados operacionais obrigatórios, revisão por SHA exato, checklist na Issue, gate destrutivo reproduzível e handoff com ponto de retomada/UNLOCK. Continua sendo documentação somente: nenhum código, SQL, script, deploy ou escrita produtiva; merge depende de decisão do usuário.
-
-**GOV-07 → GOV-08:** a revisão independente GOV-07 **reprovou** o SHA `fde68b852fa593c911170aedce2a19363e6164a9` (3 bloqueantes, 9 não bloqueantes). A GOV-08 tratou todos os achados no mesmo PR (validação independente pendente) e registrou a decisão do usuário de que revisão feita por Claude ou GPT é válida. Estado: **novo head aguardando REVISÃO independente** por sessão sem participação em GOV-07/GOV-08; protocolo ainda não vigente; merge depende de decisão do usuário.
+- 0 scripts, SQLs, migrations ou runbooks DOE-SP;
+- 0 deploy, coleta ou escrita Railway;
+- Issue #5 permanece **OPEN** para validar o ciclo real Issue → PR → revisão → gate → estado com dependência explícita da Issue #1.
 
 ## Governança
 
