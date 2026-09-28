@@ -159,3 +159,22 @@ No footer sobre fundo escuro, usar `tribusca-logo-horizontal-dark.png` sem filtr
 A interface usa Inter empacotada localmente via `@fontsource/inter@5.3.0`, pesos 400/700/800/900, mantendo fallbacks de sistema. A licença OFL está documentada no frontend em `docs/THIRD_PARTY_NOTICES.md`.
 
 **Evidência implementada:** radar-fiscal-web PR #1, head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`, CI #38 / run `36361749038` SUCCESS. **Próximo passo:** revisão independente visual/funcional; sem merge ou publicação definitiva.
+
+
+## 14. WEB-07 — isolamento cromático validado em browser
+
+**Data:** 27/09/2026. **Decisão vigente:** D-053; esta seção registra implementação/evidência, não nova paleta.
+
+O bloqueio WEB-06 foi corrigido: `.password-rules .rule-ok` deixou de usar o verde Sonar `#237032` e passou a usar `var(--navy)` / `#08306B`, com contraste aproximado **12,76:1** em branco.
+
+Os quatro valores de afinidade permanecem inalterados:
+- Alta `#C92A2A`;
+- Média `#9A6900`;
+- Baixa texto `#237032`;
+- Baixa ping `#2B8A3E`.
+
+A suíte Playwright/Chromium do head `74bb3efffc4b720aa157475ce6a9c73c206fa028` verifica no CSS do build que todo bloco que contém esses quatro hexes pertence a seletor Sonar. CI #47 / run `36368975036`: 40/40 testes browser aprovados.
+
+Artifact: `10948592313` · digest `sha256:4365b95d68c69233aef493f99a22082917abe0e08d0f111220ba1a04279a33a6`.
+
+**Gate restante:** a Issue #10 continua aberta até parecer independente sobre o novo head/evidência/preview. Automação aprovada não substitui revisão independente.
