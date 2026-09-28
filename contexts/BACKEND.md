@@ -18,36 +18,68 @@ Retomada: “Leia https://github.com/fabiojuniort-cyber/tribusca-control/blob/ma
 
 ## API-01 — API pública read-only para Acervo e Cobertura
 
-Definido em 26/09/2026 pelo usuário e formalizado na D-050 / Issue #11.
+Definida pela D-050 / Issue #11.
 
-Definição anterior: o site público não possuía contrato real para métricas de Cobertura/Acervo e exibia “—”.
+### Estado verificado
 
-Nova definição:
-- prefixo `/public/v1`;
-- `GET /public/v1/sources`;
-- `GET /public/v1/publications`;
-- `GET /public/v1/stats`;
-- somente metadados oficiais globais já públicos;
-- nenhum `content_text`, empresa, tenant, usuário ou dado autenticado;
-- CORS por `PUBLIC_API_ALLOWED_ORIGINS`, sem credentials;
-- cache `public, max-age=300`;
-- rate limit por IP permanece pendente porque não existe plugin instalado no backend;
-- `RUNNING/PENDING` sem sucesso nos últimos 48h é `UNAVAILABLE`; com sucesso recente é `UNSTABLE`;
-- `importedToday` considera apenas `NEW_PUBLICATION` e `NEW_VERSION` no dia civil de America/Sao_Paulo.
+O [backend PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74) foi **mergeado por squash** no commit `4688ff87a0b039eb426b80f5e279c95214fb87d2`.
 
-Impacto: habilita Home/Cobertura do site a usar dados reais depois de merge+deploy separados.
+A Issue #11 registra:
+- revisão independente favorável do head pré-merge `cf623e2458fcde39ebfd03bd9eb5c3f4bde205f6`;
+- deploys automáticos de Backend, Worker e Scheduler = **SUCCESS**;
+- validação produtiva dos três GETs públicos, todos HTTP 200:
+  - `GET /public/v1/sources`;
+  - `GET /public/v1/publications?uf=SP&limit=3`;
+  - `GET /public/v1/stats`;
+- `Cache-Control: public, max-age=300`;
+- `Vary` incluindo `Origin`;
+- nenhuma chave de conteúdo integral, tenant, company, usuário, credencial ou token nos payloads inspecionados;
+- sem migration ou job novo.
 
-Limite de evidência: o conector Railway desta sessão não oferece SQL read-only ad hoc. Migrations, grants, tipos Kysely e view foram revalidados no repositório; não declarar schema produtivo como consultado ao vivo.
+A API pública, portanto, está **mergeada, publicada e validada no escopo D-050**.
 
-Implementação: draft [PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), branch `feat/api-01-public-readonly`, head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, base `f25a596...`. CI #433 / run `36260320585` = **SUCCESS**. Testes cobrem as 3 rotas, fonte sem runs, UF sem dados, filtros, ausência de conteúdo integral, CORS allow/deny/OPTIONS e cache. Sem migration/job novo; `publication_versions` não é consultada. README + `docs/public-api.md` documentam o contrato. Domínios CORS reais ainda não foram comprovados e devem ser configurados no deploy. Próximo passo: Gerente decide merge; deploy/validação produtiva em gate separado.
+### Trabalho ainda aberto
 
+A Issue #11 permanece aberta para:
+- integração do frontend/WEB com a URL base pública;
+- confirmação/configuração das **origens CORS reais**;
+- avaliação/implementação futura de **rate limit por IP**.
+
+Esses itens não invalidam a validação produtiva já concluída dos três GETs.
+
+### Dependência nova da D-057
+
+A D-057 admite preservar publicação **não fiscal** quando houver menção exata a CNPJ cadastrado, mas esse registro deve ser visível **somente à respectiva conta**.
+
+A API D-050 foi desenhada para metadados globais públicos e atualmente **não possui filtro fiscal/tenant para essa nova categoria**. Antes de registros não fiscais retidos apenas por CNPJ poderem alimentar o Acervo público, deve existir **Issue técnica + gate de isolamento** que impeçam exposição pública de seus metadados. Não alterar API/schema nesta GOV-03.
+
+### Divergência de campos D-058 × API atual
+
+A D-058 aprovou para **exibição no Acervo público** somente:
+- título;
+- data;
+- órgão;
+- link oficial.
+
+O contrato atual de `GET /public/v1/publications` retorna:
+- `id`;
+- `title`;
+- `actType`;
+- `actNumber`;
+- `agency`;
+- `uf`;
+- `publishedOn`;
+- `effectiveOn`;
+- `officialUrl`.
+
+Mapeamento direto dos quatro campos aprovados: `title`, `publishedOn`, `agency`, `officialUrl`. Os campos adicionais existem no contrato D-050, mas **não estão automaticamente aprovados para exibição pela D-058**. A decisão de produto sobre exibi-los permanece aberta; esta atividade não muda a API.
 
 ## GOV-03 — decisões futuras que afetam backend
 
 **Nenhuma implementação backend foi autorizada por esta atualização documental.**
 
 - monitoramento corrente: 06h/10h/14h/18h BRT quando aplicável; backfill separado, 1 consulta/hora, recuando 1 dia por consulta/fonte até o acervo oficial disponível;
-- classificação/retenção: conteúdo integral para matéria fiscal/tributária e para CNPJ exato cadastrado; rejeitados mantêm metadados mínimos + motivo; raiz de 8 dígitos não é menção;
+- classificação/retenção: conteúdo integral para matéria fiscal/tributária e para CNPJ exato cadastrado; rejeitados mantêm metadados mínimos + motivo; raiz de 8 dígitos não é menção; publicação não fiscal retida apenas por CNPJ é privada da conta e exige gate técnico antes de qualquer exposição pela API pública;
 - estratégia de reexaminar acervo antigo ao cadastrar novo CNPJ permanece aberta;
 - Issue #9 deverá refletir senha mínima de 8 caracteres + maiúscula/minúscula/número/especial, primeiro usuário administrador, trial após verificação de e-mail + primeiro cadastro de empresa e CNPJ opcional no formulário;
 - ao cadastrar CNPJ matriz/filial, o produto deverá tentar obter CNAE/endereço de fonte disponível; empresa sem CNPJ continua questão aberta;
