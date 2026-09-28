@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 26/09/2026 (America/Sao_Paulo).
+Atualizado em 27/09/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -40,8 +40,8 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 - Motor, autenticação/RLS, infraestrutura e fontes federais: entregas reportadas anteriormente; esta atualização não fez revalidação produtiva completa.
 - DOU/INLABS: operacional, com gate final ainda a confirmar.
 - CONFAZ: DOU como fonte primária dos atos formalmente publicados; portal direto indisponível no Railway segundo diagnósticos anteriores.
-- Outros 26 DOEs: pendentes; só iniciar outro estado após fechamento formal de SP.
-- API do produto, taxonomia, perfil e integrações autenticadas de Sonar/Revela/Decodifica/Acervo: prioridades posteriores conforme [ROADMAP.md](ROADMAP.md). A camada pública do site foi excepcionalmente autorizada em paralelo pela D-035 / WEB-01.
+- Outros 26 DOEs: pendentes; **nenhum novo DOE começa antes do fechamento formal de SP**. Depois do fechamento, a D-053 permite paralelismo com taxonomia, Perfil Tributário e autenticação/comercial.
+- O roadmap foi refinado pela D-053: após o fechamento formal do DOE-SP, demais DOEs, taxonomia, Perfil Tributário e autenticação/comercial podem avançar em paralelo. Sonar/Revela/Decodifica e integrações autenticadas continuam dependentes das respectivas bases/Issues. A camada pública segue autorizada em paralelo.
 
 ### WEB-01 / WEB-02 — site público
 
@@ -49,7 +49,7 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 
 A [Issue #8](https://github.com/fabiojuniort-cyber/tribusca-control/issues/8) autorizou a camada pública em paralelo; em 26/09/2026 a WEB-02 substituiu as definições visuais conflitantes conforme D-037–D-049. O draft [frontend PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), head `b9c39fab1530187f4ed034679dea1ef26888d3b3`, contém Home, Cobertura, Portfólio, Como funciona e Reforma Tributária; modais de acesso; login conectado ao contrato existente `POST /auth/login`; carrossel estadual; seis recursos; Sonar/Revela/Decodifica conforme WEB-02; Cobertura federal + 27 UFs com status e métricas sem API em `—`; e timeline da Reforma sem datas especulativas. GitHub Actions run `36260946535` = **SUCCESS** para instalação, typecheck, testes e build.
 
-**Sem merge e sem deploy.** WEB-03/D-051 resolveu o antigo gate de disponibilidade: **todos os seis recursos do portfólio ficam como `Em desenvolvimento`**; não tratar placeholders/rotas/drafts como funcionalidades acessíveis. Head WEB-03 `b9c39fab1530187f4ed034679dea1ef26888d3b3`; CI run `36260946535` = **SUCCESS**. Antes de qualquer merge, Branding ainda deve ratificar as cores semânticas do Sonar (Issue #10) e cabe revisão visual/funcional. Cadastro/reset dependem da Issue #9; dados públicos da Cobertura/Acervo dependem da Issue #11.
+**Sem merge e sem deploy.** WEB-03/D-051 resolveu o antigo gate de disponibilidade: **todos os seis recursos do portfólio ficam como `Em desenvolvimento`**; não tratar placeholders/rotas/drafts como funcionalidades acessíveis. Head WEB-03 `b9c39fab1530187f4ed034679dea1ef26888d3b3`; CI run `36260946535` = **SUCCESS**. A D-057 ratificou as cores semânticas do Sonar; revisão visual/funcional continua pendente. Cadastro/reset dependem da Issue #9; dados públicos da Cobertura/Acervo dependem da Issue #11.
 
 ## Governança
 
@@ -61,6 +61,20 @@ Decisões aprovadas de [produto/UX](docs/PRODUCT_AND_UX.md), [site/comercial](do
 
 Documentos de decisões, arquitetura, papéis, segurança, handoff, revisão e modelos de Issue/PR criados neste repositório. Cinco Issues representam a frente atual, com etiquetas de prioridade e área. O [quadro TriBusca — Gestão do Projeto](https://github.com/users/fabiojuniort-cyber/projects/1) foi criado com importação das cinco Issues; o usuário informou a movimentação da Issue #1 para In Progress. O quadro oferece Todo, In Progress e Done; etapas específicas de revisão e validação produtiva são registradas em comentários da Issue. O conector GitHub atual não altera as colunas do Projects. O ciclo completo permanece em validação na Issue #5. Chats não se comunicam automaticamente por causa desses arquivos; o estado oficial é registrado no GitHub.
 
+
+### GOV-03 — decisões de produto/coleta/comercial
+
+**DOCUMENTAÇÃO CONSOLIDADA EM BRANCH — nenhuma implementação, merge ou deploy por esta atividade.**
+
+D-053 a D-061 registram: paralelismo condicionado ao fechamento formal DOE-SP; cadência corrente/backfill; escopo fiscal/retenção e CNPJ exato; site/auth/trial; Sonar; Revela; Decodifica; Reforma; e comercial.
+
+Pontos operacionais:
+- DOE-SP permanece **ABERTO** e prioritário;
+- D-053 não libera outro DOE antes do fechamento de SP;
+- site informativo pode ir ao ar antes da #9 somente após gates e com **Em breve** no lugar de Criar conta;
+- cadastro/trial continuam bloqueados pela #9;
+- questões remanescentes estão em `docs/OPEN_QUESTIONS.md`;
+- nenhuma disponibilidade de produto foi inferida de páginas, mocks, PRs ou contratos em draft.
 
 ## API-01 — API pública do site
 
