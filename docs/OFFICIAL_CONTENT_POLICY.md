@@ -1,6 +1,6 @@
 # TriBusca — Política global de conteúdo oficial
 
-Aprovada em 26/09/2026. Decisão canônica: D-017, refinada pela D-036 em `DECISIONS.md`.
+Aprovada em 26/09/2026; refinamentos de coleta/classificação consolidados em 27/09/2026. Decisões canônicas: D-017/D-036 e D-056/D-057 em `DECISIONS.md`.
 
 ## Regra — prioridade da página oficial
 
@@ -105,4 +105,58 @@ A implementação preparada no PR #73 segue:
 - attachments próprios → material obrigatório separado;
 - URL, `externalId` e `authCode` permanecem preservados.
 
-O acervo produtivo atual ainda contém hashes/metadata legados calculados com PDFs autenticados. A decisão sobre preservar ou reconstruir esse acervo é um gate separado na Issue #1; esta política não autoriza operação destrutiva.
+O acervo produtivo atual ainda contém hashes/metadata legados calculados com PDFs autenticados. **A D-052 já decidiu pela reconstrução restrita ao acervo DOE-SP**, substituindo a alternativa de preservação. A execução continua condicionada aos gates da Issue #1 — preflight atualizado, pausa segura, backup recuperável, revisão do procedimento restrito, merge/deploy aplicável e validação da recaptura. Esta política, por si só, não autoriza operação destrutiva nem reconstrução de outras fontes.
+
+
+## GOV-03 — cadência, backfill, classificação e retenção
+
+As regras abaixo foram aprovadas em 27/09/2026 e complementam a política de representação oficial sem substituir D-017/D-036.
+
+### Monitoramento corrente
+
+Quando aplicável a motores já finalizados, os quatro ciclos diários de monitoramento são **06h, 10h, 14h e 18h no horário de Brasília**.
+
+### Backfill histórico
+
+Backfill é um fluxo separado do monitoramento corrente:
+- uma consulta por hora;
+- recuar um dia por consulta e por fonte;
+- continuar até alcançar todo o acervo que a fonte oficial efetivamente disponibilizar, inclusive anos ou décadas quando houver;
+- registrar indisponibilidade/falha sem tratá-la como ausência de publicações.
+
+### Escopo fiscal/tributário exibido
+
+Inclui:
+- **impostos, taxas, contribuições e demais tributos**;
+- benefícios fiscais e regimes tributários;
+- **obrigações, documentos e escriturações fiscais/tributárias**;
+- fiscalização, cobrança e contencioso tributário;
+- matéria aduaneira tributária;
+- Reforma Tributária;
+- mudanças de prazo, leiaute ou sistema **quando vinculadas a tributos, documentos, escriturações ou obrigações fiscais/tributárias**.
+
+Uma obrigação empresarial sem vínculo fiscal/tributário não entra no escopo apenas por afetar a empresa.
+
+Para matéria fiscal/tributária, preservar conteúdo integral conforme a representação oficial aplicável. Publicação com **CNPJ exato** de empresa/estabelecimento cadastrado também preserva conteúdo integral e pode ser exibida somente à respectiva conta, mesmo quando o assunto geral esteja fora do escopo fiscal.
+
+Uma **raiz isolada de oito dígitos** não caracteriza menção exata.
+
+Itens rejeitados pela classificação preservam metadados mínimos e **motivo da exclusão**, distinguindo descarte consciente de falha de coleta.
+
+**Questão aberta:** como reexaminar itens antigos quando uma nova empresa/CNPJ for cadastrada, sem transformar esta decisão em autorização de implementação.
+
+
+### Dependência de isolamento para publicações não fiscais por CNPJ
+
+A exceção de retenção por **CNPJ exato** não transforma o item em publicação fiscal pública. Quando uma publicação estiver fora do escopo fiscal e for preservada somente porque menciona CNPJ cadastrado:
+
+- sua visibilidade é restrita à conta correspondente;
+- ela não pode ser tratada como metadado global elegível ao Acervo público;
+- a API pública D-050 existente não implementa, por si só, filtro fiscal/tenant para essa nova categoria;
+- **antes de introduzir esses registros**, o filtro/proteção deve estar **implementado e validado**;
+- sem esse isolamento comprovado, a publicação não fiscal retida só por CNPJ **não pode ser persistida em tabelas globais consultadas por `GET /public/v1/publications` nem ficar de outra forma alcançável pela API pública**;
+- restringir apenas o componente visual do site não satisfaz o gate, porque a proteção deve existir no ponto de persistência/consulta pública;
+- a futura Issue técnica permanece aberta;
+- esta GOV-03 não autoriza alterar a API, schema ou pipeline.
+
+A rota pública atual continua válida para o contrato já implementado e validado; esta dependência deve ser cumprida **antes da futura introdução** de registros não fiscais retidos apenas por CNPJ.

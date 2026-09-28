@@ -24,14 +24,14 @@ O responsável definiu como referência visual aprovada os componentes/protótip
 | 2 | Header do PR #1 usava `tribusca-icon.png` isolado. | Header deve usar a assinatura horizontal oficial **`tribusca-logo-horizontal-light.png`**. | Usuário | Marca, assets, header. | Incluir o binário oficial no PR sem recriação. |
 | 3 | D-011/PR #1 usavam CTA de header **Experimentar grátis**. | Canto superior direito: **Entrar** (secundário) + **Criar conta** (primário). O trial de 7 dias continua como diretriz comercial, mas deixa de ser o CTA principal do header. | Usuário | Site/comercial, header, auth UX. | Implementar no draft; preservar D-011 apenas fora do header. |
 | 4 | PR #1 não implementava autenticação no site público. | Entrar, Criar conta, Recuperar senha e Nova senha devem abrir em **modal sobre a página**. Entrar consome apenas o endpoint existente **POST `/auth/login`** do backend. Não criar endpoints/autenticação paralelos. | Usuário | Frontend↔backend, segurança, UX. | Integrar login configurável por API base; cadastro/reset ficam estruturados sem endpoint fictício. |
-| 5 | Não havia regra pública para confirmação/requisitos de senha. | Criar conta e Nova senha: **Confirmar senha** + requisitos visíveis e validação em tempo real: tamanho mínimo, maiúscula, minúscula, número e caractere especial. | Usuário | UX, validação, testes. | Implementar client-side; contrato definitivo de cadastro/reset permanece dependente do backend. |
+| 5 | Não havia regra pública para confirmação/requisitos de senha. | Criar conta e Nova senha: **Confirmar senha** + requisitos visíveis e validação em tempo real: **mínimo 8 caracteres**, maiúscula, minúscula, número e caractere especial. | Usuário; mínimo ratificado na GOV-03/D-058 | UX, validação, testes. | Regra funcional aprovada; ativação continua dependente do contrato da Issue #9. |
 | 6 | PR #1 não continha o carrossel estadual aprovado no design. | Home: carrossel com **5 UFs**, SP sempre primeiro com Ponte Estaiada; outras 4 sorteadas por carregamento; fotos reais Wikimedia Commons com autoria/licença; imagem cobre o card; cada card reserva área para últimas/principais publicações estaduais. | Usuário | Home, acessibilidade, conteúdo/licenças. | Implementar com dados editoriais e placeholders `—` quando não houver contrato de API. |
 | 7 | Portfólio do PR #1 tinha 4 itens: Sonar, Revela, Decodifica e Acervo. | Home deve apresentar **6 recursos**: Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário + link **Ver portfólio completo**. | Usuário | Produto/site, conteúdo. | Implementar home e portfólio coerentes. |
 | 8 | PR #1 marcava todos os recursos como **Em desenvolvimento**. | WEB-02 levou ao draft **Acervo** e **Central de Monitoramento = Disponível**, condicionado a confirmação. **WEB-03/D-051 resolveu o gate: a confirmação não foi concedida e todos os seis recursos permanecem Em desenvolvimento.** | Usuário na WEB-02; decisão posterior do Gerente na WEB-03 | Claim comercial/status. | Histórico preservado; remover claim Disponível do draft/documentação. |
 | 9 | Manual v1 restringia paleta central a azul/ciano/teal; D-033 não fixava cores do Sonar. | Sonar: **Alta = vermelho, Média = amarelo, Baixa = verde**, mantendo rótulo textual. | Usuário | Marca/UX/acessibilidade. | Implementar semanticamente no draft; **exceção de marca pendente de aprovação da frente Branding** antes do merge. |
 | 10 | PR #1 mostrava estados/créditos do Decodifica, sem carrossel legal de 5 exemplos. | Decodifica: carrossel **Texto oficial × Leitura auxiliar** com 5 exemplos aprovados: Split payment (LC 214/2025 art. 31), Fato gerador (CTN art. 116), Crédito tributário (CTN art. 142), Cofins insumos (Lei 10.833/2003 art. 3º II), Compensação (Lei 9.430/1996 art. 74). Todos exibem **“Gerada por IA. Não substitui o texto oficial.”** | Usuário | Portfólio, conteúdo, IA labeling. | Implementar textos aprovados sem substituir o oficial. |
 | 11 | Revela já era descrito como Alta afinidade + menções diretas, mas sem apresentação de boletim conforme design novo. | Revela deve mostrar **exemplo de boletim diário** com itens explicitamente marcados **Alta afinidade** e **Menção direta**. | Usuário | Produto/UX/site. | Implementar no portfólio sem simular envio real. |
-| 12 | PR #1 não tinha rota Cobertura nem matriz federal + 27 UFs. | Página **Cobertura**: cards de largura total, primeiro serviços federais (DOU/INLABS, CONFAZ, NF-e/ENCAT, SPED, CGIBS, RFB), depois 27 UFs com SP primeiro. Campos: status da coleta (Online/Em validação/Em implantação), última atualização, importadas no dia, total no Acervo. Métricas reais somente com contrato de API; até lá **“—”**. | Usuário | Nova rota, dados/API futura, UX. | Implementar placeholders; não inventar endpoint. Abrir contrato backend quando houver autorização. |
+| 12 | PR #1 não tinha rota Cobertura nem matriz federal + 27 UFs. | Página **Cobertura**: cards de largura total, primeiro serviços federais (DOU/INLABS, CONFAZ, NF-e/ENCAT, SPED, CGIBS, RFB), depois 27 UFs com SP primeiro. Campos: status da coleta (Online/Em validação/Em implantação), última atualização, importadas no dia, total no Acervo. O contrato/API D-050 já foi posteriormente implementado e validado; **enquanto não houver integração WEB**, o frontend permanece em “—”. | Usuário; estado backend atualizado pela Issue #11 | Nova rota, integração API, UX. | Integrar somente em Issue/gate próprio; não inventar dados nem ampliar campos públicos além da decisão de produto. |
 | 13 | D-034/PR #1 tratavam timeline genericamente como publicação/vigência/marco/faseamento. | Reforma Tributária: timeline deve distinguir **Publicação / Vigência / Marco previsto em lei**; datas somente quando sustentadas por fonte oficial do Acervo. | Usuário | Reforma, dados, rastreabilidade. | Implementar estrutura sem cronograma especulativo. |
 
 ## Decodifica — textos aprovados para o carrossel
@@ -95,7 +95,7 @@ A implementação inclui as definições 1–13, com os seguintes limites delibe
 Dependências abertas:
 - [Issue #9](https://github.com/fabiojuniort-cyber/tribusca-control/issues/9) — cadastro/recuperação/nova senha;
 - [Issue #10](https://github.com/fabiojuniort-cyber/tribusca-control/issues/10) — ratificação cromática do Sonar;
-- [Issue #11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11) — API pública read-only para Cobertura/Acervo.
+- [Issue #11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11) — API pública backend mergeada/deployada/validada; **integração WEB, origens CORS reais e rate limit** permanecem abertos.
 
 **Próximo gate:** Gerente revisar os claims do item 8 e a aprovação Branding do item 9; depois revisão visual/funcional independente. O PR continua draft.
 
@@ -178,3 +178,23 @@ O preview é exclusivo para revisão do draft, sem secrets/dados produtivos. Ap�
 - Issue #9 continua gate para cadastro/recuperação;
 - pela D-054, se houver lançamento antes da Issue #9, o CTA “Criar conta” deve virar “Em breve” no gate de publicação; **não está implementado no head WEB-05**;
 - sem merge ou publicação definitiva.
+
+
+## GOV-03 — complementos de 27/09/2026
+
+- **Lançamento antes da Issue #9:** preservada a D-054; após os gates, o site informativo pode ser publicado antes do cadastro real, mas **Criar conta deve virar Em breve** enquanto a #9 estiver aberta.
+- **Senha:** mínimo de 8 caracteres + maiúscula + minúscula + número + caractere especial deixou de ser provisório e foi ratificado pela D-058.
+- **Acervo público:** título, data, órgão e link oficial; texto integral e busca avançada exigem autenticação.
+- **Trial:** 7 dias sem cartão, iniciado após verificação do e-mail + primeiro cadastro de empresa. CNPJ é opcional no formulário inicial; isso não inicia o trial sem o primeiro cadastro de empresa. Regra de empresa sem CNPJ continua aberta.
+- **Sonar:** D-053 continua sendo a decisão cromática; D-059 acrescenta **Dados insuficientes** e a semântica qualitativa Alta/Média/Baixa. A Issue #10 permanece aberta para revisão independente do preview.
+- **Disponibilidade:** demos, rotas, placeholders, previews, PRs e contratos em draft continuam sem equivaler a produto disponível.
+- **Nenhum merge/deploy** é autorizado por esta atualização documental.
+
+
+### GOV-03 — dependências adicionais do Acervo público
+
+- A API D-050 está disponível no backend, mas o frontend ainda não a consome.
+- Publicação não fiscal preservada só por CNPJ exato é privada da conta e **não pode** alcançar a API/Acervo público sem Issue técnica + gate de isolamento.
+- D-058 aprovou para exibição pública somente título, data, órgão e link oficial.
+- `GET /public/v1/publications` retorna campos adicionais (`id`, `actType`, `actNumber`, `uf`, `effectiveOn`), cuja exibição pública permanece pendente de decisão de produto.
+- Esta atualização documental não altera frontend nem backend.

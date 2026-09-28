@@ -2,7 +2,7 @@
 
 > **Precedência WEB-02 (26/09/2026):** para a camada pública, definições conflitantes anteriores são substituídas pela seção **WEB-02 — interface pública aprovada em 26/09/2026**. O restante deste documento continua vigente para produto autenticado.
 
-Atualizado em 26/09/2026. Registro das decisões comunicadas pelo responsável pelo produto. Este documento descreve direção aprovada, não afirma que os recursos estejam implementados. A implementação verificada permanece em [PROJECT_STATE.md](../PROJECT_STATE.md), Issues e repositórios de código.
+Atualizado em 27/09/2026. Registro das decisões comunicadas pelo responsável pelo produto. Este documento descreve direção aprovada, não afirma que os recursos estejam implementados. A implementação verificada permanece em [PROJECT_STATE.md](../PROJECT_STATE.md), Issues e repositórios de código.
 
 ## Propósito e fluxo
 
@@ -65,8 +65,8 @@ Diretrizes aprovadas:
 - Navegação pública: **Cobertura · Portfólio · Como funciona · Reforma Tributária**, em rotas dedicadas.
 - Header: assinatura horizontal oficial + botões **Entrar** e **Criar conta**. O CTA “Experimentar grátis” deixa de ser o CTA primário do header, sem extinguir o trial de 7 dias da D-011.
 - Autenticação pública: Entrar/Criar conta/Recuperar senha/Nova senha em modal. Apenas Entrar possui contrato backend comprovado nesta frente: **POST `/auth/login`**. Não inventar cadastro/reset.
-- Criar conta/Nova senha: confirmar senha e requisitos em tempo real; limiar de 8 caracteres no draft é provisório até contrato backend.
-- Home estadual: 5 UFs, SP fixo em primeiro e 4 sorteadas; fotos licenciadas do Wikimedia Commons; área de publicações usa **“—”** sem API.
+- Criar conta/Nova senha: confirmar senha e requisitos em tempo real; a D-058 ratificou mínimo de 8 caracteres, maiúscula, minúscula, número e caractere especial. A ativação continua dependente da Issue #9.
+- Home estadual: 5 UFs, SP fixo em primeiro e 4 sorteadas; fotos licenciadas do Wikimedia Commons; área de publicações usa **“—”** enquanto a API pública ainda não estiver integrada ao frontend.
 - Portfólio público: **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica, Perfil Tributário**. **WEB-03 substitui o claim do draft:** todos os seis recursos ficam como **Em desenvolvimento** até comprovação operacional e autorização específica de publicação.
 - Sonar mantém Alta/Média/Baixa + proximidade. A WEB-05 / D-053 ratificou conceitualmente a exceção semântica restrita ao Sonar: Alta `#C92A2A`, Média `#9A6900`, Baixa texto `#237032` e ping `#2B8A3E`; rótulo textual e proximidade permanecem obrigatórios. A verificação independente final ainda está pendente.
 - Decodifica: carrossel de cinco exemplos Texto oficial × Leitura auxiliar definidos no registro WEB-02, sempre com aviso de IA.
@@ -95,3 +95,58 @@ A11Y/Branding corrigidos no draft: carrossel com alvos ≥24px e foco visível; 
 **Cadastro público:** a Issue #9 continua sendo gate. Pela D-054, se houver lançamento do site antes de cadastro funcional e validado, **“Criar conta” deve ser substituído temporariamente por “Em breve” antes da publicação definitiva**. Essa troca é uma regra condicional de lançamento e **não está implementada no head WEB-05**.
 
 **Próximo passo:** revisão independente no preview temporário. Não declarar a WEB concluída antes desse parecer.
+
+
+## GOV-03 — refinamentos aprovados em 27/09/2026
+
+Esta seção prevalece sobre passagens anteriores que mantinham estes pontos como provisórios ou abertos.
+
+### Sonar
+
+- existe um estado separado **Dados insuficientes**; ele não equivale a Baixa afinidade;
+- preservadas as cores ratificadas na D-053, **Alta** representa sinal específico forte;
+- **Média** representa relação relevante mais geral ou incompleta;
+- **Baixa** representa coincidência ampla;
+- o resultado sempre mostra rótulo textual e **sinais encontrados**;
+- porcentagens e pesos numéricos não são apresentação aprovada ao cliente;
+- feedback serve para avaliação e mudanças governadas; não existe autoajuste silencioso.
+
+A D-059 não fecha pesos, limiares ou fórmula. A revisão independente visual/acessível da D-053 continua pendente na Issue #10.
+
+### Revela
+
+- envio padrão às **08h de Brasília**;
+- funciona em qualquer dia em que existam itens;
+- não envia boletim vazio;
+- mantém histórico;
+- administrador seleciona destinatários e cada usuário controla o próprio recebimento;
+- cada item informa empresa/estabelecimento relacionado e o motivo;
+- na v1, menção direta exige **CNPJ exato**;
+- **Média afinidade não entra** no boletim inicial.
+
+### Decodifica
+
+A base comercial de caracteres é o **texto oficial normalizado completo**, incluindo título, artigos e anexos materiais integrantes; HTML, metadados, URLs e espaços repetidos não entram. Divisão técnica de atos extensos não muda o custo integral.
+
+Créditos só são debitados quando o resultado é entregue. Falha, timeout e cancelamento não consomem; reutilização global efetivamente entregue continua consumindo. Mudança apenas de modelo/prompt não torna o resultado obsoleto; mudança do conteúdo oficial torna. Invalidação excepcional por erro, segurança ou qualidade registra a causa.
+
+Créditos da assinatura renovam mensalmente sem acumular. Créditos extras podem ser comprados; validade e ordem de consumo dos extras permanecem abertas.
+
+### Reforma Tributária
+
+Escopo inicial: legislação constitucional/complementar, CGIBS, Receita Federal, CONFAZ relacionado, notas técnicas NF-e/CT-e/NFS-e/SPED e publicações marcadas IBS/CBS/IS/Reforma. Navegação: **Últimas publicações · Legislação · Regulamentação · Notas técnicas · Timeline**. A inclusão é baseada em marcadores; destaque editorial é evolução futura, não implementação atual.
+
+### Acervo público, autenticação e trial
+
+O Acervo público expõe título, data, órgão e link oficial; **texto integral e busca avançada exigem autenticação**. O trial de 7 dias sem cartão começa após verificação do e-mail + primeiro cadastro de empresa. O formulário inicial usa nome, e-mail profissional, senha e CNPJ opcional; primeiro usuário = administrador. Ao adicionar CNPJ matriz/filial, tentar obter CNAE/endereço automaticamente de fonte disponível. Empresa sem CNPJ permanece questão aberta.
+
+A D-054 continua sendo o gate de lançamento: se o site for publicado antes de cadastro funcional da Issue #9, **Criar conta → Em breve**. Preview, página, PR ou contrato em draft não equivale a disponibilidade.
+
+
+### Dependências do Acervo público após D-057/D-058
+
+- publicação **não fiscal** preservada somente por CNPJ exato é privada da respectiva conta; a API pública atual não possui filtro fiscal/tenant para essa nova categoria;
+- antes de esse tipo de registro poder alimentar o Acervo público, é necessária **Issue técnica + gate de isolamento**;
+- a D-058 aprovou para exibição pública somente **título, data, órgão e link oficial**;
+- o contrato atual de `GET /public/v1/publications` também retorna `id`, `actType`, `actNumber`, `uf` e `effectiveOn`;
+- a existência desses campos adicionais na API não amplia automaticamente a regra de exibição da D-058; a decisão de produto permanece aberta.

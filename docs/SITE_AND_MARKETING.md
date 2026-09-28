@@ -2,7 +2,7 @@
 
 > **Precedência WEB-02 (26/09/2026):** em qualquer conflito entre diretrizes históricas deste documento e a seção **WEB-02 — diretrizes públicas que substituem o layout anterior**, prevalece a WEB-02. O texto anterior é mantido apenas como histórico.
 
-Atualizado em 26/09/2026. Decisões de produto/layout comunicadas pelo responsável. **Site público retomado em 26/09/2026 por autorização do responsável pelo produto na WEB-01.** A implementação pública pode avançar em paralelo como camada de comunicação/descoberta, sem afirmar que recursos autenticados ou integrações futuras estejam disponíveis. A estrutura abaixo é direção conceitual; não tratar o protótipo Railway como design aprovado.
+Atualizado em 27/09/2026. Decisões de produto/layout comunicadas pelo responsável. **Site público retomado em 26/09/2026 por autorização do responsável pelo produto na WEB-01.** A implementação pública pode avançar em paralelo como camada de comunicação/descoberta, sem afirmar que recursos autenticados ou integrações futuras estejam disponíveis. A estrutura abaixo é direção conceitual; não tratar o protótipo Railway como design aprovado.
 
 ## Objetivo e conteúdo
 
@@ -26,7 +26,7 @@ Todas as páginas, login, aplicativo e peças devem partir dos arquivos oficiais
 
 ## Pendências
 
-A WEB-01 inicia a camada pública em paralelo à macrofase DOE. Frontend autenticado, dados dinâmicos, API real e disponibilização produtiva dos recursos continuam condicionados às respectivas frentes técnicas. O protótipo anterior não vira referência visual por esta retomada.
+A WEB-01 inicia a camada pública em paralelo à macrofase DOE. A API pública D-050 já está mergeada/deployada e validada no backend, mas **integração WEB, origens CORS reais e rate limit** continuam condicionados às respectivas frentes técnicas. Frontend autenticado e disponibilização produtiva dos recursos seguem condicionados aos seus próprios gates. O protótipo anterior não vira referência visual por esta retomada.
 
 
 ## Página Reforma Tributária
@@ -72,3 +72,60 @@ O head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d` está disponível somente em *
 **Regra de CTA — D-054:** se o site for lançado antes de a Issue #9 entregar e validar cadastro funcional, a ação pública **“Criar conta” deve ser substituída por “Em breve”** antes do lançamento. Essa alteração **não está implementada no head atual**; só deve ser aplicada no gate de publicação se a dependência continuar aberta.
 
 A Issue #10 permanece aberta até o revisor independente validar no preview os contrastes, a redundância texto/proximidade/cor e a restrição das cores ao Sonar.
+
+
+## GOV-03 — autenticação, Acervo público e comercial
+
+**Decisões aprovadas em 27/09/2026.** A WEB-05/D-054 já definiu o gate do CTA; esta seção completa as regras de acesso, trial e comercial sem alterar o frontend nesta atividade.
+
+### Site antes da Issue #9
+
+O **site informativo** pode ser publicado antes de a Issue #9 estar pronta, desde que tenha passado pelos gates de revisão aplicáveis. A D-054 exige que, enquanto cadastro real não estiver disponível, **“Criar conta” seja substituído temporariamente por “Em breve”** antes da publicação definitiva.
+
+Isso não declara o site atual publicado: o preview/PR continua sujeito aos gates e nenhuma rota, mock, placeholder, demonstração ou PR transforma recurso em produto disponível.
+
+### Acervo público x autenticado
+
+Sem autenticação, o Acervo pode expor:
+- título;
+- data;
+- órgão;
+- link oficial.
+
+**Texto integral** e **busca avançada** exigem autenticação.
+
+### Cadastro e trial
+
+Cadastro/trial só são ativados quando o contrato da Issue #9 estiver pronto.
+
+- trial: **7 dias, sem cartão**;
+- início: depois de **verificação do e-mail** e **primeiro cadastro de empresa**;
+- formulário inicial: nome, e-mail profissional, senha e CNPJ opcional;
+- senha: mínimo **8 caracteres**, com maiúscula, minúscula, número e caractere especial;
+- primeiro usuário da conta: **administrador**;
+- ao adicionar CNPJ de matriz ou filial, tentar obter **CNAE e endereço** automaticamente de fonte disponível.
+
+CNPJ opcional no formulário não significa trial iniciado sem empresa. A regra de cadastro de empresa **sem CNPJ** permanece questão aberta.
+
+### Público prioritário e planos
+
+Cliente inicial prioritário: **departamentos fiscais/tributários de empresas**. A arquitetura deve permanecer compatível com atendimento a escritórios no futuro.
+
+A grade comercial deverá ter **três níveis**, diferenciáveis por:
+- empresas;
+- estabelecimentos;
+- profundidade do Perfil Tributário;
+- Produto/NCM;
+- créditos;
+- usuários.
+
+Credenciais da mesma pessoa não podem manter uso simultâneo; a ação exata ao ocorrer um segundo login ainda será definida.
+
+A apresentação de preços deverá favorecer a escolha do nível intermediário ou superior, sem fixar valores nesta fase. **Nomes, preços, franquias e quantidade de créditos por plano dependem do piloto de custos e uso.**
+
+
+### Gate de privacidade e campos do Acervo público
+
+A D-057 permite preservar publicação não fiscal por menção exata a CNPJ, porém esse item é privado da conta correspondente. O contrato público D-050 atual trabalha com metadados globais e não possui filtro fiscal/tenant para essa nova categoria. Antes de tais registros poderem alimentar o Acervo público, deve existir **Issue técnica e gate que impeçam exposição pública de metadados**.
+
+A D-058 aprovou no Acervo público apenas **título, data, órgão e link oficial**. O endpoint `GET /public/v1/publications` já retorna também `id`, `actType`, `actNumber`, `uf` e `effectiveOn`. Esses campos adicionais não devem aparecer publicamente por simples disponibilidade técnica; a ampliação da exibição depende de decisão de produto posterior.

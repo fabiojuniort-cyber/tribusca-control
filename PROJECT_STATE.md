@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 26/09/2026 (America/Sao_Paulo).
+Atualizado em 27/09/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -40,16 +40,43 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 - Motor, autenticação/RLS, infraestrutura e fontes federais: entregas reportadas anteriormente; esta atualização não fez revalidação produtiva completa.
 - DOU/INLABS: operacional, com gate final ainda a confirmar.
 - CONFAZ: DOU como fonte primária dos atos formalmente publicados; portal direto indisponível no Railway segundo diagnósticos anteriores.
-- Outros 26 DOEs: pendentes; só iniciar outro estado após fechamento formal de SP.
-- API do produto, taxonomia, perfil e integrações autenticadas de Sonar/Revela/Decodifica/Acervo: prioridades posteriores conforme [ROADMAP.md](ROADMAP.md). A camada pública do site foi excepcionalmente autorizada em paralelo pela D-035 / WEB-01.
+- Outros 26 DOEs: pendentes; **nenhum novo DOE começa antes do fechamento formal de SP**. Depois do fechamento, a D-055 permite paralelismo com taxonomia, Perfil Tributário e autenticação/comercial.
+- O roadmap foi refinado pela D-055: após o fechamento formal do DOE-SP, demais DOEs, taxonomia, Perfil Tributário e autenticação/comercial podem avançar em paralelo. Sonar/Revela/Decodifica e integrações autenticadas continuam dependentes das respectivas bases/Issues. A camada pública segue autorizada em paralelo.
 
-### WEB-01 / WEB-02 — site público
+### WEB-01 / WEB-07 — site público
 
-**EM REVISÃO — não declarar publicado.**
+**BLOQUEADO EM REVISÃO — não declarar publicado nem aprovado.**
 
-A [Issue #8](https://github.com/fabiojuniort-cyber/tribusca-control/issues/8) autorizou a camada pública em paralelo; em 26/09/2026 a WEB-02 substituiu as definições visuais conflitantes conforme D-037–D-049. O draft [frontend PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`, contém Home, Cobertura, Portfólio, Como funciona e Reforma Tributária; modais de acesso; login conectado ao contrato existente `POST /auth/login`; carrossel estadual; seis recursos; Sonar/Revela/Decodifica conforme WEB-02; Cobertura federal + 27 UFs com status e métricas sem API em `—`; e timeline da Reforma sem datas especulativas. WEB-05 corrigiu os bloqueios A11Y/Branding da revisão independente. GitHub Actions #38 / run `36361749038` = **SUCCESS**, com 13/13 testes, typecheck, checksum do logo escuro e build.
+A [Issue #8](https://github.com/fabiojuniort-cyber/tribusca-control/issues/8) acompanha o draft [frontend PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), que permanece **OPEN / DRAFT / unmerged**.
 
-**Sem merge e sem publicação definitiva.** WEB-03/D-051 mantém os seis recursos como `Em desenvolvimento`. WEB-05/D-053 ratificou conceitualmente as cores semânticas do Sonar com ajustes de contraste; Issue #10 permanece aberta até a verificação independente final. Preview temporário do head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`: `https://web05-preview-production.up.railway.app`, deployment `1cf730d6-741a-4187-904c-3da2e231100b` SUCCESS. Cadastro/reset dependem da Issue #9; se o site for lançado antes dela, D-054 exige trocar “Criar conta” por “Em breve” antes da publicação. Esse ajuste não está implementado no head atual.
+**WEB-06:** revisão independente do head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d` = **REPROVADO/BLOQUEANTE**. Bloqueios comprovados:
+- `#237032`, ratificado pela D-053 como exceção restrita ao Sonar, também era usado em `.password-rules .rule-ok`;
+- não foi executada validação real em navegador para viewports, teclado/foco, focus trap/return, overflow e reduced-motion.
+
+A ratificação conceitual D-053 permanece válida, porém a **Issue #10 continua OPEN** e o gate técnico não foi concluído.
+
+**WEB-07:** em execução. O PR #1 avançou durante esta atualização; **head vivo revalidado:** `c35065abfb3ff7e39914eef9bc79337aea086bce`. O head intermediário `515e6b7...` teve Frontend CI #42 / run `36364670460` = **FAILURE**. Para `c35065a...`, Frontend CI #45 / run `36365215109` estava **IN_PROGRESS** no snapshot do gate documental. **Não há parecer independente favorável** e não se deve inferir aprovação por commit, CI ou existência de Playwright.
+
+Estado preservado:
+- seis recursos públicos continuam `Em desenvolvimento`;
+- integração WEB da API pública ainda não está concluída;
+- Issue #9 e D-054 continuam gates de cadastro/lançamento;
+- sem merge e sem publicação definitiva do frontend.
+
+### GOV-03 — decisões de coleta, produto, site e comercial
+
+**DOCUMENTAÇÃO CONSOLIDADA EM BRANCH — nenhuma implementação, merge ou deploy por esta atividade.**
+
+D-055 a D-063 registram: paralelismo condicionado ao fechamento formal DOE-SP; cadência corrente/backfill; escopo fiscal/retenção e CNPJ exato; Acervo público/auth/trial; Sonar; Revela; Decodifica; Reforma; e comercial.
+
+Pontos de estado:
+- DOE-SP permanece **ABERTO** e prioritário;
+- D-055 não libera outro DOE antes do fechamento de SP;
+- D-054 continua sendo o gate do CTA se houver lançamento do site antes da #9;
+- cadastro/trial continuam bloqueados pela #9; D-058 define as regras funcionais futuras;
+- D-053 segue como ratificação cromática do Sonar; Issue #10 continua aberta para verificação independente final;
+- questões remanescentes estão em `docs/OPEN_QUESTIONS.md`;
+- nenhuma disponibilidade de produto foi inferida de páginas, previews, mocks, PRs ou contratos em draft.
 
 ## Governança
 
@@ -57,19 +84,33 @@ A [Issue #8](https://github.com/fabiojuniort-cyber/tribusca-control/issues/8) au
 
 Decisões aprovadas de [produto/UX](docs/PRODUCT_AND_UX.md), [site/comercial](docs/SITE_AND_MARKETING.md), [marca v1](docs/BRAND_MANUAL_V1.md) e [ativos](docs/BRAND_ASSETS.md) foram incorporadas ao repositório; [questões abertas](docs/OPEN_QUESTIONS.md) mantêm propostas separadas do que foi decidido. O [índice de decisões](DECISIONS.md) liga esses temas. A camada pública do site foi retomada pela D-035 / WEB-01, sem declarar recursos autenticados implementados.
 
-[CONTEXT.md](CONTEXT.md) é o ponto de leitura direta do Gerente Geral GPT-6 ao abrir uma conversa; ele pode reler contexto e evidências sempre que necessário, sem chat de bootstrap. [Backend](contexts/BACKEND.md), [frontend](contexts/WEB.md) e [DOE-SP](contexts/DOE-SP.md) são índices de frente; [executor](contexts/EXECUTOR.md) e [revisor](contexts/REVIEWER.md) apontam para as Issues atuais sem duplicar seus handoffs. O [protocolo de atualização](docs/CONTEXT_MAINTENANCE.md) define responsáveis e marcos. `radar-fiscal-web` possui agora o draft PR #1 (`feat/web-01-site-publico`, head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`); CI #38 / run `36361749038` SUCCESS (13/13 testes, typecheck, checksum do ativo e build). O PR não foi mergeado. Existe apenas preview temporário autorizado para revisão WEB-05, sem publicação definitiva. [Backend PR #72](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/72) foi mergeado com autorização em 26/09/2026 no commit `f25a596edce592e6e365e87ed4cbf16ba0922de8`, com dois arquivos de governança e CI #382 SUCCESS. Deploys automáticos desse commit: Backend `d0e39486-cdff-4ff1-9531-04a4f3b4dedd`, Worker `cfcb6909-ce88-4694-b493-daf7aa302bc7` e Scheduler `c34c8850-6c48-4d16-a0a4-14f817184d5d`, todos SUCCESS. Isso não é evidência de fechamento DOE-SP. No protocolo vigente, o Gerente Geral GPT-6 pode ler diretamente contextos e evidências quando necessário para analisar erros, handoffs e decisões, mas não realiza escritas nem ações que alterem estado; o GPT-5.6 delegado atualiza CONTEXT.md e este arquivo após o marco definido e traz commit/link. Os executores e revisores GPT-5.6 registram evidências nas Issues. A atualização não ocorre automaticamente entre conversas.
+[CONTEXT.md](CONTEXT.md) é o ponto de leitura direta do Gerente Geral GPT-6 ao abrir uma conversa; ele pode reler contexto e evidências sempre que necessário, sem chat de bootstrap. [Backend](contexts/BACKEND.md), [frontend](contexts/WEB.md) e [DOE-SP](contexts/DOE-SP.md) são índices de frente; [executor](contexts/EXECUTOR.md) e [revisor](contexts/REVIEWER.md) apontam para as Issues atuais sem duplicar seus handoffs. O [protocolo de atualização](docs/CONTEXT_MAINTENANCE.md) define responsáveis e marcos. `radar-fiscal-web` mantém o draft PR #1 (`feat/web-01-site-publico`), **head vivo `c35065abfb3ff7e39914eef9bc79337aea086bce`**. WEB-06 foi REPROVADO/BLOQUEANTE no head `f92fbea8...`; WEB-07 está em execução. O head intermediário `515e6b7...` teve workflow #42 / run `36364670460` = FAILURE; o workflow #45 / run `36365215109` do head observado estava IN_PROGRESS no snapshot do gate documental. O PR não foi mergeado e não há aprovação independente do novo head. [Backend PR #72](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/72) foi mergeado com autorização em 26/09/2026 no commit `f25a596edce592e6e365e87ed4cbf16ba0922de8`, com dois arquivos de governança e CI #382 SUCCESS. Deploys automáticos desse commit: Backend `d0e39486-cdff-4ff1-9531-04a4f3b4dedd`, Worker `cfcb6909-ce88-4694-b493-daf7aa302bc7` e Scheduler `c34c8850-6c48-4d16-a0a4-14f817184d5d`, todos SUCCESS. Isso não é evidência de fechamento DOE-SP. No protocolo vigente, o Gerente Geral GPT-6 pode ler diretamente contextos e evidências quando necessário para analisar erros, handoffs e decisões, mas não realiza escritas nem ações que alterem estado; o GPT-5.6 delegado atualiza CONTEXT.md e este arquivo após o marco definido e traz commit/link. Os executores e revisores GPT-5.6 registram evidências nas Issues. A atualização não ocorre automaticamente entre conversas.
 
 Documentos de decisões, arquitetura, papéis, segurança, handoff, revisão e modelos de Issue/PR criados neste repositório. Cinco Issues representam a frente atual, com etiquetas de prioridade e área. O [quadro TriBusca — Gestão do Projeto](https://github.com/users/fabiojuniort-cyber/projects/1) foi criado com importação das cinco Issues; o usuário informou a movimentação da Issue #1 para In Progress. O quadro oferece Todo, In Progress e Done; etapas específicas de revisão e validação produtiva são registradas em comentários da Issue. O conector GitHub atual não altera as colunas do Projects. O ciclo completo permanece em validação na Issue #5. Chats não se comunicam automaticamente por causa desses arquivos; o estado oficial é registrado no GitHub.
 
 
 ## API-01 — API pública do site
 
-**IMPLEMENTADA EM DRAFT — CI verde; merge/deploy não autorizados.**
+**MERGEADA E VALIDADA EM PRODUÇÃO NO ESCOPO D-050; INTEGRAÇÃO WEB AINDA ABERTA.**
 
 Issue executora: [#11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11).
 
-D-050 define três rotas read-only sob `/public/v1` para fontes, publicações e estatísticas. O draft [PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, implementa o contrato sem autenticação, sem `content_text`/dados privados, com CORS por allowlist, preflight GET-only e cache 300s. CI #433 / run `36260320585` = **SUCCESS**. Sem migration ou job novo; rate limit segue pendente.
+O [backend PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74) foi mergeado por squash no commit `4688ff87a0b039eb426b80f5e279c95214fb87d2`.
 
-Produção: PostgreSQL está online, mas o conector Railway disponível não executa SQL read-only; portanto schema/view produtivos não foram consultados diretamente neste marco. O código/migrations confirmam grants SELECT da role da API para os objetos necessários e índices `ix_publications_scope_date` e `ix_collection_runs_source_history`.
+Evidência registrada na Issue #11:
+- revisão independente favorável do head pré-merge;
+- deploys automáticos de Backend, Worker e Scheduler = **SUCCESS**;
+- validação produtiva HTTP 200 dos três GETs:
+  - `GET /public/v1/sources`;
+  - `GET /public/v1/publications?uf=SP&limit=3`;
+  - `GET /public/v1/stats`;
+- cache `public, max-age=300`;
+- `Vary` contendo `Origin`;
+- sem conteúdo integral ou chaves tenant/company/user/credencial/token nos payloads inspecionados;
+- sem migration ou job novo.
 
-Próximo gate: Gerente revisa o handoff do PR #74 e decide merge. Deploy/configuração de `PUBLIC_API_ALLOWED_ORIGINS`, URL base pública e validação contra produção ficam em gate separado.
+**Ainda abertos na #11:** integração WEB, confirmação/configuração das origens CORS reais e rate limit por IP.
+
+**Nova dependência GOV-03 / D-057:** publicação não fiscal retida apenas por CNPJ exato é privada da respectiva conta. A API D-050 atual consulta metadados globais e não possui filtro fiscal/tenant para essa nova categoria. **Antes de introduzir esses registros, o filtro/proteção precisa estar implementado e validado**; sem isso, eles não podem ser persistidos em tabelas globais consultadas por `GET /public/v1/publications` nem ficar de outra forma alcançáveis pela API pública. Restrição apenas visual não satisfaz o gate. A futura Issue técnica permanece aberta.
+
+**Divergência D-058 × contrato atual:** a exibição pública aprovada contém título, data, órgão e link oficial; `GET /public/v1/publications` também retorna `id`, `actType`, `actNumber`, `uf` e `effectiveOn`. A API não será alterada por esta GOV-03 e a exibição desses campos adicionais requer decisão de produto posterior.

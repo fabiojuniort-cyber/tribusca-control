@@ -1,6 +1,6 @@
 # TriBusca — entrada de qualquer chat de frontend
 
-Atualizado em 26/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) agora possui uma primeira implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`, head verificado `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`.
+Atualizado em 27/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) possui a implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`. **Head vivo revalidado:** `c35065abfb3ff7e39914eef9bc79337aea086bce`. O último parecer independente concluído é WEB-06 sobre o head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d` e foi **REPROVADO/BLOQUEANTE**; WEB-07 está em execução e o novo head não implica aprovação.
 
 Leia [CONTEXT.md](../CONTEXT.md), [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md), [produto/UX](../docs/PRODUCT_AND_UX.md), [site/comercial](../docs/SITE_AND_MARKETING.md), [Manual de Marca v1](../docs/BRAND_MANUAL_V1.md) e a Issue específica. Os [ativos oficiais](../docs/BRAND_ASSETS.md) devem ser usados sem recriação.
 
@@ -21,7 +21,7 @@ O draft PR #1 implementa:
 
 GitHub Actions run **36361749038**: **SUCCESS** em 26/09/2026. Passaram instalação, typecheck, testes e build.
 
-**Não comprovado / não autorizado:** merge na main, deploy, site produtivo, API, autenticação, matching real do Sonar, envio real do Revela, consumo real do Decodifica ou Acervo dinâmico.
+**Não comprovado / não autorizado no frontend:** merge na main, publicação definitiva do site, **integração/consumo da API pública**, autenticação de cadastro/reset, matching real do Sonar, envio real do Revela, consumo real do Decodifica ou Acervo dinâmico. A API pública backend D-050 já está mergeada/deployada; isso não significa que o frontend a esteja consumindo.
 
 ## Stack e limites
 
@@ -34,17 +34,34 @@ Retomada: “Leia https://github.com/fabiojuniort-cyber/tribusca-control/blob/ma
 
 ## API-01 — dados reais para Cobertura/Acervo
 
-Em 26/09/2026 o usuário definiu o contrato backend D-050 / Issue #11 para substituir os placeholders “—” de WEB-02 quando a API estiver publicada.
+A D-050 / Issue #11 definiu a API pública read-only:
 
-Rotas previstas:
 - `GET /public/v1/sources`;
-- `GET /public/v1/publications?uf=SP&limit=3`;
+- `GET /public/v1/publications`;
 - `GET /public/v1/stats`.
 
-Backend preparado no draft [PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, CI #433 SUCCESS. O site **ainda não deve consumir** até o backend ser mergeado/deployado em gate separado e existir `apiBase` público validado; WEB-02 continua exibindo placeholders em vez de inventar dados.
+### Backend verificado
 
-CORS está implementado por `PUBLIC_API_ALLOWED_ORIGINS`, sem credentials e com preflight GET-only. Os domínios reais do protótipo Railway e do site definitivo ainda não estão comprovados/configurados porque não houve deploy; entram no próximo gate. A Issue #11 executa Cobertura/Acervo; Issue #9 continua responsável pelos demais contratos públicos de cadastro/reset.
+O [backend PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74) foi mergeado por squash em `4688ff87a0b039eb426b80f5e279c95214fb87d2`. A Issue #11 registra deploy produtivo verde e validação HTTP 200 dos três GETs, com cache/CORS conforme D-050 e sem conteúdo integral ou dados tenant/company/user nos payloads inspecionados.
 
+### WEB ainda aberto
+
+O frontend **ainda não está integrado** a essa API. Permanecem abertos:
+- configurar o `apiBase`/consumo no frontend;
+- confirmar/configurar as origens CORS reais;
+- revisão do rate limit no backend.
+
+Até a integração WEB ser implementada e validada, o frontend não deve substituir placeholders por dados reais apenas porque a API backend existe.
+
+### Gate adicional criado pela D-057
+
+Publicações **não fiscais** preservadas somente por menção exata a CNPJ são privadas da respectiva conta. A API pública atual não possui filtro fiscal/tenant para essa nova categoria. Antes de qualquer integração que possa incluir tais registros no Acervo público, é necessária **Issue técnica + gate de isolamento**.
+
+### Campos de exibição ainda não alinhados
+
+A D-058 aprovou para exibição no Acervo público somente **título, data, órgão e link oficial**. O endpoint `GET /public/v1/publications` também retorna `id`, `actType`, `actNumber`, `uf` e `effectiveOn`.
+
+Esses campos adicionais podem existir na API por D-050, mas **não devem ser presumidos como aprovados para exibição** no Acervo público. A decisão de produto permanece aberta e esta GOV-03 não altera a API nem o frontend.
 
 ## WEB-02 — design aprovado e estado verificado
 
@@ -61,13 +78,13 @@ No head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`, o draft PR #1 contém:
 - Sonar com proximidade e cores semânticas de draft;
 - Revela com boletim Alta afinidade/Menção direta;
 - Decodifica com cinco exemplos Texto oficial × Leitura auxiliar;
-- Cobertura federal + 27 UFs, com status e métricas `—` sem API;
+- Cobertura federal + 27 UFs, com status e métricas `—` **sem integração WEB da API pública**;
 - timeline da Reforma separando Publicação/Vigência/Marco previsto em lei;
 - responsividade e `prefers-reduced-motion`.
 
 CI run `36361749038` = **SUCCESS** (install, typecheck, testes e build).
 
-**WEB-03/D-051 resolveu o antigo gate de disponibilidade:** Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário ficam todos como **Em desenvolvimento** no site público. **Gates ainda pendentes:** Branding / Issue #10 para cores do Sonar e revisão visual/funcional. PR permanece draft, sem merge/deploy. Contratos dependentes: Issue #9 (cadastro/reset) e Issue #11 (Cobertura/Acervo público).
+**WEB-03/D-051 resolveu o antigo gate de disponibilidade:** Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário ficam todos como **Em desenvolvimento** no site público. A D-053 ratificou conceitualmente as cores do Sonar; Issue #10 continua aberta para a verificação independente do preview. PR permanece draft, sem merge/deploy. Contratos dependentes: Issue #9 (cadastro/reset) e Issue #11 (Cobertura/Acervo público).
 
 
 ## WEB-03 — correção de claims
@@ -76,7 +93,7 @@ Em 26/09/2026, por decisão do Gerente, o claim da D-043 não foi confirmado par
 
 A existência de rotas, placeholders, mocks, demonstrações ou contratos em PR não autoriza o rótulo “Disponível”.
 
-**Impacto:** frontend público + documentação. Head WEB-03 verificado `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`; CI run `36361749038` = **SUCCESS** (install, typecheck, testes e build). Cores do Sonar continuam apenas em avaliação no draft e dependem da Issue #10. Revisão visual/funcional permanece gate separado. Sem merge/deploy.
+**Impacto:** frontend público + documentação. Head WEB-03 verificado `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`; CI run `36361749038` = **SUCCESS** (install, typecheck, testes e build). As cores foram ratificadas conceitualmente pela D-053; Issue #10 permanece aberta para a revisão independente visual/acessível do preview. Sem merge/deploy.
 
 
 ## WEB-05 — pronto para nova revisão independente
@@ -100,3 +117,37 @@ Preview temporário de revisão:
 **Gates ainda abertos:** revisão independente visual/funcional e Issue #9 para cadastro/reset. A Issue #10 permanece aberta apenas até a verificação independente final da ratificação cromática. Pela D-054, se houver lançamento antes de cadastro funcional, “Criar conta” deve virar “Em breve” no gate de publicação; essa mudança **não está implementada** neste head.
 
 PR continua draft. Sem merge e sem publicação definitiva. Após a revisão e preservação das evidências, remover o preview temporário Railway.
+
+
+## WEB-06 / WEB-07 — gate atual
+
+**WEB-06 — parecer independente concluído no head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`: REPROVADO/BLOQUEANTE.**
+
+Bloqueios registrados nas Issues #8/#10 e no review do frontend PR #1:
+1. a cor `#237032`, ratificada como exceção semântica restrita ao Sonar, também era usada em `.password-rules .rule-ok`, fora do Sonar;
+2. a sessão de revisão não conseguiu executar a validação real em navegador de viewports, teclado/foco, focus trap/return, overflow e reduced-motion.
+
+A ratificação conceitual da D-053 permanece válida, mas **Issue #10 continua ABERTA** e o gate técnico não foi concluído.
+
+**WEB-07 — em execução.** Durante esta atualização, o PR #1 avançou novamente e o **head vivo atual** foi revalidado em `c35065abfb3ff7e39914eef9bc79337aea086bce`. O head intermediário `515e6b7f9c9965a94bcafced12886a8cebe12046` teve Frontend CI #42 / run `36364670460` = **FAILURE**. Para o head vivo `c35065a...`, Frontend CI #45 / run `36365215109` estava **IN_PROGRESS** no snapshot do gate documental. Nenhum desses estados equivale a aprovação independente. É necessário concluir a execução da WEB-07 e obter novo parecer independente em navegador.
+
+Estado preservado:
+- frontend PR #1 = **OPEN / DRAFT / unmerged**;
+- Issue #10 = **OPEN**;
+- sem publicação definitiva;
+- nenhuma aprovação WEB-07 registrada por esta atualização documental.
+
+## GOV-03 — regras públicas e autenticação
+
+- site informativo pode ser publicado antes da Issue #9 **somente após os gates de revisão**, preservando a D-054;
+- enquanto #9 não estiver pronta, **Criar conta → Em breve** no gate de publicação; cadastro e trial ficam inativos;
+- Acervo público: título, data, órgão e link oficial; texto integral e busca avançada exigem autenticação;
+- trial: 7 dias sem cartão, iniciado após verificação de e-mail + primeiro cadastro de empresa;
+- formulário inicial: nome, e-mail profissional, senha e CNPJ opcional;
+- senha aprovada: mínimo 8 caracteres + maiúscula + minúscula + número + especial;
+- primeiro usuário = administrador;
+- ao informar CNPJ, tentar obter CNAE/endereço automaticamente de fonte disponível;
+- regra de empresa sem CNPJ permanece aberta;
+- D-053 permanece a decisão das cores; D-059 acrescenta Dados insuficientes e a semântica qualitativa do Sonar, sem fechar a Issue #10;
+- página/preview/PR/demo não equivale a produto disponível;
+- nenhuma mudança de frontend foi executada na GOV-03.
