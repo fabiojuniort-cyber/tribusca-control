@@ -48,9 +48,12 @@ A publicação completa continua no **Acervo**. O boletim funciona como canal de
 
 ## Frequência
 
-A frequência inicial aprovada é **diária**.
+A frequência inicial aprovada é **diária**, com envio às **08h no horário de Brasília**.
 
-Horário, fuso, tratamento de dias sem itens, fins de semana/feriados e possibilidade futura de outras frequências permanecem em aberto.
+- enviar em qualquer dia em que existam itens, inclusive fins de semana/feriados;
+- **não enviar boletim vazio**;
+- manter histórico dos boletins;
+- frequência/personalização futura pode ser discutida em evolução própria.
 
 ## Transparência
 
@@ -63,14 +66,10 @@ Essa separação evita confundir uma citação objetiva da empresa com uma infer
 
 ## Questões abertas
 
-1. Horário padrão e possibilidade de personalização do envio.
-2. Envio ou não de boletim quando não houver itens.
-3. Tratamento de fins de semana e feriados.
-4. Critérios seguros adicionais para menção direta além de CNPJ.
-5. Regras para destinatários, múltiplos usuários e empresas/estabelecimentos.
-6. Se Média afinidade poderá ser opcional em algum plano/configuração futura.
-7. Assunto, identidade visual e microcopy final do e-mail.
-8. Relação do Revela com planos/assinaturas.
+1. Critérios seguros adicionais para menção direta além de CNPJ em versões futuras.
+2. Assunto, identidade visual e microcopy final do e-mail.
+3. Relação do Revela com planos/assinaturas e eventual frequência futura configurável.
+4. Detalhes de UX/permissões para administração de destinatários em organizações complexas.
 
 ## Avaliação de impacto
 
@@ -91,3 +90,13 @@ Essa separação evita confundir uma citação objetiva da empresa com uma infer
 ## Limite desta decisão
 
 Esta definição não autoriza implementação de backend, frontend, e-mail, migrations, deploy ou contratação de serviço de envio. A implementação futura exige Issue própria.
+
+
+## GOV-03 — destinatários e elegibilidade v1
+
+- administrador seleciona os destinatários habilitados;
+- cada usuário controla se deseja receber o próprio boletim;
+- cada item identifica empresa/estabelecimento relacionado e motivo de inclusão;
+- na primeira versão, **menção direta = CNPJ exato**;
+- **Média afinidade não entra** no Revela v1;
+- Alta afinidade e Menção direta continuam sendo motivos distintos e podem coexistir no mesmo item.
