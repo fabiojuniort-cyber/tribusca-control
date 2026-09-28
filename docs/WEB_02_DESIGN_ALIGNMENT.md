@@ -176,7 +176,7 @@ O preview é exclusivo para revisão do draft, sem secrets/dados produtivos. Ap�
 - revisão independente visual/funcional do preview;
 - Issue #10 permanece aberta até essa verificação;
 - Issue #9 continua gate para cadastro/recuperação;
-- pela D-054, se houver lançamento antes da Issue #9, o CTA “Criar conta” deve virar “Em breve” no gate de publicação; **não está implementado no head WEB-05**;
+- D-054 foi aplicada no release candidate WEB-11: cadastro/trial e recuperação pública estão em estado **Em breve** enquanto #9 permanece OPEN;
 - sem merge ou publicação definitiva.
 
 
@@ -193,7 +193,7 @@ O preview é exclusivo para revisão do draft, sem secrets/dados produtivos. Ap�
 
 ### GOV-03 — dependências adicionais do Acervo público
 
-- A API D-050 está disponível no backend, mas o frontend ainda não a consome.
+- WEB-11 integrou somente `GET /public/v1/sources` no frontend da Cobertura; `/publications` permanece fora do escopo desta integração.
 - Publicação não fiscal preservada só por CNPJ exato é privada da conta e **não pode** alcançar a API/Acervo público sem Issue técnica + gate de isolamento.
 - D-058 aprovou para exibição pública somente título, data, órgão e link oficial.
 - `GET /public/v1/publications` retorna campos adicionais (`id`, `actType`, `actNumber`, `uf`, `effectiveOn`), cuja exibição pública permanece pendente de decisão de produto.
@@ -251,9 +251,51 @@ Commit: `74bb3efffc4b720aa157475ce6a9c73c206fa028`.
 
 ### Gate
 
-- Issue #10 permanece aberta;
+- Issue #10 está CLOSED/COMPLETED;
 - nova revisão independente deve avaliar o head, artifact e preview;
 - D-054 / Issue #9 permanecem gate separado de lançamento;
 - PR permanece draft;
 - sem merge e sem publicação definitiva;
 - não remover o preview antes do parecer e preservação da evidência.
+
+
+## WEB-11 — release candidate D-054 + Cobertura pública
+
+**Data:** 28/09/2026  
+**Origem:** execução da D-054 e integração D-050 solicitadas pelo responsável.
+
+### Estado implementado
+
+- head: `a7303d14fc725adf4d590fc1e2f475405fd38bc1`;
+- CI #65 / run `36444458147` = SUCCESS;
+- 24/24 Vitest;
+- 48/48 Playwright/Chromium;
+- artifact `10980146266`.
+
+### D-054
+
+Definição anterior: site tinha superfícies “Criar conta”, recuperação demonstrativa e claim de trial.  
+Nova aplicação enquanto Issue #9 está OPEN: **Cadastro em breve** / **Recuperação de senha em breve**, sem ação pública de signup/reset e sem claim de 7 dias ativo.  
+Origem: D-054 + usuário/WEB-11.  
+Impacto: header desktop/mobile, hero, modal Entrar e testes.  
+Próximo passo: revisão independente; reativar cadastro somente com contrato #9 validado.
+
+### Cobertura
+
+Definição anterior: cards ficavam integralmente em `—` apesar de D-050 já produtiva.  
+Nova aplicação: frontend consome somente `GET /public/v1/sources` via `VITE_API_BASE` + TanStack Query.  
+Origem: usuário/WEB-11 + D-050.  
+Impacto: status, última atualização bem-sucedida e contagens reais; falha/loading/refetch continuam `—`.  
+Próximo passo: liberar CORS em gate backend e revisão independente.
+
+### CORS
+
+Inspeção read-only confirmou `PUBLIC_API_ALLOWED_ORIGINS` ausente no backend produtivo. A origem necessária para o preview é:
+
+`https://web05-preview-production.up.railway.app`
+
+Nenhuma configuração backend foi alterada na WEB-11. A origem final pública permanece a confirmar quando existir.
+
+Preview deployment: `eff05426-969c-4481-8e70-9ed41583b454` = SUCCESS no mesmo SHA.
+
+Sem merge e sem publicação definitiva.
