@@ -32,9 +32,11 @@ Formato mínimo dentro do bloco copiável:
 
 ## Sessões Claude
 
-Quando o campo **Modelo** designar Claude, a sessão também deve seguir [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md). O protocolo exige Gate 0 antes de qualquer trabalho, um único tipo de gate por sessão (CÓDIGO, PREPARAÇÃO, REVISÃO ou EXECUÇÃO), executor único com LOCK/UNLOCK na Issue, autorizações explícitas, revisão independente em sessão própria e handoff que diferencie Preparado / Executado / Validado. Prompts devem ser compactos, com alvo de aproximadamente 40 linhas e critérios mensuráveis.
+Quando o campo **Modelo** designar Claude, a sessão também deve seguir [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md). Antes de emitir novo prompt, o Gerente confirma handoff e UNLOCK da sessão anterior. O protocolo exige Gate 0 antes de qualquer trabalho, verificação de LOCK vigente, um único tipo de gate por sessão (CÓDIGO, PREPARAÇÃO, REVISÃO ou EXECUÇÃO), executor único, revisão independente em sessão própria sobre SHA exato e handoff que diferencie Preparado / Executado / Validado.
 
-O Gate 0 não substitui os gates técnicos da frente. Falha em push, acesso Railway ou trava encerra a sessão sem trabalho parcial. Para futuras operações, artefatos versionáveis ficam em `radar-fiscal-backend/ops/<frente>/`; dados privados permanecem na Railway. Este registro não autoriza operação produtiva.
+Prompts devem ser compactos, com alvo de aproximadamente 40 linhas, e explicitar quando aplicável: datas inicial/final de coleta, serviços, branch, SHA/PR, autorizações vigentes, pendências herdadas com critério próprio, valores esperados e critérios mensuráveis. Autorizações explícitas ainda válidas persistem e são transcritas; não pedir novamente ao usuário.
+
+O Gate 0 não substitui os gates técnicos da frente. Falha em push, acesso Railway ou trava encerra a sessão sem trabalho parcial. Para futuras operações, artefatos versionáveis ficam em `radar-fiscal-backend/ops/<frente>/`; dados privados permanecem na Railway e não entram em Issue/PR/resposta. Este registro não autoriza operação produtiva.
 
 ## Execução
 
