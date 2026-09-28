@@ -31,7 +31,7 @@ O responsável definiu como referência visual aprovada os componentes/protótip
 | 9 | Manual v1 restringia paleta central a azul/ciano/teal; D-033 não fixava cores do Sonar. | Sonar: **Alta = vermelho, Média = amarelo, Baixa = verde**, mantendo rótulo textual. | Usuário | Marca/UX/acessibilidade. | Implementar semanticamente no draft; **exceção de marca pendente de aprovação da frente Branding** antes do merge. |
 | 10 | PR #1 mostrava estados/créditos do Decodifica, sem carrossel legal de 5 exemplos. | Decodifica: carrossel **Texto oficial × Leitura auxiliar** com 5 exemplos aprovados: Split payment (LC 214/2025 art. 31), Fato gerador (CTN art. 116), Crédito tributário (CTN art. 142), Cofins insumos (Lei 10.833/2003 art. 3º II), Compensação (Lei 9.430/1996 art. 74). Todos exibem **“Gerada por IA. Não substitui o texto oficial.”** | Usuário | Portfólio, conteúdo, IA labeling. | Implementar textos aprovados sem substituir o oficial. |
 | 11 | Revela já era descrito como Alta afinidade + menções diretas, mas sem apresentação de boletim conforme design novo. | Revela deve mostrar **exemplo de boletim diário** com itens explicitamente marcados **Alta afinidade** e **Menção direta**. | Usuário | Produto/UX/site. | Implementar no portfólio sem simular envio real. |
-| 12 | PR #1 não tinha rota Cobertura nem matriz federal + 27 UFs. | Página **Cobertura**: cards de largura total, primeiro serviços federais (DOU/INLABS, CONFAZ, NF-e/ENCAT, SPED, CGIBS, RFB), depois 27 UFs com SP primeiro. Campos: status da coleta (Online/Em validação/Em implantação), última atualização, importadas no dia, total no Acervo. Métricas reais somente com contrato de API; até lá **“—”**. | Usuário | Nova rota, dados/API futura, UX. | Implementar placeholders; não inventar endpoint. Abrir contrato backend quando houver autorização. |
+| 12 | PR #1 não tinha rota Cobertura nem matriz federal + 27 UFs. | Página **Cobertura**: cards de largura total, primeiro serviços federais (DOU/INLABS, CONFAZ, NF-e/ENCAT, SPED, CGIBS, RFB), depois 27 UFs com SP primeiro. Campos: status da coleta (Online/Em validação/Em implantação), última atualização, importadas no dia, total no Acervo. O contrato/API D-050 já foi posteriormente implementado e validado; **enquanto não houver integração WEB**, o frontend permanece em “—”. | Usuário; estado backend atualizado pela Issue #11 | Nova rota, integração API, UX. | Integrar somente em Issue/gate próprio; não inventar dados nem ampliar campos públicos além da decisão de produto. |
 | 13 | D-034/PR #1 tratavam timeline genericamente como publicação/vigência/marco/faseamento. | Reforma Tributária: timeline deve distinguir **Publicação / Vigência / Marco previsto em lei**; datas somente quando sustentadas por fonte oficial do Acervo. | Usuário | Reforma, dados, rastreabilidade. | Implementar estrutura sem cronograma especulativo. |
 
 ## Decodifica — textos aprovados para o carrossel
@@ -95,7 +95,7 @@ A implementação inclui as definições 1–13, com os seguintes limites delibe
 Dependências abertas:
 - [Issue #9](https://github.com/fabiojuniort-cyber/tribusca-control/issues/9) — cadastro/recuperação/nova senha;
 - [Issue #10](https://github.com/fabiojuniort-cyber/tribusca-control/issues/10) — ratificação cromática do Sonar;
-- [Issue #11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11) — API pública read-only para Cobertura/Acervo.
+- [Issue #11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11) — API pública backend mergeada/deployada/validada; **integração WEB, origens CORS reais e rate limit** permanecem abertos.
 
 **Próximo gate:** Gerente revisar os claims do item 8 e a aprovação Branding do item 9; depois revisão visual/funcional independente. O PR continua draft.
 
@@ -189,3 +189,12 @@ O preview é exclusivo para revisão do draft, sem secrets/dados produtivos. Ap�
 - **Sonar:** D-053 continua sendo a decisão cromática; D-059 acrescenta **Dados insuficientes** e a semântica qualitativa Alta/Média/Baixa. A Issue #10 permanece aberta para revisão independente do preview.
 - **Disponibilidade:** demos, rotas, placeholders, previews, PRs e contratos em draft continuam sem equivaler a produto disponível.
 - **Nenhum merge/deploy** é autorizado por esta atualização documental.
+
+
+### GOV-03 — dependências adicionais do Acervo público
+
+- A API D-050 está disponível no backend, mas o frontend ainda não a consome.
+- Publicação não fiscal preservada só por CNPJ exato é privada da conta e **não pode** alcançar a API/Acervo público sem Issue técnica + gate de isolamento.
+- D-058 aprovou para exibição pública somente título, data, órgão e link oficial.
+- `GET /public/v1/publications` retorna campos adicionais (`id`, `actType`, `actNumber`, `uf`, `effectiveOn`), cuja exibição pública permanece pendente de decisão de produto.
+- Esta atualização documental não altera frontend nem backend.
