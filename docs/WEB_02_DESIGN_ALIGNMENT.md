@@ -24,7 +24,7 @@ O responsável definiu como referência visual aprovada os componentes/protótip
 | 2 | Header do PR #1 usava `tribusca-icon.png` isolado. | Header deve usar a assinatura horizontal oficial **`tribusca-logo-horizontal-light.png`**. | Usuário | Marca, assets, header. | Incluir o binário oficial no PR sem recriação. |
 | 3 | D-011/PR #1 usavam CTA de header **Experimentar grátis**. | Canto superior direito: **Entrar** (secundário) + **Criar conta** (primário). O trial de 7 dias continua como diretriz comercial, mas deixa de ser o CTA principal do header. | Usuário | Site/comercial, header, auth UX. | Implementar no draft; preservar D-011 apenas fora do header. |
 | 4 | PR #1 não implementava autenticação no site público. | Entrar, Criar conta, Recuperar senha e Nova senha devem abrir em **modal sobre a página**. Entrar consome apenas o endpoint existente **POST `/auth/login`** do backend. Não criar endpoints/autenticação paralelos. | Usuário | Frontend↔backend, segurança, UX. | Integrar login configurável por API base; cadastro/reset ficam estruturados sem endpoint fictício. |
-| 5 | Não havia regra pública para confirmação/requisitos de senha. | Criar conta e Nova senha: **Confirmar senha** + requisitos visíveis e validação em tempo real: tamanho mínimo, maiúscula, minúscula, número e caractere especial. | Usuário | UX, validação, testes. | Implementar client-side; contrato definitivo de cadastro/reset permanece dependente do backend. |
+| 5 | Não havia regra pública para confirmação/requisitos de senha. | Criar conta e Nova senha: **Confirmar senha** + requisitos visíveis e validação em tempo real: **mínimo 8 caracteres**, maiúscula, minúscula, número e caractere especial. | Usuário; mínimo ratificado na GOV-03/D-058 | UX, validação, testes. | Regra funcional aprovada; ativação continua dependente do contrato da Issue #9. |
 | 6 | PR #1 não continha o carrossel estadual aprovado no design. | Home: carrossel com **5 UFs**, SP sempre primeiro com Ponte Estaiada; outras 4 sorteadas por carregamento; fotos reais Wikimedia Commons com autoria/licença; imagem cobre o card; cada card reserva área para últimas/principais publicações estaduais. | Usuário | Home, acessibilidade, conteúdo/licenças. | Implementar com dados editoriais e placeholders `—` quando não houver contrato de API. |
 | 7 | Portfólio do PR #1 tinha 4 itens: Sonar, Revela, Decodifica e Acervo. | Home deve apresentar **6 recursos**: Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário + link **Ver portfólio completo**. | Usuário | Produto/site, conteúdo. | Implementar home e portfólio coerentes. |
 | 8 | PR #1 marcava todos os recursos como **Em desenvolvimento**. | WEB-02 levou ao draft **Acervo** e **Central de Monitoramento = Disponível**, condicionado a confirmação. **WEB-03/D-051 resolveu o gate: a confirmação não foi concedida e todos os seis recursos permanecem Em desenvolvimento.** | Usuário na WEB-02; decisão posterior do Gerente na WEB-03 | Claim comercial/status. | Histórico preservado; remover claim Disponível do draft/documentação. |
@@ -178,3 +178,14 @@ O preview é exclusivo para revisão do draft, sem secrets/dados produtivos. Ap�
 - Issue #9 continua gate para cadastro/recuperação;
 - pela D-054, se houver lançamento antes da Issue #9, o CTA “Criar conta” deve virar “Em breve” no gate de publicação; **não está implementado no head WEB-05**;
 - sem merge ou publicação definitiva.
+
+
+## GOV-03 — complementos de 27/09/2026
+
+- **Lançamento antes da Issue #9:** preservada a D-054; após os gates, o site informativo pode ser publicado antes do cadastro real, mas **Criar conta deve virar Em breve** enquanto a #9 estiver aberta.
+- **Senha:** mínimo de 8 caracteres + maiúscula + minúscula + número + caractere especial deixou de ser provisório e foi ratificado pela D-058.
+- **Acervo público:** título, data, órgão e link oficial; texto integral e busca avançada exigem autenticação.
+- **Trial:** 7 dias sem cartão, iniciado após verificação do e-mail + primeiro cadastro de empresa. CNPJ é opcional no formulário inicial; isso não inicia o trial sem o primeiro cadastro de empresa. Regra de empresa sem CNPJ continua aberta.
+- **Sonar:** D-053 continua sendo a decisão cromática; D-059 acrescenta **Dados insuficientes** e a semântica qualitativa Alta/Média/Baixa. A Issue #10 permanece aberta para revisão independente do preview.
+- **Disponibilidade:** demos, rotas, placeholders, previews, PRs e contratos em draft continuam sem equivaler a produto disponível.
+- **Nenhum merge/deploy** é autorizado por esta atualização documental.
