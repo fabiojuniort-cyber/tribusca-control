@@ -63,8 +63,8 @@ Preview temporário atualizado para o mesmo head: https://web05-preview-producti
 
 Estado preservado:
 - seis recursos públicos continuam `Em desenvolvimento`;
-- integração WEB da API pública ainda não está concluída;
-- Issue #10 continua OPEN até parecer independente;
+- integração WEB de `GET /public/v1/sources` para Cobertura concluída no draft WEB-11; CORS real do backend permanece pendente;
+- Issue #10 está CLOSED/COMPLETED; D-053 permanece preservada;
 - Issue #9 e D-054 continuam gates de cadastro/lançamento;
 - sem merge e sem publicação definitiva do frontend.
 
@@ -107,7 +107,7 @@ A classificação R0–R3 não reduz proteção de secrets, dados privados, auth
 
 ## API-01 — API pública do site
 
-**MERGEADA E VALIDADA EM PRODUÇÃO NO ESCOPO D-050; INTEGRAÇÃO WEB AINDA ABERTA.**
+**MERGEADA E VALIDADA EM PRODUÇÃO NO ESCOPO D-050; `GET /public/v1/sources` JÁ INTEGRADO NO DRAFT WEB-11.**
 
 Issue executora: [#11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11).
 
@@ -125,8 +125,23 @@ Evidência registrada na Issue #11:
 - sem conteúdo integral ou chaves tenant/company/user/credencial/token nos payloads inspecionados;
 - sem migration ou job novo.
 
-**Ainda abertos na #11:** integração WEB, confirmação/configuração das origens CORS reais e rate limit por IP.
+**Ainda abertos na #11:** confirmação/configuração das origens CORS reais e rate limit por IP. A integração WEB da Cobertura com `/public/v1/sources` foi implementada no PR frontend #1, ainda sem merge.
 
 **Nova dependência GOV-03 / D-057:** publicação não fiscal retida apenas por CNPJ exato é privada da respectiva conta. A API D-050 atual consulta metadados globais e não possui filtro fiscal/tenant para essa nova categoria. **Antes de introduzir esses registros, o filtro/proteção precisa estar implementado e validado**; sem isso, eles não podem ser persistidos em tabelas globais consultadas por `GET /public/v1/publications` nem ficar de outra forma alcançáveis pela API pública. Restrição apenas visual não satisfaz o gate. A futura Issue técnica permanece aberta.
 
 **Divergência D-058 × contrato atual:** a exibição pública aprovada contém título, data, órgão e link oficial; `GET /public/v1/publications` também retorna `id`, `actType`, `actNumber`, `uf` e `effectiveOn`. A API não será alterada por esta GOV-03 e a exibição desses campos adicionais requer decisão de produto posterior.
+
+
+### WEB-11 — release candidate do site público
+
+Head frontend `a7303d14fc725adf4d590fc1e2f475405fd38bc1` · CI #65 / run `36444458147` SUCCESS · 24/24 Vitest · 48/48 Playwright · artifact `10980146266`.
+
+D-054 aplicada no draft enquanto Issue #9 está OPEN: cadastro/trial não são apresentados como funcionais; CTAs públicos viraram **Em breve** e recuperação pública está indisponível sem simulação de backend.
+
+Cobertura consome somente `GET /public/v1/sources` D-050 e mantém `—` em loading/refetch/erro. Não houve ampliação de `/publications` nem exposição D-057.
+
+Preview Railway `eff05426-969c-4481-8e70-9ed41583b454` = SUCCESS no mesmo SHA, com `VITE_API_BASE` apontando para o backend produtivo.
+
+**Pendência real para dados live no browser:** backend sem `PUBLIC_API_ALLOWED_ORIGINS`. Origem de preview necessária: `https://web05-preview-production.up.railway.app`. Nenhuma variável backend foi alterada pela WEB-11.
+
+Próximo gate: revisão independente do release candidate. PR permanece OPEN/DRAFT/unmerged.
