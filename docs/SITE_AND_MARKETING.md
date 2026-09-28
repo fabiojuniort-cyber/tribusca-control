@@ -26,7 +26,7 @@ Todas as páginas, login, aplicativo e peças devem partir dos arquivos oficiais
 
 ## Pendências
 
-A WEB-01 inicia a camada pública em paralelo à macrofase DOE. Frontend autenticado, dados dinâmicos, API real e disponibilização produtiva dos recursos continuam condicionados às respectivas frentes técnicas. O protótipo anterior não vira referência visual por esta retomada.
+A WEB-01 inicia a camada pública em paralelo à macrofase DOE. A API pública D-050 já está mergeada/deployada e validada no backend, mas **integração WEB, origens CORS reais e rate limit** continuam condicionados às respectivas frentes técnicas. Frontend autenticado e disponibilização produtiva dos recursos seguem condicionados aos seus próprios gates. O protótipo anterior não vira referência visual por esta retomada.
 
 
 ## Página Reforma Tributária
@@ -122,3 +122,10 @@ A grade comercial deverá ter **três níveis**, diferenciáveis por:
 Credenciais da mesma pessoa não podem manter uso simultâneo; a ação exata ao ocorrer um segundo login ainda será definida.
 
 A apresentação de preços deverá favorecer a escolha do nível intermediário ou superior, sem fixar valores nesta fase. **Nomes, preços, franquias e quantidade de créditos por plano dependem do piloto de custos e uso.**
+
+
+### Gate de privacidade e campos do Acervo público
+
+A D-057 permite preservar publicação não fiscal por menção exata a CNPJ, porém esse item é privado da conta correspondente. O contrato público D-050 atual trabalha com metadados globais e não possui filtro fiscal/tenant para essa nova categoria. Antes de tais registros poderem alimentar o Acervo público, deve existir **Issue técnica e gate que impeçam exposição pública de metadados**.
+
+A D-058 aprovou no Acervo público apenas **título, data, órgão e link oficial**. O endpoint `GET /public/v1/publications` já retorna também `id`, `actType`, `actNumber`, `uf` e `effectiveOn`. Esses campos adicionais não devem aparecer publicamente por simples disponibilidade técnica; a ampliação da exibição depende de decisão de produto posterior.
