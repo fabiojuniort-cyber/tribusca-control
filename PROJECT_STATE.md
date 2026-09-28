@@ -145,3 +145,23 @@ Preview Railway `eff05426-969c-4481-8e70-9ed41583b454` = SUCCESS no mesmo SHA, c
 **Pendência real para dados live no browser:** backend sem `PUBLIC_API_ALLOWED_ORIGINS`. Origem de preview necessária: `https://web05-preview-production.up.railway.app`. Nenhuma variável backend foi alterada pela WEB-11.
 
 Próximo gate: revisão independente do release candidate. PR permanece OPEN/DRAFT/unmerged.
+
+
+### WEB-11 — release candidate público
+
+PR frontend #1 permanece **OPEN / DRAFT / unmerged**.
+
+- head: `a7303d14fc725adf4d590fc1e2f475405fd38bc1`;
+- CI #65 / run `36444458147` = **SUCCESS**;
+- 24/24 testes unitários;
+- 48/48 testes Playwright/Chromium;
+- artifact browser `10980146266`, digest `sha256:e163a43ca31b8f72e84837243a3c93a2504ec1fd1bb69ffec87b24e2333fa99e`;
+- preview deployment `eff05426-969c-4481-8e70-9ed41583b454` = **SUCCESS** no mesmo SHA.
+
+D-054 está aplicada: cadastro/trial e recuperação não são apresentados como funcionais enquanto #9 estiver aberta. Login real foi preservado.
+
+Cobertura consome somente `GET /public/v1/sources`, com tradução D-050 e fallback seguro `—`. O preview está configurado com `VITE_API_BASE` do backend produtivo.
+
+**Pendência real para dados ao vivo no navegador:** `PUBLIC_API_ALLOWED_ORIGINS` não está definida no backend produtivo. A origem do preview `https://web05-preview-production.up.railway.app` precisa ser autorizada em gate backend separado. Nenhuma alteração backend foi feita pela WEB-11.
+
+**Gate atual:** revisão independente única do release candidate. Sem merge/publicação definitiva.
