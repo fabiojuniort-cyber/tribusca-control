@@ -15,10 +15,12 @@ A página organiza o recorte do Acervo relacionado à Reforma Tributária e ofer
 
 A página deve concentrar, conforme disponibilidade e fonte oficial:
 
-- legislação da Reforma Tributária;
-- regulamentação;
-- notas técnicas;
-- demais publicações oficiais diretamente relacionadas;
+- legislação constitucional e complementar relacionada à Reforma Tributária;
+- atos e publicações do **CGIBS**;
+- atos e publicações da **Receita Federal**;
+- atos **CONFAZ** relacionados;
+- notas técnicas de **NF-e, CT-e, NFS-e e SPED**;
+- publicações marcadas com **IBS, CBS, Imposto Seletivo ou Reforma Tributária**;
 - versões e histórico quando aplicável;
 - links e referências para a fonte oficial.
 
@@ -73,11 +75,8 @@ A página não deve:
 
 ## Questões abertas
 
-1. Escopo inicial exato de atos/fontes.
-2. Estrutura final de filtros/tabs.
-3. Política de curadoria/destaques editoriais.
-4. Visões complementares por IBS, CBS, IS e fases.
-5. Critério visual para diferenciar publicação, vigência e marco futuro programado.
+1. Política futura de curadoria/destaques editoriais e responsáveis por essa seleção.
+2. Detalhes visuais finais para diferenciar publicação, vigência e marco futuro programado, preservando a semântica já aprovada.
 
 ## Impacto
 
@@ -92,3 +91,15 @@ A página não deve:
 | Site | Sim — página pública dedicada. |
 | Comercial | Indireto — reforça autoridade e descoberta. |
 | Prioridade DOE | Não altera. |
+
+
+## GOV-03 — navegação e inclusão
+
+A navegação temática aprovada é:
+1. **Últimas publicações**;
+2. **Legislação**;
+3. **Regulamentação**;
+4. **Notas técnicas**;
+5. **Timeline**.
+
+A inclusão na página deve derivar de **marcadores do Acervo**, e não de um acervo duplicado. Destaques editoriais podem existir futuramente, mas **não estão implementados nem são necessários para a inclusão base**.
