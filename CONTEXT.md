@@ -48,7 +48,7 @@ As respostas Q1–Q22 foram formalizadas sem implementação técnica nas D-055 
 
 ## Próxima passagem
 
-A D-017/D-036 está aprovada globalmente. A autorização vigente do responsável para DOE-SP é **A — reconstruir integralmente o acervo DOE-SP**, substituindo a escolha anterior B; ver D-052. A revisão DOE-SP-26 foi favorável ao PR #73 no head `82f189c...`, que ainda está draft/unmerged. O preflight DOE-SP-27b confirmou um snapshot sem vínculos tenant/company/matches/cross-source; antes de qualquer exclusão é necessário novo preflight após pausa, backup recuperável, revisão independente do procedimento restrito, merge/deploy verde e validação da recaptura. Um backup sob demanda de 1,4 GB foi criado no volume Postgres em 26/09/2026 15:08 BRT; referência individual mantida fora do GitHub. A restauração foi inspecionada na UI, mas não ensaiada. Nenhuma exclusão, merge, deploy ou recaptura ocorreu neste marco.
+A D-017/D-036 está aprovada globalmente. A autorização vigente do responsável para DOE-SP é **A — reconstruir integralmente o acervo DOE-SP**, substituindo a escolha anterior B; ver D-052. No snapshot sincronizado pela GOV-12, a DOE-SP-35 concluiu a PREPARAÇÃO no SHA `4917cdc2265fa87b35d555b98698f42a75d6c223`, a DOE-SP-36 aprovou esse SHA e o PR #73 foi incorporado por squash em `e2c4f9a58fe43cb56ca36a1925eb80cf612423ae`. Nesse mesmo snapshot, a DOE-SP-37 tinha LOCK ativo e ainda não havia handoff/UNLOCK final. Não inferir desse marco deploy de Backend/Worker/Scheduler, run SCHEDULED, pausa da fonte, SQL produtivo, exclusão, reconstrução/recaptura ou fechamento DOE-SP sem evidência posterior registrada na Issue #1.
 
 ## Atualização obrigatória a cada marco
 
