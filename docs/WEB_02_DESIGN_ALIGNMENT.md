@@ -24,11 +24,11 @@ O responsável definiu como referência visual aprovada os componentes/protótip
 | 2 | Header do PR #1 usava `tribusca-icon.png` isolado. | Header deve usar a assinatura horizontal oficial **`tribusca-logo-horizontal-light.png`**. | Usuário | Marca, assets, header. | Incluir o binário oficial no PR sem recriação. |
 | 3 | D-011/PR #1 usavam CTA de header **Experimentar grátis**. | Canto superior direito: **Entrar** (secundário) + **Criar conta** (primário). O trial de 7 dias continua como diretriz comercial, mas deixa de ser o CTA principal do header. | Usuário | Site/comercial, header, auth UX. | Implementar no draft; preservar D-011 apenas fora do header. |
 | 4 | PR #1 não implementava autenticação no site público. | Entrar, Criar conta, Recuperar senha e Nova senha devem abrir em **modal sobre a página**. Entrar consome apenas o endpoint existente **POST `/auth/login`** do backend. Não criar endpoints/autenticação paralelos. | Usuário | Frontend↔backend, segurança, UX. | Integrar login configurável por API base; cadastro/reset ficam estruturados sem endpoint fictício. |
-| 5 | Não havia regra pública para confirmação/requisitos de senha. | Criar conta e Nova senha: **Confirmar senha** + requisitos visíveis e validação em tempo real: tamanho mínimo, maiúscula, minúscula, número e caractere especial. | Usuário | UX, validação, testes. | Implementar client-side; contrato definitivo de cadastro/reset permanece dependente do backend. |
+| 5 | Não havia regra pública para confirmação/requisitos de senha. | Criar conta e Nova senha: **Confirmar senha** + requisitos visíveis e validação em tempo real: **mínimo 8 caracteres**, maiúscula, minúscula, número e caractere especial. | Usuário; ratificado na GOV-03/D-056 | UX, validação, testes. | Regra funcional aprovada; ativação continua dependente do contrato da Issue #9. |
 | 6 | PR #1 não continha o carrossel estadual aprovado no design. | Home: carrossel com **5 UFs**, SP sempre primeiro com Ponte Estaiada; outras 4 sorteadas por carregamento; fotos reais Wikimedia Commons com autoria/licença; imagem cobre o card; cada card reserva área para últimas/principais publicações estaduais. | Usuário | Home, acessibilidade, conteúdo/licenças. | Implementar com dados editoriais e placeholders `—` quando não houver contrato de API. |
 | 7 | Portfólio do PR #1 tinha 4 itens: Sonar, Revela, Decodifica e Acervo. | Home deve apresentar **6 recursos**: Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário + link **Ver portfólio completo**. | Usuário | Produto/site, conteúdo. | Implementar home e portfólio coerentes. |
 | 8 | PR #1 marcava todos os recursos como **Em desenvolvimento**. | WEB-02 levou ao draft **Acervo** e **Central de Monitoramento = Disponível**, condicionado a confirmação. **WEB-03/D-051 resolveu o gate: a confirmação não foi concedida e todos os seis recursos permanecem Em desenvolvimento.** | Usuário na WEB-02; decisão posterior do Gerente na WEB-03 | Claim comercial/status. | Histórico preservado; remover claim Disponível do draft/documentação. |
-| 9 | Manual v1 restringia paleta central a azul/ciano/teal; D-033 não fixava cores do Sonar. | Sonar: **Alta = vermelho, Média = amarelo, Baixa = verde**, mantendo rótulo textual. | Usuário | Marca/UX/acessibilidade. | Implementar semanticamente no draft; **exceção de marca pendente de aprovação da frente Branding** antes do merge. |
+| 9 | Manual v1 restringia paleta central a azul/ciano/teal; D-033 não fixava cores do Sonar. | Sonar: **Alta = vermelho, Média = amarelo, Baixa = verde**, mantendo rótulo textual. | Usuário; ratificado na GOV-03/D-057 | Marca/UX/acessibilidade. | Exceção semântica aprovada; revisão visual/acessibilidade continua necessária, sem ampliar a paleta institucional. |
 | 10 | PR #1 mostrava estados/créditos do Decodifica, sem carrossel legal de 5 exemplos. | Decodifica: carrossel **Texto oficial × Leitura auxiliar** com 5 exemplos aprovados: Split payment (LC 214/2025 art. 31), Fato gerador (CTN art. 116), Crédito tributário (CTN art. 142), Cofins insumos (Lei 10.833/2003 art. 3º II), Compensação (Lei 9.430/1996 art. 74). Todos exibem **“Gerada por IA. Não substitui o texto oficial.”** | Usuário | Portfólio, conteúdo, IA labeling. | Implementar textos aprovados sem substituir o oficial. |
 | 11 | Revela já era descrito como Alta afinidade + menções diretas, mas sem apresentação de boletim conforme design novo. | Revela deve mostrar **exemplo de boletim diário** com itens explicitamente marcados **Alta afinidade** e **Menção direta**. | Usuário | Produto/UX/site. | Implementar no portfólio sem simular envio real. |
 | 12 | PR #1 não tinha rota Cobertura nem matriz federal + 27 UFs. | Página **Cobertura**: cards de largura total, primeiro serviços federais (DOU/INLABS, CONFAZ, NF-e/ENCAT, SPED, CGIBS, RFB), depois 27 UFs com SP primeiro. Campos: status da coleta (Online/Em validação/Em implantação), última atualização, importadas no dia, total no Acervo. Métricas reais somente com contrato de API; até lá **“—”**. | Usuário | Nova rota, dados/API futura, UX. | Implementar placeholders; não inventar endpoint. Abrir contrato backend quando houver autorização. |
@@ -66,8 +66,7 @@ O responsável definiu como referência visual aprovada os componentes/protótip
 ## Gates
 
 - Sem merge e sem deploy nesta atividade.
-- Item 8 exige confirmação do Gerente antes do merge.
-- Item 9 exige ratificação de Branding antes do merge ou remoção da exceção.
+- Item 9 foi ratificado pela GOV-03/D-057; permanece apenas a revisão visual/acessibilidade da aplicação.
 - Cadastro, recuperação e nova senha não devem inventar endpoint; somente o login usa o contrato comprovado `POST /auth/login`.
 - Dados dinâmicos de Cobertura dependem de contrato explícito de API.
 
@@ -89,15 +88,14 @@ A implementação inclui as definições 1–13, com os seguintes limites delibe
 - cadastro, recuperação e nova senha não chamam endpoints inexistentes;
 - status operacional e métricas de Cobertura permanecem `—` até consumo do contrato D-050 / Issue #11;
 - WEB-03/D-051 resolveu o antigo gate: Acervo/Central e os demais quatro recursos ficam todos como `Em desenvolvimento`;
-- vermelho/amarelo/verde do Sonar permanece gate Branding / Issue #10;
+- vermelho/amarelo/verde do Sonar foi ratificado pela D-057; eventual ajuste do draft continua sujeito à revisão visual/acessibilidade;
 - nenhum merge ou deploy foi executado.
 
 Dependências abertas:
 - [Issue #9](https://github.com/fabiojuniort-cyber/tribusca-control/issues/9) — cadastro/recuperação/nova senha;
-- [Issue #10](https://github.com/fabiojuniort-cyber/tribusca-control/issues/10) — ratificação cromática do Sonar;
 - [Issue #11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11) — API pública read-only para Cobertura/Acervo.
 
-**Próximo gate:** Gerente revisar os claims do item 8 e a aprovação Branding do item 9; depois revisão visual/funcional independente. O PR continua draft.
+**Próximo gate:** revisão visual/funcional independente e demais bloqueios reais do PR. Os claims de disponibilidade seguem regidos pela D-051; a semântica cromática do Sonar foi ratificada pela D-057. O PR continua draft.
 
 
 ## WEB-03 — resolução do item 8
@@ -117,7 +115,7 @@ Estado público vigente:
 
 Páginas com placeholders, conteúdo conceitual ou integrações ainda em PR não devem ser apresentadas como funcionalidades acessíveis.
 
-**Impacto:** badges/claims e documentação. **Próximo passo:** CI e revisão visual/funcional; Issue #10 continua como gate independente das cores do Sonar. Sem merge/deploy.
+**Impacto:** badges/claims e documentação. **Próximo passo:** CI e revisão visual/funcional. A GOV-03/D-057 ratificou as cores do Sonar; não há decisão de produto pendente sobre essa semântica. Sem merge/deploy.
 
 
 ## Evidência WEB-03
@@ -136,4 +134,13 @@ Verificações:
 - Portfólio: 6 badges **Em desenvolvimento**;
 - nenhuma ocorrência de “Disponível” permanece no código visível de `src/App.tsx`.
 
-**Gate:** PR continua draft. Cores do Sonar permanecem somente para avaliação, sujeitas à Issue #10 e revisão visual/funcional independente. Sem merge/deploy.
+**Gate:** PR continua draft. Cores do Sonar foram ratificadas pela D-057, mas a aplicação visual/acessível continua sujeita à revisão independente. Sem merge/deploy.
+
+
+## GOV-03 — supersessões de 27/09/2026
+
+- **Senha:** mínimo de 8 caracteres + maiúscula + minúscula + número + caractere especial deixou de ser provisório e foi ratificado pela D-056.
+- **Cores do Sonar:** Alta/vermelho, Média/amarelo e Baixa/verde foram ratificadas pela D-057; “Dados insuficientes” é estado separado e não recebe interpretação de Baixa.
+- **Publicação do site antes da Issue #9:** é permitida após os gates de revisão, mas **Criar conta** deve virar **Em breve** até cadastro real estar pronto.
+- **Disponibilidade:** demos, rotas, placeholders, PRs e contratos em draft continuam sem equivaler a produto disponível.
+- **Nenhum merge/deploy** é autorizado por esta atualização documental.
