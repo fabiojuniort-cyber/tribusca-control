@@ -1,6 +1,6 @@
 # TriBusca — contexto de retomada do Gerente Geral
 
-Base operacional registrada em 27/09/2026; protocolo de papéis atualizado em 26/09/2026. Este arquivo pode ser lido diretamente pelo Gerente GPT-6 ao iniciar ou retomar uma conversa e relido sempre que necessário. Não existe chat intermediário de bootstrap. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
+Base operacional sincronizada em 28/09/2026; protocolo de papéis atualizado em 26/09/2026 e protocolo de sessões vigente desde 28/09/2026. Este arquivo pode ser lido diretamente pelo Gerente GPT-6 ao iniciar ou retomar uma conversa e relido sempre que necessário. Não existe chat intermediário de bootstrap. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
 
 ## Missão e limites desta conversa
 
@@ -23,7 +23,7 @@ Base operacional registrada em 27/09/2026; protocolo de papéis atualizado em 26
 - **D-017/D-036 — regra global vigente:** página/representação oficial completa tem prioridade; quando ela fornecer o conteúdo fiel, coletar diretamente e **não baixar PDF que apenas o reproduza**. PDF só é solicitado quando necessário para conteúdo ausente/incompleto. Anexos próprios continuam materiais. Preservar URL, identificadores, autenticidade e proveniência disponíveis. Política: [docs/OFFICIAL_CONTENT_POLICY.md](docs/OFFICIAL_CONTENT_POLICY.md); inventário: [Issue #6](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6).
 - [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1), P0, segue aberta/In Progress. Em 26/09/2026 o usuário **redirecionou a DOE-SP-21**: o HTML oficial passa a ser o conteúdo principal e o PDF certificado deixa de ser requisito para capturar um ato. A correção de `artifactReconciliationHistory` foi suspensa como caminho de produto.
 - A reavaliação da `main` mostrou que o conector já usa o HTML oficial como `content`, mas o SHA dos arquivos em `files` participa do `contentHash`. Evidência produtiva somente leitura nos logs Railway: `DOE_SP_AUDIT` registrou **517 publicações / 517 versões**, **610 arquivos**, sendo **516 PDFs autenticados** e **94 anexos**, sem versões históricas naquele snapshot. Para a Portaria SRE 42 de 28/07/2025, o detalhe oficial do ID com PDF 404 retorna HTML válido (6.775 caracteres normalizados) idêntico ao da representação já persistida; a representação válida está persistida com uma versão cujo hash inclui o PDF. Portanto, capturar a origem 404 sem PDF pela semântica atual ou retirar o PDF do hash globalmente criaria versões artificiais no replay/acervo existente.
-- **DOE-SP-26:** o draft [backend PR #73](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) está no head `82f189c84a7b70e1985ed424c1549ae20184df46`, base `f25a596edce592e6e365e87ed4cbf16ba0922de8`, 0 commits atrás da main. CI #432 / run `36252974888` = **SUCCESS** e a reexecução independente do job `108437300694` também foi SUCCESS. Revisão técnica favorável: page-first D-017/D-036, fallback PDF material, attachments materiais, preservação same-origin do PDF autenticado DOE-SP, compatibilidade v1→v2, SRE 42 e imutabilidade histórica foram aprovados. O preflight produtivo DOE-SP-27b foi executado em modo somente leitura após essa revisão: 518 publicações/versões, 569 `collection_items`, 569 vínculos run-publication, 3 checkpoints, 94 attachments, sem vínculos tenant/company/matches/cross-source, runs ativas ou referências diretas no audit log no snapshot; manifesto de 518 registros com SHA-256 `54fcdb05eb5f362e0be87a77457861d5a4c22f9674e8f7fae59005632ab16c71`. O manifesto individual permanece privado nos logs Railway.
+- **DOE-SP-35/36/37:** a preparação final foi concluída no head `4917cdc2265fa87b35d555b98698f42a75d6c223`, com CI #443 SUCCESS e runner Railway 31/31 PASS; a revisão independente DOE-SP-36 aprovou o mesmo SHA e a preparação. Em 28/09/2026, o PR #73 foi squash-merged como `e2c4f9a58fe43cb56ca36a1925eb80cf612423ae`. A Issue #1 permanece OPEN e, na última leitura desta GOV-12, havia LOCK DOE-SP-37 ativo para EXECUÇÃO-A; nenhum handoff/UNLOCK final dessa execução tinha sido registrado. Não inferir deploy, run SCHEDULED, pausa, SQL, exclusão ou recaptura como concluídos sem evidência posterior na Issue.
 - O último bloqueio histórico transmitido foi 29/07/2025 com 399 dias pendentes. Não interpretar como leitura produtiva atual.
 - [Issue #2](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2): bootstrap e replay, depende da #1.
 - [Issue #3](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3): artefatos e política de `publication_files`, depende da #1.
@@ -48,23 +48,25 @@ As respostas Q1–Q22 foram formalizadas sem implementação técnica nas D-055 
 
 ## Próxima passagem
 
-A D-017/D-036 está aprovada globalmente. A autorização vigente do responsável para DOE-SP é **A — reconstruir integralmente o acervo DOE-SP**, substituindo a escolha anterior B; ver D-052. A revisão DOE-SP-26 foi favorável ao PR #73 no head `82f189c...`, que ainda está draft/unmerged. O preflight DOE-SP-27b confirmou um snapshot sem vínculos tenant/company/matches/cross-source; antes de qualquer exclusão é necessário novo preflight após pausa, backup recuperável, revisão independente do procedimento restrito, merge/deploy verde e validação da recaptura. Um backup sob demanda de 1,4 GB foi criado no volume Postgres em 26/09/2026 15:08 BRT; referência individual mantida fora do GitHub. A restauração foi inspecionada na UI, mas não ensaiada. Nenhuma exclusão, merge, deploy ou recaptura ocorreu neste marco.
+A D-017/D-036 está aprovada globalmente. A autorização vigente do responsável para DOE-SP é **A — reconstruir integralmente o acervo DOE-SP**, substituindo a escolha anterior B; ver D-052. No snapshot sincronizado pela GOV-12, a DOE-SP-35 concluiu a PREPARAÇÃO no SHA `4917cdc2265fa87b35d555b98698f42a75d6c223`, a DOE-SP-36 aprovou esse SHA e o PR #73 foi incorporado por squash em `e2c4f9a58fe43cb56ca36a1925eb80cf612423ae`. Nesse mesmo snapshot, a DOE-SP-37 tinha LOCK ativo e ainda não havia handoff/UNLOCK final. Não inferir desse marco deploy de Backend/Worker/Scheduler, run SCHEDULED, pausa da fonte, SQL produtivo, exclusão, reconstrução/recaptura ou fechamento DOE-SP sem evidência posterior registrada na Issue #1.
 
 ## Atualização contínua do estado — proposta GOV-16
 
-**Estado observado em 28/09/2026 02:10 BRT.** A Governança Flexível v2 está sendo proposta na GOV-16 e **ainda não está vigente** até revisão independente, autorização aplicável e merge do PR próprio.
+**Estado observado em 28/09/2026 02:10 BRT.** A Governança Flexível v2 está sendo proposta na GOV-16 e ainda não está vigente até revisão independente, autorização aplicável e merge do PR próprio.
 
 Após a incorporação, atualizações factuais de contexto/status/SHAs/links/handoffs passam a ser R0 por padrão: sem nova atividade, chat, LOCK ou revisão independente obrigatórios. Mudança de política, arquitetura, governança, autorização ou regra operacional material continua exigindo classificação superior.
 
 A autorização do usuário de 28/09/2026 02:10 BRT (`“QUero que siga mesmo assim”`) dispensou somente a pré-condição de encerramento prévio do PR #14 para iniciar a GOV-16. Não autorizou merge do PR #14, merge da GOV-16, deploy, SQL/migration, Railway write ou operação DOE-SP.
 
-## GOV-16 — Governança Flexível v2 baseada em risco
+## GOV-04 → GOV-16 — evolução da governança
 
-Princípio: **governança deve impedir dano, não impedir trabalho**.
+O PR #13 foi incorporado por GOV-11 em `bae943208cb99f236748bd6118ce482e4538a5ba`, instituindo C-01…C-12 como protocolo então vigente.
 
-A proposta cria R0–R3, Gate 0 proporcional, LOCK como lease baseado em risco, continuidade de sessão entre etapas, revisão incremental, manutenção documental R0 e fail-safe apenas para risco material. R3 preserva autorização explícita, revisão independente, backup/restore quando aplicável, dry-run, rollback e proteção de secrets/dados/tenant/auth.
+GOV-12/GOV-14 atualizaram o estado durável no PR #14 e GOV-15 emitiu parecer independente **FAVORÁVEL** ao head `f39a265f4fc633dd78d201e6c02f2db2ed620004`; no início da GOV-16 esse PR ainda permanecia OPEN / DRAFT / unmerged.
 
-Referência proposta: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md). Até o merge da GOV-16, continua valendo a versão de governança atualmente existente na `main`.
+**GOV-16 — PROPOSTA:** classificação R0–R3, Gate 0 proporcional, LOCK como lease por risco, continuidade de sessão entre etapas, revisão incremental, manutenção documental R0 e fail-safe apenas para risco material. R3 preserva autorização explícita, revisão independente, backup/restore quando aplicável, dry-run, rollback e proteção de secrets/dados/tenant/auth.
+
+Referência proposta: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md). Até o merge da GOV-16, continua valendo o protocolo anterior existente na `main`.
 
 ## Retomada em novo chat
 

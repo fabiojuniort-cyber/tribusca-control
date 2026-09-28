@@ -18,7 +18,7 @@ Em 26/09/2026 a **D-017**, refinada pela **D-036**, passou a estabelecer priorid
 
 Na DOE-SP, a direção técnica foi reaberta: **o HTML oficial deve ser o conteúdo principal e o PDF certificado não deve bloquear a captura da legislação**. O caminho anterior de reconciliação/histórico do [PR #71](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71) foi suspenso para reavaliação. O PR #71 permanece OPEN e unmerged e chegou ao head `3c286c982d983ecc7bce8f9722a1f967898665d3` (CI #394 SUCCESS) antes do redirecionamento; esse CI não autoriza merge.
 
-O preflight produtivo DOE-SP-27b em modo somente leitura registrou **518 publicações / 518 versões, 569 `collection_items`, 569 vínculos run-publication, 3 checkpoints e 94 attachments**, com zero vínculos tenant/company/matches/cross-source, zero referências diretas no audit log e zero runs ativas naquele snapshot. Manifesto agregado SHA-256 `54fcdb05eb5f362e0be87a77457861d5a4c22f9674e8f7fae59005632ab16c71`; manifesto individual privado nos logs Railway. A decisão vigente é **A — reconstruir o acervo DOE-SP** (D-052), substituindo B. O draft [PR #73](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) permanece no head `82f189c84a7b70e1985ed424c1549ae20184df46`, com CI #432 e reexecução independente SUCCESS e parecer DOE-SP-26 favorável. Um snapshot de volume Postgres de 1,4 GB foi criado em 26/09/2026 15:08 BRT; recuperação disponível na UI, sem ensaio de restore. Procedimento destrutivo e gates produtivos pendentes; nenhuma exclusão ou recaptura executada.
+A preparação DOE-SP-35 foi concluída no head `4917cdc2265fa87b35d555b98698f42a75d6c223`: CI #443 SUCCESS e runner Railway 31/31 PASS, com preflight somente leitura, backup/restauração e ensaio destrutivo realizados fora da produção; 0 escritas produtivas. A revisão independente DOE-SP-36 aprovou esse SHA e a preparação. Em 28/09/2026, durante DOE-SP-37, o [PR #73](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) foi incorporado por squash no backend como `e2c4f9a58fe43cb56ca36a1925eb80cf612423ae`. A [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) permanece **OPEN** e o LOCK DOE-SP-37 (EXECUÇÃO-A) estava ativo na última leitura desta GOV-12; não havia handoff/UNLOCK final dessa execução no momento do registro. Esta GOV-12 não executou nem validou deploy, pausa da fonte, SQL, exclusão, recaptura ou fase destrutiva DOE-SP.
 
 O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap parado em 29/07/2025, com 399 dias pendentes. Esses números são históricos, não uma leitura produtiva nova. A janela de bootstrap aprovada é 01/01/2025 até a data de validação.
 
@@ -26,7 +26,7 @@ O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap p
 
 | Issue | Resultado esperado | Dependência |
 | --- | --- | --- |
-| [#1 — gate DOE-SP HTML-primary](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Revisar procedimento restrito, pausar DOE-SP, repetir preflight/backup, finalizar PR #73, confirmar deploys e reconstruir/recapturar | Opção A autorizada (D-052); preflight 518/569/3 sem vínculos externos; PR #73 draft, CI verde; nenhuma exclusão ainda |
+| [#1 — gate DOE-SP HTML-primary](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) | Concluir execução/validação pós-merge e somente depois os gates destrutivos/recaptura previstos | DOE-SP-36 aprovou `4917cdc`; PR #73 mergeado em `e2c4f9a`; DOE-SP-37 EXECUÇÃO-A em andamento no último snapshot; Issue #1 segue OPEN |
 | [#2 — bootstrap e replay](https://github.com/fabiojuniort-cyber/tribusca-control/issues/2) | Cobertura aprovada com pendingRanges vazio e replay idempotente | #1 |
 | [#3 — artefatos/publication_files](https://github.com/fabiojuniort-cyber/tribusca-control/issues/3) | Evidência e política de persistência dos arquivos | #1 |
 | [#4 — fechamento DOE-SP](https://github.com/fabiojuniort-cyber/tribusca-control/issues/4) | Gates, seção 13 do backend e temporários tratados | #1, #2 e #3 |
@@ -83,27 +83,25 @@ Pontos de estado:
 - questões remanescentes estão em `docs/OPEN_QUESTIONS.md`;
 - nenhuma disponibilidade de produto foi inferida de páginas, previews, mocks, PRs ou contratos em draft.
 
-### GOV-16 — Governança Flexível v2
+### GOV-04 → GOV-16 — evolução da governança
 
-**PROPOSTA DOCUMENTAL — ainda não vigente. Estado observado em 28/09/2026 02:10 BRT.**
+**Estado observado em 28/09/2026 02:10 BRT.**
 
-A GOV-15 foi FAVORÁVEL ao PR #14/head `f39a265f4fc633dd78d201e6c02f2db2ed620004`, mas o PR #14 continuava OPEN/DRAFT/unmerged no início da GOV-16. O usuário autorizou explicitamente seguir com a GOV-16 mesmo assim; a exceção cobre somente essa pré-condição e não autoriza merges/deploys/operação DOE-SP.
+- GOV-11 incorporou o PR #13 em `bae943208cb99f236748bd6118ce482e4538a5ba`, tornando C-01…C-12 o protocolo vigente da `main`.
+- GOV-15 foi **FAVORÁVEL** ao PR #14/head `f39a265f4fc633dd78d201e6c02f2db2ed620004`, mas o PR #14 ainda estava OPEN / DRAFT / unmerged no início da GOV-16.
+- O usuário autorizou explicitamente prosseguir com GOV-16 apesar dessa pré-condição pendente; a exceção não autoriza merge, deploy, Railway write, SQL/migration nem operação DOE-SP.
+- GOV-16 propõe a **Governança Flexível v2** com R0–R3, LOCK proporcional, revisão incremental e continuidade de sessão executora.
+- A v2 só entra em vigor após revisão independente favorável, autorização aplicável e merge na `main`.
 
-A v2 propõe classificação R0–R3:
-- R0: documental/factual, praticamente sem burocracia;
-- R1: baixo risco, continuidade na mesma sessão;
-- R2: material, Issue/branch/PR/testes e revisão independente para mudança material;
-- R3: crítico/produtivo, controles fortes completos.
-
-A proposta substitui, após merge autorizado, as regras gerais de LOCK universal, novo chat por etapa, invalidação total por qualquer commit e fail-fast indiscriminado. Mantém integralmente proteção de secrets/dados privados, RLS/auth/tenant, autorização material, salvaguardas destrutivas e revisão independente real de R2/R3.
-
-Referência: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md).
+Referência proposta: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md).
 
 ## Governança
 
 A Governança Flexível v2 somente passa a valer após parecer independente favorável e merge autorizado do PR GOV-16. Até esse evento, o protocolo anterior em `main` continua vigente para esta própria atividade e sua revisão.
 
 O Gerente Geral permanece coordenador/read-only por padrão. Após a v2, R0/R1 podem ser encaminhados sem criar nova atividade especializada; novo ID fica reservado a novo escopo material, decisão ou operação independente. Atualizações factuais usam snapshots temporais quando apropriado.
+
+A classificação R0–R3 não reduz proteção de secrets, dados privados, auth, RLS, integridade tenant, autorização material nem salvaguardas destrutivas de R3.
 
 ## API-01 — API pública do site
 
