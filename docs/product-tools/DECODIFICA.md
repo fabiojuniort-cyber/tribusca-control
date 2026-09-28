@@ -98,7 +98,7 @@ Planejadas, não implementadas por esta decisão:
 - Um controle de ajuda discreto deve explicar a regra comercial de forma objetiva: **1 crédito = até 25.000 caracteres; mínimo de 1 crédito; faixas adicionais de até 25.000 caracteres consomem créditos adicionais com arredondamento para cima**.
 - O controle de ajuda não deve exigir que o usuário navegue para outra página para entender a cobrança.
 - A quantidade de créditos incluída em cada plano de assinatura **não foi definida** nesta rodada.
-- A base exata de contagem de caracteres (por exemplo, tratamento de espaços, marcação, cabeçalhos e texto normalizado) permanece aberta para desenho funcional/técnico posterior.
+- A contagem comercial usa o **texto oficial normalizado completo**: inclui título, artigos e anexos materiais integrantes; exclui HTML, metadados, URLs e espaços repetidos. Particionamento técnico de atos extensos não altera o custo integral.
 
 ## Versionamento e desatualização
 
@@ -108,7 +108,7 @@ Planejadas, não implementadas por esta decisão:
 - O texto oficial vigente continua sendo a referência primária.
 - A tradução da nova versão é **sob demanda**: quando a tradução anterior estiver obsoleta, o botão volta a exibir o custo e o usuário pode acionar nova tradução.
 - A nova tradução decorrente de mudança do texto oficial considera **o conteúdo completo da versão vigente** para cobrança e processamento comercial, mesmo que apenas parte da norma tenha sido alterada.
-- Também permanece aberta a política para obsolescência causada apenas por mudança de engine, prompt ou modelo, sem mudança no conteúdo oficial.
+- Mudança apenas de engine/modelo/prompt **não** torna a tradução obsoleta. Invalidação excepcional por erro, segurança ou qualidade pode ocorrer, mas deve registrar a causa.
 
 ## Limites
 
@@ -130,13 +130,12 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 
 ## Questões abertas
 
-1. Política de obsolescência causada apenas por mudança de engine/prompt/modelo, sem alteração no conteúdo oficial.
-2. Unidade técnica de geração e persistência: ato completo, artigo ou outra composição interna, preservando a experiência aprovada de cobertura completa e apresentação artigo a artigo.
-3. Regra física de associação entre resultado global reutilizável e o acionamento/visibilidade por usuário.
-4. Contrato da OpenAI API, modelo, prompt, limites, observabilidade, custos e controles de falha.
-5. Comportamento para conteúdo extenso que exceda limites técnicos da integração.
-6. Quantidade de créditos incluída em cada plano, periodicidade de renovação, eventual rollover e regras de compra adicional.
-7. Definição exata de quais caracteres entram na medição comercial e em qual representação do texto a contagem é feita.
+1. Unidade técnica de geração e persistência: ato completo, artigo ou outra composição interna, preservando a cobertura completa e o custo integral aprovado.
+2. Regra física de associação entre resultado global reutilizável e acionamento/visibilidade por usuário.
+3. Contrato da OpenAI API, modelo, prompt, limites, observabilidade e custos.
+4. Estratégia técnica para conteúdo extenso que exceda limites da integração, sem alterar a cobrança integral.
+5. Quantidade de créditos incluída em cada plano.
+6. **Validade dos créditos extras** e **ordem de consumo** entre franquia mensal e créditos extras.
 
 ## Avaliação de impacto desta decisão
 
@@ -159,3 +158,28 @@ Conforme o roadmap vigente, a implementação permanece na macrofase de Intelig�
 **Sim, em desenho futuro**, nas frentes de arquitetura/dados/API/IA/UX, quando o Gerente Geral autorizar a implementação por Issue própria.
 
 **Nenhuma alteração técnica é autorizada por este documento.**
+
+
+## GOV-03 — entrega, créditos e invalidação
+
+### Medição
+A contagem usa o **texto oficial normalizado completo**:
+- inclui título, artigos e anexos materiais integrantes;
+- exclui HTML, metadados, URLs e espaços repetidos;
+- divisão/chunking técnico não reduz nem multiplica o custo do conteúdo integral.
+
+### Momento do débito
+- debitar apenas quando o resultado for **entregue**;
+- falha, timeout e cancelamento **não consomem crédito**;
+- resultado global reutilizado e entregue **continua consumindo** o crédito comercial correspondente.
+
+### Obsolescência e invalidação
+- mudança do **conteúdo oficial** torna a tradução anterior obsoleta conforme regras já aprovadas;
+- mudança somente de **modelo/prompt** não a torna obsoleta;
+- invalidação excepcional por erro, segurança ou qualidade deve registrar causa/auditoria.
+
+### Ciclo comercial
+- créditos incluídos na assinatura renovam **mensalmente**;
+- créditos mensais **não acumulam** para o ciclo seguinte;
+- créditos extras poderão ser comprados;
+- validade e ordem de consumo dos extras continuam abertas.
