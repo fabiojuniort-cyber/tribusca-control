@@ -8,6 +8,6 @@
 - PRs de POC, histórico/repair e fontes não priorizadas não são incorporados pela existência no GitHub.
 - Evidências publicadas em GitHub privado ainda devem ser sanitizadas.
 
-- Para futuras operações preparadas por sessões Claude, runbooks, SQLs e scripts versionáveis ficam em `radar-fiscal-backend/ops/<frente>/`; dumps, manifestos integrais, dados de tenant, credenciais e demais dados privados permanecem na Railway ou armazenamento autorizado.
-- Operação produtiva material/destrutiva exige salvaguardas definidas antes da execução: preflight read-only, backup adequado, teste de restauração, dry-run quando possível, transação/rollback quando suportado e validação pós-execução pré-definida.
+- Para futuras operações preparadas por sessões Claude, runbooks, SQLs e scripts versionáveis ficam em `radar-fiscal-backend/ops/<frente>/`; **dados privados não saem da Railway** e não entram em Issue, PR, commit, comentário, handoff ou resposta. Dumps, manifestos integrais, dados de tenant, credenciais e conteúdo sensível permanecem dentro da Railway ou armazenamento privado explicitamente autorizado.
+- Operação produtiva material/destrutiva exige salvaguardas definidas antes da execução: preflight read-only; backup dentro da Railway; restauração testada em Postgres temporário; artefato exato commitado e revisado; dry-run com resultado igual ao esperado; transação/rollback quando suportado; e queries de validação pós-execução definidas previamente. Divergência em qualquer salvaguarda bloqueia EXECUÇÃO.
 - Limitação de ferramenta é um gate: se a sessão Claude não possuir operação suportada para excluir serviço Railway, registrar como não executado e encaminhar o handoff; não simular exclusão removendo outro recurso.
