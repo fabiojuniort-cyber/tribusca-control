@@ -105,7 +105,7 @@ A implementação preparada no PR #73 segue:
 - attachments próprios → material obrigatório separado;
 - URL, `externalId` e `authCode` permanecem preservados.
 
-O acervo produtivo atual ainda contém hashes/metadata legados calculados com PDFs autenticados. A decisão sobre preservar ou reconstruir esse acervo é um gate separado na Issue #1; esta política não autoriza operação destrutiva.
+O acervo produtivo atual ainda contém hashes/metadata legados calculados com PDFs autenticados. **A D-052 já decidiu pela reconstrução restrita ao acervo DOE-SP**, substituindo a alternativa de preservação. A execução continua condicionada aos gates da Issue #1 — preflight atualizado, pausa segura, backup recuperável, revisão do procedimento restrito, merge/deploy aplicável e validação da recaptura. Esta política, por si só, não autoriza operação destrutiva nem reconstrução de outras fontes.
 
 
 ## GOV-03 — cadência, backfill, classificação e retenção
@@ -127,14 +127,15 @@ Backfill é um fluxo separado do monitoramento corrente:
 ### Escopo fiscal/tributário exibido
 
 Inclui:
-- tributos e contribuições;
-- benefícios fiscais e regimes;
-- obrigações e documentos fiscais;
-- escriturações;
+- **impostos, taxas, contribuições e demais tributos**;
+- benefícios fiscais e regimes tributários;
+- **obrigações, documentos e escriturações fiscais/tributárias**;
 - fiscalização, cobrança e contencioso tributário;
 - matéria aduaneira tributária;
 - Reforma Tributária;
-- mudanças de prazo, leiaute, sistema ou obrigação empresarial.
+- mudanças de prazo, leiaute ou sistema **quando vinculadas a tributos, documentos, escriturações ou obrigações fiscais/tributárias**.
+
+Uma obrigação empresarial sem vínculo fiscal/tributário não entra no escopo apenas por afetar a empresa.
 
 Para matéria fiscal/tributária, preservar conteúdo integral conforme a representação oficial aplicável. Publicação com **CNPJ exato** de empresa/estabelecimento cadastrado também preserva conteúdo integral e pode ser exibida somente à respectiva conta, mesmo quando o assunto geral esteja fora do escopo fiscal.
 
@@ -143,3 +144,16 @@ Uma **raiz isolada de oito dígitos** não caracteriza menção exata.
 Itens rejeitados pela classificação preservam metadados mínimos e **motivo da exclusão**, distinguindo descarte consciente de falha de coleta.
 
 **Questão aberta:** como reexaminar itens antigos quando uma nova empresa/CNPJ for cadastrada, sem transformar esta decisão em autorização de implementação.
+
+
+### Dependência de isolamento para publicações não fiscais por CNPJ
+
+A exceção de retenção por **CNPJ exato** não transforma o item em publicação fiscal pública. Quando uma publicação estiver fora do escopo fiscal e for preservada somente porque menciona CNPJ cadastrado:
+
+- sua visibilidade é restrita à conta correspondente;
+- ela não pode ser tratada como metadado global elegível ao Acervo público;
+- a API pública D-050 existente não implementa, por si só, filtro fiscal/tenant para essa nova categoria;
+- antes de esse tipo de registro poder participar de qualquer alimentação do Acervo público, deve existir **Issue técnica e gate específico** que impeçam exposição pública indevida, inclusive dos metadados;
+- esta GOV-03 não autoriza alterar a API, schema ou pipeline.
+
+A rota pública atual continua válida para o contrato já implementado e validado; esta dependência vale para a futura introdução de registros não fiscais retidos apenas por CNPJ.
