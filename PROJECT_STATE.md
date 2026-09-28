@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 26/09/2026 (America/Sao_Paulo).
+Atualizado em 27/09/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -40,8 +40,8 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 - Motor, autenticação/RLS, infraestrutura e fontes federais: entregas reportadas anteriormente; esta atualização não fez revalidação produtiva completa.
 - DOU/INLABS: operacional, com gate final ainda a confirmar.
 - CONFAZ: DOU como fonte primária dos atos formalmente publicados; portal direto indisponível no Railway segundo diagnósticos anteriores.
-- Outros 26 DOEs: pendentes; só iniciar outro estado após fechamento formal de SP.
-- API do produto, taxonomia, perfil e integrações autenticadas de Sonar/Revela/Decodifica/Acervo: prioridades posteriores conforme [ROADMAP.md](ROADMAP.md). A camada pública do site foi excepcionalmente autorizada em paralelo pela D-035 / WEB-01.
+- Outros 26 DOEs: pendentes; **nenhum novo DOE começa antes do fechamento formal de SP**. Depois do fechamento, a D-055 permite paralelismo com taxonomia, Perfil Tributário e autenticação/comercial.
+- O roadmap foi refinado pela D-055: após o fechamento formal do DOE-SP, demais DOEs, taxonomia, Perfil Tributário e autenticação/comercial podem avançar em paralelo. Sonar/Revela/Decodifica e integrações autenticadas continuam dependentes das respectivas bases/Issues. A camada pública segue autorizada em paralelo.
 
 ### WEB-01 / WEB-02 — site público
 
@@ -50,6 +50,21 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 A [Issue #8](https://github.com/fabiojuniort-cyber/tribusca-control/issues/8) autorizou a camada pública em paralelo; em 26/09/2026 a WEB-02 substituiu as definições visuais conflitantes conforme D-037–D-049. O draft [frontend PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`, contém Home, Cobertura, Portfólio, Como funciona e Reforma Tributária; modais de acesso; login conectado ao contrato existente `POST /auth/login`; carrossel estadual; seis recursos; Sonar/Revela/Decodifica conforme WEB-02; Cobertura federal + 27 UFs com status e métricas sem API em `—`; e timeline da Reforma sem datas especulativas. WEB-05 corrigiu os bloqueios A11Y/Branding da revisão independente. GitHub Actions #38 / run `36361749038` = **SUCCESS**, com 13/13 testes, typecheck, checksum do logo escuro e build.
 
 **Sem merge e sem publicação definitiva.** WEB-03/D-051 mantém os seis recursos como `Em desenvolvimento`. WEB-05/D-053 ratificou conceitualmente as cores semânticas do Sonar com ajustes de contraste; Issue #10 permanece aberta até a verificação independente final. Preview temporário do head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`: `https://web05-preview-production.up.railway.app`, deployment `1cf730d6-741a-4187-904c-3da2e231100b` SUCCESS. Cadastro/reset dependem da Issue #9; se o site for lançado antes dela, D-054 exige trocar “Criar conta” por “Em breve” antes da publicação. Esse ajuste não está implementado no head atual.
+
+### GOV-03 — decisões de coleta, produto, site e comercial
+
+**DOCUMENTAÇÃO CONSOLIDADA EM BRANCH — nenhuma implementação, merge ou deploy por esta atividade.**
+
+D-055 a D-063 registram: paralelismo condicionado ao fechamento formal DOE-SP; cadência corrente/backfill; escopo fiscal/retenção e CNPJ exato; Acervo público/auth/trial; Sonar; Revela; Decodifica; Reforma; e comercial.
+
+Pontos de estado:
+- DOE-SP permanece **ABERTO** e prioritário;
+- D-055 não libera outro DOE antes do fechamento de SP;
+- D-054 continua sendo o gate do CTA se houver lançamento do site antes da #9;
+- cadastro/trial continuam bloqueados pela #9; D-058 define as regras funcionais futuras;
+- D-053 segue como ratificação cromática do Sonar; Issue #10 continua aberta para verificação independente final;
+- questões remanescentes estão em `docs/OPEN_QUESTIONS.md`;
+- nenhuma disponibilidade de produto foi inferida de páginas, previews, mocks, PRs ou contratos em draft.
 
 ## Governança
 
