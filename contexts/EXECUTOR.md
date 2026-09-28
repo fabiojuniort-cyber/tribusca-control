@@ -6,6 +6,10 @@ Atualizado em 26/09/2026. Ponto de entrada: [CONTEXT.md](../CONTEXT.md), [BACKEN
 
 [Issue #1 — gate DOE-SP / PR #71](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) é a tarefa executável prioritária. PR: https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/71. No último registro o PR continuava aberto; verificar novamente. #2 e #3 dependem de #1; #4 depende das três. Não executar tarefas dependentes até o gate correspondente.
 
+## Executor em sessão Claude
+
+Quando o prompt declarar **Modelo: Claude**, leia também [CLAUDE_SESSION_PROTOCOL.md](../docs/CLAUDE_SESSION_PROTOCOL.md). Antes de qualquer trabalho, execute Gate 0; adquira LOCK na Issue e confirme um único tipo de gate. Não misture CÓDIGO/PREPARAÇÃO/REVISÃO/EXECUÇÃO. Ao concluir ou bloquear depois do Gate 0, registre UNLOCK. O handoff separa Preparado / Executado / Validado.
+
 ## Contrato do executor GPT-5.6
 
 1. Revalidar a main, PR, CI e produção exigidos antes de agir; ler Issue e autorização vigente.
