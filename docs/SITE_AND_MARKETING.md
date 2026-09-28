@@ -42,12 +42,12 @@ O site público terá uma página dedicada à **Reforma Tributária**, tratada c
 3. Entrar/Criar conta/Recuperar senha/Nova senha funcionam em modal sobre a página; somente login usa **POST `/auth/login`** comprovado.
 4. Home: carrossel visual de 5 UFs, SP sempre primeiro/Ponte Estaiada, 4 UFs sorteadas e fotos reais/licenciadas; publicações estaduais ficam como **“—”** enquanto não houver API.
 5. Home/Portfólio: seis recursos — Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário. **WEB-03: todos = Em desenvolvimento** até comprovação operacional e autorização específica de publicação.
-6. Sonar: vermelho/amararelo/verde para Alta/Média/Baixa como exceção semântica do draft, pendente de Branding; rótulos textuais continuam obrigatórios.
+6. Sonar: a WEB-05 / D-053 ratificou conceitualmente a exceção semântica restrita ao Sonar — Alta `#C92A2A`, Média `#9A6900`, Baixa texto `#237032` e ping `#2B8A3E` — sempre com rótulos textuais e proximidade; revisão independente final ainda pendente.
 7. Decodifica: cinco exemplos legais aprovados em carrossel; Revela: boletim diário com Alta afinidade e Menção direta.
 8. Cobertura: federais primeiro, depois 27 UFs/SP primeiro; cards full-width com status e métricas. Sem contrato de API, métricas = **“—”**.
 9. Reforma Tributária: timeline separa **Publicação, Vigência e Marco previsto em lei**; sem datas sem evidência oficial.
 
-**Próximo passo:** revisão visual/funcional do PR #1. Sem merge/deploy. O gate de status foi resolvido pela WEB-03/D-051: nenhum dos seis recursos deve ser apresentado como disponível. A paleta do Sonar continua com gate de Branding.
+**Próximo passo:** revisão independente final do head WEB-05. Sem merge/publicação definitiva. O gate de status foi resolvido pela WEB-03/D-051; a exceção do Sonar foi ratificada conceitualmente pela D-053, aguardando verificação final.
 
 
 ## WEB-03 — claims de disponibilidade
@@ -61,3 +61,14 @@ A D-043 registrou historicamente uma tentativa de apresentar **Acervo** e **Cent
 Não tratar existência de rota, mock, exemplo, placeholder, PR ou contrato em draft como evidência de funcionalidade acessível ao cliente.
 
 **Impacto:** comunicação pública e badges/status. **Próximo passo:** CI + revisão visual/funcional; cores do Sonar seguem em avaliação na Issue #10. Sem merge/deploy.
+
+
+## WEB-05 — lançamento e preview de revisão
+
+**Data:** 27/09/2026.
+
+O head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d` está disponível somente em **preview temporário de revisão**, sem dados produtivos/secrets e sem equivaler a publicação definitiva.
+
+**Regra de CTA — D-054:** se o site for lançado antes de a Issue #9 entregar e validar cadastro funcional, a ação pública **“Criar conta” deve ser substituída por “Em breve”** antes do lançamento. Essa alteração **não está implementada no head atual**; só deve ser aplicada no gate de publicação se a dependência continuar aberta.
+
+A Issue #10 permanece aberta até o revisor independente validar no preview os contrastes, a redundância texto/proximidade/cor e a restrição das cores ao Sonar.
