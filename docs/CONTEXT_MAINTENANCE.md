@@ -40,5 +40,17 @@ Percentuais são estimativas, não gates. Evidência objetiva prevalece.
 ## Novo chat
 Novo chat é necessário quando a independência de revisão exigir ou quando a separação de risco R3 justificar. Não abrir chat novo apenas porque o executor mudou de etapa.
 
+## Melhoria contínua e prevenção de loops
+Quando um bloqueio, retrabalho ou contradição revelar deficiência do próprio processo, o Gerente deve tratar a causa, não apenas reenviar a mesma instrução.
+
+Antes de emitir novo prompt, verificar bloqueios previsíveis relevantes ao próximo passo: sessão/tipo de gate, autorização vigente, SHA/PR, dependências e estado necessário.
+
+- correção factual/procedural R0: atualizar diretamente no ciclo contínuo;
+- ajuste de baixo risco R1: manter no mesmo ciclo quando seguro;
+- mudança material de governança: R2;
+- impacto crítico/produtivo: R3.
+
+Não criar nova GOV/chat/LOCK/revisão apenas para registrar fato já comprovado ou resolver formalidade R0. Toda melhoria deve preservar os controles não flexibilizados de segurança/dados/tenant.
+
 ## Autorização permanente
 O responsável autoriza correções factuais, manutenção documental, contexto, links/datas/status, formatação, testes, lint e ajustes sem mudança material de comportamento. Não cobre merge/deploy material, migration, secret, exclusão, SQL produtivo, arquitetura, decisão de produto ou operação destrutiva.

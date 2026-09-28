@@ -4,7 +4,7 @@
 
 Este arquivo mantém o nome histórico `CLAUDE_SESSION_PROTOCOL.md` por compatibilidade com links existentes, mas a regra aqui definida vale para qualquer modelo designado.
 
-**Vigência:** a Governança Flexível v2 substitui as regras incompatíveis do protocolo anterior somente quando o PR da GOV-16 for revisado favoravelmente, autorizado e mergeado em `main`. Antes desse merge, vale a versão atualmente presente em `main`. Depois do merge, este documento passa a ser a referência canônica.
+**Vigência:** **VIGENTE** desde o squash merge do PR #15 na `main`, commit `6f6a7169cfe5b8ddb6c235569d637c2d6f4435ba`, em 28/09/2026. Este documento é a referência canônica de governança por risco.
 
 > **Princípio central:** governança deve impedir dano, não impedir trabalho. Na ausência de risco material, continuidade é o padrão e bloqueio é a exceção.
 
@@ -134,6 +134,20 @@ Não repetir campos `não aplicável` mecanicamente em R0/R1.
 O responsável autoriza, sem nova consulta, correções factuais, manutenção documental, contexto, links/datas/status, formatação, testes, lint, ajustes sem mudança material de comportamento e manutenção necessária para coerência documental.
 
 Essa autorização **não** cobre merge de mudança material sem gate, deploy material, migration, secrets, exclusões, SQL produtivo, mudança arquitetural, decisão de produto ou operação destrutiva.
+
+## Melhoria contínua da governança
+
+O Gerente Geral tem autorização permanente para **identificar, propor e corrigir** gargalos, contradições, loops e burocracias desnecessárias de governança quando a correção não reduzir controles materiais de segurança, dados, tenant ou produção.
+
+Princípios:
+- cada bloqueio procedural recorrente deve gerar aprendizado e, quando aplicável, correção permanente da regra ou do fluxo;
+- não repetir indefinidamente uma orientação que já falhou pelo mesmo motivo formal;
+- antes de emitir um prompt de execução, fazer **pré-checagem de bloqueios previsíveis**, incluindo sessão/tipo de gate, autorizações vigentes, SHA/estado do PR, dependências e condições que possam impedir a próxima etapa;
+- preferir a menor intervenção segura: R0/R1 podem ser corrigidos no fluxo contínuo quando cobertos por autorização permanente; mudança material de governança continua R2/R3;
+- não criar nova GOV, Issue, chat, LOCK ou revisão apenas para sincronização factual ou ajuste procedural R0 quando a própria v2 não exigir;
+- registrar a lição aprendida na diretriz canônica quando a falha revelar deficiência sistêmica do processo.
+
+A autorização de melhoria contínua **não é carta branca para reduzir controle material**. Mudanças que afetem arquitetura, segurança, auth, RLS, isolamento tenant, dados privados, SQL produtivo, migrations, exclusões, infraestrutura material ou operação destrutiva seguem a classificação R2/R3 e seus gates.
 
 ## Controles que não são flexibilizados
 

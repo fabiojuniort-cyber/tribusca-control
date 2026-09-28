@@ -4,7 +4,7 @@ Base operacional sincronizada em 28/09/2026; protocolo de papéis atualizado em 
 
 ## Missão e limites desta conversa
 
-**Protocolo vigente de 26/09/2026:** o Gerente Geral GPT-6 pode acessar **sempre em modo somente leitura** o contexto e as evidências pertinentes, incluindo GitHub, código, CI, Railway e PostgreSQL se houver ferramenta segura de leitura. Não pode editar arquivos ou executar qualquer ação que modifique estado; delega essas ações aos GPT-5.6. Ele coordena GPT-5.6 em chats executores separados, analisa todos os erros e handoffs, confere a suficiência lógica das evidências recebidas e decide novas instruções. Os GPT-5.6 fazem a execução, verificações especializadas, escritas, implementações, revisão independente e atualizações deste repositório por delegação; o Gerente pode conferir diretamente evidências em modo leitura. O usuário abre o chat indicado e transmite o retorno; nada aqui inicia agentes automaticamente. Distinguir inspeção direta somente leitura do Gerente de evidência relatada por executor. O usuário quer máxima continuidade no escopo autorizado, mínima intermediação e até cinco passos independentes por instrução; falha em premissa interrompe apenas etapas dependentes. Não avançar ao próximo DOE sem gate SP.
+**Governança vigente desde 28/09/2026:** o Gerente Geral coordena por R0–R3 e permanece read-only por padrão para superfícies de produto/produção, mas possui autorização permanente para manutenção factual e melhoria contínua das diretrizes de governança dentro dos limites da v2. Antes de emitir prompts, pré-checa bloqueios previsíveis (sessão/tipo de gate, autorizações, SHA/PR, dependências) e corrige loops procedurais quando a causa estiver na própria regra. Mudança material continua R2/R3 e segurança, secrets, dados privados, auth, RLS, tenant, SQL produtivo, migrations, exclusões e operações destrutivas preservam controles fortes. O usuário quer máxima continuidade no escopo autorizado, mínima intermediação e avanço autônomo; falha em premissa interrompe apenas etapas dependentes. Não avançar ao próximo DOE sem gate SP.
 
 ## Onde está a verdade
 
@@ -50,23 +50,15 @@ As respostas Q1–Q22 foram formalizadas sem implementação técnica nas D-055 
 
 A D-017/D-036 está aprovada globalmente. A autorização vigente do responsável para DOE-SP é **A — reconstruir integralmente o acervo DOE-SP**, substituindo a escolha anterior B; ver D-052. No snapshot sincronizado pela GOV-12, a DOE-SP-35 concluiu a PREPARAÇÃO no SHA `4917cdc2265fa87b35d555b98698f42a75d6c223`, a DOE-SP-36 aprovou esse SHA e o PR #73 foi incorporado por squash em `e2c4f9a58fe43cb56ca36a1925eb80cf612423ae`. Nesse mesmo snapshot, a DOE-SP-37 tinha LOCK ativo e ainda não havia handoff/UNLOCK final. Não inferir desse marco deploy de Backend/Worker/Scheduler, run SCHEDULED, pausa da fonte, SQL produtivo, exclusão, reconstrução/recaptura ou fechamento DOE-SP sem evidência posterior registrada na Issue #1.
 
-## Atualização contínua do estado — proposta GOV-16
+## Governança Flexível v2 — vigente
 
-**Estado observado em 28/09/2026 02:10 BRT.** A Governança Flexível v2 está sendo proposta na GOV-16 e ainda não está vigente até revisão independente, autorização aplicável e merge do PR próprio.
+**Estado atual em 28/09/2026 após GOV-20.** GOV-19 aprovou o head `d4f294e0daa4856df37337fa74ef964cc3e92e38`. GOV-20 incorporou o PR #15 por squash na `main` em `6f6a7169cfe5b8ddb6c235569d637c2d6f4435ba`. O PR #14 foi fechado sem merge como `superseded`.
 
-Após a incorporação, atualizações factuais de contexto/status/SHAs/links/handoffs passam a ser R0 por padrão: sem nova atividade, chat, LOCK ou revisão independente obrigatórios. Mudança de política, arquitetura, governança, autorização ou regra operacional material continua exigindo classificação superior.
+A v2 está **VIGENTE**. Atualizações factuais de contexto/status/SHAs/links/handoffs são R0 por padrão. O Gerente possui autorização permanente para identificar/corrigir gargalos e loops de governança, com pré-checagem de bloqueios previsíveis antes de delegar. Mudança material de política/governança continua R2/R3.
 
-A autorização do usuário de 28/09/2026 02:10 BRT (`“QUero que siga mesmo assim”`) dispensou somente a pré-condição de encerramento prévio do PR #14 para iniciar a GOV-16. Não autorizou merge do PR #14, merge da GOV-16, deploy, SQL/migration, Railway write ou operação DOE-SP.
+A exceção pontual à C-03 usada na GOV-20 foi transitória e específica para superar o último bloqueio do protocolo antigo; não cria dispensa geral de controles R3.
 
-## GOV-04 → GOV-16 — evolução da governança
-
-A GOV-10 emitiu parecer independente **FAVORÁVEL** ao SHA `e39239301795a087f2c6fada67d7e3e04d6f1a32`; em seguida, a GOV-11 incorporou o PR #13 em `bae943208cb99f236748bd6118ce482e4538a5ba`, instituindo C-01…C-12 como protocolo então vigente.
-
-GOV-12/GOV-14 atualizaram o estado durável no PR #14 e GOV-15 emitiu parecer independente **FAVORÁVEL** ao head `f39a265f4fc633dd78d201e6c02f2db2ed620004`; no início da GOV-16 esse PR ainda permanecia OPEN / DRAFT / unmerged.
-
-**GOV-16 — PROPOSTA:** classificação R0–R3, Gate 0 proporcional, LOCK como lease por risco, continuidade de sessão entre etapas, revisão incremental, manutenção documental R0 e fail-safe apenas para risco material. R3 preserva autorização explícita, revisão independente, backup/restore quando aplicável, dry-run, rollback e proteção de secrets/dados/tenant/auth.
-
-Referência proposta: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md). Até o merge da GOV-16, continua valendo o protocolo anterior existente na `main`.
+Referência vigente: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md).
 
 ## Retomada em novo chat
 
