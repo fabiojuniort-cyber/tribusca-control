@@ -18,7 +18,7 @@ Sonar **não é análise de impacto** e não deve afirmar que uma norma necessar
 1. O Sonar funciona **automaticamente** e não consome créditos.
 2. A publicação disponibilizada no produto deve estar acompanhada dos marcadores necessários ao Sonar.
 3. O cadastro/perfil da empresa e de seus estabelecimentos também deve ser associado aos atributos/marcadores aplicáveis.
-4. O Sonar cruza publicação × perfil tributário e classifica o resultado em **Alta**, **Média** ou **Baixa** afinidade.
+4. O Sonar cruza publicação × perfil tributário e classifica o resultado em **Alta**, **Média** ou **Baixa** afinidade; quando o perfil não tiver dados suficientes para uma classificação legítima, usar o estado separado **Dados insuficientes**, nunca Baixa por ausência de informação.
 5. O resultado deve ser **explicável**, apresentando os fatores que contribuíram para a classificação.
 6. Marcadores não possuem necessariamente o mesmo peso.
 7. Divergências relevantes de segmento, produto ou outros sinais específicos devem reduzir a afinidade, mesmo quando existirem coincidências amplas como UF e tributo.
@@ -123,7 +123,7 @@ Os fatores que explicam o resultado podem ser apresentados ao usuário como **�
 
 A interface deve preservar acessibilidade: cor, distância, posição ou animação nunca podem ser o único meio de comunicar o nível. O texto **Alta afinidade**, **Média afinidade** ou **Baixa afinidade** deve permanecer disponível.
 
-O componente visual exato — ícone, quantidade de anéis, animação, cores, tamanho e comportamento responsivo — fica para o desenho de UX/UI e não é definido por esta decisão.
+A semântica de cor foi ratificada em 27/09/2026: **Alta = vermelho, Média = amarelo, Baixa = verde**. Cor nunca é o único meio de comunicação. Ícone, quantidade de anéis, animação, tamanho e comportamento responsivo continuam para desenho de UX/UI.
 
 ## Experiência do usuário
 
@@ -192,11 +192,10 @@ Uma estrutura conceitual discutida, ainda não fechada como grade comercial:
 ## Questões abertas
 
 1. Pesos, limiares e fórmula de Alta/Média/Baixa.
-2. Regra exata para ausência de dados de perfil versus baixa afinidade real.
 3. Fonte e transformação CNAE → atividade/segmento.
 4. Vocabulário inicial completo de conceitos fiscais e suas relações.
 5. Tratamento de famílias de produto, NCM pai/filho e correspondências parciais.
-6. Estrutura do feedback, relatório e governança de ajustes do motor.
+6. Estrutura detalhada do feedback/relatório, papéis autorizados e rito de aprovação de mudanças; permanece vedado autoajuste silencioso.
 7. Planos, franquias e preço por profundidade de perfil, empresa e estabelecimento.
 8. Quais recursos de exploração por marcadores estarão disponíveis em cada plano.
 9. Momento técnico de classificação dos marcadores antes da publicação ficar visível.
@@ -220,3 +219,14 @@ Uma estrutura conceitual discutida, ainda não fechada como grade comercial:
 ## Limite desta decisão
 
 Nenhuma destas definições autoriza implementação de backend, frontend, migração, deploy ou mudança de prioridade. A implementação requer Issue própria e direcionamento do Gerente Geral.
+
+
+## GOV-03 — interpretação qualitativa aprovada
+
+- **Alta / vermelho:** sinal específico forte.
+- **Média / amarelo:** relação relevante mais geral ou incompleta.
+- **Baixa / verde:** coincidência ampla.
+- **Dados insuficientes:** falta de informação suficiente para classificar; não é Baixa.
+- sempre exibir **sinais encontrados** e rótulo textual;
+- não apresentar porcentagens nem pesos numéricos como precisão aprovada;
+- feedback pode motivar mudanças, mas somente por processo governado e rastreável.
