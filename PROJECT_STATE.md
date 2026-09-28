@@ -87,7 +87,7 @@ Pontos de estado:
 
 **EM PR DRAFT — somente documentação.**
 
-[PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13) registra o protocolo de sessões Claude na Issue #5, sem atuar na frente DOE-SP. O protocolo canônico contém 12 regras obrigatórias sobre Gate 0, exclusividade de tipo de sessão, executor único, LOCK/UNLOCK, revisão independente, autorizações, prompts compactos, critérios mensuráveis, artefatos em `ops/<frente>/`, proteção de dados privados, salvaguardas de preparação, limitação de exclusão de serviços Railway e estados Preparado/Executado/Validado.
+[PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13) registra o protocolo de sessões Claude na Issue #5, sem atuar na frente DOE-SP. O protocolo canônico contém 12 regras obrigatórias sobre Gate 0, exclusividade de tipo de sessão, executor único, LOCK/UNLOCK, revisão independente, autorizações, prompts compactos, critérios mensuráveis, artefatos em `ops/<frente>/`, proteção de dados privados, salvaguardas de preparação, exclusão de serviços Railway dependente da ferramenta de cada sessão e estados Preparado/Executado/Validado.
 
 Limites do marco:
 - 0 código de produto/backend/frontend;
@@ -95,8 +95,9 @@ Limites do marco:
 - 0 operações produtivas;
 - merge em `main` requer decisão posterior do usuário.
 
-
 **GOV-05:** complementa o mesmo PR #13 com continuidade entre sessões, autorizações persistentes transcritas, metadados operacionais obrigatórios, revisão por SHA exato, checklist na Issue, gate destrutivo reproduzível e handoff com ponto de retomada/UNLOCK. Continua sendo documentação somente: nenhum código, SQL, script, deploy ou escrita produtiva; merge depende de decisão do usuário.
+
+**GOV-07 → GOV-08:** a revisão independente GOV-07 **reprovou** o SHA `fde68b852fa593c911170aedce2a19363e6164a9` (3 bloqueantes, 9 não bloqueantes). A GOV-08 tratou todos os achados no mesmo PR (validação independente pendente) e registrou a decisão do usuário de que revisão feita por Claude ou GPT é válida. Estado: **novo head aguardando REVISÃO independente** por sessão sem participação em GOV-07/GOV-08; protocolo ainda não vigente; merge depende de decisão do usuário.
 
 ## Governança
 

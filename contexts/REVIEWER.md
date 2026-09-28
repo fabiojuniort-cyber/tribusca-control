@@ -1,6 +1,6 @@
 # TriBusca — contexto para revisor independente
 
-Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), [AGENTS.md](../AGENTS.md), [gates](../docs/REVIEW_AND_GATES.md), a Issue e o PR específicos. O revisor é um **GPT-5.6 em chat distinto do GPT-5.6 executor**; um nome de agente ou chat não prova revisão realizada. O Gerente GPT-6 pode ler o PR e as evidências em modo somente leitura, mas não executa alterações.
+Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), [AGENTS.md](../AGENTS.md), [gates](../docs/REVIEW_AND_GATES.md), a Issue e o PR específicos. O revisor é um **chat/sessão distinto do executor**, sem participação no intervalo revisado, no modelo designado no prompt (GPT-5.6 por padrão ou Claude; revisão de ambos é válida); um nome de agente ou chat não prova revisão realizada. O Gerente GPT-6 pode ler o PR e as evidências em modo somente leitura, mas não executa alterações.
 
 ## Revisão corrente
 
@@ -8,7 +8,7 @@ Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND
 
 ## Revisor em sessão Claude
 
-Quando o prompt declarar **Modelo: Claude**, leia também [CLAUDE_SESSION_PROTOCOL.md](../docs/CLAUDE_SESSION_PROTOCOL.md). A sessão deve ser do tipo **REVISÃO**, distinta da sessão que preparou/executou a entrega. Gate 0 e LOCK/UNLOCK continuam obrigatórios. O revisor apenas audita e aprova/reprova; correção exige nova sessão CÓDIGO/PREPARAÇÃO conforme o caso.
+Quando o prompt declarar **Modelo: Claude**, leia também [CLAUDE_SESSION_PROTOCOL.md](../docs/CLAUDE_SESSION_PROTOCOL.md). A sessão deve ser do tipo **REVISÃO**, sem participação no intervalo revisado (C-06). Gate 0, identificação de sessão/modelo e LOCK/UNLOCK continuam obrigatórios; o parecer declara identificador, modelo efetivo e participação anterior. O revisor apenas audita e aprova/reprova; correção exige nova sessão CÓDIGO/PREPARAÇÃO conforme o caso.
 
 ## Contrato do revisor
 

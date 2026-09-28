@@ -1,6 +1,6 @@
 # TriBusca — Protocolo de handoff
 
-Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário da Issue de governança e, para encaminhamento ao Gerente GPT-6, deve ser apresentada **em um único bloco copiável contendo somente o handoff destinado ao Gerente**. Comentários e explicações ao usuário ficam fora desse bloco. O handoff pode usar linguagem técnica compacta e estrutura otimizada para análise, mesmo que não seja imediatamente compreensível ao usuário, desde que preserve fatos, hipóteses identificadas, IDs, links, resultados, falhas, gates, próxima ação e evidência necessária; segredos continuam proibidos. O Gerente pode conferir diretamente sistemas e documentos por acesso seguro somente leitura; analisa evidências, traduz o handoff em resumo claro ao usuário, pede revisão independente ou nova inspeção GPT-5.6 quando faltar prova, e delega todas as atualizações documentais. Erro ou bloqueio sempre retorna ao Gerente com causa comprovada ou hipótese rotulada; nunca se declara sucesso por ausência de dados.
+Toda entrega de executor ou revisor (modelo designado no prompt: GPT-5.6 por padrão ou Claude) usa o modelo abaixo no comentário da Issue de governança e, para encaminhamento ao Gerente GPT-6, deve ser apresentada **em um único bloco copiável contendo somente o handoff destinado ao Gerente**. Comentários e explicações ao usuário ficam fora desse bloco. O handoff pode usar linguagem técnica compacta e estrutura otimizada para análise, mesmo que não seja imediatamente compreensível ao usuário, desde que preserve fatos, hipóteses identificadas, IDs, links, resultados, falhas, gates, próxima ação e evidência necessária; segredos continuam proibidos. O Gerente pode conferir diretamente sistemas e documentos por acesso seguro somente leitura; analisa evidências, traduz o handoff em resumo claro ao usuário, pede revisão independente ou nova inspeção GPT-5.6 quando faltar prova, e delega todas as atualizações documentais. Erro ou bloqueio sempre retorna ao Gerente com causa comprovada ou hipótese rotulada; nunca se declara sucesso por ausência de dados.
 
 ## Modelo
 
@@ -19,11 +19,12 @@ Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário d
 - Executor/revisor (chat/ferramenta):
 - Escopo autorizado:
 - Tipo de gate: CÓDIGO | PREPARAÇÃO | REVISÃO | EXECUÇÃO, quando aplicável
-- Gate 0: push / Railway / LOCK, com evidências sintéticas
+- Gate 0: push / Railway ou `não aplicável` / sessão e modelo / LOCK, com evidências sintéticas
+- Sessão: identificador, modelo efetivo (fonte do dado) e participação anterior no mesmo PR/Issue:
 - Handoff + UNLOCK da sessão anterior confirmados antes deste prompt, quando aplicável:
 - LOCK/UNLOCK da sessão atual, quando aplicável:
 - Serviços, janela de coleta/recaptura ou `não aplicável`:
-- Autorizações vigentes transcritas e origem/escopo:
+- Autorizações vigentes transcritas com escopo, origem verificável e término:
 - Pendências herdadas com critério próprio:
 - Valores esperados usados no gate:
 
@@ -69,14 +70,15 @@ Toda entrega de executor ou revisor GPT-5.6 usa o modelo abaixo no comentário d
 - Erro/bloqueio: evidência, causa comprovada ou hipótese, impacto, passos dependentes interrompidos e passos independentes realizados:
 - Ponto exato de retomada da próxima sessão:
 - Próximo gate:
-- UNLOCK: comentário/link e horário BRT:
+- UNLOCK: comentário/link, horário BRT e identificador da sessão:
+- Checklist de gates no corpo da Issue atualizado: sim/não — item e SHA:
 - Uma próxima ação recomendada ao Gerente:
 - Se a frente foi encerrada e outra será aberta: passos restantes até a conclusão do projeto, percentual estimado do projeto total, base de marcos e incertezas:
 - Registro documental: Issue, caminhos alterados, commit e links; se pendente, motivo e patch pronto:
 
 ## Sessões Claude
 
-Quando o modelo designado for Claude, usar também [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md). **Preparado, Executado e Validado são estados distintos**: nenhum deles pode ser inferido do outro. O handoff deve registrar commits/PR/CI/deploys aplicáveis, bloqueios, ponto exato de retomada, próximo gate e o UNLOCK da Issue. Dados privados não entram no handoff nem na resposta; permanecem na Railway.
+Quando o modelo designado for Claude, usar também [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md). **Preparado, Executado e Validado são estados distintos**: nenhum deles pode ser inferido do outro. O handoff deve registrar sessão/modelo, commits/PR/CI/deploys aplicáveis, bloqueios, ponto exato de retomada, próximo gate e o UNLOCK identificado da Issue. Dados privados não entram no handoff nem na resposta; permanecem na Railway.
 
 ## Regra
 
