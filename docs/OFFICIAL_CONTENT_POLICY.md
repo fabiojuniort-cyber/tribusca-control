@@ -1,6 +1,6 @@
 # TriBusca — Política global de conteúdo oficial
 
-Aprovada em 26/09/2026. Decisão canônica: D-017, refinada pela D-036 em `DECISIONS.md`.
+Aprovada em 26/09/2026; refinamentos de coleta/classificação consolidados em 27/09/2026. Decisões canônicas: D-017/D-036 e D-056/D-057 em `DECISIONS.md`.
 
 ## Regra — prioridade da página oficial
 
@@ -106,3 +106,40 @@ A implementação preparada no PR #73 segue:
 - URL, `externalId` e `authCode` permanecem preservados.
 
 O acervo produtivo atual ainda contém hashes/metadata legados calculados com PDFs autenticados. A decisão sobre preservar ou reconstruir esse acervo é um gate separado na Issue #1; esta política não autoriza operação destrutiva.
+
+
+## GOV-03 — cadência, backfill, classificação e retenção
+
+As regras abaixo foram aprovadas em 27/09/2026 e complementam a política de representação oficial sem substituir D-017/D-036.
+
+### Monitoramento corrente
+
+Quando aplicável a motores já finalizados, os quatro ciclos diários de monitoramento são **06h, 10h, 14h e 18h no horário de Brasília**.
+
+### Backfill histórico
+
+Backfill é um fluxo separado do monitoramento corrente:
+- uma consulta por hora;
+- recuar um dia por consulta e por fonte;
+- continuar até alcançar todo o acervo que a fonte oficial efetivamente disponibilizar, inclusive anos ou décadas quando houver;
+- registrar indisponibilidade/falha sem tratá-la como ausência de publicações.
+
+### Escopo fiscal/tributário exibido
+
+Inclui:
+- tributos e contribuições;
+- benefícios fiscais e regimes;
+- obrigações e documentos fiscais;
+- escriturações;
+- fiscalização, cobrança e contencioso tributário;
+- matéria aduaneira tributária;
+- Reforma Tributária;
+- mudanças de prazo, leiaute, sistema ou obrigação empresarial.
+
+Para matéria fiscal/tributária, preservar conteúdo integral conforme a representação oficial aplicável. Publicação com **CNPJ exato** de empresa/estabelecimento cadastrado também preserva conteúdo integral e pode ser exibida somente à respectiva conta, mesmo quando o assunto geral esteja fora do escopo fiscal.
+
+Uma **raiz isolada de oito dígitos** não caracteriza menção exata.
+
+Itens rejeitados pela classificação preservam metadados mínimos e **motivo da exclusão**, distinguindo descarte consciente de falha de coleta.
+
+**Questão aberta:** como reexaminar itens antigos quando uma nova empresa/CNPJ for cadastrada, sem transformar esta decisão em autorização de implementação.
