@@ -46,7 +46,7 @@ O [backend PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pu
 
 ### Estado WEB após WEB-11
 
-O frontend **ainda não está integrado** a essa API. Permanecem abertos:
+O release candidate WEB-11 **integra `GET /public/v1/sources` somente na página Cobertura**. Permanecem abertos: CORS real da origem pública, rate limit e qualquer experiência futura de Acervo público.
 - configurar o `apiBase`/consumo no frontend;
 - confirmar/configurar as origens CORS reais;
 - revisão do rate limit no backend.
