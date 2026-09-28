@@ -4,7 +4,7 @@
 
 1. Gerente GPT-6 define Issue, prioridade, dependências, critérios e até cinco passos independentes; executor GPT-5.6 cria/edita a Issue por delegação.
 2. Executor GPT-5.6 avança autonomamente em todo o escopo autorizado, registra PR e handoff completo na Issue. Se aparecer erro, investiga e devolve ao Gerente; só interrompe etapas dependentes.
-3. Revisor independente, em outro chat/sessão sem participação no intervalo revisado e no modelo designado (GPT-5.6 por padrão ou Claude; ambos válidos), inspeciona mudança e casos adversos; entrega aprovação fundamentada ou falhas com evidência.
+3. Revisor independente, em outro chat/sessão sem participação no intervalo revisado, inspeciona mudança e casos adversos; GPT-5.6 e Claude são ambos válidos mesmo se o modelo efetivo divergir do indicado no prompt, desde que a divergência seja registrada; entrega aprovação fundamentada ou falhas com evidência.
 4. Gerente GPT-6 analisa todos os erros, divergências e handoffs; direciona correções. Executor faz alterações e testes pertinentes.
 5. Quando a autorização vigente cobrir o ato, executor realiza merge/deploy e inspeciona CI, produção e gates exigidos. Gerente pode conferir evidências diretamente em modo somente leitura, analisa relatórios e pede prova adicional a outro GPT-5.6 se necessário.
 6. Após decisão do Gerente, GPT-5.6 delegado atualiza Issue, `CONTEXT.md`, `PROJECT_STATE.md`, `ROADMAP.md` e índices afetados; retorna commit e links. Gerente só declara gate concluído depois de receber provas e registro documental.
