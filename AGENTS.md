@@ -30,6 +30,12 @@ Formato mínimo dentro do bloco copiável:
 1. ...
 2. ...
 
+## Sessões Claude
+
+Quando o campo **Modelo** designar Claude, a sessão também deve seguir [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md). O protocolo exige Gate 0 antes de qualquer trabalho, um único tipo de gate por sessão (CÓDIGO, PREPARAÇÃO, REVISÃO ou EXECUÇÃO), executor único com LOCK/UNLOCK na Issue, autorizações explícitas, revisão independente em sessão própria e handoff que diferencie Preparado / Executado / Validado. Prompts devem ser compactos, com alvo de aproximadamente 40 linhas e critérios mensuráveis.
+
+O Gate 0 não substitui os gates técnicos da frente. Falha em push, acesso Railway ou trava encerra a sessão sem trabalho parcial. Para futuras operações, artefatos versionáveis ficam em `radar-fiscal-backend/ops/<frente>/`; dados privados permanecem na Railway. Este registro não autoriza operação produtiva.
+
 ## Execução
 
 Toda implementação nova deve ter Issue de governança. Relacione o PR do repositório de código por URL completa. Branch própria, commits identificáveis, PR e testes proporcionais ao risco. Não ampliar escopo de repair/POC nem avançar para outro DOE sem gate. Trabalhe autonomamente e avance em todas as etapas autorizadas que não dependam da premissa que falhou; interrompa imediatamente o caminho bloqueado, preserve evidências e devolva ao Gerente um único handoff com causa, impacto, trabalho concluído e próxima ação sugerida. **Todo retorno de executor ou revisor ao Gerente deve vir em um único bloco copiável contendo somente o handoff destinado ao Gerente; comentários ao usuário ficam fora.** O handoff pode usar linguagem técnica compacta para análise eficiente, mas deve preservar fatos, hipóteses identificadas, IDs, links, resultados, falhas, gates, próxima ação e evidência necessária, sem segredos. O Gerente traduz esse handoff em resumo claro ao usuário antes de indicar o próximo passo. Cada instrução do Gerente pode reunir até cinco passos independentes; dentro da tarefa delegada, o executor continua até o gate ou bloqueio real, sem pedir ao usuário para fazer tarefas acessíveis ao executor.
