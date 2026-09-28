@@ -38,6 +38,14 @@ Repositório, branch e PR devem ser adicionados quando existirem. Especialidade,
 
 O Gerente apresenta **todo direcionamento a executor ou revisor em um único bloco isolado e copiável, contendo somente a mensagem que o usuário deve enviar àquele chat**. Dentro do bloco, o Gerente pode escolher a linguagem mais eficiente para execução — inclusive termos técnicos, IDs, links, referências e formato compacto — desde que o comando permaneça inequívoco quanto a papel, escopo, autorização, dependências, critérios de aceite, bloqueios e retorno esperado. Análise do Gerente, status da atividade, percentual, evidências, justificativas e explicações em linguagem clara ao usuário permanecem fora do bloco. Se um prompt antigo não cumprir identificação, numeração ou isolamento, o Gerente corrige o formato na próxima delegação antes de iniciar nova execução.
 
+## Adendo para sessões Claude
+
+Quando a delegação indicar **Modelo: Claude**, aplicar também [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md). O prompt deve declarar **Tipo de gate** e começar por Gate 0: capacidade de push → acesso Railway → LOCK na Issue. Uma sessão não mistura CÓDIGO, PREPARAÇÃO, REVISÃO e EXECUÇÃO.
+
+O prompt separa `AUTORIZADO SEM NOVA CONSULTA` de `REQUER DECISÃO DO USUÁRIO`, mantém como alvo aproximadamente 40 linhas e usa critérios observáveis de PASS/FAIL. A trava garante executor único; revisão independente acontece em sessão própria. O UNLOCK é obrigatório mesmo quando a sessão termina bloqueada depois do Gate 0.
+
+Para operações futuras, preparação e execução usam artefatos versionados em `radar-fiscal-backend/ops/<frente>/`, sem dados privados no GitHub. Operações de risco exigem backup, restauração testada, dry-run quando possível, transação/rollback quando suportado e validação definida antes da execução.
+
 ## Processo em cada avanço
 
 1. O Gerente envia ao GPT-5.6 o prompt no formato obrigatório, com atividade/título, especialidade, papel, modelo, frente, Issue, resultado esperado, contexto mínimo, autorização vigente, critérios e até cinco passos independentes numerados; pode demandar uma leitura inicial para descobrir o estado.
