@@ -83,6 +83,22 @@ Pontos de estado:
 - questões remanescentes estão em `docs/OPEN_QUESTIONS.md`;
 - nenhuma disponibilidade de produto foi inferida de páginas, previews, mocks, PRs ou contratos em draft.
 
+### GOV-04 — protocolo de sessões Claude
+
+**EM PR DRAFT — somente documentação.**
+
+[PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13) registra o protocolo de sessões Claude na Issue #5, sem atuar na frente DOE-SP. O protocolo canônico contém 12 regras obrigatórias sobre Gate 0, exclusividade de tipo de sessão, executor único, LOCK/UNLOCK, revisão independente, autorizações, prompts compactos, critérios mensuráveis, artefatos em `ops/<frente>/`, proteção de dados privados, salvaguardas de preparação, exclusão de serviços Railway dependente da ferramenta de cada sessão e estados Preparado/Executado/Validado.
+
+Limites do marco:
+- 0 código de produto/backend/frontend;
+- 0 scripts, SQLs ou runbooks DOE-SP;
+- 0 operações produtivas;
+- merge em `main` requer decisão posterior do usuário.
+
+**GOV-05:** complementa o mesmo PR #13 com continuidade entre sessões, autorizações persistentes transcritas, metadados operacionais obrigatórios, revisão por SHA exato, checklist na Issue, gate destrutivo reproduzível e handoff com ponto de retomada/UNLOCK. Continua sendo documentação somente: nenhum código, SQL, script, deploy ou escrita produtiva; merge depende de decisão do usuário.
+
+**GOV-07 → GOV-08:** a revisão independente GOV-07 **reprovou** o SHA `fde68b852fa593c911170aedce2a19363e6164a9` (3 bloqueantes, 9 não bloqueantes). A GOV-08 tratou todos os achados no mesmo PR (validação independente pendente) e registrou a decisão do usuário de que revisão feita por Claude ou GPT é válida. Estado: **novo head aguardando REVISÃO independente** por sessão sem participação em GOV-07/GOV-08; protocolo ainda não vigente; merge depende de decisão do usuário.
+
 ## Governança
 
 **GOV-01 — Padronizar prompts, handoffs e progresso:** regra documental vigente em 26/09/2026. Todo direcionamento Gerente → executor/revisor e todo handoff executor/revisor → Gerente usa bloco isolado copiável contendo somente a mensagem operacional destinada ao outro chat; linguagem técnica compacta é permitida quando inequívoca e sem omitir evidência necessária. O Gerente traduz o handoff em resumo claro ao usuário fora do bloco. Delegações exigem ID sequencial por frente, título, frente explícita e passos numerados; cada avanço relata resultado, evidência, próximo passo, progresso estimado da frente por marcos verificáveis e incerteza. Ao encerrar uma frente e abrir outra, o Gerente registra passos restantes e estimativa fundamentada do projeto total. Percentual é informativo e não substitui gate. A [Issue #5](https://github.com/fabiojuniort-cyber/tribusca-control/issues/5) permanece aberta para validar o ciclo completo de governança; esta atualização não altera nem conclui DOE-SP.

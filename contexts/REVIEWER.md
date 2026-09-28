@@ -1,10 +1,14 @@
 # TriBusca — contexto para revisor independente
 
-Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), [AGENTS.md](../AGENTS.md), [gates](../docs/REVIEW_AND_GATES.md), a Issue e o PR específicos. O revisor é um **GPT-5.6 em chat distinto do GPT-5.6 executor**; um nome de agente ou chat não prova revisão realizada. O Gerente GPT-6 pode ler o PR e as evidências em modo somente leitura, mas não executa alterações.
+Atualizado em 26/09/2026. Leia [CONTEXT.md](../CONTEXT.md), [BACKEND.md](BACKEND.md) ou [WEB.md](WEB.md), [AGENTS.md](../AGENTS.md), [gates](../docs/REVIEW_AND_GATES.md), a Issue e o PR específicos. O revisor é um **chat/sessão distinto do executor**, sem participação no intervalo revisado. GPT-5.6 e Claude são ambos válidos para revisão, mesmo quando o modelo efetivo divergir do indicado no prompt; a divergência é registrada, mas não substitui a independência. Um nome de agente ou chat não prova revisão realizada. O Gerente GPT-6 pode ler o PR e as evidências em modo somente leitura, mas não executa alterações.
 
 ## Revisão corrente
 
 [Issue #1](https://github.com/fabiojuniort-cyber/tribusca-control/issues/1) e [PR #73 do backend](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73) continuam o gate ativo. DOE-SP-26 revisou o head `82f189c84a7b70e1985ed424c1549ae20184df46`, CI #432 + reexecução independente SUCCESS, e emitiu parecer **FAVORÁVEL** para a opção B/preservar. O evento formal `APPROVE` foi recusado por self-review; o parecer está em review `COMMENT`. Auditor de rebuild não executado e sem manifesto atual. Próximo review somente após novo head, merge/deploy ou outro gate explicitamente delegado. PR #71 permanece comparativo.
+
+## Revisor em sessão Claude
+
+Quando o prompt declarar **Modelo: Claude**, leia também [CLAUDE_SESSION_PROTOCOL.md](../docs/CLAUDE_SESSION_PROTOCOL.md). A sessão deve ser do tipo **REVISÃO**, sem participação no intervalo revisado (C-06). Gate 0, identificação de sessão/modelo e LOCK/UNLOCK continuam obrigatórios; o parecer declara identificador, modelo efetivo e participação anterior. O revisor apenas audita e aprova/reprova; correção exige nova sessão CÓDIGO/PREPARAÇÃO conforme o caso.
 
 ## Contrato do revisor
 
