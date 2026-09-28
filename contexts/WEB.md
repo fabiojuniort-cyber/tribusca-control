@@ -21,7 +21,7 @@ O draft PR #1 implementa:
 
 GitHub Actions run **36361749038**: **SUCCESS** em 26/09/2026. Passaram instalação, typecheck, testes e build.
 
-**Não comprovado / não autorizado:** merge na main, deploy, site produtivo, API, autenticação, matching real do Sonar, envio real do Revela, consumo real do Decodifica ou Acervo dinâmico.
+**Não comprovado / não autorizado no frontend:** merge na main, publicação definitiva do site, **integração/consumo da API pública**, autenticação de cadastro/reset, matching real do Sonar, envio real do Revela, consumo real do Decodifica ou Acervo dinâmico. A API pública backend D-050 já está mergeada/deployada; isso não significa que o frontend a esteja consumindo.
 
 ## Stack e limites
 
@@ -34,17 +34,34 @@ Retomada: “Leia https://github.com/fabiojuniort-cyber/tribusca-control/blob/ma
 
 ## API-01 — dados reais para Cobertura/Acervo
 
-Em 26/09/2026 o usuário definiu o contrato backend D-050 / Issue #11 para substituir os placeholders “—” de WEB-02 quando a API estiver publicada.
+A D-050 / Issue #11 definiu a API pública read-only:
 
-Rotas previstas:
 - `GET /public/v1/sources`;
-- `GET /public/v1/publications?uf=SP&limit=3`;
+- `GET /public/v1/publications`;
 - `GET /public/v1/stats`.
 
-Backend preparado no draft [PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, CI #433 SUCCESS. O site **ainda não deve consumir** até o backend ser mergeado/deployado em gate separado e existir `apiBase` público validado; WEB-02 continua exibindo placeholders em vez de inventar dados.
+### Backend verificado
 
-CORS está implementado por `PUBLIC_API_ALLOWED_ORIGINS`, sem credentials e com preflight GET-only. Os domínios reais do protótipo Railway e do site definitivo ainda não estão comprovados/configurados porque não houve deploy; entram no próximo gate. A Issue #11 executa Cobertura/Acervo; Issue #9 continua responsável pelos demais contratos públicos de cadastro/reset.
+O [backend PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74) foi mergeado por squash em `4688ff87a0b039eb426b80f5e279c95214fb87d2`. A Issue #11 registra deploy produtivo verde e validação HTTP 200 dos três GETs, com cache/CORS conforme D-050 e sem conteúdo integral ou dados tenant/company/user nos payloads inspecionados.
 
+### WEB ainda aberto
+
+O frontend **ainda não está integrado** a essa API. Permanecem abertos:
+- configurar o `apiBase`/consumo no frontend;
+- confirmar/configurar as origens CORS reais;
+- revisão do rate limit no backend.
+
+Até a integração WEB ser implementada e validada, o frontend não deve substituir placeholders por dados reais apenas porque a API backend existe.
+
+### Gate adicional criado pela D-057
+
+Publicações **não fiscais** preservadas somente por menção exata a CNPJ são privadas da respectiva conta. A API pública atual não possui filtro fiscal/tenant para essa nova categoria. Antes de qualquer integração que possa incluir tais registros no Acervo público, é necessária **Issue técnica + gate de isolamento**.
+
+### Campos de exibição ainda não alinhados
+
+A D-058 aprovou para exibição no Acervo público somente **título, data, órgão e link oficial**. O endpoint `GET /public/v1/publications` também retorna `id`, `actType`, `actNumber`, `uf` e `effectiveOn`.
+
+Esses campos adicionais podem existir na API por D-050, mas **não devem ser presumidos como aprovados para exibição** no Acervo público. A decisão de produto permanece aberta e esta GOV-03 não altera a API nem o frontend.
 
 ## WEB-02 — design aprovado e estado verificado
 
@@ -61,7 +78,7 @@ No head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`, o draft PR #1 contém:
 - Sonar com proximidade e cores semânticas de draft;
 - Revela com boletim Alta afinidade/Menção direta;
 - Decodifica com cinco exemplos Texto oficial × Leitura auxiliar;
-- Cobertura federal + 27 UFs, com status e métricas `—` sem API;
+- Cobertura federal + 27 UFs, com status e métricas `—` **sem integração WEB da API pública**;
 - timeline da Reforma separando Publicação/Vigência/Marco previsto em lei;
 - responsividade e `prefers-reduced-motion`.
 
