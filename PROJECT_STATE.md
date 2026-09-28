@@ -79,12 +79,26 @@ Documentos de decisões, arquitetura, papéis, segurança, handoff, revisão e m
 
 ## API-01 — API pública do site
 
-**IMPLEMENTADA EM DRAFT — CI verde; merge/deploy não autorizados.**
+**MERGEADA E VALIDADA EM PRODUÇÃO NO ESCOPO D-050; INTEGRAÇÃO WEB AINDA ABERTA.**
 
 Issue executora: [#11](https://github.com/fabiojuniort-cyber/tribusca-control/issues/11).
 
-D-050 define três rotas read-only sob `/public/v1` para fontes, publicações e estatísticas. O draft [PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, implementa o contrato sem autenticação, sem `content_text`/dados privados, com CORS por allowlist, preflight GET-only e cache 300s. CI #433 / run `36260320585` = **SUCCESS**. Sem migration ou job novo; rate limit segue pendente.
+O [backend PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74) foi mergeado por squash no commit `4688ff87a0b039eb426b80f5e279c95214fb87d2`.
 
-Produção: PostgreSQL está online, mas o conector Railway disponível não executa SQL read-only; portanto schema/view produtivos não foram consultados diretamente neste marco. O código/migrations confirmam grants SELECT da role da API para os objetos necessários e índices `ix_publications_scope_date` e `ix_collection_runs_source_history`.
+Evidência registrada na Issue #11:
+- revisão independente favorável do head pré-merge;
+- deploys automáticos de Backend, Worker e Scheduler = **SUCCESS**;
+- validação produtiva HTTP 200 dos três GETs:
+  - `GET /public/v1/sources`;
+  - `GET /public/v1/publications?uf=SP&limit=3`;
+  - `GET /public/v1/stats`;
+- cache `public, max-age=300`;
+- `Vary` contendo `Origin`;
+- sem conteúdo integral ou chaves tenant/company/user/credencial/token nos payloads inspecionados;
+- sem migration ou job novo.
 
-Próximo gate: Gerente revisa o handoff do PR #74 e decide merge. Deploy/configuração de `PUBLIC_API_ALLOWED_ORIGINS`, URL base pública e validação contra produção ficam em gate separado.
+**Ainda abertos na #11:** integração WEB, confirmação/configuração das origens CORS reais e rate limit por IP.
+
+**Nova dependência GOV-03 / D-057:** publicação não fiscal retida apenas por CNPJ exato é privada da respectiva conta. A API D-050 atual consulta metadados globais e não possui filtro fiscal/tenant para essa nova categoria. Antes de esses registros poderem alimentar o Acervo público, será necessária Issue técnica + gate de isolamento.
+
+**Divergência D-058 × contrato atual:** a exibição pública aprovada contém título, data, órgão e link oficial; `GET /public/v1/publications` também retorna `id`, `actType`, `actNumber`, `uf` e `effectiveOn`. A API não será alterada por esta GOV-03 e a exibição desses campos adicionais requer decisão de produto posterior.
