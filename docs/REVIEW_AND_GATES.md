@@ -11,6 +11,17 @@
 
 Uma Issue que exige bootstrap ou validação produtiva permanece aberta após merge. Ao relacionar PR entre repositórios, usar referência textual/URL; não usar fechamento automático antes do gate.
 
+## Gate de sessão Claude
+
+Sessões Claude seguem [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md) e são exclusivas por tipo:
+
+- **CÓDIGO:** branch, testes e CI; zero produção.
+- **PREPARAÇÃO:** preflight read-only, backup/restauração testada quando exigidos e artefato operacional exato versionado; zero execução produtiva.
+- **REVISÃO:** sessão independente, somente auditoria e parecer; não corrige a entrega revisada.
+- **EXECUÇÃO:** aplica apenas o material preparado/aprovado e a autorização vigente; não cria correção de código ad hoc.
+
+Antes de qualquer um deles, Gate 0 confirma push, acesso Railway e LOCK. Uma falha de Gate 0 encerra a sessão sem trabalho parcial. Aprovação de um gate não implica aprovação dos seguintes.
+
 ## Revisão de PR
 
 - Escopo bate com a Issue e não inclui migrations ou serviços fora do combinado.
