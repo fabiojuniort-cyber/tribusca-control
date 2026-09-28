@@ -1,6 +1,6 @@
 # TriBusca — contexto de retomada do Gerente Geral
 
-Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26/09/2026. Este arquivo pode ser lido diretamente pelo Gerente GPT-6 ao iniciar ou retomar uma conversa e relido sempre que necessário. Não existe chat intermediário de bootstrap. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
+Base operacional registrada em 27/09/2026; protocolo de papéis atualizado em 26/09/2026. Este arquivo pode ser lido diretamente pelo Gerente GPT-6 ao iniciar ou retomar uma conversa e relido sempre que necessário. Não existe chat intermediário de bootstrap. É um índice executivo: evidências detalhadas permanecem nas Issues, PRs e documentos vinculados. Um executor revalida o estado vivo antes de decisões operacionais.
 
 ## Missão e limites desta conversa
 
@@ -32,7 +32,7 @@ Base operacional registrada em 26/09/2026; protocolo de papéis atualizado em 26
 - [Backend PR #72 de governança](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/72) foi incorporado com autorização, commit `f25a596edce592e6e365e87ed4cbf16ba0922de8`; `AGENTS.md` e template estão na main. CI #382 e deploys automáticos Backend `d0e39486-cdff-4ff1-9531-04a4f3b4dedd`, Worker `cfcb6909-ce88-4694-b493-daf7aa302bc7`, Scheduler `c34c8850-6c48-4d16-a0a4-14f817184d5d`: SUCCESS. Esse marco de governança não fecha DOE-SP. O frontend público foi iniciado na WEB-01: draft PR #1, branch `feat/web-01-site-publico`, head `b9c39fab1530187f4ed034679dea1ef26888d3b3`; CI run `36260946535` SUCCESS. Não houve merge/deploy. Leia [protocolo de atualização](docs/CONTEXT_MAINTENANCE.md) ao iniciar nova frente.
 - Seis labels já criadas (`P0`–`P3`, `doe-sp`, `governanca`); cinco Issues importadas no Projects. O conector GitHub usado nesta conversa edita Issues e arquivos, mas não move cartões no Projects.
 
-- **WEB-01 / WEB-02 / Issue #8:** camada pública autorizada em paralelo pela D-035; WEB-02 registrou D-037–D-049 e substituiu definições públicas conflitantes da WEB-01. Draft [frontend PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), head `b9c39fab1530187f4ed034679dea1ef26888d3b3`, implementa rotas Cobertura/Portfólio/Como funciona/Reforma; header oficial; modais de acesso; login via `POST /auth/login`; carrossel de UFs; seis recursos; Sonar/Revela/Decodifica; Cobertura federal + 27 UFs; e timeline da Reforma. CI run `36260946535` = **SUCCESS** (install/typecheck/test/build). Sem merge/deploy. WEB-03/D-051 resolveu o claim de disponibilidade: Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário ficam todos como **Em desenvolvimento**. Head `b9c39fab1530187f4ed034679dea1ef26888d3b3`; CI run `36260946535` = **SUCCESS**. Gates restantes: ratificar cores do Sonar na Issue #10 e revisão visual/funcional. Dependências: #9 auth complementar e #11 API pública Cobertura/Acervo.
+- **WEB-01 / WEB-02 / Issue #8:** camada pública autorizada em paralelo pela D-035; WEB-02 registrou D-037–D-049 e substituiu definições públicas conflitantes da WEB-01. Draft [frontend PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), head `b9c39fab1530187f4ed034679dea1ef26888d3b3`, implementa rotas Cobertura/Portfólio/Como funciona/Reforma; header oficial; modais de acesso; login via `POST /auth/login`; carrossel de UFs; seis recursos; Sonar/Revela/Decodifica; Cobertura federal + 27 UFs; e timeline da Reforma. CI run `36260946535` = **SUCCESS** (install/typecheck/test/build). Sem merge/deploy. WEB-03/D-051 resolveu o claim de disponibilidade: Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário ficam todos como **Em desenvolvimento**. Head `b9c39fab1530187f4ed034679dea1ef26888d3b3`; CI run `36260946535` = **SUCCESS**. Gates restantes: revisão visual/funcional e demais bloqueios reais do PR. A D-057 ratificou a semântica do Sonar (Alta/vermelho, Média/amarelo, Baixa/verde; Dados insuficientes separado). Dependências: #9 auth complementar e #11 API pública Cobertura/Acervo.
 
 ## Próxima passagem
 
@@ -50,3 +50,17 @@ Comando do usuário: **“Carregue o Gerente Geral do Repositório”**. O GPT-6
 
 
 - **API-01 / Issue #11:** D-050 implementada em draft [backend PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74), branch `feat/api-01-public-readonly`, head `7e5ba9718ccb0f2c6bcf806e5471dff4dc2db8d6`, base `main @ f25a596edce592e6e365e87ed4cbf16ba0922de8`. CI #433 / run `36260320585` = **SUCCESS**: typecheck/build/unit + integrações, incluindo as 3 rotas públicas, fonte sem run, UF sem dados e CORS allow/deny/preflight. Sem migration, job novo ou acesso a dados privados; `publication_versions` não é lida. Rate limit continua pendente por ausência de plugin. Railway não oferece SQL metadata read-only nesta sessão, portanto não há alegação de leitura direta do schema produtivo. Domínios CORS reais e URL base ficam para o gate de deploy; sem merge/deploy.
+
+
+## GOV-03 — consolidação de 27/09/2026
+
+As respostas Q1–Q22 foram formalizadas sem implementação técnica nas D-053 a D-061.
+
+- **DOE-SP continua ABERTO/P0.** D-053 só libera o paralelismo ampliado **depois do fechamento formal**; não autoriza próximo DOE agora.
+- Coleta corrente aprovada em 06h/10h/14h/18h BRT quando aplicável; backfill separado em uma consulta/hora, um dia por consulta/fonte, até o acervo oficial disponível (D-054).
+- Escopo fiscal/retenção/CNPJ exato definidos na D-055; reexame de acervo antigo ao cadastrar novo CNPJ permanece aberto.
+- Site informativo pode ser publicado antes da #9 **após gates**, trocando temporariamente **Criar conta → Em breve**. Cadastro/trial reais dependem da #9 (D-056).
+- Coerência de onboarding: CNPJ é opcional no formulário inicial, mas o trial de 7 dias sem cartão só inicia após verificação do e-mail + primeiro cadastro de empresa. Regra de empresa sem CNPJ permanece aberta.
+- Sonar, Revela, Decodifica e Reforma foram refinados nas D-057 a D-060.
+- Comercial: três níveis futuros, público inicial empresarial e dimensões de diferenciação aprovadas; nomes/preços/franquias/créditos aguardam piloto (D-061).
+- Nenhuma página demonstrativa, PR, mock ou contrato em draft equivale a disponibilidade produtiva.
