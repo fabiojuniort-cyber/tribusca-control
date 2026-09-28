@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 27/09/2026 (America/Sao_Paulo).
+Atualizado em 28/09/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -83,32 +83,27 @@ Pontos de estado:
 - questões remanescentes estão em `docs/OPEN_QUESTIONS.md`;
 - nenhuma disponibilidade de produto foi inferida de páginas, previews, mocks, PRs ou contratos em draft.
 
-### GOV-04 — protocolo de sessões Claude
+### GOV-16 — Governança Flexível v2
 
-**EM PR DRAFT — somente documentação.**
+**PROPOSTA DOCUMENTAL — ainda não vigente. Estado observado em 28/09/2026 02:10 BRT.**
 
-[PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13) registra o protocolo de sessões Claude na Issue #5, sem atuar na frente DOE-SP. O protocolo canônico contém 12 regras obrigatórias sobre Gate 0, exclusividade de tipo de sessão, executor único, LOCK/UNLOCK, revisão independente, autorizações, prompts compactos, critérios mensuráveis, artefatos em `ops/<frente>/`, proteção de dados privados, salvaguardas de preparação, exclusão de serviços Railway dependente da ferramenta de cada sessão e estados Preparado/Executado/Validado.
+A GOV-15 foi FAVORÁVEL ao PR #14/head `f39a265f4fc633dd78d201e6c02f2db2ed620004`, mas o PR #14 continuava OPEN/DRAFT/unmerged no início da GOV-16. O usuário autorizou explicitamente seguir com a GOV-16 mesmo assim; a exceção cobre somente essa pré-condição e não autoriza merges/deploys/operação DOE-SP.
 
-Limites do marco:
-- 0 código de produto/backend/frontend;
-- 0 scripts, SQLs ou runbooks DOE-SP;
-- 0 operações produtivas;
-- merge em `main` requer decisão posterior do usuário.
+A v2 propõe classificação R0–R3:
+- R0: documental/factual, praticamente sem burocracia;
+- R1: baixo risco, continuidade na mesma sessão;
+- R2: material, Issue/branch/PR/testes e revisão independente para mudança material;
+- R3: crítico/produtivo, controles fortes completos.
 
-**GOV-05:** complementa o mesmo PR #13 com continuidade entre sessões, autorizações persistentes transcritas, metadados operacionais obrigatórios, revisão por SHA exato, checklist na Issue, gate destrutivo reproduzível e handoff com ponto de retomada/UNLOCK. Continua sendo documentação somente: nenhum código, SQL, script, deploy ou escrita produtiva; merge depende de decisão do usuário.
+A proposta substitui, após merge autorizado, as regras gerais de LOCK universal, novo chat por etapa, invalidação total por qualquer commit e fail-fast indiscriminado. Mantém integralmente proteção de secrets/dados privados, RLS/auth/tenant, autorização material, salvaguardas destrutivas e revisão independente real de R2/R3.
 
-**GOV-07 → GOV-08:** a revisão independente GOV-07 **reprovou** o SHA `fde68b852fa593c911170aedce2a19363e6164a9` (3 bloqueantes, 9 não bloqueantes). A GOV-08 tratou todos os achados no mesmo PR (validação independente pendente) e registrou a decisão do usuário de que revisão feita por Claude ou GPT é válida. Estado: **novo head aguardando REVISÃO independente** por sessão sem participação em GOV-07/GOV-08; protocolo ainda não vigente; merge depende de decisão do usuário.
+Referência: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md).
 
 ## Governança
 
-**GOV-01 — Padronizar prompts, handoffs e progresso:** regra documental vigente em 26/09/2026. Todo direcionamento Gerente → executor/revisor e todo handoff executor/revisor → Gerente usa bloco isolado copiável contendo somente a mensagem operacional destinada ao outro chat; linguagem técnica compacta é permitida quando inequívoca e sem omitir evidência necessária. O Gerente traduz o handoff em resumo claro ao usuário fora do bloco. Delegações exigem ID sequencial por frente, título, frente explícita e passos numerados; cada avanço relata resultado, evidência, próximo passo, progresso estimado da frente por marcos verificáveis e incerteza. Ao encerrar uma frente e abrir outra, o Gerente registra passos restantes e estimativa fundamentada do projeto total. Percentual é informativo e não substitui gate. A [Issue #5](https://github.com/fabiojuniort-cyber/tribusca-control/issues/5) permanece aberta para validar o ciclo completo de governança; esta atualização não altera nem conclui DOE-SP.
+A Governança Flexível v2 somente passa a valer após parecer independente favorável e merge autorizado do PR GOV-16. Até esse evento, o protocolo anterior em `main` continua vigente para esta própria atividade e sua revisão.
 
-Decisões aprovadas de [produto/UX](docs/PRODUCT_AND_UX.md), [site/comercial](docs/SITE_AND_MARKETING.md), [marca v1](docs/BRAND_MANUAL_V1.md) e [ativos](docs/BRAND_ASSETS.md) foram incorporadas ao repositório; [questões abertas](docs/OPEN_QUESTIONS.md) mantêm propostas separadas do que foi decidido. O [índice de decisões](DECISIONS.md) liga esses temas. A camada pública do site foi retomada pela D-035 / WEB-01, sem declarar recursos autenticados implementados.
-
-[CONTEXT.md](CONTEXT.md) é o ponto de leitura direta do Gerente Geral GPT-6 ao abrir uma conversa; ele pode reler contexto e evidências sempre que necessário, sem chat de bootstrap. [Backend](contexts/BACKEND.md), [frontend](contexts/WEB.md) e [DOE-SP](contexts/DOE-SP.md) são índices de frente; [executor](contexts/EXECUTOR.md) e [revisor](contexts/REVIEWER.md) apontam para as Issues atuais sem duplicar seus handoffs. O [protocolo de atualização](docs/CONTEXT_MAINTENANCE.md) define responsáveis e marcos. `radar-fiscal-web` mantém o draft PR #1 (`feat/web-01-site-publico`), **head vivo `74bb3efffc4b720aa157475ce6a9c73c206fa028`**. WEB-06 foi REPROVADO/BLOQUEANTE no head `f92fbea8...`; WEB-07 corrigiu os bloqueios executáveis e obteve CI #47 / run `36368975036` SUCCESS, incluindo 40/40 testes Chromium. Artifact browser `10948592313`; preview Railway deployment `2d130a93-7651-47e2-b90c-478c1e3088ea` SUCCESS no mesmo head. O PR não foi mergeado e ainda não há parecer independente favorável do novo head. [Backend PR #72](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/72) foi mergeado com autorização em 26/09/2026 no commit `f25a596edce592e6e365e87ed4cbf16ba0922de8`, com dois arquivos de governança e CI #382 SUCCESS. Deploys automáticos desse commit: Backend `d0e39486-cdff-4ff1-9531-04a4f3b4dedd`, Worker `cfcb6909-ce88-4694-b493-daf7aa302bc7` e Scheduler `c34c8850-6c48-4d16-a0a4-14f817184d5d`, todos SUCCESS. Isso não é evidência de fechamento DOE-SP. No protocolo vigente, o Gerente Geral GPT-6 pode ler diretamente contextos e evidências quando necessário para analisar erros, handoffs e decisões, mas não realiza escritas nem ações que alterem estado; o GPT-5.6 delegado atualiza CONTEXT.md e este arquivo após o marco definido e traz commit/link. Os executores e revisores GPT-5.6 registram evidências nas Issues. A atualização não ocorre automaticamente entre conversas.
-
-Documentos de decisões, arquitetura, papéis, segurança, handoff, revisão e modelos de Issue/PR criados neste repositório. Cinco Issues representam a frente atual, com etiquetas de prioridade e área. O [quadro TriBusca — Gestão do Projeto](https://github.com/users/fabiojuniort-cyber/projects/1) foi criado com importação das cinco Issues; o usuário informou a movimentação da Issue #1 para In Progress. O quadro oferece Todo, In Progress e Done; etapas específicas de revisão e validação produtiva são registradas em comentários da Issue. O conector GitHub atual não altera as colunas do Projects. O ciclo completo permanece em validação na Issue #5. Chats não se comunicam automaticamente por causa desses arquivos; o estado oficial é registrado no GitHub.
-
+O Gerente Geral permanece coordenador/read-only por padrão. Após a v2, R0/R1 podem ser encaminhados sem criar nova atividade especializada; novo ID fica reservado a novo escopo material, decisão ou operação independente. Atualizações factuais usam snapshots temporais quando apropriado.
 
 ## API-01 — API pública do site
 
