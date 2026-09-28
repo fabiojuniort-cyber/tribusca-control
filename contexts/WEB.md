@@ -1,6 +1,6 @@
 # TriBusca — entrada de qualquer chat de frontend
 
-Atualizado em 27/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) agora possui uma primeira implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`, head verificado `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`.
+Atualizado em 27/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) possui a implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`. **Head vivo revalidado:** `515e6b7f9c9965a94bcafced12886a8cebe12046`. O último parecer independente concluído é WEB-06 sobre o head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d` e foi **REPROVADO/BLOQUEANTE**; WEB-07 está em execução e o novo head não implica aprovação.
 
 Leia [CONTEXT.md](../CONTEXT.md), [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md), [produto/UX](../docs/PRODUCT_AND_UX.md), [site/comercial](../docs/SITE_AND_MARKETING.md), [Manual de Marca v1](../docs/BRAND_MANUAL_V1.md) e a Issue específica. Os [ativos oficiais](../docs/BRAND_ASSETS.md) devem ser usados sem recriação.
 
@@ -118,6 +118,24 @@ Preview temporário de revisão:
 
 PR continua draft. Sem merge e sem publicação definitiva. Após a revisão e preservação das evidências, remover o preview temporário Railway.
 
+
+## WEB-06 / WEB-07 — gate atual
+
+**WEB-06 — parecer independente concluído no head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d`: REPROVADO/BLOQUEANTE.**
+
+Bloqueios registrados nas Issues #8/#10 e no review do frontend PR #1:
+1. a cor `#237032`, ratificada como exceção semântica restrita ao Sonar, também era usada em `.password-rules .rule-ok`, fora do Sonar;
+2. a sessão de revisão não conseguiu executar a validação real em navegador de viewports, teclado/foco, focus trap/return, overflow e reduced-motion.
+
+A ratificação conceitual da D-053 permanece válida, mas **Issue #10 continua ABERTA** e o gate técnico não foi concluído.
+
+**WEB-07 — em execução.** O frontend PR #1 foi revalidado em `515e6b7f9c9965a94bcafced12886a8cebe12046`, seis commits após o head WEB-06. O workflow associado, Frontend CI #42 / run `36364670460`, terminou em **FAILURE**. A existência do novo head, de mudanças de Playwright/CI ou de qualquer commit posterior **não equivale a aprovação independente**. É necessário novo head/CI conforme a execução da WEB-07 e novo parecer independente em navegador.
+
+Estado preservado:
+- frontend PR #1 = **OPEN / DRAFT / unmerged**;
+- Issue #10 = **OPEN**;
+- sem publicação definitiva;
+- nenhuma aprovação WEB-07 registrada por esta atualização documental.
 
 ## GOV-03 — regras públicas e autenticação
 
