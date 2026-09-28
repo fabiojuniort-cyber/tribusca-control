@@ -12,6 +12,14 @@ O usuário abre o chat sob instrução do Gerente; arquivos ou Issues não inici
 
 Examina diff, contrato, migrações, segurança, provenance, testes e casos de falha. Não considera a própria implementação como revisão independente. Registra aprovação ou achados verificáveis no PR/Issue; devolve todos os erros e gates reprovados ao Gerente para análise e delegação da correção. Não faz merge por mera aprovação de CI.
 
+## Sessões Claude designadas
+
+O Gerente pode designar **Modelo: Claude** para uma atividade específica. Nessa hipótese, Claude ocupa o papel declarado no prompt — Executor ou Revisor independente — e segue integralmente [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md), sem ampliar sua autorização pelo simples fato de trocar o modelo.
+
+Uma sessão Claude declara um único tipo de gate. O executor ativo é único e mantém LOCK/UNLOCK; o revisor trabalha em sessão distinta e não corrige a própria entrega revisada. EXECUÇÃO produtiva exige autorização explícita e material previamente preparado/revisado conforme o risco.
+
+A capacidade da ferramenta deve ser verificada ao vivo. Em particular, não alegar exclusão de serviço Railway se a ferramenta da sessão não expuser essa operação; registrar a limitação e encaminhar o próximo gate.
+
 ## Responsável pelo produto
 
 Decide mudança estratégica de produto/arquitetura, despesa/contratação, credenciais/permissões indisponíveis e ação produtiva material não autorizada previamente. Não precisa executar comandos que os agentes podem executar com permissões válidas.
