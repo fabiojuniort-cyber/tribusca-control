@@ -26,7 +26,7 @@ Todas as páginas, login, aplicativo e peças devem partir dos arquivos oficiais
 
 ## Pendências
 
-A WEB-01 inicia a camada pública em paralelo à macrofase DOE. A API pública D-050 já está mergeada/deployada e validada no backend, mas **integração WEB, origens CORS reais e rate limit** continuam condicionados às respectivas frentes técnicas. Frontend autenticado e disponibilização produtiva dos recursos seguem condicionados aos seus próprios gates. O protótipo anterior não vira referência visual por esta retomada.
+A API pública D-050 está mergeada/deployada e validada no backend. WEB-11 integrou **`GET /public/v1/sources`** na página Cobertura; **origens CORS reais e rate limit** continuam condicionados às respectivas frentes técnicas. Frontend autenticado e disponibilização produtiva dos recursos seguem condicionados aos seus próprios gates. O protótipo anterior não vira referência visual por esta retomada.
 
 
 ## Página Reforma Tributária
@@ -38,13 +38,13 @@ O site público terá uma página dedicada à **Reforma Tributária**, tratada c
 **Data/origem:** 26/09/2026, responsável pelo produto (usuário). Registro detalhado de definição anterior → nova definição, impacto e próximo passo em [WEB-02](WEB_02_DESIGN_ALIGNMENT.md).
 
 1. Menu: **Cobertura · Portfólio · Como funciona · Reforma Tributária**, cada um com página própria.
-2. Header: logo horizontal oficial; **Entrar** e **Criar conta** substituem “Experimentar grátis” como ações de topo. O trial de 7 dias continua válido fora do header.
-3. Entrar/Criar conta/Recuperar senha/Nova senha funcionam em modal sobre a página; somente login usa **POST `/auth/login`** comprovado.
+2. Header: logo horizontal oficial + **Entrar**. Enquanto a Issue #9 estiver aberta, D-054 substitui cadastro público acionável por **Em breve**. O trial futuro continua regido pela D-058, mas não é anunciado como ativo.
+3. Entrar funciona em modal e usa somente **POST `/auth/login`**. Enquanto #9 estiver aberta, cadastro e recuperação aparecem como **Em breve** e não abrem fluxos públicos funcionais.
 4. Home: carrossel visual de 5 UFs, SP sempre primeiro/Ponte Estaiada, 4 UFs sorteadas e fotos reais/licenciadas; publicações estaduais ficam como **“—”** enquanto não houver API.
 5. Home/Portfólio: seis recursos — Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário. **WEB-03: todos = Em desenvolvimento** até comprovação operacional e autorização específica de publicação.
 6. Sonar: a WEB-05 / D-053 ratificou conceitualmente a exceção semântica restrita ao Sonar — Alta `#C92A2A`, Média `#9A6900`, Baixa texto `#237032` e ping `#2B8A3E` — sempre com rótulos textuais e proximidade; revisão independente final ainda pendente.
 7. Decodifica: cinco exemplos legais aprovados em carrossel; Revela: boletim diário com Alta afinidade e Menção direta.
-8. Cobertura: federais primeiro, depois 27 UFs/SP primeiro; cards full-width com status e métricas. Sem contrato de API, métricas = **“—”**.
+8. Cobertura: federais primeiro, depois 27 UFs/SP primeiro; cards full-width integrados a `GET /public/v1/sources`. Loading/refetch/erro = **“—”**; fonte prevista ausente de resposta válida = **Em implantação**.
 9. Reforma Tributária: timeline separa **Publicação, Vigência e Marco previsto em lei**; sem datas sem evidência oficial.
 
 **Próximo passo:** revisão independente final do head WEB-05. Sem merge/publicação definitiva. O gate de status foi resolvido pela WEB-03/D-051; a exceção do Sonar foi ratificada conceitualmente pela D-053, aguardando verificação final.
@@ -69,9 +69,9 @@ Não tratar existência de rota, mock, exemplo, placeholder, PR ou contrato em d
 
 O head `f92fbea8a8b748d9a7e4093ed8a19560f4ef152d` está disponível somente em **preview temporário de revisão**, sem dados produtivos/secrets e sem equivaler a publicação definitiva.
 
-**Regra de CTA — D-054:** se o site for lançado antes de a Issue #9 entregar e validar cadastro funcional, a ação pública **“Criar conta” deve ser substituída por “Em breve”** antes do lançamento. Essa alteração **não está implementada no head atual**; só deve ser aplicada no gate de publicação se a dependência continuar aberta.
+**Regra de CTA — D-054:** WEB-11 implementou no release candidate a substituição de cadastro/trial público por **Em breve** enquanto a Issue #9 estiver aberta.
 
-A Issue #10 permanece aberta até o revisor independente validar no preview os contrastes, a redundância texto/proximidade/cor e a restrição das cores ao Sonar.
+A Issue #10 está CLOSED/COMPLETED; WEB-11 preserva D-053 sem alteração.
 
 
 ## GOV-03 — autenticação, Acervo público e comercial
@@ -129,3 +129,14 @@ A apresentação de preços deverá favorecer a escolha do nível intermediário
 A D-057 permite preservar publicação não fiscal por menção exata a CNPJ, porém esse item é privado da conta correspondente. O contrato público D-050 atual trabalha com metadados globais e não possui filtro fiscal/tenant para essa nova categoria. Antes de tais registros poderem alimentar o Acervo público, deve existir **Issue técnica e gate que impeçam exposição pública de metadados**.
 
 A D-058 aprovou no Acervo público apenas **título, data, órgão e link oficial**. O endpoint `GET /public/v1/publications` já retorna também `id`, `actType`, `actNumber`, `uf` e `effectiveOn`. Esses campos adicionais não devem aparecer publicamente por simples disponibilidade técnica; a ampliação da exibição depende de decisão de produto posterior.
+
+
+## WEB-11 — release candidate
+
+O draft do site passou a integrar dados operacionais públicos exclusivamente por `GET /public/v1/sources`. O status exibido é uma tradução de apresentação, sem alterar o backend. Dados ficam em `—` quando não existe resposta válida atual.
+
+Enquanto Issue #9 estiver OPEN, cadastro, trial e recuperação não são anunciados como disponíveis. O site usa **Cadastro em breve** / **Recuperação de senha em breve**.
+
+Preview: `https://web05-preview-production.up.railway.app`. O backend ainda não possui `PUBLIC_API_ALLOWED_ORIGINS` configurada; portanto dados live no preview dependem de liberar exatamente essa origin em gate separado. Não inventar domínio definitivo.
+
+Head WEB-11: `a7303d14fc725adf4d590fc1e2f475405fd38bc1`. Próximo gate: revisão independente; sem merge/publicação definitiva.
