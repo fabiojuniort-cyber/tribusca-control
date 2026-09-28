@@ -66,7 +66,7 @@ Diretrizes aprovadas:
 - Header: assinatura horizontal oficial + botões **Entrar** e **Criar conta**. O CTA “Experimentar grátis” deixa de ser o CTA primário do header, sem extinguir o trial de 7 dias da D-011.
 - Autenticação pública: Entrar/Criar conta/Recuperar senha/Nova senha em modal. Apenas Entrar possui contrato backend comprovado nesta frente: **POST `/auth/login`**. Não inventar cadastro/reset.
 - Criar conta/Nova senha: confirmar senha e requisitos em tempo real; a D-058 ratificou mínimo de 8 caracteres, maiúscula, minúscula, número e caractere especial. A ativação continua dependente da Issue #9.
-- Home estadual: 5 UFs, SP fixo em primeiro e 4 sorteadas; fotos licenciadas do Wikimedia Commons; área de publicações usa **“—”** sem API.
+- Home estadual: 5 UFs, SP fixo em primeiro e 4 sorteadas; fotos licenciadas do Wikimedia Commons; área de publicações usa **“—”** enquanto a API pública ainda não estiver integrada ao frontend.
 - Portfólio público: **Acervo, Central de Monitoramento, Sonar, Revela, Decodifica, Perfil Tributário**. **WEB-03 substitui o claim do draft:** todos os seis recursos ficam como **Em desenvolvimento** até comprovação operacional e autorização específica de publicação.
 - Sonar mantém Alta/Média/Baixa + proximidade. A WEB-05 / D-053 ratificou conceitualmente a exceção semântica restrita ao Sonar: Alta `#C92A2A`, Média `#9A6900`, Baixa texto `#237032` e ping `#2B8A3E`; rótulo textual e proximidade permanecem obrigatórios. A verificação independente final ainda está pendente.
 - Decodifica: carrossel de cinco exemplos Texto oficial × Leitura auxiliar definidos no registro WEB-02, sempre com aviso de IA.
@@ -141,3 +141,12 @@ Escopo inicial: legislação constitucional/complementar, CGIBS, Receita Federal
 O Acervo público expõe título, data, órgão e link oficial; **texto integral e busca avançada exigem autenticação**. O trial de 7 dias sem cartão começa após verificação do e-mail + primeiro cadastro de empresa. O formulário inicial usa nome, e-mail profissional, senha e CNPJ opcional; primeiro usuário = administrador. Ao adicionar CNPJ matriz/filial, tentar obter CNAE/endereço automaticamente de fonte disponível. Empresa sem CNPJ permanece questão aberta.
 
 A D-054 continua sendo o gate de lançamento: se o site for publicado antes de cadastro funcional da Issue #9, **Criar conta → Em breve**. Preview, página, PR ou contrato em draft não equivale a disponibilidade.
+
+
+### Dependências do Acervo público após D-057/D-058
+
+- publicação **não fiscal** preservada somente por CNPJ exato é privada da respectiva conta; a API pública atual não possui filtro fiscal/tenant para essa nova categoria;
+- antes de esse tipo de registro poder alimentar o Acervo público, é necessária **Issue técnica + gate de isolamento**;
+- a D-058 aprovou para exibição pública somente **título, data, órgão e link oficial**;
+- o contrato atual de `GET /public/v1/publications` também retorna `id`, `actType`, `actNumber`, `uf` e `effectiveOn`;
+- a existência desses campos adicionais na API não amplia automaticamente a regra de exibição da D-058; a decisão de produto permanece aberta.
