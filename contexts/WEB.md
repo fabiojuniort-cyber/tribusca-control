@@ -1,6 +1,6 @@
 # TriBusca — entrada de qualquer chat de frontend
 
-Atualizado em 26/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) agora possui uma primeira implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`, head verificado `b9c39fab1530187f4ed034679dea1ef26888d3b3`.
+Atualizado em 27/09/2026. O repositório [radar-fiscal-web](https://github.com/fabiojuniort-cyber/radar-fiscal-web) agora possui uma primeira implementação do **site público** em branch própria, ainda não mergeada nem publicada. O trabalho está na **WEB-01 / Issue #8** e no draft [PR #1](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/1), branch `feat/web-01-site-publico`, head verificado `b9c39fab1530187f4ed034679dea1ef26888d3b3`.
 
 Leia [CONTEXT.md](../CONTEXT.md), [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md), [produto/UX](../docs/PRODUCT_AND_UX.md), [site/comercial](../docs/SITE_AND_MARKETING.md), [Manual de Marca v1](../docs/BRAND_MANUAL_V1.md) e a Issue específica. Os [ativos oficiais](../docs/BRAND_ASSETS.md) devem ser usados sem recriação.
 
@@ -67,13 +67,28 @@ No head `b9c39fab1530187f4ed034679dea1ef26888d3b3`, o draft PR #1 contém:
 
 CI run `36260946535` = **SUCCESS** (install, typecheck, testes e build).
 
-**WEB-03/D-051 resolveu o antigo gate de disponibilidade:** Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário ficam todos como **Em desenvolvimento** no site público. **Gates ainda pendentes:** Branding / Issue #10 para cores do Sonar e revisão visual/funcional. PR permanece draft, sem merge/deploy. Contratos dependentes: Issue #9 (cadastro/reset) e Issue #11 (Cobertura/Acervo público).
+**WEB-03/D-051 resolveu o antigo gate de disponibilidade:** Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário ficam todos como **Em desenvolvimento** no site público. A D-057 ratificou as cores do Sonar; permanece revisão visual/funcional. PR segue draft, sem merge/deploy. Contratos dependentes: Issue #9 (cadastro/reset) e Issue #11 (Cobertura/Acervo público).
 
 
 ## WEB-03 — correção de claims
 
 Em 26/09/2026, por decisão do Gerente, o claim da D-043 não foi confirmado para publicação. O draft deve apresentar os seis recursos do portfólio — Acervo, Central de Monitoramento, Sonar, Revela, Decodifica e Perfil Tributário — como **Em desenvolvimento**.
 
-A existência de rotas, placeholders, mocks, demonstrações ou contratos em PR não autoriza o rótulo “Disponível”.
+A existência de rotas, placeholders, mocks, demonstrações ou contratos em PR não autoriza o rótulo “Disponível”. A D-056 reforça que o site informativo pode ser publicado antes da #9 somente após seus gates e com **Criar conta → Em breve** até o cadastro real estar pronto.
 
 **Impacto:** frontend público + documentação. Head WEB-03 verificado `b9c39fab1530187f4ed034679dea1ef26888d3b3`; CI run `36260946535` = **SUCCESS** (install, typecheck, testes e build). Cores do Sonar continuam apenas em avaliação no draft e dependem da Issue #10. Revisão visual/funcional permanece gate separado. Sem merge/deploy.
+
+
+## GOV-03 — regras públicas e autenticação
+
+- site informativo pode ser publicado antes da Issue #9 **somente após os gates de revisão**;
+- enquanto #9 não estiver pronta, substituir **Criar conta** por **Em breve**; cadastro e trial ficam inativos;
+- Acervo público: título, data, órgão e link oficial; texto integral e busca avançada exigem autenticação;
+- trial: 7 dias sem cartão, iniciado após verificação de e-mail + primeiro cadastro de empresa;
+- formulário inicial: nome, e-mail profissional, senha e CNPJ opcional;
+- senha aprovada: mínimo 8 caracteres + maiúscula + minúscula + número + especial;
+- primeiro usuário = administrador;
+- ao informar CNPJ, tentar obter CNAE/endereço automaticamente de fonte disponível;
+- regra de empresa sem CNPJ permanece aberta;
+- cores Sonar ratificadas na D-057; nenhuma mudança de frontend foi executada nesta GOV-03;
+- página/PR/demo não equivale a produto disponível.
