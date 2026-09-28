@@ -21,7 +21,7 @@ O draft PR #1 implementa:
 
 GitHub Actions run **36361749038**: **SUCCESS** em 26/09/2026. Passaram instalação, typecheck, testes e build.
 
-**Não comprovado / não autorizado no frontend:** merge na main, publicação definitiva do site, **integração/consumo da API pública**, autenticação de cadastro/reset, matching real do Sonar, envio real do Revela, consumo real do Decodifica ou Acervo dinâmico. A API pública backend D-050 já está mergeada/deployada; isso não significa que o frontend a esteja consumindo.
+**Não autorizado no frontend:** merge na main, publicação definitiva do site, autenticação de cadastro/reset, matching real do Sonar, envio real do Revela, consumo real do Decodifica ou Acervo dinâmico. **WEB-11 integrou `GET /public/v1/sources` somente para a página Cobertura**; isso não autoriza `/publications`, `/stats` nem dados autenticados.
 
 ## Stack e limites
 
@@ -44,7 +44,7 @@ A D-050 / Issue #11 definiu a API pública read-only:
 
 O [backend PR #74](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/74) foi mergeado por squash em `4688ff87a0b039eb426b80f5e279c95214fb87d2`. A Issue #11 registra deploy produtivo verde e validação HTTP 200 dos três GETs, com cache/CORS conforme D-050 e sem conteúdo integral ou dados tenant/company/user nos payloads inspecionados.
 
-### WEB ainda aberto
+### Estado WEB após WEB-11
 
 O frontend **ainda não está integrado** a essa API. Permanecem abertos:
 - configurar o `apiBase`/consumo no frontend;
@@ -61,7 +61,7 @@ Publicações **não fiscais** preservadas somente por menção exata a CNPJ sã
 
 A D-058 aprovou para exibição no Acervo público somente **título, data, órgão e link oficial**. O endpoint `GET /public/v1/publications` também retorna `id`, `actType`, `actNumber`, `uf` e `effectiveOn`.
 
-Esses campos adicionais podem existir na API por D-050, mas **não devem ser presumidos como aprovados para exibição** no Acervo público. A decisão de produto permanece aberta e esta GOV-03 não altera a API nem o frontend.
+Esses campos adicionais podem existir na API por D-050, mas **não devem ser presumidos como aprovados para exibição** no Acervo público. WEB-11 não consome `/publications`; integra somente `/public/v1/sources` para a Cobertura.
 
 ## WEB-02 — design aprovado e estado verificado
 
@@ -170,3 +170,56 @@ Estado preservado:
 - D-053 permanece a decisão das cores; D-059 acrescenta Dados insuficientes e a semântica qualitativa do Sonar, sem fechar a Issue #10;
 - página/preview/PR/demo não equivale a produto disponível;
 - nenhuma mudança de frontend foi executada na GOV-03.
+
+
+## WEB-11 — release candidate
+
+**Data:** 28/09/2026  
+**PR:** radar-fiscal-web #1 · OPEN / DRAFT / unmerged  
+**Head:** `a7303d14fc725adf4d590fc1e2f475405fd38bc1`  
+**CI:** #65 / run `36444458147` = **SUCCESS**  
+**Vitest:** 24/24  
+**Playwright/Chromium:** 48/48  
+**Artifact:** `10980146266` · digest `sha256:e163a43ca31b8f72e84837243a3c93a2504ec1fd1bb69ffec87b24e2333fa99e`.
+
+### D-054 implementada no draft
+
+Enquanto Issue #9 permanece OPEN:
+- header desktop: cadastro = **Em breve**, não acionável;
+- menu mobile: **Cadastro em breve**, não acionável;
+- hero: **Cadastro em breve**, não acionável;
+- claim de trial ativo de 7 dias removido;
+- modal Entrar informa **Cadastro em breve**;
+- recuperação pública informa **Recuperação de senha em breve**;
+- signup/reset internos não possuem superfície pública acionável e nenhum endpoint fictício foi criado.
+
+Login real preservado em `POST /auth/login`, com `VITE_API_BASE`, fallback same-origin, `credentials: include` e sem token em localStorage.
+
+### Cobertura D-050
+
+Frontend passa a consumir somente `GET /public/v1/sources` via TanStack Query.
+
+- federais: correspondência por `code` estável;
+- estaduais: prioriza `STATE + uf`, com fallback `doe-<uf>`;
+- “Última atualização” = `lastSuccessAt`;
+- `importedToday` e `totalPublications` exibidos apenas quando retornados;
+- loading/refetch/erro = `—`;
+- fonte planejada ausente de resposta válida = **Em implantação**;
+- ONLINE → Online;
+- UNSTABLE/UNAVAILABLE → Em validação;
+- NOT_CONSULTED → Em implantação.
+
+### Preview/CORS
+
+Preview: https://web05-preview-production.up.railway.app  
+Deployment: `eff05426-969c-4481-8e70-9ed41583b454` = **SUCCESS** no mesmo head.
+
+O preview possui `VITE_API_BASE=https://radar-fiscal-backend-production.up.railway.app`.
+
+Inspeção read-only do backend: `PUBLIC_API_ALLOWED_ORIGINS` **não está configurada**. WEB-11 não alterou backend. Para que o preview receba dados reais no navegador, a origem a autorizar é:
+
+`https://web05-preview-production.up.railway.app`
+
+A futura origem pública definitiva ainda não está comprovada neste gate e não deve ser inventada.
+
+**Próximo gate:** uma única revisão independente do SHA WEB-11. Sem merge/publicação definitiva.
