@@ -129,7 +129,7 @@ Bloqueios registrados nas Issues #8/#10 e no review do frontend PR #1:
 
 A ratificação conceitual da D-053 permanece válida, mas **Issue #10 continua ABERTA** e o gate técnico não foi concluído.
 
-**WEB-07 — em execução.** Durante esta atualização, o PR #1 avançou novamente e o **head vivo atual** foi revalidado em `dd92c8f77fb4bbe57bb97ed5fe454c0d0136e0b5`. O head intermediário `515e6b7f9c9965a94bcafced12886a8cebe12046` teve Frontend CI #42 / run `36364670460` = **FAILURE**. Para o head vivo `dd92c8f...`, Frontend CI #44 / run `36365024716` estava **IN_PROGRESS** na última verificação. Nenhum desses estados equivale a aprovação independente. É necessário concluir a execução da WEB-07 e obter novo parecer independente em navegador.
+**WEB-07 — em execução.** Durante esta atualização, o PR #1 avançou novamente e o **head vivo atual** foi revalidado em `dd92c8f77fb4bbe57bb97ed5fe454c0d0136e0b5`. O head intermediário `515e6b7f9c9965a94bcafced12886a8cebe12046` teve Frontend CI #42 / run `36364670460` = **FAILURE**. Para o head vivo `dd92c8f...`, Frontend CI #44 / run `36365024716` = **SUCCESS** na última verificação. Nenhum desses estados equivale a aprovação independente. É necessário concluir a execução da WEB-07 e obter novo parecer independente em navegador.
 
 Estado preservado:
 - frontend PR #1 = **OPEN / DRAFT / unmerged**;
