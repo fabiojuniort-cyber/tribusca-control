@@ -83,23 +83,25 @@ Pontos de estado:
 - questões remanescentes estão em `docs/OPEN_QUESTIONS.md`;
 - nenhuma disponibilidade de produto foi inferida de páginas, previews, mocks, PRs ou contratos em draft.
 
-### GOV-04 → GOV-16 — evolução da governança
+### GOV-04 → GOV-20 — evolução da governança
 
-**Estado observado em 28/09/2026 02:10 BRT.**
+**Estado atual em 28/09/2026 após GOV-20.**
 
-- GOV-10 emitiu parecer independente **FAVORÁVEL** ao SHA `e39239301795a087f2c6fada67d7e3e04d6f1a32`; em seguida, GOV-11 incorporou o PR #13 em `bae943208cb99f236748bd6118ce482e4538a5ba`, tornando C-01…C-12 o protocolo vigente da `main`.
-- GOV-15 foi **FAVORÁVEL** ao PR #14/head `f39a265f4fc633dd78d201e6c02f2db2ed620004`, mas o PR #14 ainda estava OPEN / DRAFT / unmerged no início da GOV-16.
-- O usuário autorizou explicitamente prosseguir com GOV-16 apesar dessa pré-condição pendente; a exceção não autoriza merge, deploy, Railway write, SQL/migration nem operação DOE-SP.
-- GOV-16 propõe a **Governança Flexível v2** com R0–R3, LOCK proporcional, revisão incremental e continuidade de sessão executora.
-- A v2 só entra em vigor após revisão independente favorável, autorização aplicável e merge na `main`.
+- GOV-10 emitiu parecer independente **FAVORÁVEL** ao SHA `e39239301795a087f2c6fada67d7e3e04d6f1a32`; GOV-11 incorporou o PR #13 em `bae943208cb99f236748bd6118ce482e4538a5ba`.
+- GOV-15 aprovou o PR #14/head `f39a265f4fc633dd78d201e6c02f2db2ed620004`.
+- GOV-19 emitiu parecer **FAVORÁVEL** ao PR #15/head `d4f294e0daa4856df37337fa74ef964cc3e92e38` e concluiu que o PR #15 substitui integralmente o PR #14.
+- GOV-20 incorporou o PR #15 por squash na `main` em `6f6a7169cfe5b8ddb6c235569d637c2d6f4435ba`; PR #14 foi fechado sem merge como `superseded`.
+- **Governança Flexível v2 = VIGENTE.**
 
-Referência proposta: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md).
+Referência canônica: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md).
 
 ## Governança
 
-A Governança Flexível v2 somente passa a valer após parecer independente favorável e merge autorizado do PR GOV-16. Até esse evento, o protocolo anterior em `main` continua vigente para esta própria atividade e sua revisão.
+A Governança Flexível v2 governa as atividades futuras por R0–R3, Gate 0 proporcional, LOCK proporcional/lease, revisão incremental, continuidade de sessão, snapshots temporais e handoff proporcional.
 
-O Gerente Geral permanece coordenador/read-only por padrão. Após a v2, R0/R1 podem ser encaminhados sem criar nova atividade especializada; novo ID fica reservado a novo escopo material, decisão ou operação independente. Atualizações factuais usam snapshots temporais quando apropriado.
+O Gerente Geral é coordenador/read-only por padrão e possui autorização permanente para identificar e corrigir gargalos/loops de governança dentro da classificação de risco. Antes de delegar, deve pré-checar bloqueios previsíveis e evitar repetição de formalidades que já falharam pelo mesmo motivo.
+
+Atualizações factuais e ajustes procedurais R0 não exigem nova GOV/chat/LOCK/revisão. Mudanças materiais de governança continuam R2/R3.
 
 A classificação R0–R3 não reduz proteção de secrets, dados privados, auth, RLS, integridade tenant, autorização material nem salvaguardas destrutivas de R3.
 
