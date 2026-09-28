@@ -153,7 +153,10 @@ A exceção de retenção por **CNPJ exato** não transforma o item em publicaç
 - sua visibilidade é restrita à conta correspondente;
 - ela não pode ser tratada como metadado global elegível ao Acervo público;
 - a API pública D-050 existente não implementa, por si só, filtro fiscal/tenant para essa nova categoria;
-- antes de esse tipo de registro poder participar de qualquer alimentação do Acervo público, deve existir **Issue técnica e gate específico** que impeçam exposição pública indevida, inclusive dos metadados;
+- **antes de introduzir esses registros**, o filtro/proteção deve estar **implementado e validado**;
+- sem esse isolamento comprovado, a publicação não fiscal retida só por CNPJ **não pode ser persistida em tabelas globais consultadas por `GET /public/v1/publications` nem ficar de outra forma alcançável pela API pública**;
+- restringir apenas o componente visual do site não satisfaz o gate, porque a proteção deve existir no ponto de persistência/consulta pública;
+- a futura Issue técnica permanece aberta;
 - esta GOV-03 não autoriza alterar a API, schema ou pipeline.
 
-A rota pública atual continua válida para o contrato já implementado e validado; esta dependência vale para a futura introdução de registros não fiscais retidos apenas por CNPJ.
+A rota pública atual continua válida para o contrato já implementado e validado; esta dependência deve ser cumprida **antes da futura introdução** de registros não fiscais retidos apenas por CNPJ.
