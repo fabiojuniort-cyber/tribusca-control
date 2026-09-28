@@ -54,6 +54,14 @@ A D-017/D-036 está aprovada globalmente. A autorização vigente do responsáve
 
 **Objetivo permanente:** abrir nova janela do Gerente a qualquer momento com pouco contexto no chat e sem perder decisões. Depois de cada avanço, erro, decisão ou bloqueio, o Gerente GPT-6 analisa o relato e delega ao executor GPT-5.6 a edição de `CONTEXT.md`, `PROJECT_STATE.md`, Issue e índices afetados, incluindo data, evidência, dependências e próximo passo. O GPT-5.6 retorna links/commit e resumo do diff. Se o registro não for comprovado, o marco não está documentalmente fechado. Nunca tratar handoff isolado como prova de produção. A manutenção documental está autorizada; ações produtivas exigem seu próprio gate.
 
+## GOV-04 — protocolo de sessões Claude
+
+Em 27/09/2026 foi aberto o draft [PR #13](https://github.com/fabiojuniort-cyber/tribusca-control/pull/13), branch `docs/gov-04-claude-session-protocol`, para registrar o protocolo operacional de sessões Claude. Documento canônico: [docs/CLAUDE_SESSION_PROTOCOL.md](docs/CLAUDE_SESSION_PROTOCOL.md).
+
+O draft formaliza 12 regras: Gate 0 push → Railway → LOCK; fail-fast sem trabalho parcial; um único tipo de gate por sessão; executor único; LOCK/UNLOCK; revisão independente; autorizações explícitas; prompts com alvo ~40 linhas e critérios mensuráveis; `radar-fiscal-backend/ops/<frente>/` como destino futuro de artefatos; backup/restauração testada/dry-run/transação/validação pré-definida; limitação de exclusão de serviço Railway quando a ferramenta Claude não suportar; e handoff Preparado / Executado / Validado.
+
+**Estado:** documentação em PR draft, sem merge e sem operação produtiva. GOV-04 não altera regras técnicas de coleta/produto e não cria scripts DOE-SP. Issue de governança: [#5](https://github.com/fabiojuniort-cyber/tribusca-control/issues/5).
+
 **Regra GOV-01 vigente desde 26/09/2026:** a comunicação operacional é bilateralmente separada em blocos copiáveis. Todo direcionamento do Gerente a executor/revisor usa bloco contendo somente a mensagem para o agente; todo retorno de executor/revisor usa bloco contendo somente o handoff para o Gerente. Ambos podem usar linguagem técnica compacta, preservando escopo, autorização, dependências, critérios, evidências, falhas, gates e próxima ação. O Gerente traduz o retorno em resumo claro ao usuário fora do bloco. Delegações usam ID sequencial por frente, título e passos numerados; em cada avanço, o Gerente informa resultado, evidência, próximo passo, percentual da frente calculado sobre marcos verificáveis e incerteza. Percentuais não substituem gates. Ao trocar de frente, registra também passos restantes e estimativa fundamentada do projeto total. A definição canônica está em [docs/CONTEXT_MAINTENANCE.md](docs/CONTEXT_MAINTENANCE.md).
 
 ## Retomada em novo chat
