@@ -40,11 +40,15 @@ O Gerente apresenta **todo direcionamento a executor ou revisor em um único blo
 
 ## Adendo para sessões Claude
 
-Quando a delegação indicar **Modelo: Claude**, aplicar também [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md). O prompt deve declarar **Tipo de gate** e começar por Gate 0: capacidade de push → acesso Railway → LOCK na Issue. Uma sessão não mistura CÓDIGO, PREPARAÇÃO, REVISÃO e EXECUÇÃO.
+Quando a delegação indicar **Modelo: Claude**, aplicar também [CLAUDE_SESSION_PROTOCOL.md](CLAUDE_SESSION_PROTOCOL.md).
 
-O prompt separa `AUTORIZADO SEM NOVA CONSULTA` de `REQUER DECISÃO DO USUÁRIO`, mantém como alvo aproximadamente 40 linhas e usa critérios observáveis de PASS/FAIL. A trava garante executor único; revisão independente acontece em sessão própria. O UNLOCK é obrigatório mesmo quando a sessão termina bloqueada depois do Gate 0.
+**Antes de emitir o próximo prompt**, o Gerente confirma o handoff e o `UNLOCK` da sessão anterior. O prompt declara **Tipo de gate** e o Gate 0 revalida: capacidade de push → acesso Railway → sequência LOCK/UNLOCK vigente na Issue → novo LOCK. Uma sessão não mistura CÓDIGO, PREPARAÇÃO, REVISÃO e EXECUÇÃO.
 
-Para operações futuras, preparação e execução usam artefatos versionados em `radar-fiscal-backend/ops/<frente>/`, sem dados privados no GitHub. Operações de risco exigem backup, restauração testada, dry-run quando possível, transação/rollback quando suportado e validação definida antes da execução.
+O prompt separa `AUTORIZADO SEM NOVA CONSULTA` de `REQUER DECISÃO DO USUÁRIO`. Autorizações explícitas já concedidas e ainda válidas para o mesmo escopo **persistem** e devem ser transcritas no novo prompt; não pedir nova concessão ao usuário. O prompt mantém como alvo aproximadamente 40 linhas e explicita, quando aplicável, janela inicial/final de coleta, serviços, branch, SHA/PR, pendências herdadas com critério próprio, valores esperados e critérios de aprovação/reprovação.
+
+A Issue mantém checklist dos gates e evidências. A trava garante executor único; revisão independente acontece em sessão própria sobre SHA exato, com checklist e critérios de reprovação, e registra parecer no PR citando o SHA. O UNLOCK é obrigatório mesmo quando a sessão termina bloqueada depois do Gate 0.
+
+Para operações futuras, preparação e execução usam artefatos versionados em `radar-fiscal-backend/ops/<frente>/`. Dados privados permanecem dentro da Railway e não entram em Issue, PR, handoff ou resposta. Operação destrutiva exige backup dentro da Railway, restauração testada em Postgres temporário, artefato exato commitado/revisado, dry-run com resultado igual ao esperado, transação quando suportada e queries de validação definidas antes da execução. Qualquer falha bloqueia EXECUÇÃO.
 
 ## Processo em cada avanço
 
