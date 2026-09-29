@@ -21,3 +21,7 @@ A autorização vigente registrada na frente permite prosseguir conforme os gate
 ## Ao retomar
 
 Leia [BACKEND.md](BACKEND.md), [AGENTS.md](../AGENTS.md), a Issue escolhida, PR e documentação técnica. Revalide deploys, runs e PostgreSQL conforme o escopo da tarefa. Registre handoff na Issue. O Gerente Geral atualiza este índice quando o bloqueio, a sequência ou os gates mudarem; não mantenha um diário duplicado de runs aqui.
+
+## Railway AI Agent
+
+DOE-SP não pode usar o **Railway AI Agent** em nenhuma etapa, inclusive diagnóstico de coleta, logs, serviços, banco, deploy, rebuild/backfill ou validação produtiva. Usar somente meios não-AI permitidos pela D-065. Evidência inacessível por canal permitido fica `NOT_PROVEN`; não usar o Agent como atalho.
