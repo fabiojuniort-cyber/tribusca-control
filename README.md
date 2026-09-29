@@ -27,3 +27,7 @@ Gerente Geral abre/coordena a Issue → executor trabalha no repositório de có
 No quadro, Todo indica tarefa ainda não iniciada ou bloqueada por dependência; In Progress indica execução, revisão ou validação produtiva ainda aberta; Done só é usado depois do gate e fechamento da Issue. Registre em comentário na Issue a etapa específica e a evidência. O conector GitHub desta sessão não oferece edição das colunas do Projects; movimentos do quadro dependem da interface GitHub até existir integração própria.
 
 Links entre repositórios são registrados na Issue e no PR. Não fechar uma Issue de validação produtiva ao fazer merge do PR. Conversas entre chats não alteram automaticamente o estado oficial; registrar evidências no GitHub.
+
+## Política Railway AI Agent
+
+O projeto proíbe o uso do **Railway AI Agent**. Railway continua sendo infraestrutura aprovada, operada por meios não-AI permitidos. Consulte [docs/RAILWAY_AI_AGENT_POLICY.md](docs/RAILWAY_AI_AGENT_POLICY.md) e a decisão D-065 em [DECISIONS.md](DECISIONS.md).
