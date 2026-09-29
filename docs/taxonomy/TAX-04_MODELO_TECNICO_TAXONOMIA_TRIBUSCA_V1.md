@@ -416,7 +416,8 @@ Regras:
 2. `code` é imutável depois de criado;
 3. código retirado continua reservado;
 4. renomear rótulo não altera `code`;
-5. mudança incompatível de significado requer novo conceito e `replaced_by`, não reutilização de código.
+5. mudança incompatível de significado requer novo conceito e `replaced_by`, não reutilização de código;
+6. `dimension_id` da identidade é imutável; mover um conceito entre dimensões é mudança incompatível e exige novo conceito/linhagem, não UPDATE.
 
 Formato técnico recomendado:
 
@@ -452,8 +453,9 @@ Snapshot por release:
 - `concept_id`;
 - `concept_revision_id`;
 - `membership_status`: `INCLUDED`, `DEPRECATED`, `RETIRED`;
-- `classification_enabled BOOLEAN`;
 - `release_notes`.
+
+Não existe boolean genérico `active/classification_enabled` neste nível. A elegibilidade operacional é derivada de release publicada + membership + políticas explícitas do engine, preservando `governance_status` e `evidence_status`.
 
 Unique: `(release_id, concept_id)`.
 
@@ -465,11 +467,12 @@ A TAX-04 **não reinterpreta** o status semântico da R6.
 
 Recomendação de carga inicial:
 
-- identidade: `CURRENT`;
+- identidade: `CURRENT` — significa apenas “identidade não retirada”, não aprovação jurídica;
 - associação à release: `INCLUDED`;
 - `governance_status`: preservar `PROPOSED` da R6;
-- `classification_enabled`: true **somente porque a release baseline foi aprovada como vocabulário operacional**, não porque exista alegação de completude jurídica;
 - `evidence_status`: mapeado separadamente.
+
+A inclusão dos 628 no snapshot aprovado torna os conceitos disponíveis ao vocabulário daquela release, mas não converte `PROPOSED` em `APPROVED` nem `NEEDS_EVIDENCE` em evidência suficiente. O engine futuro deverá registrar sua própria política de uso na versão/configuração do run.
 
 Isto permite afirmar simultaneamente:
 
@@ -1314,48 +1317,50 @@ Release já publicada não é “desimportada”; é retirada/substituída por n
 11. Runtime não depende apenas do prefixo.
 12. Importador valida prefixo × dimensão.
 13. Nova dimensão exige governança; MIT não cria dimensão.
+14. `taxonomy_concepts.dimension_id` não muda retroativamente; mudança de dimensão cria nova identidade.
+
 
 ### 20.4 Aliases
 
-14. `AMBIGUOUS` e `SEARCH_RELATED` não são auto-mapeáveis.
-15. Vários bindings para o mesmo alias são permitidos.
-16. Binding aprovado exige contexto/evidência conforme regra da release.
+15. `AMBIGUOUS` e `SEARCH_RELATED` não são auto-mapeáveis.
+16. Vários bindings para o mesmo alias são permitidos.
+17. Binding aprovado exige contexto/evidência conforme regra da release.
 
 ### 20.5 Relações
 
-17. Source e target pertencem à mesma release.
-18. Self-loop proibido para relação hierárquica/substituição.
-19. Ciclo proibido para tipos marcados `acyclic`.
-20. Relação inválida entre dimensões é rejeitada.
-21. Nenhuma relação dispara propagação automaticamente.
+18. Source e target pertencem à mesma release.
+19. Self-loop proibido para relação hierárquica/substituição.
+20. Ciclo proibido para tipos marcados `acyclic`.
+21. Relação inválida entre dimensões é rejeitada.
+22. Nenhuma relação dispara propagação automaticamente.
 
 ### 20.6 Evidência
 
-22. `NEEDS_EVIDENCE` não desaparece por falta de join.
-23. Evidência oficial preserva mantenedor/URL/edição/data/localizador quando disponível.
-24. Evidência híbrida diferencia fonte oficial de interpretação TriBusca.
+23. `NEEDS_EVIDENCE` não desaparece por falta de join.
+24. Evidência oficial preserva mantenedor/URL/edição/data/localizador quando disponível.
+25. Evidência híbrida diferencia fonte oficial de interpretação TriBusca.
 
 ### 20.7 Catálogos
 
-25. Código oficial é único apenas dentro de uma edição.
-26. Mapping sempre registra edição.
-27. Código oficial nunca substitui `taxonomy_concepts.code`.
+26. Código oficial é único apenas dentro de uma edição.
+27. Mapping sempre registra edição.
+28. Código oficial nunca substitui `taxonomy_concepts.code`.
 
 ### 20.8 Classificação
 
-28. Run sempre referencia `publication_version_id`.
+30. Run sempre referencia `publication_version_id`.
 29. Run sempre referencia `taxonomy_release_id`.
-30. Assertion referencia conceito daquela mesma release.
-31. Reclassificação não UPDATE o run anterior.
-32. Review humano é append-only.
-33. “Atual” é derivado, não destrói história.
+31. Assertion referencia conceito daquela mesma release.
+32. Reclassificação não UPDATE o run anterior.
+33. Review humano é append-only.
+34. “Atual” é derivado, não destrói história.
 
 ### 20.9 Global × tenant
 
-34. Nenhuma tabela canônica/global recebe `tenant_id`.
-35. Nenhum dado de empresa/CNPJ/SAP/benefício privado entra em conceito/evidência/classificação global.
-36. Tabelas privadas existentes mantêm RLS.
-37. Conteúdo privado por CNPJ não pode vazar para pipeline global.
+35. Nenhuma tabela canônica/global recebe `tenant_id`.
+36. Nenhum dado de empresa/CNPJ/SAP/benefício privado entra em conceito/evidência/classificação global.
+37. Tabelas privadas existentes mantêm RLS.
+38. Conteúdo privado por CNPJ não pode vazar para pipeline global.
 
 ---
 
