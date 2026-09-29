@@ -86,6 +86,8 @@ O schema atual confirma:
 | `company_cnaes` / `establishment_cnaes` | tenant | CNAEs concretos de empresa/estabelecimento |
 | `cnaes` | global | catálogo operacional atual, sem versionamento de edição |
 
+Limite atual relevante: `publications.jurisdiction_level` aceita hoje apenas `FEDERAL` e `STATE`. A taxonomia pode representar conceitos municipais independentemente da cobertura operacional, mas uma futura classificação de publicação municipal exigirá evolução própria do schema de publicações; TAX-04 não amplia esse enum/constraint.
+
 O backend já separa:
 
 ```text
@@ -177,6 +179,7 @@ MIT permanece `UNMAPPED_DIMENSION`. Nenhuma tabela, enum ou importador deve mate
 | T04-D11 | UNMAPPED separa **ocorrência extraída** de **candidato semântico agrupado**. |
 | T04-D12 | Taxonomia e classificação global não têm `tenant_id`; matching privado existente continua RLS-scoped. |
 | T04-D13 | Escrita da taxonomia canônica não é concedida a `radar_app` nem ao Worker de coleta; haverá caminho de curadoria/importação restrito em atividade posterior. |
+| T04-D13A | Auditoria de mutações globais reutiliza `audit_log` existente com `tenant_id = NULL`, `actor_type` governado e `entity_type/entity_id` da taxonomia; não criar `taxonomy_governance_events` por padrão. |
 | T04-D14 | `monitoring_profiles.criteria` não muda nesta atividade; futura integração começa por contrato versionado, não por migration prematura. |
 | T04-D15 | Importação da R6 deve falhar se não reproduzir exatamente 628 conceitos e 55 `NEEDS_EVIDENCE`, salvo mudança documental aprovada e explicitamente justificada. |
 
@@ -229,7 +232,7 @@ MIT permanece `UNMAPPED_DIMENSION`. Nenhuma tabela, enum ou importador deve mate
 - `taxonomy_candidate_occurrence_links`
 
 **Auditoria de governança**
-- `taxonomy_governance_events`
+- reutilizar `audit_log` existente com `tenant_id = NULL` para eventos globais de release/curadoria; não criar trilha paralela sem necessidade.
 
 ### 5.2 Diagrama ER
 
@@ -1111,6 +1114,31 @@ Se futuramente existir publicação não fiscal preservada apenas por CNPJ priva
 
 A classificação global definida aqui pressupõe `publication_version` de conteúdo globalmente elegível.
 
+
+### 17.5 Auditoria global de governança
+
+O backend já possui `audit_log` com:
+
+- `tenant_id` nullable;
+- `actor_type` = USER/SYSTEM/WORKER/ADMIN;
+- `actor_id`;
+- `action`;
+- `entity_type/entity_id`;
+- `before_data/after_data`;
+- `correlation_id/request_id`;
+- `occurred_at`.
+
+A TAX-04 recomenda **reutilizar** essa trilha para eventos de release/importação/curadoria global, gravando `tenant_id = NULL`.
+
+Exemplos futuros:
+
+- `entity_type = taxonomy_release`;
+- `action = TAXONOMY_RELEASE_IMPORTED`;
+- `action = TAXONOMY_RELEASE_PUBLISHED`;
+- `action = TAXONOMY_CANDIDATE_DECIDED`.
+
+Como o RLS atual do `radar_app` não expõe linhas globais `tenant_id IS NULL`, a UI de curadoria global precisará de autorização/caminho próprio; isso é preferível a abrir o audit global para usuários tenant.
+
 ---
 
 ## 18. Integração futura com matching
@@ -1562,6 +1590,7 @@ Rejeitada: data de criação não é decisão de inclusão.
 | usar `cnaes` atual como edição histórica | perda temporal | catalog editions futuras |
 | publicar release parcialmente importada | snapshot inválido | transação + validação |
 | reprocessar tudo sem controle | custo/efeito não auditado | replay versionado separado |
+| confundir capacidade semântica municipal com schema operacional atual | migration implícita/escopo indevido | registrar que publications hoje é FEDERAL/STATE e evoluir em Issue própria |
 
 ---
 
@@ -1578,7 +1607,8 @@ Estas pendências **não bloqueiam o desenho TAX-04**, mas precisam ser resolvid
 7. política de retenção de runs de classificação falhos;
 8. política de qual release é `CURRENT_PUBLISHED` quando houver rollback/withdraw;
 9. política de migração explícita de monitoring profile quando conceito for `replaced_by`;
-10. eventual extensão formal da TAX-01 para dimensão de escrituração/componente referente ao MIT — fora desta TAX-04.
+10. eventual extensão formal da TAX-01 para dimensão de escrituração/componente referente ao MIT — fora desta TAX-04;
+11. evolução futura de `publications.jurisdiction_level` caso o produto volte a persistir publicações municipais; taxonomia municipal não implica essa migration automaticamente.
 
 ---
 
