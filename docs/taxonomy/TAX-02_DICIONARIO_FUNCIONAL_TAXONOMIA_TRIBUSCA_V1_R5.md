@@ -1489,20 +1489,23 @@ A contagem abaixo é calculada sobre as linhas canônicas desta R5; a decisão �
 
 | Dimensão | Nº conceitos | Fonte dominante | Corpus testado | Decisão proposta |
 |---|---:|---|---|---|
-| tax/tax_species | calculado no teste documental | CF/CTN/leis/LC214 | C01–C04, C15–C21 | REVISE |
-| theme/treatment | calculado no teste documental | leis + TriBusca | C01–C03, C10–C12 | REVISE |
-| regime | calculado no teste documental | LC214 e leis setoriais | C05, C22–C24 | REVISE |
-| operation/facetas | calculado no teste documental | leis/NBS/SISCOMEX + TriBusca | C04, C10–C11, C19/C25 | REVISE |
-| document | calculado no teste documental | ENCAT/CONFAZ/NFS-e | C08–C09, C14, C26/C30 | REVISE |
-| obligation/platform | calculado no teste documental | RFB/SPED/entes | C06–C07, C13/C28 | REVISE |
-| sector/product | calculado no teste documental | CNAE/NCM/NBS + TriBusca | C10–C12, C15–C16, C29–C30 | REVISE |
-| subject | calculado no teste documental | CTN/leis | C05, C10–C11/C21 | REVISE |
-| event/act_type | calculado no teste documental | atos oficiais + TriBusca | C14/C26/C27 | REVISE |
-| impact_* | calculado no teste documental | TriBusca + contexto privado | casos 4/5 | REVISE |
+| tax/tax_species | 48 | CF/CTN/leis/LC214 | C01–C04, C15–C21 | REVISE |
+| theme/treatment | 56 | leis + TriBusca | C01–C03, C10–C12 | REVISE |
+| regime | 19 | LC214 e leis setoriais | C05, C22–C24 | REVISE |
+| operation/facetas | 166 | leis/NBS/SISCOMEX + TriBusca | C04, C10–C11, C19/C25 | REVISE |
+| document | 12 | ENCAT/CONFAZ/NFS-e | C08–C09, C14, C26/C30 | REVISE |
+| obligation/platform | 25 | RFB/SPED/entes | C06–C07, C13/C28 | REVISE |
+| sector/product | 233 | CNAE/NCM/NBS + TriBusca | C10–C12, C15–C16, C29–C30 | REVISE |
+| subject | 26 | CTN/leis | C05, C10–C11/C21 | REVISE |
+| event/act_type | 21 | atos oficiais + TriBusca | C14/C26/C27 | REVISE |
+| impact_* | 19 | TriBusca + contexto privado | casos 4/5 | REVISE |
+| sphere | 4 | IBGE/entes oficiais | corpus multijurisdicional C09–C12/C28 | REVISE |
 
 Nenhuma dimensão recebe `READY` antes da nova revisão independente, porque ainda existem linhas `NEEDS_EVIDENCE`.
 
 ### 24.13 R4 → R5
+
+**Contagem final R5:** **629 códigos canônicos únicos** (R4: 630).
 
 **Adicionados:** `platform.mit` (por retipagem; não aumenta o total líquido).  
 **Removidos:** `document.nfae` como conceito canônico e `obligation.mit`.  
@@ -1519,6 +1522,8 @@ Nenhuma dimensão recebe `READY` antes da nova revisão independente, porque ain
 **UNMAPPED controlados:** triangulação genérica (estrutura de partes, sem código próprio), procedimento PER/DCOMP (até decisão de dimensão), módulos/plataformas adicionais não inventariados, produtos/serviços/segmentos fora do corpus e qualquer NCM/NBS/CNAE não explicitamente provado.
 
 **NEEDS_EVIDENCE:** todas as linhas listadas no §24.4 que não receberam âncora específica R5. Elas não podem ser promovidas como definição juridicamente verificada apenas por similaridade lexical.
+
+**Evidência oficial reforçada na R5:** 28 conceitos críticos tiveram sua base oficial reforçada/revalidada no corpus e manifesto. Isso não significa que os demais conceitos estejam juridicamente aprovados; a R5 continua `proposed`.
 
 **Removidos/reclassificados:** `document.nfae` → propriedade de `document.nfe`; `obligation.mit` → `platform.mit`; `JURISDICTIONAL_LABEL` → rejeitado como classe de alias nesta R5; ITCD usa classe já aprovada + jurisdição.
 
