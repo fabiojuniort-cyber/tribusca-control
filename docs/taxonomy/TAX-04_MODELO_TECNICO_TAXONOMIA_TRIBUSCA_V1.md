@@ -1593,6 +1593,20 @@ Rejeitada: data de criação não é decisão de inclusão.
 
 ---
 
+### 24.6 Matriz comparativa das cinco decisões estruturais
+
+| Decisão | Alternativa A | Alternativa B | Trade-off principal | Recomendação |
+|---|---|---|---|---|
+| Versionamento de conceitos | identidade + revisões imutáveis | snapshot duplicado por release | A exige joins; B duplica identidade/conteúdo e dificulta lineage | **A** |
+| Conceito × release | associação explícita à revisão | inferir revisão por data | A é inequívoca; B depende de temporalidade implícita | **A** |
+| Evidência | JSONB embutido | evidência normalizada + links com FK | JSONB é simples; normalização melhora integridade/reuso/auditoria | **B** |
+| Classificação global | upsert mutável | run + assertions + spans + reviews append-only | A é simples; B preserva reprodutibilidade e replay | **B** |
+| UNMAPPED/candidatos | tabela única de termos | ocorrência imutável + candidato agrupado | A colapsa contexto/homônimos; B permite split e histórico | **B** |
+
+As recomendações acima são dirigidas por identidade, auditabilidade, reprodutibilidade e isolamento semântico — **não** por conveniência de SQL.
+
+---
+
 ## 25. Riscos
 
 | Risco | Consequência | Mitigação |
