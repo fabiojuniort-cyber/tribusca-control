@@ -1,6 +1,6 @@
 # TAX-04 — Modelo técnico e persistência da Taxonomia TriBusca v1
 
-**Estado:** `proposed-for-independent-review`  
+**Estado:** `proposed-for-independent-recheck-r1`  
 **Classe:** R2 — arquitetura/persistência material  
 **Data de referência:** 29/09/2026  
 **Issue:** #26  
@@ -330,14 +330,17 @@ Conforme TAX-01:
 
 Versão de NCM/CNAE/MOC/ato oficial **não** altera automaticamente a versão da taxonomia.
 
-### 6.3 Imutabilidade
+### 6.3 Imutabilidade e lifecycle
 
-Após `PUBLISHED`:
+Após `PUBLISHED`, o **snapshot histórico é imutável**:
 
-- conteúdo lógico da release é read-only;
-- correção cria nova release;
-- retirada usa `WITHDRAWN`, sem DELETE;
-- associação release→revision não pode ser regravada silenciosamente.
+- memberships da release não mudam;
+- revisões selecionadas não mudam;
+- aliases/bindings e relações daquele snapshot não são regravados;
+- hashes, artefato de origem e conteúdo semântico da release permanecem congelados;
+- correção de conteúdo cria nova release.
+
+O lifecycle pode permitir a transição governada `PUBLISHED → WITHDRAWN` **sem editar o snapshot**. A retirada registra, no mínimo, ator, motivo, timestamp e evento de auditoria. `WITHDRAWN` significa “release publicada retirada de uso corrente”, não uma nova edição da release e nunca DELETE histórico.
 
 ### 6.4 Baseline R6
 
@@ -379,6 +382,12 @@ Um conceito referencia `dimension_id` explicitamente.
 - `dimension_id`;
 - `dimension_revision_id`;
 - `membership_status`.
+
+Integridade obrigatória:
+
+- `taxonomy_dimension_revisions` expõe chave candidata `UNIQUE(id, dimension_id)` (ou equivalente);
+- `taxonomy_release_dimensions(dimension_revision_id, dimension_id)` referencia essa chave de forma composta;
+- assim, uma release não pode selecionar revisão pertencente a outra identidade de dimensão.
 
 ### 7.3 Baseline R6 — dimensões e contagens
 
@@ -472,9 +481,13 @@ Snapshot por release:
 
 Não existe boolean genérico `active/classification_enabled` neste nível. A elegibilidade operacional é derivada de release publicada + membership + políticas explícitas do engine, preservando `governance_status` e `evidence_status`.
 
-Unique: `(release_id, concept_id)`.
+Uniques/chaves candidatas:
 
-A implementação deve usar FK composta ou validação equivalente para garantir que `concept_revision_id` pertence ao mesmo `concept_id`.
+- `UNIQUE(release_id, concept_id)`;
+- `UNIQUE(id, release_id)` para permitir referências release-scoped declarativas;
+- `taxonomy_concept_revisions` expõe `UNIQUE(id, concept_id)` (ou equivalente).
+
+A implementação deve usar FK composta `(concept_revision_id, concept_id) → taxonomy_concept_revisions(id, concept_id)` sempre que o SGBD permitir. Trigger/validator equivalente só é aceitável quando FK declarativa não for possível. A intenção é impedir que uma membership selecione revisão de outro conceito.
 
 ### 8.4 Status dos 628 da R6
 
@@ -583,9 +596,19 @@ Não possui `concept_id`.
 - `jurisdiction_level/uf/municipality_code` quando aplicável;
 - `context JSONB`;
 - `valid_from/valid_to`;
+- `temporal_basis` nullable, por exemplo `PUBLISHED_ON`, `EFFECTIVE_ON`, `EXTRACTED_NORM_DATE`;
 - `justification`;
 - `evidence_status`;
 - timestamps.
+
+Integridade same-release obrigatória:
+
+```text
+(release_concept_id, release_id)
+  → taxonomy_release_concepts(id, release_id)
+```
+
+A redundância de `release_id` existe para enforcement declarativo. Alias da release A não pode apontar para membership da release B.
 
 Tipos TAX-01 obrigatórios:
 
@@ -603,7 +626,14 @@ Somente:
 - `ABBREVIATION`;
 - `HISTORICAL_LABEL`;
 
-podem participar de mapeamento automático **e somente** se contexto/jurisdição/período resultarem em um único binding elegível.
+podem participar de mapeamento automático **e somente** se contexto, jurisdição e período resultarem em um único binding elegível.
+
+Para `HISTORICAL_LABEL`, a elegibilidade temporal é obrigatória:
+
+1. o binding deve declarar intervalo temporal suficiente e o `temporal_basis` aplicável;
+2. o classificador deve resolver o fato temporal da publicação conforme essa base — por exemplo `published_on`, `effective_on` ou data normativa explicitamente extraída;
+3. `valid_from/valid_to` ausentes **não** significam “válido para sempre”;
+4. se não houver prova temporal suficiente para decidir que o label histórico era aplicável ao fato classificado, **não auto-mapear**.
 
 `SEARCH_RELATED` e `AMBIGUOUS` nunca produzem conceito automaticamente.
 
@@ -668,6 +698,18 @@ Assim, compatibilidade não fica hard-coded apenas no TypeScript.
 - `justification`;
 - `evidence_status`;
 - timestamps.
+
+Integridade same-release obrigatória, preferencialmente por FK composta:
+
+```text
+(source_release_concept_id, release_id)
+  → taxonomy_release_concepts(id, release_id)
+
+(target_release_concept_id, release_id)
+  → taxonomy_release_concepts(id, release_id)
+```
+
+Source e target só podem existir na release declarada pela própria relação. FKs simples independentes não atendem este invariante.
 
 ### 11.4 Direção e inversas
 
@@ -805,11 +847,20 @@ Unique: `(catalog_edition_id, official_code)`.
 - `id`;
 - `release_concept_id`;
 - `official_catalog_entry_id`;
-- `mapping_type`: `EXACT`, `BROADER`, `NARROWER`, `OVERLAP`;
+- `mapping_type`: `EXACT`, `CONCEPT_BROADER_THAN_ENTRY`, `CONCEPT_NARROWER_THAN_ENTRY`, `OVERLAP`;
 - `valid_from/valid_to`;
 - `justification`;
 - `evidence_status`;
 - timestamps.
+
+A direção é sempre lida como **conceito TriBusca em relação à entrada oficial**:
+
+- `CONCEPT_BROADER_THAN_ENTRY`: o conceito TriBusca cobre conjunto semanticamente mais amplo que aquela entrada;
+- `CONCEPT_NARROWER_THAN_ENTRY`: o conceito TriBusca é mais específico que a entrada;
+- `EXACT`: equivalência declarada para a edição e período;
+- `OVERLAP`: interseção sem relação de inclusão total.
+
+Isso elimina a ambiguidade de `BROADER/NARROWER` sem direção explícita.
 
 ### 13.3 CNAE atual do backend
 
@@ -855,31 +906,57 @@ Campos:
 - `engine_key`;
 - `engine_version`;
 - `model_key/model_version` nullable;
-- `code_git_sha` nullable;
-- `config_sha256`;
+- `code_git_sha` nullable ou identificador/digest imutável equivalente do artefato executável;
+- `config_snapshot JSONB` em representação canônica;
+- `config_sha256`, calculado sobre a representação canônica de `config_snapshot`;
 - `input_sha256`;
+- `run_fingerprint CHAR(64)` ou equivalente lógico;
 - `status`: `PENDING`, `RUNNING`, `SUCCESS`, `PARTIAL`, `FAILED`, `CANCELLED`;
 - `started_at/finished_at`;
-- `supersedes_run_id` nullable;
-- `metadata JSONB`;
+- `supersedes_run_id` nullable, **somente** quando houver supersession do run como unidade operacional, nunca para correção semântica pontual;
+- `lifecycle_metadata JSONB` opcional, sem campos determinantes do fingerprint;
 - `created_at`.
 
-`input_sha256` deve representar o input efetivamente classificado e configuração relevante, não substituir o `content_hash` da publicação.
+`input_sha256` representa o input efetivamente classificado e não substitui o `content_hash` da publicação.
 
-### 14.3 Idempotência do run
+A opção recomendada para configuração reproduzível é **persistir `config_snapshot JSONB` canônico no próprio run**. O hash é prova de integridade do snapshot, não substituto do snapshot. Se uma implementação futura optar por artefato externo, essa mudança exige contrato equivalente com URI/chave imutável, SHA-256 e garantia de retenção; não é a baseline recomendada pela TAX-04.
 
-Chave lógica recomendada:
+### 14.3 Fingerprint, idempotência e imutabilidade do run
+
+O fingerprint canônico inclui, em ordem e codificação determinísticas:
 
 ```text
 publication_version_id
 + taxonomy_release_id
++ method_type
 + engine_key
 + engine_version
++ canonical_nullable(model_key)
++ canonical_nullable(model_version)
++ canonical_nullable(code_git_sha_or_executable_digest)
 + config_sha256
 + input_sha256
 ```
 
-Repetir exatamente o mesmo trabalho deve retornar/reconhecer o mesmo run, não duplicar resultado.
+Valores nullable participam com marcador canônico explícito, nunca por simples omissão. Assim, por exemplo, `MODEL` sem modelo identificado é diferente de outro método e deve falhar validação quando o contrato daquele método exigir modelo.
+
+Regras:
+
+1. mesmo trabalho material → mesmo `run_fingerprint`;
+2. qualquer mudança material em método, engine, modelo, código/artefato, configuração, input, publication version ou taxonomy release → fingerprint diferente;
+3. `run_fingerprint` é unique/idempotency key da execução material;
+4. campos determinantes do fingerprint ficam imutáveis após INSERT;
+5. reexecução do mesmo fingerprint reconhece o run existente em vez de duplicá-lo.
+
+O Worker pode atualizar somente lifecycle explícito, por exemplo:
+
+- `status`;
+- `started_at`;
+- `finished_at`;
+- código/mensagem/diagnóstico de erro;
+- `lifecycle_metadata` que não altere a identidade material.
+
+A implementação deve garantir isso por privilégios de coluna, procedure dedicada, trigger de imutabilidade ou combinação equivalente. Um GRANT genérico de UPDATE na linha inteira **não** satisfaz o contrato.
 
 ### 14.4 `publication_taxonomy_assertions`
 
@@ -887,14 +964,42 @@ Uma linha agregada por conceito identificado no run:
 
 - `id`;
 - `run_id`;
+- `taxonomy_release_id` — redundância controlada exclusivamente para enforcement;
 - `release_concept_id`;
+- `supersedes_assertion_id` nullable;
 - `assertion_status`: `PROPOSED`, `CONFIRMED`, `REJECTED`, `SUPERSEDED`;
 - `confidence` nullable, 0..1;
 - `decision_origin`;
 - `reason_code`;
 - `created_at`.
 
-Unique recomendado: `(run_id, release_concept_id)`.
+Uniques/chaves candidatas necessárias:
+
+- `publication_taxonomy_runs UNIQUE(id, taxonomy_release_id)`;
+- `taxonomy_release_concepts UNIQUE(id, release_id)`;
+- unique lógico `(run_id, release_concept_id)` para uma assertion agregada por conceito no mesmo run.
+
+FKs compostas obrigatórias:
+
+```text
+(run_id, taxonomy_release_id)
+  → publication_taxonomy_runs(id, taxonomy_release_id)
+
+(release_concept_id, taxonomy_release_id)
+  → taxonomy_release_concepts(id, release_id)
+```
+
+Assim uma assertion de run na release A não pode apontar para membership da release B.
+
+`supersedes_assertion_id` implementa correção semântica pontual. A assertion sucessora e a substituída devem resolver para a mesma `publication_version_id` e a mesma `taxonomy_release_id`; essa regra exige FK/trigger/validator trans-tabela, porque a publication version é derivada do run.
+
+Regras da linhagem de assertions:
+
+1. self-loop proibido;
+2. ciclo proibido;
+3. a assertion substituída permanece histórica e sua evidência não é apagada;
+4. uma assertion não pode ter múltiplas sucessoras ativas incompatíveis sem decisão explícita de resolução;
+5. o run da sucessora registra o método/ator que produziu a correção.
 
 ### 14.5 Evidência textual
 
@@ -921,7 +1026,14 @@ Um conceito pode ter vários spans no mesmo texto.
 - `rationale`;
 - `created_at`.
 
-Se o humano quiser trocar o conceito por outro, não editar a assertion original: criar novo run `HUMAN`/nova assertion e relacionar via `supersedes_run_id`.
+Semântica:
+
+- `CONFIRM` confirma a assertion existente;
+- `REJECT` rejeita a assertion existente sem apagá-la;
+- **substituição de conceito não é apenas review textual**: cria novo run governado (`HUMAN`, `HYBRID` ou outro método permitido), nova assertion e `supersedes_assertion_id` apontando para a assertion substituída;
+- rationale e ator humano permanecem registrados.
+
+`supersedes_run_id` não representa correção pontual de conceito. Ele permanece reservado para supersession real do run como unidade operacional.
 
 ### 14.7 Alternativa descartada
 
@@ -953,19 +1065,43 @@ Correção só entra por nova release.
 
 Não reescrever resultados vinculados à release antiga.
 
-### 15.4 Método alterado
+### 15.4 Método alterado e replay
 
-Novo `engine_version`, `config_sha256` ou modelo → novo run.
+Qualquer alteração material de método produz novo fingerprint/run, incluindo `method_type`, `engine_version`, modelo, artefato executável/`code_git_sha`, configuração ou input.
 
-### 15.5 “Atual” é derivado
+Replay reproduzível exige recuperar exatamente:
 
-A visão de “classificação atual” deve ser uma query/view baseada em política:
+- a mesma `publication_version`;
+- a mesma `taxonomy_release`;
+- o mesmo método/engine/version;
+- o mesmo modelo quando aplicável;
+- o mesmo artefato executável ou Git SHA/digest imutável;
+- o mesmo `config_snapshot` cujo hash confere com `config_sha256`;
+- o mesmo input efetivo cujo hash confere com `input_sha256`.
 
-- versão atual da publicação;
-- release publicada selecionada;
-- run elegível mais recente/aceito.
+### 15.5 “Atual” é derivado por assertions
 
-Não persistir essa visão sobrescrevendo história.
+Não usar uma regra simplista de “run elegível mais recente” como substituto do conjunto semântico atual.
+
+A visão efetiva deve:
+
+1. selecionar os runs elegíveis para a mesma `publication_version`, `taxonomy_release` e política operacional;
+2. coletar suas assertions elegíveis;
+3. excluir assertions rejeitadas;
+4. resolver a linhagem `supersedes_assertion_id` e eliminar membros substituídos;
+5. manter a assertion terminal válida de cada linhagem;
+6. manter assertions independentes que não foram substituídas.
+
+Exemplo obrigatório:
+
+```text
+R1 AUTO  = A + B + C
+R2 HUMAN = D, com D supersedes B
+
+effective current = A + D + C
+```
+
+A e C não são copiadas para R2. Nenhum UPDATE destrutivo é necessário. Se houver supersession integral de run por outro motivo operacional, `supersedes_run_id` pode registrar essa linhagem, mas isso não substitui a linhagem semântica por assertion.
 
 ---
 
@@ -1015,8 +1151,7 @@ Candidato semântico:
 - `decision_actor_id` nullable;
 - `decision_at` nullable;
 - `decision_reason`;
-- `resolved_concept_id` nullable;
-- `resolved_release_id` nullable;
+- `resolved_release_concept_id` nullable;
 - `parent_candidate_id` nullable para split;
 - timestamps.
 
@@ -1054,6 +1189,8 @@ Estados terminais:
 - `REJECTED`;
 
 exigem ator humano/curador e justificativa.
+
+Quando houver resolução para conceito existente, `resolved_release_concept_id` aponta diretamente para a membership válida da release. `concept_id` e `release_id` são deriváveis dessa FK e não devem formar duas fontes independentes de verdade.
 
 IA pode sugerir, agrupar e priorizar; não pode preencher diretamente um estado terminal.
 
@@ -1126,7 +1263,7 @@ Implementação posterior deve escolher entre:
 - role PostgreSQL dedicada `radar_taxonomy_curator`; ou
 - serviço administrativo usando credencial/admin controlada.
 
-Essa decisão não é executada na TAX-04.
+Independentemente do nome escolhido, a futura implementação **deve** criar grant/policy dedicado para curadoria global. Não é permitido usar OWNER/ADMIN de tenant, `radar_app` ou permissões tenant-facing como atalho para governar a taxonomia global. Essa exigência é arquitetural; o nome da role/serviço continua pendente para a migration própria. FORCE RLS das tabelas privadas não deve ser relaxado.
 
 ### 17.4 D-057 / conteúdo privado por CNPJ
 
@@ -1157,7 +1294,7 @@ Exemplos futuros:
 - `action = TAXONOMY_RELEASE_PUBLISHED`;
 - `action = TAXONOMY_CANDIDATE_DECIDED`.
 
-Como o RLS atual do `radar_app` não expõe linhas globais `tenant_id IS NULL`, a UI de curadoria global precisará de autorização/caminho próprio; isso é preferível a abrir o audit global para usuários tenant.
+Como o RLS atual do `radar_app` não expõe linhas globais `tenant_id IS NULL`, e o caminho atual do Worker só cobre atores `WORKER/SYSTEM`, a curadoria humana global precisa de policy/grant próprio para registrar e consultar eventos globais autorizados, inclusive ator administrativo/curador. Essa policy não deve ampliar o acesso de usuários tenant nem relaxar FORCE RLS de dados privados.
 
 ---
 
@@ -1323,10 +1460,10 @@ Release já publicada não é “desimportada”; é retirada/substituída por n
 
 ### 20.2 Release
 
-6. Semver única.
-7. PUBLISHED exige `approved_at`, `published_at`, Git SHA e SHA-256.
-8. PUBLISHED é imutável.
-9. `previous_release_id` não pode formar ciclo.
+6. Semver única — **UNIQUE**.
+7. PUBLISHED exige `approved_at`, `published_at`, Git SHA e SHA-256 — **CHECK/trigger de transição**.
+8. Snapshot PUBLISHED é imutável; somente lifecycle governado `PUBLISHED → WITHDRAWN` pode mudar status/metadados de retirada — **trigger/procedure de imutabilidade**.
+9. `previous_release_id` não pode formar ciclo — **validator/trigger de grafo**.
 
 ### 20.3 Dimensão
 
@@ -1339,45 +1476,50 @@ Release já publicada não é “desimportada”; é retirada/substituída por n
 
 ### 20.4 Aliases
 
-15. `AMBIGUOUS` e `SEARCH_RELATED` não são auto-mapeáveis.
-16. Vários bindings para o mesmo alias são permitidos.
-17. Binding aprovado exige contexto/evidência conforme regra da release.
+15. `AMBIGUOUS` e `SEARCH_RELATED` não são auto-mapeáveis — **política do engine + testes**.
+16. Vários bindings para o mesmo alias são permitidos — ausência deliberada de unique `normalized_text → concept`.
+17. Binding aponta para membership da própria release — **FK composta `(release_concept_id, release_id)`**.
+18. `HISTORICAL_LABEL` sem prova temporal suficiente não auto-mapeia — **política do engine/validator**.
 
 ### 20.5 Relações
 
-18. Source e target pertencem à mesma release.
-19. Self-loop proibido para relação hierárquica/substituição.
-20. Ciclo proibido para tipos marcados `acyclic`.
-21. Relação inválida entre dimensões é rejeitada.
-22. Nenhuma relação dispara propagação automaticamente.
+19. Source e target pertencem à mesma release — **duas FKs compostas contra `taxonomy_release_concepts(id, release_id)`**.
+20. Self-loop proibido para relação hierárquica/substituição — **CHECK quando derivável + validator/trigger por tipo**.
+21. Ciclo proibido para tipos marcados `acyclic` — **validator de grafo pré-release e/ou trigger para tipos definidos**.
+22. Relação inválida entre dimensões é rejeitada — **FK/regra release-scoped + validator contra `taxonomy_release_relation_rules`**.
+23. Nenhuma relação dispara propagação automaticamente — **política de aplicação/engine**.
 
 ### 20.6 Evidência
 
-23. `NEEDS_EVIDENCE` não desaparece por falta de join.
-24. Evidência oficial preserva mantenedor/URL/edição/data/localizador quando disponível.
-25. Evidência híbrida diferencia fonte oficial de interpretação TriBusca.
+24. `NEEDS_EVIDENCE` não desaparece por falta de join — **estado explícito na revisão/binding/relação + validação do importador**.
+25. Evidência oficial preserva mantenedor/URL/edição/data/localizador quando disponível — **schema + validator**.
+26. Evidência híbrida diferencia fonte oficial de interpretação TriBusca — **basis_type + campos/links próprios**.
 
 ### 20.7 Catálogos
 
-26. Código oficial é único apenas dentro de uma edição.
-27. Mapping sempre registra edição.
-28. Código oficial nunca substitui `taxonomy_concepts.code`.
+27. Código oficial é único apenas dentro de uma edição — **UNIQUE(catalog_edition_id, official_code)**.
+28. Mapping sempre registra edição por FK à entrada edition-scoped — **FK**.
+29. Código oficial nunca substitui `taxonomy_concepts.code` — **separação de schema/FK**.
+30. Direção do mapping é “conceito TriBusca em relação à entrada oficial” — **enum inequívoco**.
 
 ### 20.8 Classificação
 
-29. Run sempre referencia `publication_version_id`.
-30. Run sempre referencia `taxonomy_release_id`.
-31. Assertion referencia conceito daquela mesma release.
-32. Reclassificação não UPDATE o run anterior.
-33. Review humano é append-only.
-34. “Atual” é derivado, não destrói história.
+31. Run sempre referencia `publication_version_id` — **FK NOT NULL**.
+32. Run sempre referencia `taxonomy_release_id` — **FK NOT NULL**.
+33. Determinantes do run são imutáveis e `run_fingerprint` é único — **UNIQUE + trigger/procedure/privilégios de coluna**.
+34. Assertion pertence à mesma release do run e do release_concept — **duas FKs compostas com `taxonomy_release_id` redundante controlado**.
+35. Supersession de assertion preserva publication version/release, proíbe self-loop/ciclo e conflito de sucessoras ativas — **FK + trigger/validator de linhagem**.
+36. Reclassificação não UPDATE o run/assertion anterior — **append-only + imutabilidade dos campos históricos**.
+37. Review humano é append-only — **sem UPDATE/DELETE pelo papel de aplicação + política**.
+38. “Atual” é derivado por assertions/linhagens, não destrói história — **view/query de aplicação testada**.
 
 ### 20.9 Global × tenant
 
-35. Nenhuma tabela canônica/global recebe `tenant_id`.
-36. Nenhum dado de empresa/CNPJ/SAP/benefício privado entra em conceito/evidência/classificação global.
-37. Tabelas privadas existentes mantêm RLS.
-38. Conteúdo privado por CNPJ não pode vazar para pipeline global.
+39. Nenhuma tabela canônica/global recebe `tenant_id` — **schema/DDL**.
+40. Nenhum dado de empresa/CNPJ/SAP/benefício privado entra em conceito/evidência/classificação global — **contrato de ingestão + validator**.
+41. Tabelas privadas existentes mantêm RLS/FORCE RLS — **migration tests de privilégios/RLS**.
+42. Conteúdo privado por CNPJ não pode vazar para pipeline global — **gate de elegibilidade de publication_version**.
+43. Curadoria global usa policy/grant dedicado e nunca role de tenant como atalho — **grants/policies testados**.
 
 ---
 
@@ -1419,9 +1561,12 @@ Sem escrever SQL, a implementação futura deverá avaliar:
 
 ### Classificação
 
-- idempotency signature do run;
+- unique `publication_taxonomy_runs(run_fingerprint)`;
 - `publication_taxonomy_runs(publication_version_id, taxonomy_release_id)`;
+- chave candidata `publication_taxonomy_runs(id, taxonomy_release_id)`;
 - `publication_taxonomy_assertions(run_id, release_concept_id)`;
+- índice/FK para `publication_taxonomy_assertions(release_concept_id, taxonomy_release_id)`;
+- índice em `supersedes_assertion_id`;
 - spans por assertion;
 - reviews por assertion + created_at.
 
@@ -1634,7 +1779,7 @@ As recomendações acima são dirigidas por identidade, auditabilidade, reprodut
 
 Estas pendências **não bloqueiam o desenho TAX-04**, mas precisam ser resolvidas antes/depois da migration correspondente:
 
-1. nome final da role de curadoria global (`radar_taxonomy_curator` ou serviço admin);
+1. nome final da role de curadoria global (`radar_taxonomy_curator` ou serviço admin); **o grant/policy dedicado já é requisito obrigatório**, ficando pendente somente a forma/nome;
 2. política operacional do classificador para tratar combinações de `membership_status`, `governance_status` e `evidence_status` sem introduzir um boolean genérico `active/classification_enabled`;
 3. forma de armazenar ator humano global sem acoplar autorização de curadoria aos roles tenant;
 4. estratégia de transição do `cnaes` atual para catálogo oficial versionado;
@@ -1696,6 +1841,27 @@ Nenhuma dessas fases é autorizada automaticamente pela aprovação da TAX-04.
 
 ---
 
+## 27.1 Validação incremental TAX-04-R1
+
+Os dez cenários exigidos pelo review independente foram reexecutados documentalmente após a correção:
+
+| Caso | Teste | Resultado esperado/obtido |
+|---|---|---|
+| 1. Fingerprint por modelo | mesmos publication/release/engine/config/input; `model_version=v1` versus `v2` | **PASS:** modelo participa do fingerprint; hashes diferentes |
+| 2. Fingerprint por código | mesmo engine/model/config/input; `code_git_sha=A` versus `B` | **PASS:** artefato executável participa; hashes diferentes |
+| 3. Config reconstruível | partir de `config_sha256` e reproduzir configuração | **PASS:** `config_snapshot JSONB` canônico fica persistido no run; SHA valida o snapshot |
+| 4. Alias cross-release | binding release A → release_concept da B | **REJEITADO:** FK composta `(release_concept_id, release_id)` |
+| 5. Relation cross-release | source A / target B com releases distintas | **REJEITADO:** ambas as pontas usam FK composta com `release_id` |
+| 6. Assertion cross-release | run release A → release_concept B | **REJEITADO:** `taxonomy_release_id` redundante + duas FKs compostas |
+| 7. Candidate resolution | candidato resolvido para conceito fora da release | **REJEITADO:** resolução aponta diretamente para `resolved_release_concept_id` |
+| 8. Human correction | R1 AUTO = A+B+C; R2 HUMAN = D supersedes B | **PASS:** effective current = A+D+C; A/C não são copiados |
+| 9. Historical label | falta evidência temporal suficiente | **NÃO AUTO-MAPEAR:** ausência de intervalo/fato temporal não significa validade universal |
+| 10. Withdraw | release PUBLISHED → WITHDRAWN | **PASS:** lifecycle muda, mas snapshot/memberships/revisions/aliases/relações/hashes permanecem imutáveis e a retirada é auditada |
+
+Esses testes são de contrato documental; migrations/testes reais permanecem atividade posterior e exigirão nova revisão.
+
+---
+
 ## 28. Critérios de aceite da futura implementação
 
 Uma futura implementação somente poderá declarar conformidade se provar:
@@ -1709,7 +1875,10 @@ Uma futura implementação somente poderá declarar conformidade se provar:
 - alias AMBIGUOUS sem auto-map;
 - grafo sem ciclos proibidos;
 - catálogos edition-scoped;
-- classificação com publication_version + taxonomy_release;
+- classificação com publication_version + taxonomy_release + fingerprint material completo;
+- config snapshot reconstruível e íntegro;
+- same-release comprovado por FKs compostas/triggers equivalentes;
+- correção humana parcial por `supersedes_assertion_id`;
 - reclassificação sem sobrescrita;
 - global sem tenant_id;
 - privado com RLS existente preservado;
@@ -1734,6 +1903,6 @@ identidade permanente
 
 O desenho preserva a arquitetura existente de coleta global e matching privado, não transforma dados de cliente em conhecimento global e permite reclassificação sem apagar a história.
 
-**Gate deste artefato:** `TAX-04 PRONTA PARA REVISÃO INDEPENDENTE`.
+**Gate deste artefato:** `TAX-04-R1 PRONTA PARA RECHECK INDEPENDENTE`.
 
-Aprovação deste documento não autoriza migration, carga, classificador, API, matching, backend/frontend ou deploy.
+A correção R1 trata exclusivamente os bloqueios B1–B3 e consequências diretas M1–M4 do review independente, preservando as decisões arquiteturais já aprovadas. Aprovação deste documento não autoriza migration, carga, classificador, API, matching, backend/frontend, TAX-05 ou deploy.
