@@ -25,3 +25,7 @@ Decide mudanças estratégicas, despesas, credenciais/permissões indisponíveis
 
 ## GitHub
 Assignee é conta, não identidade de agente. Papéis e sessão são registrados apenas quando isso for necessário ao risco/auditoria.
+
+## Regra comum a todos os papéis — Railway AI Agent
+
+Gerente, executor, revisor e qualquer sessão especializada estão sujeitos à D-065: **é proibido usar o Railway AI Agent**. A autonomia de um papel para operar Railway não autoriza o Agent. Prompts e delegações devem usar apenas canais Railway não-AI permitidos; quando a prova não estiver disponível, registrar `NOT_PROVEN`.
