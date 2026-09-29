@@ -112,6 +112,21 @@ A TAX-04 **não duplica** essas entidades.
 
 A TAX-04 não relaxa nenhuma dessas proteções.
 
+
+### 2.4 Evidência técnica da leitura do backend
+
+Arquivos consultados na `main@eff26cb9...`:
+
+- `src/infrastructure/database/database.types.ts` — snapshot introspectado do schema atual;
+- `migrations/004_publications.sql` — publicações, versões, origens, arquivos e vínculo com runs;
+- `migrations/005_monitoring_and_matching.sql` — monitoring profiles, company publications e publication matches;
+- `migrations/006_audit.sql` — `audit_log` com `tenant_id` nullable;
+- `migrations/009_rls_policies.sql` — grants, roles e RLS tenant;
+- `migrations/012_collection_checkpoints.sql` e `013_db_capacity_snapshots.sql` — confirmação de evolução aditiva do schema;
+- verificadores atuais de `radar_app_runtime` e `radar_worker_runtime`.
+
+A TAX-04 usa esses arquivos como evidência arquitetural somente leitura; migrations continuam fonte de verdade do schema backend.
+
 ---
 
 ## 3. Princípios arquiteturais
@@ -1058,6 +1073,8 @@ O importador/validator deve rejeitar:
 
 ### 17.1 Matriz de escopo e permissão
 
+A tabela abaixo é o **contrato de privilégios recomendado para a futura implementação** das entidades novas. Ela não afirma que grants inexistentes já estão aplicados. Tabelas atuais mantêm os privilégios/RLS observados na main; qualquer novo GRANT exigirá migration/revisão própria.
+
 Legenda:
 
 - **R:** leitura;
@@ -1348,8 +1365,8 @@ Release já publicada não é “desimportada”; é retirada/substituída por n
 
 ### 20.8 Classificação
 
-30. Run sempre referencia `publication_version_id`.
-29. Run sempre referencia `taxonomy_release_id`.
+29. Run sempre referencia `publication_version_id`.
+30. Run sempre referencia `taxonomy_release_id`.
 31. Assertion referencia conceito daquela mesma release.
 32. Reclassificação não UPDATE o run anterior.
 33. Review humano é append-only.
