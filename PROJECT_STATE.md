@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 28/09/2026 (America/Sao_Paulo).
+Atualizado em 29/09/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -38,8 +38,8 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 ## Demais frentes
 
 - Motor, autenticação/RLS, infraestrutura e fontes federais: entregas reportadas anteriormente; esta atualização não fez revalidação produtiva completa.
-- DOU/INLABS: operacional, com gate final ainda a confirmar.
-- CONFAZ: DOU como fonte primária dos atos formalmente publicados; portal direto indisponível no Railway segundo diagnósticos anteriores.
+- DOU/INLABS: operacional. Em 29/09/2026, um run preso em retry persistente (`INLABS_INVALID_DOWNLOAD`) foi destravado pelo backend `985a812` (PR #80), com cerca de 10,5 mil publicações persistidas; pacote inválido agora isolado sem receipt. Gate final ainda a confirmar.
+- CONFAZ: **operacional e validado em produção via DOU (PRIMARY, D-006)** — 29/09/2026, Issue #29, backend `985a812`: 26 atos CONFAZ via DOU; Convênio ICMS 113/2026 conferido contra a página certificada do DOU. Portal `www.confaz.fazenda.gov.br` segue bloqueado na rede para o egress Railway (descarte TCP no segmento 189.9.128–129.x), agora com falha rápida classificada (`CONFAZ_HOST_UNREACHABLE`, ~10 s). Enriquecimento pelo portal via egress brasileiro é opcional futuro (R3), condicionado a probe real.
 - Outros 26 DOEs: pendentes; **nenhum novo DOE começa antes do fechamento formal de SP**. Depois do fechamento, a D-055 permite paralelismo com taxonomia, Perfil Tributário e autenticação/comercial.
 - O roadmap foi refinado pela D-055: após o fechamento formal do DOE-SP, demais DOEs, taxonomia, Perfil Tributário e autenticação/comercial podem avançar em paralelo. Sonar/Revela/Decodifica e integrações autenticadas continuam dependentes das respectivas bases/Issues. A camada pública segue autorizada em paralelo.
 
