@@ -58,3 +58,7 @@ Verificar somente premissas relevantes. Markdown não exige Railway; revisão re
 - CI, revisão, deployment e dados produtivos conforme o gate específico.
 
 Nenhuma regra de governança reduz os critérios técnicos de fechamento DOE.
+
+## Regra de gate — Railway AI Agent
+
+O **Railway AI Agent não é fonte válida de evidência nova** para gates, reviews, rechecks ou validação produtiva. Evidência Railway deve ser obtida por meios não-AI permitidos pela D-065. Se o estado necessário não puder ser comprovado, usar `NOT_PROVEN`; não usar o Agent para completar o gate.
