@@ -1547,3 +1547,27 @@ Nenhuma dimensão recebe `READY` antes do novo recheck independente, porque aind
 
 Isso significa apenas que a R6 corrige B1–B4 e consequências diretas e está pronta para **recheck independente do SHA exato**. Não significa aprovação da R6, não libera `TAX-04` e não autoriza migration, banco, classificador, embeddings, IA, matching, backend, frontend, conector, deploy ou merge.
 
+### 24.17 Validação automatizada R6
+
+As verificações abaixo foram executadas programaticamente sobre o conteúdo do head candidato, sem alterar TAX-01, R3, R4, roteiro TAX-03 ou R5.
+
+| Verificação | Regra executada | Resultado |
+|---|---|---|
+| Códigos canônicos | linhas de tabela entre §§4–13 com padrão `dimensao.codigo` | **628 linhas / 628 códigos únicos** |
+| Duplicidade | cardinalidade do conjunto de códigos × total | **0 duplicidades** |
+| `NEEDS_EVIDENCE` | contagem nas linhas canônicas | **55**, sem alteração versus R5 |
+| Marcador genérico | `lei específica` ou `ato oficial` na âncora canônica | **0** |
+| Evidência órfã ativa | átomos da coluna Âncora confrontados com chaves declaradas no manifesto | **0** |
+| Chaves R6 novas | `RFB-MIT-R6`, `RICMS-MT-ST-R6`, `GO-NFE-R6`, `SPED-EFD-324-R6`, `NF3E-MOC-R6` | **5/5 definidas e usadas** |
+| Chaves rejeitadas B2 | uso canônico de `RICMS-MT-R5` ou `UF-R5` | **0** |
+| MIT | busca por `platform.mit`, `obligation.mit` e `bookkeeping.mit` canônicos | **0/0/0**; MIT = `UNMAPPED_DIMENSION` |
+| Corpus | linhas Cnn | **31 casos (C01–C31)** |
+| Gaps | linhas G01–G25 + estado final | **25/25: 24 PARTIAL + 1 OPEN + 0 RESOLVED** |
+| Matriz dimensional | soma das contagens finais | **628** |
+| Métrica B4 | busca da alegação ativa “28 conceitos críticos” | **removida** |
+| Delta canônico R5→R6 | mapa `código → linha` contra SHA R5 `c66ed457...` | removido apenas `platform.mit`; alteradas somente as âncoras de `theme.tax_substitution`, `document.rural_producer_invoice` e `subject.tax_substitute` |
+
+**Definições de evidência sem uso.** O detector também foi executado sobre o catálogo herdado de fontes. Existem chaves históricas R5 que não são citadas por seu identificador literal no corpo R6 porque o arquivo preserva a matriz ampla de fontes e alguns registros usam chaves legadas mais curtas. Isso não é referência órfã. Para o delta R6, o critério é estrito: **nenhuma das cinco novas definições R6 está sem uso** e **nenhuma referência R6 usada em linha canônica está sem definição**.
+
+**Comandos lógicos reproduzíveis:** (1) extrair linhas canônicas por regex; (2) comparar cardinalidade total/única; (3) extrair a coluna Âncora e normalizar sufixos `·O/·T/·H`; (4) confrontar átomos de evidência com as chaves do manifesto; (5) comparar mapas de códigos entre R5 e R6; (6) contar C01–C31 e G01–G25; (7) somar a matriz final. O revisor independente deve repetir esses controles no SHA exato.
+
