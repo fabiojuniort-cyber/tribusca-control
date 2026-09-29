@@ -1206,7 +1206,7 @@ A R4 preserva a R3 como documento de entrada e mantém **todas as linhas em `pro
 
 ### 24.1 Estado, método e limites
 
-A R5 trata os bloqueios da TAX-03 sem alterar os quatro arquivos congelados do PR #19. Todos os conceitos continuam \`proposed\`. \`UNMAPPED\`, \`AMBIGUOUS\`, \`NEEDS_EVIDENCE\` e abstenção continuam resultados válidos. Frase sintética serve para fronteira semântica; **não** substitui prova jurídica. Universo de produto, operação, tema e segmento continua \`open universe\`.
+A R5 trata os bloqueios da TAX-03 sem alterar os quatro arquivos congelados do PR #19. Todos os conceitos continuam `proposed`. `UNMAPPED`, `AMBIGUOUS`, `NEEDS_EVIDENCE` e abstenção continuam resultados válidos. Frase sintética serve para fronteira semântica; **não** substitui prova jurídica. Universo de produto, operação, tema e segmento continua `open universe`.
 
 Separação obrigatória preservada: conceito ≠ menção; conceito ≠ classificação; classificação ≠ cobertura; taxonomia global ≠ relevância privada; segmento ≠ CNAE; produto ≠ NCM; documento fiscal ≠ obrigação; tributo ≠ tratamento/tema; evento normativo ≠ tipo de ato; cobertura conceitual ≠ cobertura dos conectores. Nenhuma relação propaga classificação automaticamente.
 
@@ -1214,11 +1214,11 @@ Separação obrigatória preservada: conceito ≠ menção; conceito ≠ classif
 
 | Tema | Decisão R5 | Evidência/limite |
 |---|---|---|
-| MIT | **RETYPE:** \`obligation.mit\` → \`platform.mit\`. | Receita Federal descreve MIT como módulo/serviço integrado à DCTFWeb. A R5 não cria dimensão \`module\` por um único caso; a família \`platform\`, já proposta na R4, acomoda o componente sem transformá-lo em obrigação. |
-| NFA-e | **REMOVE como conceito canônico:** \`document.nfae\` → propriedade de emissão de \`document.nfe\`. | MOC NF-e 7.0: NFA-e é NF-e **modelo 55** emitida em sistema do Fisco; \`serie\` e \`procEmi\` distinguem o processo. |
+| MIT | **RETYPE:** `obligation.mit` → `platform.mit`. | Receita Federal descreve MIT como módulo/serviço integrado à DCTFWeb. A R5 não cria dimensão `module` por um único caso; a família `platform`, já proposta na R4, acomoda o componente sem transformá-lo em obrigação. |
+| NFA-e | **REMOVE como conceito canônico:** `document.nfae` → propriedade de emissão de `document.nfe`. | MOC NF-e 7.0: NFA-e é NF-e **modelo 55** emitida em sistema do Fisco; `serie` e `procEmi` distinguem o processo. |
 | Nota Fiscal de Produtor | **KEEP restrito ao modelo 04.** | MOC NF-e 7.0 e normas estaduais demonstram substituição por NF-e 55 conforme UF/período. NFP-e/NF-e 55 não é sinônimo do modelo 04. |
-| Alias ITCD | **Não criar \`JURISDICTIONAL_LABEL\`.** | Usar \`ABBREVIATION\` + jurisdição/edição no vínculo. A TAX-01 não aprovou sexta classe de alias. |
-| 66 âncoras genéricas R4 | **REVIEWED.** | Toda ocorrência canônica de \`lei específica\`/\`ato oficial\` foi retirada: 11 ganharam âncora oficial específica R5; as demais ficam explicitamente \`NEEDS_EVIDENCE\`. |
+| Alias ITCD | **Não criar `JURISDICTIONAL_LABEL`.** | Usar `ABBREVIATION` + jurisdição/edição no vínculo. A TAX-01 não aprovou sexta classe de alias. |
+| 66 âncoras genéricas R4 | **REVIEWED.** | Toda ocorrência canônica de `lei específica`/`ato oficial` foi retirada: 11 ganharam âncora oficial específica R5; as demais ficam explicitamente `NEEDS_EVIDENCE`. |
 
 ### 24.3 Manifesto de fontes e edições R5
 
@@ -1342,53 +1342,53 @@ Separação obrigatória preservada: conceito ≠ menção; conceito ≠ classif
 | `act_type.ordinance` | ato oficial | `NEEDS_EVIDENCE` — marcador genérico removido; nenhuma fonte foi inventada |
 | `act_type.resolution` | ato oficial | `NEEDS_EVIDENCE` — marcador genérico removido; nenhuma fonte foi inventada |
 
-**Regra R5:** \`NEEDS_EVIDENCE\` não é falha escondida; é bloqueio explícito de promoção daquela definição como juridicamente verificada. A TAX-03 pode aprovar, retipar ou remover depois de conferir fonte específica.
+**Regra R5:** `NEEDS_EVIDENCE` não é falha escondida; é bloqueio explícito de promoção daquela definição como juridicamente verificada. A TAX-03 pode aprovar, retipar ou remover depois de conferir fonte específica.
 
 ### 24.5 G01 — inventário tributário e estado temporal
 
-A R5 mantém o inventário ampliado da R4, mas substitui a pretensão de completude por uma matriz temporal mínima. Cada \`tax.*\` deve poder registrar, sem alterar a identidade do conceito: \`constitutional_status\` (quando aplicável), \`institution_status\` = previsto/instituído, \`temporal_status\` = vigente/extinto/transição e \`applicability\` = condicionado ao dispositivo/ente/período. Esses valores são fatos da norma/edição, não novos tributos.
+A R5 mantém o inventário ampliado da R4, mas substitui a pretensão de completude por uma matriz temporal mínima. Cada `tax.*` deve poder registrar, sem alterar a identidade do conceito: `constitutional_status` (quando aplicável), `institution_status` = previsto/instituído, `temporal_status` = vigente/extinto/transição e `applicability` = condicionado ao dispositivo/ente/período. Esses valores são fatos da norma/edição, não novos tributos.
 
-Fontes R5 foram rechecadas para CIDE-Combustíveis, CIDE-Remessas, AFRMM, CONDECINE, FUST, FUNTTEL, CPRB, contribuições previdenciárias e produtor rural. \`tax.state_primary_products_contribution\` permanece **NEEDS_EVIDENCE por UF**: o fundamento constitucional não prova que um Estado específico a instituiu nem que um cliente está sujeito. Tributos históricos continuam temporalmente qualificados; a R5 não converte CPMF em tributo corrente.
+Fontes R5 foram rechecadas para CIDE-Combustíveis, CIDE-Remessas, AFRMM, CONDECINE, FUST, FUNTTEL, CPRB, contribuições previdenciárias e produtor rural. `tax.state_primary_products_contribution` permanece **NEEDS_EVIDENCE por UF**: o fundamento constitucional não prova que um Estado específico a instituiu nem que um cliente está sujeito. Tributos históricos continuam temporalmente qualificados; a R5 não converte CPMF em tributo corrente.
 
 ### 24.6 Reforma tributária — G02/G17/G18
 
-- \`tax.ibs\`, \`tax.cbs\` e \`tax.is\` são conceitos de tributo.
-- \`theme.split_payment\` é mecanismo de extinção/recolhimento ligado ao IBS/CBS, com base nos arts. 27 e 31–35 da LC 214 compilada; **não é tributo**.
-- \`theme.personalized_refund\` representa a devolução personalizada/cashback dos arts. 112–124; **não é tributo** e exige o contexto IBS/CBS para desambiguar “cashback”.
+- `tax.ibs`, `tax.cbs` e `tax.is` são conceitos de tributo.
+- `theme.split_payment` é mecanismo de extinção/recolhimento ligado ao IBS/CBS, com base nos arts. 27 e 31–35 da LC 214 compilada; **não é tributo**.
+- `theme.personalized_refund` representa a devolução personalizada/cashback dos arts. 112–124; **não é tributo** e exige o contexto IBS/CBS para desambiguar “cashback”.
 - Cesta Básica Nacional, redução de alíquota, alíquota zero, regimes diferenciados e regimes específicos são tratamento/regime/tema conforme o enunciado concreto; não são convertidos em benefício automaticamente.
 - Créditos de IBS/CBS permanecem separados de crédito tributário do CTN, crédito presumido e crédito financeiro.
 - Toda classificação dependente de LC 214 deve guardar artigo, edição e data de efeitos. A redação compilada consultada inclui alterações da LC 227/2026.
 
 ### 24.7 G03 — crédito e abstenção
 
-A palavra isolada **“crédito”** permanece \`AMBIGUOUS\`. Positivos do corpus:
-- “crédito presumido de 62,14% do ICMS” → \`theme.presumed_credit\` / \`treatment.presumed_credit\`;
+A palavra isolada **“crédito”** permanece `AMBIGUOUS`. Positivos do corpus:
+- “crédito presumido de 62,14% do ICMS” → `theme.presumed_credit` / `treatment.presumed_credit`;
 - “créditos de IBS/CBS apropriados” → contexto de crédito de entrada/não cumulatividade, conforme dispositivo;
-- “crédito tributário” em CTN → \`theme.assessed_tax_credit\`.
-Contraexemplo: “crédito disponível” sem tributo, origem ou mecanismo → **abstenção**; não mapear para \`theme.presumed_credit\`.
+- “crédito tributário” em CTN → `theme.assessed_tax_credit`.
+Contraexemplo: “crédito disponível” sem tributo, origem ou mecanismo → **abstenção**; não mapear para `theme.presumed_credit`.
 
 ### 24.8 G05/G11/G12/G20/G21 — fronteiras e relações
 
 | Par/fronteira | Decisão R5 | Positivo / contraexemplo |
 |---|---|---|
-| \`operation.transport_service\` × transporte específico | **hierarquia funcional somente quando houver prestação contratada**; carga/passageiros/valores podem ser \`narrower_than\`; modal fica atributo. | “prestação de transporte de carga” → específico; deslocamento próprio → não é serviço. |
-| \`operation.loan_of_fungibles\` × \`operation.loan_granting\` | **manter separados + \`related_to\`**; mútuo civil pode recair sobre fungíveis, concessão de empréstimo descreve a operação financeira. | mútuo de mercadoria fungível ≠ crédito bancário; mútuo em dinheiro pode exigir ambos se o texto provar ambos. |
-| \`operation.customs_transit\` × \`regime.customs_transit\` | **manter em dimensões distintas + \`related_to\` condicionado.** | movimento sob regime ≠ mera menção ao regime sem operação. |
-| venda à ordem × triangulação | \`operation.sale_on_order\` continua conceito específico; triangulação permanece estrutura de partes/fluxo, não alias nem código automático. | “venda à ordem” expressa → conceito; três partes sem regime de venda à ordem → não mapear. |
-| \`impact_operational.tax_master_data\` × \`impact_system.tax_master_data\` | manter distintos. | obrigação de revisar cadastro pode ser operacional sem provar SAP/J1BTAX/DRC. |
-| \`subject.tax_substitute\` → \`subject.tax_responsible\` | manter \`narrower_than\` **somente como inclusão semântica jurídica**, sem propagação classificatória; CTN arts. 121/128 + lei do tributo precisam sustentar o caso. | substituto legal comprovado → responsável; “fabricante” isolado → não prova substituição. |
+| `operation.transport_service` × transporte específico | **hierarquia funcional somente quando houver prestação contratada**; carga/passageiros/valores podem ser `narrower_than`; modal fica atributo. | “prestação de transporte de carga” → específico; deslocamento próprio → não é serviço. |
+| `operation.loan_of_fungibles` × `operation.loan_granting` | **manter separados + `related_to`**; mútuo civil pode recair sobre fungíveis, concessão de empréstimo descreve a operação financeira. | mútuo de mercadoria fungível ≠ crédito bancário; mútuo em dinheiro pode exigir ambos se o texto provar ambos. |
+| `operation.customs_transit` × `regime.customs_transit` | **manter em dimensões distintas + `related_to` condicionado.** | movimento sob regime ≠ mera menção ao regime sem operação. |
+| venda à ordem × triangulação | `operation.sale_on_order` continua conceito específico; triangulação permanece estrutura de partes/fluxo, não alias nem código automático. | “venda à ordem” expressa → conceito; três partes sem regime de venda à ordem → não mapear. |
+| `impact_operational.tax_master_data` × `impact_system.tax_master_data` | manter distintos. | obrigação de revisar cadastro pode ser operacional sem provar SAP/J1BTAX/DRC. |
+| `subject.tax_substitute` → `subject.tax_responsible` | manter `narrower_than` **somente como inclusão semântica jurídica**, sem propagação classificatória; CTN arts. 121/128 + lei do tributo precisam sustentar o caso. | substituto legal comprovado → responsável; “fabricante” isolado → não prova substituição. |
 
-**Eventos e arestas.** \`amends\`, \`revokes\`, \`repeals_partially\`, \`regulates\`, \`suspends\`, \`reinstates\`, \`postpones\` e \`corrects\` podem ser evento e também gerar aresta dirigida **somente quando o ato-alvo/dispositivo estiver identificado**. \`institutes\` é evento de criação e pode apontar para o conceito instituído, mas não cria por si uma aresta entre dois atos. \`clarifies\` pode gerar relação interpretativa quando o ato-alvo estiver expresso; sem alvo, fica evento/fato. \`cites\` nunca implica \`amends\`.
+**Eventos e arestas.** `amends`, `revokes`, `repeals_partially`, `regulates`, `suspends`, `reinstates`, `postpones` e `corrects` podem ser evento e também gerar aresta dirigida **somente quando o ato-alvo/dispositivo estiver identificado**. `institutes` é evento de criação e pode apontar para o conceito instituído, mas não cria por si uma aresta entre dois atos. `clarifies` pode gerar relação interpretativa quando o ato-alvo estiver expresso; sem alvo, fica evento/fato. `cites` nunca implica `amends`.
 
 ### 24.9 G08/G09/G10/G13 — setor, produto e impacto
 
-**Frigorífico/carnes.** CNAE/CONCLA distingue, entre outros, frigorífico com abate (ex.: 1012-1/03 para suínos), matadouro sob contrato (1012-1/04) e fabricação de produtos de carne sem abate integrado (1013-9/01). Portanto \`sector.meatpacking\`, \`sector.slaughterhouse\`, \`sector.meat_products\`, \`sector.cold_storage\` e \`sector.meat_distribution\` permanecem conceitos distintos com \`overlap\` contextual; **não são aliases exatos**.
+**Frigorífico/carnes.** CNAE/CONCLA distingue, entre outros, frigorífico com abate (ex.: 1012-1/03 para suínos), matadouro sob contrato (1012-1/04) e fabricação de produtos de carne sem abate integrado (1013-9/01). Portanto `sector.meatpacking`, `sector.slaughterhouse`, `sector.meat_products`, `sector.cold_storage` e `sector.meat_distribution` permanecem conceitos distintos com `overlap` contextual; **não são aliases exatos**.
 
-O RICMS/MT, Anexo VI art. 6º, fornece caso tributário real: crédito presumido em saídas interestaduais de carnes/subprodutos, condicionado a estabelecimento com atividade de abatedouro ou frigorífico em CNAEs expressos. O ato permite anotar separadamente tributo (\`tax.icms\`), tratamento (\`treatment.presumed_credit\`), operação (\`operation.sale\` + \`operation_scope.interstate\` quando o fato assim indicar), produto (carne/subproduto), setor/CNAE e condições. Nenhuma dessas dimensões prova automaticamente as demais.
+O RICMS/MT, Anexo VI art. 6º, fornece caso tributário real: crédito presumido em saídas interestaduais de carnes/subprodutos, condicionado a estabelecimento com atividade de abatedouro ou frigorífico em CNAEs expressos. O ato permite anotar separadamente tributo (`tax.icms`), tratamento (`treatment.presumed_credit`), operação (`operation.sale` + `operation_scope.interstate` quando o fato assim indicar), produto (carne/subproduto), setor/CNAE e condições. Nenhuma dessas dimensões prova automaticamente as demais.
 
-**Produtos.** \`product.soy\` permanece amplo. “Soja” isolada não determina grão/semente/óleo/farelo e nunca determina NCM de oito dígitos. Serviços/intangíveis usam NBS quando houver vínculo oficial suficiente; não são forçados a NCM.
+**Produtos.** `product.soy` permanece amplo. “Soja” isolada não determina grão/semente/óleo/farelo e nunca determina NCM de oito dígitos. Serviços/intangíveis usam NBS quando houver vínculo oficial suficiente; não são forçados a NCM.
 
-**Impactos.** \`impact_operational.*\` descreve possível mudança de processo; \`impact_system.*\` descreve possível mudança de categoria sistêmica. “Precisa alterar SAP/J1BTAX/DRC” depende do ambiente privado do cliente. “DRC” isolado continua \`AMBIGUOUS\`.
+**Impactos.** `impact_operational.*` descreve possível mudança de processo; `impact_system.*` descreve possível mudança de categoria sistêmica. “Precisa alterar SAP/J1BTAX/DRC” depende do ambiente privado do cliente. “DRC” isolado continua `AMBIGUOUS`.
 
 ### 24.10 Corpus oficial congelado R5
 
@@ -1396,30 +1396,30 @@ O corpus registra referências suficientes para reprodução sem copiar longos t
 
 | ID | Fonte/ato, data/edição | Jurisdição / dispositivo | Dimensão esperada e positivos | NÃO atribuir / ambiguidade / nota temporal |
 |---|---|---|---|---|
-| C01 | LC 214/2025 compilada c/ LC 227/2026 | Federal; arts. 27, 31–35 | \`tax.ibs\`, \`tax.cbs\`, \`theme.split_payment\` | split payment ≠ tributo; efeitos/implementação por dispositivo |
-| C02 | LC 214/2025 compilada | Federal; arts. 112–124 | \`theme.personalized_refund\`; IBS/CBS | “cashback” comercial ≠ conceito; consumo-base CBS 2027/IBS 2029 |
+| C01 | LC 214/2025 compilada c/ LC 227/2026 | Federal; arts. 27, 31–35 | `tax.ibs`, `tax.cbs`, `theme.split_payment` | split payment ≠ tributo; efeitos/implementação por dispositivo |
+| C02 | LC 214/2025 compilada | Federal; arts. 112–124 | `theme.personalized_refund`; IBS/CBS | “cashback” comercial ≠ conceito; consumo-base CBS 2027/IBS 2029 |
 | C03 | EC 132/2023 + LC 214 | Federal; Cesta Básica | regime/tratamento conforme regra; IBS/CBS | cesta ≠ tributo; produto sem NCM explícito não recebe NCM |
-| C04 | Lei 10.865/2004 | Federal; art. 1º | \`tax.pis_pasep_import\` e \`tax.cofins_import\` separados; importação | menção a uma contribuição não prova a outra |
-| C05 | LC 123/2006 + Portal Simples | Federal; art. 18-A/Simei | \`subject.mei\`, \`regime.simei\` | ser MEI ≠ prova automática de opção válida no período |
-| C06 | Receita Federal PER/DCOMP | Federal; orientação atualizada 2026 | temas de restituição/ressarcimento/compensação; candidato de procedimento | **não** restaurar \`obligation.per_dcomp\` |
-| C07 | Receita Federal DCTFWeb/MIT | Federal; serviço DCTFWeb | \`platform.mit\`, \`obligation.dctfweb\` | MIT ≠ obrigação autônoma |
-| C08 | MOC NF-e 7.0 | Nacional DF-e; item NFA-e/séries/procEmi | \`document.nfe\` + propriedade de emissão NFA-e | sem \`document.nfae\`; modelo continua 55 |
-| C09 | MOC NF-e 7.0 + SEFAZ-GO | Nacional/GO; substituição modelo 04 | \`document.rural_producer_invoice\` somente modelo 04; \`document.nfe\` para 55 | NFP-e/NF-e 55 ≠ modelo 04; UF/período obrigatórios |
+| C04 | Lei 10.865/2004 | Federal; art. 1º | `tax.pis_pasep_import` e `tax.cofins_import` separados; importação | menção a uma contribuição não prova a outra |
+| C05 | LC 123/2006 + Portal Simples | Federal; art. 18-A/Simei | `subject.mei`, `regime.simei` | ser MEI ≠ prova automática de opção válida no período |
+| C06 | Receita Federal PER/DCOMP | Federal; orientação atualizada 2026 | temas de restituição/ressarcimento/compensação; candidato de procedimento | **não** restaurar `obligation.per_dcomp` |
+| C07 | Receita Federal DCTFWeb/MIT | Federal; serviço DCTFWeb | `platform.mit`, `obligation.dctfweb` | MIT ≠ obrigação autônoma |
+| C08 | MOC NF-e 7.0 | Nacional DF-e; item NFA-e/séries/procEmi | `document.nfe` + propriedade de emissão NFA-e | sem `document.nfae`; modelo continua 55 |
+| C09 | MOC NF-e 7.0 + SEFAZ-GO | Nacional/GO; substituição modelo 04 | `document.rural_producer_invoice` somente modelo 04; `document.nfe` para 55 | NFP-e/NF-e 55 ≠ modelo 04; UF/período obrigatórios |
 | C10 | RICMS/MT, Dec. 2.212/2014, Anexo VI art. 6º | MT; saídas interestaduais de carnes | ICMS + crédito presumido + frigorífico/abatedouro + carne + CNAEs | CNAE ≠ alias de segmento; benefício não se infere só do setor |
 | C11 | RICMS/MT, Anexo VII art. 7º + regras gerais | MT; soja de produção mato-grossense | ICMS + diferimento + soja + produtor rural quando expresso | “soja” ≠ NCM; diferimento condicionado e temporal |
 | C12 | LC 116/2003 + LC 344/2021 Goiânia e alterações | Município de Goiânia; serviços de informática | ISS + software/serviço + jurisdição municipal | regra nacional não substitui lei municipal; software ≠ NBS/NCM automático |
-| C13 | Guia Prático EFD ICMS/IPI 3.2.x/2026 | Nacional SPED | \`obligation.efd_icms_ipi\`, ICMS/IPI conforme registro | EFD ≠ documento NF-e; leiaute não prova impacto de cliente |
-| C14 | Portal NF-e, NT 2025.002 v1.50 (03/06/2026) | Nacional DF-e; RTC | \`document.nfe\`, alteração de leiaute, IBS/CBS quando campos/regra expressos | nota técnica ≠ novo modelo fiscal |
-| C15 | Lei 10.336/2001 | Federal | \`tax.cide_fuels\`, combustíveis | combustível ≠ contribuinte; CIDE ≠ ICMS |
-| C16 | Lei 9.998/2000 | Federal; telecom | \`tax.fust\`, \`sector.telecommunications\` quando texto sustentar | setor não prova sujeição concreta |
-| C17 | Lei 10.052/2000 | Federal; telecom/tecnologia | \`tax.funttel\` | FUST ≠ Funttel |
-| C18 | MP 2.228-1/2001 | Federal; audiovisual | \`tax.condecine\`, mídia/audiovisual | não inferir ISS/ICMS |
-| C19 | Lei 10.893/2004 | Federal; transporte aquaviário/comércio exterior | \`tax.afrmm\`, operação de importação/transporte quando expressa | AFRMM ≠ frete |
-| C20 | Lei 12.546/2011 + Lei 14.973/2024 | Federal; transição | \`tax.cprb\`, folha/receita conforme período | “desoneração” isolada é SEARCH_RELATED |
+| C13 | Guia Prático EFD ICMS/IPI 3.2.x/2026 | Nacional SPED | `obligation.efd_icms_ipi`, ICMS/IPI conforme registro | EFD ≠ documento NF-e; leiaute não prova impacto de cliente |
+| C14 | Portal NF-e, NT 2025.002 v1.50 (03/06/2026) | Nacional DF-e; RTC | `document.nfe`, alteração de leiaute, IBS/CBS quando campos/regra expressos | nota técnica ≠ novo modelo fiscal |
+| C15 | Lei 10.336/2001 | Federal | `tax.cide_fuels`, combustíveis | combustível ≠ contribuinte; CIDE ≠ ICMS |
+| C16 | Lei 9.998/2000 | Federal; telecom | `tax.fust`, `sector.telecommunications` quando texto sustentar | setor não prova sujeição concreta |
+| C17 | Lei 10.052/2000 | Federal; telecom/tecnologia | `tax.funttel` | FUST ≠ Funttel |
+| C18 | MP 2.228-1/2001 | Federal; audiovisual | `tax.condecine`, mídia/audiovisual | não inferir ISS/ICMS |
+| C19 | Lei 10.893/2004 | Federal; transporte aquaviário/comércio exterior | `tax.afrmm`, operação de importação/transporte quando expressa | AFRMM ≠ frete |
+| C20 | Lei 12.546/2011 + Lei 14.973/2024 | Federal; transição | `tax.cprb`, folha/receita conforme período | “desoneração” isolada é SEARCH_RELATED |
 | C21 | Lei 8.212/1991 | Federal; produtor rural/previdência | contribuição rural/sujeitos conforme dispositivo | produtor rural ≠ obrigação concreta sem hipótese |
 | C22 | Lei 9.656/1998 + LC 214 | Federal; saúde/planos | setor de saúde/plano + regime específico quando dispositivo expresso | setor ≠ benefício |
 | C23 | LC 214 | Federal; serviços financeiros | regime específico financeiro quando dispositivo expresso | operação financeira ≠ regime automaticamente |
-| C24 | Lei 11.488/2007 | Federal; REIDI/infraestrutura | \`regime.reidi\`, construção/infraestrutura quando expressa | obra comum ≠ REIDI |
+| C24 | Lei 11.488/2007 | Federal; REIDI/infraestrutura | `regime.reidi`, construção/infraestrutura quando expressa | obra comum ≠ REIDI |
 | C25 | Portal Único Siscomex | Federal; comércio exterior | DUIMP/DU-E e operações aduaneiras conforme documento | declaração ≠ NF-e; cronograma importa |
 | C26 | CONFAZ, Ajuste SINIEF 07/2005 + MOC NF-e | Nacional/estadual | tipo de ato + NF-e modelo 55 | Ajuste ≠ evento “altera” sem comparar alvo |
 | C27 | CONFAZ, Convênio ICMS 190/2017 + RICMS/MT | Nacional/MT | convênio, benefício reinstituído quando ato local comprovar | convênio nacional ≠ fruição privada |
@@ -1439,16 +1439,16 @@ O corpus registra referências suficientes para reprodução sem copiar longos t
 | 4. Alteração de leiaute NF-e | **PASS:** C14. Nota técnica altera leiaute/regras; não cria novo documento nem prova mudança SAP do cliente. |
 | 5. EFD ICMS/IPI | **PASS:** C13. Obrigação/escrituração separada de NF-e e de tributo individual. |
 | 6. Diferimento + venda de soja + produtor rural | **PASS:** C11. Diferimento/soja/produtor rural e condições podem coexistir; “soja” não gera NCM. |
-| 7. “Crédito” ambíguo | **PASS por abstenção:** C01/C10 + §24.7. “crédito” isolado = \`AMBIGUOUS\`. |
-| 8. “Soja” sem NCM | **PASS por abstenção:** C11/C30. \`product.soy\` possível se lexicalmente suficiente; NCM de 8 dígitos = não atribuir. |
+| 7. “Crédito” ambíguo | **PASS por abstenção:** C01/C10 + §24.7. “crédito” isolado = `AMBIGUOUS`. |
+| 8. “Soja” sem NCM | **PASS por abstenção:** C11/C30. `product.soy` possível se lexicalmente suficiente; NCM de 8 dígitos = não atribuir. |
 
 #### Revalidação dos quatro casos R4
 
 | Caso | Resultado R5 |
 |---|---|
 | PIS/Pasep-Importação × Cofins-Importação | **PASS:** manter códigos separados; Lei 10.865/2004, art. 1º. |
-| MEI × Simei | **PASS:** \`subject.mei\` ≠ \`regime.simei\`; não propagar opção. |
-| PER/DCOMP | **PASS:** continua fora de \`obligation.*\`; futura dimensão \`procedure\` só com ganho semântico demonstrado. |
+| MEI × Simei | **PASS:** `subject.mei` ≠ `regime.simei`; não propagar opção. |
+| PER/DCOMP | **PASS:** continua fora de `obligation.*`; futura dimensão `procedure` só com ganho semântico demonstrado. |
 | Órgão × ente público | **PASS:** órgão administrativo ≠ pessoa jurídica/ente; não inferir imunidade. |
 
 ### 24.11 Matriz G01–G25
@@ -1481,7 +1481,7 @@ O corpus registra referências suficientes para reprodução sem copiar longos t
 | G24 | aberto | NFA-e encerrada; PER/DCOMP mantido fora de obrigação; naturezas setoriais ainda pedem revisão fina | §24.2/24.3 | PARTIAL |
 | G25 | parcial | 4 casos R4 reais + modelo 04 por UF/edição + alias ITCD resolvido | §24.2/24.10 | PARTIAL |
 
-Nenhum gap desapareceu. Não há \`ACCEPTED_RISK\` nesta revisão.
+Nenhum gap desapareceu. Não há `ACCEPTED_RISK` nesta revisão.
 
 ### 24.12 Matriz final por dimensão
 
@@ -1500,17 +1500,17 @@ A contagem abaixo é calculada sobre as linhas canônicas desta R5; a decisão �
 | event/act_type | calculado no teste documental | atos oficiais + TriBusca | C14/C26/C27 | REVISE |
 | impact_* | calculado no teste documental | TriBusca + contexto privado | casos 4/5 | REVISE |
 
-Nenhuma dimensão recebe \`READY\` antes da nova revisão independente, porque ainda existem linhas \`NEEDS_EVIDENCE\`.
+Nenhuma dimensão recebe `READY` antes da nova revisão independente, porque ainda existem linhas `NEEDS_EVIDENCE`.
 
 ### 24.13 R4 → R5
 
-**Adicionados:** \`platform.mit\` (por retipagem; não aumenta o total líquido).  
-**Removidos:** \`document.nfae\` como conceito canônico e \`obligation.mit\`.  
-**Retipados:** \`obligation.mit\` → \`platform.mit\`.  
+**Adicionados:** `platform.mit` (por retipagem; não aumenta o total líquido).  
+**Removidos:** `document.nfae` como conceito canônico e `obligation.mit`.  
+**Retipados:** `obligation.mit` → `platform.mit`.  
 **Renomeados:** nenhum código além da retipagem acima.  
-**Definições alteradas:** \`document.rural_producer_invoice\` fica estritamente modelo 04; NFA-e vira propriedade de emissão; fronteiras de operação, sujeito, evento, setor/produto e impacto ganham decisões R5.  
+**Definições alteradas:** `document.rural_producer_invoice` fica estritamente modelo 04; NFA-e vira propriedade de emissão; fronteiras de operação, sujeito, evento, setor/produto e impacto ganham decisões R5.  
 **Relações alteradas:** MIT ↔ DCTFWeb vira relação qualificada de componente/serviço; sobreposições de G05/G21 documentadas sem propagação.  
-**Aliases alterados:** ITCD deixa de usar a classe candidata \`JURISDICTIONAL_LABEL\` e passa a \`ABBREVIATION\` com jurisdição/edição; demais classes TAX-01 preservadas.  
+**Aliases alterados:** ITCD deixa de usar a classe candidata `JURISDICTIONAL_LABEL` e passa a `ABBREVIATION` com jurisdição/edição; demais classes TAX-01 preservadas.  
 **Fontes atualizadas:** manifesto §24.3 e corpus §24.10.  
 **Gaps:** G16 = RESOLVED; demais = PARTIAL ou OPEN conforme §24.11.
 
@@ -1520,20 +1520,20 @@ Nenhuma dimensão recebe \`READY\` antes da nova revisão independente, porque a
 
 **NEEDS_EVIDENCE:** todas as linhas listadas no §24.4 que não receberam âncora específica R5. Elas não podem ser promovidas como definição juridicamente verificada apenas por similaridade lexical.
 
-**Removidos/reclassificados:** \`document.nfae\` → propriedade de \`document.nfe\`; \`obligation.mit\` → \`platform.mit\`; \`JURISDICTIONAL_LABEL\` → rejeitado como classe de alias nesta R5; ITCD usa classe já aprovada + jurisdição.
+**Removidos/reclassificados:** `document.nfae` → propriedade de `document.nfe`; `obligation.mit` → `platform.mit`; `JURISDICTIONAL_LABEL` → rejeitado como classe de alias nesta R5; ITCD usa classe já aprovada + jurisdição.
 
 ### 24.15 Perguntas bloqueantes restantes
 
-1. Quais linhas \`NEEDS_EVIDENCE\` recebem fonte específica suficiente para promoção após a TAX-03?
-2. A família \`platform\` deve permanecer dimensão própria ou ser formalmente promovida/ajustada em revisão futura da arquitetura, dado que TAX-01 não a enumerou explicitamente?
-3. Um corpus maior justifica dimensão \`procedure\` para PER/DCOMP, consulta e contencioso, ou propriedades/relações bastam?
+1. Quais linhas `NEEDS_EVIDENCE` recebem fonte específica suficiente para promoção após a TAX-03?
+2. A família `platform` deve permanecer dimensão própria ou ser formalmente promovida/ajustada em revisão futura da arquitetura, dado que TAX-01 não a enumerou explicitamente?
+3. Um corpus maior justifica dimensão `procedure` para PER/DCOMP, consulta e contencioso, ou propriedades/relações bastam?
 4. Quais subtipos do Sistema S e taxas setoriais merecem códigos canônicos sem gerar catálogo combinatório?
 5. Quais eventos de §24.8 merecem arestas próprias persistidas versus relação genérica qualificada?
 6. Quais documentos estaduais/municipais e modelos legados entram no próximo inventário sem confundir cobertura de fonte com cobertura conceitual?
 
 ### 24.16 Recomendação
 
-**\`READY_FOR_TAX03_REVIEW\`**
+**`READY_FOR_TAX03_REVIEW`**
 
-Isso significa apenas que a R5 possui delta explícito, bloqueios principais tratados, fontes/corpus reproduzíveis e incertezas visíveis suficientes para **nova revisão independente do SHA exato**. Não significa aprovação da R5, não significa \`TAX-04\` pronta e não autoriza migration, banco, classificador, embeddings, IA, matching, backend, frontend, conector, deploy ou merge.
+Isso significa apenas que a R5 possui delta explícito, bloqueios principais tratados, fontes/corpus reproduzíveis e incertezas visíveis suficientes para **nova revisão independente do SHA exato**. Não significa aprovação da R5, não significa `TAX-04` pronta e não autoriza migration, banco, classificador, embeddings, IA, matching, backend, frontend, conector, deploy ou merge.
 
