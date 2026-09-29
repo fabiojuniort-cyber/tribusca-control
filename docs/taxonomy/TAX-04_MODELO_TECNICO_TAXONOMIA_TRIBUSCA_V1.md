@@ -190,7 +190,7 @@ MIT permanece `UNMAPPED_DIMENSION`. Nenhuma tabela, enum ou importador deve mate
 | T04-D07 | `maps_to_official` é implementado fisicamente por tabela especializada de correspondência com catálogo, não por FK para conceito. |
 | T04-D08 | Evidências são normalizadas e ligadas por FKs específicas, evitando uma tabela polimórfica sem integridade referencial. |
 | T04-D09 | Classificação global usa **run imutável + assertions + spans + reviews append-only**. |
-| T04-D10 | Reclassificação sempre cria novo run; `supersedes_run_id` documenta linhagem. |
+| T04-D10 | Reclassificação cria novo run; correção semântica pontual usa `supersedes_assertion_id`; `supersedes_run_id` fica reservado à supersession integral/operacional do run. |
 | T04-D11 | UNMAPPED separa **ocorrência extraída** de **candidato semântico agrupado**. |
 | T04-D12 | Taxonomia e classificação global não têm `tenant_id`; matching privado existente continua RLS-scoped. |
 | T04-D13 | Escrita da taxonomia canônica não é concedida a `radar_app` nem ao Worker de coleta; haverá caminho de curadoria/importação restrito em atividade posterior. |
@@ -1539,12 +1539,14 @@ Sem escrever SQL, a implementação futura deverá avaliar:
 
 - `taxonomy_aliases(normalized_text, language)`;
 - `taxonomy_release_alias_bindings(release_id, alias_id)`;
+- chave/FK composta por `(release_concept_id, release_id)`;
 - `taxonomy_release_alias_bindings(release_concept_id)`;
 - busca textual adicional somente após medir necessidade; sem pgvector nesta fase.
 
 ### Relações
 
 - unique lógico `(release_id, source_release_concept_id, relation_type_id, target_release_concept_id, qualifier_hash)`;
+- FKs compostas de source/target com `(release_concept_id, release_id)`;
 - índices source e target.
 
 ### Evidência
@@ -1576,7 +1578,8 @@ Sem escrever SQL, a implementação futura deverá avaliar:
 - status;
 - provável dimensão;
 - ocorrência por publication_version;
-- candidate↔occurrence.
+- candidate↔occurrence;
+- índice/FK em `resolved_release_concept_id`.
 
 ---
 
@@ -1629,7 +1632,7 @@ PASS: global × tenant separado.
 
 - conceito global amplo;
 - não exige NCM;
-- se existir mapping para NCM, ele é edition-scoped e pode ser BROADER/NARROWER/OVERLAP;
+- se existir mapping para NCM, ele é edition-scoped e pode ser `CONCEPT_BROADER_THAN_ENTRY`, `CONCEPT_NARROWER_THAN_ENTRY` ou `OVERLAP`;
 - CNAE/NCM concreto do cliente permanece privado.
 
 PASS: soja ≠ NCM.
