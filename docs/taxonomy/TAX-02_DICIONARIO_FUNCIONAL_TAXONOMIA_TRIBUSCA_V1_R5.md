@@ -1258,7 +1258,7 @@ Separação obrigatória preservada: conceito ≠ menção; conceito ≠ classif
 | L14193-R5 | Presidência/Planalto; Lei 14.193/2021 | SAF | edição posterior deve ser qualificada | https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14193.htm |
 | SISCOMEX-R5 | Governo Federal; Portal Único Siscomex | DUIMP, DU-E e procedimentos aduaneiros | cronograma/implantação por edição | https://www.gov.br/siscomex/pt-br |
 | RFB-DCTFWEB-R5 | Receita Federal; DCTFWeb/MIT | MIT como serviço integrado à DCTFWeb | desde 01/01/2025 para débitos migrados; escopo por orientação/ato | https://www.gov.br/pt-br/servicos/declarar-debitos-e-creditos-previdenciarios-e-de-outras-entidades-e-fundos |
-| RFB-PERDCOMP-R5 | Receita Federal; PER/DCOMP | pedido de restituição/ressarcimento/reembolso ou declaração de compensação | procedimento conforme crédito | https://www.gov.br/receitafederal/pt-br/canais_atendimento/fale-conosco/perdcomp |
+| RFB-PERDCOMP-R5 | Receita Federal; PER/DCOMP; IN RFB 2.055/2021 referenciada na orientação vigente | pedido de restituição/ressarcimento/reembolso ou declaração de compensação | procedimento conforme crédito; formulário/vedações conforme dispositivo da IN | https://www.gov.br/receitafederal/pt-br/canais_atendimento/fale-conosco/perdcomp |
 | MOC-NFE-R5 | ENCAT/CONFAZ; MOC NF-e 7.0 | NF-e 55; NFA-e como NF-e 55; séries/processo; substituição do modelo 04 | edição 7.0; NTs podem alterar leiaute | https://www.confaz.fazenda.gov.br/legislacao/arquivo-manuais/moc7-visao-geral.pdf |
 | MOC-NFE-LAYOUT-R5 | ENCAT/CONFAZ; MOC NF-e 7.0 Anexo I | leiaute/regras, inclusive referência a NF de Produtor modelo 04 | edição do MOC/NT | https://www.confaz.fazenda.gov.br/legislacao/arquivo-manuais/moc7-anexo-i-leiaute-e-rv.pdf |
 | NFE-NT-R5 | Portal NF-e/ENCAT; notas técnicas vigentes | alterações de leiaute, inclusive RTC | cada NT tem versão/data própria | https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=04BIflQt1aY= |
@@ -1401,7 +1401,7 @@ O corpus registra referências suficientes para reprodução sem copiar longos t
 | C03 | EC 132/2023 + LC 214 | Federal; Cesta Básica | regime/tratamento conforme regra; IBS/CBS | cesta ≠ tributo; produto sem NCM explícito não recebe NCM |
 | C04 | Lei 10.865/2004 | Federal; art. 1º | `tax.pis_pasep_import` e `tax.cofins_import` separados; importação | menção a uma contribuição não prova a outra |
 | C05 | LC 123/2006 + Portal Simples | Federal; art. 18-A/Simei | `subject.mei`, `regime.simei` | ser MEI ≠ prova automática de opção válida no período |
-| C06 | Receita Federal PER/DCOMP | Federal; orientação atualizada 2026 | temas de restituição/ressarcimento/compensação; candidato de procedimento | **não** restaurar `obligation.per_dcomp` |
+| C06 | Receita Federal PER/DCOMP + IN RFB 2.055/2021 | Federal; orientação atualizada em 2026 e IN referenciada pela RFB | temas de restituição/ressarcimento/compensação; candidato de procedimento | **não** restaurar `obligation.per_dcomp`; meio/procedimento varia pelo crédito |
 | C07 | Receita Federal DCTFWeb/MIT | Federal; serviço DCTFWeb | `platform.mit`, `obligation.dctfweb` | MIT ≠ obrigação autônoma |
 | C08 | MOC NF-e 7.0 | Nacional DF-e; item NFA-e/séries/procEmi | `document.nfe` + propriedade de emissão NFA-e | sem `document.nfae`; modelo continua 55 |
 | C09 | MOC NF-e 7.0 + SEFAZ-GO | Nacional/GO; substituição modelo 04 | `document.rural_producer_invoice` somente modelo 04; `document.nfe` para 55 | NFP-e/NF-e 55 ≠ modelo 04; UF/período obrigatórios |
