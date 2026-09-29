@@ -1621,7 +1621,7 @@ Rejeitada: data de criação não é decisão de inclusão.
 Estas pendências **não bloqueiam o desenho TAX-04**, mas precisam ser resolvidas antes/depois da migration correspondente:
 
 1. nome final da role de curadoria global (`radar_taxonomy_curator` ou serviço admin);
-2. se `taxonomy_release_concepts.classification_enabled` será boolean ou enum operacional;
+2. política operacional do classificador para tratar combinações de `membership_status`, `governance_status` e `evidence_status` sem introduzir um boolean genérico `active/classification_enabled`;
 3. forma de armazenar ator humano global sem acoplar autorização de curadoria aos roles tenant;
 4. estratégia de transição do `cnaes` atual para catálogo oficial versionado;
 5. quais relações além de `narrower_than` e `replaced_by` terão trigger/validador de ciclo no banco;
