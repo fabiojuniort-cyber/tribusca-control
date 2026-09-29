@@ -25,3 +25,7 @@ Se o delta for material, revise o head inteiro. Artefato destrutivo R3 mantém S
 
 ## Handoff
 Use [HANDOFF.md](../docs/HANDOFF.md) proporcional ao risco.
+
+## Railway AI Agent
+
+O revisor independente **não pode usar o Railway AI Agent** para coletar ou validar evidência. Evidência Railway nova deve vir de meios não-AI permitidos pela D-065. Se um subitem só puder ser verificado pelo Agent, marque `NOT_PROVEN`; não converta ausência de prova em PASS.
