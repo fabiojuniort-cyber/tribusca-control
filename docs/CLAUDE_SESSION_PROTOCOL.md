@@ -181,3 +181,7 @@ Permanecem obrigatórios:
 ## Precedência
 
 Após o merge autorizado da GOV-16, esta v2 substitui formulações incompatíveis nos documentos antigos. Segurança, privacidade, integridade tenant e regras técnicas mais restritivas continuam prevalecendo. Até o merge, a versão anterior existente em `main` continua vigente.
+
+## Railway AI Agent
+
+A Governança Flexível v2 não autoriza o **Railway AI Agent** em nenhum nível R0–R3. Operações Railway autorizadas devem usar somente meios não-AI permitidos pela D-065. Nenhuma elevação de risco, autonomia operacional ou autorização R3 suspende essa proibição. Se uma prova não puder ser obtida por canal permitido, registrar `NOT_PROVEN` ou bloquear apenas a etapa dependente.
