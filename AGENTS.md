@@ -58,3 +58,11 @@ Use snapshots temporais quando necessário: `Estado observado em DD/MM/AAAA HH:M
 
 ## Fechamento
 Registre evidência proporcional ao risco. CI, merge, deploy e run são fatos diferentes; não inferir produção a partir de evidência ausente.
+
+## Railway AI Agent — uso proibido
+
+É **proibido** usar o Railway AI Agent em qualquer frente do TriBusca, para leitura ou escrita. Isso inclui diagnóstico, consulta, troubleshooting, configuração, variáveis, serviços, logs, banco, migrations, deploy/redeploy, runs e validação produtiva.
+
+Railway continua permitida como infraestrutura somente por meios não-AI: Dashboard, CLI/API, conectores oficiais que não sejam o Railway AI Agent, logs nativos e scripts/runbooks versionados do projeto.
+
+Nenhum prompt, gate, review ou handoff pode instruir ou depender do Railway AI Agent. Se uma evidência não puder ser obtida por canal permitido, registrar `NOT_PROVEN` ou bloquear apenas a etapa dependente. Ver [docs/RAILWAY_AI_AGENT_POLICY.md](docs/RAILWAY_AI_AGENT_POLICY.md) e D-065.

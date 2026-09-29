@@ -44,3 +44,7 @@ CI, merge, deploy, run e estado produtivo são evidências distintas. Secrets, c
 
 ## Comunicação
 Para delegações formais, o Gerente pode usar bloco copiável isolado; para R0 contínuo, não é necessário criar nova atividade apenas para registrar um fato.
+
+## Railway AI Agent nos handoffs
+
+Nenhum handoff pode instruir a próxima sessão a usar o **Railway AI Agent** nem apresentar seu uso como requisito para continuar. Para fatos Railway, registrar a evidência obtida por meio não-AI permitido ou marcar `NOT_PROVEN` quando não houver prova acessível. Se um prompt herdado citar Railway AI Agent, substituir essa parte antes da delegação, conforme D-065.

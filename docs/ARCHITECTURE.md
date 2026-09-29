@@ -45,3 +45,7 @@ Papéis de autoridade: PRIMARY, ENRICHMENT, VALIDATION, LEGACY e BACKFILL. A ind
 ## Limites deste documento
 
 Contratos exatos, migrations, APIs e ADRs técnicos pertencem ao repositório backend. Uma mudança de schema/segurança ou de critérios de identidade exige Issue e revisão técnica; não alterar a arquitetura apenas para preencher a governança.
+
+## Operação da infraestrutura Railway
+
+Railway permanece a plataforma de infraestrutura aprovada. A operação, diagnóstico e validação devem usar somente meios não-AI permitidos pela D-065 (Dashboard, CLI/API, conectores oficiais não-AI, logs nativos e scripts/runbooks versionados). O **Railway AI Agent não faz parte da arquitetura nem pode ser usado operacionalmente**.

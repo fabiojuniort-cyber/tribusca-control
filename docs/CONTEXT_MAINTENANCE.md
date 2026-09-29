@@ -54,3 +54,7 @@ Não criar nova GOV/chat/LOCK/revisão apenas para registrar fato já comprovado
 
 ## Autorização permanente
 O responsável autoriza correções factuais, manutenção documental, contexto, links/datas/status, formatação, testes, lint e ajustes sem mudança material de comportamento. Não cobre merge/deploy material, migration, secret, exclusão, SQL produtivo, arquitetura, decisão de produto ou operação destrutiva.
+
+## Estado Railway e D-065
+
+Ao atualizar estado factual de Railway, use somente Dashboard, CLI/API, conectores oficiais não-AI, logs nativos ou scripts/runbooks versionados. **Nunca use o Railway AI Agent** para preencher contexto, SHAs, deployments, variáveis, logs, banco ou status de gate. Fato não verificável por canal permitido deve permanecer explicitamente `NOT_PROVEN`.

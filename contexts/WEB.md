@@ -223,3 +223,7 @@ Inspeção read-only do backend: `PUBLIC_API_ALLOWED_ORIGINS` **não está confi
 A futura origem pública definitiva ainda não está comprovada neste gate e não deve ser inventada.
 
 **Próximo gate:** uma única revisão independente do SHA WEB-11. Sem merge/publicação definitiva.
+
+## Railway AI Agent
+
+A frente WEB não pode usar o **Railway AI Agent** para preview, deploy, logs, variáveis, diagnóstico ou qualquer operação Railway. Usar somente Dashboard, CLI/API, conectores oficiais não-AI, logs nativos ou scripts/runbooks permitidos pela D-065. Nenhum gate visual/funcional pode depender do Agent.

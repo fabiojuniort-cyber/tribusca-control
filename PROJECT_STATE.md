@@ -165,3 +165,7 @@ Cobertura consome somente `GET /public/v1/sources`, com tradução D-050 e fallb
 **Pendência real para dados ao vivo no navegador:** `PUBLIC_API_ALLOWED_ORIGINS` não está definida no backend produtivo. A origem do preview `https://web05-preview-production.up.railway.app` precisa ser autorizada em gate backend separado. Nenhuma alteração backend foi feita pela WEB-11.
 
 **Gate atual:** revisão independente única do release candidate. Sem merge/publicação definitiva.
+
+## Governança Railway
+
+Desde 29/09/2026, D-065 proíbe o uso do **Railway AI Agent** em qualquer atividade do TriBusca. Railway permanece como infraestrutura aprovada e deve ser operada somente por meios não-AI permitidos. Nenhum gate ou evidência nova pode depender do Agent.
