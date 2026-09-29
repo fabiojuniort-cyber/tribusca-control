@@ -85,3 +85,7 @@ Mapeamento direto dos quatro campos aprovados: `title`, `publishedOn`, `agency`,
 - ao cadastrar CNPJ matriz/filial, o produto deverá tentar obter CNAE/endereço de fonte disponível; empresa sem CNPJ continua questão aberta;
 - credenciais da mesma pessoa não podem manter acesso simultâneo; comportamento do segundo login ainda é questão aberta;
 - nenhuma migration, endpoint, cron, sessão, Worker ou deploy foi alterado nesta GOV-03.
+
+## Railway AI Agent
+
+Nesta frente, o **Railway AI Agent não pode ser usado** para diagnóstico, logs, banco, deploy, variáveis, serviços ou qualquer outra ação. Para Railway, usar somente meios não-AI permitidos pela D-065 e por [RAILWAY_AI_AGENT_POLICY.md](../docs/RAILWAY_AI_AGENT_POLICY.md). Se uma evidência não puder ser obtida por canal permitido, registrar `NOT_PROVEN`.
