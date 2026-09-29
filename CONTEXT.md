@@ -69,3 +69,7 @@ Comando do usuário: **“Carregue o Gerente Geral do Repositório”**. O GPT-6
 
 
 **CORS WEB-11:** inspeção read-only do serviço backend produtivo confirmou ausência de `PUBLIC_API_ALLOWED_ORIGINS`. O preview frontend usa `VITE_API_BASE=https://radar-fiscal-backend-production.up.railway.app`; portanto a origem `https://web05-preview-production.up.railway.app` precisa ser incluída em gate backend separado para que dados reais da Cobertura sejam aceitos pelo browser. WEB-11 não alterou backend.
+
+## Regra operacional — Railway AI Agent
+
+Desde 29/09/2026, por decisão D-065, o **Railway AI Agent é proibido** em qualquer atividade do TriBusca. Railway continua permitida como infraestrutura por Dashboard, CLI/API, conectores oficiais que não sejam o Railway AI Agent, logs nativos e scripts/runbooks versionados. Nenhum gate ou evidência nova pode depender do Agent; quando não houver prova por canal permitido, usar `NOT_PROVEN`. Ver [docs/RAILWAY_AI_AGENT_POLICY.md](docs/RAILWAY_AI_AGENT_POLICY.md).
