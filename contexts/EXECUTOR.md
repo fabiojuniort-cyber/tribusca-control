@@ -29,3 +29,7 @@ Secrets, dados privados, RLS, auth, tenant e operação destrutiva não são fle
 
 ## Handoff
 Use [HANDOFF.md](../docs/HANDOFF.md) proporcionalmente ao risco.
+
+## Railway AI Agent
+
+O executor **não pode usar o Railway AI Agent** para nenhuma leitura ou escrita. Operações Railway autorizadas devem usar apenas meios não-AI permitidos pela D-065. Não inclua Railway AI Agent em prompt, runbook, troubleshooting ou prova de gate. Se a evidência não estiver acessível por meio permitido, registre `NOT_PROVEN` ou bloqueie somente a etapa dependente.
