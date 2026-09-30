@@ -8,11 +8,24 @@ A frente priorizada é DOE-SP e permanece aberta até reconstrução e validaç�
 
 ## Taxonomia — estado consolidado
 
-A implementação TAX-01→TAX-09 está concluída em código. Backend `main@25c2c42ed43d001dcfa1eb0edc9ce4fa35fffbe7` contém TAX-07, TAX-08 e TAX-09 após reviews independentes favoráveis e merges dos PRs #91, #93 e #95.
+A Taxonomia TriBusca v1 está **implementada e ativada em produção**.
 
-Produção, entretanto, ainda não está ativada para TAX-07/08/09: read-back confirmou migrations 001→019, com 020/021 pendentes, e release `v1.0.0` ainda `DRAFT`. O baseline R6 permanece íntegro. O gate produtivo é a [Issue #46](https://github.com/fabiojuniort-cyber/tribusca-control/issues/46) (R3). Não executar migrations 020/021, publicação da release, classificação, candidatos ou matching produtivo fora desse gate.
+Backend `main@25c2c42ed43d001dcfa1eb0edc9ce4fa35fffbe7` contém TAX-07, TAX-08 e TAX-09 após reviews independentes favoráveis e merges dos PRs #91, #93 e #95.
 
-No snapshot de 30/09/2026, a Issue #46 está bloqueada por operação R3 concorrente DOE-SP no mesmo PostgreSQL. A implementação TAX não deve ser reaberta; apenas o gate de ativação permanece pendente.
+A [Issue #46](https://github.com/fabiojuniort-cyber/tribusca-control/issues/46) concluiu o gate R3:
+- migrations produtivas 001→021;
+- release `v1.0.0` / `6e6ad5ff-fa6d-45dc-a3ea-ae4c5e4c2f3b` = `PUBLISHED`;
+- manifest `cdbad652dbafddef45193be9f5092ab17cb5097523085135e1f3b2ce00eb85ee`;
+- derivation `ac315c0ad591836c8c98c03b04769aa8442ebec5409fd1fc5961dffc04a2414b`;
+- runtime, worker e curator security = PASS;
+- smoke TAX-07/08/09 rollback-only = PASS;
+- RLS matching = PASS;
+- release PUBLISHED imutável = PASS;
+- zero dado de smoke persistido e zero backfill em massa.
+
+A Issue #46 está CLOSED/completed e o LOCK TAX-ACT foi liberado. Não reabrir TAX-01→TAX-09 como implementação pendente. Operações futuras de classificação, backfill, curadoria ou matching devem usar gates próprios e preservar a release publicada/histórico.
+
+DOE-SP somente pode retomar writes no PostgreSQL após adquirir novo LOCK R3.
 
 ## Regras de continuidade
 
