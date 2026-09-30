@@ -1,10 +1,18 @@
 # TriBusca — entrada de qualquer chat de backend
 
-Atualizado em 27/09/2026. Este arquivo é o ponto de entrada funcional para qualquer chat que mexa em `radar-fiscal-backend`. Leia também [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md), [arquitetura](../docs/ARCHITECTURE.md), [segurança](../docs/SECURITY.md) e a Issue atribuída. O código/schema na main do backend é a fonte da implementação; não copiar trechos de chat como se fossem atuais.
+Atualizado em 30/09/2026. Este arquivo é o ponto de entrada funcional para qualquer chat que mexa em `radar-fiscal-backend`. Leia também [AGENTS.md](../AGENTS.md), [decisões](../DECISIONS.md), [arquitetura](../docs/ARCHITECTURE.md), [segurança](../docs/SECURITY.md) e a Issue atribuída. O código/schema na main do backend é a fonte da implementação; não copiar trechos de chat como se fossem atuais.
 
 ## Estado para escolher a tarefa
 
 A frente priorizada é DOE-SP e permanece aberta até reconstrução e validação produtiva. D-017/D-036 determina page-first; a autorização vigente é **A — reconstruir somente o acervo DOE-SP** (D-052), substituindo B. O draft [PR #73](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/73), head `82f189c84a7b70e1985ed424c1549ae20184df46`, passou CI #432 e reexecução independente; DOE-SP-26 deu parecer favorável. Preflight produtivo DOE-SP-27b: 518 publicações/versões, 569 itens e vínculos run-publication, 3 checkpoints, 94 attachments, zero vínculos externos e zero runs ativas no snapshot. Backup de volume Postgres de 1,4 GB criado em 26/09/2026 15:08 BRT; restauração disponível na UI, sem ensaio. Nenhuma exclusão, merge ou recaptura neste marco. Próximo gate: revisão do procedimento restrito, pausa da fonte, novo preflight/backup e confirmação dos deploys após merge.
+
+## Taxonomia — estado consolidado
+
+A implementação TAX-01→TAX-09 está concluída em código. Backend `main@25c2c42ed43d001dcfa1eb0edc9ce4fa35fffbe7` contém TAX-07, TAX-08 e TAX-09 após reviews independentes favoráveis e merges dos PRs #91, #93 e #95.
+
+Produção, entretanto, ainda não está ativada para TAX-07/08/09: read-back confirmou migrations 001→019, com 020/021 pendentes, e release `v1.0.0` ainda `DRAFT`. O baseline R6 permanece íntegro. O gate produtivo é a [Issue #46](https://github.com/fabiojuniort-cyber/tribusca-control/issues/46) (R3). Não executar migrations 020/021, publicação da release, classificação, candidatos ou matching produtivo fora desse gate.
+
+No snapshot de 30/09/2026, a Issue #46 está bloqueada por operação R3 concorrente DOE-SP no mesmo PostgreSQL. A implementação TAX não deve ser reaberta; apenas o gate de ativação permanece pendente.
 
 ## Regras de continuidade
 
