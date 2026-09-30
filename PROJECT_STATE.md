@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 29/09/2026 (America/Sao_Paulo).
+Atualizado em 30/09/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -34,6 +34,30 @@ O último diagnóstico produtivo comunicado antes do PR #71 apontava bootstrap p
 | [#6 — inventário global de conteúdo oficial](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6) | Aplicar D-017/D-036 por fonte: página integral primeiro, sem download de PDF redundante; PDF/anexo material quando necessário | P1; política global aprovada, adequação individual pendente por conector |
 
 As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de conclusão. O PR #68 também permanecia aberto na consulta de PRs; não incorporar automaticamente POCs, repairs históricos ou mudanças fora da frente DOE-SP.
+
+## Taxonomia TriBusca
+
+**IMPLEMENTAÇÃO TAX-01→TAX-09 CONCLUÍDA EM CÓDIGO; ATIVAÇÃO PRODUTIVA FINAL EM GATE R3 SEPARADO.**
+
+Em 30/09/2026, as três fases finais foram aprovadas por revisão independente e mergeadas sequencialmente no backend:
+- TAX-07 / PR #91 → merge `04c234a22b6fc160393ef3b74ea225413893ce16`;
+- TAX-08 / PR #93 → merge `a9a581a2969899dbf7a37be33b969a842f07152a`;
+- TAX-09 / PR #95 → merge `25c2c42ed43d001dcfa1eb0edc9ce4fa35fffbe7`.
+
+A `main` do backend após a frente TAX está em `25c2c42ed43d001dcfa1eb0edc9ce4fa35fffbe7`. Backend, Worker e Scheduler redeployaram automaticamente com SUCCESS; o Backend mantém `preDeployCommand=[]`, portanto o merge não aplicou migrations.
+
+Read-back produtivo não-AI confirmou:
+- `schema_migrations`: 001→019;
+- migrations 020 (classificação global) e 021 (candidatos) ainda pendentes;
+- baseline R6 íntegro;
+- release `v1.0.0` existente em `DRAFT`;
+- 20 dimensões / 628 conceitos / 55 NEEDS_EVIDENCE / 21 aliases / 23 bindings / relações 7/15/31;
+- manifest `cdbad652dbafddef45193be9f5092ab17cb5097523085135e1f3b2ce00eb85ee`;
+- derivation fingerprint `ac315c0ad591836c8c98c03b04769aa8442ebec5409fd1fc5961dffc04a2414b`.
+
+A ativação produtiva final está na [Issue #46](https://github.com/fabiojuniort-cyber/tribusca-control/issues/46), classificada R3. Ela deverá aplicar 020/021, validar schema/roles/RLS e promover `v1.0.0` de DRAFT para PUBLISHED antes de classificação/matching operacional. No snapshot desta atualização, a Issue #46 está **READY / BLOCKED_BY_CONCURRENT_R3** porque DOE-SP-40 mantém operação R3 no mesmo PostgreSQL. Não executar writes TAX enquanto houver concorrência produtiva DOE-SP.
+
+D-065 permanece obrigatória: Railway AI Agent é proibido.
 
 ## Demais frentes
 
