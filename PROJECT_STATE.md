@@ -37,25 +37,35 @@ As Issues descrevem trabalho ainda não executado. Nenhuma delas é prova de con
 
 ## Taxonomia TriBusca
 
-**IMPLEMENTAÇÃO TAX-01→TAX-09 CONCLUÍDA EM CÓDIGO; ATIVAÇÃO PRODUTIVA FINAL EM GATE R3 SEPARADO.**
+**TAX-01→TAX-09 CONCLUÍDA EM CÓDIGO E ATIVADA EM PRODUÇÃO.**
 
 Em 30/09/2026, as três fases finais foram aprovadas por revisão independente e mergeadas sequencialmente no backend:
 - TAX-07 / PR #91 → merge `04c234a22b6fc160393ef3b74ea225413893ce16`;
 - TAX-08 / PR #93 → merge `a9a581a2969899dbf7a37be33b969a842f07152a`;
 - TAX-09 / PR #95 → merge `25c2c42ed43d001dcfa1eb0edc9ce4fa35fffbe7`.
 
-A `main` do backend após a frente TAX está em `25c2c42ed43d001dcfa1eb0edc9ce4fa35fffbe7`. Backend, Worker e Scheduler redeployaram automaticamente com SUCCESS; o Backend mantém `preDeployCommand=[]`, portanto o merge não aplicou migrations.
+A `main` do backend permanece em `25c2c42ed43d001dcfa1eb0edc9ce4fa35fffbe7`. Backend, Worker e Scheduler estão em SUCCESS.
 
-Read-back produtivo não-AI confirmou:
-- `schema_migrations`: 001→019;
-- migrations 020 (classificação global) e 021 (candidatos) ainda pendentes;
-- baseline R6 íntegro;
-- release `v1.0.0` existente em `DRAFT`;
-- 20 dimensões / 628 conceitos / 55 NEEDS_EVIDENCE / 21 aliases / 23 bindings / relações 7/15/31;
+A ativação produtiva R3 foi concluída na [Issue #46](https://github.com/fabiojuniort-cyber/tribusca-control/issues/46):
+- `schema_migrations`: **001→021**;
+- migration 020: classificação global aplicada;
+- migration 021: UNMAPPED/candidatos aplicada;
+- runtime / worker / curator security verificados em produção;
+- release `v1.0.0` ID `6e6ad5ff-fa6d-45dc-a3ea-ae4c5e4c2f3b` = **PUBLISHED**;
+- `approved_at = published_at = 2026-09-30T04:20:04.829Z`;
+- baseline R6: 20 dimensões / 628 conceitos / 55 NEEDS_EVIDENCE / 21 aliases / 23 bindings / relações 7/15/31;
 - manifest `cdbad652dbafddef45193be9f5092ab17cb5097523085135e1f3b2ce00eb85ee`;
-- derivation fingerprint `ac315c0ad591836c8c98c03b04769aa8442ebec5409fd1fc5961dffc04a2414b`.
+- derivation fingerprint `ac315c0ad591836c8c98c03b04769aa8442ebec5409fd1fc5961dffc04a2414b`;
+- publicação da release reexecutada com resultado `IDEMPOTENT_ALREADY_PUBLISHED`;
+- smoke TAX-07/TAX-08/TAX-09 executado somente dentro de transação com rollback: PASS;
+- RLS TAX-09 com tenant inexistente: 0 perfis visíveis;
+- imutabilidade da release publicada: PASS;
+- contadores de runs/assertions/spans/reviews/UNMAPPED/candidates/links ficaram 0 antes e depois do smoke;
+- nenhum backfill/classificação em massa foi executado nesta ativação.
 
-A ativação produtiva final está na [Issue #46](https://github.com/fabiojuniort-cyber/tribusca-control/issues/46), classificada R3. Ela deverá aplicar 020/021, validar schema/roles/RLS e promover `v1.0.0` de DRAFT para PUBLISHED antes de classificação/matching operacional. No snapshot desta atualização, a Issue #46 está **READY / BLOCKED_BY_CONCURRENT_R3** porque DOE-SP-40 mantém operação R3 no mesmo PostgreSQL. Não executar writes TAX enquanto houver concorrência produtiva DOE-SP.
+A Issue #46 está **CLOSED / completed** e o LOCK TAX-ACT foi liberado. A frente Taxonomia não deve ser reaberta como implementação pendente. Qualquer classificação/backfill futuro pertence a operação própria.
+
+DOE-SP pode retomar somente após adquirir novo LOCK R3 e revalidar seu próprio estado.
 
 D-065 permanece obrigatória: Railway AI Agent é proibido.
 
