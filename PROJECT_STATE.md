@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 30/09/2026 (America/Sao_Paulo).
+Atualizado em 02/10/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -68,6 +68,44 @@ A Issue #46 está **CLOSED / completed** e o LOCK TAX-ACT foi liberado. A frente
 DOE-SP pode retomar somente após adquirir novo LOCK R3 e revalidar seu próprio estado.
 
 D-065 permanece obrigatória: Railway AI Agent é proibido.
+
+## Desempenho do catálogo (PERF-01 / PERF-02)
+
+**CONCLUÍDO E EM PRODUÇÃO.** Estado observado em 02/10/2026 ~02:30 (America/Sao_Paulo). Issue [#55](https://github.com/fabiojuniort-cyber/tribusca-control/issues/55) **CLOSED / completed**.
+
+- Backend [PR #114](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/114) → merge `36e4cbdf55ea5bd709c2bb9a314184845cdea42e` (01/10, 22:50 UTC). O pre-deploy (`db:prepare`) aplicou a **migration `029_catalog_scale.sql`** em ~70 s.
+  - Revisada como `028_catalog_scale`; renumerada sem alteração (sha256 `5dae80d6…5cae8`) porque o NCM-03 levou `028_publication_ncm_scans` à produção antes.
+  - `schema_migrations` = **001→029**.
+- Conteúdo da migration:
+  - flags gravadas `is_hidden`/`is_confaz`;
+  - `title_vector` e `search_vector` com a config `pt_unaccent`;
+  - tabela `publication_source_feed`, mantida por triggers, para o filtro por fonte;
+  - índices ordenados.
+- API: cache de 1 h para os agregados; busca sem acento, por prefixo e em duas etapas (título por padrão, texto completo opcional); contagem limitada ("mais de 10.000").
+- Web: [PR #25](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/25) → `b42afef`, e [PR #28](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/28) → `aeeec71`. O #28 corrigiu Publicações, que reusava os filtros do Acervo, e tornou visível a busca ativa.
+- Preparação R3:
+  - preflight read-only;
+  - dois ensaios em restore PITR da produção (o segundo depois do NCM-03): migration 54–61 s;
+  - validação `ops/catalog/029-validate.sql` com 0 diferenças;
+  - `pg_dump`/`pg_restore` com 0 diferenças.
+- Validação produtiva: `029-validate.sql` read-only com 0 diferenças em todas as fontes; planos usam os índices novos; 0 respostas 5xx. Smoke funcional confirmado pelo responsável.
+- Latência observada em produção (logs, 01/10 23:05 UTC):
+
+  | Endpoint | Tempo |
+  | --- | --- |
+  | `/public/v2/stats` | 0,3 ms |
+  | `/public/v2/sources` | 0,2 ms |
+  | `/api/v2/archive/facets` | 3 ms |
+  | Acervo, página 1 | 8–10 ms |
+  | busca "conv" | 63 ms |
+
+- Infra: volume `postgres-volume` ampliado de 5 GB para **100 GB** pelo responsável (live resize, sem restart). PITR (`Postgres-PITR`) ativo; repositório pgBackRest em `/pgbackrest/cluster-<id>`.
+- Limpeza Railway: Issue [#56](https://github.com/fabiojuniort-cyber/tribusca-control/issues/56) **CLOSED** — removidos 19 temporários `tmp-*` das frentes encerradas (TAX-06, TAX-ACT, smokes) e o volume `postgres-restored`. Mantidos os temporários DOE-SP (Issue #4) e `tmp-auth-01-bootstrap-2` (Issue #17).
+- Pendentes (fora desta frente):
+  - **F6**: `pg_stat_statements`, log de consultas lentas, dimensionamento de RAM;
+  - **F7**: carga histórica do DOU.
+  
+  Plano: `radar-fiscal-backend/docs/catalog-scale-plan.md`.
 
 ## Demais frentes
 
