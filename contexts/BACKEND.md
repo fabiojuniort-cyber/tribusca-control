@@ -27,6 +27,18 @@ A Issue #46 está CLOSED/completed e o LOCK TAX-ACT foi liberado. Não reabrir T
 
 DOE-SP somente pode retomar writes no PostgreSQL após adquirir novo LOCK R3.
 
+## PERF-01/02 — catálogo escalável (em produção desde 01/10/2026)
+
+- Migration `029_catalog_scale.sql` aplicada.
+- Contrato e runbook em `docs/catalog-performance.md`; plano de escala e fases F6/F7 em `docs/catalog-scale-plan.md`.
+- Validação: `ops/catalog/029-validate.sql` (read-only). Ensaio em restore: `ops/catalog/rehearse-029.mjs`, que só roda dentro da Railway.
+- Regras para mudanças futuras:
+  - regras de famílias ocultas e de atos CONFAZ mudam **só por nova migration** (colunas geradas);
+  - escrita em `publication_origins`/`publications` atualiza `publication_source_feed` por trigger;
+  - carga em massa: preferir INSERT multi-linha; ou desligar os triggers do feed, reconstruir e rodar o `029-validate.sql`.
+- Atenção: no backend, **merge em `main` aplica migrations** no pre-deploy (`npm run db:prepare`).
+- Issue de execução: [#55](https://github.com/fabiojuniort-cyber/tribusca-control/issues/55) (CLOSED).
+
 ## Regras de continuidade
 
 - Antes de iniciar: ler a Issue e verificar premissas atuais; usar [contexto do executor](EXECUTOR.md) ou [contexto do revisor](REVIEWER.md).
