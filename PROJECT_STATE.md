@@ -107,6 +107,21 @@ D-065 permanece obrigatória: Railway AI Agent é proibido.
   
   Plano: `radar-fiscal-backend/docs/catalog-scale-plan.md`.
 
+
+### ACT-SCOPE-02 — Filtro de Coleta Configurável
+
+**R2 / GOVERNANÇA EM PREPARAÇÃO — Issue #87. Nenhuma mudança produtiva aplicada neste marco.**
+
+- ACT-SCOPE-02 substitui a Issue #85 / ACT-SCOPE-01 e o backend PR #164, que **não deve ser mergeado**; seus testes úteis serão portados para a nova implementação.
+- Decisões novas a versionar nesta frente: D-067 a D-071.
+- Arquitetura funcional: filtro central e versionado em dois níveis, aplicado a todos os caminhos de entrada; tipo desconhecido = KEEP + Novos tipos; CNPJ/processo/valor isolados não preservam ato.
+- Reuso obrigatório: dou-scope-v4; SUPPRESS/RESTORE em `publication_scope_state` / `publication_scope_events`; planner/executor histórico; contrato normalizado/publication spool; `platform_user_roles`.
+- DOE-SP permanece fora desta frente.
+- Etapas: (0) governança; (1) levantamento read-only; (2) PLATFORM_ADMIN; (3) motor 2 níveis; (4) telas; (5) simulação completa; (6) ativação DOU + Desconsiderados + alertas; (7) SUPPRESS histórico aprovado.
+- Etapa 1 concluída em read-only: 118.871 publicações; 2.374 grupos brutos fonte/seção/tipo; ~2,57 GiB em relações públicas; dou-scope-v4 reavaliou 113.975 publicações sem escrita. Evidência: `docs/workstreams/ACT-SCOPE-02-STAGE-1.md`.
+- Etapa 2 concluída: `PLATFORM_ADMIN` implantado; primeiro admin concedido por ops; backend #167 e Web #71 mergeados. Evidência: `docs/workstreams/ACT-SCOPE-02-STAGE-2.md`.
+- Gate atual: Etapa 3 — motor configurável de 2 níveis. O draft PR #88 segue aberto para consolidar a governança da frente.
+
 ## Demais frentes
 
 - Motor, autenticação/RLS, infraestrutura e fontes federais: entregas reportadas anteriormente; esta atualização não fez revalidação produtiva completa.
