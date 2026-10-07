@@ -216,4 +216,5 @@ Tipo não configurado → ato gravado normalmente e listado em **Filtro de Colet
 
 - **Etapa 0 — Governança:** preparada na Issue #87 e draft PR #88. D-067 a D-071, ROADMAP, PROJECT_STATE e OPEN_QUESTIONS versionados. ACT-SCOPE-01/#85 e backend #164 encerrados como superados. **Merge continua bloqueado até revisão independente material.**
 - **Etapa 1 — Levantamento read-only:** executada em 06/10/2026 BRT. Evidência detalhada em [ACT-SCOPE-02-STAGE-1.md](ACT-SCOPE-02-STAGE-1.md). Resultado: 118.871 publicações, 2.374 grupos brutos fonte/seção/tipo, ~2,57 GiB em relações públicas e dry-run dou-scope-v4 sem escrita.
-- **Gate atual:** aguardar aprovação do responsável da Etapa 1 antes de iniciar a Etapa 2 — PLATFORM_ADMIN.
+- **Etapa 2 — PLATFORM_ADMIN:** concluída. Backend #167 e Web #71 mergeados, migration 036 aplicada em produção e primeiro administrador global concedido por ops. Evidência em [ACT-SCOPE-02-STAGE-2.md](ACT-SCOPE-02-STAGE-2.md).
+- **Etapa 3 — Motor de 2 níveis:** em execução.
