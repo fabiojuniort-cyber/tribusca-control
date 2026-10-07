@@ -125,17 +125,21 @@ D-065 permanece obrigatória: Railway AI Agent é proibido.
 
 ### ACT-SCOPE-02 — Filtro de Coleta Configurável
 
-**R2 / GOVERNANÇA EM PREPARAÇÃO — Issue #87. Nenhuma mudança produtiva aplicada neste marco.**
+**PRODUÇÃO VALIDADA EM 07/10/2026 16:32 BRT; fechamento administrativo pendente da CI final/merge PR183. Avanço estimado99%.** Esta atualização factual R0 substitui somente o snapshot anterior desta frente. Evidências: [Issue87](https://github.com/fabiojuniort-cyber/tribusca-control/issues/87).
 
-- ACT-SCOPE-02 substitui a Issue #85 / ACT-SCOPE-01 e o backend PR #164, que **não deve ser mergeado**; seus testes úteis serão portados para a nova implementação.
-- Decisões novas a versionar nesta frente: D-067 a D-071.
-- Arquitetura funcional: filtro central e versionado em dois níveis, aplicado a todos os caminhos de entrada; tipo desconhecido = KEEP + Novos tipos; CNPJ/processo/valor isolados não preservam ato.
-- Reuso obrigatório: dou-scope-v4; SUPPRESS/RESTORE em `publication_scope_state` / `publication_scope_events`; planner/executor histórico; contrato normalizado/publication spool; `platform_user_roles`.
-- DOE-SP permanece fora desta frente.
-- Etapas: (0) governança; (1) levantamento read-only; (2) PLATFORM_ADMIN; (3) motor 2 níveis; (4) telas; (5) simulação completa; (6) ativação DOU + Desconsiderados + alertas; (7) SUPPRESS histórico aprovado.
-- Etapa 1 concluída em read-only: 118.871 publicações; 2.374 grupos brutos fonte/seção/tipo; ~2,57 GiB em relações públicas; dou-scope-v4 reavaliou 113.975 publicações sem escrita. Evidência: `docs/workstreams/ACT-SCOPE-02-STAGE-1.md`.
-- Etapa 2 concluída: `PLATFORM_ADMIN` implantado; primeiro admin concedido por ops; backend #167 e Web #71 mergeados. Evidência: `docs/workstreams/ACT-SCOPE-02-STAGE-2.md`.
-- Gate atual: Etapa 3 — motor configurável de 2 níveis. O draft PR #88 segue aberto para consolidar a governança da frente.
+- Governança/levantamento/PLATFORM_ADMIN concluídos. ACT-SCOPE-01/Issue85 e backendPR164 foram substituídos; não incorporar a implementação anterior. ControlePR88 já fechado.
+- Motor central DOU de dois níveis, tipo desconhecido KEEP+Novos tipos, auditoria FILTERED_OUT sem conteúdo integral e retenção3meses: backendPR178 merge `ac818d609b4c0c8963642ff1f5470b1865d984bd`; migration041 aplicada.
+- Política APPROVED `cada0d81-95bd-4d18-bd03-66067cc9893c`, v1/r5. FULL_ARCHIVE `2dfb162f-5901-4170-addd-f25627bd7da0`:99.498 itens=25.574KEEP+73.924DISCARD; unknown0.
+- FrontendPR77 merge `35b6efbdad343812b00b27b59159babca81c163b`; CI432/run37637719439 SUCCESS (182 unitários,136 browser/4viewports). Telas de políticas/simulação/Desconsiderados/Novos tipos e isolamento de sessão/cache revisados e publicados. Deploy ACT `bee45924-acc3-42f9-b870-74f4359a3e81` SUCCESS.
+- Smoke real DOU15/07/2026 run `18059cb0-a1b7-4f96-a4fe-d6d85118d597`:2.627itens,775KEEP (772novas publicações+1existente+2novas versões),1.852FILTERED_OUT sem publicação persistida,0erros. Auditoria/política/expiração conferidas;0DOE-SP descartados.
+- Backup/restore PG18 PASS; dump SHA-256 `20acd13cc7eb20d2b7d1d0de8de4dfd3d663965454f95e1f72e90b626189891d`. Ensaio isolado com mesmo executor/manifest PASS.
+- Histórico produtivo deployment `14696fbb-6c38-4615-8267-f397032270e5`, executor revisado `5dbc15f03c0bc36797ff145c4543891c56aab270`, manifest `a43e813460385351b0eaf36e1cb3162fcca1d0f25f01e94f10c42ac89e957a2a`:61.345SUPPRESS com visibilidade normal/RLS+feed0;61.345RESTORE com visibilidade/feed61.345. PASS19:32:14UTC, remaining0/failedChunks0; **estado final RESTORED/IN**.
+- Preservação física:61.345publicações/61.352versões/61.355origens/0arquivos; outside_hash `cce430ca721e8842d54a6adb817ee535` preservado,feed_hash voltou a `6ae2e15c638edd42669458e39dc56c15`;globalOUT23.024;epoch23.026→84.371→145.716. Dos73.924DISCARD,10.743jáOUT e1.836com deriva foram preservados fora do conjunto.
+- Revisão independente favorável ao artefato, ao gate produtivo e ao PASS final. CI1086/run37671991803 SUCCESS. PR183 head README-only `7fc38dcbcd7dfeee7af5d37f867ab1e837059947` com revisão incremental favorável; CI1089/run37674214315 tentativa1 CANCELLED por timeout inicial do runner, tentativa2 solicitada. **Não declarar merge/CI final verde ainda.**
+- Removidos somente os3temporáriosACT:seed/smoke,review ebackup-restore. Inventário confirmou ausência; volume privado `81b881b4-d4fa-4cdb-9293-5f89541917c4` preservado/live/desanexado,30.000MB, com dump/manifest/evidências sem exportação. Outras frentes preservadas.
+- Health pós-operação:APIok/databaseup;backend1/1,worker2/2,scheduler1/1,Postgres1/1 eweb1/1online,0issues/falhas nos serviços centrais;backendpendingWorkvazio. Rota pública frontend/admin/filtro-coleta HTTP200. Não houve smoke visual autenticado em produção; browserCI e visibilidade normal/RLS/feed são as evidências observadas.
+- DOE-SP e outras frentes fora do escopo; nenhum DELETE de publicação; Railway AI Agent não utilizado. Próximo gate:CI1089 verde→mergePR183→registro final/UNLOCK/fechamentoIssue87.
+
 
 ## Demais frentes
 
