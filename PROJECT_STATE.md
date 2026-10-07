@@ -118,7 +118,8 @@ D-065 permanece obrigatória: Railway AI Agent é proibido.
 - Reuso obrigatório: dou-scope-v4; SUPPRESS/RESTORE em `publication_scope_state` / `publication_scope_events`; planner/executor histórico; contrato normalizado/publication spool; `platform_user_roles`.
 - DOE-SP permanece fora desta frente.
 - Etapas: (0) governança; (1) levantamento read-only; (2) PLATFORM_ADMIN; (3) motor 2 níveis; (4) telas; (5) simulação completa; (6) ativação DOU + Desconsiderados + alertas; (7) SUPPRESS histórico aprovado.
-- Gate atual: concluir PR documental em draft e revisão material. Próxima etapa técnica, depois do gate: levantamento somente leitura por fonte/seção/tipo, bytes por tabela e descartes atuais do dou-scope.
+- Etapa 1 concluída em read-only: 118.871 publicações; 2.374 grupos brutos fonte/seção/tipo; ~2,57 GiB em relações públicas; dou-scope-v4 reavaliou 113.975 publicações sem escrita. Evidência: `docs/workstreams/ACT-SCOPE-02-STAGE-1.md`.
+- Gate atual: aprovação do responsável da Etapa 1. Depois: Etapa 2 — `PLATFORM_ADMIN`. O draft PR #88 permanece sem merge até revisão independente material.
 
 ## Demais frentes
 
