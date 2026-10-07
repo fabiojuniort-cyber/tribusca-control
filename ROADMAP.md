@@ -38,7 +38,8 @@ Para cada DOE, exigir fonte oficial, conector independente, identidade determin�
 
 Podem avançar em paralelo aos DOEs:
 1. **taxonomia e marcadores tributários controlados**;
-2. **Perfil Tributário** de empresas e estabelecimentos.
+2. **Perfil Tributário** de empresas e estabelecimentos;
+3. **ACT-SCOPE-02 — Filtro de Coleta Configurável**, em etapas governadas: levantamento read-only → PLATFORM_ADMIN → motor de 2 níveis → telas/configuração → simulação integral → ativação DOU → SUPPRESS histórico aprovado. A frente substitui ACT-SCOPE-01; nenhuma exclusão física é implícita.
 
 Sonar, Revela, Decodifica e outras capacidades dependentes continuam sujeitas às bases necessárias e a Issues próprias. A D-055 não autoriza implementação automática dessas integrações.
 
