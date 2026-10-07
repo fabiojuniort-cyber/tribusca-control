@@ -119,7 +119,8 @@ D-065 permanece obrigatória: Railway AI Agent é proibido.
 - DOE-SP permanece fora desta frente.
 - Etapas: (0) governança; (1) levantamento read-only; (2) PLATFORM_ADMIN; (3) motor 2 níveis; (4) telas; (5) simulação completa; (6) ativação DOU + Desconsiderados + alertas; (7) SUPPRESS histórico aprovado.
 - Etapa 1 concluída em read-only: 118.871 publicações; 2.374 grupos brutos fonte/seção/tipo; ~2,57 GiB em relações públicas; dou-scope-v4 reavaliou 113.975 publicações sem escrita. Evidência: `docs/workstreams/ACT-SCOPE-02-STAGE-1.md`.
-- Gate atual: aprovação do responsável da Etapa 1. Depois: Etapa 2 — `PLATFORM_ADMIN`. O draft PR #88 permanece sem merge até revisão independente material.
+- Etapa 2 concluída: `PLATFORM_ADMIN` implantado; primeiro admin concedido por ops; backend #167 e Web #71 mergeados. Evidência: `docs/workstreams/ACT-SCOPE-02-STAGE-2.md`.
+- Gate atual: Etapa 3 — motor configurável de 2 níveis. O draft PR #88 segue aberto para consolidar a governança da frente.
 
 ## Demais frentes
 
