@@ -1,6 +1,6 @@
 # TriBusca — Estado oficial do projeto
 
-Atualizado em 02/10/2026 (America/Sao_Paulo).
+Atualizado em 07/10/2026 (America/Sao_Paulo).
 
 Este arquivo resume o estado executivo. Issues e PRs registram execução, evidências e decisões. Uma declaração de conclusão produtiva exige os respectivos gates observados na produção.
 
@@ -68,6 +68,21 @@ A Issue #46 está **CLOSED / completed** e o LOCK TAX-ACT foi liberado. A frente
 DOE-SP pode retomar somente após adquirir novo LOCK R3 e revalidar seu próprio estado.
 
 D-065 permanece obrigatória: Railway AI Agent é proibido.
+
+### TAX-HIGHLIGHT — marca-texto da taxonomia no texto da legislação
+
+**MERGE, DEPLOY E RECLASSIFICAÇÃO CONCLUÍDOS; VALIDAÇÃO VISUAL AUTENTICADA `NOT_PROVEN` NESTA SESSÃO. Estado observado em 07/10/2026 ~09:22 BRT.**
+
+- Backend PR #174, head `94bf6eb7511d1f998517cb66def34958d1172fb2`: CI #994 = **SUCCESS**; squash merge `785db306af8d8897abd24712cf6aff6b9cc92fa0`.
+- Web PR #74, head `95767faf1aa727c495cf02e923d8404cb2576541`: Frontend CI #424 = **SUCCESS**; squash merge `0a137d44dc02e656067b44aab56f3bf78fcbab55`.
+- Railway backend deployment `fdc6de09-1806-4701-8d59-448f1fee8ca7` = **SUCCESS** no commit do backend; site deployment `6bab8d44-6b1d-4bc5-8037-12875b477d1f` = **SUCCESS** no commit do web.
+- Executor `taxonomy-v11-validation` foi confirmado inicialmente no comando neutro `taxonomy-v1-1-dry-run.js`, reclassificou somente os dois atos pedidos e foi restaurado ao comando neutro após o run:
+  - Conv. ICMS 100/97 — publicação `4c92f7ce-2e3d-4a61-9524-d4beca0c2af7`: `persisted=true`, release publicada `v1.5.0`, **127 tags**.
+  - Conv. ICMS 52/91 — publicação `07d24640-61a0-45db-8f69-3b064320b2b2`: `persisted=true`, release publicada `v1.5.0`, **55 tags**, incluindo produtos identificados por NCM.
+- Deployment de reclassificação `7c798f1c-ffae-4471-9f9f-a99b170958d2` = **SUCCESS**; configuração do executor voltou para `node dist/infrastructure/database/taxonomy-v1-1-dry-run.js`.
+- Contrato entregue: marcação verde somente na redação vigente; termos das tags e NCMs; tooltip/click de NCM para o Acervo; Mostrar/Ocultar e navegação ‹ ›; produtos por NCM não aparecem como tags normais.
+- **Não foi possível produzir screenshot/contagem visual do DOM autenticado nesta sessão**, pois não há navegador autenticado disponível no canal atual. Não inferir essa validação a partir de CI/deploy; ela permanece como smoke visual manual/por sessão com browser autenticado.
+- Classificação global não foi ligada por esta frente; DOE-SP não foi alterado.
 
 ## Desempenho do catálogo (PERF-01 / PERF-02)
 
