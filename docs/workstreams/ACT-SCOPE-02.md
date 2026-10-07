@@ -211,3 +211,9 @@ Tipo não configurado → ato gravado normalmente e listado em **Filtro de Colet
 - **OPEN_QUESTIONS.md**: registrar pendências que surgirem (ex.: N padrão da janela; meta de desempenho).
 
 - Atualizar o estado no repositório ao fim de cada etapa.
+
+## Estado da execução
+
+- **Etapa 0 — Governança:** preparada na Issue #87 e draft PR #88. D-067 a D-071, ROADMAP, PROJECT_STATE e OPEN_QUESTIONS versionados. ACT-SCOPE-01/#85 e backend #164 encerrados como superados. **Merge continua bloqueado até revisão independente material.**
+- **Etapa 1 — Levantamento read-only:** executada em 06/10/2026 BRT. Evidência detalhada em [ACT-SCOPE-02-STAGE-1.md](ACT-SCOPE-02-STAGE-1.md). Resultado: 118.871 publicações, 2.374 grupos brutos fonte/seção/tipo, ~2,57 GiB em relações públicas e dry-run dou-scope-v4 sem escrita.
+- **Gate atual:** aguardar aprovação do responsável da Etapa 1 antes de iniciar a Etapa 2 — PLATFORM_ADMIN.
