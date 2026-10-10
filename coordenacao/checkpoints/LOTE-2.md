@@ -88,3 +88,11 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - CI rápido no HEAD acima: Typecheck, Build e Unit PASS; PG18 isolado PASS, gate `verify` FAIL só por PR draft (regressão completa bloqueada até Ready for review).
 - Quadro `coordenacao/TAREFAS.md`: L-05/L-07/L-08/L-10 → `REVISAR (aguardando merge)`; commit `62548247a78f553e9dd0c9cd2b3331218a2fe203`. Frente LIMPEZA 7/14 (50%).
 - PRs sem merge, sem deploy, nenhuma exclusão ou mudança na fonte de produção.
+
+
+## LOTE-2 — pré-merge CI integral iniciado (10/10/2026)
+- Governança: L-05, L-07, L-08, L-10 em `REVISAR (aguardando merge)`, commit de quadro `62548247a78f553e9dd0c9cd2b3331218a2fe203`.
+- Backend [#203](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/203) HEAD `adbab0d114dec892a1c952adfeab986d92d958ee`: remoção L-07 com evidência fornecida Fábio/COORD (fonte inativa, run antigo 02/10), 15 arquivos exclusivos deletados; conector DOE-SP atual preservado, sem alterações em banco.
+- [#203](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/203), frontend [#91](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/91) e backend [#202](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/202) passaram a Ready for review para disparar CI integral; **sem merge/deploy**.
+- Benchmark final da L-11: 120.000 DOU sintéticas, 10% alvo, preview **3926 ms**, confirm **3641 ms**, run 38090752117 PG18 PASS. Teste DRAFT com regras bloqueando 051 PASS.
+- Os três CI integrais foram disparados e permanecem pendentes de resultado no momento deste checkpoint. Não confundir CI rápido verde com aprovação do pipeline.
