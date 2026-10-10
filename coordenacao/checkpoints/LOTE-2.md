@@ -96,3 +96,10 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - [#203](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/203), frontend [#91](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/91) e backend [#202](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/202) passaram a Ready for review para disparar CI integral; **sem merge/deploy**.
 - Benchmark final da L-11: 120.000 DOU sintéticas, 10% alvo, preview **3926 ms**, confirm **3641 ms**, run 38090752117 PG18 PASS. Teste DRAFT com regras bloqueando 051 PASS.
 - Os três CI integrais foram disparados e permanecem pendentes de resultado no momento deste checkpoint. Não confundir CI rápido verde com aprovação do pipeline.
+
+
+## Pré-merge: PR #203 CI integral PASS (10/10/2026)
+- PR [#203](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/203) Ready for review, HEAD `adbab0d114dec892a1c952adfeab986d92d958ee`, sem merge/deploy.
+- Full CI [run 38090824865](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38090824865): `verify` **SUCCESS**.
+- Complementares: DOU-CLEAN-02 isolated PG18 **SUCCESS**, ONB-01 migrations/identity/RLS PG18 **SUCCESS**, LOTE-2 isolated PG18 [run 38090824668](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38090824668) **SUCCESS**.
+- Ficam L-05/L-07/L-08/L-10 em REVISAR aguardando merge, com preservação de acervo e histórico. Sem autorização de merge ou produção.
