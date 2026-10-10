@@ -6,7 +6,7 @@ Só o Fábio muda de `AGUARDANDO OK` para `PRONTA`. O EXEC atualiza só o status
 COORD e revisões: Claude Opus 5.5 (chat) / GPT 6.1 Sol Work. Respostas curtas.
 Codex: usar modelo econômico e raciocínio médio; subir só se não resolver. GPT 6 Astra Work só com justificativa.
 
-## Frente LIMPEZA: 7/14 (50%)
+## Frente LIMPEZA: 10/14 (71%)
 Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 
 | ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
@@ -15,13 +15,13 @@ Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 | L-02 | Railway: medir uso de disco por serviço e volume (só leitura) | Tabela serviço → GB → origem provável | Sonnet 5.5 (chat, conector Railway) / GPT 6 chat, se tiver o conector Railway | CONCLUÍDA |
 | L-03 | Railway (manual, Fábio): remover 12 serviços parados sem volume e o volume órfão act-scope-02; dou-clean-02 só se a limpeza DOU estiver concluída. Manter doe-sp-validation, tribusca-site-prototype e doe-sp-31 | Serviços e volumes removidos confirmados pelo Fábio | Manual do Fábio no Railway | CONCLUÍDA |
 | L-04 | Coleta só do dia corrente; reprocessar ontem apenas se o run de ontem falhou. DOE-SP hoje olha 3 dias; RFB, 7 | Run de hoje não busca datas anteriores; teste cobre a exceção "ontem falhou" | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA |
-| L-05 | DOE-SP: parar de baixar o PDF autenticado por publicação (HTML basta; preflight: 0 publicações dependem de PDF) | Run sem chamadas a `downloadAuthenticatedPdf` | Sonnet 5.5 (Claude Code) / Codex | REVISAR (aguardando merge) |
+| L-05 | DOE-SP: parar de baixar o PDF autenticado por publicação (HTML basta; preflight: 0 publicações dependem de PDF) | Run sem chamadas a `downloadAuthenticatedPdf` | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA |
 | L-06 | Localizar e remover a validação de certificado digital do PDF (não achada no backend `main`; checar web e branches) | Código removido ou confirmado inexistente | Haiku 5.5 (Claude Code) para localizar; Sonnet 5.5 se houver remoção / Codex + subagentes | CONCLUÍDA |
-| L-07 | DOE-SP legado: desativar e remover o conector se não for usado em produção | Fora do registry e sem source ativa | Sonnet 5.5 (Claude Code) / Codex | REVISAR (aguardando merge) |
-| L-08 | Testes órfãos (nunca rodam): `onboarding-identity.unit`, `publication.presentation.integration`, `tax13.scoped-presentation.unit` | Incluídos no CI ou apagados | Haiku 5.5 (Claude Code) / Codex | REVISAR (aguardando merge) |
+| L-07 | DOE-SP legado: desativar e remover o conector se não for usado em produção | Fora do registry e sem source ativa | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA |
+| L-08 | Testes órfãos (nunca rodam): `onboarding-identity.unit`, `publication.presentation.integration`, `tax13.scoped-presentation.unit` | Incluídos no CI ou apagados | Haiku 5.5 (Claude Code) / Codex | CONCLUÍDA (2 testes incluídos; TAX13 reservado à L-16) |
 | L-09 | Inventário de `ops/`, scripts npm (83) e docs: marcar o que é histórico para arquivar | Lista com "manter / arquivar" aprovada | Sonnet 5.5 (Claude Code) + subagentes Haiku 5.5 / Codex + subagentes | AGUARDANDO OK |
-| L-10 | Retenção de `collection_items` (1 GB, 528 mil linhas): manter só os últimos 30 dias | Tabela só com 30 dias; rotina simples de limpeza aprovada | Sonnet 5.5 (Claude Code) / Codex | REVISAR (aguardando merge) |
-| L-11 | Classificação imediata de novos tipos e edição de Modo, com exclusão das publicações descartadas e remoção de rascunhos/simulações/aprovação | Popup Classificar com Fonte/Seção/Tipo/Modo; confirmação indica X publicações; aplicação imediata, exclusão segura em lotes, audit log com IDs; PLATFORM_ADMIN; preservar motor existente, termo tributário e termo forte | Sonnet 5.5 (Claude Code) / Codex | EM ANDAMENTO (GPT-EXEC-2; PRs backend/web Ready for review, CI integral PASS, sem merge/deploy) |
+| L-10 | Retenção de `collection_items` (1 GB, 528 mil linhas): manter só os últimos 30 dias | Tabela só com 30 dias; rotina simples de limpeza aprovada | Sonnet 5.5 (Claude Code) / Codex | REVISAR (limpeza real somente após OK do Fábio) |
+| L-11 | Classificação imediata de novos tipos e edição de Modo, com exclusão das publicações descartadas e remoção de rascunhos/simulações/aprovação | Popup Classificar com Fonte/Seção/Tipo/Modo; confirmação indica X publicações; aplicação imediata, exclusão segura em lotes, audit log com IDs; PLATFORM_ADMIN; preservar motor existente, termo tributário e termo forte | Sonnet 5.5 (Claude Code) / Codex | REVISAR (aguardando primeira classificação em produção) |
 | L-12 | Analisar o filtro: 124 mil publicações parecem demais para conteúdo tributário (só análise) | Relatório curto: volume por fonte e % fora de escopo | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA |
 
 | L-13 | Triar PRs backend/web: fechar #187/#188 backend e #80/#87 web com comentário; analisar 10 condicionais sem fechar; inventariar migrations e colisões | 4 fechamentos comprovados, 10 recomendações fundamentadas e inventário de migrations | Claude Sonnet 5.5 (Claude Code) / Codex para PRs; GPT 6 chat para análise | CONCLUÍDA |
