@@ -6,7 +6,7 @@ Só o Fábio muda de `AGUARDANDO OK` para `PRONTA`. O EXEC atualiza só o status
 COORD e revisões: Claude Opus 5.5 (chat) / GPT 6.1 Sol Work. Respostas curtas.
 Codex: usar modelo econômico e raciocínio médio; subir só se não resolver. GPT 6 Astra Work só com justificativa.
 
-## Frente LIMPEZA: 3/13 (23%)
+## Frente LIMPEZA: 3/12 (25%)
 Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 
 | ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
@@ -21,10 +21,17 @@ Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 | L-08 | Testes órfãos (nunca rodam): `onboarding-identity.unit`, `publication.presentation.integration`, `tax13.scoped-presentation.unit` | Incluídos no CI ou apagados | Haiku 5.5 (Claude Code) / Codex | AGUARDANDO OK (proposta entregue; sem código) |
 | L-09 | Inventário de `ops/`, scripts npm (83) e docs: marcar o que é histórico para arquivar | Lista com "manter / arquivar" aprovada | Sonnet 5.5 (Claude Code) + subagentes Haiku 5.5 / Codex + subagentes | AGUARDANDO OK |
 | L-10 | Retenção de `collection_items` (1 GB, 528 mil linhas): manter só os últimos 30 dias | Tabela só com 30 dias; rotina simples de limpeza aprovada | Sonnet 5.5 (Claude Code) / Codex | REVISAR (proposta entregue; sem código) |
-| L-11 | Remover as simulações do filtro de coleta (`collection_filter_simulation_items`, 471 MB, e o código) | Tabela e código removidos; filtro de produção intacto | Sonnet 5.5 (Claude Code) / Codex | REVISAR (Fábio escolheu B; aprovação sem simulação a definir antes da remoção) |
 | L-12 | Analisar o filtro: 124 mil publicações parecem demais para conteúdo tributário (só análise) | Relatório curto: volume por fonte e % fora de escopo | Sonnet 5.5 (Claude Code) / Codex | EM ANDAMENTO (CLAUDE-EXEC, aguardando prints) |
 
 | L-13 | Triar PRs backend/web: fechar #187/#188 backend e #80/#87 web com comentário; analisar 10 condicionais sem fechar; inventariar migrations e colisões | 4 fechamentos comprovados, 10 recomendações fundamentadas e inventário de migrations | Claude Sonnet 5.5 (Claude Code) / Codex para PRs; GPT 6 chat para análise | REVISAR (GPT-EXEC-2; 4 PRs fechados; 10 condicionais e migrations triados) |
+
+## Próxima frente (após LIMPEZA)
+
+| ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
+|---|---|---|---|---|
+| L-11 | Remover as simulações do filtro de coleta (`collection_filter_simulation_items`, 471 MB, e o código) | Tabela e código removidos; filtro de produção intacto | Sonnet 5.5 (Claude Code) / Codex | AGUARDANDO OK |
+
+Proposta registrada (não aprovada, sem implementação): validar rascunho, exigir confirmação explícita do PLATFORM_ADMIN e preservar aprovação atômica com auditoria antes de remover as simulações. A opção B anterior está suspensa; aguardar decisão do Fábio via CLAUDE-COORD.
 
 Nota: as duas migrations `033_*` já aplicadas **não** devem ser renomeadas. Regra daqui pra frente: numeração única.
 
