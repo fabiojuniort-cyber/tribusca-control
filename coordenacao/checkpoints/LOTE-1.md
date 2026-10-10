@@ -21,8 +21,14 @@
 - [x] L-13 adicionada ao quadro como REVISAR; L-04 segue EM ANDAMENTO; frente ajustada 3/13 (23%). Somente L-05/07/08/10/11 receberam indicação de proposta entregue, sem código. Outras tarefas preservadas.
 - [x] Quadro atualizado via dois commits GitHub: 2718bdcc3fb912e9cf8310f9b05e1df29b4b7c1e e 73e50f27d1103b38ea0728ad6423d3a31f53d778; PR #104 permanece aberto, sem merge.
 
+
+## Decisões do Fábio (10/10/2026, 14:34 BRT)
+- L-11: opção B escolhida. ANTES da remoção das simulações, definir e aprovar mecanismo substituto de autorização de filtros. Proposta mínima a revisar: validar o DRAFT e a revisão exata, exigir confirmação explícita por PLATFORM_ADMIN, registrar audit_log e publicar atomicamente como APPROVED substituindo a anterior, sem depender da tabela de simulações. A função atual collection_filter_approve_draft(UUID) em migrations/039_collection_filter_simulation_review.sql exige simulação COMPLETED e FULL_ARCHIVE na primeira aprovação, e retorna simulation_id; não remover as tabelas/funções antes de migrar essa dependência. Nenhuma implementação feita.
+- L-04: opção B escolhida. Verificação automática ÚNICA agendada para 10/10/2026, aproximadamente 16:00 BRT (19:00 UTC), após o run agendado às 18:00 UTC. O agendamento foi confirmado pelo serviço de tarefas; verificação somente leitura, sem disparar coleta nem alterar produção. Se não houver dados suficientes, retornar pendência, NÃO concluir L-04.
+- Quadro TAREFAS.md atualizado nas linhas L-04 e L-11; commit d3f5325e02335a327b3b9625f265198cf63c0ad1.
+
 ## Próximo passo
-Conferir evidências A após o run agendado de 18:00 UTC. A parte A está pendente porque o horário do run ainda não havia ocorrido na leitura de 14:22:58 BRT (17:22:58 UTC). Nunca atribuir IDs/status/versions sem prova. Parte A depende de execução futura.
+Consultar o retorno da verificação automática agendada após 18:00 UTC. Se não comprovar todas as evidências A, deixar L-04 EM ANDAMENTO e encaminhar ao COORD. Desenhar/aprovar o gate L-11 ANTES de qualquer remoção de simulação. Nunca atribuir IDs/status/versions sem prova. Parte A depende de execução futura.
 
 ## Atenção
 O PR #104 ainda está aberto na branch chore/protocolo-v1. Não fazer merge. L-04 permanece aberta; lookback=2 não impede bootstrap/backfill.
