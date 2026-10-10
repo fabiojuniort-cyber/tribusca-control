@@ -49,3 +49,10 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 3. MANTER enquanto houver gate aberto: `ops/dou-clean-02/runner` de backup/restore e smoke, scripts DOE-SP rebuild vinculados aos PRs #76/#128, ferramentas de migração/checkpoint e manifesto da taxonomia.
 4. Registrar classificação manter/arquivar/indefinido por caminho e script com última referência na main, owner funcional, PR/Issue dependente e plano reversível de arquivamento.
 5. Submeter inventário para aprovação do Fábio/COORD antes de mover/deletar arquivos; nenhum arquivo arquivado nesta tarefa.
+
+## Checkpoint 3 — CI executado e diagnóstico L-08
+- PR backend [#203](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/203) DRAFT. Runner isolado PostgreSQL18 run `38089080870`: SUCCESS no HEAD `8037297bc1c8017af2ea40c3f42bc4b4b2f40948` — build, unit DOE-SP L-05, PG18, integração L-05/L-08/L-10 e CLI dry-run.
+- CI rápido run `38089080815`: Typecheck PASS, build PASS; testes unitários 619 PASS / 2 FAIL, ambos do arquivo TAX13 órfão L-08 incluído no script, e gate draft bloqueia regressão plena.
+- Falhas TAX13 **não ocultadas**: `TAX13 scoped: saved official CV100/97 and CV52/91 strip editorial history` (conteúdo editorial de histórico no texto operativo); `TAX13 F1 R2: nested P annex title inherits TH/TD revocation or unverified status` (NCM 8450.11.00 indevidamente presente em anexo revogado). Corrigir classificação jurídica excede o escopo do LOTE-2; encaminhar frente TAX13/COORD, não desativar testes.
+- L-07 preflight ainda sem `SELECT code,is_active,connector_key,schedule_cron FROM sources WHERE code='doe-sp-legado'` validado contra produção nem `SELECT status FROM collection_runs ...` para pendências. Não fechar/remove conector até evidência direta de inatividade; zeros de logs não equivalem a inatividade.
+- Sem alterações produtivas, sem SQL, merge ou deploy; CI integral não aprovado. L-05, L-08, L-10 implementadas em DRAFT com gates/pendências. L-07 bloqueada.
