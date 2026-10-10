@@ -27,6 +27,15 @@ Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 | L-13 | Triar PRs backend/web: fechar #187/#188 backend e #80/#87 web com comentário; analisar 10 condicionais sem fechar; inventariar migrations e colisões | 4 fechamentos comprovados, 10 recomendações fundamentadas e inventário de migrations | Claude Sonnet 5.5 (Claude Code) / Codex para PRs; GPT 6 chat para análise | CONCLUÍDA |
 | L-15 | Apagar as ~23 mil publicações DOU OUT_OF_SCOPE, com backup antes | Proposta aprovada pelo Fábio | Sonnet 5.5 / Codex | PRONTA (só proposta) |
 
+Nota L-15: proposta atual autorizada pelo Fábio — backup MANUAL pelo Railway na aba Backups antes da execução; contagem via dry-run; exclusão em lotes reutilizando o purge da L-11; OK explícito do Fábio antes de executar. Sem restore isolado e sem revisão independente específica nesta proposta. Nenhuma exclusão autorizada nesta etapa.
+
+
+## Próxima frente
+
+| ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
+|---|---|---|---|---|
+| L-16 | Corrigir as 2 falhas TAX13 (Convênios 100/97 e 52/91; anexo revogado NCM 8450.11.00) | `tax13.scoped-presentation.unit.test.ts` volta ao CI e passa | Sonnet 5.5 / Codex | AGUARDANDO OK |
+
 L-11 ampliada por CLAUDE-COORD (autorizado por Fábio): aplicar regras de Fonte/Seção/Tipo/Modo imediatamente, recadastrar novos tipos e editar Modo em Tipos; prévia de exclusão X, remover fisicamente publicações elegíveis conforme a regra com audit log (tipo, modo, contagem e IDs), exclusivamente PLATFORM_ADMIN; remover rascunho/simulação/aprovação via migration NOVA 051; preservar motor atual, termos tributários e termos fortes. Proposta apenas; implementação depende do OK do Fábio. Restrições técnicas: publicação com scope events/state append-only/RESTRICT e outras referências não pode ser apagada sem resolução legal de dependências; não contornar constraints.
 
 Nota: as duas migrations `033_*` já aplicadas **não** devem ser renomeadas. Regra daqui pra frente: numeração única.
