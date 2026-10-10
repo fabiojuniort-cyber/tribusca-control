@@ -2,7 +2,7 @@
 - DE: CLAUDE-COORD
 - EXEC atual: GPT-EXEC-2
 - Atualizado: 2026-10-10 (America/Sao_Paulo)
-- Avanço: 2/4 partes completas (50%)
+- Avanço: 3/4 partes completas (75%)
 - Frente LIMPEZA: 3/13 (23%) — L-13 incluída no denominador após atualização do quadro
 
 ## A — Runs L-04
@@ -18,11 +18,11 @@
 - [x] L-05, L-07, L-08, L-10, L-11: propostas de até cinco linhas com arquivos/testes, sem alteração de código. L-07 exige fonte inativa; L-11 depende da substituição aprovada do gate de simulação.
 
 ## D — Governança
-- [ ] Adicionar L-13 a TAREFAS.md; atualizar somente a própria linha L-13 e L-04, preservando demais.
-- [ ] Revisar checksum/head/PR, retornar ao COORD.
+- [x] L-13 adicionada ao quadro como REVISAR; L-04 segue EM ANDAMENTO; frente ajustada 3/13 (23%). Somente L-05/07/08/10/11 receberam indicação de proposta entregue, sem código. Outras tarefas preservadas.
+- [x] Quadro atualizado via dois commits GitHub: 2718bdcc3fb912e9cf8310f9b05e1df29b4b7c1e e 73e50f27d1103b38ea0728ad6423d3a31f53d778; PR #104 permanece aberto, sem merge.
 
 ## Próximo passo
-Atualizar quadro D; confirmar horário do run A sem inventar evidências. Nenhuma intervenção produtiva. Parte A depende de execução futura.
+Conferir evidências A após o run agendado de 18:00 UTC. A parte A está pendente porque o horário do run ainda não havia ocorrido na leitura de 14:22:58 BRT (17:22:58 UTC). Nunca atribuir IDs/status/versions sem prova. Parte A depende de execução futura.
 
 ## Atenção
 O PR #104 ainda está aberto na branch chore/protocolo-v1. Não fazer merge. L-04 permanece aberta; lookback=2 não impede bootstrap/backfill.
