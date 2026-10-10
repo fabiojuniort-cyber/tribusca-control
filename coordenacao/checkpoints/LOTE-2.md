@@ -156,3 +156,9 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - **#91 web** MERGED `658616a8361d0226d141fc51595347323dae0e7c`. Railway projeto `tribusca-web-preview-web05`, serviço `web05-preview`, deploy `e214c670-b589-4e27-bb6d-53ca9db46355` SUCCESS, ONLINE, commit pin atualizado para SHA do merge. **ATENÇÃO:** esse é serviço de preview Railway; a atualização do domínio público `trifaros.com.br` não foi verificada com conector do host da produção web. CI push de main foi acionado e estava em andamento na leitura inicial.
 - Quadro atualizado L-05, L-07 e L-08 → CONCLUÍDA (observação: teste TAX13 continua fora da suíte até L-16); L-10 → REVISAR (limpeza real depende de OK Fábio); L-11 → REVISAR (primeira classificação em produção pendente). Frente LIMPEZA **10/14 (71%)**. Commit do quadro `369b51558072d70d5372dc70e26aff8dd5cbe430`.
 - Sem rollback. Não rodou `db:prune-collection-items --apply`, não houve classificação em produção, não houve purge DOU OUT_OF_SCOPE L-15.
+
+
+## Verificação final — frontend CI main e status (10/10/2026)
+- GitHub Actions frontend `validate` do SHA de merge #91 `658616a8361d0226d141fc51595347323dae0e7c`: **SUCCESS**, job `114336970605`, run `38094321007`. Inclui Typecheck, Test, Build e browser Playwright.
+- Railway serviço `web05-preview` deployment `e214c670-b589-4e27-bb6d-53ca9db46355`: **SUCCESS**, serviço ONLINE na revisão final. É um preview; verificação da aplicação no domínio público não foi possível (endereço externo inacessível via consulta), portanto não declarar hospedagem pública confirmada.
+- Railway backend/worker/scheduler todos SUCCESS e ONLINE, sem incidentes de implantação nas verificações de ambiente. Nenhum rollback, nenhuma limpeza de 30 dias, nenhuma purga DOU, nenhuma primeira classificação.
