@@ -117,3 +117,12 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - **#202 backend** Ready for review, HEAD `f42918ff5c514f7a84d3a4a2af601888b9b8d2cc`; verify CI integral job `114328808706` SUCCESS ([run 38091539028](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38091539028)); PG18 L11 [run 38091538871](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38091538871) SUCCESS. Tempos finais preview **9787 ms**, confirmação **9400 ms**, 120k/10%. ONB/DOU complementares acionados e status a conferir.
 - **Quadro L-05/L-07/L-08/L-10:** REVISAR (aguardando merge), commit `62548247a78f553e9dd0c9cd2b3331218a2fe203`, Frente LIMPEZA **7/14 (50%)**.
 - **BLOQUEIO:** sem autorização de merge, deploy, operações produtivas ou purga real, apesar de CI verde. A revisão funcional/segurança e a liberação são decisões separadas do COORD.
+
+
+## CI íntegro pré-merge: all SUCCESS (10/10/2026)
+- #202 backend HEAD `f42918ff5c514f7a84d3a4a2af601888b9b8d2cc`: Ready; verify FULL SUCCESS, L11 PG18 SUCCESS, ONB-01 PG18 SUCCESS, DOU-CLEAN-02 PG18 SUCCESS.
+- #91 frontend HEAD `53ab6c2fb9577821efd541640ae4c8fccf80211d`: Ready; validate FULL SUCCESS inclusive Playwright 4 viewports.
+- #203 backend HEAD `adbab0d114dec892a1c952adfeab986d92d958ee`: Ready; verify FULL SUCCESS, LOTE2 PG18 SUCCESS, ONB-01 PG18 SUCCESS, DOU-CLEAN-02 PG18 SUCCESS.
+- L11 benchmark final com 120k DOU sintéticas/10% selecionadas: preview 9787ms, confirm 9400ms, seed 20783ms, limite 60s, todos os tempos no HEAD final verificados no run 38091538871.
+- L05/L07/L08/L10 permanecem REVISAR (aguardando merge). L07 removido do código com base no preflight confirmado pelo Fábio (inativo; único run último em 2026-10-02). Nenhuma tabela, publicação ou histórico da produção alterado.
+- Protocolo encerrado para entrega ao COORD; **NÃO MERGEAR, NÃO DEPLOYAR** até autorização expressa.
