@@ -80,3 +80,11 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - L-07 NÃO IMPLEMENTADA: nenhum print/arquivo da consulta doe-sp* acessível nesta conversa. `is_active=false` + ausência de runs nos últimos sete dias não comprovados simultaneamente; não inferir a partir de logs.
 - Parte 3: board L-16 AGUARDANDO OK na seção Próxima frente; L-15 proposta anterior substituída pelo backup manual Railway Backups, dry-run, purge L-11 em lotes e OK expresso do Fábio. Sem restore isolado e sem revisão independente específica conforme decisão COORD. Commit inicial board `df0438f141813c21928b392c019d23cf71cc1e85`.
 - Todos três PRs seguem DRAFT e SEM merge/deploy. A frente LIMPEZA permanece 7/14 (50%). Retorno único ao COORD só com evidências observadas.
+
+
+## LOTE-2 pré-merge — L-07 e quadro (10/10/2026)
+- Evidência operacional **fornecida pelo Fábio via CLAUDE-COORD**: `doe-sp-legado.is_active=false`, um run total, último em 2026-10-02; critério autorizado para remoção (não é leitura SQL nova do executor).
+- PR backend [#203](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/203) commit `adbab0d114dec892a1c952adfeab986d92d958ee`: removidos registro do conector legado no registry, 15 arquivos exclusivos de módulos/scripts/testes, scripts npm de ativação/pilot/benchmark; novo teste comprova que registry não oferece `doe-sp-legacy` e preserva `doe-sp` e `rfb-normas`. Banco histórico e publicações não tocados.
+- CI rápido no HEAD acima: Typecheck, Build e Unit PASS; PG18 isolado PASS, gate `verify` FAIL só por PR draft (regressão completa bloqueada até Ready for review).
+- Quadro `coordenacao/TAREFAS.md`: L-05/L-07/L-08/L-10 → `REVISAR (aguardando merge)`; commit `62548247a78f553e9dd0c9cd2b3331218a2fe203`. Frente LIMPEZA 7/14 (50%).
+- PRs sem merge, sem deploy, nenhuma exclusão ou mudança na fonte de produção.
