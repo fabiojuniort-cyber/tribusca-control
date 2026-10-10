@@ -72,3 +72,11 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - L-08 backend PR #203: removido temporariamente `tax13.scoped-presentation.unit.test.ts` de npm test; arquivo retido com comentário apontando L-16, sem adulterar asserções. Commits `3c973625f6dbc41de45b430f6b66904936f3d148`, `a52d88a1d5dfef44ec0ef42e7832b10bd158392c`.
 - L-07: print de consulta mencionado no pedido não consta dos arquivos da conversa nem foi recuperado; consulta `sources.is_active` e existência de runs últimos 7 dias não comprovadas. **Não remover** conector legado sem preflight.
 - Continua proibido merge/deploy/exclusão em produção; os próximos checkpoints incluirão CI e tempos medidos.
+
+## Checkpoint final — retorno integrado L-11 + LOTE-2 (10/10/2026)
+- Parte 1 L-11 backend PR #202 HEAD `16a83a7fafe473539299cb26620d9860f9ca1713` DRAFT, PostgreSQL18 isolado **PASS** run `38089759512`. Benchmark 120k DOU sintéticas: seed 24529 ms, **preview 147752 ms > 60s**, confirm 8812 ms < 60s. Modo KEEP_ALWAYS sem apagar 120k. Proposta de lotear somente documentada no checkpoint L-11, não implementada.
+- Parte 1 L-11 web PR #91 HEAD `2ff6eab0e3839dd254c6059a47d8bf00d8264d7f` DRAFT; texto agregado `Y protegidas (não serão apagadas)`, motivo de vínculo empresarial e/ou origem externa. Typecheck/Test/Build PASS; gate final FAIL pela política draft.
+- Parte 2 PR #203 HEAD `a52d88a1d5dfef44ec0ef42e7832b10bd158392c` DRAFT: teste TAX13 isolado retirado da suíte por ordem do COORD e comentário `L-16` no arquivo. Permanecem onboarding-identity.unit e publication.presentation.integration. Typecheck/Build/Unit PASS; PG18 isolated PASS; gate geral FAIL pela política draft.
+- L-07 NÃO IMPLEMENTADA: nenhum print/arquivo da consulta doe-sp* acessível nesta conversa. `is_active=false` + ausência de runs nos últimos sete dias não comprovados simultaneamente; não inferir a partir de logs.
+- Parte 3: board L-16 AGUARDANDO OK na seção Próxima frente; L-15 proposta anterior substituída pelo backup manual Railway Backups, dry-run, purge L-11 em lotes e OK expresso do Fábio. Sem restore isolado e sem revisão independente específica conforme decisão COORD. Commit inicial board `df0438f141813c21928b392c019d23cf71cc1e85`.
+- Todos três PRs seguem DRAFT e SEM merge/deploy. A frente LIMPEZA permanece 7/14 (50%). Retorno único ao COORD só com evidências observadas.
