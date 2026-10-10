@@ -29,9 +29,9 @@ Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 
 | ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
 |---|---|---|---|---|
-| L-11 | Remover as simulações do filtro de coleta (`collection_filter_simulation_items`, 471 MB, e o código) | Tabela e código removidos; filtro de produção intacto | Sonnet 5.5 (Claude Code) / Codex | AGUARDANDO OK |
+| L-11 | Remover as simulações do filtro de coleta (`collection_filter_simulation_items`, 471 MB, e o código) | Tabela e código removidos; filtro de produção intacto | Sonnet 5.5 (Claude Code) / Codex | PRONTA (Fábio decidiu remover simulações; sem mecanismo substituto; implementação via Codex) |
 
-Proposta registrada (não aprovada, sem implementação): validar rascunho, exigir confirmação explícita do PLATFORM_ADMIN e preservar aprovação atômica com auditoria antes de remover as simulações. A opção B anterior está suspensa; aguardar decisão do Fábio via CLAUDE-COORD.
+Decisão do Fábio: REMOVER as simulações do filtro e suas dependências, sem criar mecanismo substituto. A aprovação existente deverá deixar de exigir simulação, preservando autorização PLATFORM_ADMIN, operação atômica e audit_log. Implementação e exclusão de dados dependem de PR, testes, revisão e autorização de produção; ainda não realizadas.
 
 Nota: as duas migrations `033_*` já aplicadas **não** devem ser renomeadas. Regra daqui pra frente: numeração única.
 
