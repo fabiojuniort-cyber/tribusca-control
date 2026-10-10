@@ -22,6 +22,11 @@ Todo chat se identifica na primeira linha de cada resposta: `<MODELO>-<PAPEL>` (
 - Item sem evidência (arquivo, teste, run, commit) conta como não feito.
 - Não trocar a solução pedida por outra sem aprovação. Ideias extras vão em "Sugestões", sem implementar.
 
+## Qual modelo rodar (economia de token)
+- Cada tarefa em `TAREFAS.md` tem a coluna **Rodar em**, com a opção Claude e a opção GPT. O Fábio escolhe conforme o limite de uso.
+- Regra: o modelo **mais barato que resolve**. Modelo forte só para coordenar, revisar ou decidir.
+- Todo prompt pronto começa com a linha: `RODAR EM: Claude <modelo> (<superfície>) | GPT <versão>`.
+
 ## Subagentes
 - Usar quando pertinente: partes **independentes** que podem rodar em paralelo (ex.: ler código e consultar Railway), ou leitura/varredura grande que poluiria o contexto principal (ex.: inventários).
 - Não usar em tarefa pequena ou sequencial: custa mais tokens do que economiza.
@@ -52,5 +57,6 @@ Bloqueio: <ou "nenhum">
 Sugestões (não implementadas): <ou "nenhuma">
 Próxima ação: <uma frase>
 Prompt pronto (PARA: <chat>):
+RODAR EM: Claude <modelo> (<superfície>) | GPT <versão>
 <texto pronto para colar>
 ```
