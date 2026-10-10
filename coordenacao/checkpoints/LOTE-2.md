@@ -36,13 +36,12 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - Workflow CI PostgreSQL18 isolado para L-05/L-08/L-10 no PR draft, commit `6a364389d0bc102419dbf5d97d69098a7e403728`.
 - L-07 permanece BLOQUEADA pelo preflight: Railway scheduler não mostrou `doe-sp-legado` entre 01/10 e 10/10, e seed usa inactive por default, mas `sources.is_active` e runs manuais pendentes não são verificáveis sem consulta SQL real. NENHUMA remoção do conector iniciada. O bloqueio será preservado até evidência.
 
-### L-15 — proposta, até cinco linhas, SEM código
-1. Ler em modo somente leitura os candidatos DOU `OUT_OF_SCOPE` (~23 mil é estimativa), versão do escopo, origens, vínculos cliente e todas as dependências para obter contagem real e bloqueios.
-2. Fazer backup restaurável do PostgreSQL + prova de restauração isolada, manifesto IDs/hashes/contagens e opção de rollback; não confiar apenas no indicador PITR.
-3. Reaproveitar o padrão seguro da L-11 para exclusão transacional em lotes, **somente** dos DOU `OUT_OF_SCOPE` sem vínculos de cliente/empresas e sem origens de outras fontes, tratando scope events, versões, origens e evidências em ordem.
-4. Dry-run primeiro, reconfirmação se a seleção mudar, limite de lote e trilha de auditoria de IDs excluídos, assinaturas/hash antes/depois e evidência jurídica de preservação de bloqueados.
-5. PR e revisão independente/adversarial + teste de rollback em PostgreSQL 18 antes de qualquer execução produtiva; **não executar nem apagar agora**.
-
+### L-15 — proposta SUBSTITUTIVA aprovada pelo Fábio (SEM código)
+1. Antes de executar, Fábio fará backup **manual** do PostgreSQL no Railway, pela aba **Backups**, e confirmará sua conclusão.
+2. Executar dry-run somente leitura para contagem real de publicações DOU `OUT_OF_SCOPE`, IDs, dependências e bloqueios; não tratar ~23 mil como total confirmado.
+3. Após o backup, reaproveitar a rotina de purge da L-11 para excluir em lotes, preservando proteções existentes para vínculo a empresa e outras fontes.
+4. Exigir novo **OK explícito do Fábio** sobre contagem e operação antes da primeira exclusão; registrar IDs, totais e auditoria.
+5. Esta proposta **não exige restore isolado nem revisão independente adicional**, por decisão expressa do Fábio. Não há autorização de execução nesta tarefa.
 ### L-09 — proposta, até cinco linhas, SEM código
 1. Inventariar 63 arquivos em `ops/`, 83 scripts npm e 44 arquivos em `docs/` na main atual, com consumidores CI, scripts chamados e dependências de rollback.
 2. Candidatos para ARQUIVAR (se não usados): `ops/act-scope-02/` concluído, ensaios `ops/doe-sp/rehearsal`, pilotos `ops/doe-sp-legacy`, benchmarks `ops/perf/`, `benchmark:doe-sp-pdf` e relatórios históricos de fases.
@@ -65,3 +64,11 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - L-09 e L-15: propostas de cinco linhas SEM CÓDIGO documentadas acima. ~23 mil DOU OUT_OF_SCOPE é estimativa informada, não volume comprovado; backup restaurável é gate da L-15, nunca executado.
 - Frente LIMPEZA 7/14 (50%) por ordem COORD; L-04 e L-13 CONCLUÍDA; L-15 PRONTA (só proposta). O fato de L-04 estar CONCLUÍDA é decisão COORD, e não nova comprovação independente dos checkpoints de consulta.
 - Encaminhar: desbloquear L-07 somente após preflight SQL read-only, direcionar falhas TAX13 à frente responsável, manter #203 DRAFT e sem merge/deploy.
+
+## Checkpoint 4 — solicitação de ajustes do CLAUDE-COORD (10/10/2026)
+- Quadro: adicionada L-16 na seção Próxima frente, **AGUARDANDO OK**, sem alterar LIMPEZA 7/14 (50%); decisão L-15 registrada. Commit `df0438f141813c21928b392c019d23cf71cc1e85`.
+- L-11 backend PR #202: migration 051 agora aborta com `L11_MIGRATION_BLOCKED_CONFIGURED_DRAFT` e detalhe id/versão/contagens se DRAFT contiver regras, aliases ou termos. Apenas DRAFT vazio é removido. Commit `f961d32d98f6f4d4dc2fb90e16d19dbb94532ea7`. Medição PG18 de ~120 mil DOU pendente.
+- L-11 web PR #91: prévia soma bloqueios e mostra `Y protegidas (não serão apagadas)` mais motivo cliente/outra fonte; teste ajustado. Commits `b1eacf2eeb0d249e1b44c0e9451f95bbd72bb35c`, `118742f77d3e6d9fe1f4dfeadfabb0c9b952986d`.
+- L-08 backend PR #203: removido temporariamente `tax13.scoped-presentation.unit.test.ts` de npm test; arquivo retido com comentário apontando L-16, sem adulterar asserções. Commits `3c973625f6dbc41de45b430f6b66904936f3d148`, `a52d88a1d5dfef44ec0ef42e7832b10bd158392c`.
+- L-07: print de consulta mencionado no pedido não consta dos arquivos da conversa nem foi recuperado; consulta `sources.is_active` e existência de runs últimos 7 dias não comprovadas. **Não remover** conector legado sem preflight.
+- Continua proibido merge/deploy/exclusão em produção; os próximos checkpoints incluirão CI e tempos medidos.
