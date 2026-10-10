@@ -103,3 +103,9 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - Full CI [run 38090824865](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38090824865): `verify` **SUCCESS**.
 - Complementares: DOU-CLEAN-02 isolated PG18 **SUCCESS**, ONB-01 migrations/identity/RLS PG18 **SUCCESS**, LOTE-2 isolated PG18 [run 38090824668](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38090824668) **SUCCESS**.
 - Ficam L-05/L-07/L-08/L-10 em REVISAR aguardando merge, com preservação de acervo e histórico. Sem autorização de merge ou produção.
+
+
+## Pré-merge — CI final dos três PRs em avaliação (10/10/2026)
+- Backend #203 HEAD `adbab0d114dec892a1c952adfeab986d92d958ee` **FULL PASS**: verify [38090824865](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38090824865), LOTE2 PG18 [38090824668](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38090824668), ONB-01 PG18 e DOU-CLEAN-02 PG18 SUCCESS.
+- Frontend #91 substituiu E2E antigos ligados a rascunho/CSV (retirados pelo escopo L-11) por cenários de classificação direta, protegidas, drift de contagem e reconfirmação, 4 viewports. Commit `53ab6c2fb9577821efd541640ae4c8fccf80211d`; novo CI integral pendente.
+- Backend #202 ajustou fixture de backfill e retirou índice de expressão que exigia EXECUTE para papéis operacionais, mantendo filtro SQL. HEAD `230d8decfff28b73bcb5e9a59f57152916a0c0d3`; CI completo e benchmark sem índice pendentes. **Não mergear/deployar nenhum PR**.
