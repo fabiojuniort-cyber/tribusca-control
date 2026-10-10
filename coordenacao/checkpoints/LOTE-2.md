@@ -126,3 +126,13 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - L11 benchmark final com 120k DOU sintéticas/10% selecionadas: preview 9787ms, confirm 9400ms, seed 20783ms, limite 60s, todos os tempos no HEAD final verificados no run 38091538871.
 - L05/L07/L08/L10 permanecem REVISAR (aguardando merge). L07 removido do código com base no preflight confirmado pelo Fábio (inativo; único run último em 2026-10-02). Nenhuma tabela, publicação ou histórico da produção alterado.
 - Protocolo encerrado para entrega ao COORD; **NÃO MERGEAR, NÃO DEPLOYAR** até autorização expressa.
+
+
+## MERGE autorizado Fábio — interrupção no gate Railway (10/10/2026)
+- Autorização explícita do Fábio: backup manual PostgreSQL feito; merge estrito #203 → deploy backend/worker/scheduler SUCCESS → #202 → deploy SUCCESS → #91 → deploy web SUCCESS. Se falhar, parar e não fazer rollback.
+- **PR #203 MERGED** na main de radar-fiscal-backend com **merge SHA `3afdeabcb71fea94c7fee0f7e915d081f511ed40`**, após CI integral verde e HEAD `adbab0d114dec892a1c952adfeab986d92d958ee`.
+- **Railway backend** `radar-fiscal-backend` id `1bb13b39-5f1c-4a50-8940-0986909f389a`: novo deployment `92681fc4-f6f6-44b2-850b-0d5805b0a99a` criado 2026-10-10T22:58:36Z, status **SUCCESS**; logs confirmam db runtime security, connection verified, server listening.
+- **Railway worker** `radar-fiscal-worker` id `fe4d9f52-7b14-40d0-a352-6a60d459672e`: source commitSha FIXADO `ac818d609b4c0c8963642ff1f5470b1865d984bd`, deployment mais recente `a0458373-e797-4a79-9487-9efc9137d802` SUCCESS mas criado **antes do merge**, 2026-10-10T17:12:30Z. NÃO confirma implantação do #203.
+- **Railway scheduler** `radar-fiscal-scheduler` id `5545fffa-60f5-4028-9537-6282dd5a5cf1`: source commitSha FIXADO `068506811ae4c0a257816c38e899e3a1dccb0fb8`, deployment mais recente `131bbc56-db97-45ba-bc9b-b344a3e49285` SUCCESS mas criado **antes do merge**, 2026-10-05T22:55:08Z. NÃO confirma implantação do #203.
+- **BLOQUEIO:** inexistência de novos deploys de worker e scheduler para o merge #203, apesar dos deploys anteriores SUCCESS. Não atualizar config Railway nem disparar deploy não autorizado; exigir orientação/autorização do Fábio sobre SHAs fixados. **Sequência interrompida** após #203: #202 NÃO MERGEADO; #91 NÃO MERGEADO; migration 051 NÃO disparada por este executor.
+- **Quadro:** manter L-05/L-07/L-08/L-10 em REVISAR (aguardando merge/deploy integrado), L-11 pendente, Frente LIMPEZA 7/14 (50%). Não registrar CONCLUÍDA ou 10/14 até cumprir os gates exigidos pelo Fábio. Nenhuma limpeza real ou rollback executado.
