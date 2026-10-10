@@ -6,7 +6,7 @@ Só o Fábio muda de `AGUARDANDO OK` para `PRONTA`. O EXEC atualiza só o status
 COORD e revisões: Claude Opus 5.5 (chat) / GPT 6.1 Sol Work. Respostas curtas.
 Codex: usar modelo econômico e raciocínio médio; subir só se não resolver. GPT 6 Astra Work só com justificativa.
 
-## Frente LIMPEZA: 5/13 (38%)
+## Frente LIMPEZA: 7/14 (50%)
 Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 
 | ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
@@ -14,7 +14,7 @@ Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 | L-01 | Instalar este protocolo no `tribusca-control` e o bloco de regras no `AGENTS.md` do backend | Commit com os arquivos | — | CONCLUÍDA |
 | L-02 | Railway: medir uso de disco por serviço e volume (só leitura) | Tabela serviço → GB → origem provável | Sonnet 5.5 (chat, conector Railway) / GPT 6 chat, se tiver o conector Railway | CONCLUÍDA |
 | L-03 | Railway (manual, Fábio): remover 12 serviços parados sem volume e o volume órfão act-scope-02; dou-clean-02 só se a limpeza DOU estiver concluída. Manter doe-sp-validation, tribusca-site-prototype e doe-sp-31 | Serviços e volumes removidos confirmados pelo Fábio | Manual do Fábio no Railway | CONCLUÍDA |
-| L-04 | Coleta só do dia corrente; reprocessar ontem apenas se o run de ontem falhou. DOE-SP hoje olha 3 dias; RFB, 7 | Run de hoje não busca datas anteriores; teste cobre a exceção "ontem falhou" | Sonnet 5.5 (Claude Code) / Codex | EM ANDAMENTO (GPT-EXEC-2; verificação automática agendada após run 18:00 UTC) |
+| L-04 | Coleta só do dia corrente; reprocessar ontem apenas se o run de ontem falhou. DOE-SP hoje olha 3 dias; RFB, 7 | Run de hoje não busca datas anteriores; teste cobre a exceção "ontem falhou" | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA |
 | L-05 | DOE-SP: parar de baixar o PDF autenticado por publicação (HTML basta; preflight: 0 publicações dependem de PDF) | Run sem chamadas a `downloadAuthenticatedPdf` | Sonnet 5.5 (Claude Code) / Codex | AGUARDANDO OK (proposta entregue; sem código) |
 | L-06 | Localizar e remover a validação de certificado digital do PDF (não achada no backend `main`; checar web e branches) | Código removido ou confirmado inexistente | Haiku 5.5 (Claude Code) para localizar; Sonnet 5.5 se houver remoção / Codex + subagentes | CONCLUÍDA |
 | L-07 | DOE-SP legado: desativar e remover o conector se não for usado em produção | Fora do registry e sem source ativa | Sonnet 5.5 (Claude Code) / Codex | AGUARDANDO OK (proposta entregue; sem código) |
@@ -24,7 +24,8 @@ Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 | L-11 | Classificação imediata de novos tipos e edição de Modo, com exclusão das publicações descartadas e remoção de rascunhos/simulações/aprovação | Popup Classificar com Fonte/Seção/Tipo/Modo; confirmação indica X publicações; aplicação imediata, exclusão segura em lotes, audit log com IDs; PLATFORM_ADMIN; preservar motor existente, termo tributário e termo forte | Sonnet 5.5 (Claude Code) / Codex | EM ANDAMENTO (GPT-EXEC-2; PRs draft backend/web, migration 051, sem merge/deploy) |
 | L-12 | Analisar o filtro: 124 mil publicações parecem demais para conteúdo tributário (só análise) | Relatório curto: volume por fonte e % fora de escopo | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA |
 
-| L-13 | Triar PRs backend/web: fechar #187/#188 backend e #80/#87 web com comentário; analisar 10 condicionais sem fechar; inventariar migrations e colisões | 4 fechamentos comprovados, 10 recomendações fundamentadas e inventário de migrations | Claude Sonnet 5.5 (Claude Code) / Codex para PRs; GPT 6 chat para análise | REVISAR (GPT-EXEC-2; 4 PRs fechados; 10 condicionais e migrations triados) |
+| L-13 | Triar PRs backend/web: fechar #187/#188 backend e #80/#87 web com comentário; analisar 10 condicionais sem fechar; inventariar migrations e colisões | 4 fechamentos comprovados, 10 recomendações fundamentadas e inventário de migrations | Claude Sonnet 5.5 (Claude Code) / Codex para PRs; GPT 6 chat para análise | CONCLUÍDA |
+| L-15 | Apagar as ~23 mil publicações DOU OUT_OF_SCOPE, com backup antes | Proposta aprovada pelo Fábio | Sonnet 5.5 / Codex | PRONTA (só proposta) |
 
 L-11 ampliada por CLAUDE-COORD (autorizado por Fábio): aplicar regras de Fonte/Seção/Tipo/Modo imediatamente, recadastrar novos tipos e editar Modo em Tipos; prévia de exclusão X, remover fisicamente publicações elegíveis conforme a regra com audit log (tipo, modo, contagem e IDs), exclusivamente PLATFORM_ADMIN; remover rascunho/simulação/aprovação via migration NOVA 051; preservar motor atual, termos tributários e termos fortes. Proposta apenas; implementação depende do OK do Fábio. Restrições técnicas: publicação com scope events/state append-only/RESTRICT e outras referências não pode ser apagada sem resolução legal de dependências; não contornar constraints.
 
