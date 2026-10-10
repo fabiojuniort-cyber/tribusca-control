@@ -21,3 +21,9 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - [ ] L-08 suíte de testes (sem alterar escopo dos próprios testes).
 - [ ] L-10 rotina de retenção dry-run + testes.
 - [ ] CI, PR draft e revisão de escopo; sem merge/deploy.
+
+## Checkpoint 1 — preflight e L-08
+- L-08: inclusão confirmada dos três arquivos previstos nos scripts npm `test` e `test:integration`; commit backend `c7fe52f4c904b7b552023c10c8649392470466eb`. Aguardando CI para provar execução.
+- L-07: **BLOQUEADA pelo preflight**; o código do seeder cria DOE-SP legado INACTIVE por padrão, e logs do scheduler consultados não exibem execuções, mas nenhum desses indícios prova `sources.is_active=false` hoje em produção. Sem consulta SQL somente leitura ao registro real, é proibido remover do registry / script / arquivos. Conector ainda inalterado.
+- L-05: verificado fallback atual chama `downloadAuthenticatedPdf` se HTML vazio; contém testes antigos que exigem fallback e que deverão ser atualizados para falha explícita sem PDF.
+- L-10: `collection_items` contém created_at e ligação aos runs; rotina nova será dry-run por padrão, em lotes, preservando runs, attempts e checkpoints.
