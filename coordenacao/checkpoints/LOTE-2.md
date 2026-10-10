@@ -136,3 +136,13 @@ Branch: `feat/lote2-doesp-tests-retention-20261010`; um PR DRAFT, sem merge/depl
 - **Railway scheduler** `radar-fiscal-scheduler` id `5545fffa-60f5-4028-9537-6282dd5a5cf1`: source commitSha FIXADO `068506811ae4c0a257816c38e899e3a1dccb0fb8`, deployment mais recente `131bbc56-db97-45ba-bc9b-b344a3e49285` SUCCESS mas criado **antes do merge**, 2026-10-05T22:55:08Z. NÃO confirma implantação do #203.
 - **BLOQUEIO:** inexistência de novos deploys de worker e scheduler para o merge #203, apesar dos deploys anteriores SUCCESS. Não atualizar config Railway nem disparar deploy não autorizado; exigir orientação/autorização do Fábio sobre SHAs fixados. **Sequência interrompida** após #203: #202 NÃO MERGEADO; #91 NÃO MERGEADO; migration 051 NÃO disparada por este executor.
 - **Quadro:** manter L-05/L-07/L-08/L-10 em REVISAR (aguardando merge/deploy integrado), L-11 pendente, Frente LIMPEZA 7/14 (50%). Não registrar CONCLUÍDA ou 10/14 até cumprir os gates exigidos pelo Fábio. Nenhuma limpeza real ou rollback executado.
+
+
+## Retomada de deploy autorizado — 10/10/2026 20h BRT
+- Fábio confirmou backup PostgreSQL manual Railway 10/10 19:57 BRT, 9,64 GB, e reiterou autorização de execução sequencial #203 → #202 → #91, bloqueando avanço por deploy FAIL.
+- #203 mergeado na main com SHA **`3afdeabcb71fea94c7fee0f7e915d081f511ed40`**.
+- Railway produção #203: backend deployment `92681fc4-f6f6-44b2-850b-0d5805b0a99a` **SUCCESS**; worker `4a7a68dd-5982-4c50-93e6-3b6d979cde87` **SUCCESS**; scheduler `5d4e43ea-9493-43be-af9c-8c2a92a6f521` **SUCCESS**.
+- Os dois serviços estavam pinados a commits anteriores. Alteradas **somente** as referências de origem do worker/scheduler para o merge SHA #203, aplicadas em patch Railway `cdb245a6-192f-43b8-ae30-ddbbf45a6368` não destrutivo; respectivos deploys SUCCESS, sem alteração de banco por esta ação.
+- PR #202 ficou `mergeable_state=dirty` após #203; conflito exclusivamente com `package.json` das duas frentes. Criado merge de integração no HEAD do #202 **`74f3d869c99cf0279043a08798d920823d8f8ae7`**, pais #202 anterior `f42918ff5c514f7a84d3a4a2af601888b9b8d2cc` e main #203 `3afdeabcb71fea94c7fee0f7e915d081f511ed40`. Árvore baseada na main com os 16 arquivos da PR #202, preservando os scripts L-08/L-10 e remoções L-07 do #203.
+- **#202 NÃO mergeado neste checkpoint**. Seu HEAD novo ficou mergeable, com CI integral, L-11 PG18 e LOTE-2 PG18 disparados. Não prosseguir à migration 051 antes de CI verde do SHA novo. #91 ainda OPEN.
+- Quadro mantido em LIMPEZA 7/14 (50%) até #202/#91 e deploys SUCCESS; sem rollback, sem limpeza real.
