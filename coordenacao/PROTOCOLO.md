@@ -1,10 +1,10 @@
-# Protocolo de trabalho TriBusca (v1, 10/10/2026)
+# Protocolo de trabalho TriBusca (v1.3, 10/10/2026)
 
 Vale para qualquer modelo (GPT, Claude, Codex, Claude Code). Os papéis são fixos; quem os ocupa muda conforme o limite de uso do Fábio. A continuidade vem destes arquivos, não do modelo.
 
 ## Papéis
 - **COORD:** quebra o pedido do Fábio em tarefas, mantém `TAREFAS.md`, revisa entregas. Não implementa.
-- **EXEC:** executa uma tarefa por vez, grava o checkpoint e reporta.
+- **EXEC:** executa uma tarefa por vez, grava o checkpoint e reporta. Pode haver vários EXEC em paralelo, cada um numa tarefa que não mexa nos mesmos arquivos.
 - **Fábio:** aprova escopo e leva os prompts entre janelas. Nenhum chat age sozinho no tempo.
 
 ## Nome do chat
@@ -34,6 +34,19 @@ Todo chat se identifica na primeira linha de cada resposta: `<MODELO>-<PAPEL>` (
 - Ao propor o mínimo (regra 2), dizer se vai usar subagentes e para quê.
 - Disponível em Codex e Claude Code; em chat comum, ignorar.
 
+## Atualização do repositório pelo EXEC
+- Ao fim de cada passo, o EXEC atualiza no `tribusca-control`: o próprio `checkpoints/<ID>.md` e a coluna Status **da própria linha** em `TAREFAS.md` (`EM ANDAMENTO (<chat>)` ou `REVISAR`).
+- Nunca editar outras linhas nem outros checkpoints. Só o COORD marca `CONCLUÍDA`.
+- Chat sem GitHub: entregar o texto do checkpoint e do status no retorno, para outro chat commitar.
+
+## Decisões do Fábio
+- Toda resposta que dependa de decisão termina com o bloco abaixo, **sempre no final**:
+```
+⚠️ DECISÃO DO FÁBIO
+1. <pergunta curta> → opções: A) … B) … | recomendação: <A/B> (<motivo em 1 linha>)
+```
+- Sem decisão pendente, não incluir o bloco.
+
 ## Checkpoint
 - Arquivo: `checkpoints/<ID-TAREFA>.md`, no formato de `checkpoints/_MODELO.md`.
 - Gravar **ao fim de cada passo** (não a cada X minutos: chat não age no relógio).
@@ -56,7 +69,9 @@ Falta: <itens>
 Bloqueio: <ou "nenhum">
 Sugestões (não implementadas): <ou "nenhuma">
 Próxima ação: <uma frase>
+Repo atualizado: <checkpoint e status commitados, com hash do commit, ou "pendente">
 Prompt pronto (PARA: <chat>):
 RODAR EM: Claude <modelo> (<superfície>) | GPT <versão>
 <texto pronto para colar>
+⚠️ DECISÃO DO FÁBIO (se houver)
 ```
