@@ -1,3 +1,16 @@
+## L-17 R2 — checkpoint 11/10/2026 11:54 BRT — 88% / validação integral
+**Esta seção prevalece sobre as anteriores até a atualização final.**
+
+- Backend [PR #209](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/209) agora READY, HEAD `538711cc8801495a4aec4830b734ffb088c4056e`. Correção do lock RLS por SECURITY DEFINER admin-only migration 059; migration 060 implementa **cron somente EXCLUDE_ALWAYS** com o mesmo `evaluateCollectionFilter` do runtime, nova validação após locks e worker-only purge com batch 20 + auditoria/ledger próprios. Não usa modos condicionais no cron. Sem tocar is_hidden ou migration 029.
+- PG18 dedicado no SHA anterior [#38148831359](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38148831359): **SUCCESS 5/5**, incluindo runtime DO1E CIT-SNC específico, worker auto EXCLUDE_ALWAYS sintético, audit L17_RULE_PURGE, três registros ARCHIVE_PURGE de purge manual agrupado, e preservação company/cross-source. O HEAD atual contém só a correção da auditoria + mesmo método; **revalidação CI full e PG18 em andamento**. CI principal do HEAD atual [#38148926987](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38148926987) em andamento.
+- Frontend [PR #98](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/98) READY, HEAD `f1f6501cf97085ee78229eabe7ecd0063b9a6f4b`. TypeScript `ruleDiscards`/`byRule` confirmado em interfaces. Teste Playwright e2e Desconsiderados adaptado à grade e escreve **screenshot de CI sintético**, em `playwright-artifacts/l17-review/<viewport>/desconsiderados.png`. E2E de evidências L11 adaptado. CI completo [#38148760486](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486) em andamento.
+- **Nenhuma exclusão em produção / nenhum merge/deploy R2**. Todos os dados apagados nos testes foram sintéticos no PG18 isolado.
+- Prazo :20–:40 para todas migrations 056–060. Próxima janela operacional segura possível **12:20–12:40 BRT**, SOMENTE após todos os gates verdes, confirmação dos SHAs e PR mergeable. Não antecipar.
+- Quadro: **L-15 CONCLUÍDA** (0 OUT_OF_SCOPE em 11/10 informado pelo Fábio); **L-17 REVISAR**; **LIMPEZA 14/15**. Contagens produtivas por regra dispensadas; não inventar.
+- Print de Desconsiderados PENDENTE de artefato real do Playwright e leitura do CI. Não alegar entregue antecipadamente.
+
+---
+
 ## Estado atual L-17 R2 — 11/10/2026
 AVANÇO 65%. BLOCK DE PRODUÇÃO. Esta seção tem precedência sobre estados antigos abaixo.
 Backend PR #209 DRAFT; HEAD 9cc4ad94a4d645995a4403b643059af9e92ab041. CI 38146268180 FAILED; PG18 38146268023 FAILED; L11 PG18 38146268025 SUCCESS.
