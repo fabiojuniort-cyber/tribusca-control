@@ -1,3 +1,14 @@
+## L-17 HOTFIX — checkpoint 11/10/2026 13:18 BRT — 90% / permissão de índice corrigida, CI final em execução
+**Estado corrente do hotfix. Merge/deploy ainda NÃO autorizados até CI integral e PG18 no HEAD.**
+
+- PR [backend #210](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/210), HEAD `8096952797e38011ec5a907b29666dd7e59843d9`.
+- PG18 anterior [run 38154572281](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38154572281) SUCCESS 6/6; stress com **3000 regras e 12000 documentos**, tempo de preview **2478ms** (limite <30000ms). Log indicava 1200 por rótulo obsoleto; arquivo fixture foi checado como `records=12000` e rótulo corrigido em HEAD seguinte.
+- CI principal anterior revelou P1 real: índice de expressão da migration 061 usava `collection_filter_l11_normalize` revogada a runtime writers, causando `permission denied for function collection_filter_l11_normalize` em `INSERT INTO publications` pelo worker. A correção de mínimo privilégio adiciona `GRANT EXECUTE` **somente** à função pura imutável para papéis `radar_worker`, `radar_app`, `radar_taxonomy_curator`, sem novas permissões de tabela/RLS e sem reclassificação de dados. Necessário para manutenção do índice pelos papéis de escrita.
+- CI e PG18 atuais: [CI 38154857187](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38154857187), [PG18 38154857171](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38154857171), ambos iniciados; gates pendentes. Produção: nenhuma exclusão, nenhum merge, nenhuma migration 061 até autorização.
+- Aplicação de migration 061 somente dentro de :20–:40 America/Sao_Paulo e após os CIs integralmente verdes. Verificar backend/worker/scheduler/web SUCCESS e log `Migration applied: 061_l17_rule_cap_index.sql`; preservar flag L10 e proteger coletas.
+
+---
+
 ## L-17 hotfix — checkpoint 11/10/2026 ~13:16 BRT — 88% / PG18 12000 DOCS PASS, HEAD final em CI
 **Estado corrente para o hotfix; não interpretar o sucesso do R2 como deploy da correção l17_rule_cap.**
 
