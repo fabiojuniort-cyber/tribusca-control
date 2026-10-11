@@ -1,3 +1,17 @@
+## Estado atual L-17 R2 — 11/10/2026
+AVANÇO 65%. BLOCK DE PRODUÇÃO. Esta seção tem precedência sobre estados antigos abaixo.
+Backend PR #209 DRAFT; HEAD 9cc4ad94a4d645995a4403b643059af9e92ab041. CI 38146268180 FAILED; PG18 38146268023 FAILED; L11 PG18 38146268025 SUCCESS.
+Web PR #98 DRAFT; HEAD c1f1fb35833750ee2f3f0a8bcbabb3b025a20d99. CI 38146300157 FAILED TypeScript: ruleDiscards/byRule ausentes em CollectionFilterDirectConfirmResult.
+Causa concreta: migration 051 prefiltra publications.act_type canônico, mas typeConflict considera sourceActType='Resolução' incompatível com ato específico 'RESOLUÇÃO CIT-SNC/MINC'. Runtime/engine mantém KEEP por falso TYPE_CONFLICT. Helper de prefixo normalizado e migration 057 no PR, regressão sintética DO1E passou em PG18. Conflitos entre classes realmente distintas continuam protegidos.
+Migração 058 e trigger BEFORE DELETE para inserir collection_filter_discards (origem ARCHIVE, razão ARCHIVE_PURGE, metadados legais, URL, política, retenção 3 meses) na mesma transação implementados; novo PG18 ainda não passou ao reavaliar confirmação.
+Prévia global usa o motor atual para OUT_OF_SCOPE, todas regras DISCARD incluindo condicionais e is_hidden; conta grupos, proteções e por-regra, dedup. Mas confirmação SQL falha HTTP 403 porque SELECT FOR UPDATE cruza RLS radar_app; migração 059 com lock SECURITY DEFINER foi preparada como blob, não integrada na branch. FALTA corrigir e testar adversarialmente.
+Cron 03:30 na branch somente elimina hidden. FALTA seleção worker-only EXCLUDE_ALWAYS via motor compartilhado, SEM modos condicionais, proteções e audit. O teste worker anterior encontrou 3 sintéticos elegíveis quando esperava 1; corrigir isolamento/teste, não eliminar proteções.
+Desconsiderados tab report com 12 colunas, filtros, ordem, total/paginação, ajuda e .xlsx total filtrado está implementada no PR web mas ainda sem CI green ou captura de screenshot real.
+Produção: sem consulta SQL direta de remanescentes por regra — NÃO HÁ número verificado. 12.339 ocultas e 0 OUT_OF_SCOPE vieram de Fábio/COORD. Print da nova aba não está disponível. Não inventar.
+Nenhuma exclusão em produção, nenhum merge/deploy desta versão. Antiga automação 11:20 DESABILITADA. Manter PRs DRAFT.
+Quadro: L-15 CONCLUÍDA (0 OUT_OF_SCOPE reportado em 11/10); L-17 REVISAR / BLOCK; LIMPEZA 14/15.
+---
+
 
 ## 11/10/2026 — Escopo consolidado substitui plano anterior (L-17 R2)
 - A versão FINAL recebida de CLAUDE-COORD acrescenta três grupos na prévia e no botão: OUT_OF_SCOPE, TODOS os remanescentes cujo motor vigente retornaria DISCARD (inclusive modos condicionais), e LEGACY_HIDDEN. Por regra, contagem desagregada; decisão exclusivamente `evaluateCollectionFilter` usando política aprovada, sem duplicar a classificação. O cron diário inclui APENAS EXCLUDE_ALWAYS + LEGACY_HIDDEN, nunca modos condicionais. Categorias mutuamente exclusivas: OUT_OF_SCOPE precede DISCARD_BY_RULE, que precede LEGACY_HIDDEN; proteções empresa/outra fonte valem em todas. `is_hidden` e migration 029 imutáveis.
