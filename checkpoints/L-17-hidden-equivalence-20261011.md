@@ -1,3 +1,38 @@
+# L-17 R2 — PROTOCOLO FINAL | 11/10/2026 12:28 BRT
+**Avanço da execução autorizada: 100%. Implantação técnica: SUCCESS. Avaliação funcional/primeira execução do cron: REVISAR. Este bloco é o estado corrente, prevalece sobre o histórico abaixo.**
+
+## Causa e correções
+- O caso real DO1E 09/10/2026 `RESOLUÇÃO CIT-SNC/MINC`, na origem DOU com `sourceActType=Resolução`, era considerado `TYPE_CONFLICT` antes de `EXCLUDE_ALWAYS`. Função/adapter compartilhado agora trata o metadado genérico compatível com o ato específico, preservando `TYPE_CONFLICT` para incompatibilidades reais. Testes runtime e purge histórico confirmam `DISCARD / EXCLUDE_ALWAYS` para CIT-SNC e `KEEP / TYPE_CONFLICT` com proveniência `Portaria`.
+- Lock do preview/confirm em RLS corrigido por helper `SECURITY DEFINER` apenas para PLATFORM_ADMIN (migration 059). Tipos da resposta web corrigidos.
+- Preview de botão agrega sem duplicar `OUT_OF_SCOPE`, decisões do motor por regra (inclusive condicionais **somente no manual**) e `is_hidden`. Contagens por regra e proteções de empresa/outra origem mantidas.
+- Scheduler 03:30 America/Sao_Paulo faz EXCLUDE_ALWAYS + ocultas em pequenos lotes; nunca aplica modos condicionais automaticamente. Mesma engine/filtro. Flag `COLLECTION_ITEMS_RETENTION_ENABLED=true` preservada.
+- Trigger `058_l17_archive_purge_discards.sql` registra `ARCHIVE_PURGE` na mesma transação da remoção em `collection_filter_discards` para purges Classificar, Editar modo, botão e cron; 3 meses de retenção. Sem backfill das ~31 mil publicações anteriormente apagadas. Nova aba Desconsiderados relatório, paginação, filtros, ordenação, link oficial e exportação Excel integral pelo filtro; apenas texto da prévia alterado na área anterior. Migration 029 e `is_hidden` não alteradas.
+
+## CI e SHAs congelados
+- Backend PR [#209](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/209), HEAD `cf75bdcabbdd136bead5b1d3b5eafe22edd2f03f`. [CI integral 38149773057](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773057) SUCCESS incluindo ONB PG18/DOU PG18, [L11 PG18 38149773132](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773132) SUCCESS, [L17 PG18 38149773027](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773027) SUCCESS. MERGED 11/10 12:23:43 BRT → **`b39279330a49b44989ffece09ee5c186631e26e6`**.
+- Frontend PR [#98](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/98), HEAD `f1f6501cf97085ee78229eabe7ecd0063b9a6f4b`, [Frontend CI 38148760486](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486) SUCCESS, incluindo Playwright e XLSX. MERGED 11/10 12:25:50 BRT → **`ec1d820495c8531d37cd860fe7d71e3433cf7f9f`**.
+
+## Railway produção — readback de SUCCESS nos quatro serviços
+| Serviço | Deployment ID | SHA | Status |
+|---|---|---|---|
+| Backend | `27158ad2-950d-4c4f-99b1-4faf58210937` | `b39279330a49b44989ffece09ee5c186631e26e6` | SUCCESS 1/1 |
+| Worker | `0cb06c89-81f1-4cc9-a651-09006a24b495` | `b39279330a49b44989ffece09ee5c186631e26e6` | SUCCESS 2/2 |
+| Scheduler | `df18b355-082d-46ff-98c5-68cbe191dc75` | `b39279330a49b44989ffece09ee5c186631e26e6` | SUCCESS 1/1 |
+| Web | `f44c4296-89a6-41f8-b82d-d9caa34cb9c7` | `ec1d820495c8531d37cd860fe7d71e3433cf7f9f` | SUCCESS 1/1 |
+
+Backend log `Migration applied` comprovado para **056, 057, 058, 059 e 060**, seguido de `Database migrations are up to date.`. Migrations aplicadas entre :20 e :40 BRT. Ambiente Railway backend e web: `totalFailures=0`, `servicesWithIssues=0`, `pendingWork=0`. Scheduler log de boot com `mode=DRY_RUN`, `enabled=true` e `Collection scheduler started`. Não houve purge manual em produção pelo executor.
+
+## Screenshot/evidências
+- Print real de execução **Playwright com APIs sintéticas**, desktop 1440x900 (PNG 1440x1006): `/mnt/data/L17_Desconsiderados_Playwright.png`, obtido do artefato GitHub Actions [#11706536052](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486/artifacts/11706536052), `playwright-artifacts/l17-review/desktop-1440x900/desconsiderados.png`. Não representa o banco real da produção. Também há imagens mobile 390x844/360x800 e desktop 1920x1080 no mesmo artefato.
+
+## Quadro e limitações
+- L-15 → **CONCLUÍDA**, 0 OUT_OF_SCOPE em 11/10/2026 conforme dado informado por Fábio.
+- L-17 → **REVISAR**, aguardando validação humana do relatório/previews e primeira execução agendada às 03:30 America/Sao_Paulo; não equivale a ter apagado as 12.339 ocultas.
+- Frente LIMPEZA → **14/15**.
+- Item de contagem de remanescentes por regra antes do merge **dispensado** por CLAUDE-COORD; não alegar consulta produtiva não efetuada. Nenhuma exclusão manual de publicações durante implementação/deploy. A próxima execução automática às 03:30 deverá ser auditada nos logs e ledger, incluindo total apagado e impacto operacional.
+
+---
+
 ## L-17 R2 — checkpoint 11/10/2026 ~12:26 BRT — 99% / backend implantado, web em rollout
 **Estado corrente, prevalece sobre os registros anteriores até readback final.**
 
