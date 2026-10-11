@@ -1,3 +1,29 @@
+# L-11 — RELEASE EXECUTADO / SUCCESS (checkpoint final)
+
+**Estado observado: 11/10/2026 (UTC). Avanço de merge/deploy L-11: 100%.**
+**O bloqueio pré-merge documentado abaixo é histórico e foi superado pela autorização expressa posterior do proprietário**: revisão independente migration 052 por CLAUDE-COORD informada como APPROVED, backup PostgreSQL em 10/10 às 19:57 BRT e liberação dos demais gates.
+
+## Execução autorizada e observada
+
+| Etapa | SHA de merge / deployment | Resultado |
+| --- | --- | --- |
+| Backend PR [#205](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/205) | `6d1c06b87c50d368a6cf71d537bf40a1cdf38c3b` | MERGED |
+| Railway radar-fiscal-backend | `271a6d14-ad83-4dc6-b143-1919e4c1e376` | SUCCESS, SHA backend conferido |
+| Railway radar-fiscal-worker | `641bffa9-036d-490d-b41c-c3d52d626850` | SUCCESS, pin atualizado para SHA backend |
+| Railway radar-fiscal-scheduler | `1336e98b-096c-4e8d-9a10-ce144c8e3f55` | SUCCESS, pin atualizado para SHA backend |
+| Web PR [#94](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/94) | `150ef73fc4e415a0bcc902160688d9c4277abeb5` | MERGED, após SUCCESS dos três serviços backend |
+| Railway web05-preview | `f4492029-2633-4e4b-9b5b-4565a129932e` | SUCCESS, pin atualizado para SHA web |
+
+- Backend pre-deploy confirmou nos logs `Applying migration: 052_collection_filter_direct_admin_edits.sql` e `Migration applied: 052_collection_filter_direct_admin_edits.sql`; verificações de segurança dos papéis runtime passaram.
+- Site web05-preview com fonte fixada no SHA exato do merge #94, disponível no domínio `trifaros.com.br`.
+- **Nenhuma exclusão, descarte em produção, teste com classificação real nem reprocessamento foi executado neste release.** O smoke funcional real depende do operador após o deploy.
+- Decisões vigentes: importação CSV ausente em Tipos e Termos; descarte reservado ao fluxo DOU preview/confirm.
+- Autorização e parecer independente foram **informados pelo proprietário**, não constituiu nova auditoria independente nesta execução.
+
+## Registro de pré-release preservado a seguir (histórico, não status atual)
+
+---
+
 # L-11 — Checkpoint de gate de merge/release de 10/10/2026
 
 **Status: BLOCK apenas para merge/deploy; aprovação visual de Fábio registrada.**
