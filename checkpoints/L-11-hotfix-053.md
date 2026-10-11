@@ -1,7 +1,7 @@
 # L-11 — Hotfix indexação da confirmação do purge (053)
 
 **Checkpoint de 11/10/2026 (UTC). Estado: PR preparado e benchmark PG18 aprovado; merge/deploy PRODUTIVO NÃO AUTORIZADO/REALIZADO NESTE CHECKPOINT.**
-**Progresso: preparação 90%, produção 0%.**
+**Progresso: preparação e validação técnica 100%, produção 0%.**
 
 ## Evidência operacional recebida de CLAUDE-COORD
 - Prévia em produção: 7.460 DOU para apagar, 0 protegidas.
@@ -22,7 +22,7 @@
 ## Provas do PostgreSQL 18 (base efêmera, registros sintéticos)
 - Ensaio inicial do SHA anterior (três índices): [workflow #38107051650](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38107051650) SUCCESS, **535.500 collection_items**, volume 270.876.672 bytes, prévia **41 ms**, confirmação real de **500 objetos sintéticos em 121 ms**, 535.000 históricos preservados.
 - Ensaio do HEAD atual (seis índices): [workflow #38107140180](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38107140180) SUCCESS, **535.500 collection_items**, volume 270.090.240 bytes, prévia **52 ms**, confirmação de **500 objetos sintéticos em 107 ms**, 535.000 históricos preservados, EXPLAIN para UPDATE indexado; 1 PASS, 0 FAIL.
-- [CI integral #38107140194](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38107140194): **EM ANDAMENTO na última leitura**, não declarar gate verde até resultado terminal.
+- [CI integral #38107140194](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38107140194): **COMPLETED/SUCCESS** (verify, ONB-01 PG18 e DOU-CLEAN-02 PG18 concluídos).
 
 ## Riscos/gates/limites da autorização
 - A mensagem recebida oferece opções **A ou B** para execução produtiva do hotfix e **A ou B** para mudar worker/scheduler para acompanhar a main, mas não contém escolha inequívoca do proprietário. **Nenhum merge/deploy ou mudança de pin foi executado.**
