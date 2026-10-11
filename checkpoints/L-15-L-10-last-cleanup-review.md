@@ -1,3 +1,43 @@
+# ✅ L-15 + L-10 — FECHAMENTO TÉCNICO / DEPLOY SUCCESS — 11/10/2026
+**Avanço: 100% da execução autorizada; validação funcional pendente do Fábio e do cron.**
+**Este bloco é o estado corrente e SUPERA os checkpoints históricos abaixo.**
+**Quadro: L-15 → REVISAR (aguardando clique do Fábio); L-10 → REVISAR (aguardando primeira execução às 03:30, America/Sao_Paulo, em 12/10/2026).**
+
+### Raiz exata da falha de teste L-15
+O erro da fixture não era o campo de contagem de candidatos: `plan.count=1` e `blockedCompany=1` já estavam corretos; a falha em PG18 era `blockedOtherSource=0`, esperado 1. A fixture acrescentava uma origem oficial **após** escrever `OUT_OF_SCOPE`. O trigger `publication_scope_origin_material` da migration 033 restaurava legitimamente essa publicação a `IN_SCOPE`. Ajustou-se **somente a ordem da fixture**, criando a segunda origem antes do evento SUPPRESS. Nenhuma regra/guard de produção foi desativada. A L-15 continua protegendo vínculos de empresas e de outras fontes, com preflight token e audit da 051.
+
+### Provas de CI antes dos merges
+- Backend `f4e5cabc526f91b91148582c626835f60169c4de`: CI [#38138440651](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38138440651) **SUCCESS**; L11 PG18 [#38138440657](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38138440657) **SUCCESS**; L15/L10 PG18 [#38138441016](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38138441016) **SUCCESS**, dois testes aprovados/zero falhas (admin, company, cross-source, purge audit synthetic, L10 index e least privilege).
+- Web `f271448503db0bf26820cc0401f08bce632ce566`: Frontend CI [#38138514179](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38138514179) **SUCCESS**; reconciliação com popup L11 publicado preservada.
+- Backend [PR #208](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/208) MERGED `e74425f18808ebf403cca4f6e22f15b8cbc4e77c` em 11/10/2026 09:20:21 BRT.
+- Web [PR #96](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/96) MERGED `e04691548f72cf78f83eae3275b918d5ee84c5f6` em 11/10/2026 09:21:48 BRT.
+
+### Railway produção: readback SUCCESS dos 4 serviços
+| Serviço | Deployment | Commit | Resultado |
+|---|---|---|---|
+| Backend | `54addb5d-6ba5-4855-94d0-147410487019` | `e74425f18808ebf403cca4f6e22f15b8cbc4e77c` | SUCCESS / 1 de 1 |
+| Worker | `b9115124-2506-403d-998d-fcc7f9e7e72d` | `e74425f18808ebf403cca4f6e22f15b8cbc4e77c` | SUCCESS / 2 de 2 |
+| Scheduler | `c3c0c046-d3d0-4753-a29b-ee1bcb1cea58` | `e74425f18808ebf403cca4f6e22f15b8cbc4e77c` | SUCCESS / 1 de 1 |
+| Web | `ab3388b9-882b-4f82-b032-5f9206111f05` | `e04691548f72cf78f83eae3275b918d5ee84c5f6` | SUCCESS / 1 de 1 |
+
+Migrations em produção (backend, 11/10/2026 ~09:20:59 BRT):
+```text
+Migration applied: 054_l15_scope_purge_and_l10_runner.sql
+Migration applied: 055_collection_items_created_at_index.sql
+Database migrations are up to date.
+```
+Railway environment_status após implantação: `totalFailures:0`, `servicesWithIssues:0`, `pendingWork:0` em backend e web.
+
+### L-10: dry-run real e ativação
+- SQL real entregue pelo usuário em 11/10: **379.882 de 538.623** `collection_items` mais antigos que 7 dias.
+- Primeiro boot em produção no novo backend: scheduler logou `mode=DRY_RUN`, `eligibleItems=379882`, `sampleBatchCandidates=100`, `enabled=false`; CONFERE exatamente com SQL do usuário, nenhuma exclusão nesse ponto.
+- Após SUCCESS completo, Railway scheduler recebeu variável `COLLECTION_ITEMS_RETENTION_ENABLED=true`, resposta sem staging, redeploy `c3c0c046-d3d0-4753-a29b-ee1bcb1cea58` SUCCESS. Segundo boot logou `mode=DRY_RUN`, `eligibleItems=379882`, `sampleBatchCandidates=100`, **`enabled=true`**; `Collection scheduler started`.
+- Programação única diária `30 3 * * *`, timezone `America/Sao_Paulo`, ledger diário anti-duplicidade, até 100 registros/transação, teto de 1000 batches/120s por execução. Backlog de 379.882 pode requerer múltiplos dias; não aumentar lote para forçar conclusão.
+- A primeira execução prevista é **12/10/2026 às 03:30 BRT**, ainda não ocorrida. Confirmar no Railway `L10 collection_items daily retention completed`, `deletedItems`, `remainingEligible`, `batches`, duração e integridade da coleta.
+- Nenhum purge L-15 foi invocado, nenhum clique de exclusão e nenhuma publicação foi apagada pelo executor. A ativação L10 pode excluir SOMENTE `collection_items` com mais de 7 dias na próxima janela programada.
+
+---
+
 # LIMPEZA — L-11 ajuste, L-15 e L-10
 
 **Checkpoint 11/10/2026 — QA EM ANDAMENTO / NÃO LIBERADO PARA PRODUÇÃO.**
