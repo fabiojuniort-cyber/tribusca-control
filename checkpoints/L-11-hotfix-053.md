@@ -1,3 +1,38 @@
+# L-11 — Hotfix 053: execução final autorizada e verificada
+
+**STATUS FINAL: CONCLUÍDA — 100% (merge + migration + três deploys).**
+**Janela aplicada: 11/10/2026, 00:20–00:23 BRT (:20–:40 autorizada).**
+**Autorização: Fábio confirmou expressamente A+A; sem exclusões de publicações.**
+
+## Retorno operacional a CLAUDE-COORD — execução
+
+| Item | Resultado |
+| --- | --- |
+| Backend [PR #207](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/207) | MERGED — `4662d75738258a11c085a6453ee473284a02ce22` |
+| HEAD testado antes do merge | `0bb55c7f99c0c924480887c4c2fa864806bb6460` |
+| [CI integral #38107140194](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38107140194) | COMPLETED/SUCCESS |
+| [Index053 PG18 benchmark #38107140180](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38107140180) | COMPLETED/SUCCESS, 500 objetos sintéticos purgados em 107 ms (535.500 collection_items) |
+| `radar-fiscal-backend` | SUCCESS, deploy `8f07ae0b-a06a-445b-91b8-24333613c632`, SHA `4662d75738258a11c085a6453ee473284a02ce22` |
+| `radar-fiscal-worker` | SUCCESS, deploy `f8c4282c-a3cb-432f-89cc-a7a00cb7d188`, mesmo SHA; 2/2 réplicas online |
+| `radar-fiscal-scheduler` | SUCCESS, deploy `d7a034ba-1cbd-4987-9f50-e53116ec026b`, mesmo SHA; 1/1 online |
+| Indexação produtiva | Logs: `Applying migration: 053_collection_filter_purge_lookup_indexes.sql`, `Migration applied: 053_collection_filter_purge_lookup_indexes.sql`, `Database migrations are up to date.` |
+| Fontes Railway | API/worker/scheduler `repo=fabiojuniort-cyber/radar-fiscal-backend`, `branch=main`, **sem `commitSha` fixo** |
+| Saúde | API 1/1, worker 2/2, scheduler 1/1, Postgres 1/1; ambiente sem issues, falhas ou pending changes |
+| Ações de exclusão realizadas pelo executor | **0** — nenhum endpoint de purge/confirm/continue acionado |
+
+### Evidência de janela
+- API deployment criado `2026-10-11T03:20:18.559Z` (00:20:18 BRT).
+- Migration 053 aplicada `2026-10-11T03:20:53.672729807Z` (00:20:53 BRT), confirmado por logs do deploy.
+- Worker deployment criado `2026-10-11T03:21:21.749Z`, scheduler `2026-10-11T03:21:24.248Z`; ambos em SUCCESS.
+- Worker: logs `Collection worker started` (duas réplicas); scheduler: `Collection scheduler started` e `Collection scheduler tick completed`.
+- **Nota de escopo:** a indexação remove o gargalo medido no PG18 isolado, mas não prova que toda a exclusão real das 7.460 publicações será bem-sucedida ou que o total da prévia permaneceu inalterado. Caso a frente de coordenação retome o teste, exige nova prévia/confirmação consciente, separada deste hotfix.
+- **Não executado:** exclusão de publicações, limpeza histórica, mudança de regras ou reprocessamento.
+
+---
+
+## Histórico pré-implantação preservado abaixo
+As referências abaixo a "não autorizado" e "ainda não implantado" registram o estado **anterior** à aprovação A+A e não representam o estado atual.
+
 # L-11 — Hotfix indexação da confirmação do purge (053)
 
 **Checkpoint de 11/10/2026 (UTC). Estado: PR preparado e benchmark PG18 aprovado; merge/deploy PRODUTIVO NÃO AUTORIZADO/REALIZADO NESTE CHECKPOINT.**
