@@ -32,3 +32,14 @@ Investigar com PostgreSQL 18 isolado os IDs, estado `publication_scope_state`, v
 - Backend/API, worker, scheduler: deployment atual SUCCESS no SHA anterior `4662d75738258a11c085a6453ee473284a02ce22`. **Migration 054/055 não aplicada**, nenhum purge L-15 executado.
 - PRs backend #208 e web #96 permanecem ABERTOS, aguardando correção do teste isolado L-15 e todos os gates.
 - L-10 ainda desativada, dry-run real ainda pendente; L-15/L-10 seguem **REVISAR / BLOCK de produção**.
+
+
+## Retomada solicitada por CLAUDE-COORD — 11/10/2026 08:51 BRT
+- Novo pedido autoriza merge/deploy #208/#96 **somente se** CI e PG18 ficarem verdes; há migrations 054/055, e a janela exigida permanece minutos :20–:40. Nenhuma exclusão de publicações nesta atividade.
+- **Achado SQL confirmado:** `l15_out_of_scope_candidates` não usa `sourceActType`, seção nem `publication_versions`; faz join de `publication_scope_state.scope='OUT_OF_SCOPE'`, `publication_origins` e `sources.code='dou'`. A hipótese de obrigatoriedade desses metadados não se sustenta no código.
+- **Inconsistência concreta na fixture:** no caso `kind==='other'`, o teste insere a segunda origem DOU/externa **após** gravar `OUT_OF_SCOPE`. O trigger `publication_scope_origin_material` (migration 033) invoca `restore_publication_scope_on_material_change`, que transiciona a publicação para `IN_SCOPE`. Isso invalida a expectativa de `blockedOtherSource=1` no teste como está escrito. Corrigir ordem do fixture — ambas as origens primeiro, SUPPRESS por último — respeita a semântica jurídica; não desabilitar trigger.
+- **Lacuna ainda aberta:** o resultado `count=0` em vez de `count=1` para a publicação `eligible` não foi explicado pelo trigger da segunda origem; exige instrumentação/novo teste no mesmo ambiente PG18. Portanto, ainda não existe causa exata confirmada para toda a divergência.
+- Teste isolado [PG18 run 38134710624](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38134710624) continua FAILED; CI padrão backend #38134710579 passou, frontend PR #96 #38134763462 passou. **A soma de CIs verdes não supera esse gate vermelho.**
+- Frontend `main` evoluiu no merge L-11 PR #97 para `1e0f2a87fc654a0195e3e2ae13fc31d451584d1d`, enquanto a branch web #96 ainda foi criada sobre `150ef73fc4e415a0bcc902160688d9c4277abeb5`. PR #96 agora não está mergeable; precisa atualizar branch/reconciliar com L-11 antes de merge, além de testes.
+- **Dry-run produtivo L-10:** o texto recebido contém literalmente `<NÚMERO>`, não uma contagem inteira. Nenhum valor real foi fornecido/verificado. Ativar `COLLECTION_ITEMS_RETENTION_ENABLED=true` antes de obter/validar esse número violaria a exigência. Retenção segue **OFF**.
+- **Status:** L-15 REVISAR / produção BLOCK; L-10 REVISAR / retenção OFF. Nenhum merge/deploy de #208/#96, nenhuma migration 054/055 em produção e nenhuma exclusão de publicações.
