@@ -1,3 +1,16 @@
+## L-17 R2 — checkpoint 11/10/2026 ~12:26 BRT — 99% / backend implantado, web em rollout
+**Estado corrente, prevalece sobre os registros anteriores até readback final.**
+
+- Gate congelado backend PR #209 HEAD `cf75bdcabbdd136bead5b1d3b5eafe22edd2f03f`: CI integral [38149773057](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773057) SUCCESS (verify/DOU PG18/ONB PG18), L11 PG18 [38149773132](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773132) SUCCESS e L17 PG18 [38149773027](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773027) SUCCESS.
+- Backend PR #209 MERGED em 11/10/2026 12:23:43 BRT → `b39279330a49b44989ffece09ee5c186631e26e6`; serviços Railway backend deployment `27158ad2-950d-4c4f-99b1-4faf58210937`, worker `0cb06c89-81f1-4cc9-a651-09006a24b495`, scheduler `df18b355-082d-46ff-98c5-68cbe191dc75` — todos STATUS **SUCCESS**, log backend `PostgreSQL connection verified` e `Server listening`, worker `Collection worker started`, scheduler `Collection scheduler started`.
+- **Migrations 056–060 em produção: log backend confirmado `Migration applied: 056_l17_hidden_cleanup.sql`, `057_l17_canonical_type_conflict.sql`, `058_l17_archive_purge_discards.sql`, `059_l17_admin_lock.sql`, `060_l17_worker_always.sql`; `Database migrations are up to date.`** Durante a janela :20–:40 BRT. Não foi executado DELETE manual pelo executor.
+- Frontend CI [38148760486](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486) SUCCESS no HEAD `f1f6501cf97085ee78229eabe7ecd0063b9a6f4b`, Playwright real em quatro resoluções. PR #98 MERGED às 12:25:50 BRT SHA `ec1d820495c8531d37cd860fe7d71e3433cf7f9f`. Railway web05-preview configurado com fonte pinada nesse exato SHA; aguardando deploy SUCCESS.
+- Artefato Playwright (API sintética, não dados de produção): [GitHub artifact #11706536052](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486/artifacts/11706536052), path `playwright-artifacts/l17-review/desktop-1440x900/desconsiderados.png`. Extraído para `/mnt/data/L17_Desconsiderados_Playwright.png` e conferido visualmente na conversa.
+- Quadro: **L-15 CONCLUÍDA**, com 0 OUT_OF_SCOPE em 11/10 segundo Fábio; **L-17 REVISAR**, aguarda validação funcional e 1ª execução às 03:30; **LIMPEZA 14/15**.
+- Não houve purge manual, clique do botão, nem execução ad hoc do cron no banco de produção. A habilitação pré-existente do scheduler deve ser confirmada nos logs mais recentes.
+
+---
+
 ## L-17 R2 — checkpoint 11/10/2026 12:23 BRT — 96% / TODOS OS GATES VERDES, autorização de merge
 **Esta seção prevalece até o readback dos deployments.**
 
