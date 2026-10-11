@@ -1,3 +1,14 @@
+## L-17 R2 — checkpoint 11/10/2026 12:00 BRT — 94% / PG18 + WEB CI VERDES
+**Esta seção tem precedência até o fechamento de produção.**
+
+- Backend [PR #209](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/209) READY (sem merge), HEAD `24e9ee9ab1afd79a0bbec52179fdbd75a40b17aa`. PG18 isolado [run 38149273828](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149273828) **SUCCESS, 5 PASS / 0 FAIL**: L15 proteção e auditoria por sublote, L10 least privilege, L17 hidden worker, DO1E CIT-SNC runtime/histórico, L17 worker EXCLUDE_ALWAYS via mesmo motor + audit `L17_RULE_PURGE` + `ARCHIVE_PURGE`. Migrations 056–060 migradas SOMENTE no PG18 isolado; logs PG18 contêm `Migration applied: 059_l17_admin_lock.sql`, `Migration applied: 060_l17_worker_always.sql`. L11 PG18 run [38149273839](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149273839) **SUCCESS**. CI backend full [38149273796](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149273796) ainda em andamento.
+- Frontend [PR #98](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/98) READY (sem merge), HEAD `f1f6501cf97085ee78229eabe7ecd0063b9a6f4b`. [Frontend CI 38148760486](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486) **SUCCESS integral**, incluindo Playwright em 1440×900, 1920×1080, 390×844 e 360×800. Artefato [11706536052](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486/artifacts/11706536052) com screenshots reais dos browsers via APIs **sintéticas, sem escrita em produção**: `playwright-artifacts/l17-review/desktop-1440x900/desconsiderados.png`, `.../mobile-390x844/desconsiderados.png`. PNG extraído/conferido no chat.
+- Última correção backend: remoção de duplicidades entre HIDDEN e RULE, com prioridade `OUT_OF_SCOPE > RULE > HIDDEN`, teste PG18 cobrindo contagem por regra. Os cinco testes passaram.
+- Nenhum merge, migration, deploy ou purge L17 em produção até este momento. Qualquer rollout só na próxima janela :20–:40 BRT com **CI backend full SUCCESS**, SHAs constantes, 4 serviços Railway SUCCESS + log migration 056–060.
+- Quadro: **L-15 CONCLUÍDA** (0 OUT_OF_SCOPE, informação fornecida por Fábio em 11/10); **L-17 REVISAR**; **LIMPEZA 14/15**. Nenhuma consulta SQL ad hoc de contagem produtiva: item 6 dispensado pelo coordenador.
+
+---
+
 ## L-17 R2 — checkpoint 11/10/2026 11:54 BRT — 88% / validação integral
 **Esta seção prevalece sobre as anteriores até a atualização final.**
 
