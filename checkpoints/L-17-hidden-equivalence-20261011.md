@@ -1,3 +1,15 @@
+## L-17 HOTFIX — checkpoint 11/10/2026 ~13:22 BRT — 98% / testes de persistência e PG18 verdes
+**HOTFIX AINDA SEM MERGE/DEPLOY nesta etapa.**
+
+- PR #210 HEAD `8096952797e38011ec5a907b29666dd7e59843d9`.
+- PG18 dedicado [38154857171](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38154857171) **SUCCESS 6 PASS / 0 FAIL**: migration 061 aplicada isoladamente, 3000 regras + 12000 publicações sintéticas, **prévia HTTP 200 em 1864ms**, saída `L17_PG18_3000_RULE_PREVIEW_MS=1864 ACTIVE_RULES=3000 MATCHED_DOCUMENTS=12000`. Contagens por regra e 5 demais testes de proteção/audit/runtime aprovados.
+- CI integral [38154857187](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38154857187): job `verify` **SUCCESS**, incluindo a integração de persistência que antes falhava por falta de EXECUTE do normalizador no índice; DOU PG18 e ONB PG18 ainda em andamento. Gates finais ainda não liberados.
+- Migration 061: índice `ix_publications_l17_normalized_type_id`, EXECUTE apenas da função pura imutável `collection_filter_l11_normalize(TEXT)` para `radar_worker`, `radar_app`, `radar_taxonomy_curator`. Não amplia grants de tabelas, RLS ou funções de purge.
+- Cron EXCLUDE_ALWAYS agrupa todas as regras em blocos <=160/seção, controla tempo, gira grupos de início a cada dia e registra `totalRules`, `totalGroups`, `groupsVisited`, `deferredGroups`. Não roda automação de modos condicionais.
+- Próximo passo autorizado somente com todos os jobs SUCCESS e hora local :20–:40: merge PR #210, migrations/logs, readback SUCCESS backend, worker, scheduler e web. Nenhum purge em produção pelo executor.
+
+---
+
 ## L-17 HOTFIX — checkpoint 11/10/2026 13:18 BRT — 90% / permissão de índice corrigida, CI final em execução
 **Estado corrente do hotfix. Merge/deploy ainda NÃO autorizados até CI integral e PG18 no HEAD.**
 
