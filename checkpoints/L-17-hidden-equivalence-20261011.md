@@ -1,3 +1,29 @@
+# L-17 Hotfix rule cap — PROTOCOLO FINAL | 11/10/2026 ~13:25 BRT
+**Avanço de implementação/rollout: 100%. Status técnico: APPROVED, CI PG18 GREEN, Railway quatro serviços SUCCESS. L-17 permanece REVISAR até validação funcional/cron 03:30. Este bloco é o estado corrente.**
+
+## Falha confirmada
+- Produção em 11/10/2026, POST `/api/v1/admin/collection-filter/out-of-scope/preview` retornava 500 com `l17_rule_cap` ao encontrar 2.322 regras ativas. Raiz: `scopeCandidates()` rejeitava mais de 1.000 regras antes da classificação e recompilava/reconsultava a política em uma chamada por regra.
+- O PR #210 removeu esse teto e processa **TODAS** as regras ativas e aliases, agrupadas por seção em fatias de no máximo 200 tipos, compilando **uma única vez o MESMO evaluateCollectionFilter** do runtime. Proteções multi-tenant, outras fontes, token/repreview, auditoria, prioridade OUT_OF_SCOPE>RULE>HIDDEN e limites de lote continuam valendo. Preview é read-only (não dispara limpeza dos Desconsiderados).
+- Cron às 03:30: EXCLUDE_ALWAYS agregado em grupos de no máximo 160 tipos por seção, rotação diária do primeiro grupo e log `totalRules`, `totalGroups`, `groupsVisited` e `deferredGroups` quando o orçamento de execução obriga adiamento. Modos condicionais continuam EXCLUSIVOS do botão. Não há regra silenciosamente truncada; processamento operacional permanece deliberadamente limitado para não travar coleta.
+- Migration **061_l17_rule_cap_index.sql** cria índice funcional no normalizador SQL existente e confere **somente EXECUTE** da função imutável sem leituras de banco a `radar_worker`, `radar_app`, `radar_taxonomy_curator`; sem grant de tabelas ou mudança RLS. Correção necessária: a integração de persistência havia reproduzido `permission denied for function collection_filter_l11_normalize` em INSERT de publicações após a primeira versão do índice. O CI seguinte confirmou a remediação. Nenhuma mudança em `is_hidden` ou migration 029.
+
+## CI e benchmark
+- Backend PR [#210](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/210), HEAD congelado `8096952797e38011ec5a907b29666dd7e59843d9`.
+- PG18 L-17 [run #38154857171](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38154857171): **SUCCESS 6 testes / 0 falhas**, migration 061 isolada, regressões de tenant/outra fonte, CID-SNC/EXCLUDE_ALWAYS, audit/retention. Log `L17_PG18_3000_RULE_PREVIEW_MS=1864 ACTIVE_RULES=3000 MATCHED_DOCUMENTS=12000`; preview HTTP 200 e SOMA POR REGRA 12000, 1,864s <30s.
+- CI integral [run #38154857187](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38154857187): **SUCCESS**, todos três jobs (verify, ONB-01 PostgreSQL18, DOU-CLEAN-02 PostgreSQL18), incluindo coleta/persistência que antes falhou, unitário com 3.200 regras sem truncamento.
+
+## SHAs, migrations e Railway readback
+- Merge PR #210 às **13:22:54 BRT**, main SHA **`67e38b93f90e627bfc6e8594c968d5dd93050677`** (no intervalo :20–:40).
+- Backend `b19bdcda-8634-4a98-ade3-bf678e8af1e8`, commit `67e38b93f90e627bfc6e8594c968d5dd93050677` — SUCCESS, 1/1.
+- Worker `5b108ec9-0985-4fb2-82cb-3f24e0732c20`, mesmo commit — SUCCESS, 2/2, `Collection worker started`.
+- Scheduler `362b5c91-4202-4228-876b-0053de1cd14c`, mesmo commit — SUCCESS, 1/1, `Collection scheduler started`.
+- Web `f44c4296-89a6-41f8-b82d-d9caa34cb9c7`, commit anterior `ec1d820495c8531d37cd860fe7d71e3433cf7f9f` — SUCCESS, 1/1, sem alterações de frontend neste hotfix.
+- Log backend: **`Migration applied: 061_l17_rule_cap_index.sql`**, `Database migrations are up to date.`. Scheduler boot: `mode=DRY_RUN`, `enabled=true`, sem execução de limpeza fora da janela. Railway backend e web: `totalFailures=0`, `servicesWithIssues=0`, `pendingWork=0`.
+- **Zero exclusões manuais em produção feitas pelo executor do hotfix.** Nenhum purge nem acionamento ad hoc do cron.
+- Quadro: **L-15 CONCLUÍDA** (0 OUT_OF_SCOPE informado por Fábio em 11/10), **L-17 REVISAR**, **LIMPEZA 14/15**. Validação funcional de preview autenticada com política real e observação cron 03:30 ainda são pendências; benchmark PG18 é sintético e não substitui medição real de produção.
+
+---
+
 ## L-17 HOTFIX — checkpoint 11/10/2026 ~13:22 BRT — 98% / testes de persistência e PG18 verdes
 **HOTFIX AINDA SEM MERGE/DEPLOY nesta etapa.**
 
