@@ -1,3 +1,13 @@
+## L-17 R2 — checkpoint 11/10/2026 12:23 BRT — 96% / TODOS OS GATES VERDES, autorização de merge
+**Esta seção prevalece até o readback dos deployments.**
+
+- HEAD backend PR #209: `cf75bdcabbdd136bead5b1d3b5eafe22edd2f03f`. CI integral [38149773057](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773057) SUCCESS: verify, DOU-CLEAN-02 PG18, ONB-01 PG18. L11 PG18 [38149773132](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773132) SUCCESS. L15/L10/L17 PG18 [38149773027](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38149773027) SUCCESS. Casos do runtime CIT-SNC, purge histórico com generic sourceActType, worker EXCLUDE_ALWAYS, ACL/audit e origem protegida cobertos por testes do HEAD.
+- HEAD web PR #98: `f1f6501cf97085ee78229eabe7ecd0063b9a6f4b`, [Frontend CI 38148760486](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486) SUCCESS com Playwright. Evidência [artifact #11706536052](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38148760486/artifacts/11706536052), screenshot `playwright-artifacts/l17-review/desktop-1440x900/desconsiderados.png` recuperado e conferido via ZIP original.
+- Mudança de escopo final confirmada: grupos OUT_OF_SCOPE, RULE (engine inclusive modos condicionais no botão) e HIDDEN; cron somente EXCLUDE_ALWAYS/HIDDEN; Desconsiderados e exportação completa por filtro; migration 029/is_hidden imutáveis. Sem contagem SQL produtiva por regra conforme dispensa do COORD.
+- Em sequência: merge/deploy **somente na janela local :20–:40**; readback SHAs/migrations 056–060 e quatro SUCCESS obrigatórios; nenhuma exclusão manual. Após conclusão, L-17 permanece REVISAR, L-15 CONCLUÍDA conforme Fábio, LIMPEZA 14/15.
+
+---
+
 ## L-17 R2 — checkpoint 11/10/2026 12:00 BRT — 94% / PG18 + WEB CI VERDES
 **Esta seção tem precedência até o fechamento de produção.**
 
