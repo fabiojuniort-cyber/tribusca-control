@@ -22,3 +22,13 @@
 
 ## Próximo passo
 Investigar com PostgreSQL 18 isolado os IDs, estado `publication_scope_state`, vínculos DOU e o resultado de `l15_out_of_scope_candidates` sob contexto PLATFORM_ADMIN, preservar proteção de cliente/outra fonte e auditar exclusão sintética. Destravar QA, obter CI verde, dry-run real antes de ativar retenção, preparar prints reais via Playwright e só então considerar deploy.
+
+
+## Entrega independente concluída — L-11 popup (11/10/2026)
+- O ajuste mínimo foi separado em [web PR #97](https://github.com/fabiojuniort-cyber/radar-fiscal-web/pull/97), para não publicar o botão L-15 antes do backend aprovado.
+- Frontend [CI #38135042056](https://github.com/fabiojuniort-cyber/radar-fiscal-web/actions/runs/38135042056): COMPLETED/SUCCESS (tipagem, testes, build e Playwright).
+- Merge web por squash: `1e0f2a87fc654a0195e3e2ae13fc31d451584d1d`.
+- Railway web05-preview: deployment `26213bde-5f54-472e-bf3c-a312467220d5`, SUCCESS no SHA do merge; Vite preview porta 8080, domínios trifaros.com.br e www.trifaros.com.br.
+- Backend/API, worker, scheduler: deployment atual SUCCESS no SHA anterior `4662d75738258a11c085a6453ee473284a02ce22`. **Migration 054/055 não aplicada**, nenhum purge L-15 executado.
+- PRs backend #208 e web #96 permanecem ABERTOS, aguardando correção do teste isolado L-15 e todos os gates.
+- L-10 ainda desativada, dry-run real ainda pendente; L-15/L-10 seguem **REVISAR / BLOCK de produção**.
