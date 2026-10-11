@@ -1,3 +1,14 @@
+## L-17 hotfix — checkpoint 11/10/2026 ~13:16 BRT — 88% / PG18 12000 DOCS PASS, HEAD final em CI
+**Estado corrente para o hotfix; não interpretar o sucesso do R2 como deploy da correção l17_rule_cap.**
+
+- Causa raiz: `scopeCandidates()` tinha `if(rules.rows.length>1000)throw new Error('l17_rule_cap')`. O erro 500 ocorre ANTES de enumerar qualquer candidato com a política ativa de 2.322 regras. Também compilava/reconsultava a política uma vez a cada regra.
+- Backend [PR #210](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/210), branch `fix/l17-rule-cap-3000-20261011`, HEAD final provisório `412a11c86c9dcb18aa908e753147c48d48a59564`, sem merge/deploy. Removido hard cap de regras, engine runtime compartilhado compilado 1 vez com opção `readOnly`, SQL em blocos <=200 tipos/seção, nenhum descarte silencioso; por regra e token persistidos, mesmas proteções. Cron EXCLUDE_ALWAYS usa blocos <=160 tipos/seção, rotação de partições por dia, `deferredGroups` em logs e limite temporal curto; não ativa condicionais automáticos. Migration 061 cria índice no normalizador SQL e não modifica dados.
+- **PG18 isolado run [38154572281](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38154572281): SUCCESS / 6 PASS / 0 FAIL.** Fixture de **3000 regras** e **12000 documentos** aprovou HTTP 200, 12000 descartes contabilizados por regra, preview **2478 ms (<30000 ms)**. Aplicação de migration 061 comprovada. O rótulo antigo '1200' foi corrigido e a contagem inserida no log em commit subsequente, com CI novo pendente.
+- Os demais testes cobriram empresa cliente/outra origem, auditoria, confirmação sintética, runtime CIT-SNC e worker EXCLUDE_ALWAYS. Teste unitário verifica 3200 regras divididas em grupos sem perdas.
+- Ainda aguardar **CI integral e PG18 no SHA atual** antes de qualquer merge. Próxima janela :20–:40 BRT; merge autorizado somente com gates SUCCESS; Railway backend/worker/scheduler/web lidos individualmente e `Migration applied: 061_l17_rule_cap_index.sql`. Nenhuma exclusão manual.
+
+---
+
 ## L-17 HOTFIX — checkpoint 11/10/2026 ~13:12 BRT — 70% / BLOCK até benchmark PG18
 **Estado corrente, anterior ao hotfix; não confundir o deploy R2 com aprovação deste PR.**
 
