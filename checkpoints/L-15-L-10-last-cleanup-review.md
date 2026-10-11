@@ -43,3 +43,21 @@ Investigar com PostgreSQL 18 isolado os IDs, estado `publication_scope_state`, v
 - Frontend `main` evoluiu no merge L-11 PR #97 para `1e0f2a87fc654a0195e3e2ae13fc31d451584d1d`, enquanto a branch web #96 ainda foi criada sobre `150ef73fc4e415a0bcc902160688d9c4277abeb5`. PR #96 agora não está mergeable; precisa atualizar branch/reconciliar com L-11 antes de merge, além de testes.
 - **Dry-run produtivo L-10:** o texto recebido contém literalmente `<NÚMERO>`, não uma contagem inteira. Nenhum valor real foi fornecido/verificado. Ativar `COLLECTION_ITEMS_RETENTION_ENABLED=true` antes de obter/validar esse número violaria a exigência. Retenção segue **OFF**.
 - **Status:** L-15 REVISAR / produção BLOCK; L-10 REVISAR / retenção OFF. Nenhum merge/deploy de #208/#96, nenhuma migration 054/055 em produção e nenhuma exclusão de publicações.
+
+
+## L-15 / L-10 — fechamento em progresso, 11/10/2026 09:17 BRT
+
+### Diagnóstico comprovado, NÃO modificar a regra jurídica
+- A falha anterior atribuída a `count=0` era leitura incorreta da linha do teste: `plan.count === 1` e `plan.blockedCompany === 1` passaram; quem retornava zero era `plan.blockedOtherSource`, esperado um.
+- Causa exata: a fixture introduzia a segunda origem oficial depois de gravar `publication_scope_state.scope='OUT_OF_SCOPE'`. O gatilho `publication_scope_origin_material` (migration 033) aplica RESTORE para `IN_SCOPE` por mutação material. Portanto, o ato deixou de ser candidato e não era computado como protegido por outra fonte.
+- Ajuste SOMENTE da fixture para cadastrar a segunda origem antes do evento SUPPRESS; lógica de produção, guard e gatilho permaneceram inalterados. HEAD backend `f4e5cabc526f91b91148582c626835f60169c4de`.
+- PG18 dedicado [CI #38138441016](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/actions/runs/38138441016): **SUCCESS**, 2 testes aprovados, incluindo L15 preview e confirm synthetic, protected company, cross-source, PLATFORM_ADMIN, audit 051, L10 index e ACL worker; nenhuma exclusão em produção.
+- PR web #96 reconciliado via merge commit com main L11 #97, preservando popup Modo vazio; HEAD web `f271448503db0bf26820cc0401f08bce632ce566`, mergeable. CI frontend em execução até a confirmação final.
+
+### Dry-run real L-10 — confirmado pelo usuário
+- SQL em produção em 11/10/2026 informado por Fábio: **379.882 elegíveis (>7 dias) de 538.623 `collection_items`**. Não trocar pelo total geral.
+- Programação: 03:30 America/Sao_Paulo, até 100 itens por batch, máximo de 1.000 batches e limite de 120s por execução. A primeira execução pode deixar backlog; não aumentar indiscriminadamente os lotes e não interromper a coleta.
+- Flag `COLLECTION_ITEMS_RETENTION_ENABLED=true` deve ser definida **somente após** backend/worker/scheduler SUCCESS e migrations 054/055 confirmadas. Scheduler registra novo dry-run read-only e o valor de itens elegíveis.
+- **Nenhuma exclusão de publicações autorizada durante merge/deploy; nenhum clique L-15.**
+- Quadro solicitado: **L-15 REVISAR** (aguardando clique do Fábio); **L-10 REVISAR** (aguardando primeira execução automática 03:30).
+- **Pendente neste checkpoint:** CIs integrais, merge/deploy dentro da janela :20–:40 e ativação final. Não alegar conclusão antes do readback Railway.
