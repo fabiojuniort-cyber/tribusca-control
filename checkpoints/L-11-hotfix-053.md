@@ -29,3 +29,14 @@
 - `db:migrate` inicia `BEGIN` e `COMMIT`; `CREATE INDEX` normal (não CONCURRENTLY) bloqueia gravações enquanto constrói o índice. O tempo de 107 ms mede **purge após indexação** em 270 MB isolados, **não** o tempo de construção de índice na tabela produtiva de ~1 GB.
 - Caso haja escolha A para hotfix: somente após CI integral SUCCESS, confirmar janela/lock e backup, merge sob HEAD SHA congelado, observar migration 053 e deploy Railway SUCCESS. Nenhuma exclusão de publicações é autorizada como parte do hotfix.
 - Até aplicação/validação produtiva, operador **não deve clicar em Continuar**.
+
+## Autorização posterior expressa do proprietário — 11/10/2026 (America/Sao_Paulo)
+
+**Fábio confirmou A + A nesta frente:**
+- A para merge e deploy da PR backend #207, com início do deploy na janela de minutos **:20 a :40** de uma hora, distante da coleta na virada da hora. Exigir API SUCCESS e literal `Migration applied: 053_collection_filter_purge_lookup_indexes.sql` nos logs.
+- A para retirar `commitSha` fixo de `radar-fiscal-worker` e `radar-fiscal-scheduler`, ligar ambos à branch `main` e observar seus deploys SUCCESS no mesmo SHA do merge da #207.
+- Proibição expressa de exclusão de publicações nesta atividade.
+
+**Pré-flight read-only às 00:10–00:13 BRT:** PR #207 OPEN, mergeable, HEAD congelado `0bb55c7f99c0c924480887c4c2fa864806bb6460` e base `d252f054148217c45664c549e2d1ec5b69a3140a`; pipelines CI #38107140194 e benchmark PG18 #38107140180 COMPLETED/SUCCESS. API/worker/scheduler/Postgres online, sem falhas recentes e sem patch Railway pendente. Backend acompanha `main`, worker/scheduler seguem pins anteriores. Snapshot de capacidade nos logs do scheduler em 11/10 03:02 UTC: estimado **76,27% de 5 GiB**, com `collection_items` ~1,10 GB. Backup anterior de 10/10 19:57 BRT informado por Fábio/CLAUDE-COORD, não verificado independentemente aqui. A migration usa CREATE INDEX normal em transação e pode bloquear writes; respeitar janela operacional.
+
+**Aguardando abertura da janela antes do merge que aciona deploy automático.** Os parágrafos de bloqueio por falta de A/B acima são registro anterior, superado por esta autorização; não interpretar como estado atual.
