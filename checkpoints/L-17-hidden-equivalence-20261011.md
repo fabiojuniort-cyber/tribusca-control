@@ -1,3 +1,14 @@
+## L-17 HOTFIX — checkpoint 11/10/2026 ~13:12 BRT — 70% / BLOCK até benchmark PG18
+**Estado corrente, anterior ao hotfix; não confundir o deploy R2 com aprovação deste PR.**
+
+- Defeito produtivo observado pelo COORD: `POST /api/v1/admin/collection-filter/out-of-scope/preview` respondeu 500, backend `l17_rule_cap`, política aprovada com **2.322 regras de tipo**. Raiz verificada no arquivo `src/modules/collection/collection-filter.scope-purge.ts`: hard cap `if(rules.rows.length>1000)throw new Error('l17_rule_cap')`; o algoritmo ainda recompilava/reconsultava a política para cada regra via `candidates()`.
+- Hotfix em [backend PR #210](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/pull/210), branch `fix/l17-rule-cap-3000-20261011`, HEAD `5858b887108688f5f88fca9cdaf245685da0f1c7`, **SEM MERGE OU DEPLOY NESTE CHECKPOINT**.
+- Mudança: engine/runtime compilado uma vez (leitura pura no preview); TODAS as regras ativas elegíveis e aliases, sem limite fixo, repartidos por seção e chunk <=200; SQL ainda usa o pré-filtro oficial e a mesma avaliação do runtime. Hash/token, proteção de clientes/outras fontes e buckets preservados. Migration **061_l17_rule_cap_index.sql**, índice no normalizador SQL existente, sem excluir registros. Cron automático EXCLUDE_ALWAYS (modos condicionais não incluídos) em chunks <=160 tipos/seção; grupo inicial rotativo por dia, `totalRules`, `groupsVisited` e `deferredGroups` explícitos nos logs dentro do orçamento de execução. Nenhuma regra descartada silenciosamente.
+- PG18 isolado deve testar **3000 regras reais inseridas + 1200 documentos sintéticos** e registrar `L17_PG18_3000_RULE_PREVIEW_MS` com HTTP 200, 1200 matches por regra e `elapsed<30000 ms`. O teste foi isolado em arquivo próprio e executado depois das fixtures L15 para não alterar suas contagens. Anteriormente, preparação da fixture falhou por ordem dos dados; não representa resultado de carga. **Aguardando CI no HEAD corrente**.
+- Política de implantação: nenhum merge/deploy até PG18 + CI integral **SUCCESS**, produção somente na janela :20–:40 America/Sao_Paulo por causa da migration 061. Nenhuma exclusão manual será executada. 4 Railway SUCCESS nas versões R2 anteriores ao hotfix não comprovam este release.
+
+---
+
 # L-17 R2 — PROTOCOLO FINAL | 11/10/2026 12:28 BRT
 **Avanço da execução autorizada: 100%. Implantação técnica: SUCCESS. Avaliação funcional/primeira execução do cron: REVISAR. Este bloco é o estado corrente, prevalece sobre o histórico abaixo.**
 
