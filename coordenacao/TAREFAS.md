@@ -49,3 +49,7 @@ Banco 3,3 GB (≈1,6 GB log operacional, ≈1,5 GB produto), WAL 192 MB, arquiva
 ## Próximas frentes
 - **F2 TAXONOMIA + CADASTRO (DEF-01)** — AGUARDANDO OK.
 - **F3 QUALIDADE DO ALERTA** — AGUARDANDO OK.
+
+| ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
+|---|---|---|---|---|
+| MON-01 | Central de Monitoramento: exibir Encontradas, Descartadas pelo filtro de coleta, Mantidas (novas ou já existentes), Processadas (= Descartadas + Mantidas) e Importadas (novas) na tabela de execuções de cada fonte e nos cards de 24h, reutilizando `collection_items` e `collection_filter_discard_run_stats`. Sem alterar o restante da tela. | Métricas exibidas corretamente nos dois locais; print antes do merge. Implementação somente após OK do Fábio. | Claude — / GPT 6 chat (proposta) | EM ANDAMENTO (proposta) |
