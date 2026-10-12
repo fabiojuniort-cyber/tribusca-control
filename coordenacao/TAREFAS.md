@@ -6,7 +6,7 @@ Só o Fábio muda de `AGUARDANDO OK` para `PRONTA`. O EXEC atualiza só o status
 COORD e revisões: Claude Opus 5.5 (chat) / GPT 6.1 Sol Work. Respostas curtas.
 Codex: usar modelo econômico e raciocínio médio; subir só se não resolver. GPT 6 Astra Work só com justificativa.
 
-## Frente LIMPEZA: 10/14 (71%)
+## Frente LIMPEZA: 16/18 (89%)
 Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 
 | ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
@@ -20,7 +20,7 @@ Objetivo: deixar o projeto simples e leve. Nenhuma feature nova até concluir.
 | L-07 | DOE-SP legado: desativar e remover o conector se não for usado em produção | Fora do registry e sem source ativa | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA |
 | L-08 | Testes órfãos (nunca rodam): `onboarding-identity.unit`, `publication.presentation.integration`, `tax13.scoped-presentation.unit` | Incluídos no CI ou apagados | Haiku 5.5 (Claude Code) / Codex | CONCLUÍDA (2 testes incluídos; TAX13 reservado à L-16) |
 | L-09 | Inventário de `ops/`, scripts npm (83) e docs: marcar o que é histórico para arquivar | Lista com "manter / arquivar" aprovada | Sonnet 5.5 (Claude Code) + subagentes Haiku 5.5 / Codex + subagentes | AGUARDANDO OK |
-| L-10 | Retenção de `collection_items` (1 GB, 528 mil linhas): manter só os últimos 7 dias | Padrão de 7 dias em código; dry-run é padrão; exclusão real somente com OK específico do Fábio | Sonnet 5.5 (Claude Code) / Codex | REVISAR (limpeza real somente após OK do Fábio) |
+| L-10 | Retenção de `collection_items` (1 GB, 528 mil linhas): manter só os últimos 7 dias | Padrão de 7 dias em código; dry-run é padrão; exclusão real somente com OK específico do Fábio | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA (COORD confirmou logs: retenção, EXCLUDE_ALWAYS e ocultas executadas em 12/10/2026 às 03:30 BRT) |
 | L-11 | Classificação imediata de novos tipos e edição de Modo, com exclusão das publicações descartadas e remoção de rascunhos/simulações/aprovação | Popup Classificar com Fonte/Seção/Tipo/Modo; confirmação indica X publicações; aplicação imediata, exclusão segura em lotes, audit log com IDs; PLATFORM_ADMIN; preservar motor existente, termo tributário e termo forte | Sonnet 5.5 (Claude Code) / Codex | REVISAR (aguardando primeira classificação em produção) |
 | L-12 | Analisar o filtro: 124 mil publicações parecem demais para conteúdo tributário (só análise) | Relatório curto: volume por fonte e % fora de escopo | Sonnet 5.5 (Claude Code) / Codex | CONCLUÍDA |
 
@@ -35,6 +35,7 @@ Nota L-15: proposta atual autorizada pelo Fábio — backup MANUAL pelo Railway 
 | ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
 |---|---|---|---|---|
 | L-16 | Corrigir as 2 falhas TAX13 (Convênios 100/97 e 52/91; anexo revogado NCM 8450.11.00) | `tax13.scoped-presentation.unit.test.ts` volta ao CI e passa | Sonnet 5.5 / Codex | AGUARDANDO OK |
+| L-19 | Corrigir configuração `DB_VOLUME_CAPACITY_BYTES` de 5 GB para 100 GB, eliminando alerta falso de capacidade | Proposta, OK do Fábio e validação dos alertas antes de qualquer alteração em ambiente | Claude Sonnet 5.5 (Claude Code) / Codex (modelo econômico) | AGUARDANDO OK |
 | L-18 | Fechamento LIMPEZA — somente purge (SEM recoleta): (2) ampliar APENAS o grupo `ocultas pela regra antiga (029)` para qualquer fonte; (2b) acrescentar APENAS no DOE-SP o grupo separado `tipo provavelmente errado`, quando `act_type = 'EMENDA CONSTITUCIONAL'` e título NÃO começa com `Emenda Constitucional` (21 visíveis informadas, ex. `PDs Pagas`). Demais grupos continuam só DOU; preservar proteções e Desconsiderados. Item 1: OK do Fábio recebido em 12/10; preparação da recoleta das 81/26 datas em PR #214, ainda não aplicada nem executada. | Proposta revisada em até 5 linhas e novo OK do Fábio antes de codar; prévia separada por grupo; CI verde e print antes do merge; migrations/deploy só após gates, na janela :20–:40. | Claude Sonnet 5.5 (Claude Code) / Codex (modelo econômico) | EM ANDAMENTO (PR #213 backend e #102 web MERGED; Railway SUCCESS; migration 063 aplicada; OK do Fábio para item 1, PR #214 em CI/revisão, sem recoleta) |
 
 L-11 ampliada por CLAUDE-COORD (autorizado por Fábio): aplicar regras de Fonte/Seção/Tipo/Modo imediatamente, recadastrar novos tipos e editar Modo em Tipos; prévia de exclusão X, remover fisicamente publicações elegíveis conforme a regra com audit log (tipo, modo, contagem e IDs), exclusivamente PLATFORM_ADMIN; remover rascunho/simulação/aprovação via migration NOVA 051; preservar motor atual, termos tributários e termos fortes. Proposta apenas; implementação depende do OK do Fábio. Restrições técnicas: publicação com scope events/state append-only/RESTRICT e outras referências não pode ser apagada sem resolução legal de dependências; não contornar constraints.
