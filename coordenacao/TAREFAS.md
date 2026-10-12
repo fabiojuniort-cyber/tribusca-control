@@ -43,3 +43,9 @@ Nota: as duas migrations `033_*` já aplicadas **não** devem ser renomeadas. Re
 
 ## Achados L-02 (10/10/2026)
 Banco 3,3 GB (≈1,6 GB log operacional, ≈1,5 GB produto), WAL 192 MB, arquivamento PITR sem falhas. Volume do Postgres 9,75 GB: ≈6 GB fora do banco ainda sem explicação. Backups temporários ≈18,5 GB e volume órfão de 30 GB.
+
+**L-17 — REVISAR:** aguardando a conferência SQL do Fábio.
+
+## Próximas frentes
+- **F2 TAXONOMIA + CADASTRO (DEF-01)** — AGUARDANDO OK.
+- **F3 QUALIDADE DO ALERTA** — AGUARDANDO OK.
