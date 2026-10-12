@@ -1,13 +1,13 @@
 # F2-T00 — Reconciliação de Taxonomia + Cadastro
 
-**Status:** 12/10/2026 — reconciliação documental executada; **DEF-01 substituta criada, pendente de OK expresso do Fábio**.  
+**Status:** 12/10/2026 — **DEF-01 substituta aprovada pelo Fábio (conforme CLAUDE-COORD)**, reconciliação e plano T01–T03 documentados; **fechamento técnico da T00 bloqueado pelo XLSX remoto ausente**.  
 **Classificação:** R0 documental. **Sem código, migration, carga, merge ou deploy.**
 
 ## Resultado da busca DEF-01 anterior
 
 Busca por arquivo/nome/texto `DEF-01` em `tribusca-control` (`main`, Issues e PRs), bem como `main` de `radar-fiscal-backend` e `radar-fiscal-web`: **DEF-01 anterior não localizada**. O PR de reconciliação #105 é o único PR do controle retornado pela busca `DEF-01`. Assim, não é possível afirmar lacunas/sobras/divergências contra um texto original não localizado.
 
-**Substituta proposta:** [DEF-01 — F2 Taxonomia + Cadastro](DEF-01-TAXONOMIA-CADASTRO-SUBSTITUTA.md). Essa é a lista consolidada oficial **proposta**, **não homologada** enquanto faltar OK do Product Owner.
+**Substituta proposta:** [DEF-01 — F2 Taxonomia + Cadastro](DEF-01-TAXONOMIA-CADASTRO-SUBSTITUTA.md). Essa é a lista consolidada **aprovada pelo Product Owner**, por autorização transmitida pelo CLAUDE-COORD em 12/10/2026.
 
 ## IDs e reconciliação com o complemento CLAUDE-COORD
 
@@ -16,7 +16,7 @@ Busca por arquivo/nome/texto `DEF-01` em `tribusca-control` (`main`, Issues e PR
 | **F2-T00** | Conciliação documental e fonte DEF-01 substituta; execução atual. |
 | **F2-T01** | Ajustar **Segmento/Subsegmento existentes**, com subsegmento no estilo “Grupo” de produtos e exibição “segmento – subsegmento”. **Não criar estrutura nova.** |
 | **F2-T02** | **Tabela independente de Atuação**, sinônimos editáveis pelo Fábio, marcação da norma com evidência. **Sem reintroduzir sinônimos removidos do Segmento**. |
-| **F2-T03** | Duas planilhas anexadas indicadas como fonte de referência interna; versionamento de seus binários pendente; ver [índice/hashes](../reference-data/f2/README.md). |
+| **F2-T03** | Duas planilhas anexadas **aprovadas** para referência interna e substituindo o CSV legado na F2; hashes locais conferidos, versionamento binário remoto pendente; ver [índice/hashes](../reference-data/f2/README.md). |
 | **F2-T04** | Aplicar **regras do Sonar já aprovadas**, por estabelecimento; **não inventar pesos/limiares ou novo critério**. |
 | **F2-T05** | **RESERVADA** — busca por CNPJ já existe e não pode ser alterada. |
 | **F2-T06** | IE por API gratuita/UF, começando por GO, com fallback manual; não refazer busca por CNPJ. |
@@ -46,8 +46,10 @@ Busca por CNPJ (já existente), WhatsApp, Assistente Tributário, estrutura de t
 
 ## Decisões finais pendentes
 
-1. **OK do Fábio** para aprovação da DEF-01 substituta.
-2. **Commit efetivo dos dois XLSX** na pasta de referência e verificação de SHA. A escrita binária dos anexos ainda não foi possível por este conector; a pasta contém somente o índice de referência.
-3. Para T09, empresa real/ambiente de validação e aceite específicos — sem exigir essa seleção para concluir a reconciliação documental.
+1. **RESOLVIDA:** o Fábio aprovou a DEF-01 substituta por mensagem transmitida pelo CLAUDE-COORD em 12/10/2026.
+2. **BLOQUEIO:** falta comprovar **commit efetivo dos dois XLSX** na branch do PR #105 e verificar SHA-256 dos arquivos remotos; diretório do GitHub consultado contém apenas README.md. SHA local dos dois arquivos **PASS**.
+3. **T09 futura:** empresa real/ambiente de validação e aceite específicos — não impede a aprovação funcional da DEF-01.
 
-**Gate:** manter PR #105 **DRAFT**; não tratar T00 como autorização da implementação subsequente.
+**Plano de execução futuro:** [lote F2-T01 a T03](F2-T01-T03-PLANO-LOTE.md), documentado sem código.
+
+**Gate:** definição aprovada e planejamento finalizados; manter PR #105 **DRAFT e sem merge** até os dois XLSX estarem no GitHub com integridade comprovada. Não tratar T00 como autorização da implementação subsequente.
