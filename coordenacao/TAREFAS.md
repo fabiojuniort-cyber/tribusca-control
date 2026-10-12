@@ -51,6 +51,10 @@ Banco 3,3 GB (≈1,6 GB log operacional, ≈1,5 GB produto), WAL 192 MB, arquiva
 ## Próximas frentes
 - **F2 TAXONOMIA + CADASTRO (DEF-01)** — AGUARDANDO OK.
 - **F3 QUALIDADE DO ALERTA** — AGUARDANDO OK.
+- **F4 ASSISTENTE TRIBUTÁRIO (DEF-02)** — AGUARDANDO OK. MVP Pergunte ao acervo: somente base relevante por tenant e dispositivos vigentes, respostas com citações oficiais, sem cálculo; pré-requisitos F2/F3 e ARQ-01.
+- **F5 NOTIFICAÇÕES + WHATSAPP (DEF-02)** — AGUARDANDO OK. Fase 1: alerta de relevância Alta por estabelecimento; Fase 2: Decodifica pelo WhatsApp; Fase 3: assistente com citação dependente da F4. Opt-in/SAIR, verificação do telefone, API oficial e LGPD.
+
+**Ordem prevista na DEF-02:** F2 → F3 → F5 fase 1 → F4 → F5 fases 2 e 3. **Escopo registrado; nenhuma implementação autorizada.**
 
 | ID | Tarefa | Critério de pronto | Rodar em (Claude / GPT) | Status |
 |---|---|---|---|---|
