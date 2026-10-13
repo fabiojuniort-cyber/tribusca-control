@@ -1,3 +1,22 @@
+# F2-T00 — Manifesto das fontes v5 recebidas em 13/10/2026
+
+**Prioridade documental:** por decisão do Fábio transmitida via handover F2 de 13/10/2026, **Segmento v5 e Produto v5 SUBSTITUEM v1.7.3 e v1.7.1 para as próximas validações e cargas**. Os arquivos v1.7.x descritos abaixo continuam preservados **somente como histórico**, sem serem considerados as fontes vigentes do lote F2.
+
+| Fonte v5 fornecida | SHA-256 dos bytes recebidos | Tamanho | Aba / dados |
+| --- | --- | ---: | --- |
+| `Radar_Fiscal_Carga_Segmento_Revisada_v5.xlsx` | `d27368e821b3cf892400a8fe8fd9cd8b1b74f0f711541a203655acab041ce814` | verificar no binário | `Segmento` — 1.332 CNAEs |
+| `Radar_Fiscal_Carga_Produto_Revisada_v5.xlsx` | `261da490a5a030e698d43030c6a552cf39cc3f025f0249f71ffff1001b57051a` | verificar no binário | `Produto` — 4.225 itens |
+
+**Estado de integridade em 13/10/2026: RECEBIDA / FONTE DESIGNADA, MAS NÃO HOMOLOGADA PARA IMPORTAÇÃO**. Os hashes são **locais**, obtidos diretamente dos anexos, e **não equivalem a blobs XLSX versionados no GitHub**. Conforme decisão F2, o upload binário continua reservado ao fechamento da frente; não antecipar esse gate.
+
+**Inspeção independente read-only (não confundir com CLI oficial, banco ou prova isolada):** 1.332 CNAEs distintos; 4.225 códigos de produto distintos; **10 erros em Produto.NCM**, contendo prefixos com 5/7 dígitos (`2710.12.4`, `2710.19.3`, `2815.1`, `2306.4` [2], `1209.2`, `0307.1` [2], `0307.3`, `0901.1`); **448 alertas de cardinalidade**, não bloqueantes, dos quais 250 têm mais produtos sugeridos e 198 têm mais NCMs sugeridas; **13 categorias distintas em Atuação**, incluindo `Energia e utilidades` para 8 CNAEs 35.xx (contrato anterior com 7 categorias ficou obsoleto). Os anexos recebidos possuem apenas as abas `Segmento` e `Produto`: as abas auxiliares Pendências/Cobertura/Pares IBGE × canônico não estão presentes, e portanto não entram na carga.
+
+**Gate:** PAUSE da carga/ensaio oficial até correção **na planilha fonte** e reconciliar as categorias de Atuação. Não corrigir os 10 códigos por truncamento/padding nem no importador, não alterar aliases sem aceite do Fábio. A etapa adicional de prova dump → restore → job duplo em PG18 isolado exige arquivos íntegros, hashes atualizados e checagens de segurança próprias. **Proibidos: carga produtiva, merge e deploy sem respectivas autorizações.** Nenhum resultado CLI positivo foi declarado nesta revisão.
+
+---
+
+## Histórico v1.7.x — substituído pela fonte v5 de 13/10/2026
+
 # F2-T03 — Fontes de dados de referência
 
 **Registro:** 12/10/2026 · **proprietário funcional:** Fábio (Product Owner) · **estado de aprovação:** **DEF-01 substituta e uso das duas planilhas aprovados pelo Fábio**, conforme CLAUDE-COORD de 12/10/2026.  
