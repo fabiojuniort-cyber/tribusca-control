@@ -4,8 +4,8 @@
 
 | Fonte v5 fornecida | SHA-256 dos bytes recebidos | Tamanho | Aba / dados |
 | --- | --- | ---: | --- |
-| `Radar_Fiscal_Carga_Segmento_Revisada_v5.xlsx` | `d27368e821b3cf892400a8fe8fd9cd8b1b74f0f711541a203655acab041ce814` | verificar no binário | `Segmento` — 1.332 CNAEs |
-| `Radar_Fiscal_Carga_Produto_Revisada_v5.xlsx` | `261da490a5a030e698d43030c6a552cf39cc3f025f0249f71ffff1001b57051a` | verificar no binário | `Produto` — 4.225 itens |
+| `Radar_Fiscal_Carga_Segmento_Revisada_v5.xlsx` | `d27368e821b3cf892400a8fe8fd9cd8b1b74f0f711541a203655acab041ce814` | 194.040 bytes | `Segmento` — 1.332 CNAEs |
+| `Radar_Fiscal_Carga_Produto_Revisada_v5.xlsx` | `261da490a5a030e698d43030c6a552cf39cc3f025f0249f71ffff1001b57051a` | 379.340 bytes | `Produto` — 4.225 itens |
 
 **Estado de integridade em 13/10/2026: RECEBIDA / FONTE DESIGNADA, MAS NÃO HOMOLOGADA PARA IMPORTAÇÃO**. Os hashes são **locais**, obtidos diretamente dos anexos, e **não equivalem a blobs XLSX versionados no GitHub**. Conforme decisão F2, o upload binário continua reservado ao fechamento da frente; não antecipar esse gate.
 
