@@ -1,19 +1,28 @@
-# F2-T00 — Manifesto das fontes v5 recebidas em 13/10/2026
+# F2-T00 — Manifesto vigente: Segmento v5.1 + Produto v5 (13/10/2026)
 
-**Prioridade documental:** por decisão do Fábio transmitida via handover F2 de 13/10/2026, **Segmento v5 e Produto v5 SUBSTITUEM v1.7.3 e v1.7.1 para as próximas validações e cargas**. Os arquivos v1.7.x descritos abaixo continuam preservados **somente como histórico**, sem serem considerados as fontes vigentes do lote F2.
+**Decisão do Fábio:** Segmento v5.1 substitui a v5. A fonte Produto v5 permanece vigente, e a Segmento v5 e as versões v1.7.x ficam preservadas como histórico. **Nenhuma planilha XLSX foi enviada ao GitHub**: registro de SHA local, não de blob versionado.
 
-| Fonte v5 fornecida | SHA-256 dos bytes recebidos | Tamanho | Aba / dados |
+| Fonte vigente F2-T03 | SHA-256 dos bytes recebidos | Tamanho | Aba e conteúdo |
 | --- | --- | ---: | --- |
-| `Radar_Fiscal_Carga_Segmento_Revisada_v5.xlsx` | `d27368e821b3cf892400a8fe8fd9cd8b1b74f0f711541a203655acab041ce814` | 194.040 bytes | `Segmento` — 1.332 CNAEs |
+| `Radar_Fiscal_Carga_Segmento_Revisada_v5.1.xlsx` | `695b0df85339ec60a2b1bc8b88b842ac09a55e71d90c3f7eb2443f1709c6af67` | 172.675 bytes | `Segmento` — 1.332 CNAEs |
 | `Radar_Fiscal_Carga_Produto_Revisada_v5.xlsx` | `261da490a5a030e698d43030c6a552cf39cc3f025f0249f71ffff1001b57051a` | 379.340 bytes | `Produto` — 4.225 itens |
 
-**Estado de integridade em 13/10/2026: RECEBIDA / FONTE DESIGNADA, MAS NÃO HOMOLOGADA PARA IMPORTAÇÃO**. Os hashes são **locais**, obtidos diretamente dos anexos, e **não equivalem a blobs XLSX versionados no GitHub**. Conforme decisão F2, o upload binário continua reservado ao fechamento da frente; não antecipar esse gate.
+**Reconciliação Atuação:** 12 categorias existentes no seed aprovado, 1.332 CNAEs distintos; `Produtor rural` agora contempla 107 CNAEs (antes 37 na v5). As contagens por Atuação são informativas, não gate. Sem mapeamento automático na importação. **Avisos de cardinalidade: 448, não bloqueantes**, com listas de Produtos/NCM independentes, sem vínculo por posição.
 
-**Inspeção independente read-only (não confundir com CLI oficial, banco ou prova isolada):** 1.332 CNAEs distintos; 4.225 códigos de produto distintos; **10 erros em Produto.NCM**, contendo prefixos com 5/7 dígitos (`2710.12.4`, `2710.19.3`, `2815.1`, `2306.4` [2], `1209.2`, `0307.1` [2], `0307.3`, `0901.1`); **448 alertas de cardinalidade**, não bloqueantes, dos quais 250 têm mais produtos sugeridos e 198 têm mais NCMs sugeridas; **13 categorias distintas em Atuação**, incluindo `Energia e utilidades` para 8 CNAEs 35.xx (contrato anterior com 7 categorias ficou obsoleto). Os anexos recebidos possuem apenas as abas `Segmento` e `Produto`: as abas auxiliares Pendências/Cobertura/Pares IBGE × canônico não estão presentes, e portanto não entram na carga.
+**NCM vigente:** COORD informou a referência `Tabela_NCM_Vigente_20261013.json`, Resolução Gecex 926/2026, SHA-256 declarado `5ed292564c3a96683dc13002a2f8260a95bda171c9db7018a78a547d06308ef1`, e resultado de 0 ausentes (8.179 códigos Produto; 5.198 códigos Segmento). **O JSON não está disponível entre os anexos acessíveis a esta execução; SHA oficial e comparação independente ainda não comprovados.** Não afirmar concordância sem acesso aos bytes. Prefixos NCM de 2 a 8 dígitos são aceitos no contrato T03.
 
-**Gate:** PAUSE da carga/ensaio oficial até correção **na planilha fonte** e reconciliar as categorias de Atuação. Não corrigir os 10 códigos por truncamento/padding nem no importador, não alterar aliases sem aceite do Fábio. A etapa adicional de prova dump → restore → job duplo em PG18 isolado exige arquivos íntegros, hashes atualizados e checagens de segurança próprias. **Proibidos: carga produtiva, merge e deploy sem respectivas autorizações.** Nenhum resultado CLI positivo foi declarado nesta revisão.
+**Gates:** dry-run CLI oficial XLSX v5.1 + Produto v5 deve produzir 0 erros; registrar execução antes de marcar PASS. Testes PostgreSQL 18 isolado, staging, integridade de writer/readback, revisão COORD e backup comprovado + OK explícito Fábio continuam gates separados. **Sem carga produtiva, merge ou deploy sem as respectivas autorizações.** Upload binário das planilhas permanece no fechamento da F2.
 
 ---
+
+## Histórico da fonte Segmento v5 — substituída pela v5.1 em 13/10/2026
+
+| Fonte histórica | SHA-256 | Linhas | Situação |
+| --- | --- | ---: | --- |
+| `Radar_Fiscal_Carga_Segmento_Revisada_v5.xlsx` | `d27368e821b3cf892400a8fe8fd9cd8b1b74f0f711541a203655acab041ce814` | 1.332 | **HISTÓRICO** — não usar em novos dry-runs/cargas |
+
+As únicas diferenças, conferidas célula a célula nos XLSX recebidos, são **70 células da coluna Atuação**: `Produção Agrícola` → `Produtor rural`. Não há modificações nos demais campos, linhas ou identidades CNAE. O Produto v5 permaneceu byte a byte inalterado.
+
 
 ## Histórico v1.7.x — substituído pela fonte v5 de 13/10/2026
 
