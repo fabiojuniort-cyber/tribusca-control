@@ -1,0 +1,37 @@
+name: OPS-02 protocol v2 documentation CI
+
+on:
+  pull_request:
+    paths:
+      - docs/protocolos/PROTOCOLO_OPERACIONAL_V2_20261014.md
+      - .github/workflows/ops02-protocol-ci.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate-v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify all five clauses and guards are present
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          f=docs/protocolos/PROTOCOLO_OPERACIONAL_V2_20261014.md
+          test -s "$f"
+          grep -q '14/10/2026' "$f"
+          grep -q 'Autorização por pacote' "$f"
+          grep -q 'BLOCK' "$f"
+          grep -q 'OK explícito do Fábio' "$f"
+          grep -q 'Merge e deploy' "$f"
+          grep -q 'Comunicação e fonte de verdade' "$f"
+          grep -q 'erro NOVO' "$f"
+          grep -q 'CONFAZ e CGIBS' "$f"
+          grep -q 'até 5 linhas' "$f"
+          grep -q 'incidente F3' "$f" || grep -q 'Incidente F3' "$f"
+          grep -q 'docs/CLAUDE_SESSION_PROTOCOL.md' "$f" || grep -q 'CLAUDE_SESSION_PROTOCOL.md' "$f"
+          echo OPS02_PROTOCOL_V2=PASS
