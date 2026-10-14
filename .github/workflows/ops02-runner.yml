@@ -1,0 +1,197 @@
+name: OPS-02 / controlled read-only operations
+
+# Intentionally no pull_request, push, schedule, repository_dispatch or workflow_call.
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "Only pre-approved read-only actions"
+        required: true
+        type: choice
+        options:
+          - inspect_f3_offline
+          - inspect_f2_xlsx
+          - simulate_f3_production_readonly
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ops02-manual
+  cancel-in-progress: false
+
+jobs:
+  allowlisted-operation:
+    # Never execute an operational payload from an unmerged/feature branch.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: ops
+    timeout-minutes: 90
+    env:
+      OPS_TASK: ${{ inputs.task }}
+    steps:
+      - name: Checkout immutable operations policy
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Checkout reviewed backend at a fixed commit (read-only)
+        uses: actions/checkout@v4
+        with:
+          repository: fabiojuniort-cyber/radar-fiscal-backend
+          ref: ce553f92b883ba2b69731e28726c4ba40cbf1514
+          path: backend
+          token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - name: Install reviewed backend dependencies (no production secrets in environment)
+        working-directory: backend
+        run: npm ci --ignore-scripts
+
+      - name: Offline F3 inspection (no database)
+        if: inputs.task == 'inspect_f3_offline'
+        working-directory: backend
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ./node_modules/.bin/tsx --test \
+            test/collection-filter.f3.unit.test.ts \
+            test/collection-filter.f3-simulation.unit.test.ts \
+            test/collection-filter.engine.unit.test.ts > "$RUNNER_TEMP/ops02-offline-tests.log" 2>&1 || {
+              echo 'OPS02_BLOCK=OFFLINE_TEST_FAILED'; exit 1;
+            }
+          mkdir -p ../ops02-evidence
+          printf '%s\n' 'task=inspect_f3_offline' 'result=PASS' 'database_access=NONE' > ../ops02-evidence/summary.txt
+          echo 'OPS02_INSPECT_F3_OFFLINE=PASS'
+
+      - name: Checkout approved XLSX inputs at immutable source commit
+        if: inputs.task == 'inspect_f2_xlsx'
+        uses: actions/checkout@v4
+        with:
+          repository: fabiojuniort-cyber/radar-fiscal-backend
+          ref: d4de99e93cd80a8ab02ae0857b1260a01a660b43
+          path: ops02-source
+          token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+          persist-credentials: false
+      - name: Verify two XLSX SHA-256 then run existing F2 CLI (no DB)
+        if: inputs.task == 'inspect_f2_xlsx'
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          umask 077
+          mkdir -p "$RUNNER_TEMP/ops02-files" ops02-evidence
+          base64 --decode ops02-source/Radar_Fiscal_Carga_Segmento_Revisada_v5.1.xlsx.b64 > "$RUNNER_TEMP/ops02-files/segmento.xlsx"
+          base64 --decode ops02-source/Radar_Fiscal_Carga_Produto_Revisada_v5.xlsx.b64 > "$RUNNER_TEMP/ops02-files/produto.xlsx"
+          printf '%s  %s\n' \
+            695b0df85339ec60a2b1bc8b88b842ac09a55e71d90c3f7eb2443f1709c6af67 "$RUNNER_TEMP/ops02-files/segmento.xlsx" \
+            261da490a5a030e698d43030c6a552cf39cc3f025f0249f71ffff1001b57051a "$RUNNER_TEMP/ops02-files/produto.xlsx" | sha256sum --check --status || {
+              echo 'OPS02_BLOCK=SOURCE_SHA256_MISMATCH'; exit 1;
+            }
+          cd backend
+          node ops/taxonomy/f2-xlsx-dry-run.mjs \
+            --segmento="$RUNNER_TEMP/ops02-files/segmento.xlsx" \
+            --produto="$RUNNER_TEMP/ops02-files/produto.xlsx" \
+            --out="$RUNNER_TEMP/ops02-files/result.json" > "$RUNNER_TEMP/ops02-files/cli.log" 2>&1 || {
+              echo 'OPS02_BLOCK=F2_NATIVE_CLI_FAILED'; exit 1;
+            }
+          node --input-type=module - <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const r=JSON.parse(readFileSync(process.env.RUNNER_TEMP+'/ops02-files/result.json','utf8'));
+          const s=r.summary;
+          if(r.mode!=='DRY_RUN_ONLY'||r.noDatabaseWrites!==true||s.errors!==0||
+             s.segmentRows!==1332||s.productRows!==4225||s.cnaeDistinct!==1332||
+             s.productCodesDistinct!==4225||s.actuationCategories!==12)
+            throw Error('OPS02_BLOCK=F2_GATE_FAILED');
+          writeFileSync('../ops02-evidence/summary.txt',
+            'task=inspect_f2_xlsx\nresult=PASS\nsource_sha256=PASS\n'+
+            'cnaes=1332\nproducts=4225\ndatabase_access=NONE\n');
+          NODE
+          echo 'OPS02_F2_SOURCE_SHA256_AND_NATIVE_CLI=PASS'
+
+      - name: Build reviewed F3 simulator without production credentials
+        if: inputs.task == 'simulate_f3_production_readonly'
+        working-directory: backend
+        run: npm run build
+
+      - name: Verify database reader cannot write, then run existing F3 READ ONLY simulation
+        if: inputs.task == 'simulate_f3_production_readonly'
+        working-directory: backend
+        shell: bash
+        env:
+          F3_SIMULATION_DATABASE_URL: ${{ secrets.OPS_F3_READONLY_DATABASE_URL }}
+          PGOPTIONS: "-c default_transaction_read_only=on -c statement_timeout=900000"
+        run: |
+          set -Eeuo pipefail
+          umask 077
+          [[ -n "$F3_SIMULATION_DATABASE_URL" ]] || { echo 'OPS02_BLOCK=READONLY_SECRET_MISSING'; exit 1; }
+          # Dedicated BYPASSRLS reader is required by the existing F3 simulator;
+          # it must NOT be superuser, owner, or have DML/DDL grants.
+          node --input-type=module - <<'NODE' || { echo 'OPS02_BLOCK=DB_ROLE_NOT_READ_ONLY'; exit 1; }
+          import pg from 'pg';
+          const c=new pg.Client({connectionString:process.env.F3_SIMULATION_DATABASE_URL});
+          try {
+            await c.connect();
+            await c.query('BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY');
+            const {rows}=await c.query(`
+              SELECT current_setting('transaction_read_only') AS ro,
+                r.rolsuper AS superuser, r.rolbypassrls AS bypassrls,
+                has_database_privilege(current_user,current_database(),'CREATE') AS dbcreate,
+                has_schema_privilege(current_user,'public','CREATE') AS schemacreate,
+                EXISTS (
+                  SELECT 1 FROM pg_class t JOIN pg_namespace n ON n.oid=t.relnamespace
+                  WHERE n.nspname='public' AND t.relkind IN ('r','p')
+                  AND (
+                    has_table_privilege(current_user,t.oid,'INSERT') OR
+                    has_table_privilege(current_user,t.oid,'UPDATE') OR
+                    has_table_privilege(current_user,t.oid,'DELETE') OR
+                    has_table_privilege(current_user,t.oid,'TRUNCATE')
+                  )
+                ) AS canwrite
+              FROM pg_roles r WHERE r.rolname=current_user
+            `);
+            const r=rows[0];
+            if(!r||r.ro!=='on'||r.superuser||!r.bypassrls||r.dbcreate||r.schemacreate||r.canwrite)
+              process.exitCode=1;
+            await c.query('ROLLBACK');
+          } catch {process.exitCode=1;}
+          finally {await c.end().catch(()=>{});}
+          NODE
+          # Entire native simulation runs in a READ ONLY transaction and ends ROLLBACK.
+          node dist/infrastructure/database/f3-type-simulation.js \
+            > "$RUNNER_TEMP/ops02-f3-private.log" 2>/dev/null || {
+              echo 'OPS02_BLOCK=F3_READONLY_SIMULATION_FAILED'; exit 1;
+            }
+          grep -q '^F3_SIMULATION_PASS; READ_ONLY; NO_WRITE; NO_DELETE$' \
+            "$RUNNER_TEMP/ops02-f3-private.log" || { echo 'OPS02_BLOCK=F3_GATE_FAILED'; exit 1; }
+          mkdir -p ../ops02-evidence
+          node --input-type=module - <<'NODE'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const lines=readFileSync(process.env.RUNNER_TEMP+'/ops02-f3-private.log','utf8').split('\n');
+          const line=lines.find(s=>s.startsWith('F3_SIMULATION_SUMMARY='));
+          if(!line)throw Error('OPS02_BLOCK=F3_SUMMARY_MISSING');
+          JSON.parse(line.substring('F3_SIMULATION_SUMMARY='.length));
+          writeFileSync('../ops02-evidence/summary.txt',
+            'task=simulate_f3_production_readonly\nresult=PASS\n'+
+            'transaction=REPEATABLE_READ_READ_ONLY\nrole=NON_SUPERUSER_NO_WRITE_PRIVILEGES\n'+
+            'production_write=FORBIDDEN\n');
+          NODE
+          echo 'OPS02_F3_READONLY_SIMULATION=PASS'
+
+      - name: Remove temporary source files and private simulation output
+        if: always()
+        shell: bash
+        run: |
+          rm -rf -- "$RUNNER_TEMP/ops02-files"
+          rm -f -- "$RUNNER_TEMP/ops02-f3-private.log" "$RUNNER_TEMP/ops02-offline-tests.log"
+      - name: Publish only sanitized evidence (7 days)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ops02-summary
+          path: ops02-evidence/summary.txt
+          if-no-files-found: ignore
+          retention-days: 7
