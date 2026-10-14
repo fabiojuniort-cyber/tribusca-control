@@ -25,7 +25,7 @@ O COORD define um pacote com passos e gates explícitos. Dentro dele, continuida
 - Checkpoints, decisões, links, SHAs, logs e pareceres na **issue de governança correspondente**:
   - F2: [#105](https://github.com/fabiojuniort-cyber/tribusca-control/pull/105) (thread de PR usada como issue);
   - F3: [#108](https://github.com/fabiojuniort-cyber/tribusca-control/issues/108);
-  - OPS runner GitHub Actions: [#109](https://github.com/fabiojuniort-cyber/tribusca-control/issues/109);
+  - OPS-02 (runner e auditoria Railway): [#79](https://github.com/fabiojuniort-cyber/tribusca-control/issues/79); histórico preliminar do runner: [#109](https://github.com/fabiojuniort-cyber/tribusca-control/issues/109);
   - Demais frentes: issue indicada pelo COORD.
 - Ler a issue (incluindo comentários recentes) antes de atuar. Mensagem curta do Fábio indicando um comentário significa ler sua instrução completa na issue.
 - Resposta no chat: **até 5 linhas**, com parecer, percentual, link do comentário e decisão pendente.
