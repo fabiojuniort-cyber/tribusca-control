@@ -31,11 +31,11 @@ jobs:
       OPS_TASK: ${{ inputs.task }}
     steps:
       - name: Checkout immutable operations policy
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
       - name: Checkout reviewed backend at a fixed commit (read-only)
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: fabiojuniort-cyber/radar-fiscal-backend
           ref: ce553f92b883ba2b69731e28726c4ba40cbf1514
@@ -43,7 +43,7 @@ jobs:
           token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
           persist-credentials: false
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
           cache: npm
@@ -70,7 +70,7 @@ jobs:
 
       - name: Checkout approved XLSX inputs at immutable source commit
         if: inputs.task == 'inspect_f2_xlsx'
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: fabiojuniort-cyber/radar-fiscal-backend
           ref: d4de99e93cd80a8ab02ae0857b1260a01a660b43
@@ -189,7 +189,7 @@ jobs:
           rm -f -- "$RUNNER_TEMP/ops02-f3-private.log" "$RUNNER_TEMP/ops02-offline-tests.log"
       - name: Publish only sanitized evidence (7 days)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ops02-summary
           path: ops02-evidence/summary.txt
