@@ -1,0 +1,48 @@
+name: OPS-02 runner static CI
+on:
+  pull_request:
+    paths:
+      - .github/workflows/ops02-runner.yml
+      - .github/workflows/ops02-runner-ci.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate-allowlist-and-security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Parse workflow and prove dispatch-only closed allowlist
+        shell: bash
+        run: |
+          ruby <<'RUBY'
+          require 'yaml'
+          f = '.github/workflows/ops02-runner.yml'
+          y = YAML.load_file(f)
+          events = y.fetch('on') { y.fetch(true) }
+          abort 'not_only_manual_dispatch' unless events.keys == ['workflow_dispatch']
+          input = events.fetch('workflow_dispatch').fetch('inputs').fetch('task')
+          allowed = ['inspect_f3_offline', 'inspect_f2_xlsx', 'simulate_f3_production_readonly']
+          abort 'allowlist_invalid' unless input['type'] == 'choice' && input['options'] == allowed
+          abort 'permissions_excessive' unless y.fetch('permissions') == {'contents'=>'read'}
+          jobs = y.fetch('jobs')
+          abort 'unexpected_job_count' unless jobs.length == 1
+          job = jobs.fetch('allowlisted-operation')
+          abort 'environment_missing' unless job.fetch('environment') == 'ops'
+          abort 'main_only_missing' unless job.fetch('if').include?("refs/heads/main")
+          abort 'bad_retention' unless job.fetch('steps').any?{|s| s['with'].is_a?(Hash) && s['with']['retention-days']==7}
+          text = File.read(f)
+          abort 'read_only_startup_missing' unless text.include?('default_transaction_read_only=on')
+          abort 'no_fixed_source_digest' unless text.include?('695b0df85339ec60a2b1bc8b88b842ac09a55e71d90c3f7eb2443f1709c6af67')
+          abort 'no_sha_verification' unless text.include?('sha256sum --check --status')
+          abort 'no_superuser_block' unless text.include?('r.rolsuper') && text.include?('has_table_privilege')
+          abort 'no_simulation_readonly' unless text.include?('F3_SIMULATION_PASS; READ_ONLY; NO_WRITE; NO_DELETE')
+          abort 'missing_backend_pin' unless text.include?('ce553f92b883ba2b69731e28726c4ba40cbf1514')
+          abort 'unsafe_github_trigger' if text.match?(/^\s+(push|pull_request|schedule|workflow_call|repository_dispatch):/)
+          abort 'unsafe_arbitrary_shell' if text.match?(/bash\s+-c\s+\$|eval\s+\$|curl.*\|\s*(sh|bash)/)
+          puts 'OPS02_STATIC_CI=PASS dispatch_only closed_allowlist read_only fixed_sha'
+          RUBY
