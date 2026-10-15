@@ -1,8 +1,8 @@
 # ANAT-00 — Desenho da Anatomia do Ato
 
-**Status: DESENHO CONSOLIDADO; D01–D10 DECIDIDAS PELO FÁBIO, com fechamento em 15/10/2026, 13:25 BRT. Revisão do COORD pendente. Não autoriza implementação.**
+**Status: DESENHO CONSOLIDADO; D01–D10 DECIDIDAS PELO FÁBIO, com fechamento em 15/10/2026, 13:25 BRT, e melhorias M01–M06 aprovadas às 13:36 BRT. Revisão do COORD pendente. Não autoriza implementação.**
 
-Documento único, preparado em 15/10/2026. Escopo desta entrega: leitura e PR exclusivamente documental. Nenhum código de produto, migration, carga, reclassificação, merge, deploy ou alteração no Railway foi executado. As dez decisões tomadas pelo Fábio estão registradas na seção 10.2. A aprovação dessas escolhas de desenho não substitui a revisão do COORD nem autoriza sua implementação.
+Documento único, preparado em 15/10/2026. Escopo desta entrega: leitura e PR exclusivamente documental. Nenhum código de produto, migration, carga, reclassificação, merge, deploy ou alteração no Railway foi executado. As dez decisões e as seis melhorias adicionais aprovadas pelo Fábio estão registradas na seção 10.2. A aprovação dessas escolhas de desenho não substitui a revisão do COORD nem autoriza sua implementação.
 
 ## 1. Resultado pretendido e base observada
 
@@ -126,6 +126,10 @@ A tela deve permitir selecionar fonte/família, editar campos permitidos, salvar
 
 Alterações de fonte/classe/coluna ficam em configuração. Novo formato binário ou nova capacidade de interpretação exige novo adaptador. As regras não executam JavaScript, SQL ou chamadas remotas; campos e padrões têm limites de tamanho, complexidade e tempo. Não criar linguagem de programação própria, workflow engine, microserviço ou editor universal de regex.
 
+Cada regra administrativa terá nome legível, finalidade, escopo, exemplos positivos e negativos e resultado esperado. A simulação executa esses exemplos e mostra o trecho reconhecido ou ignorado, a regra responsável e eventuais conflitos. Exemplos da regra complementam o conjunto de referência; não substituem amostras independentes nem medições de precisão/cobertura.
+
+A comparação antes/depois deve usar o mesmo snapshot de entrada e identificar as duas versões de regras. Mostrar partes criadas/removidas/reclassificadas, NCMs e citações adicionados/removidos e alterações na seleção elegível para taxonomia, com motivos. Diferenciar mudança esperada, regressão e diferença ainda não avaliada: diminuir a contagem de NCM pode corrigir falsos positivos. Não bloquear toda queda de contagem automaticamente, nem aceitar regressão apenas porque a quantidade aumentou. Falha de um caso crítico exige correção; mudança legítima do resultado esperado exige revisão e justificativa, sem apagar o histórico. Se a comparação também envolver entrada ou evidência jurídica diferente, destacar essa diferença para não atribuí-la silenciosamente à regra.
+
 **Exemplos de manutenção:** acrescentar “NCM/SH” aos rótulos de coluna; reconhecer nova classe editorial CONFAZ; adicionar abreviação “IN RFB”; mudar a política de confiança de tabela. Cada ajuste identifica quais fontes/famílias/representações precisam reprocessar. Mudança só de cor/layout não refaz extração nem taxonomia.
 
 ### 2.4 Layout fiel com significado jurídico explícito
@@ -142,6 +146,8 @@ Oferecer “Leitura estruturada” e referência à representação original dis
 | Destaque taxonômico | Camada sobre o trecho já elegível, com origem do termo/NCM | Não concede vigência por si só |
 
 Não depender apenas da cor para transmitir status. Preto pode ser cor tipográfica de um título ou texto original; **não deve existir legenda universal “qualquer texto preto está vigente”**. A legenda jurídica se aplica ao modo/data e aos trechos efetivamente comprovados. Se a fonte usa vermelho para acréscimo ou verde para redação anterior, preservar a informação de origem, sem transportar automaticamente sua cor para nosso significado jurídico.
+
+**Histórico inicialmente visível, conforme aprovação do Fábio:** redações anteriores aparecem na posição recebida, com identificação própria. Oferecer “Recolher redações anteriores” e “Mostrar histórico completo”; ao recolher, deixar um marcador visível no lugar do trecho, inclusive em tabelas, sem alterar a associação das células. O modo completo preserva a ordem de todas as redações. Mostrar/recolher é preferência visual; não altera status jurídico, extração, evidências ou seleção da taxonomia.
 
 O renderer não calcula vigência, não corrige numeração, não remove parágrafos nem produz tabelas por conta própria. Uma reconstrução não pode ser apresentada como fac-símile. A alternativa de máxima fidelidade é abrir o original oficial, quando disponível.
 
@@ -218,6 +224,20 @@ Rótulo “posição” só vale como domínio fiscal quando o trecho/tabela ide
 
 Prefixos 5/7 são tratados como **prefixos textuais de busca**, sem inventar que sejam níveis oficiais denominados posição/subposição. Validar a existência de descendentes na edição pertinente; não vincular um prefixo ao primeiro item de oito dígitos como se fossem a mesma mercadoria. Preservar o catálogo/época citado e a falta de correspondência. Correspondência com catálogo atual não resolve NCM histórico.
 
+### 3.4 Faixas de NCM e exceções
+
+**M01 — Faixas, já na Fase 1.** Reconhecer o intervalo como uma entidade composta com início/fim literais e normalizados, sistema, quantidade de dígitos, edição do catálogo, parte, posições e estado de validação. Os extremos são filhos da faixa, não dois códigos positivos independentes. Preservar zeros iniciais e a expressão original.
+
+No exemplo de formato “8207.50.11 a 8207.50.19”, consultar somente códigos existentes na edição aplicável e dentro dos limites inclusivos. Não gerar uma sequência de números inexistentes nem substituir a faixa pelo prefixo comum `820750`. Um produto cujo código fica fora dos limites não pode corresponder só porque compartilha esse prefixo. Quando o lado empresarial for um prefixo, a relevância exige interseção com pelo menos um código catalogado dentro da faixa, permanecendo relevância potencial e não benefício comprovado.
+
+Extremos de mesma largura podem representar intervalo de códigos ou de prefixos, conforme o contexto; no segundo caso, consultar descendentes somente dos prefixos cobertos pelos limites. Comprimentos diferentes, ordem invertida, catálogo/edição ausente ou expressão ambígua permanecem pendentes, sem trocar os extremos ou completar dígitos. Limites de processamento evitam materializar listas enormes: guardar o intervalo e resolver a correspondência contra o catálogo, conservando a proveniência. Dois dígitos continuam sem classificar, inclusive em faixa.
+
+**M02 — Exceções e alcance.** Reconhecer “exceto”, “exclusive”, “salvo”, “excluídos” e construções equivalentes como relações entre a regra/dispositivo, o alvo (produto, NCM ou faixa) e a expressão de condição. Registrar operador, trecho, escopo, alvo e confiança; não aplicar uma flag global à publicação nem estender a exceção automaticamente ao restante da tabela/anexo.
+
+Separar dois resultados: **relevância temática** (“o ato trata deste produto”) e **inclusão na regra/benefício**. Um produto explicitamente excluído pode manter relevância temática se a menção estiver em texto vigente elegível; essa ocorrência deve carregar “exclusão/ressalva” e jamais fundamentar, sozinha, benefício positivo. A exceção local não elimina menções positivas independentes em outros dispositivos. “Salvo se...” pode introduzir condição, não exclusão absoluta; sem interpretação segura, registrar condição pendente.
+
+Na Fase 1, capturar e propagar essas relações aos consumidores, com resultado neutro quando o alcance não for seguro. Não antecipar o cálculo de benefício: sua interpretação completa segue na Fase 4. Texto histórico/revogado continua inelegível para classificação corrente, mesmo quando contém exceção.
+
 ## 4. Citações e links entre atos
 
 ### 4.1 Separar reconhecer de resolver
@@ -249,6 +269,14 @@ Resolver primeiro o ato e depois um caminho de dispositivo na versão/data relev
 Lista “arts. 5º e 7º” gera dois alvos relacionados. Intervalo “arts. 143-A a 143-L” preserva a expressão e só se expande contra dispositivos existentes. Se houver renumeração, redações alternativas ou artigo inexistente na versão, abrir o ato com aviso; não saltar para um artigo de mesmo número escolhido arbitrariamente.
 
 Para “altera”, “revoga”, “acrescenta”, “prorroga”, “suspende”, “restabelece”, “ratifica”, “retifica” e “produz efeitos”: extrair intenção, sujeito/objeto, escopo e expressão de data. Uma SC que **relata** revogação por outra lei não é a norma revogadora. Uma norma que revoga o art. 5º de outra não está revogando o seu próprio art. 5º. Relações na Fase 1 são achados; aplicação temporal automática fica para Fase 3.
+
+### 4.3 Lista de atos citados ausentes
+
+**M03 — Fase 2.** Criar uma visão de referências não localizadas, agrupadas por identidade suficientemente definida, com descrição, quantidade de publicações distintas que as citam, ocorrências, fontes, link oficial conhecido e análises/evidências dependentes. Uma referência ambígua não deve ser agrupada como identidade confirmada nem misturada com ato inequivocamente ausente.
+
+A lista permite priorizar inclusão por impacto e dependências, mas não inicia coleta automática. Inclusão continua sendo ação separada, conforme D05. Depois que o ato entrar no Acervo, reavaliar as resoluções relacionadas e retirar a pendência da lista quando resolvida, preservando seu histórico. Se fundamentar vigência, encaminhar a revisão correspondente; localizar o ato não aprova seu conteúdo jurídico.
+
+Usar entidades e resoluções já previstas para compor essa visão; não criar outro cadastro de atos como requisito. Contagens e exemplos respeitam a visibilidade de quem consulta, sem revelar citações ou documentos privados de outra conta. Se houver cache, ele também deve respeitar esse escopo.
 
 ## 5. Vigência, taxonomia do piloto e benefício
 
@@ -314,7 +342,7 @@ Reaproveitar identidades, versões, origens, arquivos e evidências de classific
 | `anatomy_rule_sets` | id, versão ordenável, status, perfis/configuração, hash, versão do contrato, autor/revisor, datas | F1: regras editadas pela tela, imutáveis depois de ativadas; JSONB restrito à configuração variável |
 | `publication_anatomies` | id, publication_version_id, origem/representação, input_text_hash, input_presentation_hash, attachment_manifest_hash, engine_version, rule_set_id/hash, status, cobertura, output_hash, created_at | F1: cabeçalho da análise e vínculo ao snapshot; não contém toda a árvore como único registro opaco |
 | `anatomy_parts` | id, anatomy_id, parent_id, ordem, tipo, rótulo, início/fim, ponteiro de origem, confiança, cobertura, atributos de tabela | F1: árvore ordenada. Tabela/linha/célula são tipos de parte; atributos incluem linha/coluna e spans. Não criar tabela diferente para cada artigo/inciso/alínea |
-| `anatomy_entities` | id, anatomy_id, part_id, domínio, texto literal, valor normalizado, início/fim, regra, confiança, catálogo/edição, validação | F1: ocorrências, inclusive citações reconhecidas sem link e capítulos de dois dígitos não classificáveis |
+| `anatomy_entities` | id, anatomy_id, part_id, domínio, texto literal, valor normalizado, início/fim, regra, confiança, catálogo/edição, validação; intervalo e relações de exceção | F1: ocorrências, citações sem link, capítulos não classificáveis, faixas e relações de exceção com alvo/escopo. Relações podem ser registros tipados com referências, sem nova tabela para cada operador |
 | `anatomy_evidence` | id, anatomy_id/part_id, tipo, fundamento, fonte/snapshot, data de referência, intervalo conferido, conclusão, revisor, data e validade da conferência | F1: evidência e aprovação restrita do piloto; separada da confiança de extração |
 | `anatomy_dependencies` | id, evidence_id, ato/dispositivo dependente, ato/dispositivo de fundamento quando identificado, referência externa, hash/versionamento, efeito relatado, estado de revisão | F1: dependências conferidas e pendências dos dois convênios; suporta invalidação sem implementar consolidação temporal geral |
 | `anatomy_runs` | id, manifesto/escopo, regras/engine alvo, iniciador, início/fim, cursor, contadores, custo/tempo medido | F1: execução de lotes e auditoria |
@@ -438,7 +466,13 @@ Para as respostas oficiais lidas nesta sessão, estes são os hashes SHA-256 dos
 
 Não incluir nomes/CPF de atos de pessoal nos relatórios de teste. Guardar amostra sanitizada para revisão, com hash próprio e registro da redação, sem fingir que o hash sanitizado é o hash do corpo oficial. Dados de empresas/clientes do SaaS não participam deste corpus.
 
-### 7.4 Métricas e gates por fase
+### 7.4 Expectativas por publicação para revisão humana
+
+**Complemento aprovado junto das melhorias M01–M06.** Cada uma das 30 referências terá uma ficha curta de afirmações-chave: partes esperadas, caminhos de dispositivos, citações que devem aparecer, NCMs que devem ou não ser reconhecidos, células/descrições associadas, faixas, exceções e limitações conhecidas. Afirmação de vigência inclui data e evidência; sem conferência, a ficha registra candidato, não dispositivo vigente presumido.
+
+Essas fichas facilitam a revisão e a manutenção dos exemplos na tela administrativa. Não substituem a anotação completa dos intervalos exigida para medir precisão/recall nem transformam expectativas em testes já executados. Casos derivados de faixa, exceção, comparação e histórico devem ser rotulados como sintéticos e não aumentar artificialmente a contagem de publicações reais.
+
+### 7.5 Métricas e gates por fase
 
 Medir por ocorrência/parte, não só por código distinto. Precisão = acertos entre achados; recall = achados corretos entre ocorrências anotadas. Reportar por fonte/família, média macro e menor resultado; um convênio enorme não pode esconder falha em DOE-SP. Cobertura = proporção de conteúdo legível com parte atribuída, discriminando explícito/inferido/desconhecido; não contar “desconhecido” como sucesso de identificação.
 
@@ -448,11 +482,13 @@ Medir por ocorrência/parte, não só por código distinto. Precisão = acertos 
 | F1 Citações | Precisão ≥0,99 e recall ≥0,95 para citações explícitas no corpus; todos os exemplos de citação como falso NCM devem produzir zero falso positivo. Referências incompletas podem ficar não resolvidas |
 | F1 NCM | Precisão ≥0,995 e recall ≥0,95 nos spans elegíveis anotados; **zero** NCM em zonas proibidas, de 2 dígitos classificando, ou derivado de lei/CNAE/CFOP/CEP/CNPJ/processo. Se amostra pequena não sustentar percentual, publicar contagem absoluta e exigir zero erro crítico |
 | F1 Convênios | 100% dos casos críticos dos dois convênios corretos; zero tag/evidência corrente derivada de histórico/revogação/ementa; zero `8450.11.00` histórico classificando; descrições do 100/97 elegíveis sem depender de NCM. Seleção positiva depende da execução da conferência aprovada em D01 |
-| F1 Administração | Rascunho não altera resultados ativos; simulação mostra diferenças; ativação auditada gera versão imutável; retorno restaura a versão selecionada; usuário sem permissão não edita regras globais; nenhuma ativação inicia carga global silenciosa |
+| F1 Faixas/exceções | Zero correspondência fora dos limites da faixa por uso apenas de prefixo comum; códigos inexistentes não são fabricados; casos ambíguos ficam pendentes; exceção vinculada ao alvo/escopo e nunca usada como evidência positiva de benefício, mantendo relevância temática quando elegível |
+| F1 Administração | Rascunho não altera resultados ativos; simulação mostra diferenças; ativação auditada gera versão imutável; retorno restaura a versão selecionada; usuário sem permissão não edita regras globais; nenhuma ativação inicia carga global silenciosa; exemplos positivos/negativos executados; comparação distingue mudança legítima de regressão e identifica versões/entradas |
 | F1 Dependências jurídicas | Mudança de fundamento/prazo invalida a aprovação dependente mesmo sem mudança do texto-base; pendência retira a alegação corrente e preserva histórico; ato novo potencialmente modificador dos dois convênios gera revisão, sem aprovação automática |
 | F1 Reprodutibilidade | Mesmo snapshot + mesmas regras = mesmo output_hash; nova entrada invalida corretamente; falha/arquivo ausente aparece como parcial; nenhuma regressão de visibilidade/tenant |
 | F2 Links | Zero resolução errada nos casos de referência e ambiguidades; precisão ≥0,995 no conjunto ampliado; cobertura de resolução reportada separadamente, sem meta que force adivinhação; links respeitam permissões |
-| F2 Layout | Zero omissão/troca de texto/célula; conferência visual de todos os templates suportados em desktop e mobile; estados desconhecido/histórico/revogado distinguíveis sem depender de cor; limites da fidelidade documentados |
+| F2 Atos ausentes | Agrupamento por identidade inequívoca e contagem de publicações distintas corretos; ambiguidade separada; inclusão posterior permite reavaliar vínculo; nenhuma coleta automática ou exposição entre tenants |
+| F2 Layout | Zero omissão/troca de texto/célula; conferência visual de todos os templates suportados em desktop e mobile; estados desconhecido/histórico/revogado distinguíveis sem depender de cor; limites da fidelidade documentados; histórico inicialmente visível e recolhimento reversível com marcador no lugar, sem alterar taxonomia ou associação das células |
 | F3 Vigência | 100% dos casos críticos de limites temporais, revogação parcial, efeitos futuros e ressalvas aprovados; zero alegação positiva sem fundamento. Metas percentuais não compensam um erro jurídico crítico |
 | F4 Benefício | Precisão ≥0,99 nos campos preenchidos do conjunto anotado; nenhum percentual sem natureza, nenhum escopo/condição inventado; cobertura separada para dados não disponíveis |
 
@@ -464,10 +500,10 @@ Além dos 30 reais, criar posteriormente casos derivados adversariais, explicita
 
 | Consumidor | Mudança proposta | Permanece |
 |---|---|---|
-| Detector NCM | Recebe partes/colunas e intervalos elegíveis; persiste ocorrências, domínio e evidência; 4/5/6/7/8 na classificação; 2 apenas informativo | Catálogo oficial, rastreabilidade e preservação dos códigos; sem significado automático de benefício |
-| Classificação lexical/curada | Deixa de concatenar título+corpo indiscriminadamente; usa seleção vigente por parte e data; retorna anatomy_id/parte/trecho | Release publicada, conceitos, sinônimos e curadoria; não altera planilhas F2 nem publica nova release |
+| Detector NCM | Recebe partes/colunas e intervalos elegíveis; persiste ocorrências, faixas, domínio, exceções e evidência; 4/5/6/7/8 na classificação; 2 apenas informativo; faixa não vira prefixo comum | Catálogo oficial, rastreabilidade e preservação dos códigos; sem significado automático de benefício |
+| Classificação lexical/curada | Deixa de concatenar título+corpo indiscriminadamente; usa seleção vigente por parte e data; retorna anatomy_id/parte/trecho e ressalvas, distinguindo relevância temática de inclusão em benefício | Release publicada, conceitos, sinônimos e curadoria; não altera planilhas F2 nem publica nova release |
 | Matching empresarial | Recebe tags/NCM originados da seleção elegível e estado de completude | Tenant, empresa, filtros e significado de relevância potencial. Prefixo não prova incidência |
-| Acervo | Sumário, navegação por dispositivo, tabelas e indicação de cobertura/status; links entram na F2 | Busca e URL do ato, acesso ao texto original, origens, permissões e histórico |
+| Acervo | Sumário, navegação por dispositivo, tabelas e indicação de cobertura/status; histórico visível com opção de recolher; links e lista de atos ausentes entram na F2 | Busca e URL do ato, acesso ao texto original, origens, permissões e histórico |
 | Convênios 52/91 e 100/97 | Mesmo contrato estrutural, com adaptações pequenas de perfil; NCM em tabela e descrição textual convivem | Conteúdo oficial preservado; regras/condições não são resumidas em mera lista de produtos |
 | Coleta/Filtro Nome do ato | Pode fornecer metadados para selecionar perfil | Nenhuma mudança de KEEP/DISCARD, purge, fonte, cron, download ou identidade normativa |
 | Layout | Consome árvore/grade e situação jurídica comprovada; remove gradualmente duplicação de inferência do browser | Sanitização, segurança de links, acessibilidade e original como referência |
@@ -481,13 +517,13 @@ Dias úteis estimados para um executor familiarizado com o projeto, com acesso �
 | Fase | Entrega | Estimativa e gate |
 |---|---|---|
 | 0 — Consolidar revisão | Revisão do COORD sobre as escolhas D01–D10 já fechadas; conferir entrada produtiva e responsáveis pelo recorte do piloto | 0,5–1 dia de revisão/decisão; nenhuma implementação neste PR |
-| **1 — Anatomia e administração inicial** | Perfis CONFAZ prioritários, fallback conservador DOU/DOE-SP/RFB; partes, tabelas existentes, citações **sem link**, NCM 4–8 com/sem pontos e capítulo informativo; tabelas relacionais; tela administrativa de regras com simulação/versionamento; entrada da taxonomia e seleção revisada dos dois convênios com dependências e pendências | **9–14 dias de implementação + 2–4 dias de revisão/ajustes**. Faixa ampliada pelas escolhas de tela na F1, armazenamento separado e conferência das dependências. Anotação e revisão jurídica podem ocorrer em paralelo, mas são gate do aceite |
-| 2 — Links e leitura estruturada | Resolução exata/aliases aprovados, âncoras por dispositivo, sumário e layout fiel; ampliar suporte a anexos já disponíveis. Administração de regras já entregue na F1 | 4–7 dias + 1–2 de revisão; expansões do editor além do contrato da F1 serão estimadas separadamente |
+| **1 — Anatomia e administração inicial** | Perfis CONFAZ prioritários, fallback conservador DOU/DOE-SP/RFB; partes, tabelas existentes, citações **sem link**, NCM 4–8 com/sem pontos, faixas delimitadas, exceções e capítulo informativo; tabelas relacionais; tela administrativa com exemplos, comparação e versionamento; entrada da taxonomia e seleção revisada dos dois convênios com dependências e pendências | **10–16 dias de implementação + 2–4 dias de revisão/ajustes**. Faixa revisada para incluir intervalos NCM e relações de exceção, além de tela na F1, armazenamento separado e conferência das dependências. Exemplos e comparação detalham a administração já prevista. Anotação e revisão jurídica podem ocorrer em paralelo, mas são gate do aceite |
+| 2 — Links e leitura estruturada | Resolução exata/aliases aprovados, lista de atos ausentes, âncoras, sumário e layout fiel com histórico visível/recolhível; ampliar suporte a anexos já disponíveis. Administração de regras já entregue na F1 | 5–8 dias + 1–2 de revisão; expansões do editor além do contrato da F1 serão estimadas separadamente |
 | 3 — Vigência por dispositivo | Eventos, intervalos, relações entre atos, efeitos e ressalvas; consultas em data; substituir gradualmente recortes manuais | 7–12 dias + 2–4 de revisão jurídica/técnica para famílias delimitadas. Não promete consolidar toda legislação brasileira |
 | 4 — Benefício estruturado | Piloto 52/91 e 100/97 com operações, UFs, condições, percentuais e vínculo ao dispositivo | 4–7 dias + 1–2 de revisão; aplicação completa por UF depende de atos estaduais disponíveis |
 | Operação de expansão | Rodada controlada sobre ≈7.900 entradas e relatório; sem recaptura global | Após benchmark, 1–4 h de execução técnica estimada e 0,5–1 dia de acompanhamento/análise; autorização própria |
 
-**Fase 1 ampliada por decisão do Fábio:** inclui tela administrativa de regras, armazenamento relacional separado e dependências jurídicas conferidas do piloto. Continua delimitada: sem editor universal, banco de grafos pressuposto, OCR, IA generativa, consolidação automática de vigência geral, decisão de benefício, recuperação de todos os anexos ausentes ou reformulação completa da tela do Acervo. Inclui contrato de layout e preservação de tabelas. A estimativa anterior de 4–6 dias deixou de representar esse escopo.
+**Fase 1 ampliada por decisão do Fábio:** inclui tela administrativa de regras, armazenamento relacional separado e dependências jurídicas conferidas do piloto. Continua delimitada: sem editor universal, banco de grafos pressuposto, OCR, IA generativa, consolidação automática de vigência geral, decisão de benefício, recuperação de todos os anexos ausentes ou reformulação completa da tela do Acervo. Inclui contrato de layout e preservação de tabelas. As estimativas anteriores de 4–6 e 9–14 dias de implementação foram substituídas pela faixa atual; não representam o escopo completo após as aprovações.
 
 Se o recorte temporal dos convênios exigir investigação não concluída no prazo, entregar estrutura e simulação com pendência explícita; não substituir a conferência por suposição. O COORD decide se ajusta prazo ou aceita esse marco intermediário. O aceite de “taxonomia somente vigente” exige a prova positiva prevista em D01.
 
@@ -532,7 +568,24 @@ Não reabrir F3 para “melhorar” o filtro, não apagar publicações, não pu
 
 **D01–D10 fechadas; nenhuma escolha de desenho permanece aguardando resposta nesta lista.** Próximo gate: revisão do COORD. A indicação do responsável pela conferência jurídica e a aprovação concreta dos trechos dos convênios são preparações do futuro pacote do piloto; não foram executadas nem se confundem com aprovação de desenvolvimento.
 
-### 10.3 Referências de reutilização e conclusão do desenho
+### 10.3 Melhorias incorporadas do desenho do Claude
+
+**Origem e aprovação:** Fábio forneceu o arquivo `anat-desenho_2.md`, de autoria Claude, para comparação. GPT-EXEC propôs os seis aproveitamentos abaixo, com ajustes de segurança semântica; Fábio respondeu “Concordo com tudo” em 15/10/2026, 13:36 BRT. Esta aprovação complementa D01–D10 e mantém o escopo exclusivamente documental.
+
+| ID | Melhoria aprovada | Tratamento consolidado | Fase |
+|---|---|---|---|
+| M01 | Faixas de NCM | Limites explícitos e catálogo da edição aplicável; não substituir faixa por prefixo comum nem gerar números inexistentes | F1 |
+| M02 | Exceções e alcance | Relacionar expressão, regra e alvo; preservar relevância temática sem inferir inclusão no benefício; alcance incerto permanece pendente | Reconhecimento/consumo F1; interpretação completa do benefício F4 |
+| M03 | Lista de atos citados ausentes | Priorizar por citações e dependências, respeitando permissões; sem coleta automática; reavaliar quando o ato for incluído | F2 |
+| M04 | Exemplos por regra administrativa | Nome, finalidade, escopo, positivos/negativos e resultados esperados visíveis na simulação | F1 |
+| M05 | Comparação antes da ativação | Mesmo snapshot, versões identificadas, diferenças de partes/NCM/citações/elegibilidade e justificativa; mudança de contagem não é regressão por definição | F1 |
+| M06 | Controle visual do histórico | Redações anteriores inicialmente visíveis; recolher deixa marcador no lugar; modo completo preserva ordem; não altera consumo jurídico/taxonômico | F2 |
+
+Também aprovado: ficha de expectativas por publicação para facilitar revisão humana, complementar às anotações completas das 30 referências. Não houve aprovação de pressupostos divergentes do anexo, como usar texto original/incerto como vigente, montar links oficiais não verificados, interpretar coluna “CÓDIGO” genérica como NCM, apagar evidências antigas automaticamente ou adiar a tela administrativa.
+
+**D01–D10 e M01–M06 consolidadas.** Fase 1 estimada em 10–16 dias de implementação + 2–4 de revisão; Fase 2 em 5–8 + 1–2, sujeitas às hipóteses da seção 9. As mudanças de prazo refletem o escopo adicional, não execução já realizada. Revisão do COORD segue pendente e desenvolvimento não foi autorizado.
+
+### 10.4 Referências de reutilização e conclusão do desenho
 
 Pesquisa de leitura para evitar inventar vocabulário: [documentação LexML](https://projeto.lexml.gov.br/), [XML Schema](https://github.com/lexml/lexml-xml-schemas), [parser de documentos normativos](https://github.com/lexml/lexml-parser-projeto-lei), [lexml-linker](https://github.com/lexml/lexml-linker) e [jsonix-lexml](https://github.com/lexml/jsonix-lexml). O parser documenta execução JVM/Maven e o projeto usa Scala; linker é de outro runtime, Haskell; Jsonix converte XML↔JSON e não reconstrói sozinho estrutura ausente de HTML. Adotar conceitos de epígrafe/ementa/articulação não exige integrar essas ferramentas. A recomendação de mantê-las fora da F1 é uma avaliação de simplicidade desta proposta, não benchmark comparativo. Dependências/licenças devem ser avaliadas antes de eventual incorporação.
 
