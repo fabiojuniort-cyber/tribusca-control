@@ -1,8 +1,8 @@
 # ANAT-00 — Desenho da Anatomia do Ato
 
-**Status: DESENHO ATUALIZADO COM AS DECISÕES DO FÁBIO EM 15/10/2026, 12:58 BRT; revisão do COORD pendente. Não autoriza implementação.**
+**Status: DESENHO CONSOLIDADO; D01–D10 DECIDIDAS PELO FÁBIO, com fechamento em 15/10/2026, 13:25 BRT. Revisão do COORD pendente. Não autoriza implementação.**
 
-Documento único, preparado em 15/10/2026. Escopo desta entrega: leitura e PR exclusivamente documental. Nenhum código de produto, migration, carga, reclassificação, merge, deploy ou alteração no Railway foi executado. As decisões explicitamente tomadas pelo Fábio estão registradas na seção 10.2; escolhas ainda não respondidas permanecem identificadas, sem aprovação presumida.
+Documento único, preparado em 15/10/2026. Escopo desta entrega: leitura e PR exclusivamente documental. Nenhum código de produto, migration, carga, reclassificação, merge, deploy ou alteração no Railway foi executado. As dez decisões tomadas pelo Fábio estão registradas na seção 10.2. A aprovação dessas escolhas de desenho não substitui a revisão do COORD nem autoriza sua implementação.
 
 ## 1. Resultado pretendido e base observada
 
@@ -307,7 +307,7 @@ Fase 4 pode extrair benefício com: espécie (isenção/redução de base/crédi
 
 ### 6.1 Modelo lógico, sem SQL ou migration
 
-Reaproveitar identidades, versões, origens, arquivos e evidências de classificação existentes. **Fábio escolheu o armazenamento mais estruturado, com tabelas separadas, em lugar de concentrar a árvore e as entidades em um JSONB único.** Como a alternativa escolhida também mencionava “outro banco especializado” sem indicar tecnologia ou necessidade, o detalhamento abaixo usa PostgreSQL relacional existente. Introduzir outro banco permanece sem decisão e não é pressuposto para a Fase 1.
+Reaproveitar identidades, versões, origens, arquivos e evidências de classificação existentes. **Fábio escolheu o armazenamento mais estruturado, com tabelas separadas, em lugar de concentrar a árvore e as entidades em um JSONB único.** Em 15/10/2026, 13:25 BRT, Fábio confirmou o uso de **tabelas separadas no PostgreSQL existente**. Não será introduzido outro banco neste desenho.
 
 | Tabela proposta | Campos principais | Responsabilidade / fase |
 |---|---|---|
@@ -327,7 +327,7 @@ Oito tabelas são o ponto de partida lógico da Fase 1, não DDL autorizado. Cha
 
 A tela de regras e a tela de evidências usam permissões e trilha de auditoria existentes. Revisor, fundamento e hash são obrigatórios para afirmar vigência no piloto. Não reutilizar atributos HTML externos como aprovação. Se outra frente já tiver disponibilizado ledger jurídico no momento da implementação, adaptar a ele após conferir o schema vivo; a main lida não contém as migrations TAX13 044–050, portanto este desenho não presume aquele ledger implantado.
 
-A escolha de tabelas separadas não exige duplicar textos/anexos nem manter dois bancos sincronizados. Guardar o snapshot imutável uma vez e referenciar suas posições. Um banco especializado adicional só entrará no desenho depois de definidas sua finalidade e a necessidade que PostgreSQL não atenda; não escolher uma tecnologia arbitrariamente.
+A escolha de tabelas separadas não exige duplicar textos/anexos nem manter dois bancos sincronizados. Guardar o snapshot imutável uma vez e referenciar suas posições. Um banco especializado adicional fica fora do escopo consolidado; eventual necessidade futura exigirá proposta e decisão próprias.
 
 ### 6.2 Posições, imutabilidade e invalidação
 
@@ -480,7 +480,7 @@ Dias úteis estimados para um executor familiarizado com o projeto, com acesso �
 
 | Fase | Entrega | Estimativa e gate |
 |---|---|---|
-| 0 — Consolidar revisão | Registrar escolhas recebidas; confirmar tratamento de ato ausente e detalhamento de armazenamento; conferir entrada produtiva e responsáveis pelo recorte do piloto | 0,5–1 dia de revisão/decisão; nenhuma implementação neste PR |
+| 0 — Consolidar revisão | Revisão do COORD sobre as escolhas D01–D10 já fechadas; conferir entrada produtiva e responsáveis pelo recorte do piloto | 0,5–1 dia de revisão/decisão; nenhuma implementação neste PR |
 | **1 — Anatomia e administração inicial** | Perfis CONFAZ prioritários, fallback conservador DOU/DOE-SP/RFB; partes, tabelas existentes, citações **sem link**, NCM 4–8 com/sem pontos e capítulo informativo; tabelas relacionais; tela administrativa de regras com simulação/versionamento; entrada da taxonomia e seleção revisada dos dois convênios com dependências e pendências | **9–14 dias de implementação + 2–4 dias de revisão/ajustes**. Faixa ampliada pelas escolhas de tela na F1, armazenamento separado e conferência das dependências. Anotação e revisão jurídica podem ocorrer em paralelo, mas são gate do aceite |
 | 2 — Links e leitura estruturada | Resolução exata/aliases aprovados, âncoras por dispositivo, sumário e layout fiel; ampliar suporte a anexos já disponíveis. Administração de regras já entregue na F1 | 4–7 dias + 1–2 de revisão; expansões do editor além do contrato da F1 serão estimadas separadamente |
 | 3 — Vigência por dispositivo | Eventos, intervalos, relações entre atos, efeitos e ressalvas; consultas em data; substituir gradualmente recortes manuais | 7–12 dias + 2–4 de revisão jurídica/técnica para famílias delimitadas. Não promete consolidar toda legislação brasileira |
@@ -511,9 +511,9 @@ Se o recorte temporal dos convênios exigir investigação não concluída no pr
 
 Não reabrir F3 para “melhorar” o filtro, não apagar publicações, não publicar taxonomia, não aplicar migrations, não alterar Railway, não reutilizar o runner F2, não misturar branches de código nesta frente. Não religar o verde retirado por TAX13 sem evidência e aceite específicos.
 
-### 10.2 Decisões do Fábio e pontos ainda abertos
+### 10.2 Decisões do Fábio — consolidadas
 
-**Origem:** decisões recebidas diretamente do Fábio neste chat em 15/10/2026, 12:58 BRT, em resposta à proposta ANAT-00 de GPT-EXEC. O pedido original veio de CLAUDE-COORD. Esta revisão documental registra escolhas de desenho; não é autorização de implementação, migration, carga, merge ou deploy.
+**Origem:** decisões recebidas diretamente do Fábio neste chat em 15/10/2026, 12:58 BRT, em resposta à proposta ANAT-00 de GPT-EXEC; D05 e o detalhamento final de D08 foram confirmados às 13:25 BRT do mesmo dia. O pedido original veio de CLAUDE-COORD. Esta revisão documental registra escolhas de desenho; não é autorização de implementação, migration, carga, merge ou deploy.
 
 | ID | Decisão | Escolha registrada / proposta atual | Estado e alternativas |
 |---|---|---|---|
@@ -521,16 +521,16 @@ Não reabrir F3 para “melhorar” o filtro, não apagar publicações, não pu
 | D02 | Grafias NCM | Aceitar pontuadas e sem pontos, incluindo os exemplos `10`, `1010`, `1010.1`, `1010.11`, `1010.11.1`, `1010.11.11` | **Escolhida pelo Fábio.** Dois dígitos são capítulo informativo e não classificam, preservando decisão anterior; 4–8 são candidatos sujeitos a contexto/catálogo. Zonas proibidas e proteção contra outros domínios permanecem |
 | D03 | Ajuste de regras | Tela administrativa já na Fase 1, com rascunho, simulação, comparação, ativação versionada e retorno | **Escolhida pelo Fábio**, aceitando aumento de prazo. Configuração apenas em arquivo deixa de ser a entrega suficiente da F1 |
 | D04 | Links | Resolução automática apenas por identidade inequívoca; equivalências de nomes aprovadas depois | **Escolhida pelo Fábio.** Links permanecem na F2; aproximação automática não foi aprovada |
-| D05 | Ato citado ausente | Proposta mantida: citação sem link interno; link oficial externo se conhecido/validado; inclusão na coleta por ação separada | **Não respondida nesta rodada.** Alternativa: coletar automaticamente. Não presumir autorização de coleta; recomendação continua sem coleta automática |
+| D05 | Ato citado ausente | Manter a citação sem link interno; oferecer link oficial externo quando conhecido/validado; inclusão no Acervo por ação separada | **Aprovada pelo Fábio às 13:25 BRT.** Reconhecimento/resolução de citação não inicia coleta automática |
 | D06 | Tabela quebrada | Reconstruir somente quando células/colunas forem identificáveis com segurança; caso contrário, original e limitação explícita | **Escolhida pelo Fábio.** OCR/IA geral fora do começo |
 | D07 | Cores e layout | Organização original; vigente comprovado preto, revogado comprovado vermelho, redação anterior identificada e situação desconhecida sinalizada | **Escolhida pelo Fábio.** Status depende de evidência e data, incluindo alterações por outros atos |
-| D08 | Armazenamento | Fábio escolheu a alternativa de mais tabelas ou banco especializado. Desenho detalhado passa a separar análise, partes, entidades, evidências, dependências, regras e execuções | **Direção escolhida; tecnologia adicional não definida.** Recomendação técnica: tabelas separadas no PostgreSQL existente. Se a intenção for um segundo banco, definir sua finalidade antes de escolher tecnologia; não houve autorização para provisioná-lo |
+| D08 | Armazenamento | Tabelas separadas no PostgreSQL existente para análise, partes, entidades, evidências, dependências, regras e execuções | **Confirmada pelo Fábio às 13:25 BRT.** Sem outro banco; modelo lógico detalhado na seção 6.1. Nenhuma migration autorizada por esta decisão de desenho |
 | D09 | Expansão | Dois convênios → 100–200 publicações → restante do Acervo em lotes | **Escolhida pelo Fábio.** Execução e carga dependem de pacote autorizado e critérios de aceite |
 | D10 | IA e ferramentas externas | Regras determinísticas e adaptadores por fonte; avaliar ferramentas externas somente com ganho demonstrado | **Escolhida pelo Fábio.** LLM obrigatório e integração externa grande na F1 não aprovados |
 
 **Requisitos mantidos:** somente desenho; documento único em PR de documentação; NCM de dois dígitos não classifica; zonas proibidas para NCM; F1 com citações sem link; links/vigência geral/benefício em fases posteriores; ferramenta ajustável; nenhuma implementação antes da revisão COORD+Fábio.
 
-**Pendências para fechar a revisão:** resposta D05; confirmação de que D08 será atendida com tabelas separadas no PostgreSQL ou explicitação da necessidade de outro banco; indicação do responsável pela conferência jurídica do piloto. As recomendações já estão concretas no desenho para decisão, sem impedir sua revisão.
+**D01–D10 fechadas; nenhuma escolha de desenho permanece aguardando resposta nesta lista.** Próximo gate: revisão do COORD. A indicação do responsável pela conferência jurídica e a aprovação concreta dos trechos dos convênios são preparações do futuro pacote do piloto; não foram executadas nem se confundem com aprovação de desenvolvimento.
 
 ### 10.3 Referências de reutilização e conclusão do desenho
 
@@ -544,4 +544,4 @@ Referências duráveis do projeto:
 - [Snapshot HTML do Conv. 52/91](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/fb880354fbbbc90f681290e57dc905bde9ce9c08/ops/confaz/acts/CV052_91.html) e [snapshot HTML do Conv. 100/97](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/fb880354fbbbc90f681290e57dc905bde9ce9c08/ops/confaz/acts/CV100_97.html).
 - [Contrato atual RFB](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/fb880354fbbbc90f681290e57dc905bde9ce9c08/docs/phase-rfb-normas.md) e [templates atuais](https://github.com/fabiojuniort-cyber/radar-fiscal-web/blob/095b167cbc9dc6681ed29d6f06d5b99bdf203370/docs/LEGAL_DOCUMENT_TEMPLATES.md).
 
-**Próximo passo autorizado:** COORD revisar o desenho atualizado com as decisões recebidas e Fábio fechar os pontos explicitamente pendentes. O executor para na atualização do PR documental. Nenhuma fase de desenvolvimento ou operação começa por decorrência automática deste documento.
+**Próximo passo autorizado:** COORD revisar o desenho consolidado e registrar seu parecer. O executor para na atualização do PR documental. Nenhuma fase de desenvolvimento ou operação começa por decorrência automática deste documento.
