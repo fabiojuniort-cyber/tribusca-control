@@ -1,0 +1,12 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/atos/atos_cotepe/1998/ac001_98",
+  "consultaUTC": "2026-10-16T06:11:28.801397+00:00",
+  "metodo": "HTTP documental manual delimitado; não é coleta operacional",
+  "status": 200,
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "5e62b1fd392305c151e80995e8a054cdfb2a79cbb41e002ee70dccdb3ea3c391",
+  "sha256ArquivoRepoLF": "5e62b1fd392305c151e80995e8a054cdfb2a79cbb41e002ee70dccdb3ea3c391",
+  "normalizacao": "UTF-8, CRLF/CR para LF; texto preservado",
+  "bytesRespostaHTTP": 46287,
+  "links": []
+}

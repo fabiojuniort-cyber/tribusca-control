@@ -1,0 +1,15 @@
+{
+  "fonte": "AD021_20",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2020/ad021_20",
+  "consultaUTC": "2026-10-16T06:12:02.088417+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "efb2c497655c339b7ba8fd40c50fedc2ded143f7fdcd109fcad21a5212419b03",
+  "sha256ArquivoLF": "efb2c497655c339b7ba8fd40c50fedc2ded143f7fdcd109fcad21a5212419b03",
+  "bytesArquivoLF": 47355,
+  "sha256Texto": "24e57b0031150f9964d0fd95d071799542e82ef0cdebe3ed887400c832768b73",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}

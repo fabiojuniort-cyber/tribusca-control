@@ -1,0 +1,15 @@
+{
+  "fonte": "CV133_20",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV133_20",
+  "consultaUTC": "2026-10-16T06:10:38.847213+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "0f482fb7b0b8e874b67255469f859424a98b2e9eb308fce69160f29d9aa6f286",
+  "sha256ArquivoLF": "0f482fb7b0b8e874b67255469f859424a98b2e9eb308fce69160f29d9aa6f286",
+  "bytesArquivoLF": 248200,
+  "sha256Texto": "c4917fc8f43ff9c97b9c3140dfee58a372f17029366e9ccb1cb7c6dd63d0ae47",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}

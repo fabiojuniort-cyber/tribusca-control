@@ -1,0 +1,15 @@
+{
+  "fonte": "AD006_21",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad006_21",
+  "consultaUTC": "2026-10-16T06:12:02.199917+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "79ba212bea0f9808715b8f37d34de20000b025f146d3898d8424388fab926297",
+  "sha256ArquivoLF": "79ba212bea0f9808715b8f37d34de20000b025f146d3898d8424388fab926297",
+  "bytesArquivoLF": 55847,
+  "sha256Texto": "b9416dbe778dabc64b43b086d99556d843154c5be0fb3222c158622696c8c711",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}

@@ -1,0 +1,21 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV111_97",
+  "consultaUTC": "2026-10-16T06:11:06.031874+00:00",
+  "metodo": "HTTP documental manual delimitado; não é coleta operacional",
+  "status": 200,
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "bb5c678035454df0c3519217ad82fdbe7fefd982780976383ddedb5bab0d0d2b",
+  "sha256ArquivoRepoLF": "bb5c678035454df0c3519217ad82fdbe7fefd982780976383ddedb5bab0d0d2b",
+  "normalizacao": "UTF-8, CRLF/CR para LF; texto preservado",
+  "bytesRespostaHTTP": 79330,
+  "links": [
+    {
+      "texto": "01/98",
+      "href": "/legislacao/atos/atos_cotepe/1998/ac001_98"
+    },
+    {
+      "texto": "Convênio ICMS 52/91",
+      "href": "/legislacao/convenios/icms/1991/cv052_91"
+    }
+  ]
+}

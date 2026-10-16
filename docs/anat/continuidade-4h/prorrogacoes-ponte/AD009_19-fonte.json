@@ -1,0 +1,15 @@
+{
+  "fonte": "AD009_19",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2019/ad009_19",
+  "consultaUTC": "2026-10-16T06:12:01.171993+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "a33887c07f184f5b1ea04bb001672fd6119e8b2b6fa4b991620e6ff5fc767f1f",
+  "sha256ArquivoLF": "a33887c07f184f5b1ea04bb001672fd6119e8b2b6fa4b991620e6ff5fc767f1f",
+  "bytesArquivoLF": 49222,
+  "sha256Texto": "b28b09948d5e92e9da0961959874bad64834724e870522dbdbb3e134ad44c653",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}

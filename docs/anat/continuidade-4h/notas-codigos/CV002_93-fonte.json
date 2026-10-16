@@ -1,0 +1,21 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93",
+  "consultaUTC": "2026-10-16T06:11:06.032374+00:00",
+  "metodo": "HTTP documental manual delimitado; não é coleta operacional",
+  "status": 200,
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "b93b8ae71e065836707cc72c921e55f36db59c03408169effefea614eb200810",
+  "sha256ArquivoRepoLF": "b93b8ae71e065836707cc72c921e55f36db59c03408169effefea614eb200810",
+  "normalizacao": "UTF-8, CRLF/CR para LF; texto preservado",
+  "bytesRespostaHTTP": 81502,
+  "links": [
+    {
+      "texto": "02/93",
+      "href": "/legislacao/atos/atos_cotepe/1993/ac002_93"
+    },
+    {
+      "texto": "Convênio ICMS 52/91",
+      "href": "/legislacao/convenios/icms/1991/cv052_91"
+    }
+  ]
+}

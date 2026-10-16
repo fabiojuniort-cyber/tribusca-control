@@ -1,0 +1,50 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC",
+  "base": "a6ce0e6",
+  "dataReferencia": "2026-10-16",
+  "abas": [
+    {
+      "sheet": "Eventos e datas",
+      "count": 51,
+      "statuses": [
+        "Pendente"
+      ]
+    },
+    {
+      "sheet": "Divergências",
+      "count": 25,
+      "statuses": [
+        "Pendente"
+      ]
+    },
+    {
+      "sheet": "Subfragmentos",
+      "count": 15,
+      "statuses": [
+        "Pendente"
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "atos/ratificacao-104-21.json": "fbb032f13668c6e27edd629a61ca1a0d295512c921f003ba2114f79ea71a4383",
+    "prorrogacoes/eventos-178-226.json": "f1df94f0869e9b5cc747bb8e51f43393e6c28bd3fd58040c673c5b6933abf767",
+    "divergencias/divergencias-060-064-068.json": "e9752e7ec3171a9736a60d0643eec9f109c0ed05667a0538db9cf20b78d78acc",
+    "confronto-alvos/confronto.json": "1aadd5c98d1413aa1f27e1c63a164263bf6cafef8c2bbb00df911e5430f3cebc",
+    "ambiguidades/ambiguidades-celulas.json": "7c188ca2efe0fc8c761f444e786dcd69be1802f38a6dae72f4189dbea0b3d122",
+    "ambiguidades/nota139/nota139-evidencia.json": "d18a8518c80665bd089bff6cdcbad2f7c66e672c71e2a9e295e690d48eb3cc3d"
+  },
+  "extraInformado": {
+    "eventos": [],
+    "fragmentos": []
+  },
+  "fontesPrincipaisIntocadas": true,
+  "novasAprovacoes": 0,
+  "conferenciaHumanaInicial": "Pendente em todas as linhas",
+  "limites": [
+    "Candidatos podem se sobrepor a mapas anteriores; não somar como novos trechos.",
+    "ID base composto não transfere aprovação entre subfragmentos.",
+    "Nenhuma equivalência NBM/NCM inferida.",
+    "Datas e vínculos não constituem aprovação jurídica ou aplicação estadual."
+  ],
+  "sha256Xlsx": "32cab49fb0a34bfb6557dba4021a13cf0626addeeb2fe801573e709af97b428c"
+}
