@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "fontes": [
+    {
+      "fonte": "cv165_21",
+      "sha256ArquivoRepoLF": "df081ffe64479ab487aa9ad962700df0f6a7203ad8fe69f63208aa9996e4d37e",
+      "bytes": 168582,
+      "status": "PASS"
+    },
+    {
+      "fonte": "CV086_23",
+      "sha256ArquivoRepoLF": "1a6c432f6a912f7265eb200c956229438b75b57d044ed9461b16d5d5d871f19d",
+      "bytes": 167052,
+      "status": "PASS"
+    },
+    {
+      "fonte": "CV010_26",
+      "sha256ArquivoRepoLF": "e43e0f2cbfa7d11f0d905fb0cec282dac717c40fdc7d225f048e6c205b635e16",
+      "bytes": 104492,
+      "status": "PASS"
+    },
+    {
+      "fonte": "CV069_13",
+      "sha256ArquivoRepoLF": "0541637d1dd28a8bc0139b316597bda275144cb003d2843bd1b746b786e8c2da",
+      "bytes": 134486,
+      "status": "PASS"
+    },
+    {
+      "fonte": "CV001_16",
+      "sha256ArquivoRepoLF": "3248a119cb6fa32cd6d8328cd1d69add3306aa9acb3fc3b0092d86dac4dbd1a2",
+      "bytes": 101583,
+      "status": "PASS"
+    }
+  ],
+  "notasComLiteralPreservado": 3,
+  "alvosComIDTextoXPathHashPreservados": 7,
+  "aprovacoesPrincipais": 2,
+  "demaisPendentes": 2432,
+  "datasetPrincipalSomenteLido": true,
+  "planilhaNaoAberta": true
+}

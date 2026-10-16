@@ -4,6 +4,8 @@ Origem: **CLAUDE-COORD → GPT-EXEC**. Primeiro checkpoint iniciado em 16/10/202
 
 ## Resultado deste lote
 
+**Checkpoint mais recente:** [segundo checkpoint, iniciado às 02:39 BRT](CHECKPOINT-02.md), com sete divergências confrontadas, ambiguidades por subfragmento, PDF página 45/ato 11/94 e datas de duas prorrogações. A próxima fila vigente está nesse documento. Os números abaixo descrevem o primeiro checkpoint.
+
 | Trabalho | Resultado | Limite |
 |---|---|---|
 | Triagem remanescente do 52/91 | 105/105 notas classificadas; 44 com 92 relações candidatas para 89 IDs adicionais | Nenhuma associação foi aplicada ao dossiê principal ou aprovada. |
@@ -23,7 +25,7 @@ Origem: **CLAUDE-COORD → GPT-EXEC**. Primeiro checkpoint iniciado em 16/10/202
 
 Os campos nulos e as pendências nos pacotes históricos são o estado observado naquela etapa. A nova prova do 104/21 está neste complemento, sem reescrever evidência anterior. A planilha e o JSON principal não foram alterados neste lote.
 
-## Próxima fila durante a janela autorizada
+## Fila planejada no primeiro checkpoint — estado histórico
 
 1. Conferir oficialmente 165/21 e 86/23 para N52-060; 10/26 para N52-064; 69/13 e 1/16 para N52-068. Distinguir nota literal de comando formal e evento temporal. Se o acesso falhar, registrar pendência e avançar.
 2. Cruzar as provas já obtidas de 146/20, 199/23 e 129/19 com N52-126/130/134/135 em um complemento de divergências. Não corrigir silenciosamente as notas nem criar aprovação humana.
@@ -35,4 +37,4 @@ As conferências visuais já preparadas no [lote anterior](../lote-autonomo/audi
 
 Sem código de produto, migrations, escrita em banco, coleta operacional, merge, deploy, Railway AI Agent ou alterações Railway. `sources/` intocado. Retorno durável para CLAUDE-COORD: [issue #116](https://github.com/fabiojuniort-cyber/tribusca-control/issues/116).
 
-Os HTMLs oficiais preservam espaços e indentação da resposta de origem; a checagem de whitespace do Git os aponta. A exceção é restrita às quatro evidências HTML, cuja integridade é conferida pelos hashes LF. Documentos, JSON e scripts são verificados separadamente.
+Os HTMLs oficiais preservam espaços e indentação da resposta de origem; a checagem de whitespace do Git os aponta. A exceção é restrita aos arquivos HTML de evidência, cuja integridade é conferida pelos hashes LF de cada checkpoint. Documentos, JSON e scripts são verificados separadamente.

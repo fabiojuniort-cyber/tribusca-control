@@ -1,0 +1,34 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV069_13",
+  "consultaUTC": "2026-10-16T05:40:28.243758+00:00",
+  "tentativasHTTP": 2,
+  "tentativaAnterior": {
+    "consultaUTC": "2026-10-16T05:40:13.880564+00:00",
+    "erro": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "status": "NOT_PROVEN"
+  },
+  "status": 200,
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "5872807aad7b204b682f2ddead27eba98ae3a16d9f9638612dd0442b555f2381",
+  "bytesRespostaHTTP": 134488,
+  "sha256ArquivoRepoLF": "0541637d1dd28a8bc0139b316597bda275144cb003d2843bd1b746b786e8c2da",
+  "bytesArquivoRepoLF": 134486,
+  "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+  "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\CV069_13.html",
+  "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+  "caracteresSubstituicaoTexto": 0,
+  "links": [
+    {
+      "texto": "153/13",
+      "href": "https://www.confaz.fazenda.gov.br/../../despachos-do-secretario-executivo/2013/dp153_13"
+    },
+    {
+      "texto": "16/13",
+      "href": "https://www.confaz.fazenda.gov.br/../../atos/atos_declaratorios/2013/ad016_13"
+    },
+    {
+      "texto": "Convênio ICM 52/91",
+      "href": "https://www.confaz.fazenda.gov.br/../icms/1991/cv052_91"
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "frente": "ANAT",
+  "origem": "CLAUDE-COORD",
+  "risco": "R0 documental / R1 leitura oficial",
+  "consultaUTC": "2026-10-16T05:42:01.294143+00:00",
+  "dataReferencia": "2026-10-16",
+  "limites": [
+    "Nenhuma aprovação nova; candidatos não aplicados ao dataset ou planilha.",
+    "Datas de publicação e ratificação constam das páginas oficiais do CONFAZ; atos declaratórios completos e DOU integral não conferidos neste complemento.",
+    "Efeitos e intervalos propostos são inferências documentais explicitadas, não validação da aplicação estadual ou operação do cliente.",
+    "Não prova exaustividade de todos os atos posteriores."
+  ],
+  "eventos": [
+    {
+      "fonte": "cv165_21",
+      "ato": "Convênio ICMS 165/21",
+      "dataAto": "2021-10-01",
+      "publicacao": "2021-10-08",
+      "publicacaoRatificacaoCONFAZ": "2021-10-26",
+      "atoDeclaratorio": "27/21",
+      "inicioVigorProposto": "2021-10-26",
+      "efeitosPropostos": "2021-10-26",
+      "fundamento": "Cláusula primeira acrescenta §2 à quarta e renumera único para §1; segunda condiciona vigor à publicação da ratificação. Não contém efeitos distintos expressos."
+    },
+    {
+      "fonte": "CV086_23",
+      "ato": "Convênio ICMS 86/23",
+      "dataAto": "2023-08-04",
+      "publicacao": "2023-08-08",
+      "publicacaoRatificacaoCONFAZ": "2023-08-25",
+      "atoDeclaratorio": "31/23",
+      "inicioVigorProposto": "2023-08-25",
+      "efeitosPropostos": "2023-08-25",
+      "fundamento": "Cláusula primeira altera §1 da quarta para Sergipe; segunda condiciona vigor à publicação da ratificação. Sem marco expresso de efeitos separado."
+    },
+    {
+      "fonte": "CV010_26",
+      "ato": "Convênio ICMS 10/26",
+      "dataAto": "2026-01-27",
+      "publicacao": "2026-01-29",
+      "publicacaoRatificacaoCONFAZ": "2026-02-19",
+      "atoDeclaratorio": "04/26",
+      "inicioVigorProposto": "2026-02-19",
+      "efeitosPropostos": "2026-05-01",
+      "fimPrazoGeralExpresso": "2026-12-31",
+      "fundamento": "Primeira prorroga disposições até31/12/2026; segunda altera §2 da quarta incluindo São Paulo; terceira distingue vigor e efeitos."
+    },
+    {
+      "fonte": "CV069_13",
+      "ato": "Convênio ICMS 69/13",
+      "dataAto": "2013-07-26",
+      "publicacao": "2013-07-30",
+      "publicacaoRatificacaoCONFAZ": "2013-08-16",
+      "atoDeclaratorio": "16/13",
+      "inicioVigorProposto": "2013-08-16",
+      "efeitosPropostos": "2013-10-01",
+      "fundamento": "Primeira acrescenta único às quarta e quinta para Mato Grosso; segunda dá efeitos primeiro dia segundo mês subsequente à ratificação.01/10/2013 é cálculo documental; o ato não estipula31/12/2016."
+    },
+    {
+      "fonte": "CV001_16",
+      "ato": "Convênio ICMS 1/16",
+      "dataAto": "2016-01-14",
+      "publicacao": "2016-01-15",
+      "publicacaoRatificacaoCONFAZ": "2016-01-22",
+      "atoDeclaratorio": "1/16",
+      "inicioVigorProposto": "2016-01-22",
+      "efeitosPropostos": "2016-01-01",
+      "fundamento": "Primeira altera único quarta para Piauí/Sergipe; segunda revoga único quinta; terceira dá efeitos01/01/2016, anteriores à publicação/ratificação."
+    }
+  ],
+  "divergencias": [
+    {
+      "idNota": "N52-060",
+      "fontes": [
+        "cv165_21",
+        "CV086_23"
+      ],
+      "comandoComprovado": "165/21, primeira: quarta; renumeração de único para§1.86/23, primeira: §1quarta. Nenhum deles altera §1segunda neste comando.",
+      "conclusaoProposta": "Cláusula segunda na nota é divergência editorial demonstrável; alvo candidato§1quarta, sem corrigir literal. Intervalo da variante26/10/2021–24/08/2023 é consistente com os dois atos, sujeito à aprovação.",
+      "alvos": [
+        {
+          "id": "ANAT03-00035",
+          "caminho": "Cláusula quarta/§1º/bloco 101",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[101]",
+          "textoLiteral": "§1º. Não se aplicam as disposições desta cláusula aos Estados de Piauí e Sergipe.",
+          "hashTrecho": "6fc9ebf2f603f349d87799ab8415d6e98fc89ec642868080ac8fea726593f8de",
+          "aprovado": false,
+          "alcanceProposto": "Variante renumerada para§1 em26/10/2021; fim proposto24/08/2023.",
+          "situacaoAprovacao": "pendente; candidato documental separado do dossiê principal"
+        },
+        {
+          "id": "ANAT03-00036",
+          "caminho": "Cláusula quarta/Parágrafo único/bloco 103",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[103]",
+          "textoLiteral": "Parágrafo único. Não se aplicam as disposições desta cláusula aos Estados de Piauí e Sergipe.",
+          "hashTrecho": "fec912d03353ec6ab1059d718a0c1b305a8ae58b61b9157a8321e27f2c65994d",
+          "aprovado": false,
+          "alcanceProposto": "Variante como único: renumeração em26/10/2021; último dia proposto25/10/2021.",
+          "situacaoAprovacao": "pendente; candidato documental separado do dossiê principal"
+        },
+        {
+          "id": "ANAT03-00034",
+          "caminho": "Cláusula quarta/§ 1º/bloco 99",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[99]",
+          "textoLiteral": "§ 1º Não se aplicam as disposições desta cláusula ao Estado de Sergipe.",
+          "hashTrecho": "3119154269fd0952f319eb90b29877c1559bdf522f974d92e3971f3d66e8cce1",
+          "aprovado": false,
+          "alcanceProposto": "Redação de86/23 com Sergipe; início proposto25/08/2023.",
+          "situacaoAprovacao": "pendente; candidato documental separado do dossiê principal"
+        }
+      ],
+      "notaSnapshot": {
+        "idNota": "N52-060",
+        "literal": "Redação anterior renumerada do parágrafo único para § 1º da cláusula segunda pelo Conv. ICMS 165/21, efeitos de 26.10.21. a 24.08.23.",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[100]",
+        "classes": "A8-2RemissaoAnt",
+        "linksFonte": []
+      },
+      "estado": "divergencia_comprovada_documentalmente; associação/intervalo propostos pendentes de conferência humana"
+    },
+    {
+      "idNota": "N52-064",
+      "fontes": [
+        "CV010_26"
+      ],
+      "comandoComprovado": "10/26, segunda: §2 da cláusula quarta; terceira: efeitos01/05/2026. A palavra feira não integra o dispositivo nomeado.",
+      "conclusaoProposta": "quarta-feira na nota é anomalia editorial; alvo candidato§2quarta, mantendo literal. Vigência proposta19/02/2026 e efeitos01/05/2026 devem permanecer separados.",
+      "alvos": [
+        {
+          "id": "ANAT03-00039",
+          "caminho": "Cláusula quarta/§ 2º/bloco 109",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[109]",
+          "textoLiteral": "§ 2º Os Estados do Paraná, Rio Grande do Sul, Santa Catarina e São Paulo ficam autorizados a não aplicar o disposto no “caput”.",
+          "hashTrecho": "00319a5e4e39a39029889dda014dddbf8c09aa94d23082c399b1385b2ba803cb",
+          "aprovado": false,
+          "alcanceProposto": "Variante incluindo São Paulo, efeitos propostos01/05/2026.",
+          "situacaoAprovacao": "pendente; candidato documental separado do dossiê principal"
+        },
+        {
+          "id": "ANAT03-00040",
+          "caminho": "Cláusula quarta/§ 2º/bloco 111",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[111]",
+          "textoLiteral": "§ 2º Os Estados do Paraná, Rio Grande do Sul e Santa Catarina ficam autorizados a não aplicar o disposto no “caput”.",
+          "hashTrecho": "344f953a8761ea6a27bc360722f454e9f492ae9b165662cb178803903ae5f6cf",
+          "aprovado": false,
+          "alcanceProposto": "Variante sem São Paulo: encerramento de efeitos proposto30/04/2026 por substituição.",
+          "situacaoAprovacao": "pendente; candidato documental separado do dossiê principal"
+        }
+      ],
+      "notaSnapshot": {
+        "idNota": "N52-064",
+        "literal": "Nova redação dada ao §2º da cláusula quarta-feira pelo Conv. ICMS 10/26, efeitos a partir de 01.05.26.",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[108]",
+        "classes": "A8-1Remissao",
+        "linksFonte": []
+      },
+      "estado": "divergencia_comprovada_documentalmente; associação/intervalo propostos pendentes de conferência humana"
+    },
+    {
+      "idNota": "N52-068",
+      "fontes": [
+        "CV069_13",
+        "CV001_16"
+      ],
+      "comandoComprovado": "69/13 cria únicoquinta;1/16,segunda o revoga,terceira efeitos01/01/2016. Data31/12/2016 da nota não aparece em69/13 e conflita com revogação.",
+      "conclusaoProposta": "Intervalo proposto de efeitos da redação anterior01/10/2013–31/12/2015; revogação com efeitos01/01/2016. Vigor do revogador22/01/2016 e efeitosretroativos01/01/2016 são eventos distintos. Não alterar nota literal31/12/2016.",
+      "notaContraposta": {
+        "idNota": "N52-067",
+        "literal": "Revogado o parágrafo único da cláusula quinta pelo Conv. ICMS 1/16, efeitos a partir de 01.01.16.",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[114]"
+      },
+      "alvos": [
+        {
+          "id": "ANAT03-00043",
+          "caminho": "Cláusula quinta/Parágrafo único/bloco 117",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[117]",
+          "textoLiteral": "Parágrafo único. Não se aplicam as disposições desta cláusula, ao Estado de Mato Grosso.",
+          "hashTrecho": "34c5beddad19d6a7fc252fe2ab700d390f867ce50a05c05452c3a4d46aa02ae9",
+          "aprovado": false,
+          "alcanceProposto": "Variante Mato Grosso, fim de efeitos proposto31/12/2015.",
+          "situacaoAprovacao": "pendente; candidato documental separado do dossiê principal"
+        },
+        {
+          "id": "ANAT03-00042",
+          "caminho": "Cláusula quinta/Parágrafo único/bloco 115",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[115]",
+          "textoLiteral": "Parágrafo único. REVOGADO",
+          "hashTrecho": "9c2d508a8c0f491f4b84b18a66f21e9fd654e8efad8dc8ae4dcf43c38ec452da",
+          "aprovado": false,
+          "alcanceProposto": "Marcador REVOGADO; comando formal1/16segunda, efeitos01/01/2016.",
+          "situacaoAprovacao": "pendente; candidato documental separado do dossiê principal"
+        }
+      ],
+      "notaSnapshot": {
+        "idNota": "N52-068",
+        "literal": "Acrescido o parágrafo único à cláusula quinta pelo Conv. 69/13, efeitos de 01.10.13 a 31.12.16.",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[116]",
+        "classes": "RemissoAnt",
+        "linksFonte": []
+      },
+      "estado": "divergencia_comprovada_documentalmente; associação/intervalo propostos pendentes de conferência humana"
+    }
+  ],
+  "contagens": {
+    "fontesHTTP200": 5,
+    "notasPrincipais": 3,
+    "notaContraposta": 1,
+    "relacoesNotaAlvo": 7,
+    "idsUnicos": 7
+  },
+  "fontes": {
+    "cv165_21": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/cv165_21",
+      "consultaUTC": "2026-10-16T05:40:45.799267+00:00",
+      "tentativasHTTP": 3,
+      "tentativaAnterior": {
+        "consultaUTC": "2026-10-16T05:40:28.243758+00:00",
+        "erro": "HTTP Error 404: Not Found",
+        "status": "NOT_PROVEN"
+      },
+      "status": 200,
+      "encoding": "utf-8",
+      "sha256RespostaHTTP": "b0eb1b62a60175f37e86fbb98b29e2e0b7b2fa75f254b095002773788ece40f7",
+      "bytesRespostaHTTP": 168583,
+      "sha256ArquivoRepoLF": "df081ffe64479ab487aa9ad962700df0f6a7203ad8fe69f63208aa9996e4d37e",
+      "bytesArquivoRepoLF": 168582,
+      "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\cv165_21.html",
+      "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+      "caracteresSubstituicaoTexto": 0,
+      "links": [
+        {
+          "texto": "69/21",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2021/dp069_21"
+        },
+        {
+          "texto": "27/21",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad027_21"
+        },
+        {
+          "texto": "",
+          "href": "file:///G:/DTR/CSAN/backup_compartilhada_CSAN/todas_pastas/04_normas_confaz/Atos/Despacho/2021/DP062_21%20-%203a%20Pub.doc"
+        },
+        {
+          "texto": "Convênio ICMS nº 52, de 26 de setembro de 1991",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+        }
+      ]
+    },
+    "CV086_23": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV086_23",
+      "consultaUTC": "2026-10-16T05:40:28.242755+00:00",
+      "tentativasHTTP": 2,
+      "tentativaAnterior": {
+        "consultaUTC": "2026-10-16T05:40:13.879566+00:00",
+        "erro": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "status": "NOT_PROVEN"
+      },
+      "status": 200,
+      "encoding": "utf-8",
+      "sha256RespostaHTTP": "8c2aba3dfe114e1352e8df5e5478e63e534d1a01031b2075daf03b112287ec20",
+      "bytesRespostaHTTP": 167058,
+      "sha256ArquivoRepoLF": "1a6c432f6a912f7265eb200c956229438b75b57d044ed9461b16d5d5d871f19d",
+      "bytesArquivoRepoLF": 167052,
+      "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\CV086_23.html",
+      "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+      "caracteresSubstituicaoTexto": 0,
+      "links": [
+        {
+          "texto": "45/23",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2023/dp045_23"
+        },
+        {
+          "texto": "31/23",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2023/ad030_23"
+        },
+        {
+          "texto": "Convênio ICMS nº 52, de 26 de setembro de 1991",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+        }
+      ]
+    },
+    "CV010_26": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2026/CV010_26",
+      "consultaUTC": "2026-10-16T05:40:28.242755+00:00",
+      "tentativasHTTP": 2,
+      "tentativaAnterior": {
+        "consultaUTC": "2026-10-16T05:40:13.880068+00:00",
+        "erro": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "status": "NOT_PROVEN"
+      },
+      "status": 200,
+      "encoding": "utf-8",
+      "sha256RespostaHTTP": "e43e0f2cbfa7d11f0d905fb0cec282dac717c40fdc7d225f048e6c205b635e16",
+      "bytesRespostaHTTP": 104492,
+      "sha256ArquivoRepoLF": "e43e0f2cbfa7d11f0d905fb0cec282dac717c40fdc7d225f048e6c205b635e16",
+      "bytesArquivoRepoLF": 104492,
+      "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\CV010_26.html",
+      "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+      "caracteresSubstituicaoTexto": 0,
+      "links": [
+        {
+          "texto": "04/26",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2026/dp004_26"
+        },
+        {
+          "texto": "04/26.",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2026/ad004_26"
+        },
+        {
+          "texto": "Convênio ICMS nº 52, de 26 de setembro de 1991",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+        },
+        {
+          "texto": "Convênio ICMS nº 52/91",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+        }
+      ]
+    },
+    "CV069_13": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV069_13",
+      "consultaUTC": "2026-10-16T05:40:28.243758+00:00",
+      "tentativasHTTP": 2,
+      "tentativaAnterior": {
+        "consultaUTC": "2026-10-16T05:40:13.880564+00:00",
+        "erro": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "status": "NOT_PROVEN"
+      },
+      "status": 200,
+      "encoding": "utf-8",
+      "sha256RespostaHTTP": "5872807aad7b204b682f2ddead27eba98ae3a16d9f9638612dd0442b555f2381",
+      "bytesRespostaHTTP": 134488,
+      "sha256ArquivoRepoLF": "0541637d1dd28a8bc0139b316597bda275144cb003d2843bd1b746b786e8c2da",
+      "bytesArquivoRepoLF": 134486,
+      "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\CV069_13.html",
+      "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+      "caracteresSubstituicaoTexto": 0,
+      "links": [
+        {
+          "texto": "153/13",
+          "href": "https://www.confaz.fazenda.gov.br/../../despachos-do-secretario-executivo/2013/dp153_13"
+        },
+        {
+          "texto": "16/13",
+          "href": "https://www.confaz.fazenda.gov.br/../../atos/atos_declaratorios/2013/ad016_13"
+        },
+        {
+          "texto": "Convênio ICM 52/91",
+          "href": "https://www.confaz.fazenda.gov.br/../icms/1991/cv052_91"
+        }
+      ]
+    },
+    "CV001_16": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV001_16",
+      "consultaUTC": "2026-10-16T05:40:28.243758+00:00",
+      "tentativasHTTP": 2,
+      "tentativaAnterior": {
+        "consultaUTC": "2026-10-16T05:40:13.881064+00:00",
+        "erro": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "status": "NOT_PROVEN"
+      },
+      "status": 200,
+      "encoding": "utf-8",
+      "sha256RespostaHTTP": "f068f7a8caff6446b15e0bbe68c5b60b69216deb6179260a64d7d46ac92c76c4",
+      "bytesRespostaHTTP": 101615,
+      "sha256ArquivoRepoLF": "3248a119cb6fa32cd6d8328cd1d69add3306aa9acb3fc3b0092d86dac4dbd1a2",
+      "bytesArquivoRepoLF": 101583,
+      "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\CV001_16.html",
+      "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+      "caracteresSubstituicaoTexto": 0,
+      "links": [
+        {
+          "texto": "9/16",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2016/DP009_16"
+        },
+        {
+          "texto": "1/16",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2016/ad001_16"
+        },
+        {
+          "texto": "Convênio ICMS 52/91",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+        },
+        {
+          "texto": "Convênio ICMS 52/91",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+        }
+      ]
+    }
+  }
+}

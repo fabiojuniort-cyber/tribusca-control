@@ -1,0 +1,38 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV001_16",
+  "consultaUTC": "2026-10-16T05:40:28.243758+00:00",
+  "tentativasHTTP": 2,
+  "tentativaAnterior": {
+    "consultaUTC": "2026-10-16T05:40:13.881064+00:00",
+    "erro": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "status": "NOT_PROVEN"
+  },
+  "status": 200,
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "f068f7a8caff6446b15e0bbe68c5b60b69216deb6179260a64d7d46ac92c76c4",
+  "bytesRespostaHTTP": 101615,
+  "sha256ArquivoRepoLF": "3248a119cb6fa32cd6d8328cd1d69add3306aa9acb3fc3b0092d86dac4dbd1a2",
+  "bytesArquivoRepoLF": 101583,
+  "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+  "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\CV001_16.html",
+  "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+  "caracteresSubstituicaoTexto": 0,
+  "links": [
+    {
+      "texto": "9/16",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2016/DP009_16"
+    },
+    {
+      "texto": "1/16",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2016/ad001_16"
+    },
+    {
+      "texto": "Convênio ICMS 52/91",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+    },
+    {
+      "texto": "Convênio ICMS 52/91",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+    }
+  ]
+}

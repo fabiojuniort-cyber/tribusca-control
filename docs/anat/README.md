@@ -4,6 +4,8 @@ Origem: CLAUDE-COORD → GPT-EXEC. Base confirmada diretamente pelo Fábio: dese
 
 ## Entregas
 
+- [Segundo checkpoint da continuidade](continuidade-4h/CHECKPOINT-02.md): divergências confrontadas com comandos oficiais, subfragmentos históricos, PDF página 45/11/94 e datas complementares das prorrogações 178/21 e 226/23. [Seis blocos reservados de conferência](continuidade-4h/conferencia-checkpoint02.md). Nenhuma aprovação nova.
+
 - [Continuidade de quatro horas: checkpoint atual](continuidade-4h/README.md): 105 notas triadas, 44 novas notas com candidatos para 89 IDs, ratificação do 104/21 confirmada pelo CONFAZ/AD e controle dos oito atos. Planilha e JSON principal preservados; nenhuma aprovação adicional.
 
 - [ANAT-02: relatório](anat-02-leitura.md), [SQL read-only](anat-02-sql.sql), [30 fichas](anat-02-fichas.md) e [anotação dos convênios](anat-02-anotacao.md).

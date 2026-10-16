@@ -1,0 +1,27 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC",
+  "observadoEmUTC": "2026-10-16T05:46:11.503551+00:00",
+  "headBase": "98f9990218309bbfc33b17b8d3179353c36320e4",
+  "resultado": "PASS",
+  "arquivosProtegidosIntactos": 8,
+  "divergenciasNotas": 3,
+  "relacoesDivergencias": 7,
+  "notasConfrontoFormal": 4,
+  "idsConfrontoFormal": 10,
+  "ambiguidadesExaminadas": 7,
+  "relacoesSubfragmentos": 6,
+  "idsSubfragmentosUnicos": 5,
+  "fragmentosDOMComHashConferido": 10,
+  "nota139PaginaPDF": 45,
+  "fontesHTMLNovasComHashConferido": 9,
+  "eventosProrrogacaoComplementados": 2,
+  "novasAprovacoes": 0,
+  "demaisTrechosPendentes": 2432,
+  "limites": [
+    "Contagens de relações de complementos não são somáveis sem deduplicação e distinção de papel.",
+    "Vigor calculado/proposto não equivale a data expressa nem aprovação humana.",
+    "PDF comprova geometria; vínculo de Válvula ao código vem do comando externo11/94.",
+    "Dossiê e planilha principais intocados."
+  ],
+  "linksNovos": "PASS"
+}

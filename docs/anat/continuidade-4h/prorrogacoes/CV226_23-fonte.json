@@ -1,0 +1,15 @@
+{
+  "fonte": "CV226_23",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV226_23",
+  "consultaUTC": "2026-10-16T05:40:32.135324+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "8755cb933b337a66c8fdeec7c6d83eaeaf3708596b3a86eb84a1092a0e237f81",
+  "sha256ArquivoLF": "98f22f77960d558f4987644356174b2023ce42abe2cd5f4b73aa269177448722",
+  "bytesArquivoLF": 282771,
+  "sha256Texto": "fd016d815dd8673d03caaaca07c9858f0f0b4c540bac5a68f666b3498faa7353",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}

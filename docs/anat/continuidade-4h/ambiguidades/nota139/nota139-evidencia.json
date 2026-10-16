@@ -1,0 +1,135 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC; continuidade de 4 horas autorizada por Fábio",
+  "risco": "R0 documental",
+  "consultadoEmUTC": "2026-10-16T05:43:40Z",
+  "idNota": "N52-139",
+  "resultado": "candidato_documental_por_ato_externo; geometria_da_impressao_permanece_anomala",
+  "limite": "Nenhum literal/ID/mapa/dataset/planilha modificado; nenhuma aprovação, vigência atual, equivalência NBM→NCM ou adoção estadual atribuída.",
+  "pdf": {
+    "arquivo": "C:\\Users\\fabio\\Downloads\\52 91.pdf",
+    "bytes": 23282226,
+    "sha256": "f740b45de3d5f54de0b9f269164be02a4e149b7784d8e1a19dab1fe823ee2647",
+    "paginaFisicaBase1": 45,
+    "rotuloRodape": "45/62",
+    "totalPaginas": 62,
+    "cabecalhoTemporalImpresso": "15/10/2026, 23:00",
+    "urlRodape": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91",
+    "renderInspecionado": "output\\anat\\pdf-review\\pdf52-last\\p-45.png",
+    "sha256Render": "33a1d217cb2e9dc61396871f5e0004993fe84fb972bf60c38fe21343c4d5d993",
+    "metodo": "Inspeção visual da página completa do render existente, incluindo cabeçalhos, bloco histórico e rodapé.",
+    "observado": [
+      "O cabeçalho de seção identifica redação original dos Anexos I e II, com efeitos até 19.10.08.",
+      "Antes da N52-139 há Válvula com NBM 8481.80.9910 em sua própria linha, após nota 74/95.",
+      "O primeiro NBM 7307.19.0300 aparece à direita, na altura vertical da nota 11/94; a palavra Válvula aparece abaixo, à esquerda, sem código alinhado.",
+      "Na linha posterior, Cabeça de poço para perfuração de poços de petróleo aparece à esquerda e outro 7307.19.0300 à direita, alinhados.",
+      "O PDF não corrige a separação de células encontrada no HTML e não autoriza descrevê-la como alinhamento regular entre Válvula e código."
+    ]
+  },
+  "htmlSnapshot": {
+    "arquivo": "output\\anat\\sql-evidence\\CV052_91.html",
+    "sha256": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+    "subfragmentosPreservados": [
+      {
+        "idBase": "ANAT03-01592",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[4]/td[1]/p",
+        "papel": "Nota N52-139",
+        "textoLiteralDOM": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 20.11.95.",
+        "sha256TextoDOM": "23423ef52d15c424c3df29f47968637188d56877ce6d5df7dd59d3ba522d40a0"
+      },
+      {
+        "idBase": "ANAT03-01592",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[4]/td[2]/p",
+        "papel": "Código na célula lateral da nota",
+        "textoLiteralDOM": "7307.19.0300",
+        "sha256TextoDOM": "e98f26549827d6a9cb0c5585fb811f283076bc18ee82d92715397159483ac406"
+      },
+      {
+        "idBase": "ANAT03-01593",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[5]/td/p",
+        "papel": "Válvula na linha seguinte sem código próprio",
+        "textoLiteralDOM": "Válvula",
+        "sha256TextoDOM": "fa8a274793fd10da4b64f7fb94fa7c2006db508a13b01a5f08cd8f740b24e51d"
+      },
+      {
+        "idBase": "ANAT03-01594",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[6]/td[1]/p",
+        "papel": "Cabeça de poço, descrição separada",
+        "textoLiteralDOM": "Cabeça de poço para perfuração de poços de petróleo",
+        "sha256TextoDOM": "0ed10a40c074139ff1f1420e263b9246b533b86eddac412654834693d26e7852"
+      },
+      {
+        "idBase": "ANAT03-01594",
+        "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[6]/td[2]/p",
+        "papel": "Código de cabeça de poço na mesma linha",
+        "textoLiteralDOM": "7307.19.0300",
+        "sha256TextoDOM": "e98f26549827d6a9cb0c5585fb811f283076bc18ee82d92715397159483ac406"
+      }
+    ]
+  },
+  "fonteOficialAto": {
+    "ato": "Convênio ICMS 11/94",
+    "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1994/CV011_94",
+    "tipo": "HTML oficial CONFAZ aberto e lido publicamente; não é novo snapshot operacional",
+    "localizadores": [
+      "Cláusula segunda, inciso II",
+      "Cláusula segunda, inciso X",
+      "Cláusula terceira e notas editoriais iniciais"
+    ],
+    "comandos": [
+      {
+        "localizador": "Cláusula segunda, inciso II",
+        "produto": "válvula",
+        "codigoNBMLiteral": "7307.19.0300",
+        "operacao": "acréscimo ao Anexo I do 52/91"
+      },
+      {
+        "localizador": "Cláusula segunda, inciso X",
+        "produto": "cabeça de poço para perfuração de poços de petróleo",
+        "codigoNBMLiteral": "7307.19.0300",
+        "operacao": "acréscimo separado ao Anexo I do 52/91"
+      }
+    ],
+    "datas": {
+      "publicacaoInformadaPeloCONFAZ": "1994-04-05",
+      "ratificacaoInformadaPeloCONFAZ": "1994-04-22",
+      "referenciaRatificacao": "Ato COTEPE-ICMS 05/94",
+      "regraClausulaTerceira": "Entrada em vigor na publicação da ratificação nacional",
+      "limite": "Metadado CONFAZ e regra do convênio lidos; não foi reaberto o ato ratificador 05/94 neste complemento."
+    }
+  },
+  "propostaVinculo": {
+    "tipo": "documental candidato por comando expresso externo, cruzando duas linhas preservadas",
+    "nota": "N52-139",
+    "idDescricao": "ANAT03-01593",
+    "xpathDescricao": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[5]/td/p",
+    "idCelulaCodigo": "ANAT03-01592",
+    "xpathCodigo": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[4]/td[2]/p",
+    "codigoNBMLiteral": "7307.19.0300",
+    "digitos": 10,
+    "fundamento": "O inciso II do 11/94 identifica expressamente o produto e código; essa prova externa permite propor o vínculo descrição/código que o alinhamento do PDF não estabelece sozinho.",
+    "naoConfundirCom": {
+      "id": "ANAT03-01594",
+      "produto": "Cabeça de poço",
+      "fundamento": "Mesmo código, mas inciso X distinto no 11/94 e linha própria no 52/91."
+    },
+    "intervaloImpressoNo52": "22.04.94 a 20.11.95",
+    "inicioDocumentalCompativel": "1994-04-22",
+    "fimIntervalo": "PENDENTE: 20.11.95 é limite impresso na nota do 52/91, não conferido no 74/95 neste complemento.",
+    "aprovado": false,
+    "alteracaoDataset": false
+  },
+  "pendencias": [
+    "Conferência humana da proposta; nenhuma elegibilidade corrente aprovada.",
+    "Conferir diretamente o 74/95 e sua ratificação antes de fechar a transição de 7307.19.0300 para 8481.80.9910.",
+    "Preservar a geometria original e não deslocar o código na transcrição literal.",
+    "Não converter os códigos NBM de 10 dígitos em NCM atual nem inferir tratamento de operação/UF."
+  ],
+  "arquivosPreservadosSha256": {
+    "docs/anat/continuidade-4h/ambiguidades/ambiguidades-celulas.json": "7c188ca2efe0fc8c761f444e786dcd69be1802f38a6dae72f4189dbea0b3d122",
+    "docs/anat/continuidade-4h/ambiguidades/relatorio.md": "f7bd123e78973cf46d8e0c3b8c9d45b16f9e91cc7b8af01e0d68252c02ed89cf",
+    "docs/anat/continuidade-4h/notas/triagem-105.json": "22ee71a6d79d3f18a717cb5eed660e9237a2252086971e4f9d7dcdda1fb81794",
+    "docs/anat/lote-autonomo/notas/notas-alvos.json": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+    "docs/anat/anat-03-trechos.json": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+    "docs/anat/anat-03-dossie-vigencia.xlsx": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894"
+  }
+}
