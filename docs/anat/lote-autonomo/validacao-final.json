@@ -1,0 +1,40 @@
+{
+  "resultado": "PASS",
+  "registros": 2434,
+  "aprovacoesHumanasRestritas": 2,
+  "demaisPendentes": 2432,
+  "usoVigenteAprovado": 0,
+  "idsAprovados": [
+    "ANAT03-00342",
+    "ANAT03-00961"
+  ],
+  "contador52": 2,
+  "contador100": 0,
+  "celulasAlteradas": [
+    "A3",
+    "C4",
+    "D348",
+    "D4",
+    "D967",
+    "E348",
+    "E967",
+    "F348",
+    "F967",
+    "I348",
+    "I967",
+    "K348",
+    "K967",
+    "L348",
+    "L967",
+    "O348",
+    "O967",
+    "P348",
+    "P967"
+  ],
+  "tabelasPaineisValidacoesFormulasOutrosValores": "preservados",
+  "notasInventariadas": 176,
+  "ligacoesDocumentaisCandidatas": 71,
+  "idsCandidatos": 77,
+  "atosExaminados": 8,
+  "ratificacao104_21": "pendente"
+}

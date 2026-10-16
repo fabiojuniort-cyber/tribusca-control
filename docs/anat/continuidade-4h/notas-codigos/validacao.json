@@ -1,0 +1,30 @@
+{
+  "resultado": "PASS",
+  "entradasCanonicasIguaisAoCheckpointAnterior": {
+    "docs/anat/anat-03-trechos.json": {
+      "expected": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+      "actual": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+      "unchanged": true
+    },
+    "docs/anat/anat-03-dossie-vigencia.xlsx": {
+      "expected": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894",
+      "actual": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894",
+      "unchanged": true
+    },
+    "docs/anat/lote-autonomo/notas/notas-alvos.json": {
+      "expected": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+      "actual": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+      "unchanged": true
+    },
+    "docs/anat/continuidade-4h/notas/triagem-105.json": {
+      "expected": "22ee71a6d79d3f18a717cb5eed660e9237a2252086971e4f9d7dcdda1fb81794",
+      "actual": "22ee71a6d79d3f18a717cb5eed660e9237a2252086971e4f9d7dcdda1fb81794",
+      "unchanged": true
+    }
+  },
+  "fontesHTTP200": 4,
+  "aprovacoesCriadas": 0,
+  "controleDominio": "NBM/SH de oito dígitos não convertido para NCM; NBM10 preservado",
+  "terceiroCodigo111Literal": "8433.90.l0",
+  "terceiroCodigo111Normalizado": null
+}

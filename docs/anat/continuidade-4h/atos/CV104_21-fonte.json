@@ -1,0 +1,44 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV104_21",
+  "status": 200,
+  "consultaUTC": "2026-10-16T05:11:07.455537+00:00",
+  "encoding": "utf-8",
+  "links": [
+    {
+      "texto": "49/21",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2021/dp049_21"
+    },
+    {
+      "texto": "16/21",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ato_decl_16_21-1"
+    },
+    {
+      "texto": "Convênio ICMS nº 100, de 04 de novembro de 1997",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV100_97"
+    },
+    {
+      "texto": "Convênio ICMS nº 100/97",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV100_97"
+    },
+    {
+      "texto": "Voltar para o topo",
+      "href": "#wrapper"
+    },
+    {
+      "texto": "",
+      "href": "http://www.acessoainformacao.gov.br/"
+    },
+    {
+      "texto": "Plone",
+      "href": "http://plone.org"
+    }
+  ],
+  "caracteresSubstituicaoTexto": 0,
+  "textoDerivadoMetodo": "UTF-8 conforme Content-Type; remoção de tags/scripts e colapso de espaço. HTML bruto preservado.",
+  "sha256RespostaHTTP": "e91b22c3597f765e1781111e2db1a113bb7354bfb227d8ab4575aaa2b00f7b54",
+  "bytesRespostaHTTP": 168982,
+  "sha256ArquivoRepoLF": "0efb7a9b93caf258c46405e8d1a0feb4280c6af19edc1c2817c1d0a03c2892fb",
+  "bytesArquivoRepoLF": 168981,
+  "normalizacaoArquivoRepo": "CRLF→LF exclusivamente para estabilidade Git; conteúdo textual sem alteração.",
+  "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\continuidade-4h\\evidencia-http\\CV104_21.html"
+}

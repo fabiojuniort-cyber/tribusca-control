@@ -1,0 +1,189 @@
+{
+  "frente": "ANAT",
+  "origem": "CLAUDE-COORD",
+  "executor": "GPT-EXEC / ratificacao104",
+  "risco": "R0 documental",
+  "dataReferencia": "2026-10-16",
+  "statusAprovacaoFabio": "pendente; sem ampliação das duas aprovações históricas",
+  "atos": [
+    {
+      "id": "DEP100-104-21",
+      "ato": "Convênio ICMS104/21",
+      "dataAto": "2021-07-08",
+      "dataPublicacao": "2021-07-09",
+      "atoRatificacao": "Ato Declaratório16/21",
+      "dataAtoDeclaratorio": "2021-07-26",
+      "dataPublicacaoRatificacao": "2021-07-27",
+      "dataRatificacao": "2021-07-27",
+      "criterioCampoDataRatificacao": "Data da publicação nacional, não data do AD.",
+      "inicioVigenciaProposto": "2021-07-27",
+      "criterioVigencia": "Inferência documental da cláusula terceira; pendente aprovação humana por trecho.",
+      "inicioEfeitosExpresso": "2022-01-01",
+      "fimEfeitos": null,
+      "statusProva": "CONFIRMADO_CONFAZ_CV_E_AD",
+      "douIntegralConferido": false,
+      "alvos": [
+        "terceira-A100/97, parágrafo único: acréscimo",
+        "primeira100/97, §1º: revogação"
+      ],
+      "fontes": [
+        "CV104_21",
+        "AD016_21"
+      ],
+      "pendencias": [
+        "conferência visual de Fábio por trecho",
+        "aplicação estadual e cadeia posterior",
+        "fac-símile integral DOU ainda não lido"
+      ]
+    },
+    {
+      "id": "DEP26-ADD-223-21",
+      "ato": "Convênio ICMS223/21",
+      "dataAto": "2021-12-09",
+      "dataPublicacao": "2021-12-13",
+      "atoRatificacao": "Ato Declaratório38/21",
+      "dataAtoDeclaratorio": "2021-12-28",
+      "dataPublicacaoRatificacao": "2021-12-29",
+      "inicioVigenciaProposto": "2021-12-29",
+      "inicioEfeitosOperacionaisMencionado": "2022-01-01",
+      "fontes": [
+        "CV223_21",
+        "AD038_21"
+      ],
+      "douIntegralConferido": false,
+      "statusProva": "CONFIRMADO_CONFAZ_CV_E_AD",
+      "limite": "Texto modificado pelo228/21 antes do início operacional; não prova aplicação estadual atual."
+    }
+  ],
+  "fontes": {
+    "CV104_21": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV104_21",
+      "status": 200,
+      "consultaUTC": "2026-10-16T05:11:07.455537+00:00",
+      "encoding": "utf-8",
+      "links": [
+        {
+          "texto": "49/21",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2021/dp049_21"
+        },
+        {
+          "texto": "16/21",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ato_decl_16_21-1"
+        },
+        {
+          "texto": "Convênio ICMS nº 100, de 04 de novembro de 1997",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV100_97"
+        },
+        {
+          "texto": "Convênio ICMS nº 100/97",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV100_97"
+        },
+        {
+          "texto": "Voltar para o topo",
+          "href": "#wrapper"
+        },
+        {
+          "texto": "",
+          "href": "http://www.acessoainformacao.gov.br/"
+        },
+        {
+          "texto": "Plone",
+          "href": "http://plone.org"
+        }
+      ],
+      "caracteresSubstituicaoTexto": 0,
+      "textoDerivadoMetodo": "UTF-8 conforme Content-Type; remoção de tags/scripts e colapso de espaço. HTML bruto preservado.",
+      "sha256RespostaHTTP": "e91b22c3597f765e1781111e2db1a113bb7354bfb227d8ab4575aaa2b00f7b54",
+      "bytesRespostaHTTP": 168982,
+      "sha256ArquivoRepoLF": "0efb7a9b93caf258c46405e8d1a0feb4280c6af19edc1c2817c1d0a03c2892fb",
+      "bytesArquivoRepoLF": 168981,
+      "normalizacaoArquivoRepo": "CRLF→LF exclusivamente para estabilidade Git; conteúdo textual sem alteração.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\continuidade-4h\\evidencia-http\\CV104_21.html"
+    },
+    "AD016_21": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ato_decl_16_21-1",
+      "status": 200,
+      "consultaUTC": "2026-10-16T05:11:23.627634+00:00",
+      "encoding": "utf-8",
+      "caracteresSubstituicaoTexto": 0,
+      "textoDerivadoMetodo": "UTF-8 conforme Content-Type; remoção de tags/scripts e colapso de espaço. HTML bruto preservado.",
+      "sha256RespostaHTTP": "b8a336a2597eadd0cfd809137d8aa603f09a2cb0ee5a6516a0cf63b5793b32b1",
+      "bytesRespostaHTTP": 62993,
+      "sha256ArquivoRepoLF": "b8a336a2597eadd0cfd809137d8aa603f09a2cb0ee5a6516a0cf63b5793b32b1",
+      "bytesArquivoRepoLF": 62993,
+      "normalizacaoArquivoRepo": "CRLF→LF exclusivamente para estabilidade Git; conteúdo textual sem alteração.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\continuidade-4h\\evidencia-http\\AD016_21.html"
+    },
+    "CV223_21": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV223_21",
+      "status": 200,
+      "consultaUTC": "2026-10-16T05:11:50.969187+00:00",
+      "encoding": "utf-8",
+      "links": [
+        {
+          "texto": "84/21",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2021/dp084_21"
+        },
+        {
+          "texto": "38/21",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad038_21"
+        },
+        {
+          "texto": "Convênio ICMS nº 26, 12 de março de 2021",
+          "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV026_21"
+        },
+        {
+          "texto": "Voltar para o topo",
+          "href": "#wrapper"
+        },
+        {
+          "texto": "",
+          "href": "http://www.acessoainformacao.gov.br/"
+        },
+        {
+          "texto": "Plone",
+          "href": "http://plone.org"
+        }
+      ],
+      "sha256RespostaHTTP": "067c2695dfe6e77ac594054a13ab346babf6ec51a33af117b6c7d3aec77224f8",
+      "bytesRespostaHTTP": 168914,
+      "sha256ArquivoRepoLF": "895deb3a787a34bf2d9326163c1b0c7ef2085ec0c6251f6e4a942414125a67e7",
+      "bytesArquivoRepoLF": 168913,
+      "normalizacaoArquivoRepo": "CRLF→LF exclusivamente para estabilidade Git; conteúdo textual sem alteração.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\continuidade-4h\\evidencia-http\\CV223_21.html"
+    },
+    "AD038_21": {
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad038_21",
+      "status": 200,
+      "consultaUTC": "2026-10-16T05:12:00.770027+00:00",
+      "encoding": "utf-8",
+      "sha256RespostaHTTP": "4723a4e1ef2c8473be0c8f731f6ef55b035acefa83eb004c4abe7ca88ec39d69",
+      "bytesRespostaHTTP": 58887,
+      "sha256ArquivoRepoLF": "4723a4e1ef2c8473be0c8f731f6ef55b035acefa83eb004c4abe7ca88ec39d69",
+      "bytesArquivoRepoLF": 58887,
+      "normalizacaoArquivoRepo": "CRLF→LF exclusivamente para estabilidade Git; conteúdo textual sem alteração.",
+      "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\continuidade-4h\\evidencia-http\\AD038_21.html"
+    }
+  },
+  "falhas": [
+    {
+      "canal": "web.open",
+      "alvo": "CONFAZ e DOU",
+      "resultado": "URLs não acessíveis/502; pesquisa usada como localização apenas."
+    },
+    {
+      "canal": "HTTP direto autorizado",
+      "alvo": "DOU HTML334570818",
+      "resultado": "RemoteDisconnected; sem texto integral."
+    }
+  ],
+  "controles": {
+    "arquivosPrincipaisAlterados": false,
+    "planilhaAlterada": false,
+    "aprovacoesHistoricasPreservadas": [
+      "ANAT03-00342",
+      "ANAT03-00961"
+    ],
+    "demaisTrechosAprovacaoHumanaPendente": 2432
+  }
+}

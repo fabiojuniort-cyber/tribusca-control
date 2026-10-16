@@ -1,0 +1,21 @@
+{
+  "linhas": 2434,
+  "celulasAlteradasNoEscopo": 4837,
+  "tabelas": [
+    [
+      "DependenciasOficiais",
+      "A5:O15"
+    ],
+    [
+      "Trechos100",
+      "A6:T117"
+    ],
+    [
+      "Trechos52",
+      "A6:T2329"
+    ]
+  ],
+  "controlesCongelamentoFormulasOutrasCelulas": "preservados",
+  "aprovacoes": "todas pendentes",
+  "resultado": "PASS"
+}

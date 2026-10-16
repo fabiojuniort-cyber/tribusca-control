@@ -1,0 +1,38 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/cv165_21",
+  "consultaUTC": "2026-10-16T05:40:45.799267+00:00",
+  "tentativasHTTP": 3,
+  "tentativaAnterior": {
+    "consultaUTC": "2026-10-16T05:40:28.243758+00:00",
+    "erro": "HTTP Error 404: Not Found",
+    "status": "NOT_PROVEN"
+  },
+  "status": 200,
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "b0eb1b62a60175f37e86fbb98b29e2e0b7b2fa75f254b095002773788ece40f7",
+  "bytesRespostaHTTP": 168583,
+  "sha256ArquivoRepoLF": "df081ffe64479ab487aa9ad962700df0f6a7203ad8fe69f63208aa9996e4d37e",
+  "bytesArquivoRepoLF": 168582,
+  "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+  "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\cv165_21.html",
+  "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+  "caracteresSubstituicaoTexto": 0,
+  "links": [
+    {
+      "texto": "69/21",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2021/dp069_21"
+    },
+    {
+      "texto": "27/21",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad027_21"
+    },
+    {
+      "texto": "",
+      "href": "file:///G:/DTR/CSAN/backup_compartilhada_CSAN/todas_pastas/04_normas_confaz/Atos/Despacho/2021/DP062_21%20-%203a%20Pub.doc"
+    },
+    {
+      "texto": "Convênio ICMS nº 52, de 26 de setembro de 1991",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+    }
+  ]
+}

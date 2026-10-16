@@ -1,0 +1,15 @@
+{
+  "fonte": "CV178_21",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV178_21",
+  "consultaUTC": "2026-10-16T05:40:32.135820+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "8cb50be4451a5c45900aeb569f2d58dba888f575013a5ca652275ba4c7af14ce",
+  "sha256ArquivoLF": "b8f6e7e279903495183214ffe5733ffa8c2ee651384d6b57e82241f6e2d24237",
+  "bytesArquivoLF": 278320,
+  "sha256Texto": "a0aa4492574034b2757c3049d3a92db9c468e67ef365cb47f222bf83c54b0cb3",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}

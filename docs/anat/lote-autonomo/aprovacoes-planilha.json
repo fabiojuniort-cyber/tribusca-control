@@ -1,0 +1,16 @@
+{
+  "aprovacoes": 2,
+  "ids": [
+    {
+      "id": "ANAT03-00342",
+      "row": 348
+    },
+    {
+      "id": "ANAT03-00961",
+      "row": 967
+    }
+  ],
+  "contador52": 2,
+  "contador100": 0,
+  "scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

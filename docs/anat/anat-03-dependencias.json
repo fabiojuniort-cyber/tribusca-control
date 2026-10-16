@@ -1,0 +1,2510 @@
+[
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[5]",
+    "nota": "Alterado pelos Convs. ICMS 87/91, 90/91, 08/92, 13/92, 45/92, 109/92, 02/93, 65/93, 11/94, 72/94, 74/95, 63/96, 74/96, 101/96, 21/97, 111/97, 01/00, 47/01, 102/05, 157/06, 112/08, 89/09, 51/10, 55/10, 140/10, 182/10, 27/12, 96/12, 69/13, 70/13, 95/13, 123/13, 158/13, 154/15, 01/16, 113/17, 129/19, 30/20, 115/20, 146/20, 165/21, 86/23, 199/23, 10/26.",
+    "links": [
+      {
+        "rotulo": "87/91",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/resolveuid/9766c92207d74cc9aa0a5e5902fab70f"
+      },
+      {
+        "rotulo": "90/91",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV090_91"
+      },
+      {
+        "rotulo": "08/92",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV008_92"
+      },
+      {
+        "rotulo": "13/92",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV013_92"
+      },
+      {
+        "rotulo": "45/92",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV045_92"
+      },
+      {
+        "rotulo": "109/92",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV109_92"
+      },
+      {
+        "rotulo": "02/93",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93"
+      },
+      {
+        "rotulo": "65/93",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV065_93"
+      },
+      {
+        "rotulo": "11/94",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1994/CV011_94"
+      },
+      {
+        "rotulo": "72/94",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1994/CV072_94"
+      },
+      {
+        "rotulo": "74/95",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1995/CV074_95"
+      },
+      {
+        "rotulo": "63/96",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV063_96"
+      },
+      {
+        "rotulo": "74/96",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV074_96"
+      },
+      {
+        "rotulo": "101/96",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV101_96"
+      },
+      {
+        "rotulo": "21/97",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV021_97"
+      },
+      {
+        "rotulo": "111/97",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV111_97"
+      },
+      {
+        "rotulo": "01/00",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2000/CV001_00"
+      },
+      {
+        "rotulo": "47/01",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV047_01"
+      },
+      {
+        "rotulo": "102/05",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV102_05"
+      },
+      {
+        "rotulo": "157/06",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV157_06"
+      },
+      {
+        "rotulo": "112/08",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV112_08"
+      },
+      {
+        "rotulo": "89/09",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV089_09"
+      },
+      {
+        "rotulo": "51/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV051_10"
+      },
+      {
+        "rotulo": "55/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV055_10"
+      },
+      {
+        "rotulo": "140/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV140_10"
+      },
+      {
+        "rotulo": "182/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV182_10"
+      },
+      {
+        "rotulo": "27/12",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV027_12"
+      },
+      {
+        "rotulo": "96/12",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV096_12"
+      },
+      {
+        "rotulo": "69/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV069_13"
+      },
+      {
+        "rotulo": "70/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV070_13"
+      },
+      {
+        "rotulo": "95/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV095_13"
+      },
+      {
+        "rotulo": "123/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV123_13"
+      },
+      {
+        "rotulo": "158/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV158_13"
+      },
+      {
+        "rotulo": "154/15",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV154_15"
+      },
+      {
+        "rotulo": "01/16",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV001_16"
+      },
+      {
+        "rotulo": "113/17",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV113_17"
+      },
+      {
+        "rotulo": "129/19",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV129_19"
+      },
+      {
+        "rotulo": "30/20",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV030_20"
+      },
+      {
+        "rotulo": "115/20",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV115_20"
+      },
+      {
+        "rotulo": "146/20",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV146_20"
+      },
+      {
+        "rotulo": "165/21",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/cv165_21"
+      },
+      {
+        "rotulo": "86/23",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV086_23"
+      },
+      {
+        "rotulo": "199/23",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV199_23"
+      },
+      {
+        "rotulo": "10/26",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2026/CV010_26"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[6]",
+    "nota": "Vide Convs. ICMS 79/91, 88/92, 02/93.",
+    "links": [
+      {
+        "rotulo": "79/91",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV079_91"
+      },
+      {
+        "rotulo": "88/92",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV088_92"
+      },
+      {
+        "rotulo": "02/93",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[7]",
+    "nota": "Prorrogado, até 31.12.93, pelo Conv. ICMS 148/92.",
+    "links": [
+      {
+        "rotulo": "148/92",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV148_92"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[8]",
+    "nota": "Prorrogado, até 30.04.95, pelo Conv. ICMS 124/93.",
+    "links": [
+      {
+        "rotulo": "124/93",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV124_93"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[9]",
+    "nota": "Prorrogado, até 30.04.96, pelo Conv. ICMS 22/95.",
+    "links": [
+      {
+        "rotulo": "22/95",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1995/CV022_95"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[10]",
+    "nota": "Prorrogado, até 30.04.97, pelo Conv. ICMS 21/96.",
+    "links": [
+      {
+        "rotulo": "21/96",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV021_96"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[11]",
+    "nota": "Prorrogado, até 30.04.98, exceto a cláusula terceira, pelo Conv. ICMS 21/97.",
+    "links": [
+      {
+        "rotulo": "21/97",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV021_97"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[12]",
+    "nota": "Prorrogado, até 30.04.99, pelo Conv. ICMS 23/98.",
+    "links": [
+      {
+        "rotulo": "23/98",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1998/cv023_98"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[13]",
+    "nota": "Prorrogado, até 30.04.01, pelo Conv. ICMS 05/99.",
+    "links": [
+      {
+        "rotulo": "05/99",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1999/CV005_99"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[14]",
+    "nota": "Prorrogado, até 31.12.02, pelo Conv. ICMS 10/01.",
+    "links": [
+      {
+        "rotulo": "10/01",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV010_01"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[15]",
+    "nota": "Vide Conv. ICMS 113/98, que autoriza o RN e SE a revogarem o benefício concedido.",
+    "links": [
+      {
+        "rotulo": "113/98",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1998/cv113_98"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[16]",
+    "nota": "Prorrogado, até 30.04.03, pelo Conv. ICMS 158/02.",
+    "links": [
+      {
+        "rotulo": "158/02",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2002/CV158_02"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[17]",
+    "nota": "Prorrogado, até 30.04.04, pelo Conv. ICMS 30/03.",
+    "links": [
+      {
+        "rotulo": "30/03",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2003/CV030_03"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[18]",
+    "nota": "Prorrogado, até 31.10.07, pelo Conv. ICMS 10/04.",
+    "links": [
+      {
+        "rotulo": "10/04",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2004/CV010_04"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[19]",
+    "nota": "Vide convalidação das operações com as mercadorias descritas no item 22 do Anexo II, pelo Conv. ICMS 157/06, no período de 22.07.04 a 08.01.07.",
+    "links": [
+      {
+        "rotulo": "157/06",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV157_06"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[20]",
+    "nota": "Prorrogado, até 31.12.07, pelo Conv. ICMS 124/07.",
+    "links": [
+      {
+        "rotulo": "124/07",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2007/CV124_07"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[21]",
+    "nota": "Prorrogado, até 30.04.08, pelo Conv. ICMS 149/07.",
+    "links": [
+      {
+        "rotulo": "149/07",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2007/CV149_07"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[22]",
+    "nota": "Prorrogado, até 31.07.08, pelo Conv. ICMS 53/08.",
+    "links": [
+      {
+        "rotulo": "53/08",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV053_08"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[23]",
+    "nota": "Prorrogado, até 31.12.08, pelo Conv. ICMS 91/08.",
+    "links": [
+      {
+        "rotulo": "91/08",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV091_08"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[24]",
+    "nota": "Prorrogado, até 31.07.09, pelo Conv. ICMS 138/08.",
+    "links": [
+      {
+        "rotulo": "138/08",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV138_08"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[25]",
+    "nota": "Prorrogado, até 31.12.09, pelo Conv. ICMS 69/09.",
+    "links": [
+      {
+        "rotulo": "69/09",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV069_09"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[26]",
+    "nota": "Prorrogado, até 31.01.10, pelo Conv. ICMS 119/09.",
+    "links": [
+      {
+        "rotulo": "119/09",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV119_09"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[27]",
+    "nota": "Prorrogado, até 31.12.12, pelo Conv. ICMS 01/10.",
+    "links": [
+      {
+        "rotulo": "01/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV001_10"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[28]",
+    "nota": "Vide cláusula quarta do Conv. ICMS 51/10.",
+    "links": [
+      {
+        "rotulo": "51/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV051_10"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[29]",
+    "nota": "Vide Convênio ICMS 112/10, que altera o Anexo I do Convênio ICMS 89/09.",
+    "links": [
+      {
+        "rotulo": "112/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV112_10"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[30]",
+    "nota": "Prorrogado, até 31.07.13, pelo Conv. ICMS 101/12.",
+    "links": [
+      {
+        "rotulo": "101/12",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV101_12"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[31]",
+    "nota": "Prorrogado, até 31.07.14, pelo Conv. ICMS 14/13.",
+    "links": [
+      {
+        "rotulo": "14/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV014_13"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[32]",
+    "nota": "Prorrogado, até 31.05.15, pelo Conv. ICMS 191/13.",
+    "links": [
+      {
+        "rotulo": "191/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV191_13"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[33]",
+    "nota": "Prorrogado, até 31.12.15, pelo Conv. ICMS 27/15.",
+    "links": [
+      {
+        "rotulo": "27/15",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV027_15"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[34]",
+    "nota": "Prorrogado, até 30.06.17, pelo Conv. ICMS 154/15.",
+    "links": [
+      {
+        "rotulo": "154/15",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV154_15"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[35]",
+    "nota": "Prorrogado, até 30.09.19, pelo Conv. ICMS 49/17.",
+    "links": [
+      {
+        "rotulo": "49/17",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV049_17"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[36]",
+    "nota": "Vide cláusula terceira do Conv. ICMS 49/17, quanto a observância das disposições do Conv. ICMS 42/16, no que couber.",
+    "links": [
+      {
+        "rotulo": "49/17",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV049_17"
+      },
+      {
+        "rotulo": "42/16",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV042_16"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[37]",
+    "nota": "Prorrogado, até 30.04.20, pelo Conv. ICMS 133/19.",
+    "links": [
+      {
+        "rotulo": "133/19",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV133_19"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[38]",
+    "nota": "Prorrogado, até 31.12.20, pelo Conv. ICMS 22/20.",
+    "links": [
+      {
+        "rotulo": "22/20",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV022_20"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[39]",
+    "nota": "Prorrogado até 31.03.21, pelo Conv. ICMS 133/20.",
+    "links": [
+      {
+        "rotulo": "133/20",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV133_20"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[40]",
+    "nota": "Prorrogado até 31.03.22, pelo Conv. ICMS 28/21.",
+    "links": [
+      {
+        "rotulo": "28/21",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV028_21"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[41]",
+    "nota": "Prorrogado, até 30.04.24, pelo Conv. ICMS 178/21.",
+    "links": [
+      {
+        "rotulo": "178/21",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV178_21"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[42]",
+    "nota": "Prorrogado, até 30.04.26, pelo Conv. ICMS 226/23.",
+    "links": [
+      {
+        "rotulo": "226/23",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV226_23"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[43]",
+    "nota": "Prorrogado, até 31.12.26, pelo Conv. ICMS 10/26.",
+    "links": [
+      {
+        "rotulo": "10/26",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2026/CV010_26"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[49]",
+    "nota": "Nova redação à cláusula primeira pelo Conv. ICMS 01/00, efeitos a partir de 01.08.00.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[54]",
+    "nota": "Nova redação dada ao inciso II da cláusula primeira pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[56]",
+    "nota": "Redação anterior dada ao inciso II da cláusula primeira pelo Conv. ICMS 01/00, efeitos de 01.08.00 a 29.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[58]",
+    "nota": "Redação original, efeitos até 31.07.00:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[63]",
+    "nota": "Redação anterior dada ao inciso II da cláusula primeira pelo Conv. ICMS 13/92, efeitos de 17.10.91 a 31.07.00:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[67]",
+    "nota": "Nova redação dada à cláusula segunda pelo Conv. ICMS 01/00, efeitos a partir de 01.08.00.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[72]",
+    "nota": "Nova redação dada ao inciso II da cláusula segunda pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[74]",
+    "nota": "Redação anterior dada ao inciso II da cláusula segunda pelo Conv. ICMS 01/00, efeitos de 01.08.00 a 29.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[76]",
+    "nota": "Redação anterior dada à cláusula segunda pelo Conv. ICMS 65/93, efeitos de 04.10.93 a 31.07.00.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[82]",
+    "nota": "Redação original, efeitos até 03.10.93:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[87]",
+    "nota": "Redação anterior dada ao inciso II da cláusula segunda pelo Conv. ICMS 13/92, efeitos de 17.10.91 a 03.10.93:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[89]",
+    "nota": "Redação original, efeitos até 16.10.91:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[91]",
+    "nota": "Revogada a cláusula terceira pelo Conv. ICMS 21/97, efeitos a partir de 01.05.97.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[93]",
+    "nota": "Redação original, efeitos até 30.04.97.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[96]",
+    "nota": "Acrescida a cláusula quarta pelo Conv. 87/91, efeitos a partir de 17.10.91.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[98]",
+    "nota": "Nova redação dada ao §1º da cláusula quarta pelo Conv. ICMS 86/23, efeitos a partir de 25.08.23.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[100]",
+    "nota": "Redação anterior renumerada do parágrafo único para § 1º da cláusula segunda pelo Conv. ICMS 165/21, efeitos de 26.10.21. a 24.08.23.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[102]",
+    "nota": "Redação anterior dada ao parágrafo único da cláusula quarta pelo Conv. ICMS 1/16, efeitos de 01.01.16 até 25.10.21.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[104]",
+    "nota": "Redação anterior dada ao parágrafo único da cláusula quarta pelo Conv. ICMS 123/13, efeitos de 07.11.13 a 31.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[106]",
+    "nota": "Redação anterior acrescida do parágrafo único à cláusula quarta pelo Conv. 69/13, efeitos de 01.10.13 a 06.11.13.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[108]",
+    "nota": "Nova redação dada ao §2º da cláusula quarta-feira pelo Conv. ICMS 10/26, efeitos a partir de 01.05.26.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[110]",
+    "nota": "Redação anterior acrescida do §2º da cláusula quarta pelo Conv. 165/21, efeitos de 26.10.21 a 30.04.26.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[112]",
+    "nota": "Acrescida a cláusula quinta pelo Conv. 87/91, efeitos a partir de 17.10.91.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[114]",
+    "nota": "Revogado o parágrafo único da cláusula quinta pelo Conv. ICMS 1/16, efeitos a partir de 01.01.16.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[116]",
+    "nota": "Acrescido o parágrafo único à cláusula quinta pelo Conv. 69/13, efeitos de 01.10.13 a 31.12.16.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[118]",
+    "nota": "Renumerada a cláusula quarta para cláusula sexta pelo Conv. ICMS 87/91, efeitos a partir de 17.10.91.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[121]",
+    "nota": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[50]",
+    "nota": "Nova redação dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 27/12, efeitos a partir de 01.06.12.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[52]",
+    "nota": "Redação anterior dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 31.05.12.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[57]",
+    "nota": "Acrescido o subitem 14.3 ao Anexo I pelo Conv. ICMS 55/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[109]",
+    "nota": "Acrescido o subitem 19.8 ao Anexo I pelo Conv. ICMS 96/12, efeitos a partir de 1º.12.12.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[113]",
+    "nota": "Nova redação dada ao subitem 20.2 do Anexo I pelo Conv. ICMS 129/19, efeitos a partir de 01.10.19.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[115]",
+    "nota": "Redação anterior dada ao subitem 20.2 do Anexo I pelo Conv. ICMS 129/19, efeitos até 30.09.19.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[117]",
+    "nota": "Nova redação dada ao subitem 20.3 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[119]",
+    "nota": "Redação anterior dada ao subitem 20.3 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[122]",
+    "nota": "Nova redação dada ao subitem 20.5 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[124]",
+    "nota": "Redação anterior dada ao subitem 20.5 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[132]",
+    "nota": "Nova redação dada ao subitem 21.5 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[134]",
+    "nota": "Redação anterior dada ao subitem 21.5 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[136]",
+    "nota": "Nova redação dada ao subitem 21.6 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[138]",
+    "nota": "Redação anterior dada ao subitem 21.6 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[140]",
+    "nota": "Nova redação dada ao subitem 21.7 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[142]",
+    "nota": "Redação anterior dada ao subitem 21.7 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[187]",
+    "nota": "Nova redação dada ao subitem 29.8 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[189]",
+    "nota": "Redação anterior dada ao subitem 29.8 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[223]",
+    "nota": "Acrescido o subitem 32.17 ao Anexo I pelo Conv. ICMS 70/13, efeitos a partir de 01.10.13.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[291]",
+    "nota": "Revogados os subitens 39.1, 39.2 e 39.3 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[292]",
+    "nota": "Redação anterior dada aos subitens 39.1, 39.2 e 39.3 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[297]",
+    "nota": "Nova redação dada ao subitem 39.5 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[299]",
+    "nota": "Redação anterior dada ao subitem 39.5 pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[303]",
+    "nota": "Revogado o subitem 40.2 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[304]",
+    "nota": "Redação anterior dada ao subite 40.2 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[307]",
+    "nota": "Nova redação dada ao subitem 40.4 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[309]",
+    "nota": "Redação anterior dada ao subitem 40.4 pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[314]",
+    "nota": "Nova redação dada ao subitem 40.8 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[316]",
+    "nota": "Redação anterior dada ao subitem 40.8 pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[334]",
+    "nota": "Acrescido o subitem 41.9 ao Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[336]",
+    "nota": "Acrescido o subitem 41.10 ao Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[474]",
+    "nota": "Nova redação dada ao item 55 e seus subitens 55.1 ao 55.14 do Anexo I, pelo Conv. ICMS 89/09, com a alteração introduzida pelo Conv. ICMS 112/10, efeitos a partir de 01.09.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[490]",
+    "nota": "Redação anterior dada ao item 55 e seus subitens 55.1 ao 55.14 do Anexo I, pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 31;08;10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[511]",
+    "nota": "Nova redação dada ao subitem 56.5 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[513]",
+    "nota": "Redação anterior dada ao subitem 56.5 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[601]",
+    "nota": "Acrescido o item 72 e os subitens 72.1 e 72.2 ao Anexo I pelo Conv. ICMS 95/13, efeitos a partir de 01.10.13.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[126]",
+    "nota": "Redação anterior dada ao Anexo I pelo Conv. ICMS 11208, efeitos de 20.10.08 a 14.10.09.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/p[1]",
+    "nota": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[5]",
+    "nota": "Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[7]",
+    "nota": "Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[11]",
+    "nota": "Nova redação dada ao item 2.1 do Anexo II pelo Conv. ICMS 30/20, efeitos a partir de 01.06.2020.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[13]",
+    "nota": "Redação original, efeitos até 31.05.2020.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[42]",
+    "nota": "Nova redação dada ao subitem 10.1 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[44]",
+    "nota": "Redação original do subitem 10.1 do Anexo II, efeitos até 28.12.20.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[46]",
+    "nota": "Nova redação dada ao subitem 10.2 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[48]",
+    "nota": "Redação original do subitem 10.2 do Anexo II, efeitos até 28.12.20.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[50]",
+    "nota": "Nova redação dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[52]",
+    "nota": "Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 28.07.19",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[54]",
+    "nota": "Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[56]",
+    "nota": "Nova redação dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 113/17, efeitos a partir de 26.10.17.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[58]",
+    "nota": "Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 25.10.17.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[60]",
+    "nota": "Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[69]",
+    "nota": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[71]",
+    "nota": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[73]",
+    "nota": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 115/20, efeitos a partir de 04.11.20.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[75]",
+    "nota": "Redação original dada ao subitem 13.4 do Anexo II , efeitos até 03.11.20.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[77]",
+    "nota": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[79]",
+    "nota": "Redação original dada ao subitem 13.5 do Anexo II, efeitos até 28.12.20.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[83]",
+    "nota": "Acrescido o subitem 13.8 ao Anexo II pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[103]",
+    "nota": "Acrescido o subitem 14.18 ao Anexo II pelo Conv. ICMS 96/12, efeitos a partir de 01.12.12.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[105]",
+    "nota": "Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[107]",
+    "nota": "Redação anterior acrescida do subitem 14.19 ao Anexo II pelo Conv. ICMS 158/13, efeitos de 01.02.14. a 30.06.24",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[117]",
+    "nota": "Nova redação dada ao subitem 17 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[119]",
+    "nota": "Redação original, efeitos até 30.06.24",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[124]",
+    "nota": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[126]",
+    "nota": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[132]",
+    "nota": "Redação anterior dada ao Anexo II pelo Conv. ICMS 112/08, efeitos de 20.10.08 a 14.10.09.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[137]",
+    "nota": "Redação original, dos Anexos I e II, efeitos até 19.10.08.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[2]",
+    "nota": "Redação anterior dada ao item abaixo pelo Conv. ICMS 74/95, efeitos de 21.11.95 a 18.10.08.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[4]",
+    "nota": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 20.11.95. | 7307.19.0300",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[7]",
+    "nota": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 18.10.08.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[9]",
+    "nota": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[26]",
+    "nota": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 45/92, efeitos de 16.07.92 a 18.10.08.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[97]",
+    "nota": "Acrescido o item abaixo pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[127]",
+    "nota": "Nova redação dada ao item 15.8 do Anexo I pelo Conv. ICMS 101/96, efeitos a partir de 08.01.97:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[129]",
+    "nota": "Redação anterior, dada ao item 15.08 do Anexo I pelo Conv. ICMS 63/96, efeitos de 11.10.96 a 07.01.97: 15.08 Elevadores e monta-cargas 8428.10.0000 Redação original, efeitos até 10.10.96: 15.08 Elevadores de cargas e monta-cargas 8428.10.0000",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[446]",
+    "nota": "Nova redação dada ao caput do item 33.03 do Anexo I pelo Conv. ICMS 11/94, efeitos a partir de 22.04.94:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[448]",
+    "nota": "Redação original, efeitos até 21.04.94: 33.03 Tarraxas de funcionamento automático e contrapontas giratórias:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[546]",
+    "nota": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 18.10.08.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[548]",
+    "nota": "Nova redação dada ao item 40.07 do Anexo I pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[550]",
+    "nota": "Redação original, efeitos até 26.12.91. 40.07 Máquinas para fabricação de cabos ou condutores elétricos 8479.89.9900",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[571]",
+    "nota": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[573]",
+    "nota": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[575]",
+    "nota": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[577]",
+    "nota": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[579]",
+    "nota": "Acrescido o Item 41-A ao Anexo I pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[582]",
+    "nota": "Acrescido o Item 41-B ao Anexo I pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[598]",
+    "nota": "Acrescido o item 43.05 ao Anexo I pelo Conv. 109/92, efeitos a partir de 16.10.92:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[600]",
+    "nota": "Nova redação dada item abaixo do Anexo I pelo Conv. ICMS 74/95, efeitos a partir de.21.11.95:",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[602]",
+    "nota": "Redação anterior dada ao item abaixo do Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 20.11.95: Mancal de bronze para locomotiva 8607.19.9900",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[603]",
+    "nota": "Acrescidos os itens I a XVI ao Anexo I pelo Conv. ICMS 74/96, efeitos a partir de 11.10.96.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[19]",
+    "nota": "Acrescido o item pelo Conv. ICMS 90/91, efeitos a partir de 27.12.91.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[36]",
+    "nota": "Acrescido o item “microtrator” pelo Conv. ICMS 90/91, efeitos a partir de 27.10.91.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[39]",
+    "nota": "Nova redação ao item 22 pelo Conv. ICMS 157/06, efeitos a partir de 08.01.07. | ",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[41]",
+    "nota": "Redação anterior dada ao item 22 pelo Conv. ICMS 47/01, efeitos de 09.08.01 a 07.01.07. | ",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[43]",
+    "nota": "Redação original do item 22, efeitos até 08.08.01. 22 Tratores agrícolas de quatro rodas 8701.90.0200",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[44]",
+    "nota": "Acrescido o item \"bombas\" pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[63]",
+    "nota": "Acrescido o item pelo Conv. ICMS 45/92, efeitos a partir de 16.07.92.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[65]",
+    "nota": "Acrescido o item 31 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[67]",
+    "nota": "Acrescido o item 32 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[69]",
+    "nota": "Acrescido o item 33 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 52/91",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[71]",
+    "nota": "Acrescido o item 34 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[4]",
+    "nota": "Alterado pelos Convs. ICMS 40/98, 97/99, 08/00, 58/01, 89/01, 20/02, 106/02, 152/02, 25/03, 57/03, 93/03, 99/04, 16/05, 63/05, 149/05, 150/05, 54/06, 93/06, 156/08, 55/09, 195/10, 17/11, 49/11, 62/11, 123/11, 21/16, 26/21, 104/21, 79/25.",
+    "links": [
+      {
+        "rotulo": "40/98",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1998/cv040_98"
+      },
+      {
+        "rotulo": "97/99",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1999/CV097_99"
+      },
+      {
+        "rotulo": "08/00",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2000/CV008_00"
+      },
+      {
+        "rotulo": "58/01",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV058_01"
+      },
+      {
+        "rotulo": "89/01",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV089_01"
+      },
+      {
+        "rotulo": "20/02",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2002/CV020_02"
+      },
+      {
+        "rotulo": "106/02",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2002/CV106_02"
+      },
+      {
+        "rotulo": "152/02",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2002/CV152_02"
+      },
+      {
+        "rotulo": "25/03",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2003/CV025_03"
+      },
+      {
+        "rotulo": "57/03",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2003/CV057_03"
+      },
+      {
+        "rotulo": "93/03",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2003/CV093_03"
+      },
+      {
+        "rotulo": "99/04",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2004/CV099_04"
+      },
+      {
+        "rotulo": "16/05",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV016_05"
+      },
+      {
+        "rotulo": "63/05",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV063_05"
+      },
+      {
+        "rotulo": "149/05",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV149_05"
+      },
+      {
+        "rotulo": "150/05",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV150_05"
+      },
+      {
+        "rotulo": "54/06",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV054_06"
+      },
+      {
+        "rotulo": "93/06",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV093_06"
+      },
+      {
+        "rotulo": "156/08",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV156_08"
+      },
+      {
+        "rotulo": "55/09",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV055_09"
+      },
+      {
+        "rotulo": "195/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV195_10"
+      },
+      {
+        "rotulo": "17/11",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2011/CV017_11"
+      },
+      {
+        "rotulo": "49/11",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2011/CV049_11"
+      },
+      {
+        "rotulo": "62/11",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2011/CV062_11"
+      },
+      {
+        "rotulo": "123/11",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2011/CV123_11"
+      },
+      {
+        "rotulo": "21/16",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV021_16"
+      },
+      {
+        "rotulo": "26/21",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV026_21"
+      },
+      {
+        "rotulo": "104/21",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV104_21"
+      },
+      {
+        "rotulo": "79/25",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2025/CV079_25"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[5]",
+    "nota": "Prorrogado, até 30.04.01, pelo Conv. ICMS 05/99.",
+    "links": [
+      {
+        "rotulo": "05/99",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1999/CV005_99"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[6]",
+    "nota": "Prorrogado, até 31.07.01, pelo Conv. ICMS 10/01.",
+    "links": [
+      {
+        "rotulo": "10/01",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV010_01"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[7]",
+    "nota": "Prorrogado, até 30.04.02, pelo Conv. ICMS 58/01.",
+    "links": [
+      {
+        "rotulo": "58/01",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV058_01"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[8]",
+    "nota": "Prorrogado, até 30.04.05, pelo Conv. ICMS 21/02.",
+    "links": [
+      {
+        "rotulo": "21/02",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2002/CV021_02"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[9]",
+    "nota": "Autorizado RS a facultar aos contribuintes o estorno dos créditos fiscais decorrentes de entradas dos produtos previstos no inciso I da cláusula primeira, realizadas a partir de 01.01.97, no Conv, ICMS Conv. 126/03.",
+    "links": [
+      {
+        "rotulo": "126/03",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2003/CV126_03"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[10]",
+    "nota": "Prorrogado, até 30.04.08, pelo Conv. ICMS 18/05.",
+    "links": [
+      {
+        "rotulo": "18/05",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV018_05"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[11]",
+    "nota": "Vide a cláusula segunda do Conv. ICMS 150/05.",
+    "links": [
+      {
+        "rotulo": "150/05",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV150_05"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[12]",
+    "nota": "Vide a cláusula segunda do Conv. ICMS 93/06, relativamente à convalidação de procedimentos no período de 01.08.06 a 31.10.06.",
+    "links": [
+      {
+        "rotulo": "93/06",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV093_06"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[13]",
+    "nota": "Autorizadas as UF, referidas no Conv. 74/07, a revogarem o benefício de manutenção do crédito do ICMS de que cuida o inciso I da cláusula quinta.",
+    "links": [
+      {
+        "rotulo": "74/07",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2007/CV074_07"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[14]",
+    "nota": "Prorrogado, até 31.07.08, pelo Conv. ICMS 53/08.",
+    "links": [
+      {
+        "rotulo": "53/08",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV053_08"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[15]",
+    "nota": "Prorrogado, até 31.12.08, pelo Conv. ICMS 71/08.",
+    "links": [
+      {
+        "rotulo": "71/08",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV071_08"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[16]",
+    "nota": "Prorrogado, até 31.07.09, pelo Conv. ICMS 138/08.",
+    "links": [
+      {
+        "rotulo": "138/08",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV138_08"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[17]",
+    "nota": "Prorrogado, até 31.12.09, pelo Conv. ICMS 69/09.",
+    "links": [
+      {
+        "rotulo": "69/09",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV069_09"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[18]",
+    "nota": "Prorrogado, até 31.01.10, pelo Conv. ICMS 119/09.",
+    "links": [
+      {
+        "rotulo": "119/09",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV119_09"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[19]",
+    "nota": "Prorrogado, até 31.12.12, pelo Conv. ICMS 01/10.",
+    "links": [
+      {
+        "rotulo": "01/10",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV001_10"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[20]",
+    "nota": "Vide a cláusula segunda do Conv. ICMS 17/11, que convalida procedimentos no período de 16.12.10 a 01.06.11.",
+    "links": [
+      {
+        "rotulo": "17/11",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2011/CV017_11"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[22]",
+    "nota": "Prorrogado, até 31.07.13, pelo Conv. ICMS 101/12.",
+    "links": [
+      {
+        "rotulo": "101/12",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV101_12"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[23]",
+    "nota": "Vide Ajuste SINIEF 10/12, relativamente à demonstração da dedução do ICMS desonerado por meio de benefício fiscal.",
+    "links": [
+      {
+        "rotulo": "10/12",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV010_12"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[24]",
+    "nota": "Prorrogado, até 31.07.14, pelo Conv. ICMS 14/13.",
+    "links": [
+      {
+        "rotulo": "14/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV014_13"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[25]",
+    "nota": "Prorrogado, até 31.05.15, pelo Conv. ICMS 191/13.",
+    "links": [
+      {
+        "rotulo": "191/13",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV191_13"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[26]",
+    "nota": "Prorrogado, até 31.12.15, pelo Conv. ICMS 27/15.",
+    "links": [
+      {
+        "rotulo": "27/15",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV027_15"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[27]",
+    "nota": "Prorrogado, até 30.04.17, pelo Conv. ICMS 107/15.",
+    "links": [
+      {
+        "rotulo": "107/15",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV107_15"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[28]",
+    "nota": "Prorrogado, até 31.10.17, pelo Conv. ICMS 49/17.",
+    "links": [
+      {
+        "rotulo": "49/17",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV049_17"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[29]",
+    "nota": "Vide cláusula terceira do Conv. ICMS 49/17, quanto a observância das disposições do Conv. ICMS 42/16, no que couber.",
+    "links": [
+      {
+        "rotulo": "49/17",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV049_17"
+      },
+      {
+        "rotulo": "42/16",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV042_17"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[30]",
+    "nota": "Prorrogado, até 30.04.19, pelo Conv. ICMS 133/17.",
+    "links": [
+      {
+        "rotulo": "133/17",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV133_17"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[31]",
+    "nota": "Prorrogado, até 30.04.20, pelo Conv. ICMS 28/19.",
+    "links": [
+      {
+        "rotulo": "28/19",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV028_19"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[32]",
+    "nota": "Vide cláusula primeira do Conv. ICMS 198/19.",
+    "links": [
+      {
+        "rotulo": "198/19",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV198_19"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[33]",
+    "nota": "Prorrogado, até 31.12.20, pelo Conv. ICMS 22/20.",
+    "links": [
+      {
+        "rotulo": "22/20",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV022_20"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[34]",
+    "nota": "Prorrogado até 31.03.21, pelo Conv. ICMS 133/20.",
+    "links": [
+      {
+        "rotulo": "133/20",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV133_20"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[35]",
+    "nota": "Prorrogado, até 31.12.25, pelo Conv. ICMS 26/21.",
+    "links": [
+      {
+        "rotulo": "26/21",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV026_21"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[36]",
+    "nota": "Vide cláusula terceira do Conv. ICMS 26/21, que orienta como se dará a aplicação dos percentuais previstos na cláusula terceira-A",
+    "links": [
+      {
+        "rotulo": "26/21",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV026_21"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[37]",
+    "nota": "Prorrogado, até 31.12.27, pelo Conv. ICMS 79/25.",
+    "links": [
+      {
+        "rotulo": "79/25",
+        "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2025/CV079_25"
+      }
+    ],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[44]",
+    "nota": "Nova redação dada ao inciso I do caput da cláusula primeira, pelo Conv. ICMS 99/04, efeitos a partir de 19.10.04.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[46]",
+    "nota": "Redação original, efeitos até 18.10.04.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[48]",
+    "nota": "Revogado inciso II do caput da cláusula primeira pelo Conv. ICMS 26/21, efeitos a partir de 01.01.22.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[50]",
+    "nota": "Redação original, efeitos até 31.12.21.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[56]",
+    "nota": "Nova redação dada ao caput do inciso III da cláusula primeira pelo Conv. ICMS 93/06, efeitos a partir de 31.10.06.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[58]",
+    "nota": "Nova anterior dada ao caput do inciso III da cláusula primeira pelo Conv. ICMS 54/06, efeitos de 01.08.06 a 30.10.06.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[60]",
+    "nota": "Redação original, efeitos até 31.07.06.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[62]",
+    "nota": "Nova redação dada à alínea “a” do inciso III do caput da cláusula primeira pelo Conv. ICMS 17/11, efeitos a partir de 01.06.11.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[64]",
+    "nota": "Redação original, efeitos até 31.05.11.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[69]",
+    "nota": "Nova redação dada ao inciso V do caput da cláusula primeira, pelo Conv. ICMS 16/05, efeitos a partir de 25.04.05.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[71]",
+    "nota": "Redação anterior dada ao inciso V do caput da cláusula primeira pelo Conv. ICMS 99/04, efeitos de 19.10.04 a 24.04.05.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[73]",
+    "nota": "Redação original, efeitos até 18.10.04.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[75]",
+    "nota": "Nova redação dada ao inciso VI do caput da cláusula primeira pelo Conv. ICMS 21/16, efeitos a partir de 01.06.16.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[77]",
+    "nota": "Redação anterior dada ao inciso VI do caput da cláusula primeira pelo Conv. ICMS 123/11, efeitos de 09.01.12 a 31.05.16.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[79]",
+    "nota": "Redação anterior dada ao inciso VI do caput da cláusula primeira pelo Conv. ICMS 55/09, efeitos de 01.08.09 a 08.01.12.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[81]",
+    "nota": "Redação anterior dada ao inciso VI do caput da cláusula primeira pelo Conv. ICMS 152/02, efeitos de 01.01.03 a 31.07.09.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[83]",
+    "nota": "Redação anterior dada ao inciso VI do caput da cláusula primeira pelo Conv. ICMS 97/99, efeitos de 01.01.00 até 31.12.02.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[85]",
+    "nota": "Redação anterior dada ao inciso VI do caput da cláusula primeira pelo Conv. ICMS 40/98, efeitos de 14.07.98 31.12.99.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[87]",
+    "nota": "Redação original, efeitos até 13.07.98.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[91]",
+    "nota": "Nova redação ao inciso IX do caput da cláusula primeira pelo Conv. ICMS 89/01, efeitos a partir de 22.10.01.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[93]",
+    "nota": "Redação anterior, ao inciso IX do caput da cláusula primeira pelo Conv. ICMS 08/00, efeitos de 24.04.00 a 21.10.01.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[95]",
+    "nota": "Redação original, efeitos até 23.04.00.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[98]",
+    "nota": "Acrescido o inciso XI ao caput da cláusula primeira pelo Conv. ICMS 106/02, efeitos a partir de 14.10.02.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[100]",
+    "nota": "Acrescido o inciso XII ao caput da cláusula primeira pelo Conv. ICMS 25/03, efeitos a partir de 01.05.03.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[102]",
+    "nota": "Acrescido o inciso XIII ao caput da cláusula primeira pelo Conv. ICMS 93/03, efeitos a partir de 03.11.03.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[104]",
+    "nota": "Acrescido inciso XIV ao caput da cláusula primeira pelo Conv. ICMS 156/08, efeitos a partir de 01.01.09.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[106]",
+    "nota": "Acrescido o inciso XV ao caput da cláusula primeira pelo Conv. ICMS 55/09, efeitos a partir de 01.08.09.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[108]",
+    "nota": "Acrescido o inciso XVI ao caput da cláusula primeira pelo Conv. ICMS 195/10, efeitos a partir de 01.03.11.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[110]",
+    "nota": "Acrescido o inciso XVII ao caput da cláusula primeira pelo Conv. ICMS 49/11, efeitos a partir de 01.10.11.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[112]",
+    "nota": "Revogado o § 1º da cláusula primeira pelo Conv. ICMS 104/21, efeitos a partir de 01.01.22.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[114]",
+    "nota": "Redação original, efeitos até 31.12.21.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[121]",
+    "nota": "Nova redação dada ao inciso III do § 2º da cláusula primeira pelo Conv. ICMS 20/02, efeitos a partir de 08.04.02.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[123]",
+    "nota": "Redação original, efeitos 06.11.97 a 07.04.02.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[125]",
+    "nota": "Acrescido o inciso IV ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[127]",
+    "nota": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[138]",
+    "nota": "Acrescido o § 6º à cláusula primeira pelo Conv. ICMS 99/04, efeitos a partir de 19.10.04.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[141]",
+    "nota": "Nova redação anterior dada ao inciso I do caput da cláusula segunda pelo Conv. ICMS 62/11, efeitos a partir de 01.10.11.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[143]",
+    "nota": "Redação anterior dada ao inciso I do caput da cláusula segunda pelo Conv. ICMS 150/05, efeitos de 09.01.06 a 30.09.11.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[145]",
+    "nota": "Redação anterior dada ao inciso I do caput da cláusula segunda pelo Conv. ICMS 89/01, efeitos 22.10.01 a 08.01.06.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[147]",
+    "nota": "Redação original, efeitos até 21.10.01.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[149]",
+    "nota": "Nova redação dada ao inciso II do caput da cláusula segunda pelo Conv. ICMS 123/11, efeitos a partir de 09.01.12.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[151]",
+    "nota": "Redação anterior dada ao inciso II do caput da cláusula segunda pelo Conv. ICMS 57/03, efeitos de 29.07.03 a 08.01.12.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[153]",
+    "nota": "Redação original, efeitos até 28.07.03.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[155]",
+    "nota": "Revogado inciso III da cláusula segunda pelo Conv. ICMS 26/21, efeitos a partir de 01.01.22.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[159]",
+    "nota": "Redação anterior dada ao inciso III do caput da cláusula segunda, pelo Conv. ICMS 99/04, efeitos de 19.10.04. a 31.12.2021.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[161]",
+    "nota": "Acrescido o inciso IV ao caput da cláusula segunda pelo Conv. ICMS 149/05, efeitos a partir de 09.01.06.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[163]",
+    "nota": "Nova redação dada à cláusula terceira pelo Conv. ICMS 99/04, efeitos a partir de 19.10.04.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[165]",
+    "nota": "Nova redação dada ao § 1º da cláusula terceira pelo Conv. ICMS 63/05, efeitos a partir de 22.07.05.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[172]",
+    "nota": "Redação anterior dada ao § 1° da cláusula terceira pelo Conv. ICMS 99/04, efeitos de 19.10.04 a 21.07.05.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[175]",
+    "nota": "Redação anterior dada ao inciso II do § 1° do caput da cláusula terceira pelo Conv. ICMS 16/05, efeitos de 25.04.05 a 21.07.15.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[177]",
+    "nota": "Redação anterior dada ao inciso II do § 1º do caput da cláusula terceira pelo Conv. ICMS 99/04, efeitos de 19.10.04 a 24.04.05.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[182]",
+    "nota": "Nova redação dada ao § 2º da cláusula terceira pelo Conv. ICMS 63/05, efeitos a partir de 22.07.05.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[184]",
+    "nota": "Redação anterior dada ao § 2° da cláusula terceira pelo Conv. ICMS 99/04, efeitos de 19.10.04 a 21.07.05.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[187]",
+    "nota": "Redação anterior dada à cláusula terceira pelo Conv. ICMS 58/01, efeitos de 09.08.01 a 18.10.04.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[190]",
+    "nota": "Redação original, efeitos até 08.08.01.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[192]",
+    "nota": "Acrescida a cláusula terceira-A pelo Conv. ICMS 26/21, efeitos a partir de 01.01.22.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[200]",
+    "nota": "Acrescido o parágrafo único à cláusula terceira-A pelo Conv. ICMS 104/21, efeitos a partir de 01.01.22.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[204]",
+    "nota": "Acrescida a cláusula terceira-B pelo Conv. ICMS 26/21, efeitos a partir de 01.01.22.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[208]",
+    "nota": "Revogado inciso I da cláusula quinta pelo Conv. ICMS 26/21, efeitos a partir de 01.01.22.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[212]",
+    "nota": "Redação anterior dada ao inciso I do caput da cláusula primeira, pelo Conv. ICMS 99/04, efeitos de 19.10.04. a 31.12.21.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[216]",
+    "nota": "Nova redação dada à cláusula sétima pelo Conv. ICMS 79/25, efeitos a partir de 25.07.25.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[218]",
+    "nota": "Redação original, efeitos até 24.07.25.",
+    "links": [],
+    "conferencia": "apenas nota do ato-base; ato vinculado não examinado salvo listado na síntese"
+  },
+  {
+    "ato": "Convênio ICMS 100/97",
+    "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[221]",
+    "nota": "· Autorizadas as UF, referidas no Conv. 74/07, a revogarem o benefício de manutenção do crédito do ICMS de que cuida o inciso I da cláusula quinta.",
+    "links": [],
+    "conferencia": "nota global do ato-base; conferir cada modificador e alcance"
+  }
+]

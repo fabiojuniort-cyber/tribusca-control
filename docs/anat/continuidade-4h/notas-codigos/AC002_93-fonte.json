@@ -1,0 +1,12 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/atos/atos_cotepe/1993/ac002_93",
+  "consultaUTC": "2026-10-16T06:11:06.032875+00:00",
+  "metodo": "HTTP documental manual delimitado; não é coleta operacional",
+  "status": 200,
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "f840fe8425538f87354164ee53d68536c1a34fe10afb703f80ecf8519aae1262",
+  "sha256ArquivoRepoLF": "f840fe8425538f87354164ee53d68536c1a34fe10afb703f80ecf8519aae1262",
+  "normalizacao": "UTF-8, CRLF/CR para LF; texto preservado",
+  "bytesRespostaHTTP": 36810,
+  "links": []
+}

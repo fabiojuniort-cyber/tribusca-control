@@ -1,0 +1,14 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ato_decl_16_21-1",
+  "status": 200,
+  "consultaUTC": "2026-10-16T05:11:23.627634+00:00",
+  "encoding": "utf-8",
+  "caracteresSubstituicaoTexto": 0,
+  "textoDerivadoMetodo": "UTF-8 conforme Content-Type; remoção de tags/scripts e colapso de espaço. HTML bruto preservado.",
+  "sha256RespostaHTTP": "b8a336a2597eadd0cfd809137d8aa603f09a2cb0ee5a6516a0cf63b5793b32b1",
+  "bytesRespostaHTTP": 62993,
+  "sha256ArquivoRepoLF": "b8a336a2597eadd0cfd809137d8aa603f09a2cb0ee5a6516a0cf63b5793b32b1",
+  "bytesArquivoRepoLF": 62993,
+  "normalizacaoArquivoRepo": "CRLF→LF exclusivamente para estabilidade Git; conteúdo textual sem alteração.",
+  "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\continuidade-4h\\evidencia-http\\AD016_21.html"
+}

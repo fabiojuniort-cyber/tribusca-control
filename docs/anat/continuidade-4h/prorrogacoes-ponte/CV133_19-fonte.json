@@ -1,0 +1,15 @@
+{
+  "fonte": "CV133_19",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV133_19",
+  "consultaUTC": "2026-10-16T06:10:37.852779+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "7485835ae49c86efe8708f9c40926d2407e76e2d223a28aec3de5e59ca4e32f9",
+  "sha256ArquivoLF": "7485835ae49c86efe8708f9c40926d2407e76e2d223a28aec3de5e59ca4e32f9",
+  "bytesArquivoLF": 241673,
+  "sha256Texto": "6d335bfb5bd7ee74777bb0e13514c42de09cc609f3e3a48443e79b4013d4cae1",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}

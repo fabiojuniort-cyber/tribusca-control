@@ -1,0 +1,60 @@
+{
+  "metodo": "SHA-256 dos bytes locais UTF-8/LF; HTML completo preservado; texto derivado de parent-fieldname-text com espaços colapsados.",
+  "fontes": [
+    {
+      "id": "CV111_97",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV111_97",
+      "consultaUTC": "2026-10-16T06:11:06.031874+00:00",
+      "arquivoHtml": "CV111_97.html",
+      "sha256Html": "bb5c678035454df0c3519217ad82fdbe7fefd982780976383ddedb5bab0d0d2b",
+      "arquivoTexto": "CV111_97-texto.txt",
+      "sha256Texto": "a6da674e7c4726886120b670e84c9a27c0cfa0f090d7866b7ac325c2205dedc2"
+    },
+    {
+      "id": "CV002_93",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93",
+      "consultaUTC": "2026-10-16T06:11:06.032374+00:00",
+      "arquivoHtml": "CV002_93.html",
+      "sha256Html": "b93b8ae71e065836707cc72c921e55f36db59c03408169effefea614eb200810",
+      "arquivoTexto": "CV002_93-texto.txt",
+      "sha256Texto": "cfbd256cce8544e192d5f2b76e28174b8fc59a74483885d43c16b8c5d446d9b3"
+    },
+    {
+      "id": "AC001_98",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/atos/atos_cotepe/1998/ac001_98",
+      "consultaUTC": "2026-10-16T06:11:28.801397+00:00",
+      "arquivoHtml": "AC001_98.html",
+      "sha256Html": "5e62b1fd392305c151e80995e8a054cdfb2a79cbb41e002ee70dccdb3ea3c391",
+      "arquivoTexto": "AC001_98-texto.txt",
+      "sha256Texto": "0c47c04f2c00017f910333371c8511d2a1fba66de747ad7f3d4049ea44d79edb"
+    },
+    {
+      "id": "AC002_93",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/atos/atos_cotepe/1993/ac002_93",
+      "consultaUTC": "2026-10-16T06:11:06.032875+00:00",
+      "arquivoHtml": "AC002_93.html",
+      "sha256Html": "f840fe8425538f87354164ee53d68536c1a34fe10afb703f80ecf8519aae1262",
+      "arquivoTexto": "AC002_93-texto.txt",
+      "sha256Texto": "1b5465c94e263e43df9db481cedeb755a4645924dfcbf19e10ab97a10a612373"
+    }
+  ],
+  "arquivos": {
+    "AC001_98-fonte.json": "d25511dee5f05006a4dc8b375622831393b5c682b8c57d023ecaa0a91c319c80",
+    "AC001_98-texto.txt": "0c47c04f2c00017f910333371c8511d2a1fba66de747ad7f3d4049ea44d79edb",
+    "AC001_98.html": "5e62b1fd392305c151e80995e8a054cdfb2a79cbb41e002ee70dccdb3ea3c391",
+    "AC002_93-fonte.json": "71818240eec496bad051ed3f636e4a8c1a9a0e32047fb9e7945b98e3ec5af537",
+    "AC002_93-texto.txt": "1b5465c94e263e43df9db481cedeb755a4645924dfcbf19e10ab97a10a612373",
+    "AC002_93.html": "f840fe8425538f87354164ee53d68536c1a34fe10afb703f80ecf8519aae1262",
+    "consolidar.py": "07126c8f3acb39b450211328c031e9ffb0943e326349b63df6c9622946a0952e",
+    "consultar-fontes.py": "184b62f5eee6779fe821180a78bbd413afa75df6817a9123eb000ed0a145a88c",
+    "CV002_93-fonte.json": "61ec4c648e1edc73f96af31257bf0b932e1391f2ebd4c97946973706bcda2fd5",
+    "CV002_93-texto.txt": "cfbd256cce8544e192d5f2b76e28174b8fc59a74483885d43c16b8c5d446d9b3",
+    "CV002_93.html": "b93b8ae71e065836707cc72c921e55f36db59c03408169effefea614eb200810",
+    "CV111_97-fonte.json": "2fb1ae70d656178b1ed80494ce3896dd8c09179a456be62e50047f4f2fa033b0",
+    "CV111_97-texto.txt": "a6da674e7c4726886120b670e84c9a27c0cfa0f090d7866b7ac325c2205dedc2",
+    "CV111_97.html": "bb5c678035454df0c3519217ad82fdbe7fefd982780976383ddedb5bab0d0d2b",
+    "notas-codigos.json": "b9ac10000cc3a8b2f2667fc7b3da6a3e94f146092bd982cea9cfbb409c57d2a7",
+    "relatorio.md": "505a6d17351a1197e3b73dc87407b1780126c441ce153308ac65bba03db9f1a3",
+    "validacao.json": "7c4f9d325a5ee14d46fa64f8f13653e7a672018c7e12195922644bd99a635e39"
+  }
+}

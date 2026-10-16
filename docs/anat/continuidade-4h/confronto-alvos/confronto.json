@@ -1,0 +1,379 @@
+{
+  "frente": "ANAT",
+  "origem": "CLAUDE-COORD",
+  "executor": "GPT-EXEC / divergencias_alvos",
+  "risco": "R0 documental; leitura oficial R1",
+  "registradoUTC": "2026-10-16T05:42:13.718930+00:00",
+  "metodo": "Releitura nesta rodada das três páginas primárias CONFAZ e confronto com notas/variantes do snapshot congelado. Evidências curtas locais têm hashes próprios; não são hashes do HTML remoto nem prova visual de DOU. Sem edição de fonte, mapa, triagem, dataset ou planilha.",
+  "limites": [
+    "Quatro notas permanecem sem vínculo canônico na triagem original; este complemento não as promove.",
+    "Alvo formal do modificador e vinculação editorial da nota são decisões documentais separadas.",
+    "Nenhuma aprovação nova; dois IDs aprovados restritos preservados e 2432 trechos pendentes.",
+    "Não certifica cadeia posterior, situação corrente em2026, aplicação estadual ou cliente.",
+    "Autoria de redação antiga exige ato instituidor próprio; não deduzida do modificador."
+  ],
+  "contagens": {
+    "notasConfrontadas": 4,
+    "paginasOficiaisRelidas": 3,
+    "idsAlvoFormalRedacaoNova": 9,
+    "idsAlvoHistoricoCandidato": 1,
+    "idsCandidatosUnicos": 10,
+    "novosVinculosCanonicos": 0,
+    "novasAprovacoes": 0,
+    "pendentesAprovacao": 2432
+  },
+  "fontes": [
+    {
+      "ato": "146/20",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV146_20",
+      "arquivo": "evidencia-146-20.txt",
+      "localizadores": "Cláusula primeira, tabela Anexo II, cláusula segunda; cabeçalho de ratificação",
+      "citacoesCurtas": [
+        "Ficam alterados os itens 10.1, 10.2 e 13.5 do Anexo II",
+        "Ratificação Nacional no DOU de 29.12.2020"
+      ],
+      "parafrase": "A tabela da primeira cláusula identifica 13.5 como espalhadores de estrume/distribuidores de adubos e os códigos 8432.41.00 e 8432.42.00. A segunda condiciona a vigência à publicação da ratificação. O cabeçalho informa publicação do ato em 11/12/2020 e ratificação em 29/12/2020 (AD24/20). A página não altera 13.4 e não estabelece efeitos em 28/12/2020.",
+      "sha256EvidenciaLocal": "095a4f27aed84b5473c641f639c60c435b78a7ff450fcd66d526efa39a8f092c"
+    },
+    {
+      "ato": "199/23",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV199_23",
+      "arquivo": "evidencia-199-23.txt",
+      "localizadores": "Cláusula primeira e tabela; cláusula segunda; cabeçalho",
+      "citacoesCurtas": [
+        "Os itens 14.19 e 17 do Anexo II",
+        "produzindo efeitos a partir de 1º de julho de 2024"
+      ],
+      "parafrase": "O alvo 14.19 contém roçadeiras/podadores de potência mínima 0,5kW, códigos 8467.89.00 e 8467.29.99. O outro alvo é 17. O ato não altera 14.9. Publicação do ato em 12/12/2023 e ratificação em 29/12/2023 (AD52/23); a vigência pela ratificação e os efeitos em 01/07/2024 são fatos distintos.",
+      "sha256EvidenciaLocal": "8a6dce33e086f2c435eabdec543a59a9226c1cbc89c45ef936cabcabeebd0d8f"
+    },
+    {
+      "ato": "129/19",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV129_19",
+      "arquivo": "evidencia-129-19.txt",
+      "localizadores": "Cláusula primeira, inciso II e tabela; cláusula segunda, incisos I/II; cabeçalho",
+      "citacoesCurtas": [
+        "II - os itens 10.3, 13.3, 19.2 a seguir indicados do Anexo II",
+        "da sua ratificação nacional em relação aos demais dispositivos"
+      ],
+      "parafrase": "O comando distingue três itens do Anexo II. 13.3 trata de semeadores-adubadores, códigos 8432.31.10/8432.39.10; 19.2 de tratores de rodas sem esteiras, códigos 8701.91.00/8701.92.00/8701.93.00/8701.94.90/8701.95.90. O cabeçalho registra ratificação em 29/07/2019 (AD9/19), data que rege os efeitos desses itens pela segunda cláusula. A exceção 01/10/2019 limita-se ao Anexo I20.2. O comando fornece novas redações e não identifica o autor do texto anterior 8701.90.90.",
+      "sha256EvidenciaLocal": "e13b11bc7eaa7a7be0964a1c91b99f563045440c8d9a38ff49551bf91f888509"
+    }
+  ],
+  "confrontos": [
+    {
+      "idNota": "N52-126",
+      "notaLiteralPreservada": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+      "xpathNotaPreservado": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[77]/td/p",
+      "sha256NotaLiteralUtf8": "399c62141de293ad34e82af431ebb3dd949b8c639e42e72e0d7d15aebe1094b0",
+      "estadoNaTriagemPreservado": "pendente_sem_vinculo",
+      "atoFormal": "146/20",
+      "urlFontePrimaria": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV146_20",
+      "tipoConfronto": "divergência de alvo e data",
+      "achadoDocumental": "Nota literal declara 13.4 e 28.12.20; o comando e a tabela do modificador identificam 13.5 e a ratificação do cabeçalho é29.12.2020.",
+      "propostaConservadora": "Propor separadamente o alvo formal13.5 nos dois códigos; não reescrever a nota nem transportar o comando a13.4. A redação anterior13.5 pode ter encerramento proposto em28/12/2020, sem autoria deduzida.",
+      "dataProposta": "2020-12-29",
+      "naturezaData": "início de efeitos proposto pelo comando do modificador",
+      "alvosCandidatos": [
+        {
+          "id": "ANAT03-01449",
+          "caminho": "ANEXO II/tabela 3/linha 78/item 13.5",
+          "ncm": "8432.41.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "13.5 | Espalhadores de estrume e distribuidores de adubos (fertilizantes) | 8432.41.00 8432.42.00",
+          "notaConfaz": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[78]",
+          "hashTrecho": "edfad69ecd38577e26736df1eac3c5e25be1a63aa0d01f369db332bc8a807176",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        },
+        {
+          "id": "ANAT03-01450",
+          "caminho": "ANEXO II/tabela 3/linha 78/item 13.5",
+          "ncm": "8432.42.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "13.5 | Espalhadores de estrume e distribuidores de adubos (fertilizantes) | 8432.41.00 8432.42.00",
+          "notaConfaz": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[78]",
+          "hashTrecho": "edfad69ecd38577e26736df1eac3c5e25be1a63aa0d01f369db332bc8a807176",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "contraexemplosNaoConfundir": [
+        {
+          "id": "ANAT03-01445",
+          "caminho": "ANEXO II/tabela 3/linha 74/item 13.4",
+          "ncm": "8432.31.90",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "13.4 | Outros plantadores e transplantadores | 8432.31.90",
+          "notaConfaz": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 115/20, efeitos a partir de 04.11.20.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[74]",
+          "hashTrecho": "1a77f088d1967c163b9b317ac129711bdbe599f089b4caab48cae10031362adf",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        },
+        {
+          "id": "ANAT03-01447",
+          "caminho": "ANEXO II/tabela 3/linha 76/item 13.4",
+          "ncm": "8432.30.90",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "13.4 | Outros plantadores e transplantadores | 8432.30.90",
+          "notaConfaz": "Redação original dada ao subitem 13.4 do Anexo II , efeitos até 03.11.20.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[76]",
+          "hashTrecho": "2d5f97adeedaef702dbb5d50d1163bc4bb0b675dde964c28edd7e5512e43c671",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "variantesHistoricasDeApoio": [
+        {
+          "id": "ANAT03-01452",
+          "caminho": "ANEXO II/tabela 3/linha 80/item 13.5",
+          "ncm": "8432.40.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "13.5 | Espalhadores de estrume e distribuidores de adubos (fertilizantes) | 8432.40.00",
+          "notaConfaz": "Redação original dada ao subitem 13.5 do Anexo II, efeitos até 28.12.20.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[80]",
+          "hashTrecho": "14441ecde3af6bcf92d76b8922a2713e6284ff79a6aee47d122bc3ffa0126e3b",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "aprovacao": "pendente",
+      "elegibilidadeCorrente": "não determinada",
+      "autoriaRedacaoAnterior": "pendente; o substituidor não é prova de autoria do texto anterior"
+    },
+    {
+      "idNota": "N52-130",
+      "notaLiteralPreservada": "Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "xpathNotaPreservado": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[105]/td/p",
+      "sha256NotaLiteralUtf8": "4ebb053406ae21d9ed9de1ce259d4753fa20a3a24975e0fba49a619481cf2d0f",
+      "estadoNaTriagemPreservado": "pendente_sem_vinculo",
+      "atoFormal": "199/23",
+      "urlFontePrimaria": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV199_23",
+      "tipoConfronto": "divergência de alvo",
+      "achadoDocumental": "Nota literal declara14.9, enquanto comando e tabela identificam14.19. A data de efeitos01/07/2024 converge.",
+      "propostaConservadora": "Propor alvo formal14.19 nos dois códigos;14.9 é item distinto. Não confundir vigência29/12/2023 com efeitos01/07/2024. Histórico01481 é variante separada, não segundo código da redação nova.",
+      "dataProposta": "2024-07-01",
+      "naturezaData": "início de efeitos proposto pelo comando do modificador",
+      "alvosCandidatos": [
+        {
+          "id": "ANAT03-01478",
+          "caminho": "ANEXO II/tabela 3/linha 106/item 14.19",
+          "ncm": "8467.89.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "14.19 | Roçadeiras e podadores elétricos ou com motor a combustão incorporado, com potência igual ou superior a 0,5kW | 8467.89.00 8467.29.99",
+          "notaConfaz": "Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[106]",
+          "hashTrecho": "29023952258d96df1862f3bc3aee4402aff882ad2b63886a9dcc5c6c8c00e397",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        },
+        {
+          "id": "ANAT03-01479",
+          "caminho": "ANEXO II/tabela 3/linha 106/item 14.19",
+          "ncm": "8467.29.99",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "14.19 | Roçadeiras e podadores elétricos ou com motor a combustão incorporado, com potência igual ou superior a 0,5kW | 8467.89.00 8467.29.99",
+          "notaConfaz": "Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[106]",
+          "hashTrecho": "29023952258d96df1862f3bc3aee4402aff882ad2b63886a9dcc5c6c8c00e397",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "contraexemplosNaoConfundir": [
+        {
+          "id": "ANAT03-01466",
+          "caminho": "ANEXO II/tabela 3/linha 94/item 14.9",
+          "ncm": "8433.53.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "14.9 | Máquinas para colheita de raízes ou tubérculos | 8433.53.00",
+          "notaConfaz": "",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[94]",
+          "hashTrecho": "b1a1a2b1eb61f00c441dc7840143460bbb1c03cd20bc69e2290014de842448f4",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "variantesHistoricasDeApoio": [
+        {
+          "id": "ANAT03-01481",
+          "caminho": "ANEXO II/tabela 3/linha 108/item 14.19",
+          "ncm": "8467.89.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "14.19 | Roçadeiras e podadores com motor elétrico ou não elétrico incorporado, de uso manual. | 8467.89.00",
+          "notaConfaz": "Redação anterior acrescida do subitem 14.19 ao Anexo II pelo Conv. ICMS 158/13, efeitos de 01.02.14. a 30.06.24",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[108]",
+          "hashTrecho": "4e89e8aa87eb4cd365df572b2df3c56b234a6dcdcae97f278fa9a9546d6e4768",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "aprovacao": "pendente",
+      "elegibilidadeCorrente": "não determinada",
+      "autoriaRedacaoAnterior": "pendente; o substituidor não é prova de autoria do texto anterior"
+    },
+    {
+      "idNota": "N52-134",
+      "notaLiteralPreservada": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "xpathNotaPreservado": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[124]/td/p",
+      "sha256NotaLiteralUtf8": "dc976ce592c355079eea7ebbb45a9fb5882c4c1ca9ca681fb87f2d1517026f88",
+      "estadoNaTriagemPreservado": "pendente_sem_vinculo",
+      "atoFormal": "129/19",
+      "urlFontePrimaria": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV129_19",
+      "tipoConfronto": "divergência entre nota e linha sucessora",
+      "achadoDocumental": "Nota declara13.3, mas está antes da linha125/item19.2.129/19 modifica ambos os itens em linhas distintas; seus códigos e descrições não coincidem.",
+      "propostaConservadora": "Propor alvo formal19.2 nos cinco códigos de tratores, conservando a nota divergente. Não reaproveitar o vínculo da outra nota13.3 nem agregar códigos de semeadores.",
+      "dataProposta": "2019-07-29",
+      "naturezaData": "início de efeitos proposto pelo comando do modificador",
+      "alvosCandidatos": [
+        {
+          "id": "ANAT03-01498",
+          "caminho": "ANEXO II/tabela 3/linha 125/item 19.2",
+          "ncm": "8701.91.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "19.2 | Tratores agrícolas de rodas, sem esteiras | 8701.91.00 8701.92.00 8701.93.00 8701.94.90 8701.95.90",
+          "notaConfaz": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[125]",
+          "hashTrecho": "f2d9876b1fe1f5fb51d8f250a955229a410d1cbb89dccc633bbb2e535a0501f5",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        },
+        {
+          "id": "ANAT03-01499",
+          "caminho": "ANEXO II/tabela 3/linha 125/item 19.2",
+          "ncm": "8701.92.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "19.2 | Tratores agrícolas de rodas, sem esteiras | 8701.91.00 8701.92.00 8701.93.00 8701.94.90 8701.95.90",
+          "notaConfaz": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[125]",
+          "hashTrecho": "f2d9876b1fe1f5fb51d8f250a955229a410d1cbb89dccc633bbb2e535a0501f5",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        },
+        {
+          "id": "ANAT03-01500",
+          "caminho": "ANEXO II/tabela 3/linha 125/item 19.2",
+          "ncm": "8701.93.00",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "19.2 | Tratores agrícolas de rodas, sem esteiras | 8701.91.00 8701.92.00 8701.93.00 8701.94.90 8701.95.90",
+          "notaConfaz": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[125]",
+          "hashTrecho": "f2d9876b1fe1f5fb51d8f250a955229a410d1cbb89dccc633bbb2e535a0501f5",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        },
+        {
+          "id": "ANAT03-01501",
+          "caminho": "ANEXO II/tabela 3/linha 125/item 19.2",
+          "ncm": "8701.94.90",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "19.2 | Tratores agrícolas de rodas, sem esteiras | 8701.91.00 8701.92.00 8701.93.00 8701.94.90 8701.95.90",
+          "notaConfaz": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[125]",
+          "hashTrecho": "f2d9876b1fe1f5fb51d8f250a955229a410d1cbb89dccc633bbb2e535a0501f5",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        },
+        {
+          "id": "ANAT03-01502",
+          "caminho": "ANEXO II/tabela 3/linha 125/item 19.2",
+          "ncm": "8701.95.90",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "19.2 | Tratores agrícolas de rodas, sem esteiras | 8701.91.00 8701.92.00 8701.93.00 8701.94.90 8701.95.90",
+          "notaConfaz": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[125]",
+          "hashTrecho": "f2d9876b1fe1f5fb51d8f250a955229a410d1cbb89dccc633bbb2e535a0501f5",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "contraexemplosNaoConfundir": [
+        {
+          "id": "ANAT03-01440",
+          "caminho": "ANEXO II/tabela 3/linha 70/item 13.3",
+          "ncm": "8432.31.10",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "13.3 | Semeadores-adubadores | 8432.31.10 8432.39.10",
+          "notaConfaz": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[70]",
+          "hashTrecho": "d807c1fc0be14f9f382057aac9af36b65fa7e3af778e52d5bcdbf983153e8a02",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        },
+        {
+          "id": "ANAT03-01441",
+          "caminho": "ANEXO II/tabela 3/linha 70/item 13.3",
+          "ncm": "8432.39.10",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "13.3 | Semeadores-adubadores | 8432.31.10 8432.39.10",
+          "notaConfaz": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[70]",
+          "hashTrecho": "d807c1fc0be14f9f382057aac9af36b65fa7e3af778e52d5bcdbf983153e8a02",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "variantesHistoricasDeApoio": [],
+      "aprovacao": "pendente",
+      "elegibilidadeCorrente": "não determinada",
+      "autoriaRedacaoAnterior": "pendente; o substituidor não é prova de autoria do texto anterior"
+    },
+    {
+      "idNota": "N52-135",
+      "notaLiteralPreservada": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "xpathNotaPreservado": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[126]/td/p",
+      "sha256NotaLiteralUtf8": "2a972838b782ee0e67644bfc64bdf2a372217394836f7e1edb596240e155f929",
+      "estadoNaTriagemPreservado": "pendente_sem_vinculo",
+      "atoFormal": "129/19",
+      "urlFontePrimaria": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV129_19",
+      "tipoConfronto": "divergência de alvo e autoria não demonstrada",
+      "achadoDocumental": "Nota chama a redação de original do13.3 dada pelo129/19 e a limita até28/07/2019; linha127 é19.2/8701.90.90. O modificador oferece outra redação e outros códigos para19.2.",
+      "propostaConservadora": "Propor apenas relação histórica candidata: a variante19.2 antiga pode encerrar em28/07/2019 pela substituição com efeitos29/07/2019. Não atribuir sua criação ao129/19; autoria anterior continua pendente.",
+      "dataProposta": "2019-07-28",
+      "naturezaData": "fim candidato da variante histórica",
+      "alvosCandidatos": [
+        {
+          "id": "ANAT03-01504",
+          "caminho": "ANEXO II/tabela 3/linha 127/item 19.2",
+          "ncm": "8701.90.90",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "19.2 | Tratores agrícolas de rodas, sem esteiras | 8701.90.90",
+          "notaConfaz": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[127]",
+          "hashTrecho": "5726717923f285d82512a28713cb1bfac377c3dfd6dd0101441b33c3a5dd22a0",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "contraexemplosNaoConfundir": [
+        {
+          "id": "ANAT03-01443",
+          "caminho": "ANEXO II/tabela 3/linha 72/item 13.3",
+          "ncm": "8432.30.10",
+          "dominioCodigo": "NCM/SH",
+          "textoLiteral": "13.3 | Semeadores-adubadores | 8432.30.10",
+          "notaConfaz": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[72]",
+          "hashTrecho": "b5707742c0abdebd5fc27f2321a572c6c3c5af279a90b5d1beadacebe5ff5981",
+          "sha256Fonte": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+          "aprovado": false
+        }
+      ],
+      "variantesHistoricasDeApoio": [],
+      "aprovacao": "pendente",
+      "elegibilidadeCorrente": "não determinada",
+      "autoriaRedacaoAnterior": "pendente; o substituidor não é prova de autoria do texto anterior"
+    }
+  ],
+  "sha256EntradasAntes": {
+    "anat-03-trechos.json": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+    "anat-03-dossie-vigencia.xlsx": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894",
+    "lote-autonomo/notas/notas-alvos.json": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+    "continuidade-4h/notas/triagem-105.json": "22ee71a6d79d3f18a717cb5eed660e9237a2252086971e4f9d7dcdda1fb81794",
+    "continuidade-4h/controle/mapa-atos-ids.json": "d796ab309f11c0b3b0ad5a8b253075529c1a08d1861627a5e9f0cf4d93819d55",
+    "lote-autonomo/atos/dependencias-adicionais.json": "1eee04b8e56544a5914de1cb18fecf45d322585eeff5a12ff0c379f6366bab77"
+  }
+}

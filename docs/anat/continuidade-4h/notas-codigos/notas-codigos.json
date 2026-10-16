@@ -1,0 +1,280 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC; continuidade de quatro horas autorizada por Fábio",
+  "consultaConsolidadaUTC": "2026-10-16T06:12:58.006101+00:00",
+  "risco": "R0 documental e R1 leitura de quatro páginas oficiais; sem banco ou produto",
+  "fontes": [
+    {
+      "id": "CV111_97",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV111_97",
+      "consultaUTC": "2026-10-16T06:11:06.031874+00:00",
+      "arquivoHtml": "CV111_97.html",
+      "sha256Html": "bb5c678035454df0c3519217ad82fdbe7fefd982780976383ddedb5bab0d0d2b",
+      "arquivoTexto": "CV111_97-texto.txt",
+      "sha256Texto": "a6da674e7c4726886120b670e84c9a27c0cfa0f090d7866b7ac325c2205dedc2"
+    },
+    {
+      "id": "CV002_93",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93",
+      "consultaUTC": "2026-10-16T06:11:06.032374+00:00",
+      "arquivoHtml": "CV002_93.html",
+      "sha256Html": "b93b8ae71e065836707cc72c921e55f36db59c03408169effefea614eb200810",
+      "arquivoTexto": "CV002_93-texto.txt",
+      "sha256Texto": "cfbd256cce8544e192d5f2b76e28174b8fc59a74483885d43c16b8c5d446d9b3"
+    },
+    {
+      "id": "AC001_98",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/atos/atos_cotepe/1998/ac001_98",
+      "consultaUTC": "2026-10-16T06:11:28.801397+00:00",
+      "arquivoHtml": "AC001_98.html",
+      "sha256Html": "5e62b1fd392305c151e80995e8a054cdfb2a79cbb41e002ee70dccdb3ea3c391",
+      "arquivoTexto": "AC001_98-texto.txt",
+      "sha256Texto": "0c47c04f2c00017f910333371c8511d2a1fba66de747ad7f3d4049ea44d79edb"
+    },
+    {
+      "id": "AC002_93",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/atos/atos_cotepe/1993/ac002_93",
+      "consultaUTC": "2026-10-16T06:11:06.032875+00:00",
+      "arquivoHtml": "AC002_93.html",
+      "sha256Html": "f840fe8425538f87354164ee53d68536c1a34fe10afb703f80ecf8519aae1262",
+      "arquivoTexto": "AC002_93-texto.txt",
+      "sha256Texto": "1b5465c94e263e43df9db481cedeb755a4645924dfcbf19e10ab97a10a612373"
+    }
+  ],
+  "atos": [
+    {
+      "ato": "Convênio ICMS 02/93",
+      "dataCelebracao": "1993-03-25",
+      "publicacaoDOU": "1993-03-29",
+      "atoRatificador": "Ato COTEPE/ICMS 02/93",
+      "dataAtoRatificador": "1993-04-14",
+      "publicacaoRatificacaoDOU": "1993-04-15",
+      "entradaEmVigorProposta": "1993-04-15",
+      "efeitosExpressosInicio": "1993-04-01",
+      "efeitosExpressosFim": "1993-09-30",
+      "fonteComando": "CV002_93",
+      "fonteRatificacao": "AC002_93",
+      "condicaoVigorLiteral": "data da publicação de sua ratificação nacional",
+      "limite": "Separar entrada em vigor de efeitos expressos anteriores; não inferir validade em 2026 ou aplicação estadual.",
+      "comando": {
+        "localizador": "cláusula primeira",
+        "objeto": "percentuais de carga tributária da cláusula segunda do Convênio 52/91",
+        "dominioLiteral": "Nomenclatura Brasileira de Mercadorias - Sistema Harmonizado - NBM/SH",
+        "codigosLiterais": [
+          "8433.59.0100",
+          "8433.59.9900",
+          "8701.10.0100",
+          "8701.90.0200"
+        ],
+        "digitosPorCodigo": 10,
+        "percentuaisLiterais": [
+          {
+            "inciso": "I",
+            "remissao": "alínea a do inciso I",
+            "percentual": "5,1%"
+          },
+          {
+            "inciso": "II",
+            "remissao": "alínea b do inciso I",
+            "percentual": "8,75%"
+          },
+          {
+            "inciso": "III",
+            "remissao": "inciso II",
+            "percentual": "7%"
+          }
+        ]
+      },
+      "aprovado": false
+    },
+    {
+      "ato": "Convênio ICMS 111/97",
+      "dataCelebracao": "1997-12-12",
+      "publicacaoDOU": "1997-12-18",
+      "atoRatificador": "Ato COTEPE/ICMS 01/98",
+      "dataAtoRatificador": "1998-01-02",
+      "publicacaoRatificacaoDOU": "1998-01-02",
+      "entradaEmVigorProposta": "1998-01-02",
+      "efeitosExpressosInicio": "1998-02-01",
+      "efeitosExpressosFim": null,
+      "fonteComando": "CV111_97",
+      "fonteRatificacao": "AC001_98",
+      "condicaoVigorLiteral": "data da publicação de sua ratificação nacional",
+      "limite": "Final não determinado neste ato; não significa vigência atual ou adoção estadual.",
+      "comando": {
+        "localizador": "cláusula primeira",
+        "objeto": "exclusão de produtos da letra c do item 30 do Anexo II do Convênio 52/91",
+        "dominioLiteral": "NBM/SH",
+        "codigosLiterais": [
+          "8433.11.00",
+          "8433.19.00",
+          "8433.90.l0"
+        ],
+        "notaDominio": "Primeiros dois códigos têm oito dígitos; terceiro contém letra l na página oficial. Não relabelar automaticamente como NCM nem converter para NBM de dez dígitos.",
+        "anomalia": "O terceiro literal do comando é 8433.90.l0; a nota N52-170 imprime 8433.90.10. Normalização não aplicada.",
+        "codigoTerceiroNormalizado": null
+      },
+      "aprovado": false
+    }
+  ],
+  "notas": [
+    {
+      "idNota": "N52-163",
+      "notaLiteral": "Nota: Alterada a carga tributária das posições 8701.10.0100 e 8701.90.0200 pelo Conv. ICMS 02/93, efeitos entre 01.04.93 a 30.09.93.",
+      "xpathNota": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[35]/td/p",
+      "fonteComando": "CV002_93",
+      "aprovado": false,
+      "resultado": "dois vínculos candidatos anteriores corroborados por códigos exatos",
+      "alvosCandidatos": [
+        {
+          "idBase": "ANAT03-02278",
+          "caminhoBase": "ANEXO II/tabela 6/linha 37/item sem número",
+          "ncmNBMBaseLiteral": "8701.10.0100",
+          "relacao": "Código exato 8701.10.0100; descrição na célula irmã",
+          "fragmento": {
+            "subfragmentoDocumental": "ANAT03-02278-td[2]-p",
+            "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[37]/td[2]/p",
+            "xpathCelula": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[37]/td[2]",
+            "papel": "Código exato 8701.10.0100; descrição na célula irmã",
+            "textoLiteralDOM": "8701.10.0100",
+            "sha256TextoLiteralDOM": "2bd34a5437a28278d5c97cfaec00c0b3846ea9735b93f34bbd396ebc46e4f580",
+            "codigosLiterais": [
+              {
+                "literal": "8701.10.0100",
+                "digitos": 10,
+                "dominio": "NBM de 10 dígitos; não converter para NCM"
+              }
+            ]
+          },
+          "aprovado": false
+        },
+        {
+          "idBase": "ANAT03-02284",
+          "caminhoBase": "ANEXO II/tabela 6/linha 43/item sem número",
+          "ncmNBMBaseLiteral": "",
+          "relacao": "Código exato 8701.90.0200 na redação original histórica",
+          "fragmento": {
+            "subfragmentoDocumental": "ANAT03-02284-td-p[2]",
+            "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[43]/td/p[2]",
+            "xpathCelula": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[43]/td",
+            "papel": "Código exato 8701.90.0200 na redação original histórica",
+            "textoLiteralDOM": "22 Tratores agrícolas de quatro rodas                                    8701.90.0200",
+            "sha256TextoLiteralDOM": "5792c08dd802383128ca12ada13577102822ad11af2494d579b293c02733c98f",
+            "codigosLiterais": [
+              {
+                "literal": "8701.90.0200",
+                "digitos": 10,
+                "dominio": "NBM de 10 dígitos; não converter para NCM"
+              }
+            ]
+          },
+          "aprovado": false
+        }
+      ],
+      "idsBase": [
+        "ANAT03-02278",
+        "ANAT03-02284"
+      ],
+      "limite": "Vínculo apenas aos subfragmentos de código 8701.10.0100 e variante histórica 8701.90.0200 já delimitados. Não estender à redação atual do item nem converter para NCM.",
+      "pendencias": [
+        "Fábio conferir os dois subfragmentos e as datas; não há aprovação de carga tributária ou vigência."
+      ]
+    },
+    {
+      "idNota": "N52-170",
+      "notaLiteral": "Nota: Excluídos os cortadores de grama e suas partes, classificados nos códigos 8433.11.00, 8433.19.00 e 8433.90.10, pelo Conv. ICMS 111/97, efeitos a partir de 01.02.98.",
+      "xpathNota": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td/p[1]",
+      "fonteComando": "CV111_97",
+      "aprovado": false,
+      "resultado": "comando de exclusão localizado; correspondência com faixa histórica pendente",
+      "idsBase": [],
+      "alvosCandidatos": [],
+      "subfragmentos": [
+        {
+          "subfragmentoDocumental": "N52-170-nota-codigos8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td/p[1]",
+          "xpathCelula": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td",
+          "papel": "Nota própria de exclusão, três códigos de 8 dígitos",
+          "textoLiteralDOM": "Nota: Excluídos os cortadores de grama e suas partes, classificados nos códigos 8433.11.00, 8433.19.00 e 8433.90.10, pelo Conv. ICMS 111/97, efeitos a partir de 01.02.98.",
+          "sha256TextoLiteralDOM": "63488b8054fd76f786d012923632de3b060c55a71baaffb90c7928cc66193688",
+          "codigosLiterais": [
+            {
+              "literal": "8433.11.00",
+              "digitos": 8,
+              "dominio": "código de 8 dígitos citado na nota; não equiparar a faixa NBM"
+            },
+            {
+              "literal": "8433.19.00",
+              "digitos": 8,
+              "dominio": "código de 8 dígitos citado na nota; não equiparar a faixa NBM"
+            },
+            {
+              "literal": "8433.90.10",
+              "digitos": 8,
+              "dominio": "código de 8 dígitos citado na nota; não equiparar a faixa NBM"
+            }
+          ]
+        }
+      ],
+      "fundamento": "111/97 refere expressamente letra c do item 30 e códigos NBM/SH de oito posições, enquanto os IDs 02309/02310 guardam extremos NBM de dez dígitos. O terceiro literal ainda diverge por l/1.",
+      "pendencias": [
+        "Conferência visual da redação/versão histórica e fonte oficial para a correspondência entre códigos, sem atribuir a exclusão a toda a faixa.",
+        "Conferir terceiro código no DOU original ou retificação oficial antes de normalizar 8433.90.l0 para 8433.90.10."
+      ]
+    },
+    {
+      "idNota": "N52-171",
+      "notaLiteral": "Nota: Alterada a carga tributária das posições 8433.59.0100 e 8433.59.9900 pelo Conv. ICMS 02/93, efeitos de 01.04.93 a 30.09.93.",
+      "xpathNota": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td/p[2]",
+      "fonteComando": "CV002_93",
+      "aprovado": false,
+      "resultado": "duas menções NBM exatas e carga tributária documentadas; sem alvo canônico individual",
+      "idsBase": [],
+      "alvosCandidatos": [],
+      "subfragmentos": [
+        {
+          "subfragmentoDocumental": "N52-171-nota-codigos10",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td/p[2]",
+          "xpathCelula": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td",
+          "papel": "Nota própria de carga tributária, dois NBM de 10 dígitos",
+          "textoLiteralDOM": "Nota: Alterada a carga tributária das posições 8433.59.0100 e 8433.59.9900 pelo Conv. ICMS 02/93, efeitos de 01.04.93 a 30.09.93.",
+          "sha256TextoLiteralDOM": "be53213bb4a94ef978ceb8b6c061b551b8f58a151de64d2d069f418950132772",
+          "codigosLiterais": [
+            {
+              "literal": "8433.59.0100",
+              "digitos": 10,
+              "dominio": "NBM de 10 dígitos; não converter para NCM"
+            },
+            {
+              "literal": "8433.59.9900",
+              "digitos": 10,
+              "dominio": "NBM de 10 dígitos; não converter para NCM"
+            }
+          ]
+        }
+      ],
+      "fundamento": "O comando confirma 8433.59.0100 e 8433.59.9900, mas não cria linha individual no HTML52 nem prova atribuição aos extremos da faixa.",
+      "pendencias": [
+        "Se necessário, obter representação histórica oficial com linha individual ou manter menção documental sem ID correspondente."
+      ]
+    }
+  ],
+  "contagens": {
+    "notasConfrontadas": 3,
+    "atosComComandoLido": 2,
+    "ratificadoresLidos": 2,
+    "paginasOficiaisHTTP200": 4,
+    "vinculosBaseExistentesSubstanciados": 2,
+    "novosVinculosBaseCriados": 0,
+    "novosIdsCanonicosCriados": 0,
+    "aprovacoesCriadas": 0,
+    "notasComCorrespondenciaIdsAindaPendente": 2
+  },
+  "limiteGeral": "Candidato documental não é vigência aprovada. Os 2.432 trechos pendentes e as duas aprovações restritas permanecem intactos.",
+  "entradasPreservadasSha256": {
+    "anat-03-trechos.json": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+    "anat-03-dossie-vigencia.xlsx": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894",
+    "lote-autonomo/notas/notas-alvos.json": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+    "continuidade-4h/notas/triagem-105.json": "22ee71a6d79d3f18a717cb5eed660e9237a2252086971e4f9d7dcdda1fb81794",
+    "continuidade-4h/ambiguidades/ambiguidades-celulas.json": "7c188ca2efe0fc8c761f444e786dcd69be1802f38a6dae72f4189dbea0b3d122"
+  }
+}

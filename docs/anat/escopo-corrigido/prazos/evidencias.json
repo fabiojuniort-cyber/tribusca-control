@@ -1,0 +1,148 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC; correção de escopo ANAT-03",
+  "dataReferencia": "2026-10-16",
+  "escopo": "somente cadeia mínima de prazo atual e cabeçalhos correntes; cessada pesquisa histórica",
+  "eventos": [
+    {
+      "id": "P52-226-23",
+      "alvo": "52/91",
+      "ato": "Convênio ICMS 226/23",
+      "dataAto": "2023-12-21",
+      "publicacaoAto": "2023-12-26",
+      "dispositivo": "cláusula segunda, VIII; cláusula terceira",
+      "urlAto": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV226_23",
+      "ratificador": "Ato Declaratório 1/24",
+      "dataAD": "2024-01-11",
+      "publicacaoAD": "2024-01-12",
+      "urlAD": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2024/ad001_24",
+      "inicioVigor": "2024-01-12",
+      "inicioEfeitosProrrogacao": "2024-01-12",
+      "naturezaDataEfeitos": "derivado da entrada em vigor na publicação da ratificação; sem diferimento expresso para52/91",
+      "prazoFinal": "2026-04-30",
+      "fontesLocais": [
+        "docs/anat/continuidade-4h/prorrogacoes/CV226_23-texto.txt",
+        "docs/anat/continuidade-4h/prorrogacoes/AD001_24-texto.txt"
+      ],
+      "proposta": "fundamento documental de prazo; conferência Fábio pendente",
+      "aprovado": false,
+      "sha256FontesTexto": {
+        "docs/anat/continuidade-4h/prorrogacoes/CV226_23-texto.txt": "fd016d815dd8673d03caaaca07c9858f0f0b4c540bac5a68f666b3498faa7353",
+        "docs/anat/continuidade-4h/prorrogacoes/AD001_24-texto.txt": "bdd764487931a51d32d0e8b2538862763cff7cc761c729aa77a7927aeb72c390"
+      }
+    },
+    {
+      "id": "P52-010-26",
+      "alvo": "52/91",
+      "ato": "Convênio ICMS 10/26",
+      "dataAto": "2026-01-27",
+      "publicacaoAto": "2026-01-29",
+      "dispositivo": "cláusulas primeira e terceira; segunda apenas nova redação do §2 da quarta",
+      "urlAto": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2026/CV010_26",
+      "ratificador": "Ato Declaratório 4/26",
+      "dataAD": "2026-02-18",
+      "publicacaoAD": "2026-02-19",
+      "urlAD": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2026/ad004_26",
+      "inicioVigor": "2026-02-19",
+      "inicioEfeitosProrrogacao": "2026-05-01",
+      "naturezaDataEfeitos": "expressa na cláusula terceira",
+      "prazoFinal": "2026-12-31",
+      "nota": "AD completo lido, inclusive retificação publicada20/02/26 que exclui7/26 e não altera10/26.",
+      "fontesLocais": [
+        "docs/anat/continuidade-4h/divergencias/CV010_26-texto.txt",
+        "docs/anat/escopo-corrigido/prazos/AD004_26-texto.txt"
+      ],
+      "proposta": "fundamento documental de prazo; conferência Fábio pendente",
+      "aprovado": false,
+      "sha256FontesTexto": {
+        "docs/anat/continuidade-4h/divergencias/CV010_26-texto.txt": "9e6d8619aa6eb961be21f1f3620eba198a40d463215ac68a4e08c4d28471743a",
+        "docs/anat/escopo-corrigido/prazos/AD004_26-texto.txt": "7deca8316d2dc6541e6271704d4580046ff37e682f056c08771080b50234aafd"
+      }
+    },
+    {
+      "id": "P100-026-21",
+      "alvo": "100/97",
+      "ato": "Convênio ICMS 26/21",
+      "dataAto": "2021-03-12",
+      "publicacaoAto": "2021-03-15",
+      "dispositivo": "cláusulas quinta e sexta, I; não confundir com demais dispositivos, efeitos01/01/22",
+      "urlAto": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV026_21",
+      "ratificador": "Ato Declaratório 6/21",
+      "dataAD": "2021-03-18",
+      "publicacaoAD": "2021-03-19",
+      "urlAD": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad006_21",
+      "inicioVigor": "2021-03-19",
+      "inicioEfeitosProrrogacao": "2021-04-01",
+      "naturezaDataEfeitos": "expressa na cláusula sexta,I",
+      "prazoFinal": "2025-12-31",
+      "fontesLocais": [
+        "docs/anat/escopo-corrigido/prazos/CV026_21-texto.txt",
+        "docs/anat/continuidade-4h/prorrogacoes-ponte/AD006_21-texto.txt"
+      ],
+      "proposta": "fundamento documental de prazo; conferência Fábio pendente",
+      "aprovado": false,
+      "sha256FontesTexto": {
+        "docs/anat/escopo-corrigido/prazos/CV026_21-texto.txt": "086cbca7ccd17afbf415d04ddceac33e76ea488cb09cfddd5fe2755ddaac6beb",
+        "docs/anat/continuidade-4h/prorrogacoes-ponte/AD006_21-texto.txt": "b9416dbe778dabc64b43b086d99556d843154c5be0fb3222c158622696c8c711"
+      }
+    },
+    {
+      "id": "P100-079-25",
+      "alvo": "100/97",
+      "ato": "Convênio ICMS 79/25",
+      "dataAto": "2025-07-04",
+      "publicacaoAto": "2025-07-08",
+      "dispositivo": "cláusulas primeira, segunda e quarta; terceira revoga condição da quarta26/21",
+      "urlAto": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2025/CV079_25",
+      "ratificador": "Ato Declaratório 16/25",
+      "dataAD": "2025-07-24",
+      "publicacaoAD": "2025-07-25",
+      "urlAD": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2025/ad016_25",
+      "inicioVigor": "2025-07-25",
+      "inicioEfeitosProrrogacao": "2025-07-25",
+      "naturezaDataEfeitos": "derivado da cláusula quarta: vigor na publicação da ratificação, sem diferimento expresso; corroborado por nota atual da cláusula sétima100/97",
+      "prazoFinal": "2027-12-31",
+      "nota": "Não confundir efeitos do ato79/25 com a fórmula histórica de início do próprio100/97 transcrita na nova cláusula sétima.",
+      "fontesLocais": [
+        "docs/anat/escopo-corrigido/prazos/CV079_25-texto.txt",
+        "docs/anat/escopo-corrigido/prazos/AD016_25-texto.txt"
+      ],
+      "proposta": "fundamento documental de prazo; conferência Fábio pendente",
+      "aprovado": false,
+      "sha256FontesTexto": {
+        "docs/anat/escopo-corrigido/prazos/CV079_25-texto.txt": "31067c550b7e635dbc7614bdfab0d0f47a7bfbbd9e5903a798947bebf6ea5cac",
+        "docs/anat/escopo-corrigido/prazos/AD016_25-texto.txt": "d76d49ed750a6031ab6d71350208bcf87732fd1b0d07ed3563d0a3573c3148d5"
+      }
+    }
+  ],
+  "cadeias": [
+    {
+      "alvo": "52/91",
+      "sequencia": [
+        "P52-226-23",
+        "P52-010-26"
+      ],
+      "prazoFinal": "2026-12-31",
+      "cobreDataReferencia": true
+    },
+    {
+      "alvo": "100/97",
+      "sequencia": [
+        "P100-026-21",
+        "P100-079-25"
+      ],
+      "prazoFinal": "2027-12-31",
+      "cobreDataReferencia": true
+    }
+  ],
+  "checagemCabecalhos": {
+    "52/91": "Página oficial corrente mantém último modificador/prorrogador10/26 e prazo31.12.26; sem marcador posterior visível no cabeçalho consultado.",
+    "100/97": "Página oficial corrente mantém último modificador/prorrogador79/25 e prazo31.12.27; sem marcador posterior visível no cabeçalho consultado."
+  },
+  "limites": [
+    "Cadeia mínima de prorrogação não restaura dispositivo revogado e não converte redação anterior em atual.",
+    "Não homologa todas variantes, códigos ou exceções dos anexos.",
+    "Não prova incorporação estadual ou aplicabilidade ao contribuinte/operação.",
+    "Histórico excluído da pesquisa individual conforme comandoCOORD.",
+    "Datas derivadas estão identificadas; decisão humana segue pendente."
+  ]
+}

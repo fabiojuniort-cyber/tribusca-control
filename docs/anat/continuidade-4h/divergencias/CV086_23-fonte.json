@@ -1,0 +1,34 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV086_23",
+  "consultaUTC": "2026-10-16T05:40:28.242755+00:00",
+  "tentativasHTTP": 2,
+  "tentativaAnterior": {
+    "consultaUTC": "2026-10-16T05:40:13.879566+00:00",
+    "erro": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "status": "NOT_PROVEN"
+  },
+  "status": 200,
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "8c2aba3dfe114e1352e8df5e5478e63e534d1a01031b2075daf03b112287ec20",
+  "bytesRespostaHTTP": 167058,
+  "sha256ArquivoRepoLF": "1a6c432f6a912f7265eb200c956229438b75b57d044ed9461b16d5d5d871f19d",
+  "bytesArquivoRepoLF": 167052,
+  "normalizacaoArquivoRepo": "CRLF/CR→LF; codificação UTF-8, sem alteração textual.",
+  "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\divergencias-http\\CV086_23.html",
+  "textoDerivadoMetodo": "text_content no elemento parent-fieldname-text; colapso de espaços.",
+  "caracteresSubstituicaoTexto": 0,
+  "links": [
+    {
+      "texto": "45/23",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2023/dp045_23"
+    },
+    {
+      "texto": "31/23",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2023/ad030_23"
+    },
+    {
+      "texto": "Convênio ICMS nº 52, de 26 de setembro de 1991",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91"
+    }
+  ]
+}

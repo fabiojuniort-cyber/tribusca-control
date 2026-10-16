@@ -1,0 +1,35 @@
+{
+  "origemDaFrente": "CLAUDE-COORD → GPT-EXEC",
+  "confirmacaoRecebida": "Sim, confirmo.",
+  "limite": "Aprovação de dois trechos para exclusão do texto corrente do piloto; nenhuma aprovação global ou uso vigente.",
+  "aprovacoes": [
+    {
+      "id": "ANAT03-00342",
+      "codigoLiteral": "8450.11.00",
+      "paginaPDF": 12,
+      "rotuloVisual": "Anexo I, item 39.1",
+      "situacaoConfirmada": "revogado",
+      "aprovado": true,
+      "elegivelTextoCorrentePiloto": false,
+      "dataAprovacao": "2026-10-16",
+      "dataReferenciaPilotoMantida": "2026-10-15",
+      "escopo": "Somente identificação de revogação/redação anterior e exclusão do texto corrente do piloto; não homologa uso tributário atual, outros trechos ou operações.",
+      "evidenciaHumana": "Pergunta específica sobre esses dois trechos seguida da resposta do Fábio: Sim, confirmo.",
+      "observacaoPlanilha": "Fábio, 16/10/2026. PDF p. 12. Redação anterior: 15/10/2009 a 29/12/2015; revogado desde 30/12/2015. Fábio confirmou somente a exclusão do texto corrente do piloto. Somente identificação de revogação/redação anterior e exclusão do texto corrente do piloto; não homologa uso tributário atual, outros trechos ou operações."
+    },
+    {
+      "id": "ANAT03-00961",
+      "codigoLiteral": "8450.11.00",
+      "paginaPDF": 29,
+      "rotuloVisual": "Anexo I anterior, item 25.01(a)",
+      "situacaoConfirmada": "redação anterior",
+      "aprovado": true,
+      "elegivelTextoCorrentePiloto": false,
+      "dataAprovacao": "2026-10-16",
+      "dataReferenciaPilotoMantida": "2026-10-15",
+      "escopo": "Somente identificação de revogação/redação anterior e exclusão do texto corrente do piloto; não homologa uso tributário atual, outros trechos ou operações.",
+      "evidenciaHumana": "Pergunta específica sobre esses dois trechos seguida da resposta do Fábio: Sim, confirmo.",
+      "observacaoPlanilha": "Fábio, 16/10/2026. PDF p. 29. Redação anterior do anexo: 20/10/2008 a 14/10/2009. Fábio confirmou somente a exclusão do texto corrente do piloto. Somente identificação de revogação/redação anterior e exclusão do texto corrente do piloto; não homologa uso tributário atual, outros trechos ou operações."
+    }
+  ]
+}

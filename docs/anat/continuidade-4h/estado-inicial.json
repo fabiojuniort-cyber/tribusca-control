@@ -1,0 +1,72 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC",
+  "observadoEmUTC": "2026-10-16T05:10:22.595166+00:00",
+  "headBase": "a73a52911fbb822a1866f5b78bfc6624b45802f4",
+  "risco": "R0 documental; R1 leitura de fontes oficiais",
+  "registros": 2434,
+  "idsAprovadosRestritos": [
+    "ANAT03-00342",
+    "ANAT03-00961"
+  ],
+  "demaisSemAprovacao": 2432,
+  "arquivosProtegidos": [
+    {
+      "arquivo": "docs/anat/anat-03-trechos.json",
+      "bytesVersionados": 7888604,
+      "sha256Versionado": "051c2a00f96866cad01831a7915d935e9d1ba08b707711199b19fbb130a30410",
+      "sha256Local": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+      "normalizacao": "LF"
+    },
+    {
+      "arquivo": "docs/anat/anat-03-dossie-vigencia.xlsx",
+      "bytesVersionados": 473952,
+      "sha256Versionado": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894",
+      "sha256Local": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894",
+      "normalizacao": "binario"
+    },
+    {
+      "arquivo": "docs/anat/anat-02-anotacao.md",
+      "bytesVersionados": 1599612,
+      "sha256Versionado": "d334a55599899c736a7341d91e27887e9af006fd377737a434a90ac0e764376a",
+      "sha256Local": "0daf10784377545afdda60553b4a863aa631c42f887736922fd6d738c2ebc044",
+      "normalizacao": "LF"
+    },
+    {
+      "arquivo": "docs/anat/anat-02-fichas.md",
+      "bytesVersionados": 49694,
+      "sha256Versionado": "97df797a6b0becee85773971ffddec1a57e7331a3999676e707c722434d5ba2d",
+      "sha256Local": "97df797a6b0becee85773971ffddec1a57e7331a3999676e707c722434d5ba2d",
+      "normalizacao": "LF"
+    },
+    {
+      "arquivo": "docs/anat/anat-02-dashboard-resultado.json",
+      "bytesVersionados": 1465,
+      "sha256Versionado": "b230a27174a9e42540c529704c8dba6830d3f0a334d0cfe62c41a791d229f677",
+      "sha256Local": "b230a27174a9e42540c529704c8dba6830d3f0a334d0cfe62c41a791d229f677",
+      "normalizacao": "LF"
+    },
+    {
+      "arquivo": "docs/anat/lote-autonomo/aprovacoes-fabio.json",
+      "bytesVersionados": 2278,
+      "sha256Versionado": "79c701618480e31f72cb4df36f7c47e7a27c635cca19f1d0331ae03d175755d7",
+      "sha256Local": "021ec3cc6668b36c83a5241c0a4564d450735f7ea42fcacb3fe392c6867bd1a0",
+      "normalizacao": "LF"
+    },
+    {
+      "arquivo": "docs/anat/lote-autonomo/notas/notas-alvos.json",
+      "bytesVersionados": 163749,
+      "sha256Versionado": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+      "sha256Local": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+      "normalizacao": "LF"
+    },
+    {
+      "arquivo": "docs/anat/lote-autonomo/atos/dependencias-adicionais.json",
+      "bytesVersionados": 13646,
+      "sha256Versionado": "1eee04b8e56544a5914de1cb18fecf45d322585eeff5a12ff0c379f6366bab77",
+      "sha256Local": "1eee04b8e56544a5914de1cb18fecf45d322585eeff5a12ff0c379f6366bab77",
+      "normalizacao": "LF"
+    }
+  ],
+  "resultado": "PASS",
+  "limite": "Controle de integridade e aprovação documental; não prova vigência, produto ou produção."
+}

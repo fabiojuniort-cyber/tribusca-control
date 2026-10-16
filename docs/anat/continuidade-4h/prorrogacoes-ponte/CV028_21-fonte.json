@@ -1,0 +1,15 @@
+{
+  "fonte": "CV028_21",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV028_21",
+  "consultaUTC": "2026-10-16T06:10:39.160715+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "ccfb5950b3e990f02e54555c68de7ec4d256cd0e55ac19e443658c7325dbb3cf",
+  "sha256ArquivoLF": "b20a801262f65c1f131d4fb365c02ac394af1279d44c3af84087dc65b43d144a",
+  "bytesArquivoLF": 281415,
+  "sha256Texto": "5efff8e5759b5def919bf3068635c5e3896eabc8b5396765b13f36e81bbffbe4",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}

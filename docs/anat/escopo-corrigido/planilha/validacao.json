@@ -1,0 +1,15 @@
+{
+  "classificados": 2434,
+  "blocos": 25,
+  "prazos": 4,
+  "aprovados": 0,
+  "pendentes": 25,
+  "idsUnicos": 2434,
+  "classificacao": {
+    "vigente — proposta": 728,
+    "não elegível": 1706
+  },
+  "sha256": "fa09bc44bab4eb7191cc632cf9d58be93ac9a75b2e3a488f009d68fb86f388c2",
+  "arquivo": "docs/anat/anat-03-conferencia-blocos.xlsx",
+  "dataReferencia": "2026-10-16"
+}

@@ -1,0 +1,26 @@
+{
+  "origem": "CLAUDE-COORD",
+  "escopo": "Somente complemento isolado; sem promoção de vínculo/aprovação",
+  "entradasPreservadas": {
+    "anat-03-trechos.json": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+    "anat-03-dossie-vigencia.xlsx": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894",
+    "lote-autonomo/notas/notas-alvos.json": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+    "continuidade-4h/notas/triagem-105.json": "22ee71a6d79d3f18a717cb5eed660e9237a2252086971e4f9d7dcdda1fb81794",
+    "continuidade-4h/controle/mapa-atos-ids.json": "d796ab309f11c0b3b0ad5a8b253075529c1a08d1861627a5e9f0cf4d93819d55",
+    "lote-autonomo/atos/dependencias-adicionais.json": "1eee04b8e56544a5914de1cb18fecf45d322585eeff5a12ff0c379f6366bab77"
+  },
+  "saidasSha256": {
+    "confronto.json": "1aadd5c98d1413aa1f27e1c63a164263bf6cafef8c2bbb00df911e5430f3cebc",
+    "evidencia-129-19.txt": "e13b11bc7eaa7a7be0964a1c91b99f563045440c8d9a38ff49551bf91f888509",
+    "evidencia-146-20.txt": "095a4f27aed84b5473c641f639c60c435b78a7ff450fcd66d526efa39a8f092c",
+    "evidencia-199-23.txt": "8a6dce33e086f2c435eabdec543a59a9226c1cbc89c45ef936cabcabeebd0d8f",
+    "relatorio.md": "2354f224086d3b639d1656aef6ed3b873b363c342e6611da8e34357b45e7795e"
+  },
+  "validacoes": {
+    "idsCandidatosUnicos": 10,
+    "idsAprovadosRestritosAusentes": true,
+    "todosCandidatosPendentes": true,
+    "entradasSemAlteracao": true
+  },
+  "hashObservacao": "Hashes SHA-256 dos bytes locais UTF-8/LF. Saídas de evidência são excertos/paráfrases, não resposta HTTP integral; Git não deve converter estes bytes ao verificar."
+}

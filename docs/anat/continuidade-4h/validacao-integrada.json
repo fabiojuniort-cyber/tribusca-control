@@ -1,0 +1,46 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC",
+  "observadoEmUTC": "2026-10-16T05:13:05.836796+00:00",
+  "resultado": "PASS",
+  "arquivosProtegidosIntactos": 8,
+  "notasOriginaisSemAlvoCobertas": 105,
+  "notasComCandidatosNovos": 44,
+  "notasSemCandidatoIndividual": 61,
+  "relacoesNovasNotaID": 92,
+  "idsNovos": 89,
+  "idsMapaAnterior": 77,
+  "idsUniaoMapasNotas": 166,
+  "paresControleAtoID": 49,
+  "idsControleAtos": 47,
+  "aprovacoesNovas": 0,
+  "demaisTrechosPendentes": 2432,
+  "limite": "Verificação de integridade e referências; candidatos não são homologação jurídica. Datas dos atos têm comprovação própria no relatório de fontes.",
+  "fontesOficiaisNovas": [
+    {
+      "arquivo": "docs/anat/continuidade-4h/atos/AD016_21.html",
+      "sha256LF": "b8a336a2597eadd0cfd809137d8aa603f09a2cb0ee5a6516a0cf63b5793b32b1",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ato_decl_16_21-1",
+      "resultado": "PASS"
+    },
+    {
+      "arquivo": "docs/anat/continuidade-4h/atos/AD038_21.html",
+      "sha256LF": "4723a4e1ef2c8473be0c8f731f6ef55b035acefa83eb004c4abe7ca88ec39d69",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad038_21",
+      "resultado": "PASS"
+    },
+    {
+      "arquivo": "docs/anat/continuidade-4h/atos/CV104_21.html",
+      "sha256LF": "0efb7a9b93caf258c46405e8d1a0feb4280c6af19edc1c2817c1d0a03c2892fb",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV104_21",
+      "resultado": "PASS"
+    },
+    {
+      "arquivo": "docs/anat/continuidade-4h/atos/CV223_21.html",
+      "sha256LF": "895deb3a787a34bf2d9326163c1b0c7ef2085ec0c6251f6e4a942414125a67e7",
+      "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV223_21",
+      "resultado": "PASS"
+    }
+  ],
+  "linksLocaisNovos": "PASS",
+  "arquivosProtegidosRechecadosUTC": "2026-10-16T05:14:57.615037+00:00"
+}

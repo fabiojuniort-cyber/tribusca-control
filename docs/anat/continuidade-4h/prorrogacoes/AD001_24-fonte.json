@@ -1,0 +1,15 @@
+{
+  "fonte": "AD001_24",
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2024/ad001_24",
+  "consultaUTC": "2026-10-16T05:41:09.905091+00:00",
+  "statusHTTP": 200,
+  "encoding": "utf-8",
+  "sha256HTTP": "cd3913ce769b869c645fb9a220276b4cc277f1e57c361a608e3066dfdea6aa81",
+  "sha256ArquivoLF": "1aa9bafe8a1d2674a0ce73f25114c3e2729b364e24305c0f2315ff99bc230f85",
+  "bytesArquivoLF": 53949,
+  "sha256Texto": "bdd764487931a51d32d0e8b2538862763cff7cc761c729aa77a7927aeb72c390",
+  "seletorTexto": "//*[@id=\"parent-fieldname-text\"]",
+  "nosTexto": 1,
+  "normalizacao": "HTML CRLF→LF; texto derivado do corpo legal com espaços colapsados.",
+  "resultado": "FONTE_RECUPERADA_SEM_CONCLUSAO_JURIDICA"
+}
