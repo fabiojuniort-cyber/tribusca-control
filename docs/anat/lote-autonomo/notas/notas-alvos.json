@@ -1,0 +1,3595 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC; lote autônomo autorizado por Fábio",
+  "dataReferencia": "2026-10-16",
+  "tipo": "Mapa documental offline; sem homologação jurídica",
+  "fonteOficial": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV052_91",
+  "snapshotGitHub": "https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/fb880354fbbbc90f681290e57dc905bde9ce9c08/ops/confaz/acts/CV052_91.html",
+  "sha256Local": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+  "sha256NormalizadoLF": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+  "contagens": {
+    "notasInventariadas": 176,
+    "notasRemissoNaoVazias": 132,
+    "associacoesPropostas": 71,
+    "idsAlvoUnicos": 77,
+    "idsContextuaisNaBase": 2273,
+    "idsContextuaisComProposta": 52,
+    "notasPendentes": 105
+  },
+  "controlesExcluidos": [
+    "ANAT03-00342",
+    "ANAT03-00961"
+  ],
+  "notas": [
+    {
+      "idNota": "N52-001",
+      "indiceRemissoBase0": null,
+      "literal": "Publicação DOU de 30.09.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[2]",
+      "classes": "DataPublicao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.09.91"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-002",
+      "indiceRemissoBase0": null,
+      "literal": "Retificação DOU de 11.10.91 e 04.12.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[3]",
+      "classes": "DataPublicao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "11.10.91",
+        "04.12.91"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-003",
+      "indiceRemissoBase0": null,
+      "literal": "Ratificação Nacional DOU de 17.10.91, pelo Ato COTEPE/ICMS 08/91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[4]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "08/91",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/atos/1991/ac008_91"
+        }
+      ],
+      "datasLiterais": [
+        "17.10.91"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-004",
+      "indiceRemissoBase0": null,
+      "literal": "Alterado pelos Convs. ICMS 87/91, 90/91, 08/92, 13/92, 45/92, 109/92, 02/93, 65/93, 11/94, 72/94, 74/95, 63/96, 74/96, 101/96, 21/97, 111/97, 01/00, 47/01, 102/05, 157/06, 112/08, 89/09, 51/10, 55/10, 140/10, 182/10, 27/12, 96/12, 69/13, 70/13, 95/13, 123/13, 158/13, 154/15, 01/16, 113/17, 129/19, 30/20, 115/20, 146/20, 165/21, 86/23, 199/23, 10/26.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[5]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "87/91",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/resolveuid/9766c92207d74cc9aa0a5e5902fab70f"
+        },
+        {
+          "texto": "90/91",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV090_91"
+        },
+        {
+          "texto": "08/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV008_92"
+        },
+        {
+          "texto": "13/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV013_92"
+        },
+        {
+          "texto": "45/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV045_92"
+        },
+        {
+          "texto": "109/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV109_92"
+        },
+        {
+          "texto": "02/93",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93"
+        },
+        {
+          "texto": "65/93",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV065_93"
+        },
+        {
+          "texto": "11/94",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1994/CV011_94"
+        },
+        {
+          "texto": "72/94",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1994/CV072_94"
+        },
+        {
+          "texto": "74/95",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1995/CV074_95"
+        },
+        {
+          "texto": "63/96",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV063_96"
+        },
+        {
+          "texto": "74/96",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV074_96"
+        },
+        {
+          "texto": "101/96",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV101_96"
+        },
+        {
+          "texto": "21/97",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV021_97"
+        },
+        {
+          "texto": "111/97",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV111_97"
+        },
+        {
+          "texto": "01/00",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2000/CV001_00"
+        },
+        {
+          "texto": "47/01",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV047_01"
+        },
+        {
+          "texto": "102/05",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV102_05"
+        },
+        {
+          "texto": "157/06",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV157_06"
+        },
+        {
+          "texto": "112/08",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV112_08"
+        },
+        {
+          "texto": "89/09",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV089_09"
+        },
+        {
+          "texto": "51/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV051_10"
+        },
+        {
+          "texto": "55/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV055_10"
+        },
+        {
+          "texto": "140/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV140_10"
+        },
+        {
+          "texto": "182/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV182_10"
+        },
+        {
+          "texto": "27/12",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV027_12"
+        },
+        {
+          "texto": "96/12",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV096_12"
+        },
+        {
+          "texto": "69/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV069_13"
+        },
+        {
+          "texto": "70/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV070_13"
+        },
+        {
+          "texto": "95/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV095_13"
+        },
+        {
+          "texto": "123/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV123_13"
+        },
+        {
+          "texto": "158/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV158_13"
+        },
+        {
+          "texto": "154/15",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV154_15"
+        },
+        {
+          "texto": "01/16",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV001_16"
+        },
+        {
+          "texto": "113/17",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV113_17"
+        },
+        {
+          "texto": "129/19",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV129_19"
+        },
+        {
+          "texto": "30/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV030_20"
+        },
+        {
+          "texto": "115/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV115_20"
+        },
+        {
+          "texto": "146/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV146_20"
+        },
+        {
+          "texto": "165/21",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/cv165_21"
+        },
+        {
+          "texto": "86/23",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV086_23"
+        },
+        {
+          "texto": "199/23",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV199_23"
+        },
+        {
+          "texto": "10/26",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2026/CV010_26"
+        }
+      ],
+      "datasLiterais": [],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-005",
+      "indiceRemissoBase0": null,
+      "literal": "Vide Convs. ICMS 79/91, 88/92, 02/93.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[6]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "79/91",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV079_91"
+        },
+        {
+          "texto": "88/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV088_92"
+        },
+        {
+          "texto": "02/93",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93"
+        }
+      ],
+      "datasLiterais": [],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-006",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.93, pelo Conv. ICMS 148/92.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[7]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "148/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV148_92"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.93"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-007",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.95, pelo Conv. ICMS 124/93.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[8]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "124/93",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV124_93"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.95"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-008",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.96, pelo Conv. ICMS 22/95.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[9]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "22/95",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1995/CV022_95"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.96"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-009",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.97, pelo Conv. ICMS 21/96.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[10]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "21/96",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV021_96"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.97"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-010",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.98, exceto a cláusula terceira, pelo Conv. ICMS 21/97.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[11]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "21/97",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV021_97"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.98"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-011",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.99, pelo Conv. ICMS 23/98.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[12]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "23/98",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1998/cv023_98"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.99"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-012",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.01, pelo Conv. ICMS 05/99.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[13]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "05/99",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1999/CV005_99"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.01"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-013",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.02, pelo Conv. ICMS 10/01.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[14]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "10/01",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV010_01"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.02"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-014",
+      "indiceRemissoBase0": null,
+      "literal": "Vide Conv. ICMS 113/98, que autoriza o RN e SE a revogarem o benefício concedido.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[15]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "113/98",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1998/cv113_98"
+        }
+      ],
+      "datasLiterais": [],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-015",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.03, pelo Conv. ICMS 158/02.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[16]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "158/02",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2002/CV158_02"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.03"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-016",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.04, pelo Conv. ICMS 30/03.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[17]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "30/03",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2003/CV030_03"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.04"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-017",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.10.07, pelo Conv. ICMS 10/04.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[18]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "10/04",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2004/CV010_04"
+        }
+      ],
+      "datasLiterais": [
+        "31.10.07"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-018",
+      "indiceRemissoBase0": null,
+      "literal": "Vide convalidação das operações com as mercadorias descritas no item 22 do Anexo II, pelo Conv. ICMS 157/06, no período de 22.07.04 a 08.01.07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[19]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "157/06",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV157_06"
+        }
+      ],
+      "datasLiterais": [
+        "22.07.04",
+        "08.01.07"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-019",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.07, pelo Conv. ICMS 124/07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[20]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "124/07",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2007/CV124_07"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.07"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-020",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.08, pelo Conv. ICMS 149/07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[21]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "149/07",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2007/CV149_07"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-021",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.07.08, pelo Conv. ICMS 53/08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[22]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "53/08",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV053_08"
+        }
+      ],
+      "datasLiterais": [
+        "31.07.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-022",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.08, pelo Conv. ICMS 91/08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[23]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "91/08",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV091_08"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-023",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.07.09, pelo Conv. ICMS 138/08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[24]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "138/08",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV138_08"
+        }
+      ],
+      "datasLiterais": [
+        "31.07.09"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-024",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.09, pelo Conv. ICMS 69/09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[25]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "69/09",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV069_09"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.09"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-025",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.01.10, pelo Conv. ICMS 119/09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[26]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "119/09",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV119_09"
+        }
+      ],
+      "datasLiterais": [
+        "31.01.10"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-026",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.12, pelo Conv. ICMS 01/10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[27]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "01/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV001_10"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.12"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-027",
+      "indiceRemissoBase0": null,
+      "literal": "Vide cláusula quarta do Conv. ICMS 51/10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[28]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "51/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV051_10"
+        }
+      ],
+      "datasLiterais": [],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-028",
+      "indiceRemissoBase0": null,
+      "literal": "Vide Convênio ICMS 112/10, que altera o Anexo I do Convênio ICMS 89/09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[29]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "112/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV112_10"
+        }
+      ],
+      "datasLiterais": [],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-029",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.07.13, pelo Conv. ICMS 101/12.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[30]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "101/12",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV101_12"
+        }
+      ],
+      "datasLiterais": [
+        "31.07.13"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-030",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.07.14, pelo Conv. ICMS 14/13.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[31]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "14/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV014_13"
+        }
+      ],
+      "datasLiterais": [
+        "31.07.14"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-031",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.05.15, pelo Conv. ICMS 191/13.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[32]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "191/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV191_13"
+        }
+      ],
+      "datasLiterais": [
+        "31.05.15"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-032",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.15, pelo Conv. ICMS 27/15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[33]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "27/15",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV027_15"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.15"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-033",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.06.17, pelo Conv. ICMS 154/15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[34]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "154/15",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV154_15"
+        }
+      ],
+      "datasLiterais": [
+        "30.06.17"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-034",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.09.19, pelo Conv. ICMS 49/17.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[35]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "49/17",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV049_17"
+        }
+      ],
+      "datasLiterais": [
+        "30.09.19"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-035",
+      "indiceRemissoBase0": null,
+      "literal": "Vide cláusula terceira do Conv. ICMS 49/17, quanto a observância das disposições do Conv. ICMS 42/16, no que couber.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[36]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "49/17",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV049_17"
+        },
+        {
+          "texto": "42/16",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV042_16"
+        }
+      ],
+      "datasLiterais": [],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-036",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.20, pelo Conv. ICMS 133/19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[37]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "133/19",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV133_19"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.20"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-037",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.20, pelo Conv. ICMS 22/20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[38]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "22/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV022_20"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.20"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-038",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado até 31.03.21, pelo Conv. ICMS 133/20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[39]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "133/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV133_20"
+        }
+      ],
+      "datasLiterais": [
+        "31.03.21"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-039",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado até 31.03.22, pelo Conv. ICMS 28/21.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[40]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "28/21",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV028_21"
+        }
+      ],
+      "datasLiterais": [
+        "31.03.22"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-040",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.24, pelo Conv. ICMS 178/21.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[41]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "178/21",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV178_21"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.24"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-041",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 30.04.26, pelo Conv. ICMS 226/23.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[42]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "226/23",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV226_23"
+        }
+      ],
+      "datasLiterais": [
+        "30.04.26"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-042",
+      "indiceRemissoBase0": null,
+      "literal": "Prorrogado, até 31.12.26, pelo Conv. ICMS 10/26.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[43]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "10/26",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2026/CV010_26"
+        }
+      ],
+      "datasLiterais": [
+        "31.12.26"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-043",
+      "indiceRemissoBase0": 0,
+      "literal": "Nova redação à cláusula primeira pelo Conv. ICMS 01/00, efeitos a partir de 01.08.00.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[49]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.08.00"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00001",
+          "caminho": "Cláusula primeira/bloco 50",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[50]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula primeira Fica reduzida a base de cálculo do ICMS nas operações com máquinas, aparelhos e equipamentos industriais arrolados no Anexo I deste Convênio, de forma que a carga tributária seja equivalente aos percentuais a seguir:",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-044",
+      "indiceRemissoBase0": 1,
+      "literal": "Nova redação dada ao inciso II da cláusula primeira pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[54]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00005",
+          "caminho": "Cláusula primeira/inciso II/bloco 55",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[55]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "II - nas operações internas, 8,80% (oito inteiros e oitenta centésimos por cento).",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-045",
+      "indiceRemissoBase0": 2,
+      "literal": "Redação anterior dada ao inciso II da cláusula primeira pelo Conv. ICMS 01/00, efeitos de 01.08.00 a 29.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[56]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.08.00",
+        "29.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00006",
+          "caminho": "Cláusula primeira/inciso II/bloco 57",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[57]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "II - nas operações interestaduais com consumidor ou usuário final, não contribuintes do ICMS, e nas operações internas, 8,80% (oito inteiros e oitenta centésimos por cento).",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-046",
+      "indiceRemissoBase0": 3,
+      "literal": "Redação original, efeitos até 31.07.00:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[58]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "31.07.00"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00007",
+          "caminho": "Cláusula primeira/bloco 59",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[59]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula primeira Fica reduzida a base de cálculo do ICMS nas operações com máquinas, aparelhos e equipamentos industriais, arrolados no Anexo I deste Convênio, de forma que a carga tributária seja equivalente aos percentuais a seguir:",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-047",
+      "indiceRemissoBase0": 4,
+      "literal": "Redação anterior dada ao inciso II da cláusula primeira pelo Conv. ICMS 13/92, efeitos de 17.10.91 a 31.07.00:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[63]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "17.10.91",
+        "31.07.00"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00011",
+          "caminho": "Cláusula primeira/inciso II/bloco 64",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[64]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "II - nas operações interestaduais com consumidor ou usuário final, não contribuintes do ICMS, e nas operações internas, 11% (onze por cento).",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-048",
+      "indiceRemissoBase0": null,
+      "literal": "Redação original, efeitos até 16.10.91:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[65]",
+      "classes": "RedaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "16.10.91"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-049",
+      "indiceRemissoBase0": 5,
+      "literal": "Nova redação dada à cláusula segunda pelo Conv. ICMS 01/00, efeitos a partir de 01.08.00.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[67]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.08.00"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00013",
+          "caminho": "Cláusula segunda/bloco 68",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[68]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula segunda Fica reduzida a base de cálculo do ICMS nas operações com máquinas e implementos agrícolas arrolados no Anexo II deste Convênio, de forma que a carga tributária seja equivalente aos percentuais a seguir:",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-050",
+      "indiceRemissoBase0": 6,
+      "literal": "Nova redação dada ao inciso II da cláusula segunda pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[72]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00017",
+          "caminho": "Cláusula segunda/inciso II/bloco 73",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[73]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "II - nas operações internas, 5,60% (cinco inteiros e sessenta centésimos por cento);",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-051",
+      "indiceRemissoBase0": 7,
+      "literal": "Redação anterior dada ao inciso II da cláusula segunda pelo Conv. ICMS 01/00, efeitos de 01.08.00 a 29.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[74]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.08.00",
+        "29.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00018",
+          "caminho": "Cláusula segunda/inciso II/bloco 75",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[75]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "II - nas operações interestaduais com consumidor ou usuário final, não contribuintes do ICMS, e nas operações internas, 5,60% (cinco inteiros e sessenta centésimos por cento).",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-052",
+      "indiceRemissoBase0": 8,
+      "literal": "Redação anterior dada à cláusula segunda pelo Conv. ICMS 65/93, efeitos de 04.10.93 a 31.07.00.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[76]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "04.10.93",
+        "31.07.00"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00019",
+          "caminho": "Cláusula segunda/bloco 77",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[77]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula segunda Fica reduzida a base de cálculo do ICMS nas operações com máquinas e implementos agrícolas, arrolados no Anexo II deste Convênio, de forma que a carga tributária seja equivalente aos percentuais a seguir:",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-053",
+      "indiceRemissoBase0": 9,
+      "literal": "Redação original, efeitos até 03.10.93:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[82]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "03.10.93"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00024",
+          "caminho": "Cláusula segunda/bloco 83",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[83]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula segunda Fica reduzida a base de cálculo do ICMS nas operações com máquinas e implementos agrícolas, arrolados no Anexo II deste Convênio, de forma que a carga tributária seja equivalente aos percentuais a seguir:",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-054",
+      "indiceRemissoBase0": 10,
+      "literal": "Redação anterior dada ao inciso II da cláusula segunda pelo Conv. ICMS 13/92, efeitos de 17.10.91 a 03.10.93:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[87]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "17.10.91",
+        "03.10.93"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00028",
+          "caminho": "Cláusula segunda/inciso II/bloco 88",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[88]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "II - nas operações interestaduais com consumidor ou usuário final, não contribuintes do ICMS, e nas operações internas, 8,8% (oito inteiros e oito décimos por cento).",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-055",
+      "indiceRemissoBase0": 11,
+      "literal": "Redação original, efeitos até 16.10.91:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[89]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "16.10.91"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00029",
+          "caminho": "Cláusula segunda/inciso II/bloco 90",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[90]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "II - nas operações internas, 8,8%.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-056",
+      "indiceRemissoBase0": 12,
+      "literal": "Revogada a cláusula terceira pelo Conv. ICMS 21/97, efeitos a partir de 01.05.97.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[91]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.05.97"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00030",
+          "caminho": "Cláusula terceira/bloco 92",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[92]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula terceira REVOGADA",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-057",
+      "indiceRemissoBase0": 13,
+      "literal": "Redação original, efeitos até 30.04.97.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[93]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.04.97"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00031",
+          "caminho": "Cláusula terceira/bloco 94",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[94]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula terceira Poderão os Estados e o Distrito Federal permitir que estabelecimento industrial adquirente dos produtos objeto da Cláusula primeira se credite de até 20% (vinte por cento) do imposto pago na operação, divididos em parcelas iguais, durante 12 (doze) meses.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-058",
+      "indiceRemissoBase0": 14,
+      "literal": "Acrescida a cláusula quarta pelo Conv. 87/91, efeitos a partir de 17.10.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[96]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "17.10.91"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00033",
+          "caminho": "Cláusula quarta/bloco 97",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[97]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula quarta Fica dispensado o estorno do crédito do imposto relativo à entrada de mercadoria cuja operação subseqüente seja beneficiada pela redução da base de cálculo de que trata o presente Convênio.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-059",
+      "indiceRemissoBase0": 15,
+      "literal": "Nova redação dada ao §1º da cláusula quarta pelo Conv. ICMS 86/23, efeitos a partir de 25.08.23.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[98]",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "25.08.23"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00034",
+          "caminho": "Cláusula quarta/§ 1º/bloco 99",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[99]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "§ 1º Não se aplicam as disposições desta cláusula ao Estado de Sergipe.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-060",
+      "indiceRemissoBase0": 16,
+      "literal": "Redação anterior renumerada do parágrafo único para § 1º da cláusula segunda pelo Conv. ICMS 165/21, efeitos de 26.10.21. a 24.08.23.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[100]",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "26.10.21",
+        "24.08.23"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-061",
+      "indiceRemissoBase0": 17,
+      "literal": "Redação anterior dada ao parágrafo único da cláusula quarta pelo Conv. ICMS 1/16, efeitos de 01.01.16 até 25.10.21.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[102]",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.01.16",
+        "25.10.21"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00036",
+          "caminho": "Cláusula quarta/Parágrafo único/bloco 103",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[103]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Parágrafo único. Não se aplicam as disposições desta cláusula aos Estados de Piauí e Sergipe.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-062",
+      "indiceRemissoBase0": 18,
+      "literal": "Redação anterior dada ao parágrafo único da cláusula quarta pelo Conv. ICMS 123/13, efeitos de 07.11.13 a 31.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[104]",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "07.11.13",
+        "31.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00037",
+          "caminho": "Cláusula quarta/Parágrafo único/bloco 105",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[105]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Parágrafo único. Não se aplicam as disposições desta cláusula, aos Estados de Mato Grosso, Piauí e Sergipe.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-063",
+      "indiceRemissoBase0": 19,
+      "literal": "Redação anterior acrescida do parágrafo único à cláusula quarta pelo Conv. 69/13, efeitos de 01.10.13 a 06.11.13.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[106]",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.10.13",
+        "06.11.13"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00038",
+          "caminho": "Cláusula quarta/Parágrafo único/bloco 107",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[107]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Parágrafo único. Não se aplicam as disposições desta cláusula, ao Estado de Mato Grosso.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-064",
+      "indiceRemissoBase0": 20,
+      "literal": "Nova redação dada ao §2º da cláusula quarta-feira pelo Conv. ICMS 10/26, efeitos a partir de 01.05.26.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[108]",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.05.26"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-065",
+      "indiceRemissoBase0": 21,
+      "literal": "Redação anterior acrescida do §2º da cláusula quarta pelo Conv. 165/21, efeitos de 26.10.21 a 30.04.26.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[110]",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "26.10.21",
+        "30.04.26"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00040",
+          "caminho": "Cláusula quarta/§ 2º/bloco 111",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[111]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "§ 2º Os Estados do Paraná, Rio Grande do Sul e Santa Catarina ficam autorizados a não aplicar o disposto no “caput”.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-066",
+      "indiceRemissoBase0": 22,
+      "literal": "Acrescida a cláusula quinta pelo Conv. 87/91, efeitos a partir de 17.10.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[112]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "17.10.91"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00041",
+          "caminho": "Cláusula quinta/bloco 113",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[113]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula quinta Para efeito de exigência do ICMS devido em razão do diferencial de alíquota, o Estado onde se localiza o destinatário dos produtos de que trata este Convênio reduzirá a base de cálculo do imposto de tal forma que a carga tributária total corresponda aos percentuais estabelecidos nas Cláusulas primeira e segunda para as respectivas operações internas.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-067",
+      "indiceRemissoBase0": 23,
+      "literal": "Revogado o parágrafo único da cláusula quinta pelo Conv. ICMS 1/16, efeitos a partir de 01.01.16.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[114]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.01.16"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00042",
+          "caminho": "Cláusula quinta/Parágrafo único/bloco 115",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[115]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Parágrafo único. REVOGADO",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-068",
+      "indiceRemissoBase0": 24,
+      "literal": "Acrescido o parágrafo único à cláusula quinta pelo Conv. 69/13, efeitos de 01.10.13 a 31.12.16.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[116]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.10.13",
+        "31.12.16"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-069",
+      "indiceRemissoBase0": 25,
+      "literal": "Renumerada a cláusula quarta para cláusula sexta pelo Conv. ICMS 87/91, efeitos a partir de 17.10.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[118]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "17.10.91"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00044",
+          "caminho": "Cláusula sexta/bloco 119",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[119]",
+          "ncmNBMLiteral": "",
+          "textoLiteral": "Cláusula sexta Este Convênio entra em vigor na data da publicação de sua ratificação nacional, produzindo efeitos até 31 de dezembro de 1992.",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Alvo explícito na nota + dispositivo sucessor imediato, apenas esse bloco; sem herança aos demais dispositivos."
+    },
+    {
+      "idNota": "N52-070",
+      "indiceRemissoBase0": 26,
+      "literal": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[121]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-071",
+      "indiceRemissoBase0": 27,
+      "literal": "Nova redação dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 27/12, efeitos a partir de 01.06.12.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[50]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.06.12"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00096",
+          "caminho": "ANEXO I/tabela 1/linha 51/item 13.7",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[51]",
+          "ncmNBMLiteral": "8417.80.90",
+          "textoLiteral": "13.7 | Outros fornos industriais. | 8417.80.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-072",
+      "indiceRemissoBase0": 28,
+      "literal": "Redação anterior dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 31.05.12.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[52]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "31.05.12"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00098",
+          "caminho": "ANEXO I/tabela 1/linha 53/item 13.7",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[53]",
+          "ncmNBMLiteral": "8417.8090",
+          "textoLiteral": "13.7 | Fornos industriais para carbonização de .7madeira | 8417.8090",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-073",
+      "indiceRemissoBase0": 29,
+      "literal": "Acrescido o subitem 14.3 ao Anexo I pelo Conv. ICMS 55/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[57]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00103",
+          "caminho": "ANEXO I/tabela 1/linha 58/item 14.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[58]",
+          "ncmNBMLiteral": "8418.69.20",
+          "textoLiteral": "14.3 | Resfriadores de leite | 8418.69.20",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-074",
+      "indiceRemissoBase0": 30,
+      "literal": "Acrescido o subitem 19.8 ao Anexo I pelo Conv. ICMS 96/12, efeitos a partir de 1º.12.12.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[109]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "1º.12.12"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00157",
+          "caminho": "ANEXO I/tabela 1/linha 110/item 19.8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[110]",
+          "ncmNBMLiteral": "8423.82.00",
+          "textoLiteral": "19.8 | Balança de capacidade superior a 30kg, mas não superior a 5.000kg | 8423.82.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-075",
+      "indiceRemissoBase0": null,
+      "literal": "Redação anterior dada ao subitem 20.2 do Anexo I pelo Conv. ICMS 129/19, efeitos até 30.09.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[115]/td/p",
+      "classes": "",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.09.19"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-076",
+      "indiceRemissoBase0": 31,
+      "literal": "Nova redação dada ao subitem 20.3 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[117]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00165",
+          "caminho": "ANEXO I/tabela 1/linha 118/item 20.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[118]",
+          "ncmNBMLiteral": "8424.30.20",
+          "textoLiteral": "20.3 | Máquinas e aparelhos de jato de areia | 8424.30.20",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-077",
+      "indiceRemissoBase0": 32,
+      "literal": "Redação anterior dada ao subitem 20.3 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[119]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "22.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00167",
+          "caminho": "ANEXO I/tabela 1/linha 120/item 20.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[120]",
+          "ncmNBMLiteral": "8424.30.20",
+          "textoLiteral": "20.3 | Máquinas e aparelhos de jato de areia ou de qualquer outro abrasivo | 8424.30.20",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-078",
+      "indiceRemissoBase0": 33,
+      "literal": "Nova redação dada ao subitem 20.5 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[122]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00170",
+          "caminho": "ANEXO I/tabela 1/linha 123/item 20.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[123]",
+          "ncmNBMLiteral": "8424.30.90",
+          "textoLiteral": "20.5 | Outras máquinas e aparelhos de jato de areia, de jato de vapor ou qualquer outro abrasivo e aparelhos de jato semelhantes | 8424.30.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-079",
+      "indiceRemissoBase0": 34,
+      "literal": "Redação anterior dada ao subitem 20.5 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[124]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "22.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00172",
+          "caminho": "ANEXO I/tabela 1/linha 125/item 20.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[125]",
+          "ncmNBMLiteral": "8424.30.90",
+          "textoLiteral": "20.5 | Outras máquinas e aparelhos de jato de areia, de jato de vapor e aparelhos de jato semelhantes | 8424.30.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-080",
+      "indiceRemissoBase0": 35,
+      "literal": "Nova redação dada ao subitem 21.5 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[132]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00180",
+          "caminho": "ANEXO I/tabela 1/linha 133/item 21.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[133]",
+          "ncmNBMLiteral": "8425.3190",
+          "textoLiteral": "21.5 | Outros guinchos e cabrestantes de motor elétrico | 8425.3190",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-081",
+      "indiceRemissoBase0": 36,
+      "literal": "Redação anterior dada ao subitem 21.5 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[134]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "22.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00182",
+          "caminho": "ANEXO I/tabela 1/linha 135/item 21.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[135]",
+          "ncmNBMLiteral": "8425.3190",
+          "textoLiteral": "21.5 | Outros guinchos de motor elétrico | 8425.3190",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-082",
+      "indiceRemissoBase0": 37,
+      "literal": "Nova redação dada ao subitem 21.6 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[136]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00184",
+          "caminho": "ANEXO I/tabela 1/linha 137/item 21.6",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[137]",
+          "ncmNBMLiteral": "8425.39.10",
+          "textoLiteral": "21.6 | Outros guinchos e cabrestantes com capacidade inferior ou igual a 100 toneladas | 8425.39.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-083",
+      "indiceRemissoBase0": 38,
+      "literal": "Redação anterior dada ao subitem 21.6 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[138]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "22.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00186",
+          "caminho": "ANEXO I/tabela 1/linha 139/item 21.6",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[139]",
+          "ncmNBMLiteral": "8425.39.10",
+          "textoLiteral": "21.6 | Outros guinchos com capacidade inferior ou igual a 100 toneladas | 8425.39.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-084",
+      "indiceRemissoBase0": 39,
+      "literal": "Nova redação dada ao subitem 21.7 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[140]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00188",
+          "caminho": "ANEXO I/tabela 1/linha 141/item 21.7",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[141]",
+          "ncmNBMLiteral": "8425.39.90",
+          "textoLiteral": "21.7 | Outros guinchos e cabrestantes | 8425.39.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-085",
+      "indiceRemissoBase0": 40,
+      "literal": "Redação anterior dada ao subitem 21.7 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[142]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "22.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00190",
+          "caminho": "ANEXO I/tabela 1/linha 143/item 21.7",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[143]",
+          "ncmNBMLiteral": "8425.39.90",
+          "textoLiteral": "21.7 | Outros guinchos | 8425.39.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-086",
+      "indiceRemissoBase0": 41,
+      "literal": "Nova redação dada ao subitem 29.8 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[187]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00236",
+          "caminho": "ANEXO I/tabela 1/linha 188/item 29.8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[188]",
+          "ncmNBMLiteral": "8439.30.30",
+          "textoLiteral": "29.8 | Máquinas para ondular papel ou cartão | 8439.30.30",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-087",
+      "indiceRemissoBase0": 42,
+      "literal": "Redação anterior dada ao subitem 29.8 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[189]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "22.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00238",
+          "caminho": "ANEXO I/tabela 1/linha 190/item 29.8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[190]",
+          "ncmNBMLiteral": "8439.30.30",
+          "textoLiteral": "29.8 | Máquinas de fabricar papel, cartolina, e cartão ondulado | 8439.30.30",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-088",
+      "indiceRemissoBase0": 43,
+      "literal": "Acrescido o subitem 32.17 ao Anexo I pelo Conv. ICMS 70/13, efeitos a partir de 01.10.13.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[223]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.10.13"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00273",
+          "caminho": "ANEXO I/tabela 1/linha 224/item 32.17",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[224]",
+          "ncmNBMLiteral": "8443.39.10",
+          "textoLiteral": "32.17 | Máquinas de impressão por jato de tinta, de uso industrial | 8443.39.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-089",
+      "indiceRemissoBase0": 44,
+      "literal": "Revogados os subitens 39.1, 39.2 e 39.3 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[291]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.12.15"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-090",
+      "indiceRemissoBase0": 45,
+      "literal": "Redação anterior dada aos subitens 39.1, 39.2 e 39.3 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[292]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "29.12.15"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-091",
+      "indiceRemissoBase0": 46,
+      "literal": "Nova redação dada ao subitem 39.5 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[297]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00347",
+          "caminho": "ANEXO I/tabela 1/linha 298/item 39.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[298]",
+          "ncmNBMLiteral": "8450.20.90",
+          "textoLiteral": "39.5 | Outras máquinas de lavar de capacidade superior a 20 kg, em peso de roupa seca de uso não doméstico | 8450.20.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-092",
+      "indiceRemissoBase0": 47,
+      "literal": "Redação anterior dada ao subitem 39.5 pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[299]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "29.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00349",
+          "caminho": "ANEXO I/tabela 1/linha 300/item 39.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[300]",
+          "ncmNBMLiteral": "8450.20.90",
+          "textoLiteral": "39.5 | Outras máquinas de capacidade superior a 10kg, em peso de roupa seca | 8450.20.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-093",
+      "indiceRemissoBase0": 48,
+      "literal": "Revogado o subitem 40.2 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[303]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.12.15"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-094",
+      "indiceRemissoBase0": 49,
+      "literal": "Redação anterior dada ao subite 40.2 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[304]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "29.12.15"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Sucessor não satisfaz igualdade estrita ITEM, ID documental ou controle excluído."
+    },
+    {
+      "idNota": "N52-095",
+      "indiceRemissoBase0": 50,
+      "literal": "Nova redação dada ao subitem 40.4 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[307]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00357",
+          "caminho": "ANEXO I/tabela 1/linha 308/item 40.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[308]",
+          "ncmNBMLiteral": "8451.29.90",
+          "textoLiteral": "40.4 | Outras máquinas de secar, com capacidade superior a 15 Kg, de uso não doméstico | 8451.29.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-096",
+      "indiceRemissoBase0": 51,
+      "literal": "Redação anterior dada ao subitem 40.4 pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[309]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "29.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00359",
+          "caminho": "ANEXO I/tabela 1/linha 310/item 40.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[310]",
+          "ncmNBMLiteral": "8451.29.90",
+          "textoLiteral": "40.4 | Outras máquinas de secar | 8451.29.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-097",
+      "indiceRemissoBase0": 52,
+      "literal": "Nova redação dada ao subitem 40.8 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[314]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00364",
+          "caminho": "ANEXO I/tabela 1/linha 315/item 40.8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[315]",
+          "ncmNBMLiteral": "8451.40.10",
+          "textoLiteral": "40.8 | Máquinas para lavar, com capacidade superior a 15 kg, de uso não doméstico | 8451.40.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-098",
+      "indiceRemissoBase0": 53,
+      "literal": "Redação anterior dada ao subitem 40.8 pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[316]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "29.12.15"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00366",
+          "caminho": "ANEXO I/tabela 1/linha 317/item 40.8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[317]",
+          "ncmNBMLiteral": "8451.40.10",
+          "textoLiteral": "40.8 | Máquinas industriais para lavar | 8451.40.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-099",
+      "indiceRemissoBase0": 54,
+      "literal": "Acrescido o subitem 41.9 ao Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[334]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00384",
+          "caminho": "ANEXO I/tabela 1/linha 335/item 41.9",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[335]",
+          "ncmNBMLiteral": "8452.29.24",
+          "textoLiteral": "41.9 | Máquinas de costura reta | 8452.29.24",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-100",
+      "indiceRemissoBase0": 55,
+      "literal": "Acrescido o subitem 41.10 ao Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[336]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00386",
+          "caminho": "ANEXO I/tabela 1/linha 337/item 41.10",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[337]",
+          "ncmNBMLiteral": "8452.29.25",
+          "textoLiteral": "41.10 | Galoneiras | 8452.29.25",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-101",
+      "indiceRemissoBase0": 56,
+      "literal": "Nova redação dada ao item 55 e seus subitens 55.1 ao 55.14 do Anexo I, pelo Conv. ICMS 89/09, com a alteração introduzida pelo Conv. ICMS 112/10, efeitos a partir de 01.09.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[474]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.09.10"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-102",
+      "indiceRemissoBase0": 57,
+      "literal": "Redação anterior dada ao item 55 e seus subitens 55.1 ao 55.14 do Anexo I, pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 31;08;10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[490]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "31;08;10"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-103",
+      "indiceRemissoBase0": 58,
+      "literal": "Nova redação dada ao subitem 56.5 do Anexo I pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[511]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00561",
+          "caminho": "ANEXO I/tabela 1/linha 512/item 56.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[512]",
+          "ncmNBMLiteral": "8467.29",
+          "textoLiteral": "56.5 | Outras ferramentas com motor elétrico ou não elétrico incorporado, de uso manual | 8467.29 8467.89.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        },
+        {
+          "id": "ANAT03-00562",
+          "caminho": "ANEXO I/tabela 1/linha 512/item 56.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[512]",
+          "ncmNBMLiteral": "8467.89.00",
+          "textoLiteral": "56.5 | Outras ferramentas com motor elétrico ou não elétrico incorporado, de uso manual | 8467.29 8467.89.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-104",
+      "indiceRemissoBase0": 59,
+      "literal": "Redação anterior dada ao subitem 56.5 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 22.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[513]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "22.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-00564",
+          "caminho": "ANEXO I/tabela 1/linha 514/item 56.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[514]",
+          "ncmNBMLiteral": "8467.89.00",
+          "textoLiteral": "56.5 | Outras ferramentas com motor elétrico incorporado, de uso manual | 8467.89.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-105",
+      "indiceRemissoBase0": 60,
+      "literal": "Acrescido o item 72 e os subitens 72.1 e 72.2 ao Anexo I pelo Conv. ICMS 95/13, efeitos a partir de 01.10.13.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[601]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.10.13"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-106",
+      "indiceRemissoBase0": 61,
+      "literal": "Redação anterior dada ao Anexo I pelo Conv. ICMS 11208, efeitos de 20.10.08 a 14.10.09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[126]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "20.10.08",
+        "14.10.09"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-107",
+      "indiceRemissoBase0": 63,
+      "literal": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/p[1]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-108",
+      "indiceRemissoBase0": 64,
+      "literal": "Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[5]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.03.11"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01372",
+          "caminho": "ANEXO II/tabela 3/linha 6/item 1.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[6]",
+          "ncmNBMLiteral": "7310.10.90",
+          "textoLiteral": "1.3 | Reservatórios, tambores, latas e recipientes semelhantes, de ferro fundido, ferro ou aço, de capacidade não superior a 300 litros, para transporte de leite | 7310.10.90, 7310.29.10 e 7310.29.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        },
+        {
+          "id": "ANAT03-01373",
+          "caminho": "ANEXO II/tabela 3/linha 6/item 1.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[6]",
+          "ncmNBMLiteral": "7310.29.10",
+          "textoLiteral": "1.3 | Reservatórios, tambores, latas e recipientes semelhantes, de ferro fundido, ferro ou aço, de capacidade não superior a 300 litros, para transporte de leite | 7310.10.90, 7310.29.10 e 7310.29.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        },
+        {
+          "id": "ANAT03-01374",
+          "caminho": "ANEXO II/tabela 3/linha 6/item 1.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[6]",
+          "ncmNBMLiteral": "7310.29.90",
+          "textoLiteral": "1.3 | Reservatórios, tambores, latas e recipientes semelhantes, de ferro fundido, ferro ou aço, de capacidade não superior a 300 litros, para transporte de leite | 7310.10.90, 7310.29.10 e 7310.29.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-109",
+      "indiceRemissoBase0": 65,
+      "literal": "Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[7]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "28.02.11"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01376",
+          "caminho": "ANEXO II/tabela 3/linha 8/item 1.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[8]",
+          "ncmNBMLiteral": "7310.10.90",
+          "textoLiteral": "1.3 | Reservatórios, tambores, latas e recipientes semelhantes, de ferro fundido, ferro ou aço, de capacidade não superior a 300 litros, para transporte de leite | 7310.10.90 e 7310.29.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        },
+        {
+          "id": "ANAT03-01377",
+          "caminho": "ANEXO II/tabela 3/linha 8/item 1.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[8]",
+          "ncmNBMLiteral": "7310.29.10",
+          "textoLiteral": "1.3 | Reservatórios, tambores, latas e recipientes semelhantes, de ferro fundido, ferro ou aço, de capacidade não superior a 300 litros, para transporte de leite | 7310.10.90 e 7310.29.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-110",
+      "indiceRemissoBase0": 66,
+      "literal": "Nova redação dada ao item 2.1 do Anexo II pelo Conv. ICMS 30/20, efeitos a partir de 01.06.2020.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[11]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.06.2020"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01381",
+          "caminho": "ANEXO II/tabela 3/linha 12/item 2.1",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[12]",
+          "ncmNBMLiteral": "3917.32.90",
+          "textoLiteral": "2.1 | Silos de matéria plástica artificial ou de lona plastificada, com capacidade superior a 300 litros | 3917.32.90 3925.10.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        },
+        {
+          "id": "ANAT03-01382",
+          "caminho": "ANEXO II/tabela 3/linha 12/item 2.1",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[12]",
+          "ncmNBMLiteral": "3925.10.00",
+          "textoLiteral": "2.1 | Silos de matéria plástica artificial ou de lona plastificada, com capacidade superior a 300 litros | 3917.32.90 3925.10.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-111",
+      "indiceRemissoBase0": 67,
+      "literal": "Redação original, efeitos até 31.05.2020.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[13]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "31.05.2020"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-112",
+      "indiceRemissoBase0": 68,
+      "literal": "Nova redação dada ao subitem 10.1 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[42]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "29.12.20"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01413",
+          "caminho": "ANEXO II/tabela 3/linha 43/item 10.1",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[43]",
+          "ncmNBMLiteral": "8424.41.00",
+          "textoLiteral": "10.1 | Aparelho para projetar, dispersar ou pulverizar fungicidas, inseticidas e outros produtos para combate a pragas, de uso agrícola, manuais | 8424.41.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-113",
+      "indiceRemissoBase0": 69,
+      "literal": "Redação original do subitem 10.1 do Anexo II, efeitos até 28.12.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[44]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "28.12.20"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01415",
+          "caminho": "ANEXO II/tabela 3/linha 45/item 10.1",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[45]",
+          "ncmNBMLiteral": "8424.81.11",
+          "textoLiteral": "10.1 | Aparelho para projetar, dispersar ou pulverizar fungicidas, inseticidas e outros produtos para combate a pragas, de uso agrícola, manuais | 8424.81.11",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-114",
+      "indiceRemissoBase0": 70,
+      "literal": "Nova redação dada ao subitem 10.2 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[46]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "29.12.20"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01417",
+          "caminho": "ANEXO II/tabela 3/linha 47/item 10.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[47]",
+          "ncmNBMLiteral": "8424.49.00",
+          "textoLiteral": "10.2 | Outros aparelhos para projetar, dispersar ou pulverizar fungicidas, inseticidas e outros produtos para combate a pragas, de uso agrícola | 8424.49.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-115",
+      "indiceRemissoBase0": 71,
+      "literal": "Redação original do subitem 10.2 do Anexo II, efeitos até 28.12.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[48]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "28.12.20"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01419",
+          "caminho": "ANEXO II/tabela 3/linha 49/item 10.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[49]",
+          "ncmNBMLiteral": "8424.81.19",
+          "textoLiteral": "10.2 | Outros aparelhos para projetar, dispersar ou pulverizar fungicidas, inseticidas e outros produtos para combate a pragas, de uso agrícola | 8424.81.19",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-116",
+      "indiceRemissoBase0": 72,
+      "literal": "Nova redação dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[50]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "29.07.19"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01421",
+          "caminho": "ANEXO II/tabela 3/linha 51/item 10.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[51]",
+          "ncmNBMLiteral": "8424.82.21",
+          "textoLiteral": "10.3 | Irrigadores e sistemas de irrigação para uso na lavoura, por aspersão, inclusive os elementos integrantes desses sistemas, como máquinas, aparelhos, equipamentos, dispositivos e instrumentos. | 8424.82.21",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-117",
+      "indiceRemissoBase0": 73,
+      "literal": "Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 28.07.19",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[52]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.12.10",
+        "28.07.19"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01423",
+          "caminho": "ANEXO II/tabela 3/linha 53/item 10.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[53]",
+          "ncmNBMLiteral": "8424.81.21",
+          "textoLiteral": "10.3 | Irrigadores e sistemas de irrigação para uso na lavoura, por aspersão, inclusive os elementos integrantes desses sistemas, como máquinas, aparelhos, equipamentos, dispositivos e instrumentos. | 8424.81.21",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-118",
+      "indiceRemissoBase0": 74,
+      "literal": "Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[54]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "30.11.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01425",
+          "caminho": "ANEXO II/tabela 3/linha 55/item 10.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[55]",
+          "ncmNBMLiteral": "8424.81.21",
+          "textoLiteral": "10.3 | Irrigadores e sistemas de irrigação para uso na lavoura, por aspersão | 8424.81.21",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-119",
+      "indiceRemissoBase0": 75,
+      "literal": "Nova redação dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 113/17, efeitos a partir de 26.10.17.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[56]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "26.10.17"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01427",
+          "caminho": "ANEXO II/tabela 3/linha 57/item 10.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[57]",
+          "ncmNBMLiteral": "8424.82.29",
+          "textoLiteral": "10.4 | Outros irrigadores e sistemas de irrigação, inclusive os elementos integrantes desses sistemas, como máquinas, aparelhos, equipamentos, dispositivos e instrumentos. | 8424.82.29",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-120",
+      "indiceRemissoBase0": 76,
+      "literal": "Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 25.10.17.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[58]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.12.10",
+        "25.10.17"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01429",
+          "caminho": "ANEXO II/tabela 3/linha 59/item 10.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[59]",
+          "ncmNBMLiteral": "8424.81.29",
+          "textoLiteral": "10.4 | Outros irrigadores e sistemas de irrigação, inclusive os elementos integrantes desses sistemas, como máquinas, aparelhos, equipamentos, dispositivos e instrumentos. | 8424.81.29",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-121",
+      "indiceRemissoBase0": 77,
+      "literal": "Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[60]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "15.10.09",
+        "30.11.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01431",
+          "caminho": "ANEXO II/tabela 3/linha 61/item 10.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[61]",
+          "ncmNBMLiteral": "8424.81.29",
+          "textoLiteral": "10.4 | Outros irrigadores e sistemas de irrigação | 8424.81.29",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-122",
+      "indiceRemissoBase0": 78,
+      "literal": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[69]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "29.07.19"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01440",
+          "caminho": "ANEXO II/tabela 3/linha 70/item 13.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[70]",
+          "ncmNBMLiteral": "8432.31.10",
+          "textoLiteral": "13.3 | Semeadores-adubadores | 8432.31.10 8432.39.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        },
+        {
+          "id": "ANAT03-01441",
+          "caminho": "ANEXO II/tabela 3/linha 70/item 13.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[70]",
+          "ncmNBMLiteral": "8432.39.10",
+          "textoLiteral": "13.3 | Semeadores-adubadores | 8432.31.10 8432.39.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-123",
+      "indiceRemissoBase0": 79,
+      "literal": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[71]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "28.07.19"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01443",
+          "caminho": "ANEXO II/tabela 3/linha 72/item 13.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[72]",
+          "ncmNBMLiteral": "8432.30.10",
+          "textoLiteral": "13.3 | Semeadores-adubadores | 8432.30.10",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-124",
+      "indiceRemissoBase0": 80,
+      "literal": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 115/20, efeitos a partir de 04.11.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[73]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "04.11.20"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01445",
+          "caminho": "ANEXO II/tabela 3/linha 74/item 13.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[74]",
+          "ncmNBMLiteral": "8432.31.90",
+          "textoLiteral": "13.4 | Outros plantadores e transplantadores | 8432.31.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-125",
+      "indiceRemissoBase0": 81,
+      "literal": "Redação original dada ao subitem 13.4 do Anexo II , efeitos até 03.11.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[75]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "03.11.20"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01447",
+          "caminho": "ANEXO II/tabela 3/linha 76/item 13.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[76]",
+          "ncmNBMLiteral": "8432.30.90",
+          "textoLiteral": "13.4 | Outros plantadores e transplantadores | 8432.30.90",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-126",
+      "indiceRemissoBase0": 82,
+      "literal": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[77]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "28.12.20"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-127",
+      "indiceRemissoBase0": 83,
+      "literal": "Redação original dada ao subitem 13.5 do Anexo II, efeitos até 28.12.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[79]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "28.12.20"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-128",
+      "indiceRemissoBase0": 84,
+      "literal": "Acrescido o subitem 13.8 ao Anexo II pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[83]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "23.04.10"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01456",
+          "caminho": "ANEXO II/tabela 3/linha 84/item 13.8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[84]",
+          "ncmNBMLiteral": "8432.21.00",
+          "textoLiteral": "13.8 | Grades de discos | 8432.21.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-129",
+      "indiceRemissoBase0": 85,
+      "literal": "Acrescido o subitem 14.18 ao Anexo II pelo Conv. ICMS 96/12, efeitos a partir de 01.12.12.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[103]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.12.12"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01476",
+          "caminho": "ANEXO II/tabela 3/linha 104/item 14.18",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[104]",
+          "ncmNBMLiteral": "8467.89.00",
+          "textoLiteral": "14.18 | Derriçador manual de café – “mãozinha” | 8467.89.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-130",
+      "indiceRemissoBase0": 86,
+      "literal": "Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[105]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.07.24"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-131",
+      "indiceRemissoBase0": 87,
+      "literal": "Redação anterior acrescida do subitem 14.19 ao Anexo II pelo Conv. ICMS 158/13, efeitos de 01.02.14. a 30.06.24",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[107]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.02.14",
+        "30.06.24"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01481",
+          "caminho": "ANEXO II/tabela 3/linha 108/item 14.19",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[108]",
+          "ncmNBMLiteral": "8467.89.00",
+          "textoLiteral": "14.19 | Roçadeiras e podadores com motor elétrico ou não elétrico incorporado, de uso manual. | 8467.89.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-132",
+      "indiceRemissoBase0": 88,
+      "literal": "Nova redação dada ao subitem 17 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[117]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.07.24"
+      ],
+      "estado": "associacao_documental_proposta",
+      "alvos": [
+        {
+          "id": "ANAT03-01491",
+          "caminho": "ANEXO II/tabela 3/linha 118/item 17",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[118]",
+          "ncmNBMLiteral": "8467.81.00",
+          "textoLiteral": "17 | Motosserras portáteis de corrente, com motor a combustão, de potência igual ou superior a 1,2kW, e sujeitas ao registro no IBAMA | 8467.81.00",
+          "limite": "Ligação documental apenas; situação jurídica e aprovação permanecem pendentes."
+        }
+      ],
+      "regra": "Número explícito da nota igual à célula ITEM na linha sucessora imediata, mesma tabela e variante; só a linha, sem propagação."
+    },
+    {
+      "idNota": "N52-133",
+      "indiceRemissoBase0": 89,
+      "literal": "Redação original, efeitos até 30.06.24",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[119]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "30.06.24"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-134",
+      "indiceRemissoBase0": 90,
+      "literal": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[124]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "datasLiterais": [
+        "29.07.19"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-135",
+      "indiceRemissoBase0": 91,
+      "literal": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[126]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "28.07.19"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-136",
+      "indiceRemissoBase0": 92,
+      "literal": "Redação anterior dada ao Anexo II pelo Conv. ICMS 112/08, efeitos de 20.10.08 a 14.10.09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[132]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "20.10.08",
+        "14.10.09"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-137",
+      "indiceRemissoBase0": 94,
+      "literal": "Redação original, dos Anexos I e II, efeitos até 19.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[137]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "19.10.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-138",
+      "indiceRemissoBase0": 95,
+      "literal": "Redação anterior dada ao item abaixo pelo Conv. ICMS 74/95, efeitos de 21.11.95 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[2]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "21.11.95",
+        "18.10.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-139",
+      "indiceRemissoBase0": 96,
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 20.11.95.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[4]/td[1]/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94",
+        "20.11.95"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-140",
+      "indiceRemissoBase0": 97,
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[7]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94",
+        "18.10.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-141",
+      "indiceRemissoBase0": 98,
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[9]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "27.12.91",
+        "18.10.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-142",
+      "indiceRemissoBase0": 99,
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 45/92, efeitos de 16.07.92 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[26]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "16.07.92",
+        "18.10.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-143",
+      "indiceRemissoBase0": 100,
+      "literal": "Acrescido o item abaixo pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[97]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "27.12.91",
+        "18.10.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-144",
+      "indiceRemissoBase0": 101,
+      "literal": "Nova redação dada ao item 15.8 do Anexo I pelo Conv. ICMS 101/96, efeitos a partir de 08.01.97:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[127]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "08.01.97"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-145",
+      "indiceRemissoBase0": 102,
+      "literal": "Redação anterior, dada ao item 15.08 do Anexo I pelo Conv. ICMS 63/96, efeitos de 11.10.96 a 07.01.97:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[129]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "11.10.96",
+        "07.01.97"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-146",
+      "indiceRemissoBase0": 103,
+      "literal": "Redação original, efeitos até 10.10.96:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[129]/td/p[3]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "10.10.96"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-147",
+      "indiceRemissoBase0": 104,
+      "literal": "Nova redação dada ao caput do item 33.03 do Anexo I pelo Conv. ICMS 11/94, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[446]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-148",
+      "indiceRemissoBase0": 105,
+      "literal": "Redação original, efeitos até 21.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[448]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "21.04.94"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-149",
+      "indiceRemissoBase0": 106,
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[546]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94",
+        "18.10.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-150",
+      "indiceRemissoBase0": 107,
+      "literal": "Nova redação dada ao item 40.07 do Anexo I pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[548]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "27.12.91",
+        "18.10.08"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-151",
+      "indiceRemissoBase0": 108,
+      "literal": "Redação original, efeitos até 26.12.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[550]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "26.12.91"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-152",
+      "indiceRemissoBase0": 109,
+      "literal": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[571]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-153",
+      "indiceRemissoBase0": 110,
+      "literal": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[573]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-154",
+      "indiceRemissoBase0": 111,
+      "literal": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[575]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-155",
+      "indiceRemissoBase0": 112,
+      "literal": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[577]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-156",
+      "indiceRemissoBase0": 113,
+      "literal": "Acrescido o Item 41-A ao Anexo I pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[579]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "27.04.92"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-157",
+      "indiceRemissoBase0": 114,
+      "literal": "Acrescido o Item 41-B ao Anexo I pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[582]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "27.04.92"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-158",
+      "indiceRemissoBase0": 115,
+      "literal": "Acrescido o item 43.05 ao Anexo I pelo Conv. 109/92, efeitos a partir de 16.10.92:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[598]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "16.10.92"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-159",
+      "indiceRemissoBase0": 116,
+      "literal": "Nova redação dada item abaixo do Anexo I pelo Conv. ICMS 74/95, efeitos a partir de.21.11.95:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[600]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "21.11.95"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-160",
+      "indiceRemissoBase0": 117,
+      "literal": "Redação anterior dada ao item abaixo do Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 20.11.95:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[602]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "22.04.94",
+        "20.11.95"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-161",
+      "indiceRemissoBase0": 118,
+      "literal": "Acrescidos os itens I a XVI ao Anexo I pelo Conv. ICMS 74/96, efeitos a partir de 11.10.96.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[603]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "11.10.96"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-162",
+      "indiceRemissoBase0": 119,
+      "literal": "Acrescido o item pelo Conv. ICMS 90/91, efeitos a partir de 27.12.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[19]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "27.12.91"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-163",
+      "indiceRemissoBase0": 120,
+      "literal": "Nota: Alterada a carga tributária das posições 8701.10.0100 e 8701.90.0200 pelo Conv. ICMS 02/93, efeitos entre 01.04.93 a 30.09.93.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[35]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.04.93",
+        "30.09.93"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-164",
+      "indiceRemissoBase0": 121,
+      "literal": "Acrescido o item “microtrator” pelo Conv. ICMS 90/91, efeitos a partir de 27.10.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[36]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "27.10.91"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-165",
+      "indiceRemissoBase0": 122,
+      "literal": "Nova redação ao item 22 pelo Conv. ICMS 157/06, efeitos a partir de 08.01.07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[39]/td[1]/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "08.01.07"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-166",
+      "indiceRemissoBase0": 123,
+      "literal": "Redação anterior dada ao item 22 pelo Conv. ICMS 47/01, efeitos de 09.08.01 a 07.01.07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[41]/td[1]/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "09.08.01",
+        "07.01.07"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-167",
+      "indiceRemissoBase0": 124,
+      "literal": "Redação original do item 22, efeitos até 08.08.01.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[43]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "08.08.01"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-168",
+      "indiceRemissoBase0": 125,
+      "literal": "Acrescido o item \"bombas\" pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[44]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "27.04.92"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-169",
+      "indiceRemissoBase0": 126,
+      "literal": "Excluída a alínea \"b\" pelo Conv. ICMS 72/94, efeitos a partir de 26.07.94.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[49]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "26.07.94"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-170",
+      "indiceRemissoBase0": 127,
+      "literal": "Nota: Excluídos os cortadores de grama e suas partes, classificados nos códigos 8433.11.00, 8433.19.00 e 8433.90.10, pelo Conv. ICMS 111/97, efeitos a partir de 01.02.98.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.02.98"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-171",
+      "indiceRemissoBase0": 128,
+      "literal": "Nota: Alterada a carga tributária das posições 8433.59.0100 e 8433.59.9900 pelo Conv. ICMS 02/93, efeitos de 01.04.93 a 30.09.93.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td/p[2]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "01.04.93",
+        "30.09.93"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-172",
+      "indiceRemissoBase0": 129,
+      "literal": "Acrescido o item pelo Conv. ICMS 45/92, efeitos a partir de 16.07.92.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[63]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "16.07.92"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-173",
+      "indiceRemissoBase0": 130,
+      "literal": "Acrescido o item 31 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[65]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "24.10.05"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-174",
+      "indiceRemissoBase0": 131,
+      "literal": "Acrescido o item 32 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[67]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "24.10.05"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-175",
+      "indiceRemissoBase0": 132,
+      "literal": "Acrescido o item 33 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[69]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "24.10.05"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    },
+    {
+      "idNota": "N52-176",
+      "indiceRemissoBase0": 133,
+      "literal": "Acrescido o item 34 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[71]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "datasLiterais": [
+        "24.10.05"
+      ],
+      "estado": "pendente",
+      "alvos": [],
+      "motivoPendencia": "Fora da seleção estrita deste lote: histórico geral, alvo coletivo, alcance de anexo, alvo implícito, inconsistência editorial ou dependência não conferida."
+    }
+  ]
+}

@@ -625,7 +625,7 @@ Checklist operacional, atualizado na issue de coordenação:
 - [x] ANAT-02: 30 fichas de expectativas e anotação dos dois convênios entregues.
 - [x] ANAT-03: planilha de evidências preparada para entrega no chat e salva no repositório.
 - [x] ANAT-03: PDFs enviados pelo Fábio inspecionados visualmente (8 + 62 páginas); 77 revisões pontuais de vínculo documental incorporadas, contextos ainda não individualmente conferidos identificados e literais preservados. Evidências em `docs/anat/pdf-conferencia/`.
-- [ ] ANAT-03: conferência visual e aprovação do Fábio, separadas da preparação documental.
+- [ ] ANAT-03: conferência individual do Fábio parcialmente recebida em 16/10/2026 — somente ANAT03-00342 e ANAT03-00961 para exclusão do texto corrente do piloto; 2.432 demais linhas pendentes. Registro e volume autônomo em `docs/anat/lote-autonomo/`.
 - [x] Handoff com SHA, issue, relatório e planilha registrado para CLAUDE-COORD na issue #116 e devolvido ao Fábio no chat.
 
 ### 11.3 Limites

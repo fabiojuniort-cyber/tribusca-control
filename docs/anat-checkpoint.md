@@ -12,10 +12,12 @@ Pacote de entregas: [docs/anat/README.md](anat/README.md). Inclui relatório ANA
 
 ## Dependências para fechar
 
+**Lote autônomo de 16/10/2026:** Fábio confirmou somente `ANAT03-00342` e `ANAT03-00961`, ambas ocorrências de `8450.11.00`, para marcação histórica/revogação e exclusão do texto corrente do piloto. Registro em JSON e planilha; duas aprovações, 2.432 demais linhas pendentes. Inventário de notas, oito atos modificadores, auditoria e cinco blocos de conferência: [fechamento do lote](anat/lote-autonomo/FECHAMENTO.md). Não há aprovação de uso vigente.
+
 Os PDFs enviados pelo Fábio foram inspecionados visualmente: 100/97, oito páginas; 52/91, 62 páginas. [Relatório e páginas de referência](anat/pdf-conferencia/README.md). A revisão encontrou erros de associação de notas no dossiê e aplicou 77 revisões pontuais; os demais vínculos agregados do 52/91 ficaram marcados como contexto pendente. Textos, códigos, IDs e situações pendentes preservados. Nenhuma aprovação jurídica foi inferida do envio dos arquivos.
 
 - **HTML persistido confirmado:** Fábio executou manualmente o SELECT de confirmação no Dashboard. As versões `8f1a2386-30fc-4f11-a88a-e96a65807793` (100/97) e `ec18e755-128c-41ca-8cd3-2bdad7d9d9eb` (52/91) retornaram `IGUAL AO SNAPSHOT SANITIZADO`, com 45548 e 394092 bytes. As classes/contagens da reprodução local estão confirmadas para esses HTMLs por igualdade SHA-256. Consulta e retorno humano versionados no pacote. Não representa auditoria de `content_text`/RLS nem execução integral do diagnóstico ampliado.
-- **Conferência visual pendente:** todas as situações propostas da planilha aguardam Fábio. A pesquisa temporal não é exaustiva; dependências não lidas permanecem pendentes. Prazos gerais não homologam cada trecho.
+- **Conferência individual parcial:** duas marcações históricas/revogação confirmadas pelo Fábio; 2.432 demais linhas pendentes. A pesquisa temporal não é exaustiva; dependências não lidas permanecem pendentes. Prazos gerais não homologam cada trecho.
 - **Implementação não autorizada:** sem código de produto, migrations, escrita no banco, coleta, merge, deploy ou alteração Railway. Railway AI Agent não foi usado.
 
 Retorno a CLAUDE-COORD registrado na issue #116 e entregue ao Fábio neste chat. Não presumir sincronização automática entre chats.

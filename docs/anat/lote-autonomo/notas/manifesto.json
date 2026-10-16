@@ -1,0 +1,40 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC",
+  "escopo": "ANAT documental R0; mapa de notas do snapshot original52/91",
+  "arquivos": [
+    {
+      "nome": "notas-alvos.json",
+      "bytes": 163749,
+      "sha256": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de"
+    },
+    {
+      "nome": "relatorio.md",
+      "bytes": 12059,
+      "sha256": "5e91dc14ca0a43b0c21a35b4acf6ab77fabe36e903e2ba2afb1b59dd4dfdad83"
+    },
+    {
+      "nome": "build_note_map.py",
+      "bytes": 7558,
+      "sha256": "95f3b822b6ada0aef259b57500839cf5fc9f901ce384121e2df5fd2328375774"
+    }
+  ],
+  "cobertura": {
+    "notasInventariadas": 176,
+    "notasRemissoNaoVazias": 132,
+    "associacoesPropostas": 71,
+    "idsAlvoUnicos": 77,
+    "idsContextuaisNaBase": 2273,
+    "idsContextuaisComProposta": 52,
+    "notasPendentes": 105
+  },
+  "naoAlterados": [
+    "docs/anat/anat-03-trechos.json",
+    "docs/anat/anat-03-dossie-vigencia.xlsx",
+    "produto",
+    "banco",
+    "Railway"
+  ],
+  "homologacaoJuridica": false,
+  "notas": "Os arquivos originais do CONFAZ são snapshots históricos. Esta etapa não consultou o estado atual do site. A confirmação humana do hash persistido se refere à reprodução sanitizada; o mapa documental usa XPath/classes do original.",
+  "normalizacaoArtefatos": "LF nos arquivos versionados; hashes recalculados após cópia para o repositório. Hash da fonte legal preservado no mapa."
+}

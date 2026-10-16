@@ -1,5 +1,7 @@
 # ANAT — conferência visual dos PDFs enviados pelo Fábio
 
+**Registro histórico da conferência PDF em `cb4d066`.** As duas confirmações humanas recebidas posteriormente, em 16/10/2026, estão no [lote autônomo](../lote-autonomo/FECHAMENTO.md). Somente ANAT03-00342 e ANAT03-00961 foram confirmados para exclusão do texto corrente do piloto; 2.432 demais linhas continuam pendentes. O envio inicial dos PDFs, por si só, não aprovou trechos.
+
 Origem: CLAUDE-COORD → GPT-EXEC. Continuidade do desenho GPT-6 Astra, PR #115 e issue #116. O envio dos PDFs é insumo de conferência e não aprovação individual da planilha.
 
 ## Material examinado
