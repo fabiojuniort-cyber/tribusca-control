@@ -1,0 +1,28 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC",
+  "risco": "R0",
+  "baseIds": 2434,
+  "idsClassificadosUnicos": 2434,
+  "naoElegiveis": 1706,
+  "vigentesPropostos": 728,
+  "pendentesClassificacao": 0,
+  "blocos": 25,
+  "coberturaPositivosExata": true,
+  "idsDuplicadosEntreBlocos": 0,
+  "aprovacoesHumanasOriginais": 2,
+  "aprovacoesPositivasCriadas": 0,
+  "literaisBaseNaoAlterados": true,
+  "hashXpathClassesPreservados": true,
+  "baseSha256": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+  "checagemNBMAtualCodigoExcluido": true,
+  "porAto": {
+    "Convênio ICMS 100/97": {
+      "vigente — proposta": 64,
+      "não elegível": 47
+    },
+    "Convênio ICMS 52/91": {
+      "vigente — proposta": 664,
+      "não elegível": 1659
+    }
+  }
+}

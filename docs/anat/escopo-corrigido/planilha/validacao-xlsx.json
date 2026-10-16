@@ -1,0 +1,48 @@
+{
+  "linhasClassificacao": 2434,
+  "naoElegiveis": 1706,
+  "propostas": 728,
+  "blocosPendente": 25,
+  "aprovacoesPositivas": 0,
+  "tabelas": 3,
+  "validacaoLista": {
+    "type": "list",
+    "sqref": "L7:L31"
+  },
+  "congelamentos": [
+    {
+      "xSplit": "2",
+      "ySplit": "6",
+      "topLeftCell": "C7",
+      "activePane": "bottomRight",
+      "state": "frozen"
+    },
+    {
+      "xSplit": "3",
+      "ySplit": "6",
+      "topLeftCell": "D7",
+      "activePane": "bottomRight",
+      "state": "frozen"
+    },
+    {
+      "xSplit": "2",
+      "ySplit": "6",
+      "topLeftCell": "C7",
+      "activePane": "bottomRight",
+      "state": "frozen"
+    }
+  ],
+  "formulas": {
+    "D4": "COUNTIFS(L7:L31,\"Aprovado\")",
+    "G4": "COUNTIFS(L7:L31,\"Pendente\")"
+  },
+  "datasTipadas": true,
+  "codigosTexto": true,
+  "errosExcel": [],
+  "revisaoVisual": [
+    "Conferência",
+    "Classificação",
+    "Prazos"
+  ],
+  "sha256": "fa09bc44bab4eb7191cc632cf9d58be93ac9a75b2e3a488f009d68fb86f388c2"
+}

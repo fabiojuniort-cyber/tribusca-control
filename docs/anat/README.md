@@ -1,38 +1,41 @@
-# ANAT — pacote documental de conferência
+# ANAT — pacote documental e conferência por blocos
 
-Origem: CLAUDE-COORD → GPT-EXEC. Base confirmada diretamente pelo Fábio: desenho GPT-6 Astra do [PR #115](https://github.com/fabiojuniort-cyber/tribusca-control/pull/115), com seções 1–10 preservadas. Coordenação: [issue #116](https://github.com/fabiojuniort-cyber/tribusca-control/issues/116). Referência proposta: 15/10/2026, America/Sao_Paulo.
+Origem: **CLAUDE-COORD → GPT-EXEC**, via Fábio. Desenho GPT-6 Astra preservado nas seções 1–10 do PR #115. Coordenação e registro das decisões: [issue #116](https://github.com/fabiojuniort-cyber/tribusca-control/issues/116).
 
-## Entregas
+## Estado vigente — correção de escopo em 16/10/2026
 
-- [Segundo checkpoint da continuidade](continuidade-4h/CHECKPOINT-02.md): divergências confrontadas com comandos oficiais, subfragmentos históricos, PDF página 45/11/94 e datas complementares das prorrogações 178/21 e 226/23. [Seis blocos reservados de conferência](continuidade-4h/conferencia-checkpoint02.md). Nenhuma aprovação nova.
+**ANAT-03: 80% (4/5 marcos).** Preparação documental pronta; conferência positiva do Fábio pendente em **25 blocos**. O histórico foi excluído em bloco e não será pesquisado nem submetido à aprovação por linha.
 
-- [Continuidade de quatro horas: checkpoint atual](continuidade-4h/README.md): 105 notas triadas, 44 novas notas com candidatos para 89 IDs, ratificação do 104/21 confirmada pelo CONFAZ/AD e controle dos oito atos. Planilha e JSON principal preservados; nenhuma aprovação adicional.
+| Classificação administrativa | Quantidade |
+|---|---:|
+| Não elegível, com prova de classe/nota/literal CONFAZ | 1.706 |
+| Vigente — proposta, para conferência positiva | 728 |
+| Total de registros do inventário-base | 2.434 |
+| Blocos positivos aprovados | 0 de 25 |
 
-- [ANAT-02: relatório](anat-02-leitura.md), [SQL read-only](anat-02-sql.sql), [30 fichas](anat-02-fichas.md) e [anotação dos convênios](anat-02-anotacao.md).
-- [ANAT-03: planilha](anat-03-dossie-vigencia.xlsx) e [síntese das evidências](anat-03-sintese.md).
-- [Conferência visual dos PDFs enviados pelo Fábio](pdf-conferencia/README.md): 70 páginas inspecionadas, páginas de referência e revisões dos vínculos de notas.
-- Dados auditáveis: [trechos](anat-03-trechos.json), [dependências verificadas](anat-03-dependencias-verificadas.json), [fila de notas/dependências](anat-03-dependencias.json), [estrutura](anat-02-estrutura-resumo.json) e [sanitização local](anat-02-sanitizacao-local.json).
+A seleção positiva tem 664 registros do 52/91 e 64 do 100/97. O prazo comum do 52/91 é 31/12/2026 (10/26 + AD 4/26, efeitos expressos 01/05/2026); o do 100/97 é 31/12/2027 (79/25 + AD 16/25, vigor/efeitos derivados da ratificação de 25/07/2025). As cadeias mínimas, datas e ADs completos estão documentados. Prorrogação não restaura revogados ou variantes anteriores.
 
-## Estado efetivo
+- [Planilha atual de conferência por blocos](anat-03-conferencia-blocos.xlsx).
+- [Índice dos 25 blocos e passo a passo](escopo-corrigido/blocos.md).
+- [Classificação por escopo](escopo-corrigido/classificacao.md) e [registro completo por ID](escopo-corrigido/classificacao.json).
+- [Prova dos prazos atuais](escopo-corrigido/prazos/relatorio.md).
+- [Escopo, percentual e limites](escopo-corrigido/README.md).
 
-O runner existente possui allowlist para outros diagnósticos e não aceita ANAT. Fábio executou manualmente a consulta SELECT de confirmação no Railway Dashboard e devolveu os resultados: os dois HTMLs persistidos são idênticos aos snapshots sanitizados por SHA-256. **Comparação de HTML/classes concluída.** A igualdade permite aplicar as contagens locais de classes aos HTMLs persistidos. [Consulta executada](anat-02-dashboard-confirmacao.sql), [resultado informado pelo Fábio](anat-02-dashboard-resultado.json) e limites estão no relatório. Não houve acesso direto do executor ao banco nem uso do Railway AI Agent. O diagnóstico ampliado `anat-02-sql.sql` não foi executado integralmente; `content_text`, grants/RLS e vigência não são comprovados por esse SELECT.
+Marcar somente os blocos positivos na issue #116. Duas confirmações anteriores, ANAT03-00342 e ANAT03-00961, permanecem restritas à exclusão histórica de 8450.11.00; não são aprovações positivas de blocos. Referências NBM em textos normativos atuais não habilitam seleção ou conversão de códigos NBM no piloto.
 
-As 30 fichas são expectativas do desenho, não resultados de parser nem medição de precisão/recall. A anotação cobre 2.444 unidades estruturais dos snapshots, com literais, XPath, células e hashes. A planilha contém 2.434 linhas por trecho/código: 2.323 do 52/91 e 111 do 100/97, além de 10 eventos de atos posteriores. Uma linha pode repetir o mesmo trecho quando contém mais de um código. NBM histórica permanece identificada separadamente de NCM.
+## Entregas anteriores preservadas
 
-Fábio confirmou duas marcações em 16/10/2026: `ANAT03-00342` (39.1, revogado desde 30/12/2015) e `ANAT03-00961` (25.01(a) do anexo anterior, intervalo histórico 20/10/2008–14/10/2009). Ambas com `8450.11.00`, aprovadas somente para exclusão do texto corrente do piloto, sem elegibilidade vigente. **As outras 2.432 linhas continuam pendentes.** Prazos gerais conferidos não homologam redações, variantes nem aplicação estadual. A investigação temporal não é exaustiva; dependências não lidas permanecem na fila. [Registro das duas aprovações](lote-autonomo/aprovacoes-fabio.json).
+- [ANAT-02: relatório](anat-02-leitura.md), [SQL read-only](anat-02-sql.sql), [30 fichas](anat-02-fichas.md) e [anotação estrutural](anat-02-anotacao.md).
+- [Resultado do SELECT humano](anat-02-dashboard-resultado.json): dois HTMLs persistidos idênticos aos snapshots sanitizados por SHA-256. Isso confirma HTML/classes das versões verificadas; não comprova content_text, grants/RLS ou vigência jurídica.
+- [Dossiê-base anterior](anat-03-dossie-vigencia.xlsx), [dataset congelado](anat-03-trechos.json), [dependências anteriores](anat-03-dependencias-verificadas.json) e [síntese](anat-03-sintese.md). As marcações e pendências de linha desses inventários são o estado histórico da preparação; a conferência atual usa o novo checklist de blocos.
+- [PDFs conferidos](pdf-conferencia/README.md): 8 + 62 páginas e 77 revisões documentais anteriores.
+- [Primeiro lote autônomo](lote-autonomo/FECHAMENTO.md), [primeiro checkpoint da janela](continuidade-4h/README.md), [segundo](continuidade-4h/CHECKPOINT-02.md) e [CHECKPOINT-03](continuidade-4h/CHECKPOINT-03.md).
+- [Planilha complementar congelada do terceiro lote](anat-03-evidencias-complementares.xlsx), publicada como estava; não é a nova fila de conferência positiva.
 
-A inspeção dos PDFs identificou notas indevidamente agregadas a itens ou variantes vizinhos no dossiê. No checkpoint `cb4d066` foram aplicadas 77 revisões pontuais de vínculo e 2.273 registros do 52/91 ficaram marcados como contexto editorial com vínculo individual pendente. Após as duas confirmações do Fábio, restam 2.271 registros nessa categoria. A coluna E distingue “Nota CONFAZ / contexto”; os contextos anteriores continuam no JSON para auditoria. No 100/97, os 111 registros tiveram o vínculo documental examinado nas oito páginas, com 27 correções. O [lote autônomo](lote-autonomo/FECHAMENTO.md) acrescenta um mapa de 176 notas, 71 ligações candidatas e pesquisa de oito atos, sem converter candidatas em aprovações.
+O CHECKPOINT-03 foi publicado em084d804 sem pesquisa nova. Divergências históricas ficaram registradas sem aprofundamento. A classificação atual preserva os 2.434 IDs, literais, códigos, XPath e hashes do dataset-base. As classes/notas do CONFAZ são prova da exclusão documental; a cor isolada não foi usada para declarar vigência.
 
-Na planilha, as colunas “Conferência Fábio” e “Observação Fábio” são editáveis. Registrar na observação o revisor, a data, o intervalo aprovado, as condições e a próxima reconferência. Marcar “Aprovado” é registro documental e não altera produto ou banco.
+## Próximo passo
 
-## Verificações
+Fábio abre os blocos na issue #116, confere trecho/fundamento e marca os que aprovar integralmente. Divergência: manter a caixa desmarcada e apontar bloco/trecho. A issue é o registro primário e a planilha não se sincroniza automaticamente. A pesquisa histórica individual e a antiga fila de 2.432 aprovações por linha foram substituídas pela correção do COORD.
 
-Conferidas 30 fichas, 2.434 IDs únicos, duas ocorrências `8450.11.00`, seis tabelas/2.088 linhas de tabela e hashes de fonte normalizados LF. Hashes dos arquivos locais CRLF foram preservados separadamente. A preparação anterior exercitou os contadores e restaurou zero, sem aprovações presumidas. Neste lote, somente as duas confirmações reais do Fábio foram propagadas; contador do 52/91 = 2 e do 100/97 = 0. Demais valores, fórmulas e controles preservados, conforme validação do lote. Sem teste em Microsoft Excel nativo.
-
-## Próximos gates
-
-1. Concluído: Fábio executou o SELECT de confirmação no Dashboard; igualdade dos dois HTMLs/classes registrada no relatório e na issue #116.
-2. Fábio confere visualmente os trechos e dependências, resolve pendências temporais e registra aprovação por linha.
-3. GPT-EXEC registra o retorno na issue #116 e devolve o checkpoint a CLAUDE-COORD.
-
-Sem código de produto, migration, escrita no banco, coleta do produto, merge, deploy ou alteração Railway. Este pacote não autoriza iniciar F1–F3 nem ativar destaques/classificação vigente.
+Sem código, migration, banco, coleta operacional, merge, deploy ou Railway. Nenhuma implementação F1–F3 ou mudança de produto autorizada. A automação anterior permanece pausada.

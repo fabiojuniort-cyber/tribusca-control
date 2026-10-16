@@ -631,3 +631,17 @@ Checklist operacional, atualizado na issue de coordenação:
 ### 11.3 Limites
 
 Sem código de produto, migrations, escrita no banco, coleta, merge, deploy ou alteração Railway. Ler páginas oficiais para conferir evidências não executa o mecanismo de coleta do produto. Situação proposta não equivale a homologação jurídica, ativação de destaque ou entrada em produção. Nenhuma implementação das fases F1–F3 está autorizada por este plano.
+
+### 11.4 Correção de escopo ANAT-03 — CLAUDE-COORD, 16/10/2026
+
+Origem: CLAUDE-COORD → GPT-EXEC, instrução encaminhada diretamente pelo Fábio nesta conversa e registrada na issue #116. Esta correção substitui a pesquisa histórica e o gate de conferência individual de milhares de linhas previstos no plano operacional anterior; as seções 1–10 do desenho permanecem preservadas.
+
+1. Publicar o terceiro lote local como CHECKPOINT-03, sem pesquisa nova e sem aprofundar divergências já encontradas.
+2. Marcar histórico, redações anteriores, revogados, NBM e notas antigas em bloco como **não elegível**, usando classe/nota CONFAZ como prova. Preservar literais, IDs, hashes e as duas aprovações históricas anteriores. Não investigar linha histórica por linha histórica.
+3. Conferência positiva somente para trechos **propostos como vigentes em 16/10/2026**: cláusulas e linhas atuais dos Anexos I/II do 52/91 e cláusulas atuais do 100/97. Fundamentar pela cadeia mínima de prorrogações até o prazo atual, com ato, AD de ratificação, link oficial e data de efeitos. Data expressa e data derivada devem ser identificadas.
+4. Preparar **15–30 blocos** de conferência do Fábio: trecho, situação proposta, fundamento e link; checklist na issue #116 com instruções de abertura e marcação. Não exigir aprovação de cada linha histórica.
+5. Reportar percentual de andamento com denominador declarado, SHA e link do comentário de retorno. As cinco etapas de acompanhamento são: CHECKPOINT-03 publicado; exclusão histórica; prova positiva dos prazos; blocos/planilha/checklist prontos; conferência do Fábio recebida. Quatro primeiras concluídas e última pendente correspondem a **80% (4/5 marcos)**, sem afirmar 80% de aprovação jurídica.
+
+Classificação administrativa de elegibilidade para o piloto não reescreve a situação jurídica histórica do ato. Referência NBM dentro de uma cláusula atual pode permanecer no texto literal; não habilita seleção ou conversão daquele código para NCM. Proposta de texto vigente fica pendente da conferência do Fábio e não ativa produto.
+
+Proibidos código, migration, banco, coleta, merge, deploy e Railway. Nenhuma retomada da automação de quatro horas está autorizada por esta correção.
