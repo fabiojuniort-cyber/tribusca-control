@@ -1,0 +1,38 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV223_21",
+  "status": 200,
+  "consultaUTC": "2026-10-16T05:11:50.969187+00:00",
+  "encoding": "utf-8",
+  "links": [
+    {
+      "texto": "84/21",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/despacho/2021/dp084_21"
+    },
+    {
+      "texto": "38/21",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad038_21"
+    },
+    {
+      "texto": "Convênio ICMS nº 26, 12 de março de 2021",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV026_21"
+    },
+    {
+      "texto": "Voltar para o topo",
+      "href": "#wrapper"
+    },
+    {
+      "texto": "",
+      "href": "http://www.acessoainformacao.gov.br/"
+    },
+    {
+      "texto": "Plone",
+      "href": "http://plone.org"
+    }
+  ],
+  "sha256RespostaHTTP": "067c2695dfe6e77ac594054a13ab346babf6ec51a33af117b6c7d3aec77224f8",
+  "bytesRespostaHTTP": 168914,
+  "sha256ArquivoRepoLF": "895deb3a787a34bf2d9326163c1b0c7ef2085ec0c6251f6e4a942414125a67e7",
+  "bytesArquivoRepoLF": 168913,
+  "normalizacaoArquivoRepo": "CRLF→LF exclusivamente para estabilidade Git; conteúdo textual sem alteração.",
+  "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\continuidade-4h\\evidencia-http\\CV223_21.html"
+}

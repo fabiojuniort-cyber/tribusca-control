@@ -1,0 +1,2578 @@
+{
+  "origem": "CLAUDE-COORD → GPT-EXEC; continuidade de 4h autorizada por Fábio",
+  "dataReferencia": "2026-10-16",
+  "risco": "R0; análise documental offline",
+  "limite": "Candidato documental não comprova vigência, adoção estadual ou elegibilidade; nenhuma aprovação humana criada.",
+  "fonte": {
+    "copiaLocal": "output\\anat\\sql-evidence\\CV052_91.html",
+    "copiaFrozenConferida": "tax13-r7-final\\frozen\\ops\\confaz\\acts\\CV052_91.html",
+    "sha256Local": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+    "sha256NormalizadoLF": "8ed4895e05655e674b1bdcca300a573a0cc3e2994f1a03709fc16692c8b5a9f3",
+    "snapshotGitHub": "https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/fb880354fbbbc90f681290e57dc905bde9ce9c08/ops/confaz/acts/CV052_91.html"
+  },
+  "contagens": {
+    "notasTriadas": 105,
+    "notasComCandidatoAdicional": 44,
+    "notasSemCandidatoIndividual": 61,
+    "relacoesNotaId": 92,
+    "idsCandidatosUnicos": 89,
+    "porCategoria": {
+      "metadado_global": 3,
+      "remissao_geral": 7,
+      "prorrogacao_geral": 32,
+      "candidato_sucessor_delimitado": 33,
+      "inconsistencia_editorial": 7,
+      "escopo_anexo_inteiro": 5,
+      "candidato_coletivo_explicito": 7,
+      "ambiguidade_celula_variante_codigo": 7,
+      "candidato_mesma_linha": 4
+    },
+    "reconciliacaoComMapaAnterior": {
+      "notasComCandidatoAnterior": 71,
+      "notasComCandidatoSomandoComplemento": 115,
+      "idsAlvoUnicosAnteriores": 77,
+      "idsComunsEntreMapas": 0,
+      "idsUnicosSomandoComplemento": 166,
+      "notasInventariadas": 176,
+      "verificacao176": 176
+    }
+  },
+  "entradasPreservadasSha256": {
+    "docs\\anat\\lote-autonomo\\notas\\notas-alvos.json": "91e0dfd7dc8563f4f0d07e2c4707d83597415ac55ae5efb82194d2233b8324de",
+    "docs\\anat\\anat-03-trechos.json": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+    "docs\\anat\\anat-03-dossie-vigencia.xlsx": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894"
+  },
+  "controlesExcluidos": [
+    "ANAT03-00342",
+    "ANAT03-00961"
+  ],
+  "triagem": [
+    {
+      "idNota": "N52-001",
+      "literal": "Publicação DOU de 30.09.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[2]",
+      "classes": "DataPublicao",
+      "linksFonte": [],
+      "categoria": "metadado_global",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-002",
+      "literal": "Retificação DOU de 11.10.91 e 04.12.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[3]",
+      "classes": "DataPublicao",
+      "linksFonte": [],
+      "categoria": "metadado_global",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-003",
+      "literal": "Ratificação Nacional DOU de 17.10.91, pelo Ato COTEPE/ICMS 08/91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[4]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "08/91",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/atos/1991/ac008_91"
+        }
+      ],
+      "categoria": "metadado_global",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-004",
+      "literal": "Alterado pelos Convs. ICMS 87/91, 90/91, 08/92, 13/92, 45/92, 109/92, 02/93, 65/93, 11/94, 72/94, 74/95, 63/96, 74/96, 101/96, 21/97, 111/97, 01/00, 47/01, 102/05, 157/06, 112/08, 89/09, 51/10, 55/10, 140/10, 182/10, 27/12, 96/12, 69/13, 70/13, 95/13, 123/13, 158/13, 154/15, 01/16, 113/17, 129/19, 30/20, 115/20, 146/20, 165/21, 86/23, 199/23, 10/26.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[5]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "87/91",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/resolveuid/9766c92207d74cc9aa0a5e5902fab70f"
+        },
+        {
+          "texto": "90/91",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV090_91"
+        },
+        {
+          "texto": "08/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV008_92"
+        },
+        {
+          "texto": "13/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV013_92"
+        },
+        {
+          "texto": "45/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV045_92"
+        },
+        {
+          "texto": "109/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV109_92"
+        },
+        {
+          "texto": "02/93",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93"
+        },
+        {
+          "texto": "65/93",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV065_93"
+        },
+        {
+          "texto": "11/94",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1994/CV011_94"
+        },
+        {
+          "texto": "72/94",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1994/CV072_94"
+        },
+        {
+          "texto": "74/95",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1995/CV074_95"
+        },
+        {
+          "texto": "63/96",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV063_96"
+        },
+        {
+          "texto": "74/96",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV074_96"
+        },
+        {
+          "texto": "101/96",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV101_96"
+        },
+        {
+          "texto": "21/97",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV021_97"
+        },
+        {
+          "texto": "111/97",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV111_97"
+        },
+        {
+          "texto": "01/00",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2000/CV001_00"
+        },
+        {
+          "texto": "47/01",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV047_01"
+        },
+        {
+          "texto": "102/05",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2005/CV102_05"
+        },
+        {
+          "texto": "157/06",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV157_06"
+        },
+        {
+          "texto": "112/08",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV112_08"
+        },
+        {
+          "texto": "89/09",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV089_09"
+        },
+        {
+          "texto": "51/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV051_10"
+        },
+        {
+          "texto": "55/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV055_10"
+        },
+        {
+          "texto": "140/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV140_10"
+        },
+        {
+          "texto": "182/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV182_10"
+        },
+        {
+          "texto": "27/12",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV027_12"
+        },
+        {
+          "texto": "96/12",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV096_12"
+        },
+        {
+          "texto": "69/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV069_13"
+        },
+        {
+          "texto": "70/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV070_13"
+        },
+        {
+          "texto": "95/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV095_13"
+        },
+        {
+          "texto": "123/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV123_13"
+        },
+        {
+          "texto": "158/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV158_13"
+        },
+        {
+          "texto": "154/15",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV154_15"
+        },
+        {
+          "texto": "01/16",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV001_16"
+        },
+        {
+          "texto": "113/17",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV113_17"
+        },
+        {
+          "texto": "129/19",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV129_19"
+        },
+        {
+          "texto": "30/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV030_20"
+        },
+        {
+          "texto": "115/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV115_20"
+        },
+        {
+          "texto": "146/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV146_20"
+        },
+        {
+          "texto": "165/21",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/cv165_21"
+        },
+        {
+          "texto": "86/23",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV086_23"
+        },
+        {
+          "texto": "199/23",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV199_23"
+        },
+        {
+          "texto": "10/26",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2026/CV010_26"
+        }
+      ],
+      "categoria": "remissao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-005",
+      "literal": "Vide Convs. ICMS 79/91, 88/92, 02/93.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[6]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "79/91",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1991/CV079_91"
+        },
+        {
+          "texto": "88/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV088_92"
+        },
+        {
+          "texto": "02/93",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV002_93"
+        }
+      ],
+      "categoria": "remissao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-006",
+      "literal": "Prorrogado, até 31.12.93, pelo Conv. ICMS 148/92.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[7]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "148/92",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1992/CV148_92"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-007",
+      "literal": "Prorrogado, até 30.04.95, pelo Conv. ICMS 124/93.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[8]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "124/93",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1993/CV124_93"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-008",
+      "literal": "Prorrogado, até 30.04.96, pelo Conv. ICMS 22/95.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[9]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "22/95",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1995/CV022_95"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-009",
+      "literal": "Prorrogado, até 30.04.97, pelo Conv. ICMS 21/96.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[10]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "21/96",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1996/CV021_96"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-010",
+      "literal": "Prorrogado, até 30.04.98, exceto a cláusula terceira, pelo Conv. ICMS 21/97.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[11]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "21/97",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1997/CV021_97"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-011",
+      "literal": "Prorrogado, até 30.04.99, pelo Conv. ICMS 23/98.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[12]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "23/98",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1998/cv023_98"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-012",
+      "literal": "Prorrogado, até 30.04.01, pelo Conv. ICMS 05/99.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[13]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "05/99",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1999/CV005_99"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-013",
+      "literal": "Prorrogado, até 31.12.02, pelo Conv. ICMS 10/01.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[14]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "10/01",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2001/CV010_01"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-014",
+      "literal": "Vide Conv. ICMS 113/98, que autoriza o RN e SE a revogarem o benefício concedido.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[15]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "113/98",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/1998/cv113_98"
+        }
+      ],
+      "categoria": "remissao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-015",
+      "literal": "Prorrogado, até 30.04.03, pelo Conv. ICMS 158/02.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[16]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "158/02",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2002/CV158_02"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-016",
+      "literal": "Prorrogado, até 30.04.04, pelo Conv. ICMS 30/03.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[17]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "30/03",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2003/CV030_03"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-017",
+      "literal": "Prorrogado, até 31.10.07, pelo Conv. ICMS 10/04.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[18]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "10/04",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2004/CV010_04"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-018",
+      "literal": "Vide convalidação das operações com as mercadorias descritas no item 22 do Anexo II, pelo Conv. ICMS 157/06, no período de 22.07.04 a 08.01.07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[19]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "157/06",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2006/CV157_06"
+        }
+      ],
+      "categoria": "remissao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-019",
+      "literal": "Prorrogado, até 31.12.07, pelo Conv. ICMS 124/07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[20]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "124/07",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2007/CV124_07"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-020",
+      "literal": "Prorrogado, até 30.04.08, pelo Conv. ICMS 149/07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[21]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "149/07",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2007/CV149_07"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-021",
+      "literal": "Prorrogado, até 31.07.08, pelo Conv. ICMS 53/08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[22]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "53/08",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV053_08"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-022",
+      "literal": "Prorrogado, até 31.12.08, pelo Conv. ICMS 91/08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[23]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "91/08",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV091_08"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-023",
+      "literal": "Prorrogado, até 31.07.09, pelo Conv. ICMS 138/08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[24]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "138/08",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2008/CV138_08"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-024",
+      "literal": "Prorrogado, até 31.12.09, pelo Conv. ICMS 69/09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[25]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "69/09",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV069_09"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-025",
+      "literal": "Prorrogado, até 31.01.10, pelo Conv. ICMS 119/09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[26]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "119/09",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2009/CV119_09"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-026",
+      "literal": "Prorrogado, até 31.12.12, pelo Conv. ICMS 01/10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[27]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "01/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV001_10"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-027",
+      "literal": "Vide cláusula quarta do Conv. ICMS 51/10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[28]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "51/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV051_10"
+        }
+      ],
+      "categoria": "remissao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-028",
+      "literal": "Vide Convênio ICMS 112/10, que altera o Anexo I do Convênio ICMS 89/09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[29]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "112/10",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2010/CV112_10"
+        }
+      ],
+      "categoria": "remissao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-029",
+      "literal": "Prorrogado, até 31.07.13, pelo Conv. ICMS 101/12.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[30]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "101/12",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2012/CV101_12"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-030",
+      "literal": "Prorrogado, até 31.07.14, pelo Conv. ICMS 14/13.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[31]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "14/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV014_13"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-031",
+      "literal": "Prorrogado, até 31.05.15, pelo Conv. ICMS 191/13.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[32]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "191/13",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2013/CV191_13"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-032",
+      "literal": "Prorrogado, até 31.12.15, pelo Conv. ICMS 27/15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[33]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "27/15",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV027_15"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-033",
+      "literal": "Prorrogado, até 30.06.17, pelo Conv. ICMS 154/15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[34]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "154/15",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2015/CV154_15"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-034",
+      "literal": "Prorrogado, até 30.09.19, pelo Conv. ICMS 49/17.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[35]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "49/17",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV049_17"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-035",
+      "literal": "Vide cláusula terceira do Conv. ICMS 49/17, quanto a observância das disposições do Conv. ICMS 42/16, no que couber.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[36]",
+      "classes": "DataPublicao",
+      "linksFonte": [
+        {
+          "texto": "49/17",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2017/CV049_17"
+        },
+        {
+          "texto": "42/16",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2016/CV042_16"
+        }
+      ],
+      "categoria": "remissao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-036",
+      "literal": "Prorrogado, até 30.04.20, pelo Conv. ICMS 133/19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[37]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "133/19",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2019/CV133_19"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-037",
+      "literal": "Prorrogado, até 31.12.20, pelo Conv. ICMS 22/20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[38]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "22/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV022_20"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-038",
+      "literal": "Prorrogado até 31.03.21, pelo Conv. ICMS 133/20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[39]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "133/20",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2020/CV133_20"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-039",
+      "literal": "Prorrogado até 31.03.22, pelo Conv. ICMS 28/21.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[40]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "28/21",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV028_21"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-040",
+      "literal": "Prorrogado, até 30.04.24, pelo Conv. ICMS 178/21.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[41]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "178/21",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2021/CV178_21"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-041",
+      "literal": "Prorrogado, até 30.04.26, pelo Conv. ICMS 226/23.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[42]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "226/23",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2023/CV226_23"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-042",
+      "literal": "Prorrogado, até 31.12.26, pelo Conv. ICMS 10/26.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[43]",
+      "classes": "A2DataPublicacao",
+      "linksFonte": [
+        {
+          "texto": "10/26",
+          "hrefLiteral": "https://www.confaz.fazenda.gov.br/legislacao/convenios/2026/CV010_26"
+        }
+      ],
+      "categoria": "prorrogacao_geral",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Escopo do ato/remissão, não de uma única linha NCM. Mantida como dependência global; nenhuma propagação aos 2.323 trechos do Convênio 52/91.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-048",
+      "literal": "Redação original, efeitos até 16.10.91:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[65]",
+      "classes": "RedaoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Variante original do inciso II; nota anterior N52-047 explicita inciso II e o sucessor começa II -.",
+      "alvos": [
+        {
+          "id": "ANAT03-00012",
+          "caminho": "Cláusula primeira/inciso II/bloco 66",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[66]",
+          "ncm": "",
+          "textoLiteral": "II - nas operações internas, 11% (onze por cento).",
+          "hashTrecho": "8322a3f5a6babba767b225fa0eeae73301b7e9dc671c269015af5bbff3a510cd",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-060",
+      "literal": "Redação anterior renumerada do parágrafo único para § 1º da cláusula segunda pelo Conv. ICMS 165/21, efeitos de 26.10.21. a 24.08.23.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[100]",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "categoria": "inconsistencia_editorial",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota diz cláusula segunda; contexto DOM pertence à quarta. Exige confronto do modificador; nenhuma correção literal inferida.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-064",
+      "literal": "Nova redação dada ao §2º da cláusula quarta-feira pelo Conv. ICMS 10/26, efeitos a partir de 01.05.26.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[108]",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "categoria": "inconsistencia_editorial",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota literal quarta-feira é anômala; vínculo aguarda confronto do modificador 10/26.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-068",
+      "literal": "Acrescido o parágrafo único à cláusula quinta pelo Conv. 69/13, efeitos de 01.10.13 a 31.12.16.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[116]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "inconsistencia_editorial",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Conflito entre efeitos até 31.12.16 e revogação indicada por N52-067 a partir de 01.01.16. Não harmonizar datas.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-070",
+      "literal": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[121]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "categoria": "escopo_anexo_inteiro",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota de anexo inteiro/variante histórica. Pode ancorar a variante, mas a identificação da tabela não homologa cada linha nem substitui as notas locais. Sem vínculo individual em massa.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-075",
+      "literal": "Redação anterior dada ao subitem 20.2 do Anexo I pelo Conv. ICMS 129/19, efeitos até 30.09.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[115]/td/p",
+      "classes": "",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número explícito 20.2 igual ao ITEM sucessor; a atribuição do modificador e efeitos continuam pendentes.",
+      "alvos": [
+        {
+          "id": "ANAT03-00163",
+          "caminho": "ANEXO I/tabela 1/linha 116/item 20.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[116]",
+          "ncm": "8424.30.10",
+          "textoLiteral": "20.2 | Máquinas e aparelhos de desobstrução de tubulação ou de limpeza, por jato de água | 8424.30.10",
+          "hashTrecho": "3eef07c23f06618b871c13f42466335d51ece6310ddda03728e9d827ea61392a",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-089",
+      "literal": "Revogados os subitens 39.1, 39.2 e 39.3 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[291]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "categoria": "candidato_coletivo_explicito",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Revogação coletiva explícita; pula exatamente a nota histórica N52-090, exige sequência 39.1/39.2/39.3. Controle aprovado 00342 excluído.",
+      "alvos": [
+        {
+          "id": "ANAT03-00343",
+          "caminho": "ANEXO I/tabela 1/linha 294/item 39.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[294]",
+          "ncm": "8450.12.00",
+          "textoLiteral": "39.2 | Máquinas de capacidade não superior a 10kg, em peso de roupa seca, com secador centrífugo incorporado | 8450.12.00",
+          "hashTrecho": "6127db815bbb7a61efb39a7e1163ea05d37846a97014cac76fc0bb7b0a0c4d12",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00344",
+          "caminho": "ANEXO I/tabela 1/linha 295/item 39.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[295]",
+          "ncm": "8450.19.00",
+          "textoLiteral": "39.3 | Outras máquinas de capacidade não superior a 10kg, em peso de roupa seca | 8450.19.00",
+          "hashTrecho": "79f1c13e017a817f7247ea6ae72f533aa8253b7d8b0b101ca20614334f05b928",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": [
+        "ANAT03-00342"
+      ],
+      "limiteDOMAposSelecao": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[296]"
+    },
+    {
+      "idNota": "N52-090",
+      "literal": "Redação anterior dada aos subitens 39.1, 39.2 e 39.3 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[292]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_coletivo_explicito",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Histórico coletivo explícito e sequência 39.1/39.2/39.3. Controle aprovado 00342 excluído.",
+      "alvos": [
+        {
+          "id": "ANAT03-00343",
+          "caminho": "ANEXO I/tabela 1/linha 294/item 39.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[294]",
+          "ncm": "8450.12.00",
+          "textoLiteral": "39.2 | Máquinas de capacidade não superior a 10kg, em peso de roupa seca, com secador centrífugo incorporado | 8450.12.00",
+          "hashTrecho": "6127db815bbb7a61efb39a7e1163ea05d37846a97014cac76fc0bb7b0a0c4d12",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00344",
+          "caminho": "ANEXO I/tabela 1/linha 295/item 39.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[295]",
+          "ncm": "8450.19.00",
+          "textoLiteral": "39.3 | Outras máquinas de capacidade não superior a 10kg, em peso de roupa seca | 8450.19.00",
+          "hashTrecho": "79f1c13e017a817f7247ea6ae72f533aa8253b7d8b0b101ca20614334f05b928",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": [
+        "ANAT03-00342"
+      ],
+      "limiteDOMAposSelecao": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[296]"
+    },
+    {
+      "idNota": "N52-093",
+      "literal": "Revogado o subitem 40.2 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[303]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "categoria": "candidato_coletivo_explicito",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Revogação 40.2 explícita; pula exatamente nota histórica N52-094 e limita-se a 40.2.",
+      "alvos": [
+        {
+          "id": "ANAT03-00354",
+          "caminho": "ANEXO I/tabela 1/linha 305/item 40.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[305]",
+          "ncm": "8451.21.00",
+          "textoLiteral": "40.2 | Máquina industrial de secar de capacidade não superior a 10kg, em peso de roupa seca | 8451.21.00",
+          "hashTrecho": "d5962c8321960b284729b66fe821260da93987bbaa19fe0ff896a3aec95f80be",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": [],
+      "limiteDOMAposSelecao": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[306]"
+    },
+    {
+      "idNota": "N52-094",
+      "literal": "Redação anterior dada ao subite 40.2 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 29.12.15",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[304]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 40.2 expresso, apesar da grafia literal subite, igual à célula ITEM sucessora.",
+      "alvos": [
+        {
+          "id": "ANAT03-00354",
+          "caminho": "ANEXO I/tabela 1/linha 305/item 40.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[305]",
+          "ncm": "8451.21.00",
+          "textoLiteral": "40.2 | Máquina industrial de secar de capacidade não superior a 10kg, em peso de roupa seca | 8451.21.00",
+          "hashTrecho": "d5962c8321960b284729b66fe821260da93987bbaa19fe0ff896a3aec95f80be",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-101",
+      "literal": "Nova redação dada ao item 55 e seus subitens 55.1 ao 55.14 do Anexo I, pelo Conv. ICMS 89/09, com a alteração introduzida pelo Conv. ICMS 112/10, efeitos a partir de 01.09.10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[474]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "categoria": "candidato_coletivo_explicito",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Escopo expresso item 55 e subitens 55.1 a 55.14; sequência completa até a próxima nota N52-102.",
+      "alvos": [
+        {
+          "id": "ANAT03-00524",
+          "caminho": "ANEXO I/tabela 1/linha 475/item 55",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[475]",
+          "ncm": "",
+          "textoLiteral": "55 | PARTES E ACESSÓRIOS RECONHECÍVEIS COMO EXCLUSIVA OU PRINCIPALMENTE DESTINADOS ÀS MÁQUINAS DAS POSIÇÕES 84.56 A 84.65, INCLUÍDOS OS PORTA-PEÇAS E PORTA-FERRAMENTAS, AS FIEIRAS DE ABERTURA AUTOMÁTICA, OS DISPOSITIVOS DIVISORES E OUTROS DISPOSITIVOS ESPECIAIS, PARA MÁQUINAS-FERRAMENTAS; PORTA-FERRAMENTAS PARA FERRAMENTAS MANUAIS DE TODOS OS TIPOS | ",
+          "hashTrecho": "51dbe21a86b8385e74daf645cd25e45e4cfa84f33c0ea74e53d5939602bcd22b",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00525",
+          "caminho": "ANEXO I/tabela 1/linha 476/item 55.1",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[476]",
+          "ncm": "8466.20.10",
+          "textoLiteral": "55.1 | Porta-peças, para tornos | 8466.20.10",
+          "hashTrecho": "cf83f3e8389efdd98502be4384d60a4a6778bcce9e684ccb7a179e01714c94bc",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00526",
+          "caminho": "ANEXO I/tabela 1/linha 477/item 55.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[477]",
+          "ncm": "8466.30.00",
+          "textoLiteral": "55.2 | Dispositivos divisores e outros dispositivos especiais, para máquinas-ferramentas | 8466.30.00",
+          "hashTrecho": "7d8012455eb6e41c9c72009111d84f9e7abca18149f56e24c88daf10a18736f4",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00527",
+          "caminho": "ANEXO I/tabela 1/linha 478/item 55.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[478]",
+          "ncm": "8466.91.00",
+          "textoLiteral": "55.3 | Outros acessórios, partes para máquinas da posição 84.64 | 8466.91.00",
+          "hashTrecho": "fc1cc9f5772e58dd9aa8fb5552e45aedab4992febb5a3e35feab21f6f754a455",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00528",
+          "caminho": "ANEXO I/tabela 1/linha 479/item 55.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[479]",
+          "ncm": "8466.92.00",
+          "textoLiteral": "55.4 | Outros acessórios e partes Para máquinas da posição 84.65 | 8466.92.00",
+          "hashTrecho": "55f52407113f000a14ba77a5dbf709c9c26570cbbb829da887b46bc024c9890a",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00529",
+          "caminho": "ANEXO I/tabela 1/linha 480/item 55.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[480]",
+          "ncm": "8466.93.19",
+          "textoLiteral": "55.5 | Outros acessórios e partes para máquinas para usinagem de metais ou carbonetos metálicos da posição 84.56 | 8466.93.19",
+          "hashTrecho": "875e85cefb13c921ce8587efda4ed66ec9b757e4be826aa79889822d3280aaab",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00530",
+          "caminho": "ANEXO I/tabela 1/linha 481/item 55.6",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[481]",
+          "ncm": "8466.93.20",
+          "textoLiteral": "55.6 | Outros acessórios e partes para máquinas da posição 84.57 | 8466.93.20",
+          "hashTrecho": "2bd692a74aa7f59d2b96b61ae6cde2881bd53e97d3815d003a9c49c3cf57de2c",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00531",
+          "caminho": "ANEXO I/tabela 1/linha 482/item 55.7",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[482]",
+          "ncm": "8466.93.30",
+          "textoLiteral": "55.7 | Outros acessórios e partes para máquinas da posição 84.58 | 8466.93.30",
+          "hashTrecho": "44dcafca0aa9bc4b7d0f2334ee8511d3fb882da07c22bc7a7cfb702b11a13185",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00532",
+          "caminho": "ANEXO I/tabela 1/linha 483/item 55.8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[483]",
+          "ncm": "8466.93.40",
+          "textoLiteral": "55.8 | Outros acessórios e partes para máquinas da posição 84.59 | 8466.93.40",
+          "hashTrecho": "642b8dd27e0cfd0c922b38214553cc46a2b910c2a9d157c37a9d93dcb7034bb8",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00533",
+          "caminho": "ANEXO I/tabela 1/linha 484/item 55.9",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[484]",
+          "ncm": "8466.93.50",
+          "textoLiteral": "55.9 | Outros acessórios e partes para máquinas da posição 84.60 | 8466.93.50",
+          "hashTrecho": "d27850801c1ed6d3ffb2f7144b8e1df229a3854d22a2d168a50c628982013c86",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00534",
+          "caminho": "ANEXO I/tabela 1/linha 485/item 55.10",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[485]",
+          "ncm": "8466.93.60",
+          "textoLiteral": "55.10 | Outros acessórios e partes para máquinas da posição 84.61 | 8466.93.60",
+          "hashTrecho": "8e87f981d3d7a4a432ada9fdb902562bf1ea7258747af6379bbffd9f302f4ed5",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00535",
+          "caminho": "ANEXO I/tabela 1/linha 486/item 55.11",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[486]",
+          "ncm": "8466.94.10",
+          "textoLiteral": "55.11 | Outros acessórios e partes para máquinas da posição 8462.10 | 8466.94.10",
+          "hashTrecho": "19458daf18daef8bd547f72724fd0efd48cc4b3fd0ce06a738d8a6472de99766",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00536",
+          "caminho": "ANEXO I/tabela 1/linha 487/item 55.12",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[487]",
+          "ncm": "8466.94.20",
+          "textoLiteral": "55.12 | Outros acessórios e partes para das subposições 8462.21 ou 8462.29 | 8466.94.20",
+          "hashTrecho": "cf65ed88df5f7d96021a15e309be2d5a56bc5a9a9d793d854010573b86f7779b",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00537",
+          "caminho": "ANEXO I/tabela 1/linha 488/item 55.13",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[488]",
+          "ncm": "8466.94.30",
+          "textoLiteral": "55.13 | Outros acessórios e partes para prensas para extrusão | 8466.94.30",
+          "hashTrecho": "419119bcb893f5c4b49d7608f809841e8cf8423df759c7e83a142540f731abc4",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00538",
+          "caminho": "ANEXO I/tabela 1/linha 489/item 55.14",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[489]",
+          "ncm": "8466.94.90",
+          "textoLiteral": "55.14 | Outros acessórios e partes para máquinas: de estirar fios ou tubos; de cisalhar (incluídas as prensas), exceto as máquinas combinadas de puncionar e cisalhar; de puncionar ou chanfrar, incluídas as máquinas combinadas de puncionar e cisalhar; de fazer roscas internas ou externas por rolagem ou laminagem; de trabalhar arames e fios de metal; de trefiladeiras manuais; estiradoras ou trefiladoras para fios; extrusoras e para outras máquinas da posição 84.63, não especificadas | 8466.94.90",
+          "hashTrecho": "cce6430e58825ef14c1fea7612cab60bb0558b91fa0595c68e8bea101f96cd2c",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": [],
+      "limiteDOMAposSelecao": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[490]"
+    },
+    {
+      "idNota": "N52-102",
+      "literal": "Redação anterior dada ao item 55 e seus subitens 55.1 ao 55.14 do Anexo I, pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 31;08;10.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[490]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_coletivo_explicito",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Escopo expresso item 55 e subitens 55.1 a 55.14, variante histórica separada; data literal 31;08;10 preservada.",
+      "alvos": [
+        {
+          "id": "ANAT03-00540",
+          "caminho": "ANEXO I/tabela 1/linha 491/item 55",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[491]",
+          "ncm": "",
+          "textoLiteral": "55 | PARTES E ACESSÓRIOS RECONHECÍVEIS COMO EXCLUSIVA OU PRINCIPALMENTE DESTINADOS ÀS MÁQUINAS DAS POSIÇÕES 84.56 A 84.65, INCLUÍDOS OS PORTA-PEÇAS E PORTA-FERRAMENTAS, AS FIEIRAS DE ABERTURA AUTOMÁTICA, OS DISPOSITIVOS DIVISORES E OUTROS DISPOSITIVOS ESPECIAIS, PARA MÁQUINAS-FERRAMENTAS; PORTA-FERRAMENTAS PARA FERRAMENTAS MANUAIS DE TODOS OS TIPOS | ",
+          "hashTrecho": "51dbe21a86b8385e74daf645cd25e45e4cfa84f33c0ea74e53d5939602bcd22b",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00541",
+          "caminho": "ANEXO I/tabela 1/linha 492/item 55.1",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[492]",
+          "ncm": "8466.20.10",
+          "textoLiteral": "55.1 | Porta-peças, para tornos | 8466.20.10",
+          "hashTrecho": "cf83f3e8389efdd98502be4384d60a4a6778bcce9e684ccb7a179e01714c94bc",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00542",
+          "caminho": "ANEXO I/tabela 1/linha 493/item 55.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[493]",
+          "ncm": "8466.30.00",
+          "textoLiteral": "55.2 | Dispositivos divisores e outros dispositivos especiais, para máquinas-ferramentas | 8466.30.00",
+          "hashTrecho": "7d8012455eb6e41c9c72009111d84f9e7abca18149f56e24c88daf10a18736f4",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00543",
+          "caminho": "ANEXO I/tabela 1/linha 494/item 55.3",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[494]",
+          "ncm": "8466.91.00",
+          "textoLiteral": "55.3 | Dispositivos divisores e especiais para máquinas da posição 84.64 | 8466.91.00",
+          "hashTrecho": "ecf5cbf0aa1080c566712f5b04ea5256e82518e61d2399dbea0e0af8946c05ec",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00544",
+          "caminho": "ANEXO I/tabela 1/linha 495/item 55.4",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[495]",
+          "ncm": "8466.92.00",
+          "textoLiteral": "55.4 | Para máquinas da posição 84.65 | 8466.92.00",
+          "hashTrecho": "a60c91eba87da4393b0d3e746cd465c3b42c28858dabe7a5f10014d3003ee440",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00545",
+          "caminho": "ANEXO I/tabela 1/linha 496/item 55.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[496]",
+          "ncm": "8466.93.19",
+          "textoLiteral": "55.5 | Dispositivos divisores e especiais para máquinas para usinagem de metais ou carbonetos metálicos da posição 84.56 | 8466.93.19",
+          "hashTrecho": "d42d021259353fdf728cd0fabffc1142f0a06e49aa16d35795c27c8c143e747e",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00546",
+          "caminho": "ANEXO I/tabela 1/linha 497/item 55.6",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[497]",
+          "ncm": "8466.93.20",
+          "textoLiteral": "55.6 | Dispositivos divisores e especiais para máquinas da posição 84.57 | 8466.93.20",
+          "hashTrecho": "12fa0950f4d37d3a84379d3a5cdf3e015698479db928b82d53a6678d1c4d24f1",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00547",
+          "caminho": "ANEXO I/tabela 1/linha 498/item 55.7",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[498]",
+          "ncm": "8466.93.30",
+          "textoLiteral": "55.7 | Dispositivos divisores e especiais para máquinas da posição 84.58 | 8466.93.30",
+          "hashTrecho": "b7d6fd1867d9eb48292da6c9585009c8c4ff52bf30e2f96bbc7e708beda16148",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00548",
+          "caminho": "ANEXO I/tabela 1/linha 499/item 55.8",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[499]",
+          "ncm": "8466.93.40",
+          "textoLiteral": "55.8 | Dispositivos divisores e especiais para máquinas da posição 84.59 | 8466.93.40",
+          "hashTrecho": "522e1751cfb3a88a50998a27a71d34d7285bcfb86aa7690c4862260667879de8",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00549",
+          "caminho": "ANEXO I/tabela 1/linha 500/item 55.9",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[500]",
+          "ncm": "8466.93.50",
+          "textoLiteral": "55.9 | Dispositivos divisores e especiais para máquinas da posição 84.60 | 8466.93.50",
+          "hashTrecho": "da9a3c38f5ec1c6cce21518d9f3432ffcadcf939dc8f3b07bfcdfb3edba63e3f",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00550",
+          "caminho": "ANEXO I/tabela 1/linha 501/item 55.10",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[501]",
+          "ncm": "8466.93.60",
+          "textoLiteral": "55.10 | Dispositivos divisores e especiais para máquinas da posição 84.61 | 8466.93.60",
+          "hashTrecho": "354951a847f1c2e12a9b645af2b83fb20f80444251ddbd4ef8f93ad24ee79049",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00551",
+          "caminho": "ANEXO I/tabela 1/linha 502/item 55.11",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[502]",
+          "ncm": "8466.94.10",
+          "textoLiteral": "55.11 | Dispositivos divisores e especiais para máquinas da posição 8462.10 | 8466.94.10",
+          "hashTrecho": "ff0d1db0947c40129e87e911bc7b1645e824aef837c15d349045f841e5ed5470",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00552",
+          "caminho": "ANEXO I/tabela 1/linha 503/item 55.12",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[503]",
+          "ncm": "8466.94.20",
+          "textoLiteral": "55.12 | Dispositivos divisores e especiais para das subposições 8462.21 ou 8462.29 | 8466.94.20",
+          "hashTrecho": "da2cc8d82035aeffeb28b78d393214fccd500b81009f2acb2fa0bcc2e1ab3b03",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00553",
+          "caminho": "ANEXO I/tabela 1/linha 504/item 55.13",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[504]",
+          "ncm": "8466.94.30",
+          "textoLiteral": "55.13 | Dispositivos divisores e especiais para prensas para extrusão | 8466.94.30",
+          "hashTrecho": "e197de35a6dcc1bbcce164cc7714d27cbe5a02b3dc024f615ab38bc1892d2c7f",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00554",
+          "caminho": "ANEXO I/tabela 1/linha 505/item 55.14",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[505]",
+          "ncm": "8466.94.90",
+          "textoLiteral": "55.14 | Dispositivos divisores e especiais para máquinas: de estirar fios ou tubos; de cisalhar (incluídas as prensas), exceto as máquinas combinadas de puncionar e cisalhar; de puncionar ou chanfrar, incluídas as máquinas combinadas de puncionar e cisalhar; de fazer roscas internas ou externas por rolagem ou laminagem; de trabalhar arames e fios de metal; de trefiladeiras manuais; estiradoras ou trefiladoras para fios; extrusoras e para outras máquinas da posição 84.63, não especificadas | 8466.94.90",
+          "hashTrecho": "ce2e386829b69d0a777ff786b7adc01094bbf06e95def9bdc02935517e8cc8eb",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": [],
+      "limiteDOMAposSelecao": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[506]"
+    },
+    {
+      "idNota": "N52-105",
+      "literal": "Acrescido o item 72 e os subitens 72.1 e 72.2 ao Anexo I pelo Conv. ICMS 95/13, efeitos a partir de 01.10.13.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[601]/td/p",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "categoria": "candidato_coletivo_explicito",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Escopo expresso 72, 72.1 e 72.2; são as três últimas linhas da tabela desta variante.",
+      "alvos": [
+        {
+          "id": "ANAT03-00652",
+          "caminho": "ANEXO I/tabela 1/linha 602/item 72",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[602]",
+          "ncm": "",
+          "textoLiteral": "72 | Máquinas e aparelhos elétricos com função própria, não especificados nem compreendidos noutras posições do presente Capítulo. | ",
+          "hashTrecho": "425a04b5e9c44ddf384b9b3a4331db642bbb1aa028589237ce2d85f29db38ce0",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00653",
+          "caminho": "ANEXO I/tabela 1/linha 603/item 72.1",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[603]",
+          "ncm": "8543.70.99",
+          "textoLiteral": "72.1 | Codificadoras de anéis coloridos | 8543.70.99",
+          "hashTrecho": "dfac5f5a746393559d6119a4b661745b83d054eece292e0340c2cf3d28db4a18",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-00654",
+          "caminho": "ANEXO I/tabela 1/linha 604/item 72.2",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[1]/table/tbody/tr[604]",
+          "ncm": "8543.70.99",
+          "textoLiteral": "72.2 | Revisoras | 8543.70.99",
+          "hashTrecho": "4d98f9e3d1b8459b7380f68d3f11af362f7d50108dbf0a78dc326d039f28a0fa",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": [],
+      "limiteDOMAposSelecao": "fim da tabela"
+    },
+    {
+      "idNota": "N52-106",
+      "literal": "Redação anterior dada ao Anexo I pelo Conv. ICMS 11208, efeitos de 20.10.08 a 14.10.09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[126]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "escopo_anexo_inteiro",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota de anexo inteiro/variante histórica. Pode ancorar a variante, mas a identificação da tabela não homologa cada linha nem substitui as notas locais. Sem vínculo individual em massa.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-107",
+      "literal": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/p[1]",
+      "classes": "Remisso",
+      "linksFonte": [],
+      "categoria": "escopo_anexo_inteiro",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota de anexo inteiro/variante histórica. Pode ancorar a variante, mas a identificação da tabela não homologa cada linha nem substitui as notas locais. Sem vínculo individual em massa.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-111",
+      "literal": "Redação original, efeitos até 31.05.2020.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[13]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Variante original imediatamente após N52-110/linha 2.1; sucessor 2.1, sem nota intermediária.",
+      "alvos": [
+        {
+          "id": "ANAT03-01384",
+          "caminho": "ANEXO II/tabela 3/linha 14/item 2.1",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[14]",
+          "ncm": "3925.10.00",
+          "textoLiteral": "2.1 | Silos de matéria plástica artificial ou de lona plastificada, com capacidade superior a 300 litros | 3925.10.00",
+          "hashTrecho": "5754aec4da499c9236c0fa982f8d02fd51fba30894b35d6e0aa2970e5059cb37",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-126",
+      "literal": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[77]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "categoria": "inconsistencia_editorial",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota declara 13.4 e 28.12.20; linha sucessora é 13.5. Não vincular por proximidade.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-127",
+      "literal": "Redação original dada ao subitem 13.5 do Anexo II, efeitos até 28.12.20.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[79]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 13.5 explícito igual ao ITEM sucessor; a nota conflitante N52-126 não é herdada.",
+      "alvos": [
+        {
+          "id": "ANAT03-01452",
+          "caminho": "ANEXO II/tabela 3/linha 80/item 13.5",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[80]",
+          "ncm": "8432.40.00",
+          "textoLiteral": "13.5 | Espalhadores de estrume e distribuidores de adubos (fertilizantes) | 8432.40.00",
+          "hashTrecho": "14441ecde3af6bcf92d76b8922a2713e6284ff79a6aee47d122bc3ffa0126e3b",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-130",
+      "literal": "Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[105]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "categoria": "inconsistencia_editorial",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota declara 14.9; linha sucessora é 14.19. Não trocar número silenciosamente.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-133",
+      "literal": "Redação original, efeitos até 30.06.24",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[119]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Variante original entre a redação de 17/N52-132 e o próximo item 18; apenas a linha 17.",
+      "alvos": [
+        {
+          "id": "ANAT03-01493",
+          "caminho": "ANEXO II/tabela 3/linha 120/item 17",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[120]",
+          "ncm": "8467.81.00",
+          "textoLiteral": "17 | Moto-serras portáteis de corrente, com motor incorporado, não elétrico, de uso agrícola | 8467.81.00",
+          "hashTrecho": "6d25766f4661e546986c8abb098872364bc05b2e6f2c2cdd9aa68550060a66d7",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-134",
+      "literal": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[124]/td/p",
+      "classes": "A8-1Remissao",
+      "linksFonte": [],
+      "categoria": "inconsistencia_editorial",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota declara 13.3; linha sucessora é 19.2. Não usar o alvo 13.3 de outra posição.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-135",
+      "literal": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[3]/table/tbody/tr[126]/td/p",
+      "classes": "A8-2RemissaoAnt",
+      "linksFonte": [],
+      "categoria": "inconsistencia_editorial",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota original declara 13.3; linha sucessora é 19.2. Exige confronto de modificador e variante.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-136",
+      "literal": "Redação anterior dada ao Anexo II pelo Conv. ICMS 112/08, efeitos de 20.10.08 a 14.10.09.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[132]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "escopo_anexo_inteiro",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota de anexo inteiro/variante histórica. Pode ancorar a variante, mas a identificação da tabela não homologa cada linha nem substitui as notas locais. Sem vínculo individual em massa.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-137",
+      "literal": "Redação original, dos Anexos I e II, efeitos até 19.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/p[137]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "escopo_anexo_inteiro",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota de anexo inteiro/variante histórica. Pode ancorar a variante, mas a identificação da tabela não homologa cada linha nem substitui as notas locais. Sem vínculo individual em massa.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-138",
+      "literal": "Redação anterior dada ao item abaixo pelo Conv. ICMS 74/95, efeitos de 21.11.95 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[2]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Expressão item abaixo e linha sucessora Válvula; sem alcance para a nota N52-139.",
+      "alvos": [
+        {
+          "id": "ANAT03-01591",
+          "caminho": "ANEXO I/tabela 5/linha 3/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[3]",
+          "ncm": "8481.80.9910",
+          "textoLiteral": "Válvula | 8481.80.9910",
+          "hashTrecho": "1dffa905cb5f29ebe1b70883e015020c75ec72c8a216531f3d0080a46caa8604",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-139",
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 20.11.95.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[4]/td[1]/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "ambiguidade_celula_variante_codigo",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Código 7307.19.0300 na própria linha da nota e sucessor Válvula sem código; geometria das células requer revisão visual antes de apontar ID.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-140",
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[7]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Expressão item abaixo e linha sucessora Brocas, na mesma tabela histórica.",
+      "alvos": [
+        {
+          "id": "ANAT03-01596",
+          "caminho": "ANEXO I/tabela 5/linha 8/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[8]",
+          "ncm": "8207.12.0100",
+          "textoLiteral": "Brocas | 8207.12.0100",
+          "hashTrecho": "287d4fff1fe0c496cacac8d4e64546c36432bffeddeccdf06680efc06c399d4e",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-141",
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[9]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Expressão item abaixo e linha sucessora Ferramentas de embutir, de estampar ou de puncionar.",
+      "alvos": [
+        {
+          "id": "ANAT03-01598",
+          "caminho": "ANEXO I/tabela 5/linha 10/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[10]",
+          "ncm": "8207.30.0000",
+          "textoLiteral": "Ferramentas de embutir, de estampar ou de puncionar | 8207.30.0000",
+          "hashTrecho": "91da205cc0796ab1180b236587d864d6b0e33785c22095210290695a5ab04454",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-142",
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 45/92, efeitos de 16.07.92 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[26]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Expressão item abaixo e linha sucessora Outras bombas centrífugas.",
+      "alvos": [
+        {
+          "id": "ANAT03-01617",
+          "caminho": "ANEXO I/tabela 5/linha 27/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[27]",
+          "ncm": "8413.70.0000",
+          "textoLiteral": "Outras bombas centrífugas | 8413.70.0000",
+          "hashTrecho": "26cddb63855ed5b691870b5395f29f986e4d86429bd2f7107ab2b0db23455cb0",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-143",
+      "literal": "Acrescido o item abaixo pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[97]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Expressão item abaixo e linha sucessora Aparelhos para filtrar ou depurar gases.",
+      "alvos": [
+        {
+          "id": "ANAT03-01688",
+          "caminho": "ANEXO I/tabela 5/linha 98/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[98]",
+          "ncm": "8421.39.9900",
+          "textoLiteral": "Aparelhos para filtrar ou depurar gases | 8421.39.9900",
+          "hashTrecho": "c689a61c1ec935327a508807470e022005bd2ce1bbc2df20599e3bd20385df8f",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-144",
+      "literal": "Nova redação dada ao item 15.8 do Anexo I pelo Conv. ICMS 101/96, efeitos a partir de 08.01.97:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[127]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 15.8 explícito igual ao ITEM sucessor; não inclui a linha com duas variantes históricas.",
+      "alvos": [
+        {
+          "id": "ANAT03-01723",
+          "caminho": "ANEXO I/tabela 5/linha 128/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[128]",
+          "ncm": "8428.10.0000",
+          "textoLiteral": "15.8 Elevadores de carga de uso industrial e monta-cargas | 8428.10.0000",
+          "hashTrecho": "e6393161202e36b2df12ba0871c527b2fe53a02da5c41ef1aea200fee5f8ad27",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-145",
+      "literal": "Redação anterior, dada ao item 15.08 do Anexo I pelo Conv. ICMS 63/96, efeitos de 11.10.96 a 07.01.97:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[129]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "ambiguidade_celula_variante_codigo",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Duas variantes 15.08 e dois códigos iguais na mesma linha; XPath de linha não separa os efeitos desta nota.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-146",
+      "literal": "Redação original, efeitos até 10.10.96:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[129]/td/p[3]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "ambiguidade_celula_variante_codigo",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Mesma linha contém a variante de N52-145 e a original; não atribuir a nota aos dois registros NCM.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-147",
+      "literal": "Nova redação dada ao caput do item 33.03 do Anexo I pelo Conv. ICMS 11/94, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[446]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Caput 33.03 explícito igual ao ITEM sucessor; não inclui alíneas e códigos subsequentes.",
+      "alvos": [
+        {
+          "id": "ANAT03-02061",
+          "caminho": "ANEXO I/tabela 5/linha 447/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[447]",
+          "ncm": "",
+          "textoLiteral": "33.03 Outras: | ",
+          "hashTrecho": "11bbe39b5d1e405e8222cf92c229bef4559db75a44376edb7895997300babbc3",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-148",
+      "literal": "Redação original, efeitos até 21.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[448]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_mesma_linha",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota e único caput histórico 33.03 na mesma linha; vínculo à linha, sem propagar às alíneas.",
+      "alvos": [
+        {
+          "id": "ANAT03-02062",
+          "caminho": "ANEXO I/tabela 5/linha 448/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[448]",
+          "ncm": "",
+          "textoLiteral": "Redação original, efeitos até 21.04.94: 33.03 Tarraxas de funcionamento automático e contrapontas giratórias:",
+          "hashTrecho": "f977b573cfe6851ff8f4db48e7ddf8fbaa86e774a6c92c2ce4fffd3eb91dda16",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-149",
+      "literal": "Acrescido o item abaixo ao Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[546]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Expressão item abaixo e linha sucessora Packer (obturador).",
+      "alvos": [
+        {
+          "id": "ANAT03-02163",
+          "caminho": "ANEXO I/tabela 5/linha 547/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[547]",
+          "ncm": "8479.89.9900",
+          "textoLiteral": "Packer (obturador) | 8479.89.9900",
+          "hashTrecho": "527133ca6459f50171827c812a368f63d1df74d491f4c108751b299bfb08be07",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-150",
+      "literal": "Nova redação dada ao item 40.07 do Anexo I pelo Conv. ICMS 90/91, efeitos de 27.12.91 a 18.10.08.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[548]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 40.07 explícito igual ao ITEM sucessor; a variante original fica separada.",
+      "alvos": [
+        {
+          "id": "ANAT03-02165",
+          "caminho": "ANEXO I/tabela 5/linha 549/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[549]",
+          "ncm": "8479.89.9900",
+          "textoLiteral": "40.07 Outras máquinas e aparelhos | 8479.89.9900",
+          "hashTrecho": "74147059994ce51bf5a52568d45deced191d130baef17b05c97185b03704ec70",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-151",
+      "literal": "Redação original, efeitos até 26.12.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[550]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_mesma_linha",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota e única variante original 40.07 na mesma linha; não confundir com a redação da linha anterior.",
+      "alvos": [
+        {
+          "id": "ANAT03-02166",
+          "caminho": "ANEXO I/tabela 5/linha 550/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[550]",
+          "ncm": "",
+          "textoLiteral": "Redação original, efeitos até 26.12.91. 40.07 Máquinas para fabricação de cabos ou condutores elétricos 8479.89.9900",
+          "hashTrecho": "7dae5b73b61305defcf0a7ed6f1a83d9e7a11b15c4938c85f39a53e0eda3d249",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-152",
+      "literal": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[571]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota de acréscimo de item seguida exclusivamente de Árvore de natal antes da próxima nota.",
+      "alvos": [
+        {
+          "id": "ANAT03-02191",
+          "caminho": "ANEXO I/tabela 5/linha 572/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[572]",
+          "ncm": "8481.10.0100",
+          "textoLiteral": "Árvore de natal | 8481.10.0100",
+          "hashTrecho": "11a8fafbbcbb9dd09cf81aaa07bacf21809667493ad0b17b69ded2d5f3c486c3",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-153",
+      "literal": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[573]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota de acréscimo de item seguida exclusivamente de Manifold e válvula tipo gaveta antes da próxima nota.",
+      "alvos": [
+        {
+          "id": "ANAT03-02193",
+          "caminho": "ANEXO I/tabela 5/linha 574/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[574]",
+          "ncm": "8481.80.9901",
+          "textoLiteral": "Manifold e válvula tipo gaveta | 8481.80.9901",
+          "hashTrecho": "de5464643abbdfe6bdcc7ad562b60b85e2e5821862b06ca7b0c40a5a224853ee",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-154",
+      "literal": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[575]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota de acréscimo de item seguida exclusivamente de Válvula tipo esfera antes da próxima nota.",
+      "alvos": [
+        {
+          "id": "ANAT03-02195",
+          "caminho": "ANEXO I/tabela 5/linha 576/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[576]",
+          "ncm": "8481.80.9905",
+          "textoLiteral": "Válvula tipo esfera | 8481.80.9905",
+          "hashTrecho": "0897a26a29ab56016175f9e5b15482e9ea2f9d245bbfbf80e96ca07fc301f92f",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-155",
+      "literal": "Acrescido o item pelo Conv. ICMS 11/94 ao Anexo I, efeitos a partir de 22.04.94:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[577]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota de acréscimo de item seguida exclusivamente de Válvula tipo borboleta antes da próxima nota.",
+      "alvos": [
+        {
+          "id": "ANAT03-02197",
+          "caminho": "ANEXO I/tabela 5/linha 578/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[578]",
+          "ncm": "8481.80.9909",
+          "textoLiteral": "Válvula tipo borboleta | 8481.80.9909",
+          "hashTrecho": "f25990828207602c5600eeab3949913406a00377b6f9d734a3966d0788c503ec",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-156",
+      "literal": "Acrescido o Item 41-A ao Anexo I pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[579]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota explicita item 41-A; apenas seu cabeçalho sucessor, sem propagação ao 41-A-01.",
+      "alvos": [
+        {
+          "id": "ANAT03-02199",
+          "caminho": "ANEXO I/tabela 5/linha 580/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[580]",
+          "ncm": "",
+          "textoLiteral": "41-A. MÁQUINAS E APARELHOS DE GALVANOPLASTIA, ELETRÓLISE OU ELETROFORESE",
+          "hashTrecho": "7bf3e2df1de05401acf28c0d92d6ab8db42c507b66c3c263c38e082fb397d931",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-157",
+      "literal": "Acrescido o Item 41-B ao Anexo I pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[582]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota explicita item 41-B; apenas seu cabeçalho sucessor, sem propagação ao 41-B-01.",
+      "alvos": [
+        {
+          "id": "ANAT03-02202",
+          "caminho": "ANEXO I/tabela 5/linha 583/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[583]",
+          "ncm": "",
+          "textoLiteral": "41-B. MÁQUINAS E APARELHOS PARA ENSAIOS DE DUREZA, TRAÇÃO, COMPRESSÃO, ELASTICIDADE OU DE OUTRAS PROPRIEDADES MECÂNICAS DE MATERIAIS",
+          "hashTrecho": "dac88624d6d237a58878adc4ac4518203525b2b5877f1d20327b3423304ea1db",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-158",
+      "literal": "Acrescido o item 43.05 ao Anexo I pelo Conv. 109/92, efeitos a partir de 16.10.92:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[598]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 43.05 explícito igual ao ITEM sucessor.",
+      "alvos": [
+        {
+          "id": "ANAT03-02218",
+          "caminho": "ANEXO I/tabela 5/linha 599/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[599]",
+          "ncm": "8515.21.0100",
+          "textoLiteral": "43.05 Máquina de soldar telas de aço | 8515.21.0100",
+          "hashTrecho": "8aee5e4a04a1e0e119e534571531a889111cdf9c47f5e3417e7fe3f78aa8ba59",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-159",
+      "literal": "Nova redação dada item abaixo do Anexo I pelo Conv. ICMS 74/95, efeitos a partir de.21.11.95:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[600]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Expressão item abaixo e linha sucessora Mancal de bronze para locomotiva, variante 8607.19.0400.",
+      "alvos": [
+        {
+          "id": "ANAT03-02220",
+          "caminho": "ANEXO I/tabela 5/linha 601/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[601]",
+          "ncm": "8607.19.0400",
+          "textoLiteral": "Mancal de bronze para locomotiva | 8607.19.0400",
+          "hashTrecho": "0f46589c30ce2ba779632da29f1a9a28706b2479afd60c11ba68d05065098bd7",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-160",
+      "literal": "Redação anterior dada ao item abaixo do Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 20.11.95:",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[602]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_mesma_linha",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Expressão item abaixo e única variante histórica do Mancal na mesma linha; NCM 8607.19.9900.",
+      "alvos": [
+        {
+          "id": "ANAT03-02221",
+          "caminho": "ANEXO I/tabela 5/linha 602/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[602]",
+          "ncm": "",
+          "textoLiteral": "Redação anterior dada ao item abaixo do Anexo I pelo Conv. ICMS 11/94, efeitos de 22.04.94 a 20.11.95: Mancal de bronze para locomotiva 8607.19.9900",
+          "hashTrecho": "2a72e6c25ce64170e00b7d9f47964e113b053e1549c719f0ad1b037858586528",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-161",
+      "literal": "Acrescidos os itens I a XVI ao Anexo I pelo Conv. ICMS 74/96, efeitos a partir de 11.10.96.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[603]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_coletivo_explicito",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Escopo expresso I a XVI; sequência romana completa nas últimas 16 linhas da tabela histórica do Anexo I.",
+      "alvos": [
+        {
+          "id": "ANAT03-02223",
+          "caminho": "ANEXO I/tabela 5/linha 604/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[604]",
+          "ncm": "8421.29.9900",
+          "textoLiteral": "I | Aparelhos para filtrar ou depurar líquidos | 8421.29.9900",
+          "hashTrecho": "9bd9e522db140674d2a1f6a7bd0d3b49e3a69bffed242bde9cd23cd3e430c943",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02224",
+          "caminho": "ANEXO I/tabela 5/linha 605/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[605]",
+          "ncm": "8423.81.9900",
+          "textoLiteral": "II | Outros aparelhos e instrumentos de pesagem | 8423.81.9900",
+          "hashTrecho": "42e6ce2a43b8d0fb9c07bc5bbfb30d84869a6614c63007e580f928fb501176ed",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02225",
+          "caminho": "ANEXO I/tabela 5/linha 606/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[606]",
+          "ncm": "8454.90.0000",
+          "textoLiteral": "III | Agitador eletrônico de aço líquido (stirring) | 8454.90.0000",
+          "hashTrecho": "6cfbf20c56611245d2b5268159e071d489f960bcace83f29b7f35b7ec2b41f6e",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02226",
+          "caminho": "ANEXO I/tabela 5/linha 607/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[607]",
+          "ncm": "8454.90.0000",
+          "textoLiteral": "IV | Impulsionador de tarugos com rolos acionados | 8454.90.0000",
+          "hashTrecho": "919a29a7a7c152f26215e2e53fcd65efa5b59bc6911d94e5006ce0dce42d21a9",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02227",
+          "caminho": "ANEXO I/tabela 5/linha 608/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[608]",
+          "ncm": "8455.90.0000",
+          "textoLiteral": "V | Guias roletadas para laminação de redondos, perfis e “multi slit” | 8455.90.0000",
+          "hashTrecho": "10ad8ab9eb3349647986b3e03b960df7e9922f66848d4cb233992e2005503208",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02228",
+          "caminho": "ANEXO I/tabela 5/linha 609/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[609]",
+          "ncm": "8455.90.0000",
+          "textoLiteral": "VI | Tesoura corte frio com embreagem ou acionamento por corrente contínua para corte de laminados | 8455.90.0000",
+          "hashTrecho": "6e7e3981ad70cfd51cc89de404b313ed83f856599bfa14ac6801489ed6d2d685",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02229",
+          "caminho": "ANEXO I/tabela 5/linha 610/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[610]",
+          "ncm": "8455.90.0000",
+          "textoLiteral": "VII | Bobinadeira “laving head” para bitolas de diâmetro 5,50 a 25 mm | 8455.90.0000",
+          "hashTrecho": "6908861a523b9fe80fdb6d419e0925f0d13481e3c392d2b4dad102db83591da5",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02230",
+          "caminho": "ANEXO I/tabela 5/linha 611/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[611]",
+          "ncm": "8455.90.0000",
+          "textoLiteral": "VIII | Enroladeira/bobinadeira “recoiller” para bitolas de diâmetro 20 a 50mm | 8455.90.0000",
+          "hashTrecho": "10e682364c3ced54c1dc3c8b4b6862646ab0e3891a445f91e169e19a0e5770b1",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02231",
+          "caminho": "ANEXO I/tabela 5/linha 612/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[612]",
+          "ncm": "8483.40.0299",
+          "textoLiteral": "IX | Tesoura rotativa “flving shear” | 8483.40.0299",
+          "hashTrecho": "8a3c1239f1e5739d183cf5a1921c24431cec01f1ea4a3dc76e0d58733d6ff17d",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02232",
+          "caminho": "ANEXO I/tabela 5/linha 613/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[613]",
+          "ncm": "8483.40.0299",
+          "textoLiteral": "X | Redutor de velocidade, caixa de pinhões (redutor com saída de 2 ou 3 eixos) e redutor combinado com caixa de pinhões destinados para gaiolas de laminação | 8483.40.0299",
+          "hashTrecho": "a3694fc8e285bc70ac2c31c7938498464354a5f7ae9d483f6f113092303c4585",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02233",
+          "caminho": "ANEXO I/tabela 5/linha 614/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[614]",
+          "ncm": "8504.40.0299",
+          "textoLiteral": "XI | Acionamento eletrônico de gaiolas | 8504.40.0299",
+          "hashTrecho": "40f15f36506ae0c8708db6dd9546be0078267e6ae0ada96805a776acccb197ba",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02234",
+          "caminho": "ANEXO I/tabela 5/linha 615/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[615]",
+          "ncm": "8504.40.0299",
+          "textoLiteral": "XII | Conversor e retificador para laminação e trefiladeiras | 8504.40.0299",
+          "hashTrecho": "8f8f25fcba942fcdb96b324b1c692382495bd12eb93b7db43c0c98096e3bd8eb",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02235",
+          "caminho": "ANEXO I/tabela 5/linha 616/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[616]",
+          "ncm": "8504.40.0299",
+          "textoLiteral": "XIII | Inversores digital para variação de rotação de motores elétricos em laminadores e trefiladeiras | 8504.40.0299",
+          "hashTrecho": "c08f353e9731074fa91fd647efb84f7c7996ed92e68a0822a08f041e4f4bb2f6",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02236",
+          "caminho": "ANEXO I/tabela 5/linha 617/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[617]",
+          "ncm": "8514.90.0000",
+          "textoLiteral": "XIV | Controlador eletrônico para forno à arco | 8514.90.0000",
+          "hashTrecho": "b9e8fa02917c354b0279b0d978b821df177de41ccdf572866d753fc5bab9381c",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02237",
+          "caminho": "ANEXO I/tabela 5/linha 618/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[618]",
+          "ncm": "8514.90.0000",
+          "textoLiteral": "XV | Estrutura metálica para forno à arco (superestrutura) | 8514.90.0000",
+          "hashTrecho": "af850e666b602bd56efcfec9af46002bf9690d2fda0714764af2fe1c46850500",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02238",
+          "caminho": "ANEXO I/tabela 5/linha 619/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[5]/table/tbody/tr[619]",
+          "ncm": "8514.90.0000",
+          "textoLiteral": "XVI | Braços de suporte de eletrodos para forno à arco com sistema de fixação e abertura por cilindros hidráulicos/molas pratos | 8514.90.0000",
+          "hashTrecho": "1593690041001a6eeec8286459f205dbd45143cafab3145dc180c907eb56c2b0",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": [],
+      "limiteDOMAposSelecao": "fim da tabela"
+    },
+    {
+      "idNota": "N52-162",
+      "literal": "Acrescido o item pelo Conv. ICMS 90/91, efeitos a partir de 27.12.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[19]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota singular de acréscimo imediatamente seguida de Arado de disco, antes do item 10.",
+      "alvos": [
+        {
+          "id": "ANAT03-02260",
+          "caminho": "ANEXO II/tabela 6/linha 20/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[20]",
+          "ncm": "8432.10.0200",
+          "textoLiteral": "Arado de disco | 8432.10.0200",
+          "hashTrecho": "9158d9da5dc262e71e4ba7a561591dd56e3e63783b93e101474ceee699c2249f",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-163",
+      "literal": "Nota: Alterada a carga tributária das posições 8701.10.0100 e 8701.90.0200 pelo Conv. ICMS 02/93, efeitos entre 01.04.93 a 30.09.93.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[35]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "ambiguidade_celula_variante_codigo",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota contém dois NBM explícitos; associação com linhas/variantes e alcance da alteração de carga requer confirmação, sem expandir posições.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-164",
+      "literal": "Acrescido o item “microtrator” pelo Conv. ICMS 90/91, efeitos a partir de 27.10.91.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[36]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nome microtrator explícito na nota e sucessor Microtrator; sem estender ao item 21.",
+      "alvos": [
+        {
+          "id": "ANAT03-02278",
+          "caminho": "ANEXO II/tabela 6/linha 37/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[37]",
+          "ncm": "8701.10.0100",
+          "textoLiteral": "Microtrator | 8701.10.0100",
+          "hashTrecho": "71fa6c4390293277ebbe4878a46b7995320f8c8c870ab955eb2de214c48aa4c9",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-165",
+      "literal": "Nova redação ao item 22 pelo Conv. ICMS 157/06, efeitos a partir de 08.01.07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[39]/td[1]/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 22 explícito igual ao ITEM sucessor; variante 8701.90.90.",
+      "alvos": [
+        {
+          "id": "ANAT03-02281",
+          "caminho": "ANEXO II/tabela 6/linha 40/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[40]",
+          "ncm": "8701.90.90",
+          "textoLiteral": "22 Tratores agrícolas de rodas, sem esteiras | 8701.90.90",
+          "hashTrecho": "ef5113c9cc1ebd9d5c43d04027327508fa1fe42d481cd70914d4e66592833291",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-166",
+      "literal": "Redação anterior dada ao item 22 pelo Conv. ICMS 47/01, efeitos de 09.08.01 a 07.01.07.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[41]/td[1]/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 22 explícito igual ao ITEM sucessor; variante 8701.90.00.",
+      "alvos": [
+        {
+          "id": "ANAT03-02283",
+          "caminho": "ANEXO II/tabela 6/linha 42/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[42]",
+          "ncm": "8701.90.00",
+          "textoLiteral": "22 Tratores agrícolas de rodas, sem esteiras | 8701.90.00",
+          "hashTrecho": "a7dda86a083233582fcaa16ef6bf897195dbbc770f5f1b43cf2c6cf8b4c2e083",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-167",
+      "literal": "Redação original do item 22, efeitos até 08.08.01.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[43]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_mesma_linha",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota original do item 22 e único texto 22 na mesma linha; NBM literal 8701.90.0200.",
+      "alvos": [
+        {
+          "id": "ANAT03-02284",
+          "caminho": "ANEXO II/tabela 6/linha 43/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[43]",
+          "ncm": "",
+          "textoLiteral": "Redação original do item 22, efeitos até 08.08.01. 22 Tratores agrícolas de quatro rodas 8701.90.0200",
+          "hashTrecho": "10421092569f090f1b0c8aacbbba643a30d442a0b991bcd2f7078ef924fe6846",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-168",
+      "literal": "Acrescido o item \"bombas\" pelo Conv. ICMS 08/92, efeitos a partir de 27.04.92.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[44]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nome bombas explícito na nota e sucessor Bombas; não alcança o item 23.",
+      "alvos": [
+        {
+          "id": "ANAT03-02286",
+          "caminho": "ANEXO II/tabela 6/linha 45/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[45]",
+          "ncm": "8413.81.0000",
+          "textoLiteral": "Bombas | 8413.81.0000",
+          "hashTrecho": "b2e05d83c1699785c0523dd42c23a7947cf4e0c1cb083624b3653b21ef531f71",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-169",
+      "literal": "Excluída a alínea \"b\" pelo Conv. ICMS 72/94, efeitos a partir de 26.07.94.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[49]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "ambiguidade_celula_variante_codigo",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Nota na linha com redação histórica b, enquanto b) Excluída está na linha anterior; relação temporal/revogação exige dupla anotação conferida.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-170",
+      "literal": "Nota: Excluídos os cortadores de grama e suas partes, classificados nos códigos 8433.11.00, 8433.19.00 e 8433.90.10, pelo Conv. ICMS 111/97, efeitos a partir de 01.02.98.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td/p[1]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "ambiguidade_celula_variante_codigo",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Códigos de oito dígitos de exclusão versus faixa NBM de dez dígitos na linha posterior; não equiparar ou expandir faixa.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-171",
+      "literal": "Nota: Alterada a carga tributária das posições 8433.59.0100 e 8433.59.9900 pelo Conv. ICMS 02/93, efeitos de 01.04.93 a 30.09.93.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[60]/td/p[2]",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "ambiguidade_celula_variante_codigo",
+      "estado": "pendente_sem_vinculo",
+      "fundamento": "Posições NBM específicas versus faixa ampla em outra linha; não atribuir a todos os códigos da faixa.",
+      "alvos": [],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-172",
+      "literal": "Acrescido o item pelo Conv. ICMS 45/92, efeitos a partir de 16.07.92.",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[63]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Nota singular de acréscimo imediatamente seguida de Ovascan, antes da nota do item 31.",
+      "alvos": [
+        {
+          "id": "ANAT03-02314",
+          "caminho": "ANEXO II/tabela 6/linha 64/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[64]",
+          "ncm": "9027.80.0500",
+          "textoLiteral": "Ovascan | 9027.80.0500",
+          "hashTrecho": "3ad28bd6037ada517336408ba45a219791094288d0e0897bcc8dc5f0a2d8980e",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-173",
+      "literal": "Acrescido o item 31 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[65]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 31 explícito; ITEM sucessor 31; hífen separador mantido fora do número.",
+      "alvos": [
+        {
+          "id": "ANAT03-02316",
+          "caminho": "ANEXO II/tabela 6/linha 66/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[66]",
+          "ncm": "8526.91.00",
+          "textoLiteral": "31 - Aparelho de Radionavegação para uso agrícola | 8526.91.00",
+          "hashTrecho": "02aaf78aaaa8570bf52e1ec237baa3984016c9d7940b1dc53a4ff6dd26240e02",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-174",
+      "literal": "Acrescido o item 32 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[67]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 32 explícito; ITEM sucessor 32; hífen separador mantido fora do número.",
+      "alvos": [
+        {
+          "id": "ANAT03-02318",
+          "caminho": "ANEXO II/tabela 6/linha 68/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[68]",
+          "ncm": "9406.00.10",
+          "textoLiteral": "32 - Estufa agrícola pré-fabricada em estrutura de aço ou alumínio, com coberturas e fechamentos em filmes, telas ou placas de plástico, opcionalmente com janelas e cortinas de acionamento manual ou motorizado, exaustores, iluminação elétrica, bancadas de cultivo e sistemas de aquecimento. | 9406.00.10",
+          "hashTrecho": "0d556fd3b2005d4d91b5f76e844f5292657339863df23de9e3e56605d139875b",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-175",
+      "literal": "Acrescido o item 33 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[69]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 33 explícito; ITEM sucessor 33; hífen separador mantido fora do número.",
+      "alvos": [
+        {
+          "id": "ANAT03-02320",
+          "caminho": "ANEXO II/tabela 6/linha 70/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[70]",
+          "ncm": "4421.90.00",
+          "textoLiteral": "33 - Troncos (Bretes) de contenção bovina | 4421.90.00",
+          "hashTrecho": "69f2281da9b8ce632bba332094762a6ae71690a497a6d6502b0f788819f46647",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    },
+    {
+      "idNota": "N52-176",
+      "literal": "Acrescido o item 34 pelo Conv. ICMS 102/05, efeitos a partir de 24.10.05",
+      "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[71]/td/p",
+      "classes": "RemissoAnt",
+      "linksFonte": [],
+      "categoria": "candidato_sucessor_delimitado",
+      "estado": "associacao_documental_candidata_nao_integrada",
+      "fundamento": "Número 34 explícito; ITEM sucessor 34 com dois códigos NCM, preservados separadamente.",
+      "alvos": [
+        {
+          "id": "ANAT03-02322",
+          "caminho": "ANEXO II/tabela 6/linha 72/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[72]",
+          "ncm": "8423.30.90",
+          "textoLiteral": "34 - Balanças bovinas mecânicas ou eletrônicas | 8423.30.90 8423.82.00",
+          "hashTrecho": "3812140930eb0a162febf41c0d5c403515f555da710dd223f88d370bd8c58d04",
+          "situacaoProposta": "pendente"
+        },
+        {
+          "id": "ANAT03-02323",
+          "caminho": "ANEXO II/tabela 6/linha 72/item sem número",
+          "xpath": "/html/body/div[3]/div[2]/div[1]/div/div[3]/div[1]/div/div[5]/div/div[6]/table/tbody/tr[72]",
+          "ncm": "8423.82.00",
+          "textoLiteral": "34 - Balanças bovinas mecânicas ou eletrônicas | 8423.30.90 8423.82.00",
+          "hashTrecho": "3812140930eb0a162febf41c0d5c403515f555da710dd223f88d370bd8c58d04",
+          "situacaoProposta": "pendente"
+        }
+      ],
+      "controlesExcluidos": []
+    }
+  ]
+}

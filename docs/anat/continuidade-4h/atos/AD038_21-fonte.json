@@ -1,0 +1,12 @@
+{
+  "url": "https://www.confaz.fazenda.gov.br/legislacao/atos-declaratorios/2021/ad038_21",
+  "status": 200,
+  "consultaUTC": "2026-10-16T05:12:00.770027+00:00",
+  "encoding": "utf-8",
+  "sha256RespostaHTTP": "4723a4e1ef2c8473be0c8f731f6ef55b035acefa83eb004c4abe7ca88ec39d69",
+  "bytesRespostaHTTP": 58887,
+  "sha256ArquivoRepoLF": "4723a4e1ef2c8473be0c8f731f6ef55b035acefa83eb004c4abe7ca88ec39d69",
+  "bytesArquivoRepoLF": 58887,
+  "normalizacaoArquivoRepo": "CRLF→LF exclusivamente para estabilidade Git; conteúdo textual sem alteração.",
+  "arquivoRespostaHTTPAbsoluto": "C:\\Users\\fabio\\.codex\\.chatgpt-projects\\g-p-6aada1d9ce8c81919ef5d645d0fd7c3d\\output\\anat\\continuidade-4h\\evidencia-http\\AD038_21.html"
+}

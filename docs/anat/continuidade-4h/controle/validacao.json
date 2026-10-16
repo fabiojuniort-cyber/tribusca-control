@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "idsExistem": true,
+  "paresUnicos": true,
+  "aprovacoesRestritasExcluidas": true,
+  "fontesPrincipaisIntactas": true,
+  "baselineSHA256": {
+    "anat-03-trechos.json": "462e7e3e30549c87ac0225c81d382134bb249722f2a60285e036a39a33ec377b",
+    "lote-autonomo\\atos\\dependencias-adicionais.json": "1eee04b8e56544a5914de1cb18fecf45d322585eeff5a12ff0c379f6366bab77",
+    "anat-03-dossie-vigencia.xlsx": "f3d07ad63fe5a2e35896cfc10d5bb32082b5ca8cede81c88c8f1217074786894"
+  },
+  "contagens": {
+    "atos": 8,
+    "atosComAlvosDiretos": 5,
+    "atosSomenteCadeiaIndireta": 3,
+    "paresAtoID": 49,
+    "idsUnicos": 47,
+    "paresDiretos": 46,
+    "paresIndiretos": 3,
+    "aprovacoesNovas": 0,
+    "pendentesAprovacaoDossie": 2432,
+    "papeis": {
+      "redacao_alvo_no_snapshot": 27,
+      "redacao_anterior_candidata_a_encerramento": 19,
+      "ancora_indireta_sem_alteracao_direta": 3
+    },
+    "porAto": {
+      "Convênio ICMS 104/21": 7,
+      "Convênio ICMS 223/21": 1,
+      "Convênio ICMS 228/21": 1,
+      "Convênio ICMS 26/22": 1,
+      "Convênio ICMS 63/05": 14,
+      "Convênio ICMS 146/20": 7,
+      "Convênio ICMS 199/23": 5,
+      "Convênio ICMS 129/19": 13
+    },
+    "controleNBMlinhasDossie": 735,
+    "controleNBMcomCodigo": 587,
+    "NBMnoMapa": 0
+  }
+}

@@ -4,6 +4,8 @@ Origem: CLAUDE-COORD → GPT-EXEC. Base confirmada diretamente pelo Fábio: dese
 
 ## Entregas
 
+- [Continuidade de quatro horas: checkpoint atual](continuidade-4h/README.md): 105 notas triadas, 44 novas notas com candidatos para 89 IDs, ratificação do 104/21 confirmada pelo CONFAZ/AD e controle dos oito atos. Planilha e JSON principal preservados; nenhuma aprovação adicional.
+
 - [ANAT-02: relatório](anat-02-leitura.md), [SQL read-only](anat-02-sql.sql), [30 fichas](anat-02-fichas.md) e [anotação dos convênios](anat-02-anotacao.md).
 - [ANAT-03: planilha](anat-03-dossie-vigencia.xlsx) e [síntese das evidências](anat-03-sintese.md).
 - [Conferência visual dos PDFs enviados pelo Fábio](pdf-conferencia/README.md): 70 páginas inspecionadas, páginas de referência e revisões dos vínculos de notas.

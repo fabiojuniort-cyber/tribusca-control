@@ -1,0 +1,26 @@
+{
+  "resultado": "PASS",
+  "checks": [
+    {
+      "fonte": "CV104_21",
+      "hashArquivoLFConfere": true,
+      "caracteresSubstituicao": 0
+    },
+    {
+      "fonte": "AD016_21",
+      "hashArquivoLFConfere": true,
+      "caracteresSubstituicao": 0
+    },
+    {
+      "fonte": "CV223_21",
+      "hashArquivoLFConfere": true,
+      "caracteresSubstituicao": 0
+    },
+    {
+      "fonte": "AD038_21",
+      "hashArquivoLFConfere": true,
+      "caracteresSubstituicao": 0
+    }
+  ],
+  "escopo": "Integridade do lote documental novo; sem validação do dossiê inteiro."
+}
