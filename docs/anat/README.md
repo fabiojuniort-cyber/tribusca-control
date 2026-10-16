@@ -10,7 +10,7 @@ Origem: CLAUDE-COORD → GPT-EXEC. Base confirmada diretamente pelo Fábio: dese
 
 ## Estado efetivo
 
-O runner existente possui allowlist para outros diagnósticos e não aceita ANAT. Nenhum SQL produtivo foi executado. O SQL alternativo é para Fábio executar no Railway Dashboard, nunca pelo Railway AI Agent. **Classes e conteúdo persistidos continuam pendentes de comparação real.** A reprodução local do sanitizador está identificada separadamente no relatório.
+O runner existente possui allowlist para outros diagnósticos e não aceita ANAT. Fábio executou manualmente a consulta SELECT de confirmação no Railway Dashboard e devolveu os resultados: os dois HTMLs persistidos são idênticos aos snapshots sanitizados por SHA-256. **Comparação de HTML/classes concluída.** A igualdade permite aplicar as contagens locais de classes aos HTMLs persistidos. [Consulta executada](anat-02-dashboard-confirmacao.sql), [resultado informado pelo Fábio](anat-02-dashboard-resultado.json) e limites estão no relatório. Não houve acesso direto do executor ao banco nem uso do Railway AI Agent. O diagnóstico ampliado `anat-02-sql.sql` não foi executado integralmente; `content_text`, grants/RLS e vigência não são comprovados por esse SELECT.
 
 As 30 fichas são expectativas do desenho, não resultados de parser nem medição de precisão/recall. A anotação cobre 2.444 unidades estruturais dos snapshots, com literais, XPath, células e hashes. A planilha contém 2.434 linhas por trecho/código: 2.323 do 52/91 e 111 do 100/97, além de 10 eventos de atos posteriores. Uma linha pode repetir o mesmo trecho quando contém mais de um código. NBM histórica permanece identificada separadamente de NCM.
 
@@ -24,7 +24,7 @@ Conferidas 30 fichas, 2.434 IDs únicos, duas ocorrências `8450.11.00`, seis ta
 
 ## Próximos gates
 
-1. Fábio executa o SQL de leitura no Dashboard e devolve os resultados oficiais para comparação do HTML/classes/hashes.
+1. Concluído: Fábio executou o SELECT de confirmação no Dashboard; igualdade dos dois HTMLs/classes registrada no relatório e na issue #116.
 2. Fábio confere visualmente os trechos e dependências, resolve pendências temporais e registra aprovação por linha.
 3. GPT-EXEC registra o retorno na issue #116 e devolve o checkpoint a CLAUDE-COORD.
 

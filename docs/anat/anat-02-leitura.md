@@ -1,12 +1,23 @@
 # ANAT-02 — leitura produtiva e sanitização
 
-**Origem:** CLAUDE-COORD. **Executor:** GPT-EXEC. Estado observado em 15/10/2026 (BRT). Escopo R1 somente leitura; artefatos R0. Nenhum SQL produtivo, workflow, coleta, refresh, migration, merge, deploy ou alteração Railway foi executado.
+**Origem:** CLAUDE-COORD. **Executor:** GPT-EXEC. Preparação em 15/10/2026 (BRT), complementada pelo resultado de SELECT executado manualmente pelo Fábio no Railway Dashboard e devolvido neste chat. Escopo R1 somente leitura; atualização documental R0. O executor não acessou o banco diretamente. Sem workflow, coleta, refresh, migration, escrita no banco, merge, deploy ou alteração Railway.
 
 ## Resultado e limite
 
-**Conteúdo persistido: PENDENTE.** Não existe nesta sessão runner autorizado que aceite as consultas ANAT. Não afirmar quais classes sobreviveram no banco: o resultado abaixo é reprodução local do sanitizador sobre snapshots versionados. Metadados públicos do Acervo não comprovam o corpo de publication_versions.
+**HTML persistido: comparação concluída por evidência de execução humana.** Fábio executou a consulta de confirmação no Railway Dashboard e devolveu as duas linhas com `IGUAL AO SNAPSHOT SANITIZADO`. A consulta compara SHA-256 dos bytes UTF-8 do HTML armazenado com os hashes da reprodução local abaixo. A igualdade confirma o mesmo HTML e, por consequência, as mesmas classes e contagens. Não houve contagem SQL independente das classes nem exportação dos corpos nesta etapa. Não é evidência de vigência jurídica nem auditoria independente de `content_text`.
 
-O arquivo `anat-02-sql.sql` está pronto para o Fábio executar no editor SQL do PostgreSQL no Railway Dashboard, nunca pelo Railway AI Agent. Usa transação REPEATABLE READ READ ONLY, timeout, SELECTs restritos aos dois atos oficiais e ROLLBACK. Não consulta empresas, tenants ou funções de aplicação. Nenhum segredo é solicitado. O SQL foi conferido estaticamente contra o schema real versionado; não foi executado em PostgreSQL nesta sessão.
+O arquivo `anat-02-sql.sql` permanece como diagnóstico ampliado, preparado com transação REPEATABLE READ READ ONLY, timeout e ROLLBACK. Esse arquivo completo não foi executado. Para a confirmação humana foi usada a consulta menor [anat-02-dashboard-confirmacao.sql](anat-02-dashboard-confirmacao.sql), apenas SELECT, restrita aos dois IDs. Não consulta empresas/tenants, não solicita secrets e não utiliza Railway AI Agent. O retorno está em [anat-02-dashboard-resultado.json](anat-02-dashboard-resultado.json).
+
+### Retorno do Fábio no Dashboard
+
+| Convênio | Versão persistida | Nº | Atual | Captura, como retornada | Formato | Bytes HTML | Comparação SHA-256 |
+|---|---|---:|---|---|---|---:|---|
+| 100/97 | `8f1a2386-30fc-4f11-a88a-e96a65807793` | 1 | true | 2026-10-03 03:18:40 | SANITIZED_HTML | 45548 | IGUAL AO SNAPSHOT SANITIZADO |
+| 52/91 | `ec18e755-128c-41ca-8cd3-2bdad7d9d9eb` | 1 | true | 2026-10-05 12:08:03 | SANITIZED_HTML | 394092 | IGUAL AO SNAPSHOT SANITIZADO |
+
+As datas de captura foram transcritas sem atribuir timezone que não apareceu no resultado. O SELECT não filtrava `is_current`: retornou uma versão visível por ato. Não houve diagnóstico separado de grants/RLS nem comprovação de ausência de versões fora da visibilidade da conexão. A evidência é o resultado fornecido pelo Fábio, não uma conexão direta do executor.
+
+Assim, o HTML persistido do 52/91 conserva as 13 classes legais e seis classes de tabelas verdes enumeradas abaixo; as classes comuns de tabela/subtítulo enumeradas como removidas não estão nele. O HTML do 100/97 conserva as 13 classes legais e remove `internal-link`. As tabelas abaixo, originalmente obtidas na reprodução local, descrevem também o HTML persistido correspondente por igualdade exata de hash.
 
 ## Runner verificado ao vivo
 
@@ -105,12 +116,8 @@ No 52/91, a execução local preservou 6 tabelas, 2.088 linhas e 4.682 células;
 
 `currentWordingText` exclui classes históricas e, em tabela, a linha que as contém. Isso não comprova situação jurídica positiva, prorrogação ou alcance de anexos. Uma classe verde é pista editorial; seu alcance e fundamento dependem da anotação e dos atos posteriores. Não usar esta reprodução para alimentar taxonomia de trechos ainda pendentes.
 
-## Fechamento pendente da comparação produtiva
+## Fechamento da comparação do HTML persistido
 
-1. Fábio executa `anat-02-sql.sql` em transação somente leitura no Dashboard.
-2. Conferir presença dos dois IDs, todas as versões e formato de apresentação, sem presumir que só existe uma versão. Conferir também SELECT/RLS no diagnóstico: resultado vazio sob restrição de visibilidade não comprova ausência física; não alterar role/grants para contornar segurança.
-3. Comparar SHA do HTML armazenado com o SHA local; comparar classes por versão e conferir diferenças visualmente. SHA diferente exige investigar recaptura, versão do código, revisão da fonte ou enriquecimento; não atribuir automaticamente à sanitização.
-4. Se o Dashboard truncar HTML, usar fatias paginadas da consulta 6; registrar completude antes de afirmar leitura integral.
-5. Registrar resultado sintético na issue ANAT #116. Somente então preencher a coluna factual de classes persistidas.
+A pendência de igualdade do HTML/classes foi resolvida pelo SELECT humano e registrada na issue ANAT #116. Não é necessário exportar novamente o HTML para repetir a comparação já conclusiva por SHA-256. Se uma versão ou apresentação mudar, a evidência deste checkpoint não se estende automaticamente à nova representação.
 
-O SQL mantém explícitos `MISSING_VERSION`, `MISSING_HTML`, `FORMAT_DIFFERENT`, `MATCH` e `DIFFERENT`. Nenhum deles é veredito de vigência. As fichas de expectativas e a anotação jurídica são artefatos complementares produzidos em paralelo; não substituem esta leitura.
+O diagnóstico ampliado continua disponível para divergências futuras, incluindo classes, `content_text`, visibilidade e fatias paginadas. Não foi apresentado como integralmente executado. A conferência jurídica por trecho, dependências e condições da ANAT-03 permanece pendente do Fábio. Nenhum resultado de igualdade de HTML é veredito de vigência.

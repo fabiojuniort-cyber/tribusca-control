@@ -621,11 +621,11 @@ Checklist operacional, atualizado na issue de coordenação:
 - [x] Origem CLAUDE-COORD registrada e issue de coordenação aberta.
 - [x] Base do desenho confirmada diretamente pelo Fábio.
 - [x] ANAT-01: documento e andamento commitados no branch do PR #115.
-- [x] ANAT-02: resultado read-only ou SQL alternativo entregue; comparação persistida só após retorno comprovado.
+- [x] ANAT-02: SQL alternativo entregue; retorno humano do SELECT no Dashboard confirmou igualdade SHA-256 do HTML persistido dos dois convênios e, por consequência, suas classes/contagens. Evidência e limites no relatório.
 - [x] ANAT-02: 30 fichas de expectativas e anotação dos dois convênios entregues.
 - [x] ANAT-03: planilha de evidências preparada para entrega no chat e salva no repositório.
 - [ ] ANAT-03: conferência visual e aprovação do Fábio, separadas da preparação documental.
-- [ ] Handoff com SHA, issue, relatório e planilha devolvido a CLAUDE-COORD.
+- [x] Handoff com SHA, issue, relatório e planilha registrado para CLAUDE-COORD na issue #116 e devolvido ao Fábio no chat.
 
 ### 11.3 Limites
 

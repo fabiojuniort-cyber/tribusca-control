@@ -1,0 +1,33 @@
+{
+  "origemDaFrente": "CLAUDE-COORD → GPT-EXEC",
+  "origemDaEvidencia": "Resultado de SELECT executado manualmente pelo Fábio no Railway Dashboard e colado neste chat",
+  "consulta": "anat-02-dashboard-confirmacao.sql",
+  "conexaoDiretaDoExecutor": false,
+  "horarioExecucao": null,
+  "timezoneDasDatasDeCaptura": "Não informado no retorno; timestamps preservados literalmente",
+  "limite": "Confirma HTML persistido por igualdade SHA-256. Não confirma vigência, não audita content_text, grants/RLS ou versões fora da visibilidade da conexão. Não representa execução integral de anat-02-sql.sql.",
+  "resultados": [
+    {
+      "convenio": "100/97",
+      "versao_id": "8f1a2386-30fc-4f11-a88a-e96a65807793",
+      "numero_versao": 1,
+      "versao_atual": true,
+      "data_captura": "2026-10-03 03:18:40",
+      "formato": "SANITIZED_HTML",
+      "tamanho_html": 45548,
+      "comparacao": "IGUAL AO SNAPSHOT SANITIZADO",
+      "sha256EsperadoNaConsulta": "fe90af8fb89645b2bf40e8e3f8f6cd2cb4c6c15ef044ce58f1683482de5999f7"
+    },
+    {
+      "convenio": "52/91",
+      "versao_id": "ec18e755-128c-41ca-8cd3-2bdad7d9d9eb",
+      "numero_versao": 1,
+      "versao_atual": true,
+      "data_captura": "2026-10-05 12:08:03",
+      "formato": "SANITIZED_HTML",
+      "tamanho_html": 394092,
+      "comparacao": "IGUAL AO SNAPSHOT SANITIZADO",
+      "sha256EsperadoNaConsulta": "bd035220215bf691ce6dd1c6f8c9d8b8e8c3180f9df43f97f0debd3a3ac1dd83"
+    }
+  ]
+}
