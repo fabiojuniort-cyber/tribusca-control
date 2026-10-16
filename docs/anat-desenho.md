@@ -624,6 +624,7 @@ Checklist operacional, atualizado na issue de coordenação:
 - [x] ANAT-02: SQL alternativo entregue; retorno humano do SELECT no Dashboard confirmou igualdade SHA-256 do HTML persistido dos dois convênios e, por consequência, suas classes/contagens. Evidência e limites no relatório.
 - [x] ANAT-02: 30 fichas de expectativas e anotação dos dois convênios entregues.
 - [x] ANAT-03: planilha de evidências preparada para entrega no chat e salva no repositório.
+- [x] ANAT-03: PDFs enviados pelo Fábio inspecionados visualmente (8 + 62 páginas); 77 revisões pontuais de vínculo documental incorporadas, contextos ainda não individualmente conferidos identificados e literais preservados. Evidências em `docs/anat/pdf-conferencia/`.
 - [ ] ANAT-03: conferência visual e aprovação do Fábio, separadas da preparação documental.
 - [x] Handoff com SHA, issue, relatório e planilha registrado para CLAUDE-COORD na issue #116 e devolvido ao Fábio no chat.
 

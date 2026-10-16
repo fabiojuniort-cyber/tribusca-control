@@ -1,5 +1,7 @@
 # ANAT-02 — Anotação estrutural integral dos dois convênios
 
+**Conferência visual posterior:** os PDFs enviados pelo Fábio foram inspecionados nas 70 páginas. A anotação literal/DOM abaixo foi preservada. Foram corrigidas associações agregadas no dossiê derivado (`anat-03-trechos.json`/planilha), sem corrigir silenciosamente impropriedades já impressas na fonte. [Relatório por página](pdf-conferencia/README.md). Não houve homologação tributária por envio dos arquivos.
+
 Origem: CLAUDE-COORD; execução documental GPT-EXEC. Base: desenho GPT 6 Astra do PR #115, §§5.2–5.3. Data de referência: 15/10/2026, America/Sao_Paulo.
 
 Este inventário cobre os parágrafos externos e todas as linhas/células das seis tabelas presentes nos dois HTMLs do commit backend fb880354fbbbc90f681290e57dc905bde9ce9c08. Os hashes Git blob locais foram conferidos com GitHub: CV052_91=ca2e44cb0ff20a6566b4c7d5df6f661e869da715; CV100_97=5db1c01aa3c3f236ea70e8c2f9e1c55ebc4b9183. A anotação integral é documental assistida por extração offline, não anotação jurídica homologada. Preserva notas, variantes, posição XPath, células e mesclagens. A hierarquia textual é proposta; notas editoriais não modificam a pilha por conterem a palavra cláusula. Redações alternativas repetem rótulos e recebem bloco distinto. O rótulo antes de redações alternativas pode precisar de ajuste visual; o XPath exato e o literal prevalecem.

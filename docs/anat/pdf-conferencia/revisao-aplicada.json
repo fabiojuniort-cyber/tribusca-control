@@ -1,0 +1,780 @@
+{
+  "contagens": {
+    "patchesVisuais": 77,
+    "notas52ContextuaisSinalizadas": 2273,
+    "notas100RevisadasSemTroca": 84
+  },
+  "invariantes": "2434 IDs, literais, caminhos, NCM/NBM, hashes e aprovações preservados; todas as situações pendentes",
+  "associacoes": [
+    {
+      "id": "ANAT03-00012",
+      "pdf": "52 91.pdf",
+      "pagina": 2,
+      "notaAnterior": "Redação anterior dada ao inciso II da cláusula primeira pelo Conv. ICMS 13/92, efeitos de 17.10.91 a 31.07.00:",
+      "notaRevista": "Redação original, efeitos até 16.10.91:",
+      "motivo": "A nota de 13/92 refere-se à variante anterior; a variante original tem nota própria imediatamente acima.",
+      "patch": "correcoes52-first.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-00047",
+      "pdf": "52 91.pdf",
+      "pagina": 4,
+      "notaAnterior": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Acrescido o subitem 19.8 ao Anexo I pelo Conv. ICMS 96/12, efeitos a partir de 1º.12.12.",
+      "notaRevista": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "motivo": "96/12 altera19.8 na p7; não item1.",
+      "patch": "correcoes52-first.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-00082",
+      "pdf": "52 91.pdf",
+      "pagina": 5,
+      "notaAnterior": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 27/12, efeitos a partir de 01.06.12. | Acrescido o subitem 19.8 ao Anexo I pelo Conv. ICMS 96/12, efeitos a partir de 1º.12.12.",
+      "notaRevista": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "motivo": "Item12 não é13.7 nem19.8. Notas27/12 e96/12 têm alvos explícitos distintos.",
+      "patch": "correcoes52-first.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-00096",
+      "pdf": "52 91.pdf",
+      "pagina": 5,
+      "notaAnterior": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 27/12, efeitos a partir de 01.06.12. | Redação anterior dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 31.05.12.",
+      "notaRevista": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 27/12, efeitos a partir de 01.06.12.",
+      "motivo": "Excluir desta variante nova o intervalo da redação anterior15.10.09–31.05.12, que pertence00098.",
+      "patch": "correcoes52-first.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-00104",
+      "pdf": "52 91.pdf",
+      "pagina": 5,
+      "notaAnterior": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Revogados os subitens 39.1, 39.2 e 39.3 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15. | Nova redação dada ao subitem 39.5 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15. | Revogado o subitem 40.2 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15. | Nova redação dada ao subitem 40.4 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15. | Nova redação dada ao subitem 40.8 do Anexo I pelo Conv. ICMS 154/15, efeitos a partir de 30.12.15.",
+      "notaRevista": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "motivo": "Item15 não é39.1/39.2/39.3/39.5/40.2/40.4/40.8. As notas154/15 têm alvos distintos na p12–13.",
+      "patch": "correcoes52-first.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-00212",
+      "pdf": "52 91.pdf",
+      "pagina": 8,
+      "notaAnterior": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.7 do Anexo I pelo Conv. ICMS 27/12, efeitos a partir de 01.06.12.",
+      "notaRevista": "Nova redação dada ao Anexo I pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "motivo": "Item27 não é13.7; nota27/12 de13.7 fica p5.",
+      "patch": "correcoes52-first.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01372",
+      "pdf": "52 91.pdf",
+      "pagina": 39,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11. | Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+      "notaRevista": "Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11.",
+      "motivo": "Retirar nota da redação anterior da linha atual; contexto geral AnexoII89/09 não define início desta variante.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01373",
+      "pdf": "52 91.pdf",
+      "pagina": 39,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11. | Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+      "notaRevista": "Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11.",
+      "motivo": "Retirar nota da redação anterior da linha atual; contexto geral AnexoII89/09 não define início desta variante.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01374",
+      "pdf": "52 91.pdf",
+      "pagina": 39,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11. | Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+      "notaRevista": "Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11.",
+      "motivo": "Retirar nota da redação anterior da linha atual; contexto geral AnexoII89/09 não define início desta variante.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01376",
+      "pdf": "52 91.pdf",
+      "pagina": 39,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11. | Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+      "notaRevista": "Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+      "motivo": "Retirar nota da nova redação182/10 da linha histórica.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01377",
+      "pdf": "52 91.pdf",
+      "pagina": 39,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11. | Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+      "notaRevista": "Redação anterior dada ao item 1.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 28.02.11.",
+      "motivo": "Retirar nota da nova redação182/10 da linha histórica.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01381",
+      "pdf": "52 91.pdf",
+      "pagina": 39,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 2.1 do Anexo II pelo Conv. ICMS 30/20, efeitos a partir de 01.06.2020.",
+      "notaRevista": "Nova redação dada ao item 2.1 do Anexo II pelo Conv. ICMS 30/20, efeitos a partir de 01.06.2020.",
+      "motivo": "Nota individual conferida visualmente.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01382",
+      "pdf": "52 91.pdf",
+      "pagina": 39,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 2.1 do Anexo II pelo Conv. ICMS 30/20, efeitos a partir de 01.06.2020.",
+      "notaRevista": "Nova redação dada ao item 2.1 do Anexo II pelo Conv. ICMS 30/20, efeitos a partir de 01.06.2020.",
+      "motivo": "Nota individual conferida visualmente.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01384",
+      "pdf": "52 91.pdf",
+      "pagina": 39,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 2.1 do Anexo II pelo Conv. ICMS 30/20, efeitos a partir de 01.06.2020.",
+      "notaRevista": "Redação original, efeitos até 31.05.2020.",
+      "motivo": "Não atribuir início01.06.2020 à variante anterior.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01411",
+      "pdf": "52 91.pdf",
+      "pagina": 40,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 1.3 do Anexo II pelo Conv. ICMS 182/10, efeitos a partir de 01.03.11. | Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 28.07.19 | Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 25.10.17. | Acrescido o subitem 13.8 ao Anexo II pelo Conv. ICMS 51/10, efeitos a partir de 23.04.10.",
+      "notaRevista": "",
+      "motivo": "Caput10 não recebe notas individuais1.3/10.3/10.4/13.8; usar apenas contexto separado de AnexoII.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01413",
+      "pdf": "52 91.pdf",
+      "pagina": 40,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.1 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20. | Redação original do subitem 10.1 do Anexo II, efeitos até 28.12.20.",
+      "notaRevista": "Nova redação dada ao subitem 10.1 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20.",
+      "motivo": "Separar nota atual e original.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01415",
+      "pdf": "52 91.pdf",
+      "pagina": 40,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.1 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20. | Redação original do subitem 10.1 do Anexo II, efeitos até 28.12.20.",
+      "notaRevista": "Redação original do subitem 10.1 do Anexo II, efeitos até 28.12.20.",
+      "motivo": "Separar nota atual e original.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01417",
+      "pdf": "52 91.pdf",
+      "pagina": 40,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.2 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20. | Redação original do subitem 10.2 do Anexo II, efeitos até 28.12.20.",
+      "notaRevista": "Nova redação dada ao subitem 10.2 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20.",
+      "motivo": "Separar nota atual e original.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01419",
+      "pdf": "52 91.pdf",
+      "pagina": 40,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.2 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20. | Redação original do subitem 10.2 do Anexo II, efeitos até 28.12.20.",
+      "notaRevista": "Redação original do subitem 10.2 do Anexo II, efeitos até 28.12.20.",
+      "motivo": "Separar nota atual e original.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01421",
+      "pdf": "52 91.pdf",
+      "pagina": 40,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 28.07.19 | Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "notaRevista": "Nova redação dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "motivo": "Separar três variantes10.3.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01423",
+      "pdf": "52 91.pdf",
+      "pagina": 40,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 28.07.19 | Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "notaRevista": "Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 28.07.19",
+      "motivo": "Separar três variantes10.3.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01425",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 28.07.19 | Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "notaRevista": "Redação anterior dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "motivo": "Separar três variantes10.3.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01427",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 113/17, efeitos a partir de 26.10.17. | Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 25.10.17. | Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "notaRevista": "Nova redação dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 113/17, efeitos a partir de 26.10.17.",
+      "motivo": "Separar três variantes10.4.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01429",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 113/17, efeitos a partir de 26.10.17. | Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 25.10.17. | Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "notaRevista": "Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 25.10.17.",
+      "motivo": "Separar três variantes10.4.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01431",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 113/17, efeitos a partir de 26.10.17. | Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 140/10, efeitos de 01.12.10 a 25.10.17. | Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "notaRevista": "Redação anterior dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 89/09, efeitos de 15.10.09 a 30.11.10.",
+      "motivo": "Separar três variantes10.4.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01435",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Acrescido o subitem 14.18 ao Anexo II pelo Conv. ICMS 96/12, efeitos a partir de 01.12.12.",
+      "notaRevista": "",
+      "motivo": "Item12 não recebe nota de acréscimo14.18.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01436",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Redação anterior acrescida do subitem 14.19 ao Anexo II pelo Conv. ICMS 158/13, efeitos de 01.02.14. a 30.06.24",
+      "notaRevista": "",
+      "motivo": "Item13 não recebe nota histórica14.19.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01440",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19. | Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "notaRevista": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "motivo": "Separar variante atual da original; não duplicar notas de19.2 que dizem13.3.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01441",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19. | Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "notaRevista": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "motivo": "Separar variante atual da original; não duplicar notas de19.2 que dizem13.3.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01443",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19. | Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "notaRevista": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "motivo": "Preservar redação editorial literal, apesar da expressão original dada pelo ato posterior.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01445",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 115/20, efeitos a partir de 04.11.20. | Redação original dada ao subitem 13.4 do Anexo II , efeitos até 03.11.20. | Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+      "notaRevista": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 115/20, efeitos a partir de 04.11.20.",
+      "motivo": "Não associar nota146/20 fisicamente junto13.5, que diz13.4; conflito da fonte separado.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01447",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 115/20, efeitos a partir de 04.11.20. | Redação original dada ao subitem 13.4 do Anexo II , efeitos até 03.11.20. | Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+      "notaRevista": "Redação original dada ao subitem 13.4 do Anexo II , efeitos até 03.11.20.",
+      "motivo": "Retirar notas das variantes posteriores.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01449",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Redação original dada ao subitem 13.5 do Anexo II, efeitos até 28.12.20.",
+      "notaRevista": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+      "motivo": "NOTA LITERAL CONFLITANTE: antecede item13.5, mas diz13.4. Fonte também informa original13.5 até28.12.20. Alcance/data de transição pendentes; não concluir vigência.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01450",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Redação original dada ao subitem 13.5 do Anexo II, efeitos até 28.12.20.",
+      "notaRevista": "Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+      "motivo": "NOTA LITERAL CONFLITANTE: antecede item13.5, mas diz13.4. Fonte também informa original13.5 até28.12.20. Alcance/data de transição pendentes; não concluir vigência.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01452",
+      "pdf": "52 91.pdf",
+      "pagina": 41,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Redação original dada ao subitem 13.5 do Anexo II, efeitos até 28.12.20.",
+      "notaRevista": "Redação original dada ao subitem 13.5 do Anexo II, efeitos até 28.12.20.",
+      "motivo": "Variante histórica13.5; novo início indicado na fonte sobrepõe último dia. Pendente.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01466",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "notaRevista": "",
+      "motivo": "Nota199/23 que diz14.9 aparece fisicamente junto14.19; associação a raízes/tubérculos14.9 é insegura. Não propagar efeito.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01478",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Redação anterior acrescida do subitem 14.19 ao Anexo II pelo Conv. ICMS 158/13, efeitos de 01.02.14. a 30.06.24",
+      "notaRevista": "Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "motivo": "NOTA LITERAL CONFLITANTE: fisicamente antecede14.19, mas diz14.9. Não corrigir silenciosamente. Confirmar ato199/23.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01479",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Redação anterior acrescida do subitem 14.19 ao Anexo II pelo Conv. ICMS 158/13, efeitos de 01.02.14. a 30.06.24",
+      "notaRevista": "Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "motivo": "NOTA LITERAL CONFLITANTE: fisicamente antecede14.19, mas diz14.9. Não corrigir silenciosamente. Confirmar ato199/23.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01481",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Redação anterior acrescida do subitem 14.19 ao Anexo II pelo Conv. ICMS 158/13, efeitos de 01.02.14. a 30.06.24",
+      "notaRevista": "Redação anterior acrescida do subitem 14.19 ao Anexo II pelo Conv. ICMS 158/13, efeitos de 01.02.14. a 30.06.24",
+      "motivo": "Nota histórica14.19 visualmente conferida.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01491",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 113/17, efeitos a partir de 26.10.17. | Nova redação dada ao subitem 17 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "notaRevista": "Nova redação dada ao subitem 17 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "motivo": "Retirar nota113/17 de10.4.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01493",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.4 do Anexo II pelo Conv. ICMS 113/17, efeitos a partir de 26.10.17. | Nova redação dada ao subitem 17 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "notaRevista": "Redação original, efeitos até 30.06.24",
+      "motivo": "Retirar nota113/17 e início da variante atual.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01495",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 10.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19. | Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19. | Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "notaRevista": "",
+      "motivo": "Caput19 não recebe notas10.3/13.3. Duas notas conflitantes estão fisicamente junto19.2.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01498",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "notaRevista": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "motivo": "NOTA LITERAL CONFLITANTE: junto19.2, diz13.3. Alcance somente proposto por posição; confirmar129/19.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01499",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "notaRevista": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "motivo": "NOTA LITERAL CONFLITANTE: junto19.2, diz13.3. Alcance somente proposto por posição; confirmar129/19.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01500",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "notaRevista": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "motivo": "NOTA LITERAL CONFLITANTE: junto19.2, diz13.3. Alcance somente proposto por posição; confirmar129/19.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01501",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "notaRevista": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "motivo": "NOTA LITERAL CONFLITANTE: junto19.2, diz13.3. Alcance somente proposto por posição; confirmar129/19.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01502",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "notaRevista": "Nova redação dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos a partir de 29.07.19.",
+      "motivo": "NOTA LITERAL CONFLITANTE: junto19.2, diz13.3. Alcance somente proposto por posição; confirmar129/19.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01504",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09.",
+      "notaRevista": "Redação original dada ao subitem 13.3 do Anexo II pelo Conv. ICMS 129/19, efeitos até 28.07.19.",
+      "motivo": "NOTA LITERAL CONFLITANTE: junto19.2histórico, diz13.3. Não atribuir automaticamente a semeadores.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01505",
+      "pdf": "52 91.pdf",
+      "pagina": 42,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao item 2.1 do Anexo II pelo Conv. ICMS 30/20, efeitos a partir de 01.06.2020. | Nova redação dada ao subitem 10.1 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20. | Nova redação dada ao subitem 10.2 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 29.12.20. | Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 115/20, efeitos a partir de 04.11.20. | Nova redação dada ao subitem 13.4 do Anexo II pelo Conv. ICMS 146/20, efeitos a partir de 28.12.20.",
+      "notaRevista": "",
+      "motivo": "Item20bombas não recebe notas de2.1/10.1/10.2/13.4.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-01512",
+      "pdf": "52 91.pdf",
+      "pagina": 43,
+      "notaAnterior": "Nova redação dada ao Anexo II pelo Conv. ICMS 89/09, efeitos a partir de 15.10.09. | Nova redação dada ao subitem 14.9 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24. | Nova redação dada ao subitem 17 do Anexo II pelo Conv. ICMS 199/23, efeitos a partir de 01.07.24.",
+      "notaRevista": "",
+      "motivo": "Item23partesaviões não recebe notas14.9/17.",
+      "patch": "correcoes52-last.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02338",
+      "pdf": "100 97.pdf",
+      "pagina": 2,
+      "notaAnterior": "Redação original, efeitos até 31.05.11.",
+      "notaRevista": "",
+      "motivo": "Nota de redação original da alínea a histórica foi propagada às alíneas b/c em preto e ao novo inciso IV; não há nota específica confirmada para esses trechos.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02339",
+      "pdf": "100 97.pdf",
+      "pagina": 2,
+      "notaAnterior": "Redação original, efeitos até 31.05.11.",
+      "notaRevista": "",
+      "motivo": "Nota de redação original da alínea a histórica foi propagada às alíneas b/c em preto e ao novo inciso IV; não há nota específica confirmada para esses trechos.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02340",
+      "pdf": "100 97.pdf",
+      "pagina": 2,
+      "notaAnterior": "Redação original, efeitos até 31.05.11.",
+      "notaRevista": "",
+      "motivo": "Nota de redação original da alínea a histórica foi propagada às alíneas b/c em preto e ao novo inciso IV; não há nota específica confirmada para esses trechos.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02351",
+      "pdf": "100 97.pdf",
+      "pagina": 4,
+      "notaAnterior": "Redação original, efeitos até 13.07.98.",
+      "notaRevista": "",
+      "motivo": "Fim em 13.07.98 pertence à versão original do inciso VI; VII e VIII são novos dispositivos em preto.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02352",
+      "pdf": "100 97.pdf",
+      "pagina": 4,
+      "notaAnterior": "Redação original, efeitos até 13.07.98.",
+      "notaRevista": "",
+      "motivo": "Fim em 13.07.98 pertence à versão original do inciso VI; VII e VIII são novos dispositivos em preto.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02356",
+      "pdf": "100 97.pdf",
+      "pagina": 4,
+      "notaAnterior": "Redação original, efeitos até 23.04.00.",
+      "notaRevista": "",
+      "motivo": "Fim em 23.04.00 pertence ao inciso IX histórico; inciso X é novo dispositivo em preto.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02368",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Redação original, efeitos até 31.12.21.",
+      "notaRevista": "",
+      "motivo": "Fim em 31.12.21 pertence ao §1 histórico; §2 e seus incisos I/II constituem texto preto fora daquele escopo.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02369",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Redação original, efeitos até 31.12.21.",
+      "notaRevista": "",
+      "motivo": "Fim em 31.12.21 pertence ao §1 histórico; §2 e seus incisos I/II constituem texto preto fora daquele escopo.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02370",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Redação original, efeitos até 31.12.21.",
+      "notaRevista": "",
+      "motivo": "Fim em 31.12.21 pertence ao §1 histórico; §2 e seus incisos I/II constituem texto preto fora daquele escopo.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02375",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02376",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02377",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02378",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02379",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02380",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02381",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02382",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02383",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o inciso V ao § 2º da cláusula primeira pelo Conv. ICMS 54/06, efeitos a partir de 01.08.06.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do inciso V do §2 não alcança §§3/4/5 nem incisos do §5.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02385",
+      "pdf": "100 97.pdf",
+      "pagina": 5,
+      "notaAnterior": "Acrescido o § 6º à cláusula primeira pelo Conv. ICMS 99/04, efeitos a partir de 19.10.04.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo do §6 da primeira não alcança o caput da segunda.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02407",
+      "pdf": "100 97.pdf",
+      "pagina": 7,
+      "notaAnterior": "Redação anterior dada ao inciso II do § 1º do caput da cláusula terceira pelo Conv. ICMS 99/04, efeitos de 19.10.04 a 24.04.05.",
+      "notaRevista": "",
+      "motivo": "Nota expressamente do inciso II do §1 histórico não alcança III/IV/V. Estes estão no bloco histórico maior do §1, mas seu intervalo individual permanece pendente.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02408",
+      "pdf": "100 97.pdf",
+      "pagina": 7,
+      "notaAnterior": "Redação anterior dada ao inciso II do § 1º do caput da cláusula terceira pelo Conv. ICMS 99/04, efeitos de 19.10.04 a 24.04.05.",
+      "notaRevista": "",
+      "motivo": "Nota expressamente do inciso II do §1 histórico não alcança III/IV/V. Estes estão no bloco histórico maior do §1, mas seu intervalo individual permanece pendente.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02409",
+      "pdf": "100 97.pdf",
+      "pagina": 7,
+      "notaAnterior": "Redação anterior dada ao inciso II do § 1º do caput da cláusula terceira pelo Conv. ICMS 99/04, efeitos de 19.10.04 a 24.04.05.",
+      "notaRevista": "",
+      "motivo": "Nota expressamente do inciso II do §1 histórico não alcança III/IV/V. Estes estão no bloco histórico maior do §1, mas seu intervalo individual permanece pendente.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02412",
+      "pdf": "100 97.pdf",
+      "pagina": 7,
+      "notaAnterior": "Redação anterior dada ao § 2° da cláusula terceira pelo Conv. ICMS 99/04, efeitos de 19.10.04 a 21.07.05.",
+      "notaRevista": "",
+      "motivo": "Nota histórica do §2 não alcança o §3 em preto; não encerrar §3 em 21.07.05.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02427",
+      "pdf": "100 97.pdf",
+      "pagina": 8,
+      "notaAnterior": "Acrescida a cláusula terceira-B pelo Conv. ICMS 26/21, efeitos a partir de 01.01.22.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo da terceira-B não alcança quarta ou quinta.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02428",
+      "pdf": "100 97.pdf",
+      "pagina": 8,
+      "notaAnterior": "Acrescida a cláusula terceira-B pelo Conv. ICMS 26/21, efeitos a partir de 01.01.22.",
+      "notaRevista": "",
+      "motivo": "Nota de acréscimo da terceira-B não alcança quarta ou quinta.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02431",
+      "pdf": "100 97.pdf",
+      "pagina": 8,
+      "notaAnterior": "Redação anterior dada ao inciso I do caput da cláusula primeira, pelo Conv. ICMS 99/04, efeitos de 19.10.04. a 31.12.21.",
+      "notaRevista": "",
+      "motivo": "Nota histórica sob quinta I não alcança quinta II ou sexta; não encerrar esses dispositivos em 31.12.21.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    },
+    {
+      "id": "ANAT03-02432",
+      "pdf": "100 97.pdf",
+      "pagina": 8,
+      "notaAnterior": "Redação anterior dada ao inciso I do caput da cláusula primeira, pelo Conv. ICMS 99/04, efeitos de 19.10.04. a 31.12.21.",
+      "notaRevista": "",
+      "motivo": "Nota histórica sob quinta I não alcança quinta II ou sexta; não encerrar esses dispositivos em 31.12.21.",
+      "patch": "correcoes100.json",
+      "aprovado": false
+    }
+  ]
+}

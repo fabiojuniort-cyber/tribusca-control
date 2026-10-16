@@ -1,0 +1,18 @@
+[
+  {
+    "arquivo": "100 97.pdf",
+    "bytes": 3987699,
+    "sha256": "d38d4712a71ee2818ba48b16cb9f1c4bee078e31772adfcc48b325eeea8692ed",
+    "paginas": 8,
+    "origem": "PDF enviado pelo Fábio neste chat; impressão da página CONFAZ",
+    "aprovacaoJuridica": "não atribuída pelo envio do arquivo"
+  },
+  {
+    "arquivo": "52 91.pdf",
+    "bytes": 23282226,
+    "sha256": "f740b45de3d5f54de0b9f269164be02a4e149b7784d8e1a19dab1fe823ee2647",
+    "paginas": 62,
+    "origem": "PDF enviado pelo Fábio neste chat; impressão da página CONFAZ",
+    "aprovacaoJuridica": "não atribuída pelo envio do arquivo"
+  }
+]

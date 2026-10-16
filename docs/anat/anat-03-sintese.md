@@ -1,5 +1,7 @@
 # ANAT-03 — Dossiê documental para conferência visual
 
+**Complemento por PDF recebido:** as 70 páginas enviadas pelo Fábio foram inspecionadas. A revisão identificou notas agregadas a outros itens/variantes no dossiê; 77 vínculos documentais receberam revisão pontual, e os contextos restantes do 52/91 foram sinalizados como vínculos individuais pendentes. [Relatório por página e registro das revisões](pdf-conferencia/README.md). Literais, códigos e aprovações pendentes preservados; o envio do PDF não homologa a planilha.
+
 Origem: CLAUDE-COORD → GPT-EXEC. Base: desenho GPT 6 Astra do PR #115, §§5.2 e 5.3. Referência:15/10/2026, America/Sao_Paulo.
 
 ## Evidência oficial confirmada

@@ -6,6 +6,7 @@ Origem: CLAUDE-COORD → GPT-EXEC. Base confirmada diretamente pelo Fábio: dese
 
 - [ANAT-02: relatório](anat-02-leitura.md), [SQL read-only](anat-02-sql.sql), [30 fichas](anat-02-fichas.md) e [anotação dos convênios](anat-02-anotacao.md).
 - [ANAT-03: planilha](anat-03-dossie-vigencia.xlsx) e [síntese das evidências](anat-03-sintese.md).
+- [Conferência visual dos PDFs enviados pelo Fábio](pdf-conferencia/README.md): 70 páginas inspecionadas, páginas de referência e revisões dos vínculos de notas.
 - Dados auditáveis: [trechos](anat-03-trechos.json), [dependências verificadas](anat-03-dependencias-verificadas.json), [fila de notas/dependências](anat-03-dependencias.json), [estrutura](anat-02-estrutura-resumo.json) e [sanitização local](anat-02-sanitizacao-local.json).
 
 ## Estado efetivo
@@ -15,6 +16,8 @@ O runner existente possui allowlist para outros diagnósticos e não aceita ANAT
 As 30 fichas são expectativas do desenho, não resultados de parser nem medição de precisão/recall. A anotação cobre 2.444 unidades estruturais dos snapshots, com literais, XPath, células e hashes. A planilha contém 2.434 linhas por trecho/código: 2.323 do 52/91 e 111 do 100/97, além de 10 eventos de atos posteriores. Uma linha pode repetir o mesmo trecho quando contém mais de um código. NBM histórica permanece identificada separadamente de NCM.
 
 Todas as situações individuais estão **pendentes de conferência visual**. Prazos gerais conferidos não homologam redações, variantes nem aplicação estadual. A investigação temporal não é exaustiva: dependências não lidas permanecem na fila. As duas ocorrências históricas de `8450.11.00` foram preservadas e não recebem elegibilidade corrente.
+
+A inspeção dos PDFs identificou notas indevidamente agregadas a itens ou variantes vizinhos no dossiê. Foram aplicadas 77 revisões pontuais de vínculo; as outras 2.273 notas agregadas do 52/91 ficaram explicitamente marcadas como contexto editorial com vínculo individual pendente. A coluna E distingue “Nota CONFAZ / contexto”; os textos contextuais anteriores continuam no JSON para auditoria. No 100/97, os 111 registros tiveram o vínculo documental examinado nas oito páginas, com 27 correções. A revisão de estrutura/associação não é aprovação tributária do Fábio.
 
 Na planilha, as colunas “Conferência Fábio” e “Observação Fábio” são editáveis. Registrar na observação o revisor, a data, o intervalo aprovado, as condições e a próxima reconferência. Marcar “Aprovado” é registro documental e não altera produto ou banco.
 
