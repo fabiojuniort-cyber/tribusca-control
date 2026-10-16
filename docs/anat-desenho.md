@@ -598,3 +598,35 @@ Referências duráveis do projeto:
 - [Contrato atual RFB](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/fb880354fbbbc90f681290e57dc905bde9ce9c08/docs/phase-rfb-normas.md) e [templates atuais](https://github.com/fabiojuniort-cyber/radar-fiscal-web/blob/095b167cbc9dc6681ed29d6f06d5b99bdf203370/docs/LEGAL_DOCUMENT_TEMPLATES.md).
 
 **Próximo passo autorizado:** COORD revisar o desenho consolidado e registrar seu parecer. O executor para na atualização do PR documental. Nenhuma fase de desenvolvimento ou operação começa por decorrência automática deste documento.
+
+
+## 11. Execução documental ANAT-01 a ANAT-03
+
+### 11.1 Origem e base confirmada
+
+Demanda encaminhada por **CLAUDE-COORD → GPT-EXEC**, via Fábio, em 15/10/2026. Após o checkpoint inicial de ausência de anexo, **Fábio confirmou que deve ser seguido o desenho do repositório gerado pelo GPT-6 Astra**. Assim, esta execução adota as seções 1–10 deste documento no PR #115 como base; não depende de anexo externo e não atribui ao COORD parecer não recebido.
+
+As D01–D10 e M01–M06 acima preservam suas autorizações e datas registradas. Esta seção formaliza o plano da mensagem encaminhada, sem criar decisões de produto. Coordenação e checkpoints: [Issue #116](https://github.com/fabiojuniort-cyber/tribusca-control/issues/116). O bloqueio inicial por anexo ausente foi superado pela orientação direta do Fábio; limitações de acesso ou de evidência são registradas nas entregas.
+
+### 11.2 Plano e checklist
+
+| ID | Risco | Trabalho autorizado | Evidência/aceite |
+|---|---|---|---|
+| ANAT-01 | R0 | Usar o desenho existente confirmado pelo Fábio; registrar origem COORD, plano e progresso no branch `docs/anat-00-anatomia-do-ato`, PR #115 | Documento, commit e issue de coordenação; preservação das decisões já registradas |
+| ANAT-02 | R1, somente leitura | SELECTs pelo runner OPS-01 se disponível e compatível; caso indisponível, SQL pronto para Fábio executar no Railway Dashboard, nunca Railway AI Agent; comparar conteúdo persistido dos Conv. 52/91 e 100/97 com `ops/confaz/acts`; identificar classes sobreviventes comprovadas; 30 fichas §7.4 e anotação dos dois convênios | Separar resultado persistido, análise estática e expectativa. Sem resultado SQL não afirmar classes preservadas em produção. Intervalos e limitações rastreáveis |
+| ANAT-03 | R0 | Dossiê de vigência dos Conv. 52/91 e 100/97 conforme §§5.2–5.3, em planilha; linha por trecho (cláusula/inciso/item de anexo + NCM) | Situação proposta, nota CONFAZ, ato posterior que altera/prorroga/revoga, link oficial, data de referência e validade; dúvida = pendente; Fábio aprova por conferência visual |
+
+Checklist operacional, atualizado na issue de coordenação:
+
+- [x] Origem CLAUDE-COORD registrada e issue de coordenação aberta.
+- [x] Base do desenho confirmada diretamente pelo Fábio.
+- [ ] ANAT-01: documento e andamento commitados no branch do PR #115.
+- [ ] ANAT-02: resultado read-only ou SQL alternativo entregue; comparação persistida só após retorno comprovado.
+- [ ] ANAT-02: 30 fichas de expectativas e anotação dos dois convênios entregues.
+- [ ] ANAT-03: planilha de evidências entregue no chat e salva no repositório.
+- [ ] ANAT-03: conferência visual e aprovação do Fábio, separadas da preparação documental.
+- [ ] Handoff com SHA, issue, relatório e planilha devolvido a CLAUDE-COORD.
+
+### 11.3 Limites
+
+Sem código de produto, migrations, escrita no banco, coleta, merge, deploy ou alteração Railway. Ler páginas oficiais para conferir evidências não executa o mecanismo de coleta do produto. Situação proposta não equivale a homologação jurídica, ativação de destaque ou entrada em produção. Nenhuma implementação das fases F1–F3 está autorizada por este plano.
