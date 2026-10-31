@@ -13,14 +13,15 @@ HEAD do #115: `c83f3c69958827ef69ecef9b54417693a6bd398d`. Total: **216 arquivos,
 | C | Cópias de atos oficiais (HTML/TXT de convênios, ADs e prorrogações) | 63 | médio: cópias sem procedência normalizada (URL, data e hash) | não integrar; uma coleta oficial futura segue o OFFICIAL-01, com procedência |
 | D | Componentes executáveis (Python, SQL) | 7 | médio: código de execução num repositório de governança, que não é revisado como código | não integrar; se for útil, migrar para o backend com revisão |
 
-## Proposta de integração segura
+## Proposta de integração segura (revisada após R1, #116 c.6543169799)
 
-1. Abrir um **PR documental menor, sanitizado**, só com a classe A:
-   - acrescentar uma nota de escopo explícita: *"ANAT-03: 25 blocos = proposta, 0 homologados; critério de conferência substituído pelo direcionamento de 30/10 (#116 c.6514510003); o conteúdo derivado do 52/91 e do 100/97 fica fora da main por BLOCK_CORPUS_INPUTS_AND_GOLD."*;
-   - acrescentar um ponteiro para o commit `c83f3c69` como fonte histórica.
-2. **Fechar o #115 sem merge**, referenciando o PR sanitizado e a tag `anat-00-03-historico` no commit `c83f3c69`. A tag preserva as classes B, C e D sem levá-las à `main`.
-3. Revisão independente do PR sanitizado. A integração exige autorização específica.
-4. Nada disso pede ao Product Owner revisão linha a linha.
+A classificação por caminho **não basta** para garantir que um arquivo não tenha dado derivado ou protegido. Uma varredura automática dos `.md` da classe A, contando ocorrências de padrão NCM, termos de dispositivo e citações, sem leitura do texto, encontrou sinais até no desenho principal (`docs/anat-desenho.md`: 15 padrões NCM e 44 citações) e na anotação do ANAT-02 (1.698 padrões NCM).
+
+Decisão do EXEC:
+1. **Nenhum dos 216 arquivos originais é integrado nesta etapa.**
+2. É integrado **um único documento novo**, escrito do zero: `docs/anat/ANAT-00-03-RESUMO-CONCEITUAL.md`. Ele não tem trecho de ato nem dado derivado, preserva a identificação histórica e registra *25 blocos = proposta, 0 homologados*.
+3. O #115 continua **aberto**, sem tag de arquivamento e sem fechamento, até decisão do COORD.
+4. Revisão independente do documento novo antes de qualquer integração.
 
 ## Lista completa (classe, linhas, caminho)
 
