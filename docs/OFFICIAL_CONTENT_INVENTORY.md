@@ -108,3 +108,8 @@ Estas linhas detalham a linha agregada “Demais fontes previstas” da matriz e
 Os quatro campos estão agora explícitos por fonte. O preenchimento estrutural **não encerra a Issue #6**: limites oficiais ainda desconhecidos, estado produtivo não observado, anexos/famílias não auditados e provas de completude continuam identificados. Não aceitar `NOT_PROVEN` como limitação final nem reduzir o requisito aprovado.
 
 Próxima etapa documental: reunir evidência oficial datada do menor marco por representação, evidência read-only do corte/checkpoint e da cobertura real, e só então descrever lacunas com intervalos. Cada adaptação de conector conserva issue/PR/testes/gates próprios. [Controle Frente 2 #124](https://github.com/fabiojuniort-cyber/tribusca-control/issues/124).
+
+
+## Conferência específica — SPED (04/11/2026)
+
+[Conferência por representação e dez critérios da #6](investigations/F2-6-SPED-REPRESENTATION.md), código fixado no backend1a6419d0. Esta leitura é estática, não atesta captura integral real. O descritor limita a descrição a12000 caracteres; arquivo com falha pode reutilizar checkpoint anterior, enquanto arquivo novo não resolvido adia o documento. Hash padrão continua LEGACY_ALL_FILES; comunicado e documento têm identidades distintas. Ver evidências/limites no complemento, sem alteração de conector nem aceite antecipado.
