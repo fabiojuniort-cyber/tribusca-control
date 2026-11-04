@@ -27,8 +27,8 @@ Toda a sequência predecessora e a verificação de migrations foram executadas 
 | Observação | Controle | Integração |
 |---|---:|---:|
 | Duração do comando R7 instrumentado |44,532s|44,895s|
-| Duração do teste150k |42,622s|42,572s|
-| Trecho medido de backfill/reinício |30,410s|30,583s|
+| Duração do teste150k |42,622s|43,047s|
+| Trecho medido de backfill/reinício |30,410s|30,841s|
 | Menor/maior lote efetivo |950,435/1057,392ms|944,136/1155,169ms|
 | Amostras observador |45|48|
 | Erros do observador |0|0|
