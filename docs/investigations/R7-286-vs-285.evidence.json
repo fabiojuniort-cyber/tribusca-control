@@ -1,0 +1,1038 @@
+{
+  "scope": "F2 ONB-auditoria: retrospective, no execution",
+  "as_of": "2026-11-04",
+  "new_ci_runs": 0,
+  "production_operations": 0,
+  "root_cause": "NOT_PROVEN",
+  "source": "https://github.com/fabiojuniort-cyber/tribusca-control/issues/116#issuecomment-6641873899",
+  "cases": [
+    {
+      "label": "286-control",
+      "run": 41909450778,
+      "attempt": 1,
+      "job": 126855374871,
+      "head": "b2150ab5ef34e9f9646e219d522e47738d9c04f5",
+      "checkout": "ca1f30f07ebf30581fcbc84d732e3bee3b9285e2",
+      "tree": "b7f5a585ebc31b61334a56650264855d74aab8fb",
+      "result": "success",
+      "node": "24.22.2",
+      "runner_image": "20261101.360.1",
+      "cloud": "Azure",
+      "region": "centralus",
+      "test_duration_ms": 27571.058182,
+      "first_three_ms": 2209.1890840000005,
+      "resume_ms": 17026.661118999997
+    },
+    {
+      "label": "285-attempt1",
+      "run": 41906609145,
+      "attempt": 1,
+      "job": 126844916347,
+      "head": "2c41fbab8169b7efca6bd2e80c963d57a50585b6",
+      "checkout": "d5e3fd1cd9c169f5b7e00018b66945e46f88ab5a",
+      "tree": "6f6feff772a08a1cf004ec7c33382f6ea5acbb6e",
+      "result": "failure",
+      "node": "24.22.2",
+      "runner_image": "20261101.360.1",
+      "cloud": "Azure",
+      "region": "centralus",
+      "test_duration_ms": 50702.903175
+    },
+    {
+      "label": "285-attempt2",
+      "run": 41906609145,
+      "attempt": 2,
+      "job": 126846697806,
+      "head": "2c41fbab8169b7efca6bd2e80c963d57a50585b6",
+      "checkout": "d5e3fd1cd9c169f5b7e00018b66945e46f88ab5a",
+      "tree": "6f6feff772a08a1cf004ec7c33382f6ea5acbb6e",
+      "result": "failure",
+      "node": "24.22.0",
+      "runner_image": "20261018.96.1",
+      "cloud": "AWS",
+      "region": "us-west-2",
+      "test_duration_ms": 49638.290353
+    }
+  ],
+  "postgres": {
+    "version": "18.6",
+    "build": "Debian 18.6-1.pgdg12+2",
+    "image_digest": "sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8",
+    "observed_locale": "en_US.utf8",
+    "encoding": "UTF8"
+  },
+  "limits_declared_by_identical_test": {
+    "rows": 150000,
+    "batch": 5000,
+    "statement_timeout_ms": 45000,
+    "lock_timeout_ms": 5000,
+    "jit": "off",
+    "pool_max": 2,
+    "test_ms": 240000,
+    "command_s": 300,
+    "job_minutes": 14
+  },
+  "file_comparison": [
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "control": "985c3c6a1342a91f96638cd65ba5fc1a00c6ee44",
+      "integration": "985c3c6a1342a91f96638cd65ba5fc1a00c6ee44"
+    },
+    {
+      "path": ".github/scripts/ci-plan.py",
+      "control": "563a98b7c2d55a5070daa37267a4a47e7bb7e637",
+      "integration": "563a98b7c2d55a5070daa37267a4a47e7bb7e637"
+    },
+    {
+      "path": ".github/scripts/test_ci_plan.py",
+      "control": "a553866eea6b14e07bbbd23e42260692d26f2238",
+      "integration": "a553866eea6b14e07bbbd23e42260692d26f2238"
+    },
+    {
+      "path": ".github/workflows/anatomy-ci.yml",
+      "control": "19e23870615f396e005ead1bafd97f8b52624cea",
+      "integration": "579a0ccaa9714f0eb7070a09c1df3e3269d14df0"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "control": "3c34c369a5c671b84c4ee847638efd343daca08d",
+      "integration": "3c34c369a5c671b84c4ee847638efd343daca08d"
+    },
+    {
+      "path": ".github/workflows/f3-nome-public-corpus.yml",
+      "control": "2f58bfde2633ba3ee63c9941e533dcb1cc6592a1",
+      "integration": "2f58bfde2633ba3ee63c9941e533dcb1cc6592a1"
+    },
+    {
+      "path": ".github/workflows/l11-index053-pg18.yml",
+      "control": "0fef0df0156dd720e0c954f643ca27f21b9a62aa",
+      "integration": "0fef0df0156dd720e0c954f643ca27f21b9a62aa"
+    },
+    {
+      "path": ".github/workflows/l11-pg18-isolated.yml",
+      "control": "20c171df9f9634e244e486216d9eec9167eaf16d",
+      "integration": "20c171df9f9634e244e486216d9eec9167eaf16d"
+    },
+    {
+      "path": ".github/workflows/l15-l10-pg18.yml",
+      "control": "a48ea39ac9bc491677dbd3fe5c842a9f3652b264",
+      "integration": "a48ea39ac9bc491677dbd3fe5c842a9f3652b264"
+    },
+    {
+      "path": ".github/workflows/lote2-pg18-isolated.yml",
+      "control": "ee5da24bdd823c4edf2eb5122e7459f1c88d72a5",
+      "integration": "ee5da24bdd823c4edf2eb5122e7459f1c88d72a5"
+    },
+    {
+      "path": "migrations/001_foundation.sql",
+      "control": "33479056c631ecc53a9ed05406117922948036cf",
+      "integration": "33479056c631ecc53a9ed05406117922948036cf"
+    },
+    {
+      "path": "migrations/002_companies.sql",
+      "control": "3a9049c09e767eb8d3b78ada8ca1de6c10aa0c25",
+      "integration": "3a9049c09e767eb8d3b78ada8ca1de6c10aa0c25"
+    },
+    {
+      "path": "migrations/003_sources_and_collection.sql",
+      "control": "f5e18262bcc204bcbaab8884c90d6a1954f741a8",
+      "integration": "f5e18262bcc204bcbaab8884c90d6a1954f741a8"
+    },
+    {
+      "path": "migrations/004_publications.sql",
+      "control": "8e8aceed91901d7078fac8d0661289bbfaf96d06",
+      "integration": "8e8aceed91901d7078fac8d0661289bbfaf96d06"
+    },
+    {
+      "path": "migrations/005_monitoring_and_matching.sql",
+      "control": "18a6e51bc42e655363fe1dd1cb763473cd9aecba",
+      "integration": "18a6e51bc42e655363fe1dd1cb763473cd9aecba"
+    },
+    {
+      "path": "migrations/006_audit.sql",
+      "control": "f53c9fbb69e8839733b466f0244eb30dfbedc357",
+      "integration": "f53c9fbb69e8839733b466f0244eb30dfbedc357"
+    },
+    {
+      "path": "migrations/007_monitoring_views.sql",
+      "control": "db2a91c97e4a2796775a0b6fa9a1ac7ceb6e5b50",
+      "integration": "db2a91c97e4a2796775a0b6fa9a1ac7ceb6e5b50"
+    },
+    {
+      "path": "migrations/008_auth_credentials_and_sessions.sql",
+      "control": "9e0838f5a1c26497fd2e84df517d13112af51228",
+      "integration": "9e0838f5a1c26497fd2e84df517d13112af51228"
+    },
+    {
+      "path": "migrations/009_rls_policies.sql",
+      "control": "c7726414a2d423315fb94cfa91916cd581795ad0",
+      "integration": "c7726414a2d423315fb94cfa91916cd581795ad0"
+    },
+    {
+      "path": "migrations/010_page_reference_origins.sql",
+      "control": "82e2bb885566c4e6e52278bb93d48d71a6b0112f",
+      "integration": "82e2bb885566c4e6e52278bb93d48d71a6b0112f"
+    },
+    {
+      "path": "migrations/011_collection_attempt_no_integer.sql",
+      "control": "454af18929f0788accc59182fb5922eac937f78f",
+      "integration": "454af18929f0788accc59182fb5922eac937f78f"
+    },
+    {
+      "path": "migrations/012_collection_checkpoints.sql",
+      "control": "3e7ff124c4c8924e225d387415f5f04af940ce88",
+      "integration": "3e7ff124c4c8924e225d387415f5f04af940ce88"
+    },
+    {
+      "path": "migrations/013_db_capacity_snapshots.sql",
+      "control": "7a9335c7ad023b0905c41d3fa59faf44fb42b351",
+      "integration": "7a9335c7ad023b0905c41d3fa59faf44fb42b351"
+    },
+    {
+      "path": "migrations/014_bound_publication_search_vector.sql",
+      "control": "f864c76f01d8757d485fa5055c8c07765dd2c084",
+      "integration": "f864c76f01d8757d485fa5055c8c07765dd2c084"
+    },
+    {
+      "path": "migrations/015_taxonomy_core.sql",
+      "control": "80c639aa1775cb28a75d105741d7287558fc0e56",
+      "integration": "80c639aa1775cb28a75d105741d7287558fc0e56"
+    },
+    {
+      "path": "migrations/016_taxonomy_aliases_relations.sql",
+      "control": "225622660b23bf2e76fce0fed5bdd2c69834372e",
+      "integration": "225622660b23bf2e76fce0fed5bdd2c69834372e"
+    },
+    {
+      "path": "migrations/017_taxonomy_evidence_official_catalogs.sql",
+      "control": "be6e7131a71735934522bfcf2d2022615744a43c",
+      "integration": "be6e7131a71735934522bfcf2d2022615744a43c"
+    },
+    {
+      "path": "migrations/018_taxonomy_privileges.sql",
+      "control": "9b76415e544e65c1aeeb88a59bb0d5dadf9c3145",
+      "integration": "9b76415e544e65c1aeeb88a59bb0d5dadf9c3145"
+    },
+    {
+      "path": "migrations/019_public_signup.sql",
+      "control": "9d6751117ad9d4b6b07012016f878b649137376d",
+      "integration": "9d6751117ad9d4b6b07012016f878b649137376d"
+    },
+    {
+      "path": "migrations/020_taxonomy_classification.sql",
+      "control": "dafe53cac9129a58475af9cc523e6ec74d7d89b9",
+      "integration": "dafe53cac9129a58475af9cc523e6ec74d7d89b9"
+    },
+    {
+      "path": "migrations/021_taxonomy_candidates.sql",
+      "control": "a96a18f9a3464343024d3bcc6b103b81bb5dfe09",
+      "integration": "a96a18f9a3464343024d3bcc6b103b81bb5dfe09"
+    },
+    {
+      "path": "migrations/022_cnae_runtime_write.sql",
+      "control": "f3bb5dbedb79d726818f1638ab6a12202bf44e8a",
+      "integration": "f3bb5dbedb79d726818f1638ab6a12202bf44e8a"
+    },
+    {
+      "path": "migrations/023_state_registration.sql",
+      "control": "ea670d327605c6bcad9e7f5c01c00f9d5b74282c",
+      "integration": "ea670d327605c6bcad9e7f5c01c00f9d5b74282c"
+    },
+    {
+      "path": "migrations/024_business_location_code.sql",
+      "control": "2d46d27ee4ddf40de59cdf9d6361e504129cfc7f",
+      "integration": "2d46d27ee4ddf40de59cdf9d6361e504129cfc7f"
+    },
+    {
+      "path": "migrations/025_news_content.sql",
+      "control": "1655df4f0f9037ba6bd4c02d1a21fb7b0b4f3489",
+      "integration": "1655df4f0f9037ba6bd4c02d1a21fb7b0b4f3489"
+    },
+    {
+      "path": "migrations/026_company_product_ncm.sql",
+      "control": "c3849e96f4f6ccd544722f364c92acbd746b0ee0",
+      "integration": "c3849e96f4f6ccd544722f364c92acbd746b0ee0"
+    },
+    {
+      "path": "migrations/027_rfb_news_source.sql",
+      "control": "fae16221e276c2ef3ecf06655418fb60f24120b6",
+      "integration": "fae16221e276c2ef3ecf06655418fb60f24120b6"
+    },
+    {
+      "path": "migrations/028_publication_ncm_scans.sql",
+      "control": "47ac84dbd07cf3a551487f5d470cb0101755f86b",
+      "integration": "47ac84dbd07cf3a551487f5d470cb0101755f86b"
+    },
+    {
+      "path": "migrations/029_catalog_scale.sql",
+      "control": "2f4230d1a9ac5a9fe977c19534bc94e4e9650d3f",
+      "integration": "2f4230d1a9ac5a9fe977c19534bc94e4e9650d3f"
+    },
+    {
+      "path": "migrations/030_archive_act_type_scale.sql",
+      "control": "f8243ac134114e87d3f63a699e35bdc0862a30b0",
+      "integration": "f8243ac134114e87d3f63a699e35bdc0862a30b0"
+    },
+    {
+      "path": "migrations/031_taxonomy_curation.sql",
+      "control": "214ed5e1d596a7ed7c8cb6e3d1fb5aaa32785d55",
+      "integration": "214ed5e1d596a7ed7c8cb6e3d1fb5aaa32785d55"
+    },
+    {
+      "path": "migrations/032_company_cnae_ncms.sql",
+      "control": "eb855564f46ec7d671f9516f2f9e6304bbc2039e",
+      "integration": "eb855564f46ec7d671f9516f2f9e6304bbc2039e"
+    },
+    {
+      "path": "migrations/033_publication_ncm_scans_read.sql",
+      "control": "4565a6979e7c92b9ab52cc87e8987fc68846263d",
+      "integration": "4565a6979e7c92b9ab52cc87e8987fc68846263d"
+    },
+    {
+      "path": "migrations/033_publication_scope_suppression.sql",
+      "control": "31dab3ac5e01294f1138d9dc796150244acf4087",
+      "integration": "31dab3ac5e01294f1138d9dc796150244acf4087"
+    },
+    {
+      "path": "migrations/034_publication_scope_cache_epoch.sql",
+      "control": "97da46b1e75a2e197d30ae855c8a9ea1c2eb9e0c",
+      "integration": "97da46b1e75a2e197d30ae855c8a9ea1c2eb9e0c"
+    },
+    {
+      "path": "migrations/035_publication_scope_collection_history.sql",
+      "control": "94146bbe116dbb1cc79d39c04bd5414fe8aa8ed1",
+      "integration": "94146bbe116dbb1cc79d39c04bd5414fe8aa8ed1"
+    },
+    {
+      "path": "migrations/036_platform_admin.sql",
+      "control": "2a665fe18636799d678c38721598b52a052485ab",
+      "integration": "2a665fe18636799d678c38721598b52a052485ab"
+    },
+    {
+      "path": "migrations/037_collection_filter_policy.sql",
+      "control": "bbeedc65e0096c206186005e5935d33159ac4f54",
+      "integration": "bbeedc65e0096c206186005e5935d33159ac4f54"
+    },
+    {
+      "path": "migrations/038_collection_filter_admin.sql",
+      "control": "fc1a8cf2b86a984accea5456fa59114051e36b47",
+      "integration": "fc1a8cf2b86a984accea5456fa59114051e36b47"
+    },
+    {
+      "path": "migrations/039_collection_filter_simulation_review.sql",
+      "control": "81a46e7a82fcd07bb574a99fdeb3a37009cd3b28",
+      "integration": "81a46e7a82fcd07bb574a99fdeb3a37009cd3b28"
+    },
+    {
+      "path": "migrations/040_collection_filter_simulation_runner.sql",
+      "control": "a91a8d379dbac0760f67d6cc1fc25c3a990ae05b",
+      "integration": "a91a8d379dbac0760f67d6cc1fc25c3a990ae05b"
+    },
+    {
+      "path": "migrations/041_collection_filter_runtime.sql",
+      "control": "3b057224f2de350a51f4ef27f4eac1255c46bac6",
+      "integration": "3b057224f2de350a51f4ef27f4eac1255c46bac6"
+    },
+    {
+      "path": "migrations/042_signup_without_company.sql",
+      "control": "c50aac916400555e101562b62ae3cf78b03625eb",
+      "integration": "c50aac916400555e101562b62ae3cf78b03625eb"
+    },
+    {
+      "path": "migrations/043_establishment_company_root.sql",
+      "control": "e930cd7428e72e973dbb10699c5271db0d8d7f04",
+      "integration": "e930cd7428e72e973dbb10699c5271db0d8d7f04"
+    },
+    {
+      "path": "migrations/051_collection_filter_direct_rules_cleanup.sql",
+      "control": "07c298a261ef94b735ff14606374b2dd7281526d",
+      "integration": "07c298a261ef94b735ff14606374b2dd7281526d"
+    },
+    {
+      "path": "migrations/052_collection_filter_direct_admin_edits.sql",
+      "control": "346ce904b5775f6e9ae7e78968b620a25e93e820",
+      "integration": "346ce904b5775f6e9ae7e78968b620a25e93e820"
+    },
+    {
+      "path": "migrations/053_collection_filter_purge_lookup_indexes.sql",
+      "control": "c415b54ef739bfdc9c5368e3b77617baf0c4460e",
+      "integration": "c415b54ef739bfdc9c5368e3b77617baf0c4460e"
+    },
+    {
+      "path": "migrations/054_l15_scope_purge_and_l10_runner.sql",
+      "control": "129933c4a4c9b6662145345cf9c82d7e24fdeaf8",
+      "integration": "129933c4a4c9b6662145345cf9c82d7e24fdeaf8"
+    },
+    {
+      "path": "migrations/055_collection_items_created_at_index.sql",
+      "control": "ffe6b20595a366e358930f2ea9c50d965100eff4",
+      "integration": "ffe6b20595a366e358930f2ea9c50d965100eff4"
+    },
+    {
+      "path": "migrations/056_l17_hidden_cleanup.sql",
+      "control": "950cf0849fc828da62ff8acf903af1a1132e48e2",
+      "integration": "950cf0849fc828da62ff8acf903af1a1132e48e2"
+    },
+    {
+      "path": "migrations/057_l17_canonical_type_conflict.sql",
+      "control": "c7aa579f2fe56d493a728898a562560c9cffa95a",
+      "integration": "c7aa579f2fe56d493a728898a562560c9cffa95a"
+    },
+    {
+      "path": "migrations/058_l17_archive_purge_discards.sql",
+      "control": "42e759a6376c23248abae7268d4784b5dbb3996b",
+      "integration": "42e759a6376c23248abae7268d4784b5dbb3996b"
+    },
+    {
+      "path": "migrations/059_l17_admin_lock.sql",
+      "control": "2575a4bcabd4eab80be25cc04d4e1903174922a2",
+      "integration": "2575a4bcabd4eab80be25cc04d4e1903174922a2"
+    },
+    {
+      "path": "migrations/060_l17_worker_always.sql",
+      "control": "edac56b971dba2f2427e608e5126a55e7ddca243",
+      "integration": "edac56b971dba2f2427e608e5126a55e7ddca243"
+    },
+    {
+      "path": "migrations/061_l17_rule_cap_index.sql",
+      "control": "a72880f5f1d26c328b7ad5e684908f2a49529335",
+      "integration": "a72880f5f1d26c328b7ad5e684908f2a49529335"
+    },
+    {
+      "path": "migrations/062_l18_preserve_federal_tax_acts.sql",
+      "control": "93e594ed2ae55b644cf03572493789e2ede8c46c",
+      "integration": "93e594ed2ae55b644cf03572493789e2ede8c46c"
+    },
+    {
+      "path": "migrations/063_l18_non_dou_legacy_and_doe_type.sql",
+      "control": "11a224491e46a35008906acf674b735b34075295",
+      "integration": "11a224491e46a35008906acf674b735b34075295"
+    },
+    {
+      "path": "migrations/064_f2_actuacao_cnae_origins.sql",
+      "control": "3514c8f077ad6f2ed84a225da710f08b2b31c384",
+      "integration": "3514c8f077ad6f2ed84a225da710f08b2b31c384"
+    },
+    {
+      "path": "migrations/065_f2_ncm_short_legal_mentions.sql",
+      "control": "094b41abc7d95b811f7089f83cf852e6d132773e",
+      "integration": "094b41abc7d95b811f7089f83cf852e6d132773e"
+    },
+    {
+      "path": "migrations/066_f2_t03_lossless_import_staging.sql",
+      "control": "11d867fcf66a2e774742b03ae5ee6685e49a8a14",
+      "integration": "11d867fcf66a2e774742b03ae5ee6685e49a8a14"
+    },
+    {
+      "path": "migrations/067_f2_t03_readonly_source_suggestions.sql",
+      "control": "5ee9370387285a19147a5ccd40cb1cc1c645bfac",
+      "integration": "5ee9370387285a19147a5ccd40cb1cc1c645bfac"
+    },
+    {
+      "path": "migrations/068_f2_t03_v51_staging_contract.sql",
+      "control": "6048347562257311d3dc08edeca9fbbf236075fb",
+      "integration": "6048347562257311d3dc08edeca9fbbf236075fb"
+    },
+    {
+      "path": "migrations/069_f3_unified_type_decision.sql",
+      "control": "2f01b78937a5ba4b45e0c050e32b924df7f205eb",
+      "integration": "2f01b78937a5ba4b45e0c050e32b924df7f205eb"
+    },
+    {
+      "path": "migrations/070_f2_draft_import_ledger.sql",
+      "control": "e07301c4ee29f6b627bd178265ce0f6f616d72a1",
+      "integration": "e07301c4ee29f6b627bd178265ce0f6f616d72a1"
+    },
+    {
+      "path": "migrations/071_f2_tab02_draft_suggestions.sql",
+      "control": "18323918c269bd88a2c83b610e4987801dea5918",
+      "integration": "18323918c269bd88a2c83b610e4987801dea5918"
+    },
+    {
+      "path": "migrations/072_f2_tab03_multi_actuacao.sql",
+      "control": "d52259ca892c7efb98a98c479009c9336707b0e1",
+      "integration": "d52259ca892c7efb98a98c479009c9336707b0e1"
+    },
+    {
+      "path": "migrations/073_onb02_company_purge.sql",
+      "control": "f27c7c943a6b5311122491840c49f480d86b6209",
+      "integration": "f27c7c943a6b5311122491840c49f480d86b6209"
+    },
+    {
+      "path": "migrations/074_audit_allowlist_and_backfill.sql",
+      "control": "baf49f70ac67c5f9898ddfeb463165c104ed5437",
+      "integration": "baf49f70ac67c5f9898ddfeb463165c104ed5437"
+    },
+    {
+      "path": "migrations/075_audit_historical_event_rules.sql",
+      "control": "ad832c2d73954c39d763d0d0b7402fbbb5b684f7",
+      "integration": "ad832c2d73954c39d763d0d0b7402fbbb5b684f7"
+    },
+    {
+      "path": "migrations/076_companies_active_only.sql",
+      "control": "c18824dd6e06dd099ccd36d8701ce32765622d97",
+      "integration": "c18824dd6e06dd099ccd36d8701ce32765622d97"
+    },
+    {
+      "path": "migrations/077_anat_base.sql",
+      "control": "0e06ed8ea54669b93f72342180826135eb5f9ca9",
+      "integration": "0e06ed8ea54669b93f72342180826135eb5f9ca9"
+    },
+    {
+      "path": "migrations/078_anat_audit_policy.sql",
+      "control": "45a87a5a6a48864e5b72bfca8b638acab95c28ba",
+      "integration": "45a87a5a6a48864e5b72bfca8b638acab95c28ba"
+    },
+    {
+      "path": "migrations/079_anat_rules_admin.sql",
+      "control": "3d9c6bdafbd4e338604a1ea2e8cd98ac61287aa7",
+      "integration": "3d9c6bdafbd4e338604a1ea2e8cd98ac61287aa7"
+    },
+    {
+      "path": "migrations/080_onb03_assistant_phrases.sql",
+      "control": "f43112f55038e7f8f8d9b1c472bfee3f11e76fbd",
+      "integration": "f43112f55038e7f8f8d9b1c472bfee3f11e76fbd"
+    },
+    {
+      "path": "migrations/081_onb036_root_purge.sql",
+      "control": "925bb9dd368c38a938f25942e72c7186467bfc84",
+      "integration": "925bb9dd368c38a938f25942e72c7186467bfc84"
+    },
+    {
+      "path": "migrations/082_anat_config_direct_apply.sql",
+      "control": "74c4bfb453937b5ccffb708c85fa513830c92b02",
+      "integration": "74c4bfb453937b5ccffb708c85fa513830c92b02"
+    },
+    {
+      "path": "ops/onb02/audit-actor-inventory.mjs",
+      "control": "1055099a5c657ff523d75cb54a9a566284fbcc77",
+      "integration": "1055099a5c657ff523d75cb54a9a566284fbcc77"
+    },
+    {
+      "path": "ops/onb02/audit-backfill.mjs",
+      "control": "63c3f97adaa81c00ea14cd8dab32e93602cb3d94",
+      "integration": "63c3f97adaa81c00ea14cd8dab32e93602cb3d94"
+    },
+    {
+      "path": "package-lock.json",
+      "control": "498f043215c401af30ccf42bfd2012cc7d3a3c11",
+      "integration": "498f043215c401af30ccf42bfd2012cc7d3a3c11"
+    },
+    {
+      "path": "package.json",
+      "control": "9f5932237b5fb45a28ddecf66882d24574cb4343",
+      "integration": "37d6828d909080482ec661a9b14103a27d27e997"
+    },
+    {
+      "path": "src/infrastructure/database/activate-rfb-news.ts",
+      "control": "d5fb2c0fd8bf10a6633ab15012a15310a479c360",
+      "integration": "d5fb2c0fd8bf10a6633ab15012a15310a479c360"
+    },
+    {
+      "path": "src/infrastructure/database/align-schedules.ts",
+      "control": "188b3a3d61d20e69930e5e18877d5e124f800e91",
+      "integration": "188b3a3d61d20e69930e5e18877d5e124f800e91"
+    },
+    {
+      "path": "src/infrastructure/database/audit-doe-sp-rebuild.ts",
+      "control": "de9e91c40a859d49b9520093b007db1c7b7ccaa8",
+      "integration": "de9e91c40a859d49b9520093b007db1c7b7ccaa8"
+    },
+    {
+      "path": "src/infrastructure/database/capacity-report.ts",
+      "control": "27b1fcb189aec62947eae292d067d8623e81b615",
+      "integration": "27b1fcb189aec62947eae292d067d8623e81b615"
+    },
+    {
+      "path": "src/infrastructure/database/client.ts",
+      "control": "50f7002f7c3abc448d2c8b5c1c781bc5a3866052",
+      "integration": "50f7002f7c3abc448d2c8b5c1c781bc5a3866052"
+    },
+    {
+      "path": "src/infrastructure/database/curator-client.ts",
+      "control": "ad8c11aa233ffd8bc62df3bfc42d458238af4f8a",
+      "integration": "ad8c11aa233ffd8bc62df3bfc42d458238af4f8a"
+    },
+    {
+      "path": "src/infrastructure/database/curator-url.ts",
+      "control": "a0569fa5678d378d79fb87d00a39b3ca2de58430",
+      "integration": "a0569fa5678d378d79fb87d00a39b3ca2de58430"
+    },
+    {
+      "path": "src/infrastructure/database/database.types.ts",
+      "control": "85056b413ee5f3c4bca0d11f67b6027738eddeba",
+      "integration": "85056b413ee5f3c4bca0d11f67b6027738eddeba"
+    },
+    {
+      "path": "src/infrastructure/database/diagnose-collection.ts",
+      "control": "5e89ae0d6e18c9c6d6b94f5e090115ca7a25a6fb",
+      "integration": "5e89ae0d6e18c9c6d6b94f5e090115ca7a25a6fb"
+    },
+    {
+      "path": "src/infrastructure/database/dou-backfill.ts",
+      "control": "ab1037bea4849102ebe64d94113e1c66159afb04",
+      "integration": "ab1037bea4849102ebe64d94113e1c66159afb04"
+    },
+    {
+      "path": "src/infrastructure/database/dou-historical-cleanup-dry-run.ts",
+      "control": "e0a71556a50f10102127b8dadb30392b934b6ec6",
+      "integration": "e0a71556a50f10102127b8dadb30392b934b6ec6"
+    },
+    {
+      "path": "src/infrastructure/database/dou-historical-cleanup-execute.ts",
+      "control": "6c9b65b1e21a18e780a69865319d4a7d19a4e782",
+      "integration": "6c9b65b1e21a18e780a69865319d4a7d19a4e782"
+    },
+    {
+      "path": "src/infrastructure/database/dou-historical-cleanup.ts",
+      "control": "673c40d3d67d28463db19b13dee64f78f21646b0",
+      "integration": "673c40d3d67d28463db19b13dee64f78f21646b0"
+    },
+    {
+      "path": "src/infrastructure/database/enqueue-rfb-news-run.ts",
+      "control": "15207f0b8e7cfe53b42f82ba9bfe0b51a6be2b3e",
+      "integration": "15207f0b8e7cfe53b42f82ba9bfe0b51a6be2b3e"
+    },
+    {
+      "path": "src/infrastructure/database/ensure-cgibs-source.ts",
+      "control": "309e438d69a65eb7a0c7e0e00d2aacb236aa43cc",
+      "integration": "309e438d69a65eb7a0c7e0e00d2aacb236aa43cc"
+    },
+    {
+      "path": "src/infrastructure/database/ensure-confaz-source.ts",
+      "control": "480b91e347dd7db92d7a2f5e2cb454006a075c7c",
+      "integration": "480b91e347dd7db92d7a2f5e2cb454006a075c7c"
+    },
+    {
+      "path": "src/infrastructure/database/ensure-doe-sp-source.ts",
+      "control": "8dd538a088d5c11c0b1fd5adef1e578fd6982e3f",
+      "integration": "8dd538a088d5c11c0b1fd5adef1e578fd6982e3f"
+    },
+    {
+      "path": "src/infrastructure/database/ensure-dou-source.ts",
+      "control": "159ae2ff4356b1da8fdabe27b94c0ebbdef24f1a",
+      "integration": "159ae2ff4356b1da8fdabe27b94c0ebbdef24f1a"
+    },
+    {
+      "path": "src/infrastructure/database/ensure-nfe-encat-source.ts",
+      "control": "58d0a27361cfd2a5da87df538eda4dd506ff7a47",
+      "integration": "58d0a27361cfd2a5da87df538eda4dd506ff7a47"
+    },
+    {
+      "path": "src/infrastructure/database/ensure-rfb-normas-source.ts",
+      "control": "9b92387aab423651521886ca19ca77b19d52641c",
+      "integration": "9b92387aab423651521886ca19ca77b19d52641c"
+    },
+    {
+      "path": "src/infrastructure/database/ensure-sped-source.ts",
+      "control": "a0bdc99b8b0a2b8e580460daf8d93d5838554cdc",
+      "integration": "a0bdc99b8b0a2b8e580460daf8d93d5838554cdc"
+    },
+    {
+      "path": "src/infrastructure/database/f3-type-simulation.ts",
+      "control": "70635ad9633e642b53d91d407163ab93b00e3ca7",
+      "integration": "70635ad9633e642b53d91d407163ab93b00e3ca7"
+    },
+    {
+      "path": "src/infrastructure/database/gate-hardening.ts",
+      "control": "43f5b61746078cde9cbe4aad0812a83fd74f1007",
+      "integration": "43f5b61746078cde9cbe4aad0812a83fd74f1007"
+    },
+    {
+      "path": "src/infrastructure/database/gate-nfe-encat-scheduler.ts",
+      "control": "94016b0dc352c99ad493a56f24bb5d5c4520197e",
+      "integration": "94016b0dc352c99ad493a56f24bb5d5c4520197e"
+    },
+    {
+      "path": "src/infrastructure/database/grant-platform-admin.ts",
+      "control": "8749b63dc5570d1eb66299fe14ac72ac9401b471",
+      "integration": "8749b63dc5570d1eb66299fe14ac72ac9401b471"
+    },
+    {
+      "path": "src/infrastructure/database/grant-taxonomy-curator.ts",
+      "control": "5aa5d8d3f2221b0365c2254ac356d1a5b9d1b6da",
+      "integration": "5aa5d8d3f2221b0365c2254ac356d1a5b9d1b6da"
+    },
+    {
+      "path": "src/infrastructure/database/import-confaz-act.ts",
+      "control": "63aee40eab4c02508dcf1b5501899da82bde72b1",
+      "integration": "63aee40eab4c02508dcf1b5501899da82bde72b1"
+    },
+    {
+      "path": "src/infrastructure/database/import-ncm-catalog.ts",
+      "control": "28a84ef8b9fcc38de9a36acdb3e9fb2253ea5787",
+      "integration": "28a84ef8b9fcc38de9a36acdb3e9fb2253ea5787"
+    },
+    {
+      "path": "src/infrastructure/database/inspect-cgibs.ts",
+      "control": "9869674586ab5078b8d88a60b120b10dbf87f077",
+      "integration": "9869674586ab5078b8d88a60b120b10dbf87f077"
+    },
+    {
+      "path": "src/infrastructure/database/inspect-confaz.ts",
+      "control": "76424cc31b9ca0f10e58bf46baef6021143b04c3",
+      "integration": "76424cc31b9ca0f10e58bf46baef6021143b04c3"
+    },
+    {
+      "path": "src/infrastructure/database/inspect-doe-sp.ts",
+      "control": "6e64d8c9efb688e364266cfa95fdb5a850d124cd",
+      "integration": "6e64d8c9efb688e364266cfa95fdb5a850d124cd"
+    },
+    {
+      "path": "src/infrastructure/database/inspect-nfe-encat.ts",
+      "control": "c9d1c7ddb8a7d6e82cec8d7d7014a68bc5a2f66f",
+      "integration": "c9d1c7ddb8a7d6e82cec8d7d7014a68bc5a2f66f"
+    },
+    {
+      "path": "src/infrastructure/database/inspect-rfb-normas.ts",
+      "control": "52f99a69acf538e7bab6eead2f9033235e4adc87",
+      "integration": "52f99a69acf538e7bab6eead2f9033235e4adc87"
+    },
+    {
+      "path": "src/infrastructure/database/inspect-sped.ts",
+      "control": "18ffef972c09db94142314281d645beab0d84300",
+      "integration": "18ffef972c09db94142314281d645beab0d84300"
+    },
+    {
+      "path": "src/infrastructure/database/migrate.ts",
+      "control": "08d4049ea3638093425c7a29de26cb807b0bb17f",
+      "integration": "08d4049ea3638093425c7a29de26cb807b0bb17f"
+    },
+    {
+      "path": "src/infrastructure/database/probe-rfb-news.ts",
+      "control": "f640314a5c566d934f0cd20b56b278fdfc8c916a",
+      "integration": "f640314a5c566d934f0cd20b56b278fdfc8c916a"
+    },
+    {
+      "path": "src/infrastructure/database/provision-initial-owner.ts",
+      "control": "2cc0915beebaeee620893fb1128b9370dbf2959f",
+      "integration": "2cc0915beebaeee620893fb1128b9370dbf2959f"
+    },
+    {
+      "path": "src/infrastructure/database/provision-runtime-role.ts",
+      "control": "b54178a1cb8d976e7279fe8464fbc76d7ef1b2a3",
+      "integration": "b54178a1cb8d976e7279fe8464fbc76d7ef1b2a3"
+    },
+    {
+      "path": "src/infrastructure/database/prune-collection-items.ts",
+      "control": "a1348fa80693dca38b2c3974ecda77d72260b38c",
+      "integration": "a1348fa80693dca38b2c3974ecda77d72260b38c"
+    },
+    {
+      "path": "src/infrastructure/database/prune-collection-metadata.ts",
+      "control": "6c6843ed40f86f99087ff5e3ffd2a7c44af8d00e",
+      "integration": "6c6843ed40f86f99087ff5e3ffd2a7c44af8d00e"
+    },
+    {
+      "path": "src/infrastructure/database/repair-doe-sp-identity-collision.ts",
+      "control": "22eea87a8638637387ae8d79d6f57a373986693c",
+      "integration": "22eea87a8638637387ae8d79d6f57a373986693c"
+    },
+    {
+      "path": "src/infrastructure/database/sanitize-sped-activation.ts",
+      "control": "3e66fb68eb54afc384476a361fd724a68ea6733f",
+      "integration": "3e66fb68eb54afc384476a361fd724a68ea6733f"
+    },
+    {
+      "path": "src/infrastructure/database/source-health-report.ts",
+      "control": "b8cb0eed3ee1ace4acd474778859a0961d91f69b",
+      "integration": "b8cb0eed3ee1ace4acd474778859a0961d91f69b"
+    },
+    {
+      "path": "src/infrastructure/database/sped-sanitization.ts",
+      "control": "f4fe525c6c4fa303505f2e254d1203afdcc07d97",
+      "integration": "f4fe525c6c4fa303505f2e254d1203afdcc07d97"
+    },
+    {
+      "path": "src/infrastructure/database/standalone-client.ts",
+      "control": "09cb8654636e651da0a58b6355981a7420bf97aa",
+      "integration": "09cb8654636e651da0a58b6355981a7420bf97aa"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-baseline-cli-common.ts",
+      "control": "9c56ecfbc8e78618d7cd7c5033584603b6d13af3",
+      "integration": "9c56ecfbc8e78618d7cd7c5033584603b6d13af3"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-baseline-dry-run.ts",
+      "control": "a437af9d45f43c730bddbfd795a9f2e6f88494ed",
+      "integration": "a437af9d45f43c730bddbfd795a9f2e6f88494ed"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-baseline-import.ts",
+      "control": "d757ef38e73805295bb6a800486098ca18c5d7ca",
+      "integration": "d757ef38e73805295bb6a800486098ca18c5d7ca"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-baseline-inspect.ts",
+      "control": "3d76a563f709e4184eb0e93d3c20d613f883250f",
+      "integration": "3d76a563f709e4184eb0e93d3c20d613f883250f"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-baseline-manifest.ts",
+      "control": "999c7d494577484997bdaa009768a13f60d63c6e",
+      "integration": "999c7d494577484997bdaa009768a13f60d63c6e"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-baseline-validate.ts",
+      "control": "95069893d4230542d3df092d2545f067741b0d2c",
+      "integration": "95069893d4230542d3df092d2545f067741b0d2c"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-classify-one.ts",
+      "control": "b6ecd9f56d0a45688fa82e091cf55e1dd883d4d2",
+      "integration": "b6ecd9f56d0a45688fa82e091cf55e1dd883d4d2"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-f2-group-repair.ts",
+      "control": "4a658a9a578e712e6bce4ad3114916faacf4510a",
+      "integration": "4a658a9a578e712e6bce4ad3114916faacf4510a"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-f2-import-draft.ts",
+      "control": "c5fc064d4f24bb8021ba6dc9a5507c24e8f730b9",
+      "integration": "c5fc064d4f24bb8021ba6dc9a5507c24e8f730b9"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-f2-links.ts",
+      "control": "0a53049e6a16b39bf4987528366478d0d787e8a5",
+      "integration": "0a53049e6a16b39bf4987528366478d0d787e8a5"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-f2-open-draft.ts",
+      "control": "868f4fece2d6bf63dbd66cb59f9e79b4a71bdb19",
+      "integration": "868f4fece2d6bf63dbd66cb59f9e79b4a71bdb19"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-f2-tab-retire-draft.ts",
+      "control": "96d78310442dfd4e671715c69cf58e04bf5af966",
+      "integration": "96d78310442dfd4e671715c69cf58e04bf5af966"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-load-products.ts",
+      "control": "650e55a21f8a54e152c57144e0458329b1ecc6bd",
+      "integration": "650e55a21f8a54e152c57144e0458329b1ecc6bd"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-merge-dimension.ts",
+      "control": "ac1882b67ef730a9e561b32db2f392e5e2308548",
+      "integration": "ac1882b67ef730a9e561b32db2f392e5e2308548"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-ncm-rescan-one.ts",
+      "control": "ca7a1bac4e0efa35c8f8ad61a874c57e5b7ffe7c",
+      "integration": "ca7a1bac4e0efa35c8f8ad61a874c57e5b7ffe7c"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-publish-draft.ts",
+      "control": "0a1caa7d933f6e9c60836a782d426abd73f468d3",
+      "integration": "0a1caa7d933f6e9c60836a782d426abd73f468d3"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-retire-dimensions.ts",
+      "control": "74a3f14b1ae11f3ee84e8d27dd643bec2457c84c",
+      "integration": "74a3f14b1ae11f3ee84e8d27dd643bec2457c84c"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-retire-legacy-segments.ts",
+      "control": "bf4a8d41a553b14faca42dc7c58502bb5f555e8e",
+      "integration": "bf4a8d41a553b14faca42dc7c58502bb5f555e8e"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-v1-1-create-draft.ts",
+      "control": "d64df008b0dfc854070074acfe14aaa585f47009",
+      "integration": "d64df008b0dfc854070074acfe14aaa585f47009"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-v1-1-dry-run.ts",
+      "control": "e0261f1b5de0cd27154f5ff1c0237fb50f536170",
+      "integration": "e0261f1b5de0cd27154f5ff1c0237fb50f536170"
+    },
+    {
+      "path": "src/infrastructure/database/taxonomy-v1-1-publish.ts",
+      "control": "e9a09f6b265cd7f8a07fb58690905215175d7cbb",
+      "integration": "e9a09f6b265cd7f8a07fb58690905215175d7cbb"
+    },
+    {
+      "path": "src/infrastructure/database/tenant-context.ts",
+      "control": "b01cab8d6c9a4de0c02f66aca772fd72b04e4a4e",
+      "integration": "b01cab8d6c9a4de0c02f66aca772fd72b04e4a4e"
+    },
+    {
+      "path": "src/infrastructure/database/trigger-cgibs-run.ts",
+      "control": "0bfea81c58d3d12335f51d7f24355da209de7a19",
+      "integration": "0bfea81c58d3d12335f51d7f24355da209de7a19"
+    },
+    {
+      "path": "src/infrastructure/database/trigger-doe-sp-run.ts",
+      "control": "0a9ccdd28b4b4569c58b65517e67515b53d1ef93",
+      "integration": "0a9ccdd28b4b4569c58b65517e67515b53d1ef93"
+    },
+    {
+      "path": "src/infrastructure/database/trigger-nfe-encat-run.ts",
+      "control": "0110c8337443f2d722b49cfba8fc11489081744f",
+      "integration": "0110c8337443f2d722b49cfba8fc11489081744f"
+    },
+    {
+      "path": "src/infrastructure/database/trigger-rfb-normas-run.ts",
+      "control": "f9ea15a14f50f38bfccccffd9f4a07a3f5acc748",
+      "integration": "f9ea15a14f50f38bfccccffd9f4a07a3f5acc748"
+    },
+    {
+      "path": "src/infrastructure/database/trigger-sped-run.ts",
+      "control": "7e44c0085baf0d0facecb84ea9eaeb19b4a55b7f",
+      "integration": "7e44c0085baf0d0facecb84ea9eaeb19b4a55b7f"
+    },
+    {
+      "path": "src/infrastructure/database/verify-news-worker-runtime-role.ts",
+      "control": "95fe140d68e8ce883dc904bccae7e1ace6bbbae4",
+      "integration": "95fe140d68e8ce883dc904bccae7e1ace6bbbae4"
+    },
+    {
+      "path": "src/infrastructure/database/verify-runtime-role.ts",
+      "control": "ff89d1ba18c28342234d0f8e75739d50050da4bd",
+      "integration": "ff89d1ba18c28342234d0f8e75739d50050da4bd"
+    },
+    {
+      "path": "src/infrastructure/database/verify-taxonomy-curator-role.ts",
+      "control": "df141eacf6fe1d87494ce447e375f5501d88e01a",
+      "integration": "df141eacf6fe1d87494ce447e375f5501d88e01a"
+    },
+    {
+      "path": "src/infrastructure/database/verify-worker-runtime-role.ts",
+      "control": "6fe04a1b84c7a561933b9ca122eebc62e2046de2",
+      "integration": "6fe04a1b84c7a561933b9ca122eebc62e2046de2"
+    },
+    {
+      "path": "src/modules/audit/audit-backfill.ts",
+      "control": "4ba8d9e7f5dc1ce9d1627463571da287a6484ec9",
+      "integration": "4ba8d9e7f5dc1ce9d1627463571da287a6484ec9"
+    },
+    {
+      "path": "test/onb02-company-purge-graph.integration.test.ts",
+      "control": "2e7cd7d8cd367f680d0ee870f9b508de01f6e7dc",
+      "integration": "2e7cd7d8cd367f680d0ee870f9b508de01f6e7dc"
+    },
+    {
+      "path": "test/onb02-r6-purge.integration.test.ts",
+      "control": "6ff31365f158903d2bff377d3583fd0c1b06b9c8",
+      "integration": "6ff31365f158903d2bff377d3583fd0c1b06b9c8"
+    },
+    {
+      "path": "test/onb02-r7-audit.integration.test.ts",
+      "control": "5eaed07ac20a8e25e86e24062749d3da8288cdca",
+      "integration": "5eaed07ac20a8e25e86e24062749d3da8288cdca"
+    },
+    {
+      "path": "test/onb02-r71-backfill.integration.test.ts",
+      "control": "aecd8fee5832d192145938c75452dd1baee2fe82",
+      "integration": "aecd8fee5832d192145938c75452dd1baee2fe82"
+    },
+    {
+      "path": "test/onb02-r72-backfill.integration.test.ts",
+      "control": "fe3c364a976eb9a1d54f1d4acd05c9b6bf4bc8d9",
+      "integration": "fe3c364a976eb9a1d54f1d4acd05c9b6bf4bc8d9"
+    },
+    {
+      "path": "test/onb02-r73-actors.unit.test.mjs",
+      "control": "c02e2a04e5757986668149e5b313f5de456dea14",
+      "integration": "c02e2a04e5757986668149e5b313f5de456dea14"
+    },
+    {
+      "path": "test/onb02-r73-tax10-cli.integration.test.ts",
+      "control": "532e7cc17de659b1f60791e49e19e8c14a74173b",
+      "integration": "532e7cc17de659b1f60791e49e19e8c14a74173b"
+    },
+    {
+      "path": "test/onb02-r74-historical-events.integration.test.ts",
+      "control": "f15c74e08dd3df2c1b43988a73389d83fabcd276",
+      "integration": "f15c74e08dd3df2c1b43988a73389d83fabcd276"
+    },
+    {
+      "path": "test/onboarding-assistant.integration.test.ts",
+      "control": "1444bec308e1b461032ce6b9fdf165c0fe12be96",
+      "integration": "1444bec308e1b461032ce6b9fdf165c0fe12be96"
+    },
+    {
+      "path": "test/onboarding-assistant.unit.test.ts",
+      "control": "35fbe0f8ceb8563541e6c34a41cd9f23d29e043f",
+      "integration": "35fbe0f8ceb8563541e6c34a41cd9f23d29e043f"
+    },
+    {
+      "path": "test/onboarding-cnae-fixture.ts",
+      "control": "9110410daf6e7f845a5ef78adee88f6f0a5c0856",
+      "integration": "9110410daf6e7f845a5ef78adee88f6f0a5c0856"
+    },
+    {
+      "path": "test/onboarding-dimension-groups.unit.test.ts",
+      "control": "d5abecacfbfdfe915f61c0a99f467d55959a9cb5",
+      "integration": "d5abecacfbfdfe915f61c0a99f467d55959a9cb5"
+    },
+    {
+      "path": "test/onboarding-identity.unit.test.ts",
+      "control": "95f7281b8905c04b3d4a6e3eb05e6fb31a65926a",
+      "integration": "95f7281b8905c04b3d4a6e3eb05e6fb31a65926a"
+    },
+    {
+      "path": "test/onboarding-integrity.integration.test.ts",
+      "control": "7b4db5ee17f9905c0cfaa9236ecb7bd1b2b764e8",
+      "integration": "7b4db5ee17f9905c0cfaa9236ecb7bd1b2b764e8"
+    },
+    {
+      "path": "test/onboarding-profile.unit.test.ts",
+      "control": "102a9b398edbbe2d8429dd5a0f8b23101da1fddb",
+      "integration": "102a9b398edbbe2d8429dd5a0f8b23101da1fddb"
+    },
+    {
+      "path": "test/onboarding-unit-flow.integration.test.ts",
+      "control": "0457258a1d353986525394381dfb1bfdb053da10",
+      "integration": "0457258a1d353986525394381dfb1bfdb053da10"
+    },
+    {
+      "path": "test/public-signup.integration.test.ts",
+      "control": "f7bcd1399b0db007e59e1a26d712ee7049f65db0",
+      "integration": "f7bcd1399b0db007e59e1a26d712ee7049f65db0"
+    },
+    {
+      "path": "test/public-signup.unit.test.ts",
+      "control": "1fe4e74c203d3a97299ac934b29db6f5d0d4e970",
+      "integration": "1fe4e74c203d3a97299ac934b29db6f5d0d4e970"
+    }
+  ],
+  "stage_excerpts": [
+    {
+      "job": 126855374871,
+      "lines": [
+        "2026-11-04T20:51:10.3391444Z ONB02_R71_STAGE legacy_fixture_committed",
+        "2026-11-04T20:51:11.4153069Z ONB02_R71_STAGE failed_batch_rolled_back",
+        "2026-11-04T20:51:13.6284192Z ONB02_R71_STAGE first_three_batches_committed",
+        "2026-11-04T20:51:13.6301343Z ONB02_R71_STAGE original_pool_closed",
+        "2026-11-04T20:51:30.6527112Z ONB02_R71_STAGE resumed_batches_committed",
+        "2026-11-04T20:51:34.1940755Z ONB02_R7_BACKFILL {\"rows\":150000,\"batchSize\":5000,\"total_ms\":19236.262273,\"first_ms\":2209.1890840000005,\"resume_ms\":17026.661118999997,\"restart\":true,\"idempotent\":true,\"atomicFailure\":true,\"headersPreserved\":true,\"otherEntityPreserved\":true}"
+      ]
+    },
+    {
+      "job": 126844916347,
+      "lines": [
+        "2026-11-04T20:32:15.1187766Z ONB02_R71_STAGE legacy_fixture_committed",
+        "2026-11-04T20:32:16.3978377Z ONB02_R71_STAGE failed_batch_rolled_back"
+      ]
+    },
+    {
+      "job": 126846697806,
+      "lines": [
+        "2026-11-04T20:35:30.6757903Z ONB02_R71_STAGE legacy_fixture_committed",
+        "2026-11-04T20:35:32.0303457Z ONB02_R71_STAGE failed_batch_rolled_back"
+      ]
+    }
+  ],
+  "missing": [
+    "actual_session_pg_settings",
+    "actual_query_plans",
+    "per_batch_ordinal",
+    "pg_stats_at_failure",
+    "wait_events_at_failure",
+    "blockers_at_failure",
+    "cpu_and_io_telemetry"
+  ]
+}
