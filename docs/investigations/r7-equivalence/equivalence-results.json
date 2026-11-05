@@ -1,0 +1,1566 @@
+{
+  "node": "v24.21.0",
+  "offline": true,
+  "pg18Equivalence": "NOT_PROVEN",
+  "harnessEquivalence": "NOT_PROVEN",
+  "hashes": {
+    "observer": "c5b782c329bc55b408c80b52f272030936a1967285a76f27c148cf9d4b73c779",
+    "lock": "028496fa43daec1b9f9b3110670e76774bd787773f360f18842c98abf478d7a8",
+    "nativePool": "6f304776edaabde2954cbf8c4366fa6d9512bfba0e408e78cc56b3c46c69d058",
+    "nativePgEntry": "3fad6e6d3d976edbabe0cbc9e1d39f4340bcb719bbbb186a0d3a24f3dbd4a94c",
+    "nativeClient": "992c12d10cd42ece06b0b224601fa783a02ed08f3ace8bd8089cc441b6308abf",
+    "test": "102d95683ceeffd19ecb3d7a370b80433efd0682bb23bb2c3fd19a4fe267fdf8"
+  },
+  "cases": [
+    {
+      "scenario": "success",
+      "projectedTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "return",
+            "success"
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "return",
+            "success"
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "AFTER",
+            0
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      }
+    },
+    {
+      "scenario": "sql_error",
+      "projectedTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "P0001"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "P0001",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "release",
+            1,
+            "P0001"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "P0001",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            0
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      }
+    },
+    {
+      "scenario": "statement_timeout",
+      "projectedTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            0
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      }
+    },
+    {
+      "scenario": "sync_throw",
+      "projectedTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 2,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            0
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      }
+    },
+    {
+      "scenario": "connect_error",
+      "projectedTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            0
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      }
+    },
+    {
+      "scenario": "fatal_async",
+      "projectedTraceEqual": false,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "fatal_event_handled",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "fatal_event_unhandled",
+            1,
+            true
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            2,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            0
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      }
+    },
+    {
+      "scenario": "commit",
+      "projectedTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "COMMIT",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": true
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "COMMIT",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": true
+      }
+    },
+    {
+      "scenario": "rollback",
+      "projectedTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "ROLLBACK",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "ROLLBACK",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      }
+    },
+    {
+      "scenario": "rollback_error",
+      "projectedTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "query",
+            1,
+            "ROLLBACK",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "query",
+            1,
+            "ROLLBACK",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      }
+    },
+    {
+      "scenario": "snapshot_after_commit_error",
+      "projectedTraceEqual": false,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "COMMIT",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": true
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "COMMIT",
+            0
+          ],
+          [
+            "observe",
+            1,
+            "snapshot/settings",
+            0
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": true
+      }
+    }
+  ]
+}
