@@ -1,0 +1,20 @@
+✔ diagnostic 6000 counts, atomic rollback, restart, idempotency and preserved history model (53.196978ms)
+✔ diagnostic 18000 counts, atomic rollback, restart, idempotency and preserved history model (96.019115ms)
+✔ diagnostic 45000 counts, atomic rollback, restart, idempotency and preserved history model (217.327821ms)
+✔ all unexpected volumes and input hashes rejected (0.751402ms)
+✔ push, ready/synchronize, rerun, head mismatch, missing grant blocked (0.791532ms)
+✔ coordinator full-head PASS exact line and origin checked (0.311039ms)
+✔ grant one run across all HEADs; API fails closed (2.086643ms)
+✔ global first anomaly stops matrix, no second-tree or next-volume approval inferred (0.677951ms)
+✔ metrics wrong row count or absent invariants fail separately from product (0.811442ms)
+✔ runner unauthorized subprocess stops before filesystem or PG; no original write (80.133626ms)
+✔ TAP-prefixed flush INVALID cannot be hidden by log formatting (0.560494ms)
+✔ workflow is manual-only, three serial14min jobs, no automatic events (0.360343ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 576.958473

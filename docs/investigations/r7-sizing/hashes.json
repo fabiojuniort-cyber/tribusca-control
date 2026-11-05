@@ -1,0 +1,75 @@
+{
+  "files": {
+    "diagnostic.mjs": "94e122bcea63f32186b348ae2338ba7de903c1ce20f0de9a84cfcb361951d282",
+    "manual-gate.mjs": "aaa57b8a2b986c8a5b3a1f2c2b3a5d1af471a6edd1b2335ca44b2ba29d44e54a",
+    "run-stage.mjs": "29a844c29eb0fe014c187bb01ae251f046d2446e8cd7ab4b68cff0022257fb5e",
+    "stage-policy.mjs": "89cf1617b2b43cd4aa65c4090bd0d0e13fe8e405bada55757962deae1529f4a3",
+    "sizing.test.mjs": "9bf5546acd0d4e7d00ce881ab567f5e43ff240008480dc5d955c94565e992ee1",
+    "f2-r7-sizing-manual.yml": "5c39132eff42ae5377592d77cae6912bcc70394b6598fe0f91f2cda83e9c87fe",
+    "passive-pool.mjs": "f71c77cadb7c3bb725b73993c65f79ca001afdda0902745ce63e4f147da00fd2",
+    "prepare-passive.mjs": "5d7362b978c3125f59574dfdd0c0efca19522fd7ed52fca3ec045b91fcac1cd2",
+    "external-observer.mjs": "16945d4afe7e62a81cc59ec16a65fdea4813f26b897ff15ac825a90a359c67aa",
+    "candidate-support.mjs": "acdc167d9f4bd696320a5524cda2a5478bfa18f41442a0e64defe3d3b33aac55",
+    "execution-state.mjs": "6963443ea26a9e8f2f99f7f7e96ec1914503bde62423e703984e72a08955e018",
+    "r7-test.snapshot.ts": "9cc1208240ba761efe055d9cff3c27c58e25be2824214ee6ace0ab6501055346"
+  },
+  "generated": [
+    {
+      "volume": 6000,
+      "original": "9cc1208240ba761efe055d9cff3c27c58e25be2824214ee6ace0ab6501055346",
+      "diagnostic": "4b26c4b8b6e249521692623ea99cff73c6f0ddabb6e39b6652ffce6c14178a28",
+      "instrumented": "9f2fd0ee7eafd2d0f9ca93e23dc647e5ecdcaefc6c3f5dd4cb960d2bc593cf45",
+      "expectations": {
+        "n": 6000,
+        "company": 4000,
+        "curation": 2000,
+        "created": 1333,
+        "updated": 2667,
+        "first": 6000,
+        "remaining": 0,
+        "firstCompleted": true,
+        "batches": 2,
+        "failedBatchProcessed": 0,
+        "idempotentProcessed": 0
+      }
+    },
+    {
+      "volume": 18000,
+      "original": "9cc1208240ba761efe055d9cff3c27c58e25be2824214ee6ace0ab6501055346",
+      "diagnostic": "cd62a78052dafb82c5b5c64f7719695f8aa65372b91701a24bf56bc42bdb912d",
+      "instrumented": "384ce1b4ce575bd197ae5e60a8f6137726702ff8cb8a94e7188f977545d3b4fc",
+      "expectations": {
+        "n": 18000,
+        "company": 12000,
+        "curation": 6000,
+        "created": 4000,
+        "updated": 8000,
+        "first": 15000,
+        "remaining": 3000,
+        "firstCompleted": false,
+        "batches": 4,
+        "failedBatchProcessed": 0,
+        "idempotentProcessed": 0
+      }
+    },
+    {
+      "volume": 45000,
+      "original": "9cc1208240ba761efe055d9cff3c27c58e25be2824214ee6ace0ab6501055346",
+      "diagnostic": "a2e12db29853fadf9afe218e9725f0a88b5357b30f5bc908bc886a99350b95a3",
+      "instrumented": "116e7f52231ce03bf78673fa6e6bfc72730db61158967ff88d116410e0e260f3",
+      "expectations": {
+        "n": 45000,
+        "company": 30000,
+        "curation": 15000,
+        "created": 10000,
+        "updated": 20000,
+        "first": 15000,
+        "remaining": 30000,
+        "firstCompleted": false,
+        "batches": 9,
+        "failedBatchProcessed": 0,
+        "idempotentProcessed": 0
+      }
+    }
+  ]
+}
