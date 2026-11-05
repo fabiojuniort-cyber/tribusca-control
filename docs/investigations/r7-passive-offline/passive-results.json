@@ -1,0 +1,1380 @@
+{
+  "node": "v24.21.0",
+  "offline": true,
+  "pg18Equivalence": "NOT_PROVEN",
+  "harnessEquivalence": "NOT_PROVEN",
+  "hashes": {
+    "observer": "f71c77cadb7c3bb725b73993c65f79ca001afdda0902745ce63e4f147da00fd2",
+    "lock": "028496fa43daec1b9f9b3110670e76774bd787773f360f18842c98abf478d7a8",
+    "nativePool": "6f304776edaabde2954cbf8c4366fa6d9512bfba0e408e78cc56b3c46c69d058",
+    "nativePgEntry": "3fad6e6d3d976edbabe0cbc9e1d39f4340bcb719bbbb186a0d3a24f3dbd4a94c",
+    "nativeClient": "992c12d10cd42ece06b0b224601fa783a02ed08f3ace8bd8089cc441b6308abf",
+    "test": "6f1cbae58a1226e7eb6c41a175db0a8c210db01291caa9faca3146c7eaa6e493"
+  },
+  "cases": [
+    {
+      "scenario": "success",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "return",
+            "success"
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "return",
+            "success"
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 6,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.032100000000014006
+      }
+    },
+    {
+      "scenario": "sql_error",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "P0001"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "P0001",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "P0001"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "P0001",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 8,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.06319999999999482
+      }
+    },
+    {
+      "scenario": "statement_timeout",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 8,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.054400000000015325
+      }
+    },
+    {
+      "scenario": "sync_throw",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 2,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 2,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 8,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.012399999999985312
+      }
+    },
+    {
+      "scenario": "connect_error",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 4,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.007199999999954798
+      }
+    },
+    {
+      "scenario": "fatal_async",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "fatal_event_handled",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            1
+          ],
+          [
+            "release",
+            1,
+            "57014"
+          ],
+          [
+            "discard",
+            1
+          ],
+          [
+            "fatal_event_handled",
+            1
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "connect",
+            2
+          ],
+          [
+            "acquire",
+            2
+          ],
+          [
+            "query",
+            2,
+            "AFTER",
+            1
+          ],
+          [
+            "release",
+            2,
+            null
+          ],
+          [
+            "return",
+            "after"
+          ],
+          [
+            "discard",
+            2
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": false
+          },
+          {
+            "id": 2,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 2,
+        "committed": false
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 8,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.00970000000003779
+      }
+    },
+    {
+      "scenario": "commit",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "COMMIT",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": true
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "COMMIT",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": true
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 4,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.0033999999999707597
+      }
+    },
+    {
+      "scenario": "rollback",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "ROLLBACK",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "ROLLBACK",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 4,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.004000000000019099
+      }
+    },
+    {
+      "scenario": "rollback_error",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "query",
+            1,
+            "ROLLBACK",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "error",
+            "57014",
+            "same_object"
+          ],
+          [
+            "query",
+            1,
+            "ROLLBACK",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": false
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 4,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.0029000000000394266
+      }
+    },
+    {
+      "scenario": "snapshot_after_commit_error",
+      "projectedTraceEqual": true,
+      "fullTraceEqual": true,
+      "native": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "COMMIT",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": true
+      },
+      "instrumented": {
+        "trace": [
+          [
+            "connect",
+            1
+          ],
+          [
+            "acquire",
+            1
+          ],
+          [
+            "query",
+            1,
+            "BEGIN",
+            0
+          ],
+          [
+            "query",
+            1,
+            "WORK",
+            0
+          ],
+          [
+            "query",
+            1,
+            "COMMIT",
+            0
+          ],
+          [
+            "return",
+            "transaction"
+          ],
+          [
+            "release",
+            1,
+            null
+          ],
+          [
+            "discard",
+            1
+          ]
+        ],
+        "listeners": [
+          {
+            "id": 1,
+            "errorListeners": 1,
+            "idle": true
+          }
+        ],
+        "releaseCount": 1,
+        "committed": true
+      },
+      "observation": {
+        "outcome": "COMPLETE",
+        "reason": null,
+        "events": 4,
+        "capacity": 2048,
+        "handlerOverheadMs": 0.0023999999999944066
+      }
+    }
+  ]
+}
