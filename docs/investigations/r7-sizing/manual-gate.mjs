@@ -13,12 +13,21 @@ export async function authorize(env=process.env,request=fetch){
  checkContext(env);
  const base='https://api.github.com/repos/fabiojuniort-cyber/tribusca-control';
  const headers={Authorization:'Bearer '+env.GH_TOKEN,Accept:'application/vnd.github+json'};
- async function get(url){const r=await request(url,{headers});if(!r.ok)throw Error('authorization_read_failed');return r.json();}
+ if(!env.GH_TOKEN?.trim())throw Error('authorization_token_missing');
+ async function get(stage,url){
+  let response;
+  try{response=await request(url,{headers,redirect:'error'});}
+  catch{throw Error(`authorization_transport_failed stage=${stage} http_status=unavailable`);}
+  const status=Number.isInteger(response.status)?response.status:'unavailable';
+  if(!response.ok)throw Error(`authorization_read_failed stage=${stage} http_status=${status}`);
+  try{return await response.json();}
+  catch{throw Error(`authorization_json_failed stage=${stage} http_status=${status}`);}
+ }
  if(!/^\d+$/.test(env.F2_REVIEW_COMMENT_ID||''))throw Error('review_reference_missing');
- verifyReview(await get(base+'/issues/comments/'+env.F2_REVIEW_COMMENT_ID),env.GITHUB_SHA);
+ verifyReview(await get('review_comment',base+'/issues/comments/'+env.F2_REVIEW_COMMENT_ID),env.GITHUB_SHA);
  // Fail closed on missing pagination: every older run of this workflow must be inspected.
  for(let page=1;page<=20;page++){
-  const j=await get(base+'/actions/workflows/f2-r7-sizing-manual.yml/runs?per_page=100&page='+page);
+  const j=await get('run_inventory',base+'/actions/workflows/f2-r7-sizing-manual.yml/runs?per_page=100&page='+page);
   if(!Array.isArray(j.workflow_runs))throw Error('run_inventory_invalid');
   verifyFirstRun(j.workflow_runs,env.GITHUB_RUN_ID,env.GITHUB_SHA);
   if(j.workflow_runs.length<100)return;
