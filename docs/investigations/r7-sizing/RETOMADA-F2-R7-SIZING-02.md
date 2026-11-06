@@ -1,4 +1,4 @@
-# F2-R7-SIZING-02 — desenho de retomada (somente revisão; nada publicado)
+# F2-R7-SIZING-02 — desenho e implementação da retomada
 
 Preserva: run 42132149543 (SHA 7f2e69d…), grant F2-R7-SIZING-01 e workflow
 `f2-r7-sizing-manual.yml` ficam intactos e consumidos. Saldo: 1 disparo, 0/6 PG18.
@@ -9,8 +9,11 @@ Preserva: run 42132149543 (SHA 7f2e69d…), grant F2-R7-SIZING-01 e workflow
   1 tentativa por árvore (máx. 6 PG18), zero retries, parada na primeira anomalia (run-stage.mjs inalterado).
 - PASS novo no #127, linha exata:
   `COORD_PASS_R7_SIZING_02 <sha40> prev_run=42132149543`
-- Permissões: as mesmas do 01. `pull-requests: read` entra SOMENTE se a sonda provar
-  a hipótese (ver diagnóstico), em PR próprio revisado.
+- Permissões: as do 01 + `pull-requests: read`. Evidência: sonda v2, run 42139345705 —
+  mesmo token/endpoint/código: sem a permissão → 403 (`x-accepted-github-permissions:
+  issues=read; pull_requests=read`, ratelimit 4998); com a permissão → 200.
+- Implementação: `.github/workflows/f2-r7-sizing-02.yml` + `manual-gate-02.mjs`
+  (25 testes offline em `manual-gate-02.test.mjs`). Workflow 01 e `manual-gate.mjs` intactos.
 
 ## Rejeições (cada uma vira teste offline no manual-gate)
 | Ameaça | Regra | Erro |
@@ -26,5 +29,5 @@ Testes a adicionar: os 10 atuais + `prev_run` ausente/errado, comentário editad
 PASS do 01 reaproveitado (prefixo antigo deve falhar), inventário 01 com 0 ou 2 runs.
 
 ## Pré-requisitos para disparar (todos)
-1. Resultado da sonda registrado. 2. Autorização expressa do Fábio. 3. PASS do COORD no SHA exato.
+1. Resultado da sonda registrado (feito: 403 → 200). 2. Autorização expressa do Fábio. 3. PASS do COORD no SHA exato.
 4. Publicação do workflow 02 por PR revisado. 5. Disparo único manual. #285 segue congelado.
