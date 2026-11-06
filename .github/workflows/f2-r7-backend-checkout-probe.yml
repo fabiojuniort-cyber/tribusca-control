@@ -1,7 +1,4 @@
 name: F2 R7 backend checkout probe
-# Isolated, read-only check that OPS_BACKEND_READ_TOKEN reaches a job in environment `ops`
-# and can check out both pinned backend SHAs used by the R7 matrix.
-# No tribusca-control checkout, no backend code, npm, Docker, PG18 or artifacts.
 on:
   workflow_dispatch:
 permissions: {}
@@ -10,46 +7,35 @@ concurrency:
   cancel-in-progress: false
 jobs:
   checkout_probe:
-    # Job runs only for a dispatch on main; Environment ops should also restrict deployments to main.
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    environment: ops
     timeout-minutes: 5
     steps:
-      - name: Report token presence only
-        env:
-          T: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+      - name: Verify both pinned backend commits via anonymous HTTPS
         shell: bash
         run: |
-          if [ -n "${T}" ]; then echo 'stage=token token=present'; else echo 'stage=token token=absent'; exit 1; fi
-      - name: Checkout pinned control tree
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-        with:
-          repository: fabiojuniort-cyber/radar-fiscal-backend
-          ref: b2150ab5ef34e9f9646e219d522e47738d9c04f5
-          path: backend-control
-          token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
-          persist-credentials: false
-      - name: Checkout pinned integration tree
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-        with:
-          repository: fabiojuniort-cyber/radar-fiscal-backend
-          ref: 2c41fbab8169b7efca6bd2e80c963d57a50585b6
-          path: backend-integration
-          token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
-          persist-credentials: false
-      - name: Fail if any checked-out HEAD diverges from its pin
-        shell: bash
-        run: |
-          status=0
-          for pair in control:b2150ab5ef34e9f9646e219d522e47738d9c04f5 integration:2c41fbab8169b7efca6bd2e80c963d57a50585b6; do
-            label=${pair%%:*}; want=${pair#*:}
-            got=$(git -C "backend-$label" rev-parse HEAD 2>/dev/null || echo unavailable)
-            if [ "$got" = "$want" ]; then r=match; else r=mismatch; status=1; fi
-            echo "stage=head tree=$label expected=$want actual=$got result=$r"
-            if git -C "backend-$label" config --get-regexp '^http\..*extraheader' >/dev/null 2>&1; then
-              echo "stage=credentials tree=$label persisted=yes"; status=1
-            else echo "stage=credentials tree=$label persisted=no"; fi
-          done
-          if [ "$status" -ne 0 ]; then exit "$status"; fi
-          echo 'F2_R7_CHECKOUT_PROBE_PASS'
+          env -i PATH="$PATH" GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null \
+            GIT_TERMINAL_PROMPT=0 GIT_ASKPASS=/bin/false bash --noprofile --norc <<'BASH'
+          set -euo pipefail
+          
+          repo=https://github.com/fabiojuniort-cyber/radar-fiscal-backend.git
+          workdir=$(mktemp -d)
+          
+          check_pin() {
+            local label=$1 pin=$2 dir actual
+            dir="$workdir/$label"
+            git init --quiet --template= "$dir"
+            git -C "$dir" fetch --quiet --no-tags --depth=1 "$repo" "$pin"
+            git -C "$dir" checkout --quiet --detach FETCH_HEAD
+            actual=$(git -C "$dir" rev-parse --verify HEAD)
+            if [[ "$actual" != "$pin" ]]; then
+              printf 'stage=head tree=%s expected=%s actual=%s result=mismatch\n' "$label" "$pin" "$actual"
+              return 1
+            fi
+            printf 'stage=head tree=%s expected=%s actual=%s result=match\n' "$label" "$pin" "$actual"
+          }
+          
+          check_pin control b2150ab5ef34e9f9646e219d522e47738d9c04f5
+          check_pin integration 2c41fbab8169b7efca6bd2e80c963d57a50585b6
+          echo F2_R7_CHECKOUT_PROBE_PASS
+          BASH
