@@ -10,6 +10,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   checkout_probe:
+    # Job runs only for a dispatch on main; Environment ops should also restrict deployments to main.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: ops
     timeout-minutes: 5
@@ -49,4 +51,5 @@ jobs:
               echo "stage=credentials tree=$label persisted=yes"; status=1
             else echo "stage=credentials tree=$label persisted=no"; fi
           done
-          exit $status
+          if [ "$status" -ne 0 ]; then exit "$status"; fi
+          echo 'F2_R7_CHECKOUT_PROBE_PASS'
