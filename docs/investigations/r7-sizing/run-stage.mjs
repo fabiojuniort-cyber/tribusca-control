@@ -1,10 +1,10 @@
-import {authorize} from './manual-gate.mjs';
+import {authorizeGrant} from './grant-gate.mjs';
 import {buildDiagnostic,expectations,sha256} from './diagnostic.mjs';
 import {finalizeEvidence,PINNED} from './candidate-support.mjs';
 import {productResult} from './execution-state.mjs';
 import {fileURLToPath} from 'node:url';
 import {parseMetrics,stagePass,normalizeProductLog} from './stage-policy.mjs';
-await authorize(); // Requires explicit final-HEAD PASS; not called during preparation.
+await authorizeGrant(); // Each grant validated by its own gate; requires explicit final-HEAD PASS.
 const volume=Number(process.env.F2_VOLUME);expectations(volume);
 import fs from 'node:fs';
 import path from 'node:path';
