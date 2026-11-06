@@ -3,7 +3,8 @@
 import * as gate01 from './manual-gate.mjs';
 import * as gate02 from './manual-gate-02.mjs';
 import * as gate03 from './manual-gate-03.mjs';
-const GATES=new Map([[gate01.GRANT,gate01],[gate02.GRANT,gate02],[gate03.GRANT,gate03]]);
+import * as gate04 from './manual-gate-04.mjs';
+const GATES=new Map([[gate01.GRANT,gate01],[gate02.GRANT,gate02],[gate03.GRANT,gate03],[gate04.GRANT,gate04]]);
 export async function authorizeGrant(env=process.env,request=fetch){
  const gate=GATES.get(env.F2_GRANT);
  if(!gate)throw Error('grant_unknown');

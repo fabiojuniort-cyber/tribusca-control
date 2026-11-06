@@ -1,0 +1,56 @@
+name: F2 R7 sizing 04 manual single-use 18k
+# No push, pull_request, ready, synchronize, workflow_call or repository_dispatch.
+on:
+  workflow_dispatch:
+    inputs:
+      reviewed_head:
+        description: Full immutable SHA explicitly passed by COORD
+        required: true
+        type: string
+      review_comment_id:
+        description: Comment in control127 with COORD_PASS_R7_SIZING_04 <full SHA> prev_run=42163875401
+        required: true
+        type: string
+permissions:
+  contents: read
+  issues: read
+  actions: read
+  # Proven by probe run 42139345705: issue comments on PR #127 need pull_requests=read (403 without, 200 with).
+  pull-requests: read
+concurrency:
+  group: f2-r7-sizing-04
+  cancel-in-progress: false
+jobs:
+  stage_18000:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      F2_VOLUME: '18000'
+      F2_GRANT: F2-R7-SIZING-04
+      F2_REVIEWED_HEAD: ${{ inputs.reviewed_head }}
+      F2_REVIEW_COMMENT_ID: ${{ inputs.review_comment_id }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout exact reviewed control HEAD
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.2'
+      - name: Verify coordinator PASS and single-use grant before backend preparation
+        run: node --input-type=module -e "import {authorize} from './docs/investigations/r7-sizing/manual-gate-04.mjs'; await authorize();"
+      - name: Verify pinned backend trees via anonymous HTTPS
+        run: bash docs/investigations/r7-sizing/checkout-anonymous-03.sh
+      - name: One attempt per tree; first anomaly stops stage
+        run: node docs/investigations/r7-sizing/run-stage.mjs
+      - name: Preserve evidence including failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: f2-r7-sizing-04-18000
+          path: f2-r7-sizing-18000/
+          if-no-files-found: ignore
+          retention-days: 7
