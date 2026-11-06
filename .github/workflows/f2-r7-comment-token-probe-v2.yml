@@ -1,0 +1,100 @@
+name: F2 R7 comment token probe v2
+# Single manual dispatch. Two independent jobs (no `needs`), so both run even if the first gets 403.
+# Same comment, endpoint, runtime and query code; only job-level permissions differ.
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  baseline_original_permissions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+      issues: read
+      actions: read
+    steps:
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.2'
+      - name: Read fixed review comment and report HTTP status and headers
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PROBE_JOB: baseline_original_permissions
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          const job = process.env.PROBE_JOB;
+          const token = process.env.GITHUB_TOKEN;
+          const out = (fields) => console.log(['job=' + job, 'stage=review_comment', ...fields].join(' '));
+          if (!token?.trim()) {
+            out(['http_status=unavailable']);
+            process.exitCode = 1;
+          } else {
+            let response;
+            try {
+              response = await fetch(
+                'https://api.github.com/repos/fabiojuniort-cyber/tribusca-control/issues/comments/6671552883',
+                { headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json' } },
+              );
+            } catch {
+              out(['http_status=unavailable']);
+              process.exitCode = 1;
+            }
+            if (response) {
+              const fields = ['http_status=' + response.status];
+              for (const name of ['x-accepted-github-permissions', 'x-ratelimit-remaining', 'retry-after']) {
+                const value = response.headers.get(name);
+                if (value !== null) fields.push(name + '=' + JSON.stringify(value));
+              }
+              out(fields);
+              if (!response.ok) process.exitCode = 1;
+            }
+          }
+          NODE
+  with_pull_requests_read:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+      issues: read
+      actions: read
+      pull-requests: read
+    steps:
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.2'
+      - name: Read fixed review comment and report HTTP status and headers
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PROBE_JOB: with_pull_requests_read
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          const job = process.env.PROBE_JOB;
+          const token = process.env.GITHUB_TOKEN;
+          const out = (fields) => console.log(['job=' + job, 'stage=review_comment', ...fields].join(' '));
+          if (!token?.trim()) {
+            out(['http_status=unavailable']);
+            process.exitCode = 1;
+          } else {
+            let response;
+            try {
+              response = await fetch(
+                'https://api.github.com/repos/fabiojuniort-cyber/tribusca-control/issues/comments/6671552883',
+                { headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json' } },
+              );
+            } catch {
+              out(['http_status=unavailable']);
+              process.exitCode = 1;
+            }
+            if (response) {
+              const fields = ['http_status=' + response.status];
+              for (const name of ['x-accepted-github-permissions', 'x-ratelimit-remaining', 'retry-after']) {
+                const value = response.headers.get(name);
+                if (value !== null) fields.push(name + '=' + JSON.stringify(value));
+              }
+              out(fields);
+              if (!response.ok) process.exitCode = 1;
+            }
+          }
+          NODE
