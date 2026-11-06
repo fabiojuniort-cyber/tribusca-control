@@ -2,7 +2,8 @@
 // Every grant is validated by its own module; an unknown or missing grant never skips authorization.
 import * as gate01 from './manual-gate.mjs';
 import * as gate02 from './manual-gate-02.mjs';
-const GATES=new Map([[gate01.GRANT,gate01],[gate02.GRANT,gate02]]);
+import * as gate03 from './manual-gate-03.mjs';
+const GATES=new Map([[gate01.GRANT,gate01],[gate02.GRANT,gate02],[gate03.GRANT,gate03]]);
 export async function authorizeGrant(env=process.env,request=fetch){
  const gate=GATES.get(env.F2_GRANT);
  if(!gate)throw Error('grant_unknown');
