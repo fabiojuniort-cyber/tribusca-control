@@ -6,7 +6,7 @@ import path from 'node:path';
 import * as policy from './stage-policy.mjs';
 import {expectations} from './diagnostic.mjs';
 
-async function runWithSimulatedDependencies(firstExpectations) {
+async function runWithSimulatedDependencies(firstExpectations, failPreparation, stderr = 'PGPASSWORD="minha senha" connection failed: POSTGRESQL://user:sensitive@localhost/db\n' + 'x'.repeat(2500)) {
  const source=readFileSync(new URL('./run-stage.mjs',import.meta.url),'utf8');
  const commands=[], trees=[];
  const summaryFile=new Map();
@@ -30,6 +30,15 @@ async function runWithSimulatedDependencies(firstExpectations) {
    child.exitCode=null;child.signalCode=null;
    child.kill=signal=>queueMicrotask(()=>{child.signalCode=signal;child.emit('close',null,signal);});
    if(command==='node'&&args.includes('--observer'))return child;
+   const preparation=command==='docker'&&(args[0]==='run'?'docker_run':args.some(a=>a.includes('current_database()'))?'docker_exec_psql_initial':null);
+   if(preparation&&preparation===failPreparation){
+    queueMicrotask(()=>{
+     child.stdout.emit('data',Buffer.from('stdout excluded'));
+     child.stderr.emit('data',Buffer.from(stderr));
+     child.exitCode=2;child.emit('close',2,null);
+    });
+    return child;
+   }
    let output='';
    if(command==='git'&&args[1]==='HEAD'){
     const tree=path.posix.basename(cwd);trees.push(tree);
@@ -61,4 +70,39 @@ test('valid control expectations allow the integration tree',async()=>{
  const result=await runWithSimulatedDependencies(expectations(6000));
  assert.deepEqual(result.trees,['backend-control','backend-integration']);
  assert.equal(result.exit,0);
+ assert.equal(result.summary.length,2);
+ assert.ok(result.summary.every(tree=>tree.product_outcome.exitCode===0&&tree.preparation_failure===undefined));
+});
+
+for(const step of ['docker_run','docker_exec_psql_initial']){
+ test(step+' failure is recorded and stops before integration',async()=>{
+  const result=await runWithSimulatedDependencies(expectations(6000),step);
+  assert.equal(result.exit,1);
+  assert.deepEqual(result.trees,['backend-control']);
+  assert.equal(result.summary.length,1);
+  const [control]=result.summary;
+  assert.equal(control.status,'BLOCKED_PREPARATION');
+  assert.equal(control.product_outcome.status,'NOT_RUN');
+  assert.deepEqual(control.steps,[]);
+  assert.equal(control.error,'command_failed:docker:2');
+  const failure=control.preparation_failure;
+  assert.equal(failure.step,step);
+  assert.equal(failure.exit_code,2);
+  assert.match(failure.stderr,/^\[LAB_VALUE_REDACTED\] connection failed: \[LAB_DSN_REDACTED\]/);
+  assert.doesNotMatch(failure.stderr,/minha|senha|sensitive|POSTGRESQL|stdout excluded/);
+  assert.equal(failure.stderr.length,2048);
+  assert.equal(failure.stderr_truncated,true);
+  assert.equal(result.commands.some(([cmd])=>cmd==='npm'||cmd==='timeout'),false);
+ });
+}
+
+test('ambiguous password assignments omit the remainder of stderr',async()=>{
+ for(const stderr of ['context PGPASSWORD="minha senha\ncontinuation','context POSTGRES_PASSWORD=minha senha\ncontinuation']){
+  const result=await runWithSimulatedDependencies(expectations(6000),'docker_run',stderr);
+  assert.deepEqual(result.trees,['backend-control']);
+  assert.equal(result.summary[0].product_outcome.status,'NOT_RUN');
+  assert.deepEqual(result.summary[0].preparation_failure,{
+   step:'docker_run',exit_code:2,stderr:'context [LAB_VALUE_REDACTED]',stderr_truncated:false,
+  });
+ }
 });
