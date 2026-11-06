@@ -8,9 +8,12 @@ export function parseMetrics(text,n){
  if(x.rows!==n||x.batchSize!==5000||['restart','idempotent','atomicFailure','headersPreserved','otherEntityPreserved'].some(k=>x[k]!==true))throw Error('diagnostic_metrics_divergence');
  return x;
 }
-export function stagePass(results,n){
+export function treePass(r,n,i){
  const expected=expectations(n);
- return results.length===2&&results.every((r,i)=>r.source===SOURCES[i]&&r.attempt===1&&r.product_outcome?.status==='EXITED'&&r.product_outcome.exitCode===0&&r.semantic_code===0&&r.observation_outcome?.status==='COMPLETE'&&!r.original_test_changed&&JSON.stringify(r.instrumentation?.expectations)===JSON.stringify(expected)&&r.metrics?.rows===n);
+ return r.source===SOURCES[i]&&r.attempt===1&&r.product_outcome?.status==='EXITED'&&r.product_outcome.exitCode===0&&r.semantic_code===0&&r.observation_outcome?.status==='COMPLETE'&&!r.original_test_changed&&!r.error&&JSON.stringify(r.instrumentation?.expectations)===JSON.stringify(expected)&&r.metrics?.rows===n;
+}
+export function stagePass(results,n){
+ return results.length===SOURCES.length&&results.every((r,i)=>treePass(r,n,i));
 }
 export function nextVolume(results,n){
  if(!stagePass(results,n))return null;

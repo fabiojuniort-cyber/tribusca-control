@@ -3,8 +3,8 @@ import {buildDiagnostic,expectations,sha256} from './diagnostic.mjs';
 import {finalizeEvidence,PINNED} from './candidate-support.mjs';
 import {productResult} from './execution-state.mjs';
 import {fileURLToPath} from 'node:url';
-import {parseMetrics,stagePass,normalizeProductLog} from './stage-policy.mjs';
-await authorizeGrant(); // Each grant validated by its own gate; requires explicit final-HEAD PASS.
+import {parseMetrics,stagePass,treePass,normalizeProductLog} from './stage-policy.mjs';
+const grant=await authorizeGrant(); // Each grant validated by its own gate; requires explicit final-HEAD PASS.
 const volume=Number(process.env.F2_VOLUME);expectations(volume);
 import fs from 'node:fs';
 import path from 'node:path';
@@ -94,7 +94,7 @@ try{
    result.status=r.code===0?'PRODUCT_EXITED_0':'PRODUCT_FAILED';if(r.code!==0)finalCode=1;
    if(r.code===0){try{result.metrics=parseMetrics(r.text,volume);}catch{result.metrics_invalid=true;}}
    // Preserve the succeeding semantic gate too; a failed R7 does not run it.
-   if(r.code===0){const v=await execute('bash',['ops/onb02/ci-evidence-pg18.sh'],{cwd:dir,file:path.join(out,'semantic.txt'),allowFailure:true});result.semantic_code=v.code;if(v.code!==0){result.status='FAIL_SEMANTIC';finalCode=1;}}
+   if(r.code===0&&(grant!=='F2-R7-SIZING-03'||!result.metrics_invalid)){const v=await execute('bash',['ops/onb02/ci-evidence-pg18.sh'],{cwd:dir,file:path.join(out,'semantic.txt'),allowFailure:true});result.semantic_code=v.code;if(v.code!==0){result.status='FAIL_SEMANTIC';finalCode=1;}}
   }catch(e){result.status=result.status==='NOT_RUN'?'BLOCKED_PREPARATION':result.status;result.error=e.message;finalCode=1;}
   finally{
    await stopObserver();
@@ -107,7 +107,7 @@ try{
    result.elapsed_ms=performance.now()-t0;summary.push(result);fs.writeFileSync(path.join(output,'summary.json'),JSON.stringify(summary,null,2));
    // No retry of this source invocation.
   }
-  if(result.status!=='PRODUCT_EXITED_0'||result.semantic_code!==0||result.observation_outcome.status!=='COMPLETE')break;
+  if(!treePass(result,volume,summary.length-1))break;
  }
 }finally{await teardown();}
 if(!stagePass(summary,volume))finalCode=1;

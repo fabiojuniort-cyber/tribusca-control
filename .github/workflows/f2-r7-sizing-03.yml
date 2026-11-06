@@ -1,0 +1,123 @@
+name: F2 R7 sizing 03 manual single-use grant (resumes after run 42147266762)
+# No push, pull_request, ready, synchronize, workflow_call or repository_dispatch.
+on:
+  workflow_dispatch:
+    inputs:
+      reviewed_head:
+        description: Full immutable SHA explicitly passed by COORD
+        required: true
+        type: string
+      review_comment_id:
+        description: Comment in control127 with COORD_PASS_R7_SIZING_03 <full SHA> prev_run=42147266762 probe_run=42160266992
+        required: true
+        type: string
+permissions:
+  contents: read
+  issues: read
+  actions: read
+  # Proven by probe run 42139345705: issue comments on PR #127 need pull_requests=read (403 without, 200 with).
+  pull-requests: read
+concurrency:
+  group: f2-r7-sizing-03
+  cancel-in-progress: false
+jobs:
+  stage_6000:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      F2_VOLUME: '6000'
+      F2_GRANT: F2-R7-SIZING-03
+      F2_REVIEWED_HEAD: ${{ inputs.reviewed_head }}
+      F2_REVIEW_COMMENT_ID: ${{ inputs.review_comment_id }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout exact reviewed control HEAD
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.2'
+      - name: Verify coordinator PASS and single-use grant before backend preparation
+        run: node --input-type=module -e "import {authorize} from './docs/investigations/r7-sizing/manual-gate-03.mjs'; await authorize();"
+      - name: Verify pinned backend trees via anonymous HTTPS
+        run: bash docs/investigations/r7-sizing/checkout-anonymous-03.sh
+      - name: One attempt per tree; first anomaly stops stage
+        run: node docs/investigations/r7-sizing/run-stage.mjs
+      - name: Preserve evidence including failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: f2-r7-sizing-03-6000
+          path: f2-r7-sizing-6000/
+          if-no-files-found: ignore
+          retention-days: 7
+  stage_18000:
+    needs: stage_6000
+    if: needs.stage_6000.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      F2_VOLUME: '18000'
+      F2_GRANT: F2-R7-SIZING-03
+      F2_REVIEWED_HEAD: ${{ inputs.reviewed_head }}
+      F2_REVIEW_COMMENT_ID: ${{ inputs.review_comment_id }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout exact reviewed control HEAD
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.2'
+      - name: Verify coordinator PASS and single-use grant before backend preparation
+        run: node --input-type=module -e "import {authorize} from './docs/investigations/r7-sizing/manual-gate-03.mjs'; await authorize();"
+      - name: Verify pinned backend trees via anonymous HTTPS
+        run: bash docs/investigations/r7-sizing/checkout-anonymous-03.sh
+      - name: One attempt per tree; first anomaly stops stage
+        run: node docs/investigations/r7-sizing/run-stage.mjs
+      - name: Preserve evidence including failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: f2-r7-sizing-03-18000
+          path: f2-r7-sizing-18000/
+          if-no-files-found: ignore
+          retention-days: 7
+  stage_45000:
+    needs: stage_18000
+    if: needs.stage_18000.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      F2_VOLUME: '45000'
+      F2_GRANT: F2-R7-SIZING-03
+      F2_REVIEWED_HEAD: ${{ inputs.reviewed_head }}
+      F2_REVIEW_COMMENT_ID: ${{ inputs.review_comment_id }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout exact reviewed control HEAD
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.2'
+      - name: Verify coordinator PASS and single-use grant before backend preparation
+        run: node --input-type=module -e "import {authorize} from './docs/investigations/r7-sizing/manual-gate-03.mjs'; await authorize();"
+      - name: Verify pinned backend trees via anonymous HTTPS
+        run: bash docs/investigations/r7-sizing/checkout-anonymous-03.sh
+      - name: One attempt per tree; first anomaly stops stage
+        run: node docs/investigations/r7-sizing/run-stage.mjs
+      - name: Preserve evidence including failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: f2-r7-sizing-03-45000
+          path: f2-r7-sizing-45000/
+          if-no-files-found: ignore
+          retention-days: 7
