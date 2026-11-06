@@ -1,0 +1,41 @@
+name: F2 R7 backend checkout probe
+on:
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: f2-r7-backend-checkout-probe
+  cancel-in-progress: false
+jobs:
+  checkout_probe:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify both pinned backend commits via anonymous HTTPS
+        shell: bash
+        run: |
+          env -i PATH="$PATH" GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null \
+            GIT_TERMINAL_PROMPT=0 GIT_ASKPASS=/bin/false bash --noprofile --norc <<'BASH'
+          set -euo pipefail
+          
+          repo=https://github.com/fabiojuniort-cyber/radar-fiscal-backend.git
+          workdir=$(mktemp -d)
+          
+          check_pin() {
+            local label=$1 pin=$2 dir actual
+            dir="$workdir/$label"
+            git init --quiet --template= "$dir"
+            git -C "$dir" fetch --quiet --no-tags --depth=1 "$repo" "$pin"
+            git -C "$dir" checkout --quiet --detach FETCH_HEAD
+            actual=$(git -C "$dir" rev-parse --verify HEAD)
+            if [[ "$actual" != "$pin" ]]; then
+              printf 'stage=head tree=%s expected=%s actual=%s result=mismatch\n' "$label" "$pin" "$actual"
+              return 1
+            fi
+            printf 'stage=head tree=%s expected=%s actual=%s result=match\n' "$label" "$pin" "$actual"
+          }
+          
+          check_pin control b2150ab5ef34e9f9646e219d522e47738d9c04f5
+          check_pin integration 2c41fbab8169b7efca6bd2e80c963d57a50585b6
+          echo F2_R7_CHECKOUT_PROBE_PASS
+          BASH
