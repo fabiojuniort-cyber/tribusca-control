@@ -1,0 +1,42 @@
+name: F2 R7 comment token probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: read
+  actions: read
+jobs:
+  read_review_comment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.22.2'
+      - name: Read fixed review comment and report HTTP status
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          const token = process.env.GITHUB_TOKEN;
+          if (!token?.trim()) {
+            console.log('stage=review_comment http_status=unavailable');
+            process.exitCode = 1;
+          } else {
+            let response;
+            try {
+              response = await fetch(
+                'https://api.github.com/repos/fabiojuniort-cyber/tribusca-control/issues/comments/6671552883',
+                { headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json' } },
+              );
+            } catch {
+              console.log('stage=review_comment http_status=unavailable');
+              process.exitCode = 1;
+            }
+            if (response) {
+              console.log('stage=review_comment http_status=' + response.status);
+              if (!response.ok) process.exitCode = 1;
+            }
+          }
+          NODE
