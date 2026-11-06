@@ -1,0 +1,52 @@
+name: F2 R7 backend checkout probe
+# Isolated, read-only check that OPS_BACKEND_READ_TOKEN reaches a job in environment `ops`
+# and can check out both pinned backend SHAs used by the R7 matrix.
+# No tribusca-control checkout, no backend code, npm, Docker, PG18 or artifacts.
+on:
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: f2-r7-backend-checkout-probe
+  cancel-in-progress: false
+jobs:
+  checkout_probe:
+    runs-on: ubuntu-latest
+    environment: ops
+    timeout-minutes: 5
+    steps:
+      - name: Report token presence only
+        env:
+          T: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+        shell: bash
+        run: |
+          if [ -n "${T}" ]; then echo 'stage=token token=present'; else echo 'stage=token token=absent'; exit 1; fi
+      - name: Checkout pinned control tree
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: fabiojuniort-cyber/radar-fiscal-backend
+          ref: b2150ab5ef34e9f9646e219d522e47738d9c04f5
+          path: backend-control
+          token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+          persist-credentials: false
+      - name: Checkout pinned integration tree
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: fabiojuniort-cyber/radar-fiscal-backend
+          ref: 2c41fbab8169b7efca6bd2e80c963d57a50585b6
+          path: backend-integration
+          token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+          persist-credentials: false
+      - name: Fail if any checked-out HEAD diverges from its pin
+        shell: bash
+        run: |
+          status=0
+          for pair in control:b2150ab5ef34e9f9646e219d522e47738d9c04f5 integration:2c41fbab8169b7efca6bd2e80c963d57a50585b6; do
+            label=${pair%%:*}; want=${pair#*:}
+            got=$(git -C "backend-$label" rev-parse HEAD 2>/dev/null || echo unavailable)
+            if [ "$got" = "$want" ]; then r=match; else r=mismatch; status=1; fi
+            echo "stage=head tree=$label expected=$want actual=$got result=$r"
+            if git -C "backend-$label" config --get-regexp '^http\..*extraheader' >/dev/null 2>&1; then
+              echo "stage=credentials tree=$label persisted=yes"; status=1
+            else echo "stage=credentials tree=$label persisted=no"; fi
+          done
+          exit $status
