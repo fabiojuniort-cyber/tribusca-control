@@ -1,0 +1,49 @@
+name: F2 R7 backend checkout probe (no backend code, no Docker, no PG18)
+# Manual only (#127 c.6676198898). Checks that OPS_BACKEND_READ_TOKEN, stored in Environment `ops`, can check out
+# the two pinned radar-fiscal-backend trees. Records only the token's presence, never its value. Runs no backend
+# code, no Docker and no PostgreSQL; consumes no PG18 attempt and no sizing grant.
+# No push, pull_request, schedule, workflow_call or repository_dispatch.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: f2-r7-backend-checkout-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: ops
+    timeout-minutes: 5
+    steps:
+      - name: Record token presence only (never its value)
+        env:
+          OPS_TOKEN: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+        run: |
+          if [ -n "${OPS_TOKEN}" ]; then echo "OPS_BACKEND_READ_TOKEN: present"; else echo "OPS_BACKEND_READ_TOKEN: absent"; exit 1; fi
+      - name: Checkout fixed control tree
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: fabiojuniort-cyber/radar-fiscal-backend
+          ref: b2150ab5ef34e9f9646e219d522e47738d9c04f5
+          path: backend-control
+          token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+          persist-credentials: false
+      - name: Checkout fixed integration tree
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: fabiojuniort-cyber/radar-fiscal-backend
+          ref: 2c41fbab8169b7efca6bd2e80c963d57a50585b6
+          path: backend-integration
+          token: ${{ secrets.OPS_BACKEND_READ_TOKEN }}
+          persist-credentials: false
+      - name: Fail unless both HEADs match the pinned SHAs
+        run: |
+          set -eu
+          control="$(git -C backend-control rev-parse HEAD)"
+          integration="$(git -C backend-integration rev-parse HEAD)"
+          echo "control=${control} integration=${integration}"
+          [ "${control}" = "b2150ab5ef34e9f9646e219d522e47738d9c04f5" ] || { echo "control HEAD diverges"; exit 1; }
+          [ "${integration}" = "2c41fbab8169b7efca6bd2e80c963d57a50585b6" ] || { echo "integration HEAD diverges"; exit 1; }
+          echo "F2_R7_CHECKOUT_PROBE_PASS"
