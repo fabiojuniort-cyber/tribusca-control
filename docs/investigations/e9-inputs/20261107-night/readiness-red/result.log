@@ -1,0 +1,178 @@
+✖ fractional deadline budget is floored and sub-ms balance starts no probe (2.6593ms)
+✖ synchronous spawn errors retain original cause and empty stderr (0.6144ms)
+✖ real ENOENT waits for close and produces a complete result shape (14.3653ms)
+✖ a hung real subprocess is killed and closed before the next starts (230.2506ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1156.2464
+
+✖ failing tests:
+
+test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:11:1
+✖ fractional deadline budget is floored and sub-ms balance starts no probe (2.6593ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Math.floor\(readinessDeadline-performance.now\(\)\)/. Input:
+  
+  "import {authorizeGrant} from './grant-gate.mjs';\n" +
+    "import {buildDiagnostic,expectations,sha256} from './diagnostic.mjs';\n" +
+    "import {finalizeEvidence,PINNED} from './candidate-support.mjs';\n" +
+    "import {productResult} from './execution-state.mjs';\n" +
+    "import {fileURLToPath} from 'node:url';\n" +
+    "import {parseMetrics,stagePass,treePass,normalizeProductLog} from './stage-policy.mjs';\n" +
+    'const grant=await authorizeGrant(); // Each grant validated by its own gate; requires explicit final-HEAD PASS.\n' +
+    'const volume=Number(process.env.F2_VOLUME);expectations(volume);\n' +
+    "import fs from 'node:fs';\n" +
+    "import path from 'node:path';\n" +
+    "import crypto from 'node:crypto';\n" +
+    "import os from 'node:os';\n" +
+    "import {spawn} from 'node:child_process';\n" +
+    "import {performance} from 'node:perf_hooks';\n" +
+    '\n' +
+    "const image='postgres:18-bookworm@sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8';\n" +
+    "const cases=[['control','b2150ab5ef34e9f9646e219d522e47738d9c04f5'],['integration','2c41fbab8169b7efca6bd2e80c963d57a50585b6']];\n" +
+    "const root=process.cwd(),tmp=process.env.RUNNER_TEMP,output=path.join(root,'f2-r7-sizing-'+volume);\n" +
+    "if(process.env.CI!=='true'||process.env.GITHUB_ACTIONS!=='true'||process.env.GITHUB_RUN_ATTEMPT!=='1'||!tmp||process.platform!=='linux')throw Error('ci_lab_guard');\n" +
+    "if(process.version!=='v24.22.2')throw Error('node_version_guard');\n" +
+    'fs.mkdirSync(output,{recursive:false}); // Existing evidence refuses a second attempt.\n' +
+    "const nonce=crypto.randomBytes(12).toString('hex');\n" +
+    "const env={...process.env,CI:'true',NODE_ENV:'test',DATABASE_ADMIN_URL:'postgresql://postgres:postgres@localhost:5432/radar_fiscal_test',DATABASE_URL:'postgresql://radar_app_runtime:ci-runtime-password-with-at-least-32-chars@localhost:5432/radar_fiscal_test',DB_RUNTIME_PASSWORD:'ci-runtime-password-with-at-least-32-chars',DB_CURATOR_RUNTIME_PASSWORD:'ci-curator-password-with-at-least-32-chars',JWT_ACCESS_SECRET:'ci-jwt-secret-with-at-least-32-characters',AUTH_REFRESH_COOKIE_NAME:'radar_refresh_token',PUBLIC_API_ALLOWED_ORIGINS:'https://public.example',DB_POOL_MAX:'1',F2_R7_LAB_NONCE:nonce};\n" +
+    '// Never inherit a production connection or arbitrary PG client override.\n' +
+    "for(const k of ['GH_TOKEN','PGHOST','PGPORT','PGDATABASE','PGUSER','PGPASSWORD','PGSERVICE','PGSERVICEFILE','PGOPTIONS','NODE_OPTIONS'])delete env[k];\n" +
+    'const secrets=[env.DB_RUNTIME_PASSWORD,env.DB_CURATOR_RUNTIME_PASSWORD,env.JWT_ACCESS_SECRET];\n' +
+    `function clean(s){s=s.replace(/postgres(?:ql)?:\\/\\/[^\\s"'<>]+/g,'[LAB_DSN_REDACTED]');for(const v of secrets)s=s.split(v).join('[LAB_VALUE_REDACTED]');return s;}\n` +
+    'function execute(command,args,{cwd=root,file,environment=env,allowFailure=false,onFailure,timeoutMs}={}){\n' +
+    ' return new Promise((resolve,reject)=>{\n' +
+    "  let text='',stderr='';const child=spawn(command,args,{cwd,env:environment,stdio:['ignore','pipe','pipe'],timeout:timeoutMs});\n" +
+    "  const collect=b=>{text+=b.toString();};child.stdout.on('data',collect);child.stderr.on('data',b=>{collect(b);if(onFailure)stderr+=b.toString();});\n" +
+    "  child.once('error',error=>{if(allowFailure)resolve({code:null,signal:null,spawnError:error,text:clean(text)});else reject(error);});child.once('close',(code,signal)=>{const safe=clean(text);if(file)fs.writeFileSync(file,safe);if(code!==0&&!allowFailure){if(onFailure)onFailure(code,stderr);reject(Error('command_failed:'+command+':'+code));}else resolve({code,signal,text:safe,stderr:clean(stderr)});});\n" +
+    ' });\n' +
+    '}\n' +
+    "const hash=s=>crypto.createHash('sha256').update(s).digest('hex');\n" +
+    "const assets=fileURLToPath(new URL('.',import.meta.url));\n" +
+    'function patchR7(dir){\n' +
+    " const f=path.join(dir,'test/onb02-r7-audit.integration.test.ts'),before=fs.readFileSync(f,'utf8');\n" +
+    ' const hashes={originalTest:sha256(before)};\n' +
+    " for(const name of ['passive-pool.mjs','prepare-passive.mjs','external-observer.mjs'])hashes[name]=sha256(fs.readFileSync(path.join(assets,name)));\n" +
+    " for(const [name,h]of Object.entries(PINNED))if(hashes[name]!==h)throw Error('candidate_hash_changed:'+name);\n" +
+    ' const prepared=buildDiagnostic(before,volume);\n' +
+    " fs.writeFileSync(path.join(dir,'test/onb02-r7-sizing-diagnostic.integration.test.ts'),prepared.source,{flag:'wx'});\n" +
+    " fs.copyFileSync(path.join(assets,'passive-pool.mjs'),path.join(dir,'test/support/f2-r7-passive.mjs'));\n" +
+    " fs.copyFileSync(path.join(assets,'external-observer.mjs'),path.join(dir,'test/support/f2-r7-external.mjs'));\n" +
+    " if(sha256(fs.readFileSync(f))!==prepared.originalHash)throw Error('original_test_modified');\n" +
+    ' return {hashes,diagnostic:prepared.diagnosticHash,instrumented_test_sha256:prepared.instrumentedHash,expectations:prepared.expectations,reversible_patch_verified:true};\n' +
+    '}\n' +
+    '// Only structural plan fields leave the lab log; no query text, constants, Output,\n' +
+    '// conditions or parameter values are exported.\n' +
+    "const planKeys=new Set(['Node Type','Parent Relationship','Subplan Name','Relation Name','Schema','Alias','Index Name','Scan Direction','Join Type','Strategy','Partial Mode','Startup Cost','Total Cost','Plan Rows','Plan Width','Actual Startup Time','Actual Total Time','Actual Rows','Actual Loops','Rows Removed by Filter','Rows Removed by Join Filter','Inner Unique','Shared Hit Blocks','Shared Read Blocks','Shared Dirtied Blocks','Shared Written Blocks','Local Hit Blocks','Local Read Blocks','Temp Read Blocks','Temp Written Blocks','I/O Read Time','I/O Write Time','WAL Records','WAL FPI','WAL Bytes','Planning Time','Execution Time','Duration','Plans','Plan','Triggers','Trigger Name','Calls','Time','Hash Batches','Hash Buckets','Peak Memory Usage','Sort Method','Sort Space Used','Sort Space Type']);\n" +
+    "function safePlan(x){if(Array.isArray(x))return x.map(safePlan);if(x&&typeof x==='object')return Object.fromEntries(Object.entries(x).filter(([k])=>planKeys.has(k)).map(([k,v])=>[k,safePlan(v)]));return x;}\n" +
+    'function plansFromLog(text){\n' +
+    ' const out=[];let pos=0;\n' +
+    " while(out.length<2000){const marker=text.indexOf('plan:',pos);if(marker<0)break;let start=text.indexOf('{',marker);if(start<0)break;let depth=0,quoted=false,escaped=false,end=-1;\n" +
+    `  for(let i=start;i<text.length;i++){const c=text[i];if(quoted){if(escaped)escaped=false;else if(c==='\\\\')escaped=true;else if(c==='"')quoted=false;}else if(c==='"')quoted=true;else if(c==='{')depth++;else if(c==='}'&&--depth===0){end=i+1;break;}}\n` +
+    '  if(end<0)break;try{out.push(safePlan(JSON.parse(text.slice(start,end))));}catch{}pos=end;\n' +
+    ' }\n' +
+    " return {plans:out,capped:out.length===2000,note:'Cancelled statement may have no completed plan. No historical plan inferred.'};\n" +
+    '}\n' +
+    'const commands=[\n' +
+    " ['npm',['ci']],['npm',['run','build']],['npm',['run','db:prepare']],['node',['ops/onb02/audit-backfill.mjs','--apply','--ack-irreversible-r7']],\n" +
+    " ...['public-signup','onboarding-integrity','onb02-company-purge-graph','onb02-r6-purge','onb02-r71-backfill','onb02-r74-historical-events','onb02-r73-tax10-cli','onb02-r72-backfill'].map(n=>['npx',['tsx','--test','test/'+n+'.integration.test.ts']])\n" +
+    '];\n' +
+    'let finalCode=0;const summary=[];let activeContainer=null,observer=null,observerTerminal=productResult();\n' +
+    "async function stopObserver(){if(observer){const p=observer;observer=null;if(p.exitCode===null&&p.signalCode===null){const closed=new Promise(r=>p.once('close',r));p.kill('SIGTERM');const kill=setTimeout(()=>p.kill('SIGKILL'),5000);await closed;clearTimeout(kill);}}}\n" +
+    "async function teardown(){await stopObserver();if(activeContainer){await execute('docker',['rm','-f',activeContainer],{allowFailure:true});activeContainer=null;}}\n" +
+    "process.on('SIGTERM',()=>{void teardown().finally(()=>process.exit(143));});\n" +
+    'try{\n' +
+    " await execute('docker',['pull',image],{file:path.join(output,'image-pull.txt')});\n" +
+    " fs.writeFileSync(path.join(output,'host.json'),JSON.stringify({node:process.version,platform:os.platform(),release:os.release(),cpus:os.cpus().map(x=>({model:x.model,speed:x.speed})),memory:os.totalmem(),image,order:cases,attempt:1,harness:process.env.GITHUB_SHA,overhead:'Native pool events (2048/pool, 16 pools), unchanged bounded external observer and auto_explain. Accepted coverage losses apply; no timing equivalence claimed.'},null,2));\n" +
+    ' for(const [label,sha] of cases){\n' +
+    "  const dir=path.join(root,'backend-'+label),out=path.join(output,label);fs.mkdirSync(out);\n" +
+    "  const result={label,source:sha,attempt:1,status:'NOT_RUN',product_outcome:productResult(),observer_ended_before_product:false,steps:[]};const t0=performance.now();\n" +
+    '  const preparationFailure=step=>(exitCode,stderr)=>{\n' +
+    '   // Preserve only the prefix when a password value has no reliable end delimiter.\n' +
+    '   const sanitized=clean(stderr\n' +
+    `    .replace(/\\b(?:POSTGRES_PASSWORD|PGPASSWORD)\\s*=\\s*(?:(?:"(?:\\\\[\\s\\S]|[^"\\\\])*"|'(?:\\\\[\\s\\S]|[^'\\\\])*')(?=\\s|$)|[\\s\\S]*)/gi,'[LAB_VALUE_REDACTED]')\n` +
+    "    .replace(/postgres(?:ql)?:\\/\\/[^\\r\\n]*/gi,'[LAB_DSN_REDACTED]'));\n" +
+    '   result.preparation_failure={step,exit_code:exitCode,stderr:sanitized.slice(0,2048),stderr_truncated:sanitized.length>2048};\n' +
+    '  };\n' +
+    '  try{\n' +
+    "   if(!path.resolve(dir).startsWith(path.resolve(root)+path.sep)||!fs.existsSync(dir))throw Error('workspace_guard');\n" +
+    "   const head=await execute('git',['rev-parse','HEAD'],{cwd:dir});if(head.text.trim()!==sha)throw Error('source_head_changed');\n" +
+    "   const tree=await execute('git',['rev-parse','HEAD^{tree}'],{cwd:dir});result.tree=tree.text.trim();\n" +
+    "   activeContainer='f2-r7-'+nonce+'-'+label;\n" +
+    "   await execute('docker',['run','--rm','-d','--name',activeContainer,'--label','f2-r7-lab='+nonce,'-e','POSTGRES_DB=radar_fiscal_test','-e','POSTGRES_USER=postgres','-e','POSTGRES_PASSWORD=postgres','-p','127.0.0.1:5432:5432',image],{onFailure:preparationFailure('docker_run')});\n" +
+    '   // The entrypoint temporary server has no TCP listener. Require the final server and target database.\n' +
+    '   let ready=false;\n' +
+    '   const readinessDeadline=performance.now()+30000;\n' +
+    '   for(let i=0;i<30&&performance.now()<readinessDeadline;i++){\n' +
+    "    const r=await execute('docker',['exec','-e','PGCONNECT_TIMEOUT=1','-e','PGPASSWORD=postgres',activeContainer,\n" +
+    "     'psql','-h','127.0.0.1','-p','5432','-U','postgres','-d','radar_fiscal_test','-v','ON_ERROR_STOP=1','-Atc',\n" +
+    `     "SELECT current_database()||'|'||current_set`... 5074 more characters
+  
+      at TestContext.<anonymous> (file:///[WORKSPACE]/f2-r7-grant03/readiness-red/readiness-process.test.mjs:12:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: `import {authorizeGrant} from './grant-gate.mjs';\nimport {buildDiagnostic,expectations,sha256} from './diagnostic.mjs';\nimport {finalizeEvidence,PINNED} from './candidate-support.mjs';\nimport {productResult} from './execution-state.mjs';\nimport {fileURLToPath} from 'node:url';\nimport {parseMetrics,stagePass,treePass,normalizeProductLog} from './stage-policy.mjs';\nconst grant=await authorizeGrant(); // Each grant validated by its own gate; requires explicit final-HEAD PASS.\nconst volume=Number(process.env.F2_VOLUME);expectations(volume);\nimport fs from 'node:fs';\nimport path from 'node:path';\nimport crypto from 'node:crypto';\nimport os from 'node:os';\nimport {spawn} from 'node:child_process';\nimport {performance} from 'node:perf_hooks';\n\nconst image='postgres:18-bookworm@sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8';\nconst cases=[['control','b2150ab5ef34e9f9646e219d522e47738d9c04f5'],['integration','2c41fbab8169b7efca6bd2e80c963d57a50585b6']];\nconst root=process.cwd(),tmp=process.env.RUNNER_TEMP,output=path.join(root,'f2-r7-sizing-'+volume);\nif(process.env.CI!=='true'||process.env.GITHUB_ACTIONS!=='true'||process.env.GITHUB_RUN_ATTEMPT!=='1'||!tmp||process.platform!=='linux')throw Error('ci_lab_guard');\nif(process.version!=='v24.22.2')throw Error('node_version_guard');\nfs.mkdirSync(output,{recursive:false}); // Existing evidence refuses a second attempt.\nconst nonce=crypto.randomBytes(12).toString('hex');\nconst env={...process.env,CI:'true',NODE_ENV:'test',DATABASE_ADMIN_URL:'postgresql://postgres:postgres@localhost:5432/radar_fiscal_test',DATABASE_URL:'postgresql://radar_app_runtime:ci-runtime-password-with-at-least-32-chars@localhost:5432/radar_fiscal_test',DB_RUNTIME_PASSWORD:'ci-runtime-password-with-at-least-32-chars',DB_CURATOR_RUNTIME_PASSWORD:'ci-curator-password-with-at-least-32-chars',JWT_ACCESS_SECRET:'ci-jwt-secret-with-at-least-32-characters',AUTH_REFRESH_COOKIE_NAME:'radar_refresh_token',PUBLIC_API_ALLOWED_ORIGINS:'https://public.example',DB_POOL_MAX:'1',F2_R7_LAB_NONCE:nonce};\n// Never inherit a production connection or arbitrary PG client override.\nfor(const k of ['GH_TOKEN','PGHOST','PGPORT','PGDATABASE','PGUSER','PGPASSWORD','PGSERVICE','PGSERVICEFILE','PGOPTIONS','NODE_OPTIONS'])delete env[k];\nconst secrets=[env.DB_RUNTIME_PASSWORD,env.DB_CURATOR_RUNTIME_PASSWORD,env.JWT_ACCESS_SECRET];\nfunction clean(s){s=s.replace(/postgres(?:ql)?:\\/\\/[^\\s"'<>]+/g,'[LAB_DSN_REDACTED]');for(const v of secrets)s=s.split(v).join('[LAB_VALUE_REDACTED]');return s;}\nfunction execute(command,args,{cwd=root,file,environment=env,allowFailure=false,onFailure,timeoutMs}={}){\n return new Promise((resolve,reject)=>{\n  let text='',stderr='';const child=spawn(command,args,{cwd,env:environment,stdio:['ignore','pipe','pipe'],timeout:timeoutMs});\n  const collect=b=>{text+=b.toString();};child.stdout.on('data',collect);child.stderr.on('data',b=>{collect(b);if(onFailure)stderr+=b.toString();});\n  child.once('error',error=>{if(allowFailure)resolve({code:null,signal:null,spawnError:error,text:clean(text)});else reject(error);});child.once('close',(code,signal)=>{const safe=clean(text);if(file)fs.writeFileSync(file,safe);if(code!==0&&!allowFailure){if(onFailure)onFailure(code,stderr);reject(Error('command_failed:'+command+':'+code));}else resolve({code,signal,text:safe,stderr:clean(stderr)});});\n });\n}\nconst hash=s=>crypto.createHash('sha256').update(s).digest('hex');\nconst assets=fileURLToPath(new URL('.',import.meta.url));\nfunction patchR7(dir){\n const f=path.join(dir,'test/onb02-r7-audit.integration.test.ts'),before=fs.readFileSync(f,'utf8');\n const hashes={originalTest:sha256(before)};\n for(const name of ['passive-pool.mjs','prepare-passive.mjs','external-observer.mjs'])hashes[name]=sha256(fs.readFileSync(path.join(assets,name)));\n for(const [name,h]of Object.entries(PINNED))if(hashes[name]!==h)throw Error('candidate_hash_changed:'+name);\n const prepared=buildDiagnostic(before,volume);\n fs.writeFileSync(path.join(dir,'test/onb02-r7-sizing-diagnostic.integration.test.ts'),prepared.source,{flag:'wx'});\n fs.copyFileSync(path.join(assets,'passive-pool.mjs'),path.join(dir,'test/support/f2-r7-passive.mjs'));\n fs.copyFileSync(path.join(assets,'external-observer.mjs'),path.join(dir,'test/support/f2-r7-external.mjs'));\n if(sha256(fs.readFileSync(f))!==prepared.originalHash)throw Error('original_test_modified');\n return {hashes,diagnostic:prepared.diagnosticHash,instrumented_test_sha256:prepared.instrumentedHash,expectations:prepared.expectations,reversible_patch_verified:true};\n}\n// Only structural plan fields leave the lab log; no query text, constants, Output,\n// conditions or parameter values are exported.\nconst planKeys=new Set(['Node Type','Parent Relationship','Subplan Name','Relation Name','Schema','Alias','Index Name','Scan Direction','Join Type','Strategy','Partial Mode','Startup Cost','Total Cost','Plan Rows','Plan Width','Actual Startup Time','Actual Total Time','Actual Rows','Actual Loops','Rows Removed by Filter','Rows Removed by Join Filter','Inner Unique','Shared Hit Blocks','Shared Read Blocks','Shared Dirtied Blocks','Shared Written Blocks','Local Hit Blocks','Local Read Blocks','Temp Read Blocks','Temp Written Blocks','I/O Read Time','I/O Write Time','WAL Records','WAL FPI','WAL Bytes','Planning Time','Execution Time','Duration','Plans','Plan','Triggers','Trigger Name','Calls','Time','Hash Batches','Hash Buckets','Peak Memory Usage','Sort Method','Sort Space Used','Sort Space Type']);\nfunction safePlan(x){if(Array.isArray(x))return x.map(safePlan);if(x&&typeof x==='object')return Object.fromEntries(Object.entries(x).filter(([k])=>planKeys.has(k)).map(([k,v])=>[k,safePlan(v)]));return x;}\nfunction plansFromLog(text){\n const out=[];let pos=0;\n while(out.length<2000){const marker=text.indexOf('plan:',pos);if(marker<0)break;let start=text.indexOf('{',marker);if(start<0)break;let depth=0,quoted=false,escaped=false,end=-1;\n  for(let i=start;i<text.length;i++){const c=text[i];if(quoted){if(escaped)escaped=false;else if(c==='\\\\')escaped=true;else if(c==='"')quoted=false;}else if(c==='"')quoted=true;else if(c==='{')depth++;else if(c==='}'&&--depth===0){end=i+1;break;}}\n  if(end<0)break;try{out.push(safePlan(JSON.parse(text.slice(start,end))));}catch{}pos=end;\n }\n return {plans:out,capped:out.length===2000,note:'Cancelled statement may have no completed plan. No historical plan inferred.'};\n}\nconst commands=[\n ['npm',['ci']],['npm',['run','build']],['npm',['run','db:prepare']],['node',['ops/onb02/audit-backfill.mjs','--apply','--ack-irreversible-r7']],\n ...['public-signup','onboarding-integrity','onb02-company-purge-graph','onb02-r6-purge','onb02-r71-backfill','onb02-r74-historical-events','onb02-r73-tax10-cli','onb02-r72-backfill'].map(n=>['npx',['tsx','--test','test/'+n+'.integration.test.ts']])\n];\nlet finalCode=0;const summary=[];let activeContainer=null,observer=null,observerTerminal=productResult();\nasync function stopObserver(){if(observer){const p=observer;observer=null;if(p.exitCode===null&&p.signalCode===null){const closed=new Promise(r=>p.once('close',r));p.kill('SIGTERM');const kill=setTimeout(()=>p.kill('SIGKILL'),5000);await closed;clearTimeout(kill);}}}\nasync function teardown(){await stopObserver();if(activeContainer){await execute('docker',['rm','-f',activeContainer],{allowFailure:true});activeContainer=null;}}\nprocess.on('SIGTERM',()=>{void teardown().finally(()=>process.exit(143));});\ntry{\n await execute('docker',['pull',image],{file:path.join(output,'image-pull.txt')});\n fs.writeFileSync(path.join(output,'host.json'),JSON.stringify({node:process.version,platform:os.platform(),release:os.release(),cpus:os.cpus().map(x=>({model:x.model,speed:x.speed})),memory:os.totalmem(),image,order:cases,attempt:1,harness:process.env.GITHUB_SHA,overhead:'Native pool events (2048/pool, 16 pools), unchanged bounded external observer and auto_explain. Accepted coverage losses apply; no timing equivalence claimed.'},null,2));\n for(const [label,sha] of cases){\n  const dir=path.join(root,'backend-'+label),out=path.join(output,label);fs.mkdirSync(out);\n  const result={label,source:sha,attempt:1,status:'NOT_RUN',product_outcome:productResult(),observer_ended_before_product:false,steps:[]};const t0=performance.now();\n  const preparationFailure=step=>(exitCode,stderr)=>{\n   // Preserve only the prefix when a password value has no reliable end delimiter.\n   const sanitized=clean(stderr\n    .replace(/\\b(?:POSTGRES_PASSWORD|PGPASSWORD)\\s*=\\s*(?:(?:"(?:\\\\[\\s\\S]|[^"\\\\])*"|'(?:\\\\[\\s\\S]|[^'\\\\])*')(?=\\s|$)|[\\s\\S]*)/gi,'[LAB_VALUE_REDACTED]')\n    .replace(/postgres(?:ql)?:\\/\\/[^\\r\\n]*/gi,'[LAB_DSN_REDACTED]'));\n   result.preparation_failure={step,exit_code:exitCode,stderr:sanitized.slice(0,2048),stderr_truncated:sanitized.length>2048};\n  };\n  try{\n   if(!path.resolve(dir).startsWith(path.resolve(root)+path.sep)||!fs.existsSync(dir))throw Error('workspace_guard');\n   const head=await execute('git',['rev-parse','HEAD'],{cwd:dir});if(head.text.trim()!==sha)throw Error('source_head_changed');\n   const tree=await execute('git',['rev-parse','HEAD^{tree}'],{cwd:dir});result.tree=tree.text.trim();\n   activeContainer='f2-r7-'+nonce+'-'+label;\n   await execute('docker',['run','--rm','-d','--name',activeContainer,'--label','f2-r7-lab='+nonce,'-e','POSTGRES_DB=radar_fiscal_test','-e','POSTGRES_USER=postgres','-e','POSTGRES_PASSWORD=postgres','-p','127.0.0.1:5432:5432',image],{onFailure:preparationFailure('docker_run')});\n   // The entrypoint temporary server has no TCP listener. Require the final server and target database.\n   let ready=false;\n   const readinessDeadline=performance.now()+30000;\n   for(let i=0;i<30&&performance.now()<readinessDeadline;i++){\n    const r=await execute('docker',['exec','-e','PGCONNECT_TIMEOUT=1','-e','PGPASSWORD=postgres',activeContainer,\n     'psql','-h','127.0.0.1','-p','5432','-U','postgres','-d','radar_fiscal_test','-v','ON_ERROR_STOP=1','-Atc',\n     "SELECT current_database()||'|'||current_set`... 5074 more characters,
+    expected: /Math.floor\(readinessDeadline-performance.now\(\)\)/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:18:1
+✖ synchronous spawn errors retain original cause and empty stderr (0.6144ms)
+  Error: creation failure
+      at TestContext.<anonymous> (file:///[WORKSPACE]/f2-r7-grant03/readiness-red/readiness-process.test.mjs:19:30)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    code: 'SYNTHETIC_CREATE'
+  }
+
+test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:26:1
+✖ real ENOENT waits for close and produces a complete result shape (14.3653ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  undefined !== ''
+  
+      at TestContext.<anonymous> (file:///[WORKSPACE]/f2-r7-grant03/readiness-red/readiness-process.test.mjs:29:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: '',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:32:1
+✖ a hung real subprocess is killed and closed before the next starts (230.2506ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'TIMEOUT'
+  
+      at TestContext.<anonymous> (file:///[WORKSPACE]/f2-r7-grant03/readiness-red/readiness-process.test.mjs:35:9)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'TIMEOUT',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+

@@ -1,0 +1,41 @@
+[
+  {
+    "request": 1,
+    "status": 200,
+    "type": [
+      "text/html"
+    ],
+    "at": "2026-11-07T04:10:06.9475889Z",
+    "file": "index.html",
+    "bytes": 60644,
+    "sha256": "0e55949dfcf3ce82b432028abc6ea086e1d6123505162df17fbedf0040e4f85a",
+    "urlRecordGap": "URL not stored in original first-request log; do not infer provenance solely from body"
+  },
+  {
+    "request": 2,
+    "url": "https://normasinternet2.receita.fazenda.gov.br/main.60aa44047ffb2919.js",
+    "status": 200,
+    "at": "2026-11-07T04:10:24.4915918Z",
+    "file": "main.js",
+    "bytes": 2470816,
+    "sha256": "46905a069c1b610e790c413e4b6954fb16e7cf6469c6485f5b414c2f15eda0da"
+  },
+  {
+    "request": 3,
+    "url": "https://normasinternet2.receita.fazenda.gov.br/runtime.fdbb2a6fe41d0fb4.js",
+    "status": 200,
+    "at": "2026-11-07T04:11:45.3242621Z",
+    "file": "runtime.js",
+    "bytes": 3589,
+    "sha256": "08316bc64a70d906d22a820ce1ce9f455746f179fe309d2fdae1bb9ac10b629e"
+  },
+  {
+    "request": 4,
+    "url": "https://normasinternet2.receita.fazenda.gov.br/961.fd09e7dba13a79d0.js",
+    "status": 200,
+    "at": "2026-11-07T04:12:01.0059300Z",
+    "file": "consulta.js",
+    "bytes": 4428,
+    "sha256": "4d643b6e14a774d5bf957136e85a4ba0348bd35cd6f1c3c78ca7b40c58b966eb"
+  }
+]
