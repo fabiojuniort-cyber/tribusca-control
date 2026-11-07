@@ -1,0 +1,204 @@
+{
+  "requests": [
+    {
+      "n": 1,
+      "at": "2026-11-07T04:10:06.9475889Z",
+      "purpose": "public SPA route discovery",
+      "type": null,
+      "sharedFor": [
+        "Portaria",
+        "ADI",
+        "ADE",
+        "SC",
+        "Resolu��o"
+      ],
+      "url": null,
+      "status": 200,
+      "contentType": [
+        "text/html"
+      ],
+      "redirectsFollowed": 0,
+      "responseFile": "index.html",
+      "responseBytes": 60644,
+      "responseSha256": "0e55949dfcf3ce82b432028abc6ea086e1d6123505162df17fbedf0040e4f85a",
+      "actCaptured": false,
+      "recordGaps": [
+        "first discovery URL was not preserved in original request log"
+      ]
+    },
+    {
+      "n": 2,
+      "at": "2026-11-07T04:10:24.4915918Z",
+      "purpose": "public SPA route discovery",
+      "type": null,
+      "sharedFor": [
+        "Portaria",
+        "ADI",
+        "ADE",
+        "SC",
+        "Resolu��o"
+      ],
+      "url": "https://normasinternet2.receita.fazenda.gov.br/main.60aa44047ffb2919.js",
+      "status": 200,
+      "contentType": null,
+      "redirectsFollowed": 0,
+      "responseFile": "main.js",
+      "responseBytes": 2470816,
+      "responseSha256": "46905a069c1b610e790c413e4b6954fb16e7cf6469c6485f5b414c2f15eda0da",
+      "actCaptured": false,
+      "recordGaps": [
+        "HTTP Content-Type header not preserved"
+      ]
+    },
+    {
+      "n": 3,
+      "at": "2026-11-07T04:11:45.3242621Z",
+      "purpose": "public SPA route discovery",
+      "type": null,
+      "sharedFor": [
+        "Portaria",
+        "ADI",
+        "ADE",
+        "SC",
+        "Resolu��o"
+      ],
+      "url": "https://normasinternet2.receita.fazenda.gov.br/runtime.fdbb2a6fe41d0fb4.js",
+      "status": 200,
+      "contentType": null,
+      "redirectsFollowed": 0,
+      "responseFile": "runtime.js",
+      "responseBytes": 3589,
+      "responseSha256": "08316bc64a70d906d22a820ce1ce9f455746f179fe309d2fdae1bb9ac10b629e",
+      "actCaptured": false,
+      "recordGaps": [
+        "HTTP Content-Type header not preserved"
+      ]
+    },
+    {
+      "n": 4,
+      "at": "2026-11-07T04:12:01.0059300Z",
+      "purpose": "public SPA route discovery",
+      "type": null,
+      "sharedFor": [
+        "Portaria",
+        "ADI",
+        "ADE",
+        "SC",
+        "Resolu��o"
+      ],
+      "url": "https://normasinternet2.receita.fazenda.gov.br/961.fd09e7dba13a79d0.js",
+      "status": 200,
+      "contentType": null,
+      "redirectsFollowed": 0,
+      "responseFile": "consulta.js",
+      "responseBytes": 4428,
+      "responseSha256": "4d643b6e14a774d5bf957136e85a4ba0348bd35cd6f1c3c78ca7b40c58b966eb",
+      "actCaptured": false,
+      "recordGaps": [
+        "HTTP Content-Type header not preserved"
+      ]
+    },
+    {
+      "n": 5,
+      "at": "2026-11-07T04:12:31.6324592Z",
+      "purpose": "one category search",
+      "type": "Portaria",
+      "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Portaria",
+      "status": 200,
+      "contentType": null,
+      "redirectsFollowed": 0,
+      "location": null,
+      "responseFile": "type-1.html",
+      "responseBytes": 45247,
+      "responseSha256": "9f9413e20884b24680269927744a2abbf407243127ba5087a1489fd91fc8153a",
+      "actCaptured": false,
+      "result": "SPA shell without identified act",
+      "recordGaps": [
+        "HTTP Content-Type header not preserved"
+      ]
+    },
+    {
+      "n": 6,
+      "at": "2026-11-07T04:12:31.7695641Z",
+      "purpose": "one category search",
+      "type": "Ato Declarat�rio Interpretativo",
+      "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Ato%20Declarat%C3%B3rio%20Interpretativo",
+      "status": 200,
+      "contentType": null,
+      "redirectsFollowed": 0,
+      "location": null,
+      "responseFile": "type-2.html",
+      "responseBytes": 45247,
+      "responseSha256": "9f9413e20884b24680269927744a2abbf407243127ba5087a1489fd91fc8153a",
+      "actCaptured": false,
+      "result": "SPA shell without identified act",
+      "recordGaps": [
+        "HTTP Content-Type header not preserved"
+      ]
+    },
+    {
+      "n": 7,
+      "at": "2026-11-07T04:12:31.6332397Z",
+      "purpose": "one category search",
+      "type": "Ato Declarat�rio Executivo",
+      "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Ato%20Declarat%C3%B3rio%20Executivo",
+      "status": 200,
+      "contentType": null,
+      "redirectsFollowed": 0,
+      "location": null,
+      "responseFile": "type-3.html",
+      "responseBytes": 45247,
+      "responseSha256": "9f9413e20884b24680269927744a2abbf407243127ba5087a1489fd91fc8153a",
+      "actCaptured": false,
+      "result": "SPA shell without identified act",
+      "recordGaps": [
+        "HTTP Content-Type header not preserved"
+      ]
+    },
+    {
+      "n": 8,
+      "at": "2026-11-07T04:12:31.7554795Z",
+      "purpose": "one category search",
+      "type": "Solu��o de Consulta",
+      "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Solu%C3%A7%C3%A3o%20de%20Consulta",
+      "status": 200,
+      "contentType": null,
+      "redirectsFollowed": 0,
+      "location": null,
+      "responseFile": "type-4.html",
+      "responseBytes": 45247,
+      "responseSha256": "9f9413e20884b24680269927744a2abbf407243127ba5087a1489fd91fc8153a",
+      "actCaptured": false,
+      "result": "SPA shell without identified act",
+      "recordGaps": [
+        "HTTP Content-Type header not preserved"
+      ]
+    },
+    {
+      "n": 9,
+      "at": "2026-11-07T04:12:31.4875879Z",
+      "purpose": "one category search",
+      "type": "Resolu��o",
+      "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Resolu%C3%A7%C3%A3o",
+      "status": 200,
+      "contentType": null,
+      "redirectsFollowed": 0,
+      "location": null,
+      "responseFile": "type-5.html",
+      "responseBytes": 45247,
+      "responseSha256": "9f9413e20884b24680269927744a2abbf407243127ba5087a1489fd91fc8153a",
+      "actCaptured": false,
+      "result": "SPA shell without identified act",
+      "recordGaps": [
+        "HTTP Content-Type header not preserved"
+      ]
+    }
+  ],
+  "physicalTotal": 9,
+  "otherExecutorInventoryRef": "backend@70ebb92bd425d450e215b247de69dc190be7bea4:ops/anatomy/official-identification/rfb-p2c/inventory.json",
+  "otherExecutorPhysicalTotal": 19,
+  "combinedPhysicalTotal": 28,
+  "limit": 25,
+  "furtherRequestsStopped": true,
+  "missingMetadataNotReconstructed": true
+}
