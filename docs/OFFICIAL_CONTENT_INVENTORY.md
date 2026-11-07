@@ -113,3 +113,8 @@ Próxima etapa documental: reunir evidência oficial datada do menor marco por r
 ## Conferência específica — SPED (04/11/2026)
 
 [Conferência por representação e dez critérios da #6](investigations/F2-6-SPED-REPRESENTATION.md), código fixado no backend1a6419d0. Esta leitura é estática, não atesta captura integral real. O descritor limita a descrição a12000 caracteres; arquivo com falha pode reutilizar checkpoint anterior, enquanto arquivo novo não resolvido adia o documento. Hash padrão continua LEGACY_ALL_FILES; comunicado e documento têm identidades distintas. Ver evidências/limites no complemento, sem alteração de conector nem aceite antecipado.
+
+
+## Conferência específica — Receita Federal / Normas (07/11/2026)
+
+[Dez critérios da #6 e evidências fixadas](investigations/F2-6-RFB-REPRESENTATION.md), backend `bb6c61798aed34993a52e398795551ed2ca46393`. O código usa a representação original da API e anexos identificados; visualizações auxiliares e hashes diagnósticos não equivalem ao hash canônico da publicação. Anexo anterior pode ser reutilizado com falha parcial; anexo novo indisponível impede emissão do item nesse processamento. O padrão LEGACY_ALL_FILES/V1 inclui hashes de anexos, portanto removê-los exige compatibilidade/replay antes de qualquer alteração. Conferência somente estática, sem consulta à fonte ou ao acervo; não atesta conteúdo integral, cobertura histórica nem armazenamento durável dos bytes. Nenhum conector alterado. A #6 continua aberta e a revisão independente da #125 permanece pendente.
