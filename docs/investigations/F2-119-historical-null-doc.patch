@@ -1,0 +1,12 @@
+diff --git a/docs/audit-historical-events-r74.md b/docs/audit-historical-events-r74.md
+--- a/docs/audit-historical-events-r74.md
++++ b/docs/audit-historical-events-r74.md
+@@ -10,7 +10,7 @@
+ | --- | --- | --- |
+ | MERGE_RFB_NORMAS_DOU_HISTORICAL / publication | [PR operacional #60, SHA 672204c](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/672204c284ea408853852db7231649285e69793f/src/infrastructure/database/repair-rfb-normas-cross-source.ts) | before: douPublicationId, rfbPublicationId, douIdentityHash, rfbIdentityHash; after: publicationId, identityHash, rfbExternalId, douExternalId, origins |
+ | TAXONOMY_CURATION_SECTOR_ALIASES_CLEARED / taxonomy_curation | [PR operacional #145, SHA 1a36d29](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a36d297180439018dce73c9c1e30f567c94bbc6/src/modules/taxonomy/curation/curation.clear-sector-aliases.ts) | after: removedSynonyms, rowsAffected; entity_id da release no cabeçalho |
+-| TAXONOMY_DRAFT_ORPHAN_RELATIONS_REMOVED / taxonomy_release | Reparo inline TAX-12: [recibo Issue #90](https://github.com/fabiojuniort-cyber/tribusca-control/issues/90#issuecomment-6050516506) e estrutura real conferida em READ ONLY no PROD-1.1 | before SQL NULL; after: removedCount, removedRelationIds, preservedHistory; entity_id da release no cabeçalho |
++| TAXONOMY_DRAFT_ORPHAN_RELATIONS_REMOVED / taxonomy_release | Reparo inline TAX-12: [recibo Issue #90](https://github.com/fabiojuniort-cyber/tribusca-control/issues/90#issuecomment-6050516506) e estrutura real conferida em READ ONLY no PROD-1.1 | before: representação SQL NULL/JSON null não comprovada no diagnóstico histórico; after: removedCount, removedRelationIds, preservedHistory; entity_id da release no cabeçalho |
+ 
+ Os dois PRs operacionais não foram incorporados à main. Não importar nem reativar
+ seus escritores antigos, atores ou comandos. O reparo de relações foi executado
