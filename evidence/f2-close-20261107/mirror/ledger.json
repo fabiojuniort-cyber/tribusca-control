@@ -1,0 +1,119 @@
+[
+  {
+    "url": "https://www.trifaros.com.br/",
+    "path": "/",
+    "status": 200,
+    "at": "2026-11-07T15:57:27.8328458Z",
+    "contentType": "text/html",
+    "bytes": 1099,
+    "sha256": "f62383a3f9be6758a6f85a6bb684e111d5073d8a25565c0c7c7efd0a0d74c3f6"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/index-2q0G7EaA.js",
+    "path": "/assets/index-2q0G7EaA.js",
+    "status": 200,
+    "at": "2026-11-07T15:57:27.8757067Z",
+    "contentType": "application/javascript",
+    "bytes": 749735,
+    "sha256": "34646f97874577195013f52a4613cfb0b5bf191e039262ed021dffd611799400"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/index-BqtF64IN.css",
+    "path": "/assets/index-BqtF64IN.css",
+    "status": 200,
+    "at": "2026-11-07T15:57:27.8813032Z",
+    "contentType": "text/css",
+    "bytes": 308045,
+    "sha256": "7822846470c6cc9737a2cdc5bdba6888cf49ccece8adcab92f45f47c195e0414"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/inter-latin-ext-400-normal-C1nco2VV.woff2",
+    "path": "/assets/inter-latin-ext-400-normal-C1nco2VV.woff2",
+    "status": 200,
+    "at": "2026-11-07T15:57:27.9157867Z",
+    "contentType": "font/woff2",
+    "bytes": 35000,
+    "sha256": "6744a7f509ebc6ab220a6cd4ea77e898adf014f03d88dcda5d45d8a9feefb4e9"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/inter-latin-400-normal-C38fXH4l.woff2",
+    "path": "/assets/inter-latin-400-normal-C38fXH4l.woff2",
+    "status": 200,
+    "at": "2026-11-07T15:57:27.9191957Z",
+    "contentType": "font/woff2",
+    "bytes": 23664,
+    "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/inter-latin-ext-700-normal-Ca8adRJv.woff2",
+    "path": "/assets/inter-latin-ext-700-normal-Ca8adRJv.woff2",
+    "status": 200,
+    "at": "2026-11-07T15:57:27.9225985Z",
+    "contentType": "font/woff2",
+    "bytes": 36244,
+    "sha256": "143f9504f1377012aa3e39c90c4354ef429cb0494b9ac0e1437f1a81e5412236"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/inter-latin-700-normal-Yt3aPRUw.woff2",
+    "path": "/assets/inter-latin-700-normal-Yt3aPRUw.woff2",
+    "status": 200,
+    "at": "2026-11-07T15:57:27.9262916Z",
+    "contentType": "font/woff2",
+    "bytes": 24356,
+    "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/inter-latin-ext-800-normal-DZJjya6U.woff2",
+    "path": "/assets/inter-latin-ext-800-normal-DZJjya6U.woff2",
+    "status": 200,
+    "at": "2026-11-07T15:57:36.9043306Z",
+    "contentType": "font/woff2",
+    "bytes": 36128,
+    "sha256": "eade55593308b9e4916dd7f47826929ce3e40cad85a2b338d56e5fd1e7bf8e5e"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/inter-latin-800-normal-BYj_oED-.woff2",
+    "path": "/assets/inter-latin-800-normal-BYj_oED-.woff2",
+    "status": 200,
+    "at": "2026-11-07T15:57:42.2071911Z",
+    "contentType": "font/woff2",
+    "bytes": 24400,
+    "sha256": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/inter-latin-ext-900-normal-ty8Tfvw5.woff2",
+    "path": "/assets/inter-latin-ext-900-normal-ty8Tfvw5.woff2",
+    "status": 200,
+    "at": "2026-11-07T15:57:47.720767Z",
+    "contentType": "font/woff2",
+    "bytes": 35328,
+    "sha256": "de536299a1eeca46fe494787380486ec890627e0d50e1be18ef6001cbd1e5105"
+  },
+  {
+    "url": "https://www.trifaros.com.br/assets/inter-latin-900-normal-D4nM5aha.woff2",
+    "path": "/assets/inter-latin-900-normal-D4nM5aha.woff2",
+    "status": 200,
+    "at": "2026-11-07T15:57:53.5813327Z",
+    "contentType": "font/woff2",
+    "bytes": 23900,
+    "sha256": "d5c0ed7b8b5dde97d48b97947d740bbd8ad3ba9f2c5cc6b8280f16acba2d828e"
+  },
+  {
+    "url": "https://www.trifaros.com.br/brand/trifaros-logo-horizontal.png",
+    "path": "/brand/trifaros-logo-horizontal.png",
+    "status": 200,
+    "at": "2026-11-07T15:59:16.0579981Z",
+    "contentType": "image/png",
+    "bytes": 486822,
+    "sha256": "a9e4dab1392861c1927629bd181a60c462c32514e9427cc2ef8e3da0e2a64b4f"
+  },
+  {
+    "url": "https://www.trifaros.com.br/brand/trifaros-logo-horizontal-reverse.png",
+    "path": "/brand/trifaros-logo-horizontal-reverse.png",
+    "status": 200,
+    "at": "2026-11-07T15:59:22.1476739Z",
+    "contentType": "image/png",
+    "bytes": 137893,
+    "sha256": "b88df4e216fb64821a28c6c990906520c01554ff6a9c2b1279b827db76175926"
+  }
+]

@@ -1,0 +1,437 @@
+[
+  {
+    "path": "blocked-network-results.json",
+    "bytes": 23938,
+    "sha256": "17da69d33cf14627b9168a74535beb2de5e084a61dfa20d2182b62f2f6bb337b"
+  },
+  {
+    "path": "playwright.config.cjs",
+    "bytes": 751,
+    "sha256": "212a102c09998d70bb8b6a7bf8b70da91c655ce9c8c713147a9a42d880ca430e"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5058,
+    "sha256": "5762c2a690f701c00aabfaaee8c74eb94c5e63269c587623ae4f20a921469f73"
+  },
+  {
+    "path": "results-convenio.json",
+    "bytes": 8311,
+    "sha256": "8ff715172e95db77ffb0f07cedfc1f9d9ec25987eedeea620b56855b0df2ab23"
+  },
+  {
+    "path": "results-desktop-1440.json",
+    "bytes": 12819,
+    "sha256": "4c6237da4d3e9b1c183686741b2cb404fa87a4915b1aa2787693e383a7b05e4b"
+  },
+  {
+    "path": "results-logo-1920.json",
+    "bytes": 5172,
+    "sha256": "71ebcd185b6d35f1176f5537f0ea0df563e57ff5dfabf4a05639ce8d18f4d803"
+  },
+  {
+    "path": "results-logo-captures-first.json",
+    "bytes": 9892,
+    "sha256": "19ffc36cb4a1d7dd6db759eb3cdb7a10ec6c088f2ecd622a38c2040c24d4883f"
+  },
+  {
+    "path": "results-other-viewports.json",
+    "bytes": 30038,
+    "sha256": "d6bdfbc3e2f749f39d80784c6525dda4d0b5aa935c7fab879f5173239fe1756c"
+  },
+  {
+    "path": "e2e/close60.spec.ts",
+    "bytes": 20523,
+    "sha256": "5723ea5d6fcc95804d28f66c52ff87093f9a77f2c7438a4e8b08d5315ec1079b"
+  },
+  {
+    "path": "e2e/close66.spec.ts",
+    "bytes": 10585,
+    "sha256": "7faa35c47dff8ea2e36d8c54e06b9f0547266023ba1bf2e884bdf68d1ebb5b10"
+  },
+  {
+    "path": "e2e/fixture66.json",
+    "bytes": 14004,
+    "sha256": "04f18113fb1f6e6f95491ce7c5f5dbb54c5d48389322908684ac63c5f03c6a9c"
+  },
+  {
+    "path": "e2e/offline-mirror.ts",
+    "bytes": 874,
+    "sha256": "331067def679a53771d7da06b8c7196442199b8d27980ce87d39e093ee66aa9e"
+  },
+  {
+    "path": "mirror/index.html",
+    "bytes": 1099,
+    "sha256": "f62383a3f9be6758a6f85a6bb684e111d5073d8a25565c0c7c7efd0a0d74c3f6"
+  },
+  {
+    "path": "mirror/ledger.json",
+    "bytes": 4549,
+    "sha256": "2f615876a814c1d2c2165184d5181dc594c41cbf738d373e560c5cb647672b38"
+  },
+  {
+    "path": "mirror/assets/index-2q0G7EaA.js",
+    "bytes": 749735,
+    "sha256": "34646f97874577195013f52a4613cfb0b5bf191e039262ed021dffd611799400"
+  },
+  {
+    "path": "mirror/assets/index-BqtF64IN.css",
+    "bytes": 308045,
+    "sha256": "7822846470c6cc9737a2cdc5bdba6888cf49ccece8adcab92f45f47c195e0414"
+  },
+  {
+    "path": "mirror/assets/inter-latin-400-normal-C38fXH4l.woff2",
+    "bytes": 23664,
+    "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+  },
+  {
+    "path": "mirror/assets/inter-latin-700-normal-Yt3aPRUw.woff2",
+    "bytes": 24356,
+    "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491"
+  },
+  {
+    "path": "mirror/assets/inter-latin-800-normal-BYj_oED-.woff2",
+    "bytes": 24400,
+    "sha256": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d"
+  },
+  {
+    "path": "mirror/assets/inter-latin-900-normal-D4nM5aha.woff2",
+    "bytes": 23900,
+    "sha256": "d5c0ed7b8b5dde97d48b97947d740bbd8ad3ba9f2c5cc6b8280f16acba2d828e"
+  },
+  {
+    "path": "mirror/assets/inter-latin-ext-400-normal-C1nco2VV.woff2",
+    "bytes": 35000,
+    "sha256": "6744a7f509ebc6ab220a6cd4ea77e898adf014f03d88dcda5d45d8a9feefb4e9"
+  },
+  {
+    "path": "mirror/assets/inter-latin-ext-700-normal-Ca8adRJv.woff2",
+    "bytes": 36244,
+    "sha256": "143f9504f1377012aa3e39c90c4354ef429cb0494b9ac0e1437f1a81e5412236"
+  },
+  {
+    "path": "mirror/assets/inter-latin-ext-800-normal-DZJjya6U.woff2",
+    "bytes": 36128,
+    "sha256": "eade55593308b9e4916dd7f47826929ce3e40cad85a2b338d56e5fd1e7bf8e5e"
+  },
+  {
+    "path": "mirror/assets/inter-latin-ext-900-normal-ty8Tfvw5.woff2",
+    "bytes": 35328,
+    "sha256": "de536299a1eeca46fe494787380486ec890627e0d50e1be18ef6001cbd1e5105"
+  },
+  {
+    "path": "mirror/brand/trifaros-logo-horizontal-reverse.png",
+    "bytes": 137893,
+    "sha256": "b88df4e216fb64821a28c6c990906520c01554ff6a9c2b1279b827db76175926"
+  },
+  {
+    "path": "mirror/brand/trifaros-logo-horizontal.png",
+    "bytes": 486822,
+    "sha256": "a9e4dab1392861c1927629bd181a60c462c32514e9427cc2ef8e3da0e2a64b4f"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-ajuste-01.png",
+    "bytes": 19118,
+    "sha256": "835049be4351a31dfea9ec1c6b0703845965ad867b980a3a75a20ba7aaf1da21"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-ajuste-28.png",
+    "bytes": 12300,
+    "sha256": "0da77347d755073763cacd4729cf3df4299780731f4be7d363e66e531c781dd0"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-ajuste-33.png",
+    "bytes": 14064,
+    "sha256": "5808fcdce9eff3550e093699efd94a900a9f1c1e883482e77289a3211ec7a143"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-ato-cotepe-annex.png",
+    "bytes": 11011,
+    "sha256": "0eb96d62f2d2a5170acfe5a0eb24716e3d6ffbb34840f7395f5f2c9e841d2c61"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-ato-cotepe-historical.png",
+    "bytes": 10246,
+    "sha256": "070e15d1d32edf777913bb32e76824b9429b7642a207eca7616c8e63e718b673"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-ato-cotepe-pmpf-table.png",
+    "bytes": 41023,
+    "sha256": "98279d9b09778edb4b9d81581bc164a6093f7711b9cf97930a466406fb500d06"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-ato-cotepe-standard.png",
+    "bytes": 9994,
+    "sha256": "87d3ccb5dca2d67d28b10c3b137deabfe1ada896765b60f2421b753956896a12"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-convenio-sintetico-permitido.png",
+    "bytes": 8076,
+    "sha256": "a0b471e3563510fed0687312d4656f8277c8604538e9125ce10dceee82ab9511"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-date-range.png",
+    "bytes": 117375,
+    "sha256": "8e12993264a1eb40aa12c0dc76999fdff85a0bd4cbb47e4b5b2b2e011a70658b"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-date-single.png",
+    "bytes": 110168,
+    "sha256": "3232310a51da6560fb4336ee807ee8fb9d6d2e3a225485a3c45dcd5423599e3c"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-protocolo-119.png",
+    "bytes": 14122,
+    "sha256": "72b669f077dde95d5f3715d1a05eed43fc08a2085626968ec88eeffb2750678f"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-protocolo-22.png",
+    "bytes": 14381,
+    "sha256": "53b7f3cc5fa2e880936ec674f61b765b84df29da99f7f20ac8693366775f83ac"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-protocolo-50.png",
+    "bytes": 10662,
+    "sha256": "73480c22fdc8f0fd0b16cd07b0fc8504124ee2958f30b27630dc0f2ca71af4ee"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1440-protocolo-53.png",
+    "bytes": 14127,
+    "sha256": "39043fd20a8e1f6a9b09dde1125939dc5ce9fd5e799472befb983d5efd0c042d"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-ajuste-01.png",
+    "bytes": 19118,
+    "sha256": "835049be4351a31dfea9ec1c6b0703845965ad867b980a3a75a20ba7aaf1da21"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-ajuste-28.png",
+    "bytes": 12300,
+    "sha256": "0da77347d755073763cacd4729cf3df4299780731f4be7d363e66e531c781dd0"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-ajuste-33.png",
+    "bytes": 14064,
+    "sha256": "5808fcdce9eff3550e093699efd94a900a9f1c1e883482e77289a3211ec7a143"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-ato-cotepe-annex.png",
+    "bytes": 11011,
+    "sha256": "0eb96d62f2d2a5170acfe5a0eb24716e3d6ffbb34840f7395f5f2c9e841d2c61"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-ato-cotepe-historical.png",
+    "bytes": 10246,
+    "sha256": "070e15d1d32edf777913bb32e76824b9429b7642a207eca7616c8e63e718b673"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-ato-cotepe-pmpf-table.png",
+    "bytes": 41023,
+    "sha256": "98279d9b09778edb4b9d81581bc164a6093f7711b9cf97930a466406fb500d06"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-ato-cotepe-standard.png",
+    "bytes": 9994,
+    "sha256": "87d3ccb5dca2d67d28b10c3b137deabfe1ada896765b60f2421b753956896a12"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-convenio-sintetico-permitido.png",
+    "bytes": 8076,
+    "sha256": "a0b471e3563510fed0687312d4656f8277c8604538e9125ce10dceee82ab9511"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-date-range.png",
+    "bytes": 121455,
+    "sha256": "5a3fdd378954a35834dac406a958497066c0dcd7bb4e6fa3e626ae2368cce0d3"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-date-single.png",
+    "bytes": 114166,
+    "sha256": "4de023da29d1d1179fc8a376fd228a9636c3bf104bbae46130f217e529737acd"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-protocolo-119.png",
+    "bytes": 14122,
+    "sha256": "72b669f077dde95d5f3715d1a05eed43fc08a2085626968ec88eeffb2750678f"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-protocolo-22.png",
+    "bytes": 14381,
+    "sha256": "53b7f3cc5fa2e880936ec674f61b765b84df29da99f7f20ac8693366775f83ac"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-protocolo-50.png",
+    "bytes": 10662,
+    "sha256": "73480c22fdc8f0fd0b16cd07b0fc8504124ee2958f30b27630dc0f2ca71af4ee"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/desktop-1920-protocolo-53.png",
+    "bytes": 14127,
+    "sha256": "39043fd20a8e1f6a9b09dde1125939dc5ce9fd5e799472befb983d5efd0c042d"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-ajuste-01.png",
+    "bytes": 17219,
+    "sha256": "7bd34f218a41172825a1ed8bfe30dfea191f5fdd94aff69e8e78fb2b1efc0784"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-ajuste-28.png",
+    "bytes": 11144,
+    "sha256": "1f2d35d7dd8d873bdd4bfb95bb15715ec2530d1c7c838a75af1c04ca38b24838"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-ajuste-33.png",
+    "bytes": 12827,
+    "sha256": "2978b54d44df482d3f69e6c8c16999d5f5082ee6bdce743e1e08c35552286493"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-ato-cotepe-annex.png",
+    "bytes": 9339,
+    "sha256": "27b1dc65c67bb2d1a7cf89789d21644258b9a8f78d6c6d7c76f73e85c36bc475"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-ato-cotepe-historical.png",
+    "bytes": 8581,
+    "sha256": "34ea966c11f14f1182d6d2d344da6eb9882ce01717017a21df680a1289c99070"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-ato-cotepe-pmpf-table.png",
+    "bytes": 21730,
+    "sha256": "b99574fd93f8a74d9ef0918da0cf70bc10a9936e6a2feacfa0de633c33825530"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-ato-cotepe-standard.png",
+    "bytes": 8531,
+    "sha256": "40bf2789fb07bed623e5b1c21e694b5740acb0cce6a082526e55d01f0b47fc0b"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-convenio-sintetico-permitido.png",
+    "bytes": 6946,
+    "sha256": "d7ffcbdd774c46b95eaf3f33599eb112fca177cc70f2b0459a8577bf52bab88b"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-date-range.png",
+    "bytes": 104725,
+    "sha256": "0c47581d21ca6a6eda535dd7b388ac7b3d63532daf696cccc33771890a954aef"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-date-single.png",
+    "bytes": 100076,
+    "sha256": "7fd3e93767fa10aefefa3ec90cb90d4e29b7091cf7023fab1446dae39c54d22f"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-protocolo-119.png",
+    "bytes": 12530,
+    "sha256": "57fb7715cf8ccd7ac60817d366ad9e383706b8ed168f8d78ca812e170bc49503"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-protocolo-22.png",
+    "bytes": 12049,
+    "sha256": "b4a92f2d13e82689bd24be3180b0864f70c4904295e3a7feca0843e02eee7fe5"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-protocolo-50.png",
+    "bytes": 9399,
+    "sha256": "978a14ab023aa1207f20c21e20a278eaa0937bb332aacf0078225210ef135080"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-360-protocolo-53.png",
+    "bytes": 12014,
+    "sha256": "84fa75431a317231ab0b5ce86dc5f3475c7722244af512a32b43cbe9dddde85c"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-ajuste-01.png",
+    "bytes": 17135,
+    "sha256": "aae45893f17695d8fb9615334cadc87371b33137240c1afe7315ab354378b3e6"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-ajuste-28.png",
+    "bytes": 11145,
+    "sha256": "e343e0467ba629b575f41e1b33c0496d4c36803f4f8f90e45b241d2214e22fd8"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-ajuste-33.png",
+    "bytes": 12883,
+    "sha256": "2e435065c7a2b2a5b3534bedb102c03c6766ac5bd185dcf9a415e968ef4c600d"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-ato-cotepe-annex.png",
+    "bytes": 9532,
+    "sha256": "e049d94f5af40297675b728d37aab7dbafdf2e8907c3ce34a103769743f42ab2"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-ato-cotepe-historical.png",
+    "bytes": 8979,
+    "sha256": "826382aaa61e728a8c9137d54bb23f2ed0b9cfd2792b922c9089eec63cc99537"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-ato-cotepe-pmpf-table.png",
+    "bytes": 22207,
+    "sha256": "29bbb751d77fe71424fe64b58156686547c0933a07296c138e2da3148785a775"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-ato-cotepe-standard.png",
+    "bytes": 8856,
+    "sha256": "7448f7f20eedc5ab8a70f2ee2a6b44a4be5f445c37967495b53e8aa96fc2ca7d"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-convenio-sintetico-permitido.png",
+    "bytes": 7106,
+    "sha256": "3deb8eff29f75a3e24e9db28a431674f44e7ea49ccf885b4a31a60c47ee7c019"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-date-range.png",
+    "bytes": 107193,
+    "sha256": "9b35df3cf1be41848f7712b74d5087bfbff106eba020211420d28166db6d6217"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-date-single.png",
+    "bytes": 101425,
+    "sha256": "76753040c95cd7d6b986e3ba7e4956be1f7d757226287530b48a5cc4fd84861a"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-protocolo-119.png",
+    "bytes": 12768,
+    "sha256": "9477e264b50d69df8df6f63cc35de0acfb364020d3d24acd099048372f687ae9"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-protocolo-22.png",
+    "bytes": 12229,
+    "sha256": "851c16f83004d9f8cf905d55146272e769045b737e32c40d58f10f9bd1174a6f"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-protocolo-50.png",
+    "bytes": 9171,
+    "sha256": "2cc13974ea654f5751c29fd1188f2a474eda8bd0a9e4b6314fe8ec3756736d22"
+  },
+  {
+    "path": "playwright-artifacts/screenshots/mobile-390-protocolo-53.png",
+    "bytes": 12331,
+    "sha256": "c423c09c913ed8c7d2866f6b236b8a76d1407fe6cb1489f78711b0490c2080eb"
+  },
+  {
+    "path": "review/CTRL-5.md",
+    "bytes": 5772,
+    "sha256": "92d0f9d01e95497a6b9b6448c07e5c8d34b5e8092688b9c9ca26a7e2c67366c7"
+  },
+  {
+    "path": "review/CTRL-60.md",
+    "bytes": 4536,
+    "sha256": "230d267c6f5463003847c3085688bec288a3691880ebaca120ca6b281da8961a"
+  },
+  {
+    "path": "review/CTRL-66.md",
+    "bytes": 6001,
+    "sha256": "a4b02dadd41d500daf2e9afa7e98ef28c13adc103d6f7ed6bf113dc572804195"
+  },
+  {
+    "path": "review/evidence.json",
+    "bytes": 47270,
+    "sha256": "2e08dae4453f7e5b766cab104bde36f79bc2d79583b7cfd0d21b85c414105782"
+  },
+  {
+    "path": "review/STATUS.md",
+    "bytes": 1427,
+    "sha256": "1418c5f01bfa9a1c114ef89db1c36334512b1729d432d6f85ac12dc5dce4760d"
+  }
+]
