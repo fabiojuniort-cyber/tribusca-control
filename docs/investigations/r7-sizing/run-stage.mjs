@@ -25,11 +25,36 @@ const env={...process.env,CI:'true',NODE_ENV:'test',DATABASE_ADMIN_URL:'postgres
 for(const k of ['GH_TOKEN','PGHOST','PGPORT','PGDATABASE','PGUSER','PGPASSWORD','PGSERVICE','PGSERVICEFILE','PGOPTIONS','NODE_OPTIONS'])delete env[k];
 const secrets=[env.DB_RUNTIME_PASSWORD,env.DB_CURATOR_RUNTIME_PASSWORD,env.JWT_ACCESS_SECRET];
 function clean(s){s=s.replace(/postgres(?:ql)?:\/\/[^\s"'<>]+/g,'[LAB_DSN_REDACTED]');for(const v of secrets)s=s.split(v).join('[LAB_VALUE_REDACTED]');return s;}
+function sanitizeDiagnostic(value){return clean(String(value??'')
+    .replace(/\b(?:POSTGRES_PASSWORD|PGPASSWORD)\s*=\s*(?:(?:"(?:\\[\s\S]|[^"\\])*"|'(?:\\[\s\S]|[^'\\])*')(?=\s|$)|[\s\S]*)/gi,'[LAB_VALUE_REDACTED]')
+    .replace(/postgres(?:ql)?:\/\/[^\r\n]*/gi,'[LAB_DSN_REDACTED]'));}
 function execute(command,args,{cwd=root,file,environment=env,allowFailure=false,onFailure,timeoutMs}={}){
  return new Promise((resolve,reject)=>{
-  let text='',stderr='';const child=spawn(command,args,{cwd,env:environment,stdio:['ignore','pipe','pipe'],timeout:timeoutMs});
-  const collect=b=>{text+=b.toString();};child.stdout.on('data',collect);child.stderr.on('data',b=>{collect(b);if(onFailure)stderr+=b.toString();});
-  child.once('error',error=>{if(allowFailure)resolve({code:null,signal:null,spawnError:error,text:clean(text)});else reject(error);});child.once('close',(code,signal)=>{const safe=clean(text);if(file)fs.writeFileSync(file,safe);if(code!==0&&!allowFailure){if(onFailure)onFailure(code,stderr);reject(Error('command_failed:'+command+':'+code));}else resolve({code,signal,text:safe,stderr:clean(stderr)});});
+  let text='',stderr='',spawnError=null,child,watchdog,settled=false;
+  const started=performance.now();
+  function finish(code,signal,terminationConfirmed=true){
+   if(settled)return;
+   settled=true;
+   clearTimeout(watchdog);
+   const timedOut=timeoutMs!==undefined&&signal==='SIGKILL'&&performance.now()-started>=timeoutMs;
+   const result={code,signal,spawnError,text:clean(text),stderr:clean(stderr),timedOut,terminationConfirmed,
+    error_kind:spawnError?'SPAWN_ERROR':timedOut?'TIMEOUT':signal?'SIGNAL':code!==0?'EXIT_ERROR':null};
+   if(file)fs.writeFileSync(file,result.text);
+   if((code!==0||spawnError)&&!allowFailure){
+    if(onFailure)onFailure(code,stderr,result);
+    reject(spawnError??Error('command_failed:'+command+':'+code));
+   }else resolve(result);
+  }
+  try{
+   child=spawn(command,args,{cwd,env:environment,stdio:['ignore','pipe','pipe'],
+    ...(timeoutMs===undefined?{}:{timeout:timeoutMs,killSignal:'SIGKILL'})});
+  }catch(error){spawnError=error;finish(null,null);return;}
+  child.stdout.on('data',b=>{text+=b.toString();});
+  child.stderr.on('data',b=>{stderr+=b.toString();text+=b.toString();});
+  child.once('error',error=>{spawnError=error;});
+  child.once('close',(code,signal)=>finish(code,signal));
+  // Failure to confirm termination stops the tree. It never permits another probe.
+  if(timeoutMs!==undefined)watchdog=setTimeout(()=>finish(null,child.signalCode??null,false),timeoutMs+1000);
  });
 }
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
@@ -72,12 +97,14 @@ try{
  for(const [label,sha] of cases){
   const dir=path.join(root,'backend-'+label),out=path.join(output,label);fs.mkdirSync(out);
   const result={label,source:sha,attempt:1,status:'NOT_RUN',product_outcome:productResult(),observer_ended_before_product:false,steps:[]};const t0=performance.now();
-  const preparationFailure=step=>(exitCode,stderr)=>{
+  const preparationFailure=step=>(exitCode,stderr,details={})=>{
    // Preserve only the prefix when a password value has no reliable end delimiter.
-   const sanitized=clean(stderr
-    .replace(/\b(?:POSTGRES_PASSWORD|PGPASSWORD)\s*=\s*(?:(?:"(?:\\[\s\S]|[^"\\])*"|'(?:\\[\s\S]|[^'\\])*')(?=\s|$)|[\s\S]*)/gi,'[LAB_VALUE_REDACTED]')
-    .replace(/postgres(?:ql)?:\/\/[^\r\n]*/gi,'[LAB_DSN_REDACTED]'));
-   result.preparation_failure={step,exit_code:exitCode,stderr:sanitized.slice(0,2048),stderr_truncated:sanitized.length>2048};
+   const sanitized=sanitizeDiagnostic(stderr);
+   result.preparation_failure={step,exit_code:exitCode,stderr:sanitized.slice(0,2048),stderr_truncated:sanitized.length>2048,
+    error_kind:details.error_kind??'EXIT_ERROR',signal:details.signal??null,
+    spawn_error_code:details.spawnError?.code??null,
+    spawn_error:details.spawnError?sanitizeDiagnostic(details.spawnError.message).slice(0,2048):null,
+    termination_confirmed:details.terminationConfirmed!==false};
   };
   try{
    if(!path.resolve(dir).startsWith(path.resolve(root)+path.sep)||!fs.existsSync(dir))throw Error('workspace_guard');
@@ -88,18 +115,21 @@ try{
    // The entrypoint temporary server has no TCP listener. Require the final server and target database.
    let ready=false;
    const readinessDeadline=performance.now()+30000;
-   for(let i=0;i<30&&performance.now()<readinessDeadline;i++){
+   for(let i=0;i<30;i++){
+    const timeoutMs=Math.floor(readinessDeadline-performance.now());
+    if(timeoutMs<1)break;
     const r=await execute('docker',['exec','-e','PGCONNECT_TIMEOUT=1','-e','PGPASSWORD=postgres',activeContainer,
      'psql','-h','127.0.0.1','-p','5432','-U','postgres','-d','radar_fiscal_test','-v','ON_ERROR_STOP=1','-Atc',
      "SELECT current_database()||'|'||current_setting('server_version')"],
-     {allowFailure:true,onFailure:preparationFailure('docker_exec_psql_initial'),timeoutMs:Math.max(1,readinessDeadline-performance.now())});
+     {allowFailure:true,onFailure:preparationFailure('docker_exec_psql_initial'),timeoutMs});
     if(r.code===0){
      if(!r.text.trim().startsWith('radar_fiscal_test|18.6'))throw Error('postgres_version_guard');
      ready=true;
      delete result.preparation_failure;
      break;
     }
-    preparationFailure('docker_exec_psql_initial')(r.code,r.stderr);
+    preparationFailure('docker_exec_psql_initial')(r.code,r.stderr,r);
+    if(!r.terminationConfirmed)throw Error('readiness_termination_unconfirmed');
     const remaining=readinessDeadline-performance.now();
     if(remaining>0)await new Promise(r=>setTimeout(r,Math.min(1000,remaining)));
    }
@@ -118,7 +148,7 @@ try{
    if(r.code===0){try{result.metrics=parseMetrics(r.text,volume);}catch{result.metrics_invalid=true;}}
    // Preserve the succeeding semantic gate too; a failed R7 does not run it.
    if(r.code===0&&(!['F2-R7-SIZING-03','F2-R7-SIZING-04','F2-R7-SIZING-05'].includes(grant)||!result.metrics_invalid)){const v=await execute('bash',['ops/onb02/ci-evidence-pg18.sh'],{cwd:dir,file:path.join(out,'semantic.txt'),allowFailure:true});result.semantic_code=v.code;if(v.code!==0){result.status='FAIL_SEMANTIC';finalCode=1;}}
-  }catch(e){result.status=result.status==='NOT_RUN'?'BLOCKED_PREPARATION':result.status;result.error=e.message;finalCode=1;}
+  }catch(e){result.status=result.status==='NOT_RUN'?'BLOCKED_PREPARATION':result.status;result.error=sanitizeDiagnostic(e.message);finalCode=1;}
   finally{
    await stopObserver();
    if(activeContainer){const l=await execute('docker',['logs',activeContainer],{allowFailure:true});fs.writeFileSync(path.join(out,'plans.json'),JSON.stringify(plansFromLog(l.text),null,2));fs.writeFileSync(path.join(out,'postgres-errors.txt'),l.text.split('\n').filter(x=>/ERROR:  (synthetic_batch_interruption|canceling statement due to (statement|lock) timeout)/.test(x)).join('\n'));}
