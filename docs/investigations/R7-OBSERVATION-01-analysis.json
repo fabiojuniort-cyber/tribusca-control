@@ -1,0 +1,183 @@
+{
+  "run": 41930483691,
+  "harness": "23c9226fb88f7fa5abcf9730ae772ce62036670b",
+  "artifact_sha256": "0d5b0ac52064eaaa93c5b8edd5c28caf1500b992d355d5d63f926bc3bda2d543",
+  "root_cause": "NOT_PROVEN",
+  "limitation": "initial wrapper recycled client on error instead of release(error), potential session/plan-cache semantic difference",
+  "cases": [
+    {
+      "label": "control",
+      "sessions": 4,
+      "gucs": {
+        "server_version": "18.6 (Debian 18.6-1.pgdg12+2)",
+        "statement_timeout": "45s",
+        "lock_timeout": "5s",
+        "jit": "off",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_connections": "100",
+        "plan_cache_mode": "auto",
+        "default_statistics_target": "100",
+        "autovacuum": "on",
+        "autovacuum_naptime": "1min",
+        "track_io_timing": "on",
+        "session_preload_libraries": "auto_explain",
+        "auto_explain.log_min_duration": "250ms",
+        "auto_explain.log_analyze": "on",
+        "auto_explain.log_timing": "off",
+        "auto_explain.log_nested_statements": "on",
+        "auto_explain.log_buffers": "on",
+        "auto_explain.log_parameter_max_length": "0",
+        "auto_explain.log_format": "json"
+      },
+      "committed_batches": 30,
+      "processed": 150000,
+      "batch_ms_min": 950.4347769999986,
+      "batch_ms_max": 1057.3922940000011,
+      "expected_error": [
+        {
+          "ordinal": 1,
+          "sqlstate": "P0001",
+          "message": "synthetic_batch_interruption"
+        }
+      ],
+      "sample_count": 45,
+      "observer_errors": 0,
+      "blocked_samples": 0,
+      "waits": [
+        "Client:ClientRead",
+        "LWLock:WALWrite",
+        "null:null"
+      ],
+      "metadata_overhead_ms": 109.94755000000805,
+      "observer_overhead_ms": 317.41997100001817,
+      "initial_table": {
+        "dead": 43,
+        "live": 1,
+        "modified": 70,
+        "relpages": 1,
+        "reltuples": 1,
+        "reloptions": null,
+        "last_analyze": "2026-11-04T23:03:59.481684+00:00",
+        "last_autovacuum": "2026-11-04T23:04:47.716507+00:00",
+        "last_autoanalyze": "2026-11-04T23:04:47.726165+00:00"
+      },
+      "table_before_first_successful_batch": {
+        "dead": 44,
+        "live": 150001,
+        "modified": 150072,
+        "relpages": 1,
+        "reltuples": 1,
+        "reloptions": null,
+        "last_analyze": "2026-11-04T23:03:59.481684+00:00",
+        "last_autovacuum": "2026-11-04T23:04:47.716507+00:00",
+        "last_autoanalyze": "2026-11-04T23:04:47.726165+00:00"
+      },
+      "plan_count": 71,
+      "plan_types": [
+        "ModifyTable",
+        "Subquery Scan",
+        "Function Scan",
+        "Aggregate",
+        "Sort",
+        "Index Scan",
+        "Seq Scan",
+        "CTE Scan",
+        "Limit",
+        "LockRows",
+        "Bitmap Heap Scan",
+        "Bitmap Index Scan",
+        "Hash Join",
+        "Hash",
+        "Nested Loop"
+      ],
+      "plans_capped": false
+    },
+    {
+      "label": "integration",
+      "sessions": 4,
+      "gucs": {
+        "server_version": "18.6 (Debian 18.6-1.pgdg12+2)",
+        "statement_timeout": "45s",
+        "lock_timeout": "5s",
+        "jit": "off",
+        "work_mem": "4MB",
+        "shared_buffers": "128MB",
+        "max_connections": "100",
+        "plan_cache_mode": "auto",
+        "default_statistics_target": "100",
+        "autovacuum": "on",
+        "autovacuum_naptime": "1min",
+        "track_io_timing": "on",
+        "session_preload_libraries": "auto_explain",
+        "auto_explain.log_min_duration": "250ms",
+        "auto_explain.log_analyze": "on",
+        "auto_explain.log_timing": "off",
+        "auto_explain.log_nested_statements": "on",
+        "auto_explain.log_buffers": "on",
+        "auto_explain.log_parameter_max_length": "0",
+        "auto_explain.log_format": "json"
+      },
+      "committed_batches": 30,
+      "processed": 150000,
+      "batch_ms_min": 944.1359239999947,
+      "batch_ms_max": 1155.1690400000007,
+      "expected_error": [
+        {
+          "ordinal": 1,
+          "sqlstate": "P0001",
+          "message": "synthetic_batch_interruption"
+        }
+      ],
+      "sample_count": 48,
+      "observer_errors": 0,
+      "blocked_samples": 0,
+      "waits": [
+        "IO:WalSync",
+        "null:null",
+        "Timeout:VacuumDelay",
+        "IPC:MessageQueueSend"
+      ],
+      "metadata_overhead_ms": 115.3210320000087,
+      "observer_overhead_ms": 317.4195740000086,
+      "initial_table": {
+        "dead": 150152,
+        "live": 1,
+        "modified": 150225,
+        "relpages": 6001,
+        "reltuples": 150001,
+        "reloptions": null,
+        "last_analyze": "2026-11-04T23:06:22.097191+00:00",
+        "last_autovacuum": null,
+        "last_autoanalyze": null
+      },
+      "table_before_first_successful_batch": {
+        "dead": 150153,
+        "live": 150001,
+        "modified": 300227,
+        "relpages": 6001,
+        "reltuples": 150001,
+        "reloptions": null,
+        "last_analyze": "2026-11-04T23:06:22.097191+00:00",
+        "last_autovacuum": null,
+        "last_autoanalyze": null
+      },
+      "plan_count": 71,
+      "plan_types": [
+        "ModifyTable",
+        "Subquery Scan",
+        "Function Scan",
+        "Aggregate",
+        "Sort",
+        "Index Scan",
+        "Seq Scan",
+        "CTE Scan",
+        "Limit",
+        "LockRows",
+        "Hash Join",
+        "Hash"
+      ],
+      "plans_capped": false
+    }
+  ]
+}
