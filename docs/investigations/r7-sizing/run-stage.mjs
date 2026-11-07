@@ -25,11 +25,11 @@ const env={...process.env,CI:'true',NODE_ENV:'test',DATABASE_ADMIN_URL:'postgres
 for(const k of ['GH_TOKEN','PGHOST','PGPORT','PGDATABASE','PGUSER','PGPASSWORD','PGSERVICE','PGSERVICEFILE','PGOPTIONS','NODE_OPTIONS'])delete env[k];
 const secrets=[env.DB_RUNTIME_PASSWORD,env.DB_CURATOR_RUNTIME_PASSWORD,env.JWT_ACCESS_SECRET];
 function clean(s){s=s.replace(/postgres(?:ql)?:\/\/[^\s"'<>]+/g,'[LAB_DSN_REDACTED]');for(const v of secrets)s=s.split(v).join('[LAB_VALUE_REDACTED]');return s;}
-function execute(command,args,{cwd=root,file,environment=env,allowFailure=false,onFailure}={}){
+function execute(command,args,{cwd=root,file,environment=env,allowFailure=false,onFailure,timeoutMs}={}){
  return new Promise((resolve,reject)=>{
-  let text='',stderr='';const child=spawn(command,args,{cwd,env:environment,stdio:['ignore','pipe','pipe']});
+  let text='',stderr='';const child=spawn(command,args,{cwd,env:environment,stdio:['ignore','pipe','pipe'],timeout:timeoutMs});
   const collect=b=>{text+=b.toString();};child.stdout.on('data',collect);child.stderr.on('data',b=>{collect(b);if(onFailure)stderr+=b.toString();});
-  child.once('error',error=>{if(allowFailure)resolve({code:null,signal:null,spawnError:error,text:clean(text)});else reject(error);});child.once('close',(code,signal)=>{const safe=clean(text);if(file)fs.writeFileSync(file,safe);if(code!==0&&!allowFailure){if(onFailure)onFailure(code,stderr);reject(Error('command_failed:'+command+':'+code));}else resolve({code,signal,text:safe});});
+  child.once('error',error=>{if(allowFailure)resolve({code:null,signal:null,spawnError:error,text:clean(text)});else reject(error);});child.once('close',(code,signal)=>{const safe=clean(text);if(file)fs.writeFileSync(file,safe);if(code!==0&&!allowFailure){if(onFailure)onFailure(code,stderr);reject(Error('command_failed:'+command+':'+code));}else resolve({code,signal,text:safe,stderr:clean(stderr)});});
  });
 }
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
@@ -85,9 +85,25 @@ try{
    const tree=await execute('git',['rev-parse','HEAD^{tree}'],{cwd:dir});result.tree=tree.text.trim();
    activeContainer='f2-r7-'+nonce+'-'+label;
    await execute('docker',['run','--rm','-d','--name',activeContainer,'--label','f2-r7-lab='+nonce,'-e','POSTGRES_DB=radar_fiscal_test','-e','POSTGRES_USER=postgres','-e','POSTGRES_PASSWORD=postgres','-p','127.0.0.1:5432:5432',image],{onFailure:preparationFailure('docker_run')});
-   let ready=false;for(let i=0;i<30;i++){const r=await execute('docker',['exec',activeContainer,'pg_isready','-U','postgres','-d','radar_fiscal_test'],{allowFailure:true});if(r.code===0){ready=true;break;}await new Promise(r=>setTimeout(r,1000));}if(!ready)throw Error('database_not_ready');
-   // Fixed endpoint, fresh labelled container; refuse host/database drift before DDL.
-   const version=await execute('docker',['exec',activeContainer,'psql','-U','postgres','-d','radar_fiscal_test','-Atc',"SELECT current_database()||'|'||current_setting('server_version')"],{onFailure:preparationFailure('docker_exec_psql_initial')});if(!version.text.startsWith('radar_fiscal_test|18.6'))throw Error('postgres_version_guard');
+   // The entrypoint temporary server has no TCP listener. Require the final server and target database.
+   let ready=false;
+   const readinessDeadline=performance.now()+30000;
+   for(let i=0;i<30&&performance.now()<readinessDeadline;i++){
+    const r=await execute('docker',['exec','-e','PGCONNECT_TIMEOUT=1','-e','PGPASSWORD=postgres',activeContainer,
+     'psql','-h','127.0.0.1','-p','5432','-U','postgres','-d','radar_fiscal_test','-v','ON_ERROR_STOP=1','-Atc',
+     "SELECT current_database()||'|'||current_setting('server_version')"],
+     {allowFailure:true,onFailure:preparationFailure('docker_exec_psql_initial'),timeoutMs:Math.max(1,readinessDeadline-performance.now())});
+    if(r.code===0){
+     if(!r.text.trim().startsWith('radar_fiscal_test|18.6'))throw Error('postgres_version_guard');
+     ready=true;
+     delete result.preparation_failure;
+     break;
+    }
+    preparationFailure('docker_exec_psql_initial')(r.code,r.stderr);
+    const remaining=readinessDeadline-performance.now();
+    if(remaining>0)await new Promise(r=>setTimeout(r,Math.min(1000,remaining)));
+   }
+   if(!ready)throw Error('database_not_ready');
    for(let i=0;i<commands.length;i++){
     const [cmd,args]=commands[i],t=performance.now();
     const r=await execute(cmd,args,{cwd:dir,file:path.join(out,'step-'+String(i).padStart(2,'0')+'.txt'),allowFailure:true});result.steps.push({cmd:[cmd,...args],code:r.code,elapsed_ms:performance.now()-t});
