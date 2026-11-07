@@ -12,7 +12,7 @@ async function runWithSimulatedDependencies(firstExpectations, failPreparation, 
  const summaryFile=new Map();
  const dependencies={
   ...policy, expectations, path:path.posix,
-  authorizeGrant:async()=> volume===18000?'F2-R7-SIZING-04':'F2-R7-SIZING-03',
+  authorizeGrant:async()=> volume===45000?'F2-R7-SIZING-05':volume===18000?'F2-R7-SIZING-04':'F2-R7-SIZING-03',
   buildDiagnostic:()=>({source:'mock',originalHash:'hash',expectations:trees.length===1?firstExpectations:expectations(volume)}),
   sha256:()=> 'hash', PINNED:{originalTest:'hash'},
   finalizeEvidence:({product})=>({product_outcome:product,observation_outcome:{status:'COMPLETE',reasons:[]}}),
@@ -118,4 +118,16 @@ test('grant 04 runs at most two trees at 18k and stops on the first failed prepa
  assert.equal(passed.exit,0);
  assert.deepEqual(passed.trees,['backend-control','backend-integration']);
  assert.deepEqual(passed.summary.map(tree=>[tree.metrics.rows,tree.attempt]),[[18000,1],[18000,1]]);
+});
+test('grant 05 runs at most two trees at 45k and stops on the first failed preparation',async()=>{
+ const expected=expectations(45000);
+ const failed=await runWithSimulatedDependencies(expected,'docker_exec_psql_initial',undefined,45000);
+ assert.equal(failed.exit,1);
+ assert.deepEqual(failed.trees,['backend-control']);
+ assert.equal(failed.summary[0].product_outcome.status,'NOT_RUN');
+ assert.equal(failed.summary[0].preparation_failure.step,'docker_exec_psql_initial');
+ const passed=await runWithSimulatedDependencies(expected,undefined,undefined,45000);
+ assert.equal(passed.exit,0);
+ assert.deepEqual(passed.trees,['backend-control','backend-integration']);
+ assert.deepEqual(passed.summary.map(tree=>[tree.metrics.rows,tree.attempt]),[[45000,1],[45000,1]]);
 });

@@ -101,7 +101,7 @@ try{
    result.status=r.code===0?'PRODUCT_EXITED_0':'PRODUCT_FAILED';if(r.code!==0)finalCode=1;
    if(r.code===0){try{result.metrics=parseMetrics(r.text,volume);}catch{result.metrics_invalid=true;}}
    // Preserve the succeeding semantic gate too; a failed R7 does not run it.
-   if(r.code===0&&(!['F2-R7-SIZING-03','F2-R7-SIZING-04'].includes(grant)||!result.metrics_invalid)){const v=await execute('bash',['ops/onb02/ci-evidence-pg18.sh'],{cwd:dir,file:path.join(out,'semantic.txt'),allowFailure:true});result.semantic_code=v.code;if(v.code!==0){result.status='FAIL_SEMANTIC';finalCode=1;}}
+   if(r.code===0&&(!['F2-R7-SIZING-03','F2-R7-SIZING-04','F2-R7-SIZING-05'].includes(grant)||!result.metrics_invalid)){const v=await execute('bash',['ops/onb02/ci-evidence-pg18.sh'],{cwd:dir,file:path.join(out,'semantic.txt'),allowFailure:true});result.semantic_code=v.code;if(v.code!==0){result.status='FAIL_SEMANTIC';finalCode=1;}}
   }catch(e){result.status=result.status==='NOT_RUN'?'BLOCKED_PREPARATION':result.status;result.error=e.message;finalCode=1;}
   finally{
    await stopObserver();
