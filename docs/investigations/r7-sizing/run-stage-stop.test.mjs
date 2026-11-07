@@ -6,12 +6,16 @@ import path from 'node:path';
 import * as policy from './stage-policy.mjs';
 import {expectations} from './diagnostic.mjs';
 
-async function runWithSimulatedDependencies(firstExpectations, failPreparation, stderr = 'PGPASSWORD="minha senha" connection failed: POSTGRESQL://user:sensitive@localhost/db\n' + 'x'.repeat(2500), volume = 6000) {
+async function runWithSimulatedDependencies(firstExpectations, failPreparation, stderr = 'PGPASSWORD="minha senha" connection failed: POSTGRESQL://user:sensitive@localhost/db\n' + 'x'.repeat(2500), volume = 6000, readinessFailures = 0, probeDuration = 0, clockStart = 0, subMillisecond = false) {
  const source=readFileSync(new URL('./run-stage.mjs',import.meta.url),'utf8');
  const commands=[], trees=[];
  const summaryFile=new Map();
+ let sqlProbes=0;
+ let clock=clockStart,afterContainer=false,readinessClockReads=0;
  const dependencies={
   ...policy, expectations, path:path.posix,
+  setTimeout:(callback,delay)=>{if(delay<=1000){clock+=delay;queueMicrotask(callback);}return 0;},
+  clearTimeout(){},
   authorizeGrant:async()=> volume===45000?'F2-R7-SIZING-05':volume===18000?'F2-R7-SIZING-04':'F2-R7-SIZING-03',
   buildDiagnostic:()=>({source:'mock',originalHash:'hash',expectations:trees.length===1?firstExpectations:expectations(volume)}),
   sha256:()=> 'hash', PINNED:{originalTest:'hash'},
@@ -21,7 +25,7 @@ async function runWithSimulatedDependencies(firstExpectations, failPreparation, 
   fs:{mkdirSync(){},existsSync:()=>true,readFileSync:file=>summaryFile.get(file)??'mock',
    writeFileSync:(file,value)=>summaryFile.set(file,value),copyFileSync(){},openSync:()=>1,closeSync(){}},
   crypto:{randomBytes:()=>Buffer.alloc(12)},os:{platform:()=> 'linux',release:()=> 'mock',cpus:()=>[],totalmem:()=>0},
-  performance:{now:()=>0}, console:{log(){}},
+  performance:{now:()=>{if(subMillisecond&&afterContainer&&++readinessClockReads===2)clock+=29999.5;return clock;}}, console:{log(){}},
   process:{env:{F2_VOLUME:String(volume),RUNNER_TEMP:'/tmp',CI:'true',GITHUB_ACTIONS:'true',GITHUB_RUN_ATTEMPT:'1'},cwd:()=> '/lab',platform:'linux',version:'v24.22.2',on(){}},
   spawn(command,args,{cwd}){
    commands.push([command,args,cwd]);
@@ -31,7 +35,9 @@ async function runWithSimulatedDependencies(firstExpectations, failPreparation, 
    child.kill=signal=>queueMicrotask(()=>{child.signalCode=signal;child.emit('close',null,signal);});
    if(command==='node'&&args.includes('--observer'))return child;
    const preparation=command==='docker'&&(args[0]==='run'?'docker_run':args.some(a=>a.includes('current_database()'))?'docker_exec_psql_initial':null);
-   if(preparation&&preparation===failPreparation){
+   if(preparation==='docker_run')afterContainer=true;
+   if(preparation==='docker_exec_psql_initial'){sqlProbes++;clock+=probeDuration;}
+   if(preparation&&(preparation===failPreparation||(preparation==='docker_exec_psql_initial'&&sqlProbes<=readinessFailures))){
     queueMicrotask(()=>{
      child.stdout.emit('data',Buffer.from('stdout excluded'));
      child.stderr.emit('data',Buffer.from(stderr));
@@ -84,7 +90,7 @@ for(const step of ['docker_run','docker_exec_psql_initial']){
   assert.equal(control.status,'BLOCKED_PREPARATION');
   assert.equal(control.product_outcome.status,'NOT_RUN');
   assert.deepEqual(control.steps,[]);
-  assert.equal(control.error,'command_failed:docker:2');
+  assert.equal(control.error,step==='docker_run'?'command_failed:docker:2':'database_not_ready');
   const failure=control.preparation_failure;
   assert.equal(failure.step,step);
   assert.equal(failure.exit_code,2);
@@ -102,7 +108,7 @@ test('ambiguous password assignments omit the remainder of stderr',async()=>{
   assert.deepEqual(result.trees,['backend-control']);
   assert.equal(result.summary[0].product_outcome.status,'NOT_RUN');
   assert.deepEqual(result.summary[0].preparation_failure,{
-   step:'docker_run',exit_code:2,stderr:'context [LAB_VALUE_REDACTED]',stderr_truncated:false,
+   step:'docker_run',exit_code:2,stderr:'context [LAB_VALUE_REDACTED]',stderr_truncated:false,error_kind:'EXIT_ERROR',signal:null,spawn_error_code:null,spawn_error:null,termination_confirmed:true,
   });
  }
 });
@@ -130,4 +136,40 @@ test('grant 05 runs at most two trees at 45k and stops on the first failed prepa
  assert.equal(passed.exit,0);
  assert.deepEqual(passed.trees,['backend-control','backend-integration']);
  assert.deepEqual(passed.summary.map(tree=>[tree.metrics.rows,tree.attempt]),[[45000,1],[45000,1]]);
+});
+
+for(const [scenario,failures]of [['temporary socket-only server',2],['target database absent',3],['complete readiness',0],['readiness exhausted',30]]){
+ test(scenario+' requires real TCP SQL before preparation',async()=>{
+  const result=await runWithSimulatedDependencies(expectations(45000),undefined,'PGPASSWORD="minha senha" POSTGRESQL://user:sensitive@localhost/db',45000,failures);
+  const probes=result.commands.filter(([cmd,args])=>cmd==='docker'&&args.some(a=>a.includes('current_database()')));
+  assert.ok(probes.every(([,args])=>args.includes('127.0.0.1')&&args.includes('radar_fiscal_test')&&args.includes('PGCONNECT_TIMEOUT=1')));
+  assert.equal(result.commands.some(([,args])=>args.includes('pg_isready')),false);
+  if(failures===30){
+   assert.equal(probes.length,30);
+   assert.deepEqual(result.trees,['backend-control']);
+   assert.equal(result.summary[0].product_outcome.status,'NOT_RUN');
+   assert.equal(result.summary[0].error,'database_not_ready');
+   assert.doesNotMatch(result.summary[0].preparation_failure.stderr,/minha|senha|sensitive/);
+  }else{
+   assert.equal(result.exit,0);
+   assert.equal(probes.length,failures+2);
+   assert.ok(result.summary.every(r=>r.preparation_failure===undefined));
+  }
+ });
+}
+
+test('elapsed probe time exhausts the deadline before thirty probes',async()=>{
+ const r=await runWithSimulatedDependencies(expectations(45000),undefined,'SQL error',45000,30,11000,0.123);
+ const probes=r.commands.filter(([,args])=>args.includes('PGCONNECT_TIMEOUT=1'));
+ assert.equal(probes.length,3);
+ assert.deepEqual(r.trees,['backend-control']);
+ assert.equal(r.summary[0].product_outcome.status,'NOT_RUN');
+});
+
+test('a real sub-ms deadline balance in the entry path starts no SQL process',async()=>{
+ const r=await runWithSimulatedDependencies(expectations(45000),undefined,'',45000,0,0,0.123,true);
+ assert.equal(r.commands.filter(([,args])=>args.includes('PGCONNECT_TIMEOUT=1')).length,0);
+ assert.deepEqual(r.trees,['backend-control']);
+ assert.equal(r.summary[0].product_outcome.status,'NOT_RUN');
+ assert.equal(r.summary[0].error,'database_not_ready');
 });
