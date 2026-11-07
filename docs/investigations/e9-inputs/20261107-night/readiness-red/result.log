@@ -1,20 +1,20 @@
-✖ fractional deadline budget is floored and sub-ms balance starts no probe (2.6593ms)
-✖ synchronous spawn errors retain original cause and empty stderr (0.6144ms)
-✖ real ENOENT waits for close and produces a complete result shape (14.3653ms)
-✖ a hung real subprocess is killed and closed before the next starts (230.2506ms)
-ℹ tests 4
-ℹ suites 0
-ℹ pass 0
-ℹ fail 4
-ℹ cancelled 0
-ℹ skipped 0
-ℹ todo 0
-ℹ duration_ms 1156.2464
+Ô£û fractional deadline budget is floored and sub-ms balance starts no probe (2.6593ms)
+Ô£û synchronous spawn errors retain original cause and empty stderr (0.6144ms)
+Ô£û real ENOENT waits for close and produces a complete result shape (14.3653ms)
+Ô£û a hung real subprocess is killed and closed before the next starts (230.2506ms)
+Ôä╣ tests 4
+Ôä╣ suites 0
+Ôä╣ pass 0
+Ôä╣ fail 4
+Ôä╣ cancelled 0
+Ôä╣ skipped 0
+Ôä╣ todo 0
+Ôä╣ duration_ms 1156.2464
 
-✖ failing tests:
+Ô£û failing tests:
 
 test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:11:1
-✖ fractional deadline budget is floored and sub-ms balance starts no probe (2.6593ms)
+Ô£û fractional deadline budget is floored and sub-ms balance starts no probe (2.6593ms)
   AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Math.floor\(readinessDeadline-performance.now\(\)\)/. Input:
   
   "import {authorizeGrant} from './grant-gate.mjs';\n" +
@@ -126,7 +126,7 @@ test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:11:1
   }
 
 test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:18:1
-✖ synchronous spawn errors retain original cause and empty stderr (0.6144ms)
+Ô£û synchronous spawn errors retain original cause and empty stderr (0.6144ms)
   Error: creation failure
       at TestContext.<anonymous> (file:///[WORKSPACE]/f2-r7-grant03/readiness-red/readiness-process.test.mjs:19:30)
       at Test.runInAsyncScope (node:async_hooks:227:14)
@@ -139,7 +139,7 @@ test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:18:1
   }
 
 test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:26:1
-✖ real ENOENT waits for close and produces a complete result shape (14.3653ms)
+Ô£û real ENOENT waits for close and produces a complete result shape (14.3653ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
   
   undefined !== ''
@@ -157,7 +157,7 @@ test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:26:1
   }
 
 test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:32:1
-✖ a hung real subprocess is killed and closed before the next starts (230.2506ms)
+Ô£û a hung real subprocess is killed and closed before the next starts (230.2506ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
   + actual - expected
   
@@ -175,4 +175,3 @@ test at f2-r7-grant03\readiness-red\readiness-process.test.mjs:32:1
     operator: 'strictEqual',
     diff: 'simple'
   }
-

@@ -21,8 +21,8 @@
           "start": 77804,
           "end": 77818
         },
-        "matched": "reda��o dada",
-        "context": "das na forma da regulamenta��o de que trata o art. 14 da Lei n� 9.648, de 27 de maio de 1998, com a reda��o dada pela Lei n� 10.433, de 24 de abril de 2002, para efeitos de incid�ncia da contribui��o para o PIS/Pasep e da Cofins, as resultados positivos apurados mensalmente pela pessoa jur�dica opta",
+        "matched": "redação dada",
+        "context": "das na forma da regulamentação de que trata o art. 14 da Lei nº 9.648, de 27 de maio de 1998, com a redação dada pela Lei nº 10.433, de 24 de abril de 2002, para efeitos de incidência da contribuição para o PIS/Pasep e da Cofins, as resultados positivos apurados mensalmente pela pessoa jurídica opta",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -36,8 +36,8 @@
           "start": 89335,
           "end": 89349
         },
-        "matched": "reda��o dada",
-        "context": " Registro Especial de que trata o art. 1� do Decreto-Lei n� 1.593, de 21 de dezembro de 1977, com a reda��o dada pela Medida Provis�ria n� 2.158-35, de 24 de agosto de 2001.</span></p><p class=\"Normal0\" style=\"margin-top:6pt\"><span style=\"font-weight:bold\">Art.</span><span> 55. Nas Conven��es destin",
+        "matched": "redação dada",
+        "context": " Registro Especial de que trata o art. 1º do Decreto-Lei nº 1.593, de 21 de dezembro de 1977, com a redação dada pela Medida Provisória nº 2.158-35, de 24 de agosto de 2001.</span></p><p class=\"Normal0\" style=\"margin-top:6pt\"><span style=\"font-weight:bold\">Art.</span><span> 55. Nas Convenções destin",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       }
@@ -50,7 +50,7 @@
     "sha256": "8b3ccac420436c491d89df580991c859584987f0fbd9dff744bc2a381b3d3d55",
     "bytes": 180179,
     "url": "https://normas.leg.br/api/public/binario/0801e08f-d2b7-4a73-ad21-dfff904b6da2/texto",
-    "representationVersion": "vers�o atualizada (compilada pelo Congresso Nacional)",
+    "representationVersion": "versão atualizada (compilada pelo Congresso Nacional)",
     "counts": {
       "redaction_lexeme": 34,
       "revocation_lexeme": 20,
@@ -67,8 +67,8 @@
           "start": 17089,
           "end": 17103
         },
-        "matched": "reda��o dada",
-        "context": "yle=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">("Caput" do artigo com reda��o dada pela Medida Provis�ria n� 627, de 11/11/2013,</span></a><span style=\"font-style:italic\"> </span><a href=\"http://www2.camara.leg.br/legin/fed/lei/2014/lei-12973-13-maio-2014-778703-publica",
+        "matched": "redação dada",
+        "context": "yle=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(“Caput” do artigo com redação dada pela Medida Provisória nº 627, de 11/11/2013,</span></a><span style=\"font-style:italic\"> </span><a href=\"http://www2.camara.leg.br/legin/fed/lei/2014/lei-12973-13-maio-2014-778703-publica",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -82,8 +82,8 @@
           "start": 18626,
           "end": 18640
         },
-        "matched": "reda��o dada",
-        "context": "html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(Par�grafo com reda��o dada pela Lei n� 12.973, de 13/5/2014, em vigor a partir de 1/1/2015)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>� 2� A base de c�lcu",
+        "matched": "redação dada",
+        "context": "html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(Parágrafo com redação dada pela Lei nº 12.973, de 13/5/2014, em vigor a partir de 1/1/2015)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>§ 2º A base de cálcu",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -98,7 +98,7 @@
           "end": 20779
         },
         "matched": "Revogada",
-        "context": "6985-norma-pl.html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(Revogada pela Lei n� 11.727, de 23/6/2008, publicada no DOU de 24/6/2008, a partir do 1� dia do 4� m�s subseq�ente ao da publica��o)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-ali",
+        "context": "6985-norma-pl.html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(Revogada pela Lei nº 11.727, de 23/6/2008, publicada no DOU de 24/6/2008, a partir do 1º dia do 4º mês subseqüente ao da publicação)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-ali",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -113,7 +113,7 @@
           "end": 27225
         },
         "matched": "revogado",
-        "context": "inal-169058-pe.html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">revogado pela Medida Provis�ria n� 1.185, de 30/8/2023</span></a><span style=\"font-style:italic\">, </span><a href=\"https://www2.camara.leg.br/legin/fed/lei/2023/lei-14789-29-dezembro-2023-795198-repub",
+        "context": "inal-169058-pe.html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">revogado pela Medida Provisória nº 1.185, de 30/8/2023</span></a><span style=\"font-style:italic\">, </span><a href=\"https://www2.camara.leg.br/legin/fed/lei/2023/lei-14789-29-dezembro-2023-795198-repub",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -128,7 +128,7 @@
           "end": 17784
         },
         "matched": "Vide",
-        "context": "e=\"text-decoration:none\"><span style=\"font-style:italic; text-decoration:underline; color:#0000ff\">(Vide Lei Complementar n� 214, de 16/1/2025)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>� 1� Para efeito do disposto neste artigo, o total das",
+        "context": "e=\"text-decoration:none\"><span style=\"font-style:italic; text-decoration:underline; color:#0000ff\">(Vide Lei Complementar nº 214, de 16/1/2025)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>§ 1º Para efeito do disposto neste artigo, o total das",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -143,7 +143,7 @@
           "end": 32296
         },
         "matched": "Vide",
-        "context": "e=\"text-decoration:none\"><span style=\"font-style:italic; text-decoration:underline; color:#0000ff\">(Vide Lei Complementar n� 214, de 16/1/2025)</span></a></p><p style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>� 1� Excetua-se do disposto no </span><span style=\"font-style:italic\"",
+        "context": "e=\"text-decoration:none\"><span style=\"font-style:italic; text-decoration:underline; color:#0000ff\">(Vide Lei Complementar nº 214, de 16/1/2025)</span></a></p><p style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>§ 1º Excetua-se do disposto no </span><span style=\"font-style:italic\"",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       }
@@ -173,8 +173,8 @@
           "start": 92348,
           "end": 92362
         },
-        "matched": "reda��o dada",
-        "context": "bold\">caput</span><span style=\"font-size:1.2em\">, da Lei n� 9.718, de 27 de novembro de 1998, com a reda��o dada pela Lei n� 9.990, de 21 de julho de 2000, sobre os gases liquefeitos de petr�leo, classificados na subposi��o 2711.1 da NCM, n�o alcan�a os produtos classificados no c�digo 2711.11.00.</",
+        "matched": "redação dada",
+        "context": "bold\">caput</span><span style=\"font-size:1.2em\">, da Lei nº 9.718, de 27 de novembro de 1998, com a redação dada pela Lei nº 9.990, de 21 de julho de 2000, sobre os gases liquefeitos de petróleo, classificados na subposição 2711.1 da NCM, não alcança os produtos classificados no código 2711.11.00.</",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -188,8 +188,8 @@
           "start": 94236,
           "end": 94250
         },
-        "matched": "reda��o dada",
-        "context": "nte da venda dos produtos de que trata o art. 1� da Lei n� 10.147, de 21 de dezembro de 2000, com a reda��o dada pela Lei n� 10.548, de 13 de novembro de 2002.</span></p><p class=\"Pargrafo\" style=\"margin-top:6pt\"><span style=\"font-size:1.2em\">&#xa0;</span><span style=\"font-size:1.2em\">&#xa0;</span><",
+        "matched": "redação dada",
+        "context": "nte da venda dos produtos de que trata o art. 1º da Lei nº 10.147, de 21 de dezembro de 2000, com a redação dada pela Lei nº 10.548, de 13 de novembro de 2002.</span></p><p class=\"Pargrafo\" style=\"margin-top:6pt\"><span style=\"font-size:1.2em\">&#xa0;</span><span style=\"font-size:1.2em\">&#xa0;</span><",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -217,7 +217,7 @@
     "sha256": "c5ca0d93e92a5f53c3922a21aad2a606bae78cbc53374af614db3e255581feae",
     "bytes": 388543,
     "url": "https://normas.leg.br/api/public/binario/5b0a74fc-81ee-45c1-adea-e0b740b14c5c/texto",
-    "representationVersion": "vers�o atualizada (compilada pelo Congresso Nacional)",
+    "representationVersion": "versão atualizada (compilada pelo Congresso Nacional)",
     "counts": {
       "redaction_lexeme": 94,
       "revocation_lexeme": 37,
@@ -234,8 +234,8 @@
           "start": 16829,
           "end": 16843
         },
-        "matched": "reda��o dada",
-        "context": "yle=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">("Caput" do artigo com reda��o dada pela Medida Provis�ria n� 627, de 11/11/2013,</span></a><span style=\"font-style:italic\"> </span><a href=\"http://www2.camara.leg.br/legin/fed/lei/2014/lei-12973-13-maio-2014-778703-publica",
+        "matched": "redação dada",
+        "context": "yle=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(“Caput” do artigo com redação dada pela Medida Provisória nº 627, de 11/11/2013,</span></a><span style=\"font-style:italic\"> </span><a href=\"http://www2.camara.leg.br/legin/fed/lei/2014/lei-12973-13-maio-2014-778703-publica",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -249,8 +249,8 @@
           "start": 18335,
           "end": 18349
         },
-        "matched": "reda��o dada",
-        "context": "html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(Par�grafo com reda��o dada pela Medida Provis�ria n� 627, de 11/11/2013,</span></a><span style=\"font-style:italic\"> </span><a href=\"http://www2.camara.leg.br/legin/fed/lei/2014/lei-12973-13-maio-2014-778703-publica",
+        "matched": "redação dada",
+        "context": "html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(Parágrafo com redação dada pela Medida Provisória nº 627, de 11/11/2013,</span></a><span style=\"font-style:italic\"> </span><a href=\"http://www2.camara.leg.br/legin/fed/lei/2014/lei-12973-13-maio-2014-778703-publica",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -265,7 +265,7 @@
           "end": 21632
         },
         "matched": "Revogado",
-        "context": "4151-norma-pl.html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(Revogado a partir de 1/10/2008, de acordo com o art. 42, inciso III, al�nea "d" da Lei n� 11.727, de 23/6/2008)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size",
+        "context": "4151-norma-pl.html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">(Revogado a partir de 1/10/2008, de acordo com o art. 42, inciso III, alínea “d” da Lei nº 11.727, de 23/6/2008)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -280,7 +280,7 @@
           "end": 26680
         },
         "matched": "revogado",
-        "context": "inal-169058-pe.html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">revogado pela Medida Provis�ria n� 1.185, de 30/8/2023</span></a><span style=\"font-style:italic\">, </span><a href=\"https://www2.camara.leg.br/legin/fed/lei/2023/lei-14789-29-dezembro-2023-795198-repub",
+        "context": "inal-169058-pe.html\" style=\"text-decoration:none\"><span class=\"Hyperlink\" style=\"font-style:italic\">revogado pela Medida Provisória nº 1.185, de 30/8/2023</span></a><span style=\"font-style:italic\">, </span><a href=\"https://www2.camara.leg.br/legin/fed/lei/2023/lei-14789-29-dezembro-2023-795198-repub",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -295,7 +295,7 @@
           "end": 17509
         },
         "matched": "Vide",
-        "context": "e=\"text-decoration:none\"><span style=\"font-style:italic; text-decoration:underline; color:#0000ff\">(Vide Lei Complementar n� 214, de 16/1/2025)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>� 1� Para efeito do disposto neste artigo, o total das",
+        "context": "e=\"text-decoration:none\"><span style=\"font-style:italic; text-decoration:underline; color:#0000ff\">(Vide Lei Complementar nº 214, de 16/1/2025)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>§ 1º Para efeito do disposto neste artigo, o total das",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       },
@@ -310,7 +310,7 @@
           "end": 31680
         },
         "matched": "Vide",
-        "context": "e=\"text-decoration:none\"><span style=\"font-style:italic; text-decoration:underline; color:#0000ff\">(Vide Lei Complementar n� 214, de 16/1/2025)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>� 1� Excetua-se do disposto no </span><span style=\"fon",
+        "context": "e=\"text-decoration:none\"><span style=\"font-style:italic; text-decoration:underline; color:#0000ff\">(Vide Lei Complementar nº 214, de 16/1/2025)</span></a></p><p class=\"Header\" style=\"text-indent:56.7pt; text-align:justify; font-size:1.2em\"><span>§ 1º Excetua-se do disposto no </span><span style=\"fon",
         "classification": null,
         "scope": "lexical_diagnostic_only_not_structural_or_legal_proof"
       }

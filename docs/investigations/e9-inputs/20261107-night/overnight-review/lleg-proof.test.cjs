@@ -19,4 +19,3 @@ for(const sample of proof){
   assert.equal(sample.engineChanged,false);assert.equal(sample.promoted,false);
  });
 }
-

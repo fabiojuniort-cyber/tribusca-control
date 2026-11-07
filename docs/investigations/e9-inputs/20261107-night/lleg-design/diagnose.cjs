@@ -10,7 +10,7 @@ for(const id of ids){
  const html=new TextDecoder('utf-8',{fatal:true}).decode(raw);
  const examples=[];
  const counts={};
- for(const [kind,pattern]of [['redaction_note',/Reda[�c][�a]o dada/giu],['revocation_note',/Revogad[oa]/giu],['vide_reference',/\bVide\b/giu]]){
+ for(const [kind,pattern]of [['redaction_note',/Reda[çc][ãa]o dada/giu],['revocation_note',/Revogad[oa]/giu],['vide_reference',/\bVide\b/giu]]){
   const matches=[...html.matchAll(pattern)];counts[kind.replace('_note','_lexeme').replace('_reference','_lexeme')]=matches.length;
   for(const m of matches.slice(0,2)){
    const bomOffset=raw[0]===0xef&&raw[1]===0xbb&&raw[2]===0xbf?3:0; const byteStart=bomOffset+Buffer.byteLength(html.slice(0,m.index),'utf8'),byteEnd=byteStart+Buffer.byteLength(m[0],'utf8');
@@ -22,4 +22,3 @@ for(const id of ids){
 }
 fs.writeFileSync(root+'diagnostic.json',JSON.stringify(report,null,2));
 console.log(JSON.stringify(report.map(({id,sha256,bytes,counts})=>({id,sha256,bytes,counts})),null,2));
-

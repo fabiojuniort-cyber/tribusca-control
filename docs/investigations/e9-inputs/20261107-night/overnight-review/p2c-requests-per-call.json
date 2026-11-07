@@ -10,7 +10,7 @@
         "ADI",
         "ADE",
         "SC",
-        "Resolu��o"
+        "Resolução"
       ],
       "url": null,
       "status": 200,
@@ -36,7 +36,7 @@
         "ADI",
         "ADE",
         "SC",
-        "Resolu��o"
+        "Resolução"
       ],
       "url": "https://normasinternet2.receita.fazenda.gov.br/main.60aa44047ffb2919.js",
       "status": 200,
@@ -60,7 +60,7 @@
         "ADI",
         "ADE",
         "SC",
-        "Resolu��o"
+        "Resolução"
       ],
       "url": "https://normasinternet2.receita.fazenda.gov.br/runtime.fdbb2a6fe41d0fb4.js",
       "status": 200,
@@ -84,7 +84,7 @@
         "ADI",
         "ADE",
         "SC",
-        "Resolu��o"
+        "Resolução"
       ],
       "url": "https://normasinternet2.receita.fazenda.gov.br/961.fd09e7dba13a79d0.js",
       "status": 200,
@@ -121,7 +121,7 @@
       "n": 6,
       "at": "2026-11-07T04:12:31.7695641Z",
       "purpose": "one category search",
-      "type": "Ato Declarat�rio Interpretativo",
+      "type": "Ato Declaratório Interpretativo",
       "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Ato%20Declarat%C3%B3rio%20Interpretativo",
       "status": 200,
       "contentType": null,
@@ -140,7 +140,7 @@
       "n": 7,
       "at": "2026-11-07T04:12:31.6332397Z",
       "purpose": "one category search",
-      "type": "Ato Declarat�rio Executivo",
+      "type": "Ato Declaratório Executivo",
       "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Ato%20Declarat%C3%B3rio%20Executivo",
       "status": 200,
       "contentType": null,
@@ -159,7 +159,7 @@
       "n": 8,
       "at": "2026-11-07T04:12:31.7554795Z",
       "purpose": "one category search",
-      "type": "Solu��o de Consulta",
+      "type": "Solução de Consulta",
       "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Solu%C3%A7%C3%A3o%20de%20Consulta",
       "status": 200,
       "contentType": null,
@@ -178,7 +178,7 @@
       "n": 9,
       "at": "2026-11-07T04:12:31.4875879Z",
       "purpose": "one category search",
-      "type": "Resolu��o",
+      "type": "Resolução",
       "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?termoBusca=Resolu%C3%A7%C3%A3o",
       "status": 200,
       "contentType": null,
