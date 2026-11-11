@@ -66,3 +66,16 @@ Registre evidência proporcional ao risco. CI, merge, deploy e run são fatos di
 Railway continua permitida como infraestrutura somente por meios não-AI: Dashboard, CLI/API, conectores oficiais que não sejam o Railway AI Agent, logs nativos e scripts/runbooks versionados do projeto.
 
 Nenhum prompt, gate, review ou handoff pode instruir ou depender do Railway AI Agent. Se uma evidência não puder ser obtida por canal permitido, registrar `NOT_PROVEN` ou bloquear apenas a etapa dependente. Ver [docs/RAILWAY_AI_AGENT_POLICY.md](docs/RAILWAY_AI_AGENT_POLICY.md) e D-065.
+
+## Orquestração de modelos e sub-agentes (Claude e GPT)
+
+Política canônica: https://github.com/fabiojuniort-cyber/tribusca-control/blob/main/docs/ORQUESTRACAO_MODELOS.md (complementa a Governança Flexível v2; não flexibiliza gates). Você tem autorização permanente para criar sub-agentes neste projeto, sem perguntar a cada vez.
+
+- **Orquestrador (modelo principal):** classifica o risco R0–R3, planeja em 3–7 passos, delega, **revisa o retorno** e resume (feito / verificado / pendente / delegações usadas).
+- **Camada leve (Haiku / GPT mini):** buscar, mapear usos, listar rotas, ler e resumir logs. Somente leitura.
+- **Camada intermediária (Sonnet / GPT intermediário):** implementar com especificação clara, testes, refactor repetitivo, bug localizado, documentação.
+- **Camada principal (Opus / GPT de raciocínio):** arquitetura, regra fiscal/de negócio, migrations, segurança/RLS/tenant, bug sem causa clara, revisão final. **R3 fica 100% com a camada principal**; sub-agentes só leem.
+- Prompt de delegação (o sub-agente não tem contexto): objetivo, repositório/arquivos, restrições, critério de pronto, resposta curta.
+- Não delegar tarefa pequena (1–2 arquivos), decisão fiscal/de segurança ou o que depende de muito contexto.
+- Sub-agente **não** é revisor independente, **não** faz commit/push/merge/deploy e **não** usa o Railway AI Agent (proibido).
+- Sem suporte a sub-agentes ou escolha de modelo na ferramenta: trabalhar em sessão única mantendo as demais regras.
