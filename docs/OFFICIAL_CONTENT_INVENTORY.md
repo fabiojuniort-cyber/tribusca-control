@@ -1,6 +1,6 @@
 # TriBusca — Inventário de conteúdo oficial por fonte
 
-Atualizado em 26/09/2026. Este documento operacionaliza a decisão global D-017 sem declarar nenhum conector adequado apenas pela existência da regra.
+Matriz original: 26/09/2026. Complemento histórico e conferência documental: 04/11/2026. Este documento operacionaliza a D-017; datas e estados de cada bloco são explícitos e não certificam o runtime atual.
 
 ## Legenda
 
@@ -9,7 +9,9 @@ Atualizado em 26/09/2026. Este documento operacionaliza a decisão global D-017 
 - **Redundante/não solicitar:** arquivo replica conteúdo já integral na página; preservar referência/autenticidade disponível, mas não baixar a cópia por padrão.
 - **A confirmar:** exige inspeção específica antes de alterar o conector.
 
-## Matriz inicial
+## Matriz inicial — snapshot histórico de 26/09/2026
+
+As afirmações de implementação e contagens deste bloco são históricas. A alternativa “preservar × reconstruir” do DOE-SP foi posteriormente resolvida pela D-052; não é uma decisão a reabrir. O complemento de 04/11 abaixo registra o que continua sem prova, sem converter o snapshot em estado produtivo atual.
 
 | Fonte/conector | Representação observada | Papel atual de arquivos | Impacto D-017 | Próximo passo |
 | --- | --- | --- | --- | --- |
@@ -49,3 +51,70 @@ O caso Portaria SRE 42/2025 demonstrou duas representações oficiais com mesma 
 ## Regra de governança
 
 Nenhum conector deve ser alterado por este inventário. Cada adequação precisa de Issue/PR próprio, testes de identidade/replay/versionamento e, quando houver legado, prova de compatibilidade antes de merge/deploy.
+
+
+## Cobertura histórica — reconciliação documental de 04/11/2026
+
+Complemento solicitado na [Issue #6, decisão de 29/09](https://github.com/fabiojuniort-cyber/tribusca-control/issues/6#issuecomment-5882081133), sem alteração dos conectores. A matriz inicial acima é um snapshot de 26/09/2026, **não um retrato produtivo atual**. A D-052 já escolheu reconstrução restrita DOE-SP; a menção antiga a “preservar × reconstruir” não representa decisão ainda aberta. A execução e o fechamento continuam nos controles #1–#4. Este complemento não autoriza execução.
+
+### Significado e limites dos campos
+
+- `earliestOfficialAvailable`: menor data efetivamente acessível na representação oficial indicada, com evidência. Marco de uma plataforma não prova limite de todo o acervo do órgão.
+- `currentBootstrapStart`: corte configurado no runtime/checkpoint observado. Quando só há default no código, ele é identificado como **default**, e o valor produtivo permanece `NOT_PROVEN`.
+- `historicalGap`: conjunto de intervalos sem cobertura efetivamente comprovada, incluindo lacunas internas, entre o limite oficial conhecido e a janela de referência. Nunca calculado só a partir de um default ou de listagem recente. `NOT_PROVEN` não significa zero lacuna.
+- Estratégia de legado: representação/conector separado quando necessário; sondagem, migração, backfill e reprocessamento não estão autorizados por esta documentação.
+
+Consulta nesta data: inspeção dos arquivos versionados no backend `1a6419d0d23e9815de90463731e14157e8fc09cf` e checkpoints vinculados. **Não foi feita nova sondagem dos limites nas fontes oficiais nem consulta ao banco produtivo.** As URLs oficiais abaixo identificam as representações, sem alegar que foram consultadas nesta data.
+
+### Matriz histórica e evidências
+
+| Fonte / representação oficial | `earliestOfficialAvailable` | `currentBootstrapStart` | `historicalGap` | Estratégia de legado / evidência / próxima prova |
+| --- | --- | --- | --- | --- |
+| DOE-SP — plataforma atual ([portal](https://doe.sp.gov.br/)) | **NOT_PROVEN como mínimo acessível atual**. Referência histórica: **2023-07-01**, marco registrado na decisão de 29/09 e na constante `DOE_SP_PLATFORM_START`. A constante e a observação antiga não provam disponibilidade atual nem o limite de todo o acervo paulista. | Runtime **NOT_PROVEN**. Código aceita `DOE_SP_BOOTSTRAP_START_DATE`; sem valor, usa início da janela de lookback (default 3 dias). | **NOT_PROVEN**: target/coverageFrom de planejamento não comprova documentos coletados nem replay integral. | Plataforma anterior em frente separada #20/backend #128. [Código fixado](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/doe-sp.connector.ts). Fechamento bootstrap/replay continua #2–#4; não iniciar outro DOE. |
+| DOU / INLABS — [XML/ZIP oficial](https://inlabs.in.gov.br/) | **NOT_PROVEN** para INLABS e para representações alternativas do DOU. | **NOT_PROVEN** no runtime; janela de execução não é bootstrap histórico completo. | **NOT_PROVEN**; conflitos de identidade de três atos são pendência própria #86. | Identificar limite por representação e preservar XML/ZIP/proveniência. [Conector](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/dou.connector.ts). Não iniciar repair/backfill. |
+| CONFAZ — [portal oficial](https://www.confaz.fazenda.gov.br/) | **NOT_PROVEN por família**. A existência de atos antigos não demonstra varredura completa. | Data produtiva **NOT_PROVEN**. Código usa janela inicial limitada por família, default `bootstrapWindowPerFamily=3`, não corte temporal global. | **NOT_PROVEN**; janela de três links não equivale a cobertura histórica. | Evidenciar por família/ano e representação antes de propor ampliação. [Conector](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/confaz.connector.ts). Nenhum conteúdo protegido 52/91 ou 100/97 foi aberto/reutilizado. |
+| Portal NF-e / ENCAT — [listagens oficiais](https://www.nfe.fazenda.gov.br/portal/) | **NOT_PROVEN por família** (NT, informes, schemas, manuais). | **NOT_PROVEN** no runtime; listagem/limite de itens não demonstra data inicial. | **NOT_PROVEN** por família/arquivo. | Separar conteúdo material e versões por família; não confundir arquivo técnico com PDF redundante. [Rotas/famílias do conector](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/nfe-encat.connector.ts). |
+| SPED — [gov.br primário](https://www.gov.br/sped/pt-br/) | **NOT_PROVEN** nesta representação. | **NOT_PROVEN** no runtime; crawl/cursor não são marco temporal comprovado. | **NOT_PROVEN**, incluindo lacunas internas e materiais ausentes. | Evidenciar o portal primário separadamente. [Documentação](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/docs/phase-7-sped.md) e [conector](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/sped.connector.ts). Sem mudar conector/crawl. |
+| SPED — [portal legado](https://sped.rfb.gov.br/) | **NOT_PROVEN** nesta representação; não herdar o limite do gov.br. | **NOT_PROVEN** no runtime. | **NOT_PROVEN**; não somar cobertura de portais sem deduplicação/proveniência comprovadas. | Representação de enriquecimento/backfill conforme documentação acima; não é duplicata presumida nem autorização de backfill. |
+| CGIBS — [portal oficial](https://www.cgibs.gov.br/) | **NOT_PROVEN**. | **NOT_PROVEN** no runtime. | **NOT_PROVEN**; correção de identidade/conteúdo backend #173 é dependência distinta. | Evidenciar limites por família/listagem e corrigir saúde apenas no pacote autorizado #106. [Conector](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/cgibs.connector.ts). |
+| Receita Federal / Normas — [consulta oficial](https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action) | **NOT_PROVEN**; não inferir limite oficial a partir de janeiro/2025. | Runtime **NOT_PROVEN**. Default de código `BOOTSTRAP_START_MONTH='2025-01'`, substituível por opção; checkpoint existente pode prevalecer. | **NOT_PROVEN**; default não comprova mínimo persistido nem intervalo integral. | Identificar disponibilidade anterior, páginas e anexos sem alterar identidades. [Conector](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/rfb-normas.connector.ts) e [estado](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/rfb-normas-source-state.repository.ts). Repair backend #60 não está autorizado a executar. |
+| Receita Federal / Notícias — [últimas notícias](https://www.gov.br/receitafederal/pt-br/assuntos/noticias/ultimas-noticias) | **NOT_PROVEN** para o arquivo histórico. | **NOT_PROVEN** como corte histórico. Conector consulta listagem corrente, máximo default 30 artigos/run; não prova bootstrap do arquivo. | **NOT_PROVEN**. Gate NEWS-03/#62 pede prova real após virada do mês. | Separar notícias de Normas; não interpretar troca de mês como fim do acervo. [Client](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/rfb-news.client.ts), [conector](https://github.com/fabiojuniort-cyber/radar-fiscal-backend/blob/1a6419d0d23e9815de90463731e14157e8fc09cf/src/modules/collection/rfb-news.connector.ts). Não disparar execução. |
+| Demais fontes previstas (outros DOEs e municipais; NFS-e Nacional quando houver frente própria) | **NOT_PROVEN por fonte**. | **NOT_PROVEN**; existência no roadmap não é conector implementado. | **NOT_PROVEN**. | Abrir inventário individual quando a fonte for autorizada. Próximo DOE depende do fechamento formal SP; sem inclusão silenciosa de implementação. |
+
+### Fontes previstas — decomposição documental
+
+Estas linhas detalham a linha agregada “Demais fontes previstas” da matriz e a lista inicial aprovada do projeto. Não iniciam conectores, não declaram implementação ausente/presente sem reconciliação e não acrescentam entregas ao denominador da Frente 2. URL/representação oficial ainda precisam ser identificadas e comprovadas individualmente; não inventar limite temporal.
+
+| Fonte prevista | Esfera / família | `earliestOfficialAvailable` | `currentBootstrapStart` | `historicalGap` | Estratégia / evidência pendente |
+| --- | --- | --- | --- | --- | --- |
+| BA | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| MS | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| MT | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| GO | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| MG | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| PI | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| PA | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| TO | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| MA | Estadual | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| Goiânia/GO | Municipal | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| Goiatuba/GO | Municipal | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| Rio Verde/GO | Municipal | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| Balsas/MA | Municipal | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| Porto Nacional/TO | Municipal | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+| NFS-e Nacional | Nacional | NOT_PROVEN | NOT_PROVEN | NOT_PROVEN | Identificar representação oficial e estado real do conector; fonte legada separada quando houver. Nenhuma execução autorizada por esta linha. |
+
+### Critério para completar esta pendência
+
+Os quatro campos estão agora explícitos por fonte. O preenchimento estrutural **não encerra a Issue #6**: limites oficiais ainda desconhecidos, estado produtivo não observado, anexos/famílias não auditados e provas de completude continuam identificados. Não aceitar `NOT_PROVEN` como limitação final nem reduzir o requisito aprovado.
+
+Próxima etapa documental: reunir evidência oficial datada do menor marco por representação, evidência read-only do corte/checkpoint e da cobertura real, e só então descrever lacunas com intervalos. Cada adaptação de conector conserva issue/PR/testes/gates próprios. [Controle Frente 2 #124](https://github.com/fabiojuniort-cyber/tribusca-control/issues/124).
+
+
+## Conferência específica — SPED (04/11/2026)
+
+[Conferência por representação e dez critérios da #6](investigations/F2-6-SPED-REPRESENTATION.md), código fixado no backend1a6419d0. Esta leitura é estática, não atesta captura integral real. O descritor limita a descrição a12000 caracteres; arquivo com falha pode reutilizar checkpoint anterior, enquanto arquivo novo não resolvido adia o documento. Hash padrão continua LEGACY_ALL_FILES; comunicado e documento têm identidades distintas. Ver evidências/limites no complemento, sem alteração de conector nem aceite antecipado.
+
+
+## Conferência específica — Receita Federal / Normas (07/11/2026)
+
+[Dez critérios da #6 e evidências fixadas](investigations/F2-6-RFB-REPRESENTATION.md), backend `bb6c61798aed34993a52e398795551ed2ca46393`. O código usa a representação original da API e anexos identificados; visualizações auxiliares e hashes diagnósticos não equivalem ao hash canônico da publicação. Anexo anterior pode ser reutilizado com falha parcial; anexo novo indisponível impede emissão do item nesse processamento. O padrão LEGACY_ALL_FILES/V1 inclui hashes de anexos, portanto removê-los exige compatibilidade/replay antes de qualquer alteração. Conferência somente estática, sem consulta à fonte ou ao acervo; não atesta conteúdo integral, cobertura histórica nem armazenamento durável dos bytes. Nenhum conector alterado. A #6 continua aberta e a revisão independente da #125 permanece pendente.
